@@ -46,15 +46,6 @@
 </template>
 
 <script>
-import {
-  Input,
-  Ripple,
-  initTE,
-} from "tw-elements";
 export default {
-  components: { Input, Ripple, initTE },
-  mounted() {
-    initTE({ Input, Ripple })
-  }
 }
 </script>
