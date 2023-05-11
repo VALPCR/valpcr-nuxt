@@ -2,7 +2,7 @@
   <div class="min-h-screen bg-[#D7E4F3]">
     <Sidebar />
     <div class="flex-grow">
-      <Nuxt />
+      <nuxt />
     </div>
   </div>
 </template>

@@ -7,43 +7,43 @@
       </button>
     </div>
     <ul class="space-y-4 m-0">
-      <li :class="{'hover:bg-white': isSidebarOpen}">
-        <nuxt-link to="/patients" :class="{'hover:text-[#131A2D]': isSidebarOpen}" class="space-x-2 text-white">
-          <font-awesome-icon icon="fa-solid fa-user-injured" />
-          <span v-if="isSidebarOpen">Patients</span>
-        </nuxt-link>
-      </li>
-      <li :class="{'hover:bg-white': isSidebarOpen}">
-        <nuxt-link to="/dispatcher" :class="{'hover:text-[#131A2D]': isSidebarOpen}" class="space-x-2 text-white">
-          <font-awesome-icon icon="fa-solid fa-user-shield" />
-          <span v-if="isSidebarOpen">Dispatcher</span>
-        </nuxt-link>
-      </li>
-      <li :class="{'hover:bg-white': isSidebarOpen}">
-        <nuxt-link to="/emrs" :class="{'hover:text-[#131A2D]': isSidebarOpen}" class="space-x-2 text-white">
-          <font-awesome-icon icon="fa-solid fa-bell-concierge" />
-          <span v-if="isSidebarOpen">EMRs</span>
-        </nuxt-link>
-      </li>
-      <li :class="{'hover:bg-white': isSidebarOpen}">
-        <nuxt-link to="/analytics" :class="{'hover:text-[#131A2D]': isSidebarOpen}" class="space-x-2 text-white">
-          <font-awesome-icon icon="fa-solid fa-chart-simple" />
-          <span v-if="isSidebarOpen">Analytics</span>
-        </nuxt-link>
-      </li>
-      <li :class="{'hover:bg-white': isSidebarOpen}">
-        <nuxt-link to="/archive" :class="{'hover:text-[#131A2D]': isSidebarOpen}" class="space-x-2 text-white">
-          <font-awesome-icon icon="fa-solid fa-file-archive" />
-          <span v-if="isSidebarOpen">Archive</span>
-        </nuxt-link>
-      </li>
+      <nuxt-link to="/patients" :class="{'hover:text-[#131A2D]': isSidebarOpen}" class="text-white">
+        <li :class="{'hover:bg-white pl-10': isSidebarOpen}" class="space-x-2 mb-4">
+            <font-awesome-icon icon="fa-solid fa-user-injured" />
+            <span v-if="isSidebarOpen">Patients</span>
+        </li>
+      </nuxt-link>
+      <nuxt-link to="/dispatcher" :class="{'hover:text-[#131A2D]': isSidebarOpen}" class="text-white">
+        <li :class="{'hover:bg-white pl-10': isSidebarOpen}" class="space-x-2 mb-4">
+            <font-awesome-icon icon="fa-solid fa-shield" />
+            <span v-if="isSidebarOpen">Dispatcher</span>
+        </li>
+      </nuxt-link>
+      <nuxt-link to="/emrs" :class="{'hover:text-[#131A2D]': isSidebarOpen}" class="text-white">
+        <li :class="{'hover:bg-white pl-10': isSidebarOpen}" class="space-x-2 mb-4">
+            <font-awesome-icon icon="fa-solid fa-bell-concierge" />
+            <span v-if="isSidebarOpen">EMRs</span>
+        </li>
+      </nuxt-link>
+      <nuxt-link to="/analytics" :class="{'hover:text-[#131A2D]': isSidebarOpen}" class="text-white">
+        <li :class="{'hover:bg-white pl-10': isSidebarOpen}" class="space-x-2 mb-4">
+            <font-awesome-icon icon="fa-solid fa-chart-simple" />
+            <span v-if="isSidebarOpen">Analytics</span>
+        </li>
+      </nuxt-link>
+      <nuxt-link to="/archive" :class="{'hover:text-[#131A2D]': isSidebarOpen}" class="text-white">
+        <li :class="{'hover:bg-white pl-10': isSidebarOpen}" class="space-x-2 mb-4">
+            <font-awesome-icon icon="fa-solid fa-file-archive" />
+            <span v-if="isSidebarOpen">Archive</span>
+        </li>
+      </nuxt-link>
+      <nuxt-link to="/archive" class="text-white">
+        <li :class="{'pl-10': isSidebarOpen}" class="space-x-2 absolute bottom-0">
+          <font-awesome-icon icon="fa-solid fa-sign-out" />
+          <span v-if="isSidebarOpen">Logout</span>
+        </li>
+      </nuxt-link>
     </ul>
-    <div class="absolute bottom-0 w-full">
-      <button class="w-full p-4 flex items-center space-x-2 text-white">
-        <font-awesome-icon icon="fa-solid fa-sign-out" />
-        <span v-if="isSidebarOpen">Logout</span>
-      </button>
-    </div>
   </div>
 </template>
 
