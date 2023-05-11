@@ -1,7 +1,7 @@
 <template>
-  <div>Code here</div>
+  <div>Testing</div>
 </template>
 
 <script>
-export default {}
+export default { }
 </script>
