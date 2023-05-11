@@ -7,37 +7,37 @@
       </button>
     </div>
     <ul class="space-y-4 m-0">
-      <nuxt-link to="/patients" :class="{'hover:text-[#131A2D]': isSidebarOpen}" class="text-white">
-        <li :class="{'hover:bg-white pl-10': isSidebarOpen}" class="space-x-2 mb-4">
+      <nuxt-link to="/patients" :class="{'hover:text-[#1B295A]': isSidebarOpen}" class="text-white">
+        <li :class="{'hover:bg-white pl-10': isSidebarOpen, 'hover:text-[#1B295A]': !isSidebarOpen}" class="space-x-2 mb-4">
             <font-awesome-icon icon="fa-solid fa-user-injured" />
             <span v-if="isSidebarOpen">Patients</span>
         </li>
       </nuxt-link>
-      <nuxt-link to="/dispatcher" :class="{'hover:text-[#131A2D]': isSidebarOpen}" class="text-white">
-        <li :class="{'hover:bg-white pl-10': isSidebarOpen}" class="space-x-2 mb-4">
+      <nuxt-link to="/dispatcher" :class="{'hover:text-[#1B295A]': isSidebarOpen}" class="text-white">
+        <li :class="{'hover:bg-white pl-10': isSidebarOpen, 'hover:text-[#1B295A]': !isSidebarOpen}" class="space-x-2 mb-4">
             <font-awesome-icon icon="fa-solid fa-shield" />
             <span v-if="isSidebarOpen">Dispatcher</span>
         </li>
       </nuxt-link>
-      <nuxt-link to="/emrs" :class="{'hover:text-[#131A2D]': isSidebarOpen}" class="text-white">
-        <li :class="{'hover:bg-white pl-10': isSidebarOpen}" class="space-x-2 mb-4">
+      <nuxt-link to="/emrs" :class="{'hover:text-[#1B295A]': isSidebarOpen}" class="text-white">
+        <li :class="{'hover:bg-white pl-10': isSidebarOpen, 'hover:text-[#1B295A]': !isSidebarOpen}" class="space-x-2 mb-4">
             <font-awesome-icon icon="fa-solid fa-bell-concierge" />
             <span v-if="isSidebarOpen">EMRs</span>
         </li>
       </nuxt-link>
-      <nuxt-link to="/analytics" :class="{'hover:text-[#131A2D]': isSidebarOpen}" class="text-white">
-        <li :class="{'hover:bg-white pl-10': isSidebarOpen}" class="space-x-2 mb-4">
+      <nuxt-link to="/analytics" :class="{'hover:text-[#1B295A]': isSidebarOpen}" class="text-white">
+        <li :class="{'hover:bg-white pl-10': isSidebarOpen, 'hover:text-[#1B295A]': !isSidebarOpen}" class="space-x-2 mb-4">
             <font-awesome-icon icon="fa-solid fa-chart-simple" />
             <span v-if="isSidebarOpen">Analytics</span>
         </li>
       </nuxt-link>
-      <nuxt-link to="/archive" :class="{'hover:text-[#131A2D]': isSidebarOpen}" class="text-white">
-        <li :class="{'hover:bg-white pl-10': isSidebarOpen}" class="space-x-2 mb-4">
+      <nuxt-link to="/archive" :class="{'hover:text-[#1B295A]': isSidebarOpen}" class="text-white">
+        <li :class="{'hover:bg-white pl-10': isSidebarOpen, 'hover:text-[#1B295A]': !isSidebarOpen}" class="space-x-2 mb-4">
             <font-awesome-icon icon="fa-solid fa-file-archive" />
             <span v-if="isSidebarOpen">Archive</span>
         </li>
       </nuxt-link>
-      <nuxt-link to="/archive" class="text-white">
+      <nuxt-link to="/" class="text-white">
         <li :class="{'pl-10': isSidebarOpen}" class="space-x-2 absolute bottom-0">
           <font-awesome-icon icon="fa-solid fa-sign-out" />
           <span v-if="isSidebarOpen">Logout</span>
