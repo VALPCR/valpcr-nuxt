@@ -1,47 +1,47 @@
 <template>
-  <div :class="{'w-64': isSidebarOpen, 'w-0': !isSidebarOpen}" class="bg-[#131A2D] overflow-auto transition-all duration-300">
+  <div :class="{'w-60': isSidebarOpen, 'w-12': !isSidebarOpen}" class="bg-[#131A2D] overflow-auto">
     <div class="text-right">
       <button @click="toggleSidebar" class="p-4 text-white">
-        <i class="fas fa-arrow-left" v-if="isSidebarOpen"></i>
-        <i class="fas fa-arrow-right" v-else></i>
+        <font-awesome-icon icon="fa-solid fa-arrow-left" v-if="isSidebarOpen" />
+        <font-awesome-icon icon="fa-solid fa-arrow-right text-black" v-else />
       </button>
     </div>
-    <ul class="space-y-4">
-      <li>
-        <nuxt-link to="/patients" class="flex items-center space-x-2 text-white">
+    <ul class="space-y-4 m-0">
+      <li :class="{'hover:bg-white': isSidebarOpen}">
+        <nuxt-link to="/patients" :class="{'hover:text-[#131A2D]': isSidebarOpen}" class="space-x-2 text-white">
           <font-awesome-icon icon="fa-solid fa-user-injured" />
-          <span>Patients</span>
+          <span v-if="isSidebarOpen">Patients</span>
         </nuxt-link>
       </li>
-      <li>
-        <nuxt-link to="/dispatcher" class="flex items-center space-x-2 text-white">
-          <i class="fas fa-headset"></i>
-          <span>Dispatcher</span>
+      <li :class="{'hover:bg-white': isSidebarOpen}">
+        <nuxt-link to="/dispatcher" :class="{'hover:text-[#131A2D]': isSidebarOpen}" class="space-x-2 text-white">
+          <font-awesome-icon icon="fa-solid fa-user-shield" />
+          <span v-if="isSidebarOpen">Dispatcher</span>
         </nuxt-link>
       </li>
-      <li>
-        <nuxt-link to="/emrs" class="flex items-center space-x-2 text-white">
-          <i class="fas fa-file-medical"></i>
-          <span>EMRs</span>
+      <li :class="{'hover:bg-white': isSidebarOpen}">
+        <nuxt-link to="/emrs" :class="{'hover:text-[#131A2D]': isSidebarOpen}" class="space-x-2 text-white">
+          <font-awesome-icon icon="fa-solid fa-bell-concierge" />
+          <span v-if="isSidebarOpen">EMRs</span>
         </nuxt-link>
       </li>
-      <li>
-        <nuxt-link to="/analytics" class="flex items-center space-x-2 text-white">
-          <i class="fas fa-chart-line"></i>
-          <span>Analytics</span>
+      <li :class="{'hover:bg-white': isSidebarOpen}">
+        <nuxt-link to="/analytics" :class="{'hover:text-[#131A2D]': isSidebarOpen}" class="space-x-2 text-white">
+          <font-awesome-icon icon="fa-solid fa-chart-simple" />
+          <span v-if="isSidebarOpen">Analytics</span>
         </nuxt-link>
       </li>
-      <li>
-        <nuxt-link to="/archive" class="flex items-center space-x-2 text-white">
-          <i class="fas fa-archive"></i>
-          <span>Archive</span>
+      <li :class="{'hover:bg-white': isSidebarOpen}">
+        <nuxt-link to="/archive" :class="{'hover:text-[#131A2D]': isSidebarOpen}" class="space-x-2 text-white">
+          <font-awesome-icon icon="fa-solid fa-file-archive" />
+          <span v-if="isSidebarOpen">Archive</span>
         </nuxt-link>
       </li>
     </ul>
     <div class="absolute bottom-0 w-full">
       <button class="w-full p-4 flex items-center space-x-2 text-white">
-        <i class="fas fa-sign-out-alt"></i>
-        <span>Logout</span>
+        <font-awesome-icon icon="fa-solid fa-sign-out" />
+        <span v-if="isSidebarOpen">Logout</span>
       </button>
     </div>
   </div>
