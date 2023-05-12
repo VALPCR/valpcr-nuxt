@@ -32,6 +32,7 @@ export default {
   plugins: [
     '~/plugins/jsPDF',
     '~/plugins/fontawesome.js',
+    '~/plugins/datatable.js',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

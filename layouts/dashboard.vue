@@ -1,7 +1,7 @@
 <template>
-  <div class="min-h-screen bg-[#D7E4F3]">
+  <div class="min-h-screen flex bg-[#D7E4F3]">
     <Sidebar />
-    <div class="flex-grow">
+    <div class="flex-grow overflow-auto">
       <nuxt />
     </div>
   </div>
