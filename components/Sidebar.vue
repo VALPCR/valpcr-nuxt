@@ -106,7 +106,7 @@
           <span v-if="isSidebarOpen">Archive</span>
         </li>
       </nuxt-link>
-      <nuxt-link to="/" class="text-white">
+      <nuxt-link to="/logout" class="text-white">
         <li
           :class="{
             'sm:pl-0 md:pl-10 lg:pl-10 xl:pl-10': isSidebarOpen,

@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.nuxt-link-active li {
+  background-color: white;
+  color: #1B295A;
+}
+
+.nuxt-link-exact-active {
+}
