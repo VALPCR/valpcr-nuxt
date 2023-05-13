@@ -38,7 +38,7 @@
         </li>
       </nuxt-link>
       <nuxt-link to="/" class="text-white">
-        <li :class="{'pl-10': isSidebarOpen}" class="space-x-2 absolute bottom-0">
+        <li :class="{'pl-10': isSidebarOpen}" class="space-x-2 bottom-0 fixed">
           <font-awesome-icon icon="fa-solid fa-sign-out" />
           <span v-if="isSidebarOpen">Logout</span>
         </li>
