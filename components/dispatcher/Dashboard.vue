@@ -36,6 +36,7 @@
         :rows="rows"
         :search-options="{ enabled: true }"
         :pagination-options="{ enabled: true }"
+        styleClass="vgt-table striped"
         compactMode
         class="bg-white rounded shadow"
       >
