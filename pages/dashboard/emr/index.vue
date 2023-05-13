@@ -6,6 +6,6 @@
 import Dashboard from "../../../components/emr/Dashboard";
 export default {
   components: { Dashboard },
-  layout: 'dashboard',
-}
+  layout: "dashboard",
+};
 </script>
