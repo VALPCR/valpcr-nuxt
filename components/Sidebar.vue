@@ -16,7 +16,7 @@
       <nuxt-link to="/dispatcher" :class="{'hover:text-[#1B295A]': isSidebarOpen}" class="text-white">
         <li :class="{'hover:bg-white sm:pl-0 md:pl-10 lg:pl-10 xl:pl-10': isSidebarOpen, 'hover:text-[#1B295A]': !isSidebarOpen}" class="space-x-2 mb-4">
             <font-awesome-icon icon="fa-solid fa-shield" />
-            <span v-if="isSidebarOpen" class="text-xs">Dispatcher</span>
+            <span v-if="isSidebarOpen" class="sm:text-xs md:text-sm lg:text-md xl:text-lg">Dispatcher</span>
         </li>
       </nuxt-link>
       <nuxt-link to="/emrs" :class="{'hover:text-[#1B295A]': isSidebarOpen}" class="text-white">
