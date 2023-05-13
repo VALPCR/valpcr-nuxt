@@ -18,7 +18,7 @@
     </div>
     <ul class="">
       <nuxt-link
-        to="/patients"
+        to="/dashboard/patient"
         :class="{ 'hover:text-[#1B295A]': isSidebarOpen }"
         class="text-white"
       >
