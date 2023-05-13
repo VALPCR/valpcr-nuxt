@@ -2,7 +2,6 @@
   <div class="min-h-screen bg-[#D7E4F3]">
     <div class="m-1">
       <div class="p-4">
-        <Filter @filter="onFilter" />
         <vue-good-table
           :columns="filterColumns"
           :rows="emptyRows"
@@ -45,9 +44,7 @@
 </template>
 
 <script>
-import Filter from "../Filter";
 export default {
-  components: { Filter },
   data() {
     return {
       filteredRows: [],
@@ -90,10 +87,7 @@ export default {
           label: 'Ambulance',
           field: 'ambulance',
           filterOptions: {
-            styleClass: 'class1', // class to be added to the parent th element
-            enabled: true, // enable filter for this column
             filterDropdownItems: ['EMS 01', 'EMS 02', 'EMS 03', 'EMS 04', 'EMS 05', 'EMS 06', 'EMS 07', 'EMS 08', 'EMS 09', 'EMS 10', 'EMS 11', 'EMS 12', 'EMS 13', 'EMS 14', 'EMS 15', 'EMS 16', 'EMS 17', 'EMS 18', 'EMS 19', 'EMS 20', 'EMS 21', 'EMS 22', 'EMS 23', 'EMS 24', 'EMS 25'],
-            trigger: 'enter', //only trigger on enter not on keyup
           },
           sortable: false,
         },
