@@ -203,8 +203,8 @@ export default {
           type: "number",
         },
         {
-          label: "CONTRACT",
-          field: "contract",
+          label: "CONTACT",
+          field: "contact",
           sortable: false,
         },
         {
@@ -228,7 +228,7 @@ export default {
           team: "Alpha",
           address: "Arkong Bato, Valenzuela City",
           age: 28,
-          contract: "loremimpusm@gmail.com",
+          contact: "loremimpusm@gmail.com",
           actions:
             '<div class="relative" data-te-dropdown-ref>\n' +
             "  <button\n" +
@@ -289,7 +289,7 @@ export default {
           team: "Bravo",
           address: "Lingunan, Valenzuela City",
           age: 36,
-          contract: "loremimpusm@gmail.com",
+          contact: "loremimpusm@gmail.com",
           actions:
             '<div class="relative" data-te-dropdown-ref>\n' +
             "  <button\n" +
@@ -350,7 +350,7 @@ export default {
           team: "Alpha",
           address: "Maysan, Valenzuela City",
           age: 36,
-          contract: "loremimpusm@gmail.com",
+          contact: "loremimpusm@gmail.com",
           actions:
             '<div class="relative" data-te-dropdown-ref>\n' +
             "  <button\n" +
@@ -411,7 +411,7 @@ export default {
           team: "Alpha",
           address: "Malinta, Valenzuela City",
           age: 36,
-          contract: "loremimpusm@gmail.com",
+          contact: "loremimpusm@gmail.com",
           actions:
             '<div class="relative" data-te-dropdown-ref>\n' +
             "  <button\n" +
