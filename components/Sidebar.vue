@@ -74,7 +74,7 @@
         </li>
       </nuxt-link>
       <nuxt-link
-        to="/analytics"
+        to="/dashboard/analytics"
         :class="{ 'hover:text-[#1B295A]': isSidebarOpen }"
         class="text-white"
       >
