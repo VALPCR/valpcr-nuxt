@@ -5,7 +5,7 @@
         <vue-good-table
           :columns="filterColumns"
           :rows="emptyRows"
-          :search-options="{ enabled: false }"
+          :search-options="{ enabled: true }"
         >
           <div slot="table-actions-bottom">
             <button

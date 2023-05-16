@@ -5,7 +5,7 @@
         <vue-good-table
           :columns="filterColumns"
           :rows="emptyRows"
-          :search-options="{ enabled: true }"
+          :search-options="{ enabled: false }"
         >
           <div slot="table-actions-bottom">
             <button
@@ -63,18 +63,16 @@ export default {
       emptyRows: [],
       filterColumns: [
         {
-          label: "Case",
-          field: "case",
+          label: "Team",
+          field: "team",
           filterOptions: {
             styleClass: "class1", // class to be added to the parent th element
             enabled: true, // enable filter for this column
             filterDropdownItems: [
-              "Brain Hemorrhage",
-              "Car Accident",
-              "Heart Attack",
-              "Heart Stroke",
-              "Heat Stroke",
-              "Motorcycle Accident",
+              "Alpha",
+              "Bravo",
+              "Charlie",
+              "Delta",
             ],
             trigger: "enter", //only trigger on enter not on keyup
           },
@@ -144,37 +142,16 @@ export default {
           sortable: false,
         },
         {
-          label: "Ambulance",
-          field: "ambulance",
+          label: "Status",
+          field: "status",
           filterOptions: {
+            styleClass: "class1", // class to be added to the parent th element
             enabled: true, // enable filter for this column
             filterDropdownItems: [
-              "EMS 01",
-              "EMS 02",
-              "EMS 03",
-              "EMS 04",
-              "EMS 05",
-              "EMS 06",
-              "EMS 07",
-              "EMS 08",
-              "EMS 09",
-              "EMS 10",
-              "EMS 11",
-              "EMS 12",
-              "EMS 13",
-              "EMS 14",
-              "EMS 15",
-              "EMS 16",
-              "EMS 17",
-              "EMS 18",
-              "EMS 19",
-              "EMS 20",
-              "EMS 21",
-              "EMS 22",
-              "EMS 23",
-              "EMS 24",
-              "EMS 25",
+              "Active",
+              "Disabled",
             ],
+            trigger: "enter", //only trigger on enter not on keyup
           },
           sortable: false,
         },
