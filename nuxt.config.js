@@ -28,10 +28,10 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    "~/plugins/jsPDF",
-    "~/plugins/fontawesome.js",
-    "~/plugins/datatable.js",
-    "~/plugins/chart.js",
+    { src: "~/plugins/jsPDF" },
+    { src: "~/plugins/fontawesome.js" },
+    { src: "~/plugins/datatable.js" },
+    { src: "~/plugins/chart.js", mode: 'client'},
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
