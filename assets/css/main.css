@@ -6,23 +6,3 @@
   background-color: white;
   color: #1B295A;
 }
-
-.hover-option {
-  position: relative;
-}
-
-.hover-option::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  background-color: blue; /* Change to your desired hover color */
-  z-index: -1;
-}
-
-.hover-option:hover::before {
-  opacity: 1;
-}

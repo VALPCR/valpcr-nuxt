@@ -113,7 +113,7 @@
             'sm:pl-0 md:pl-10 lg:pl-10 xl:pl-10': isSidebarOpen,
             'sm:left-2 md:left-4 lg:left-4 xl:left-4': !isSidebarOpen,
           }"
-          class="space-x-2 bottom-0 fixed"
+          class="space-x-2 bottom-12 fixed"
         >
           <font-awesome-icon icon="fa-solid fa-sign-out" />
           <span v-if="isSidebarOpen">Logout</span>
