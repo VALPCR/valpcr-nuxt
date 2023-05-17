@@ -1,17 +1,15 @@
 <template>
   <div>
     <div class="navbar is-primary">
-      <Navbar/>
+      <Navbar />
     </div>
     <div class="sidebar min-h-screen flex bg-[#D7E4F3]">
-    <Sidebar />
-    <div class="flex-grow overflow-auto">
-      <nuxt />
+      <Sidebar />
+      <div class="flex-grow overflow-auto">
+        <nuxt />
+      </div>
     </div>
   </div>
-  </div>
-
-
 </template>
 
 <script>
@@ -24,7 +22,6 @@ export default {
   },
 };
 </script>
-
 
 <style>
 .sidebar {
@@ -39,5 +36,5 @@ export default {
   right: 0;
   z-index: 9999; /* Adjust the z-index value as needed */
   /* Other navbar styles */
-  }
+}
 </style>

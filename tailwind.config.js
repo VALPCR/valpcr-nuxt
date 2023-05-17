@@ -8,16 +8,10 @@ module.exports = {
     "./nuxt.config.{js,ts}",
     "./node_modules/tw-elements/dist/js/**/*.js",
     "./node_modules/flowbite/**/*.js",
-
   ],
   theme: {
     extend: {},
   },
   darkMode: "class",
-  plugins: [
-    require("tw-elements/dist/plugin.cjs",
-    require('flowbite/plugin'),
-  )],
-
-
+  plugins: [require("tw-elements/dist/plugin.cjs", require("flowbite/plugin"))],
 };

@@ -5,9 +5,38 @@
   >
     <div class="text-right">
       <button @click="toggleSidebar" class="p-4 text-white">
-        <svg v-if=isSidebarOpen xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-left"><polyline points="11 17 6 12 11 7"></polyline><polyline points="18 17 13 12 18 7"></polyline></svg>
-        <svg v-else xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-right sm:right-1.5 md:right-0 lg:right-0 xl:right-0 relative"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg>
-
+        <svg
+          v-if="isSidebarOpen"
+          xmlns="http://www.w3.org/2000/svg"
+          width="25"
+          height="25"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="feather feather-chevrons-left"
+        >
+          <polyline points="11 17 6 12 11 7"></polyline>
+          <polyline points="18 17 13 12 18 7"></polyline>
+        </svg>
+        <svg
+          v-else
+          xmlns="http://www.w3.org/2000/svg"
+          width="25"
+          height="25"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="feather feather-chevrons-right sm:right-1.5 md:right-0 lg:right-0 xl:right-0 relative"
+        >
+          <polyline points="13 17 18 12 13 7"></polyline>
+          <polyline points="6 17 11 12 6 7"></polyline>
+        </svg>
       </button>
     </div>
     <ul class="">
@@ -16,18 +45,20 @@
         v-if="role === 'head'"
         to="/dashboard/head/patient"
         :class="{ 'hover:text-[#1B295A]': isSidebarOpen }"
-        class="text-white">
-          <li
-            :class="{
-              'hover:bg-white md:pl-10 lg:pl-10 xl:pl-10': isSidebarOpen,
-              'sm:right-1.5 md:right-0 lg:right-0 xl:right-0 relative hover:text-[#1B295A]':
-                !isSidebarOpen,
-            }"
-            class="space-x-2 mb-4">
-            <font-awesome-icon :icon="['fass', 'hospital-user']" />
-            <!-- <svg class="svg-icon text-white fill-current  hover:fill-[#1B295A]" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 96 960 960" width="20" ><path d="M680 729.333q-50 0-85-35t-35-85q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35ZM440 1009.33V893.333q0-21 10-39.5t28-29.5q29.333-17.666 61.167-30.166 31.833-12.5 65.499-19.834L680 870l75.334-95.667q33.666 7.334 64.999 19.834 31.334 12.5 60.667 30.166 18 11 28.5 29.5t10.5 39.5v115.997H440Zm-66.666-115.997V936H186.666q-27.5 0-47.083-19.583T120 869.334V282.666q0-27.5 19.583-47.083T186.666 216h586.668q27.5 0 47.083 19.583T840 282.666v231.335Q814.333 471 772.667 446.834 731 422.667 680 422.667V376H280v66.666h320.668q-32 14.667-57.001 40.667-25 26-38 59.334H280v66.666h213.334q0 27.667 8.167 53 8.166 25.334 22.833 47.001H280V776h150.667q-27 21-42.167 52.167-15.166 31.166-15.166 65.166Z"/></svg> -->
-            <span v-if="isSidebarOpen">Patients</span>
-          </li>
+        class="text-white"
+      >
+        <li
+          :class="{
+            'hover:bg-white md:pl-10 lg:pl-10 xl:pl-10': isSidebarOpen,
+            'sm:right-1.5 md:right-0 lg:right-0 xl:right-0 relative hover:text-[#1B295A]':
+              !isSidebarOpen,
+          }"
+          class="space-x-2 mb-4"
+        >
+          <font-awesome-icon :icon="['fass', 'hospital-user']" />
+          <!-- <svg class="svg-icon text-white fill-current  hover:fill-[#1B295A]" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 96 960 960" width="20" ><path d="M680 729.333q-50 0-85-35t-35-85q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35ZM440 1009.33V893.333q0-21 10-39.5t28-29.5q29.333-17.666 61.167-30.166 31.833-12.5 65.499-19.834L680 870l75.334-95.667q33.666 7.334 64.999 19.834 31.334 12.5 60.667 30.166 18 11 28.5 29.5t10.5 39.5v115.997H440Zm-66.666-115.997V936H186.666q-27.5 0-47.083-19.583T120 869.334V282.666q0-27.5 19.583-47.083T186.666 216h586.668q27.5 0 47.083 19.583T840 282.666v231.335Q814.333 471 772.667 446.834 731 422.667 680 422.667V376H280v66.666h320.668q-32 14.667-57.001 40.667-25 26-38 59.334H280v66.666h213.334q0 27.667 8.167 53 8.166 25.334 22.833 47.001H280V776h150.667q-27 21-42.167 52.167-15.166 31.166-15.166 65.166Z"/></svg> -->
+          <span v-if="isSidebarOpen">Patients</span>
+        </li>
       </nuxt-link>
       <nuxt-link
         v-if="role === 'head'"
@@ -66,7 +97,6 @@
           }"
           class="space-x-2 mb-4"
         >
-
           <!-- <font-awesome-icon icon="fa-solid fa-bell-concierge" /> -->
           <font-awesome-icon icon="fa-solid fa-truck-medical" />
           <!-- <font-awesome-icon icon="fa-sharp fa-solid fa-siren-on" /> -->
@@ -115,14 +145,16 @@
         v-if="role === 'dispatcher'"
         to="/dashboard/dispatcher/patient"
         :class="{ 'hover:text-[#1B295A]': isSidebarOpen }"
-        class="text-white">
+        class="text-white"
+      >
         <li
           :class="{
-              'hover:bg-white md:pl-10 lg:pl-10 xl:pl-10': isSidebarOpen,
-              'sm:right-1.5 md:right-0 lg:right-0 xl:right-0 relative hover:text-[#1B295A]':
-                !isSidebarOpen,
-            }"
-          class="space-x-2 mb-4">
+            'hover:bg-white md:pl-10 lg:pl-10 xl:pl-10': isSidebarOpen,
+            'sm:right-1.5 md:right-0 lg:right-0 xl:right-0 relative hover:text-[#1B295A]':
+              !isSidebarOpen,
+          }"
+          class="space-x-2 mb-4"
+        >
           <font-awesome-icon :icon="['fass', 'hospital-user']" />
           <!-- <svg class="svg-icon text-white fill-current  hover:fill-[#1B295A]" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 96 960 960" width="20" ><path d="M680 729.333q-50 0-85-35t-35-85q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35ZM440 1009.33V893.333q0-21 10-39.5t28-29.5q29.333-17.666 61.167-30.166 31.833-12.5 65.499-19.834L680 870l75.334-95.667q33.666 7.334 64.999 19.834 31.334 12.5 60.667 30.166 18 11 28.5 29.5t10.5 39.5v115.997H440Zm-66.666-115.997V936H186.666q-27.5 0-47.083-19.583T120 869.334V282.666q0-27.5 19.583-47.083T186.666 216h586.668q27.5 0 47.083 19.583T840 282.666v231.335Q814.333 471 772.667 446.834 731 422.667 680 422.667V376H280v66.666h320.668q-32 14.667-57.001 40.667-25 26-38 59.334H280v66.666h213.334q0 27.667 8.167 53 8.166 25.334 22.833 47.001H280V776h150.667q-27 21-42.167 52.167-15.166 31.166-15.166 65.166Z"/></svg> -->
           <span v-if="isSidebarOpen">Patients</span>
@@ -142,7 +174,6 @@
           }"
           class="space-x-2 mb-4"
         >
-
           <!-- <font-awesome-icon icon="fa-solid fa-bell-concierge" /> -->
           <font-awesome-icon icon="fa-solid fa-truck-medical" />
           <!-- <font-awesome-icon icon="fa-sharp fa-solid fa-siren-on" /> -->
@@ -173,14 +204,16 @@
         v-if="role === 'emr'"
         to="/dashboard/emr/patient"
         :class="{ 'hover:text-[#1B295A]': isSidebarOpen }"
-        class="text-white">
+        class="text-white"
+      >
         <li
           :class="{
-              'hover:bg-white md:pl-10 lg:pl-10 xl:pl-10': isSidebarOpen,
-              'sm:right-1.5 md:right-0 lg:right-0 xl:right-0 relative hover:text-[#1B295A]':
-                !isSidebarOpen,
-            }"
-          class="space-x-2 mb-4">
+            'hover:bg-white md:pl-10 lg:pl-10 xl:pl-10': isSidebarOpen,
+            'sm:right-1.5 md:right-0 lg:right-0 xl:right-0 relative hover:text-[#1B295A]':
+              !isSidebarOpen,
+          }"
+          class="space-x-2 mb-4"
+        >
           <font-awesome-icon :icon="['fass', 'hospital-user']" />
           <!-- <svg class="svg-icon text-white fill-current  hover:fill-[#1B295A]" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 96 960 960" width="20" ><path d="M680 729.333q-50 0-85-35t-35-85q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35ZM440 1009.33V893.333q0-21 10-39.5t28-29.5q29.333-17.666 61.167-30.166 31.833-12.5 65.499-19.834L680 870l75.334-95.667q33.666 7.334 64.999 19.834 31.334 12.5 60.667 30.166 18 11 28.5 29.5t10.5 39.5v115.997H440Zm-66.666-115.997V936H186.666q-27.5 0-47.083-19.583T120 869.334V282.666q0-27.5 19.583-47.083T186.666 216h586.668q27.5 0 47.083 19.583T840 282.666v231.335Q814.333 471 772.667 446.834 731 422.667 680 422.667V376H280v66.666h320.668q-32 14.667-57.001 40.667-25 26-38 59.334H280v66.666h213.334q0 27.667 8.167 53 8.166 25.334 22.833 47.001H280V776h150.667q-27 21-42.167 52.167-15.166 31.166-15.166 65.166Z"/></svg> -->
           <span v-if="isSidebarOpen">Patients</span>
@@ -190,14 +223,16 @@
         v-if="role === 'emr'"
         to="/dashboard/emr/pending"
         :class="{ 'hover:text-[#1B295A]': isSidebarOpen }"
-        class="text-white">
+        class="text-white"
+      >
         <li
           :class="{
-              'hover:bg-white md:pl-10 lg:pl-10 xl:pl-10': isSidebarOpen,
-              'sm:right-1.5 md:right-0 lg:right-0 xl:right-0 relative hover:text-[#1B295A]':
-                !isSidebarOpen,
-            }"
-          class="space-x-2 mb-4">
+            'hover:bg-white md:pl-10 lg:pl-10 xl:pl-10': isSidebarOpen,
+            'sm:right-1.5 md:right-0 lg:right-0 xl:right-0 relative hover:text-[#1B295A]':
+              !isSidebarOpen,
+          }"
+          class="space-x-2 mb-4"
+        >
           <font-awesome-icon :icon="['fass', 'hospital-user']" />
           <!-- <svg class="svg-icon text-white fill-current  hover:fill-[#1B295A]" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 96 960 960" width="20" ><path d="M680 729.333q-50 0-85-35t-35-85q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35ZM440 1009.33V893.333q0-21 10-39.5t28-29.5q29.333-17.666 61.167-30.166 31.833-12.5 65.499-19.834L680 870l75.334-95.667q33.666 7.334 64.999 19.834 31.334 12.5 60.667 30.166 18 11 28.5 29.5t10.5 39.5v115.997H440Zm-66.666-115.997V936H186.666q-27.5 0-47.083-19.583T120 869.334V282.666q0-27.5 19.583-47.083T186.666 216h586.668q27.5 0 47.083 19.583T840 282.666v231.335Q814.333 471 772.667 446.834 731 422.667 680 422.667V376H280v66.666h320.668q-32 14.667-57.001 40.667-25 26-38 59.334H280v66.666h213.334q0 27.667 8.167 53 8.166 25.334 22.833 47.001H280V776h150.667q-27 21-42.167 52.167-15.166 31.166-15.166 65.166Z"/></svg> -->
           <span v-if="isSidebarOpen">
@@ -232,7 +267,7 @@ export default {
   data() {
     return {
       isSidebarOpen: true,
-      role: 'emr',
+      role: "emr",
     };
   },
   methods: {
@@ -240,9 +275,7 @@ export default {
       this.isSidebarOpen = !this.isSidebarOpen;
     },
   },
-
 };
-
 </script>
 
 <style scoped>
@@ -251,6 +284,4 @@ ul {
   height: calc(100vh - 2.5rem);
   overflow-y: auto;
 }
-
-
 </style>

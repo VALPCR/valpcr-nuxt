@@ -59,7 +59,7 @@ export default {
   components: { Dropdown, Ripple, initTE },
   data() {
     return {
-      role: 'head',
+      role: "head",
       filteredRows: [],
       emptyRows: [],
       filterColumns: [
@@ -69,12 +69,7 @@ export default {
           filterOptions: {
             styleClass: "class1", // class to be added to the parent th element
             enabled: true, // enable filter for this column
-            filterDropdownItems: [
-              "Alpha",
-              "Bravo",
-              "Charlie",
-              "Delta",
-            ],
+            filterDropdownItems: ["Alpha", "Bravo", "Charlie", "Delta"],
             trigger: "enter", //only trigger on enter not on keyup
           },
           sortable: false,
@@ -148,10 +143,7 @@ export default {
           filterOptions: {
             styleClass: "class1", // class to be added to the parent th element
             enabled: true, // enable filter for this column
-            filterDropdownItems: [
-              "Active",
-              "Disabled",
-            ],
+            filterDropdownItems: ["Active", "Disabled"],
             trigger: "enter", //only trigger on enter not on keyup
           },
           sortable: false,

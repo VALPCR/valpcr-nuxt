@@ -31,7 +31,7 @@ export default {
     { src: "~/plugins/jsPDF" },
     { src: "~/plugins/fontawesome.js" },
     { src: "~/plugins/datatable.js" },
-    { src: "~/plugins/chart.js", mode: 'client'},
+    { src: "~/plugins/chart.js", mode: "client" },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

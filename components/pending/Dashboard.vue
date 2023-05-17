@@ -1,4 +1,5 @@
-a<template>
+a
+<template>
   <div class="min-h-screen bg-[#D7E4F3]">
     <div class="m-1">
       <div class="p-4">
@@ -45,7 +46,7 @@ export default {
   components: { Ripple, Dropdown },
   data() {
     return {
-      role: 'dispatcher',
+      role: "dispatcher",
       filteredRows: [],
       emptyRows: [],
       filterColumns: [
@@ -209,11 +210,12 @@ export default {
           call: "4/13/2023 9:02 AM",
           arrival: "4/13/2023 9:15 AM",
           ambulance: "EMS 1",
-          actions: '<button\n' +
+          actions:
+            "<button\n" +
             'type="button"\n' +
             'class="inline-block rounded bg-[#1890FF] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"\n' +
-            '> EDIT' +
-            '</button>'
+            "> EDIT" +
+            "</button>",
         },
         {
           id: 2,
@@ -223,11 +225,12 @@ export default {
           call: "4/13/2023 9:02 AM",
           arrival: "4/13/2023 9:15 AM",
           ambulance: "EMS 5",
-          actions: '<button\n' +
+          actions:
+            "<button\n" +
             'type="button"\n' +
             'class="inline-block rounded bg-[#1890FF] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"\n' +
-          '> EDIT' +
-          '</button>'
+            "> EDIT" +
+            "</button>",
         },
       ],
     };
