@@ -2,7 +2,7 @@
   <div class="min-h-screen bg-[#D7E4F3]">
     <div class="m-1">
       <div class="p-4">
-        <canvas id="myChart" />
+        <LineChart :chart-data="chartData" :chart-options="chartOptions" />
       </div>
     </div>
     <div class="m-5">
@@ -21,10 +21,9 @@
 
 <script>
 import { Dropdown, Ripple, initTE } from "tw-elements";
-import { Chart } from "chart.js";
 
 export default {
-  components: { Ripple, Dropdown, Chart },
+  components: { Ripple, Dropdown },
   data() {
     return {
       filteredRows: [],
@@ -733,6 +732,13 @@ export default {
             "</div>",
         },
       ],
+      chartData: {
+        labels: ['January', 'February', 'March'],
+        datasets: [{ data: [40, 20, 12] }]
+      },
+      chartOptions: {
+        responsive: true
+      }
     };
   },
   created() {
@@ -740,26 +746,6 @@ export default {
   },
   mounted() {
     initTE({ Ripple, Dropdown });
-    const ctx = document.getElementById('myChart');
-
-    new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
-          label: '# of Votes',
-          data: [12, 19, 3, 5, 2, 3],
-          borderWidth: 1
-        }]
-      },
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true
-          }
-        }
-      }
-    });
   },
 };
 </script>
