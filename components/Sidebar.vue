@@ -267,7 +267,7 @@ export default {
   data() {
     return {
       isSidebarOpen: true,
-      role: "emr",
+      role: "dispatcher",
     };
   },
   methods: {
