@@ -11,7 +11,7 @@
          </button>
         <a href="#" class="flex ml-2 md:mr-24">
           <img src="../static/images/valpcr_logo.svg" class="h-8 mr-3" alt="ValPCR Logo" />
-          <span class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">ValPCR</span>
+          <span class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white italic">ValPCR</span>
         </a>
       </div>
       <div class="flex items-center">
