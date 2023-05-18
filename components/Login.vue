@@ -92,7 +92,15 @@ export default {
             },
           })
           .then((response) => {
-            this.$router.push(`/dashboard/${response.data.role}/dispatcher`)
+            if (response.data.role === 'head') {
+              this.$router.push(`/dashboard/${response.data.role}/dispatcher`)
+            }
+            if (response.data.role === 'dispatcher') {
+              this.$router.push(`/dashboard/${response.data.role}/emr`)
+            }
+            if (response.data.role === 'emr') {
+              this.$router.push(`/dashboard/${response.data.role}/patient`)
+            }
           })
           .catch((e) => {
             this.error = e.response.data.message

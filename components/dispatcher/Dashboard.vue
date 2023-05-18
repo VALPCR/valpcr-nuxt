@@ -59,7 +59,7 @@ export default {
   components: { Dropdown, Ripple, initTE },
   data() {
     return {
-      role: "head",
+      role: '',
       filteredRows: [],
       emptyRows: [],
       filterColumns: [
@@ -458,6 +458,7 @@ export default {
   },
   mounted() {
     initTE({ Ripple, Dropdown });
+    this.role = this.$auth.user.role;
   },
 };
 </script>

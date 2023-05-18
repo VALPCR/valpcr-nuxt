@@ -46,7 +46,7 @@ export default {
   components: { Ripple, Dropdown },
   data() {
     return {
-      role: "dispatcher",
+      role: '',
       filteredRows: [],
       emptyRows: [],
       filterColumns: [
@@ -240,6 +240,7 @@ export default {
   },
   mounted() {
     initTE({ Ripple, Dropdown });
+    this.role = this.$auth.user.role;
   },
 };
 </script>

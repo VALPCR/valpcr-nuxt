@@ -54,8 +54,8 @@ export default {
   auth: {
     localStorage: false,
     redirect: {
-      login: '/login',
-      logout: '/login',
+      login: '/',
+      logout: '/',
       home: false,
     },
     strategies: {
@@ -74,7 +74,7 @@ export default {
           login: { url: 'auth/login', method: 'post', propertyName: 'token' },
           refresh: { url: 'auth/refresh', method: 'post' },
           user: { url: 'auth/verify', method: 'get', propertyName: false },
-          logout: { url: 'auth/logout', method: 'post' },
+          logout: { url: 'http://valpcr.test/api/auth/logout', method: 'post' },
         },
       },
     },

@@ -16,17 +16,6 @@
         />
       </div>
     </div>
-    <div class="m-5">
-      <vue-good-table
-        :columns="columns"
-        :rows="rows"
-        :search-options="{ enabled: true }"
-        :pagination-options="{ enabled: true }"
-        styleClass="vgt-table striped bordered"
-        compactMode
-        class="bg-white rounded shadow"
-      />
-    </div>
   </div>
 </template>
 
