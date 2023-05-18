@@ -41,8 +41,8 @@
         class="bg-white rounded shadow"
       >
         <div
-          slot="table-actions"
           v-if="role === 'dispatcher' || role === 'emr'"
+          slot="table-actions"
         >
           <button
             type="button"
@@ -936,12 +936,14 @@ export default {
       ],
     };
   },
+  fetch() {
+    this.role = this.$auth.user.role;
+  },
   created() {
     this.filteredRows = this.rows;
   },
   mounted() {
     initTE({ Ripple, Dropdown });
-    this.role = this.$auth.user.role;
   },
 };
 </script>
