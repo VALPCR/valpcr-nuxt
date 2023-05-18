@@ -47,6 +47,43 @@ export default {
     "@nuxtjs/auth-next",
   ],
 
+  axios: {
+    baseURL: process.env.BASE_URL,
+  },
+
+  auth: {
+    localStorage: false,
+    redirect: {
+      login: '/login',
+      logout: '/login',
+      home: false,
+    },
+    strategies: {
+      local: {
+        scheme: 'refresh',
+        token: {
+          property: 'token',
+          global: true,
+          maxAge: 3600,
+        },
+        refreshToken: {
+          property: 'token',
+          data: 'token',
+        },
+        endpoints: {
+          login: { url: 'auth/login', method: 'post', propertyName: 'token' },
+          refresh: { url: 'auth/refresh', method: 'post' },
+          user: { url: 'auth/verify', method: 'get', propertyName: false },
+          logout: { url: 'auth/logout', method: 'post' },
+        },
+      },
+    },
+  },
+
+  server: {
+    port: 8000, // default: 3000
+  },
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     postcss: {
