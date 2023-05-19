@@ -60,7 +60,7 @@ export default {
   components: { Dropdown, Ripple, initTE, EmrForm },
   data() {
     return {
-      role: '',
+      role: "",
       filteredRows: [],
       emptyRows: [],
       filterColumns: [

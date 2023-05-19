@@ -1,20 +1,20 @@
 <script>
 export default {
   mounted() {
-    this.logout()
+    this.logout();
   },
   methods: {
     async logout() {
-      const params = this.$auth.strategy.token.get()
+      const params = this.$auth.strategy.token.get();
       await this.$auth
         .logout(params)
         .then(() => {
           // Redirect to login
         })
         .catch((error) => {
-          console.log(error)
-        })
+          console.log(error);
+        });
     },
   },
-}
+};
 </script>

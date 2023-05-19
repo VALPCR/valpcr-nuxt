@@ -267,7 +267,7 @@ export default {
   data() {
     return {
       isSidebarOpen: true,
-      role: '',
+      role: "",
     };
   },
   methods: {
@@ -276,8 +276,8 @@ export default {
     },
   },
   mounted() {
-    this.role = this.$auth.user.role
-  }
+    this.role = this.$auth.user.role;
+  },
 };
 </script>
 

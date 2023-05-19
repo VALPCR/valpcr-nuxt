@@ -54,27 +54,27 @@ export default {
   auth: {
     localStorage: false,
     redirect: {
-      login: '/',
-      logout: '/',
+      login: "/",
+      logout: "/",
       home: false,
     },
     strategies: {
       local: {
-        scheme: 'refresh',
+        scheme: "refresh",
         token: {
-          property: 'token',
+          property: "token",
           global: true,
           maxAge: 3600,
         },
         refreshToken: {
-          property: 'token',
-          data: 'token',
+          property: "token",
+          data: "token",
         },
         endpoints: {
-          login: { url: 'auth/login', method: 'post', propertyName: 'token' },
-          refresh: { url: 'auth/refresh', method: 'post' },
-          user: { url: 'auth/verify', method: 'get', propertyName: false },
-          logout: { url: 'http://valpcr.test/api/auth/logout', method: 'post' },
+          login: { url: "auth/login", method: "post", propertyName: "token" },
+          refresh: { url: "auth/refresh", method: "post" },
+          user: { url: "auth/verify", method: "get", propertyName: false },
+          logout: { url: "http://valpcr.test/api/auth/logout", method: "post" },
         },
       },
     },

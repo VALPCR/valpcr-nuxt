@@ -63,7 +63,7 @@ export default {
   components: { Dropdown, Ripple, initTE, DispatcherForm },
   data() {
     return {
-      role: '',
+      role: "",
       filteredRows: [],
       emptyRows: [],
       filterColumns: [

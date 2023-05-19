@@ -46,7 +46,7 @@ export default {
   components: { Ripple, Dropdown },
   data() {
     return {
-      role: '',
+      role: "",
       filteredRows: [],
       emptyRows: [],
       filterColumns: [

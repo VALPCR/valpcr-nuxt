@@ -77,38 +77,38 @@
 export default {
   data() {
     return {
-      email: '',
-      password: '',
-    }
+      email: "",
+      password: "",
+    };
   },
   methods: {
     async login() {
       try {
         await this.$auth
-          .loginWith('local', {
+          .loginWith("local", {
             data: {
               email: this.email,
               password: this.password,
             },
           })
           .then((response) => {
-            if (response.data.role === 'head') {
-              this.$router.push(`/dashboard/${response.data.role}/dispatcher`)
+            if (response.data.role === "head") {
+              this.$router.push(`/dashboard/${response.data.role}/dispatcher`);
             }
-            if (response.data.role === 'dispatcher') {
-              this.$router.push(`/dashboard/${response.data.role}/emr`)
+            if (response.data.role === "dispatcher") {
+              this.$router.push(`/dashboard/${response.data.role}/emr`);
             }
-            if (response.data.role === 'emr') {
-              this.$router.push(`/dashboard/${response.data.role}/patient`)
+            if (response.data.role === "emr") {
+              this.$router.push(`/dashboard/${response.data.role}/patient`);
             }
           })
           .catch((e) => {
-            this.error = e.response.data.message
-          })
+            this.error = e.response.data.message;
+          });
       } catch (e) {
-        console.log(e)
+        console.log(e);
       }
-    }
+    },
   },
 };
 </script>

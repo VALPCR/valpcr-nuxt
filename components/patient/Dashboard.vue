@@ -67,7 +67,7 @@ export default {
   components: { Ripple, Dropdown, PatientForm },
   data() {
     return {
-      role: '',
+      role: "",
       filteredRows: [],
       emptyRows: [],
       filterColumns: [
