@@ -14,7 +14,7 @@
         />
         <h2 class="text-4xl font-bold mb-4">Welcome to ValPCR</h2>
         <p>The first electronic patient care reporting (EPCR)</p>
-        <p>system in VAlenzuela City.</p>
+        <p>system in Valenzuela City.</p>
       </div>
     </div>
     <div

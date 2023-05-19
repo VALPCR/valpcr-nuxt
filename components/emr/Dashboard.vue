@@ -55,8 +55,9 @@
 
 <script>
 import { Dropdown, Ripple, initTE } from "tw-elements";
+import EmrForm from "./EmrForm";
 export default {
-  components: { Dropdown, Ripple, initTE },
+  components: { Dropdown, Ripple, initTE, EmrForm },
   data() {
     return {
       role: '',
