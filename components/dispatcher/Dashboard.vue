@@ -195,6 +195,7 @@ export default {
     this.role = this.$auth.user.role;
     this.$axios.get('user/list' + '?role=dispatcher').then((response) => {
       response.data.return.results.map(result => {
+        console.log(response.data.return.results)
         this.fetchedRows.push({
           id: result.id,
           name: `${result.first_name} ${result.middle_name} ${result.last_name}`,
