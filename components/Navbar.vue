@@ -41,10 +41,13 @@
         </div>
         <div class="flex items-center">
           <div class="flex items-center ml-3">
-            <div>
+            <div class="inline">
+              <p>{{ `${this.$store.$auth.user.first_name} ${this.$store.$auth.user.last_name}` }}</p>
+            </div>
+            <div class="inline ml-3">
               <button
                 type="button"
-                class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                class="inline flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
                 aria-expanded="false"
                 data-dropdown-toggle="dropdown-user"
               >
@@ -112,3 +115,11 @@
     </div>
   </nav>
 </template>
+
+<script>
+export default {
+  mounted() {
+    console.log(this.$store.$auth.user.first_name);
+  }
+}
+</script>
