@@ -53,6 +53,7 @@
               placeholder="Password"
               aria-label="Password"
               aria-describedby="addon-wrapping" />
+<!--            <label class="bg-gray-300 hover:bg-gray-400 rounded px-2 py-1 text-sm text-gray-600 font-mono cursor-pointer js-password-label">show</label>-->
           </div>
           <div class="flex justify-between mb-4">
             <label class="block text-gray-500 font-bold">
@@ -114,3 +115,4 @@ export default {
   },
 };
 </script>
+
