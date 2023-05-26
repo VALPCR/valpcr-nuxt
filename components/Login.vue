@@ -53,8 +53,23 @@
               placeholder="Password"
               aria-label="Password"
               aria-describedby="addon-wrapping"
+
             />
             <label @click="togglePasswordShow" class="bg-gray-200 hover:bg-gray-300 rounded px-2 py-2 text-sm text-gray-600 font-mono cursor-pointer js-password-label">{{ showPassword ? 'Hide' : 'Show' }}</label>
+            <!-- EYE ICONS FOR PASSWORD VISIBILITY -->
+            <!-- <div
+            @click="togglePasswordShow"
+            :class="{ 'bg-[#1B295A]': showPassword }">
+            <font-awesome-icon icon="fa-solid fa-eye" />
+          </div>
+          <div
+            @click="togglePasswordShow"
+            :class="{ 'bg-[#1B295A]': !showPassword }">
+            <font-awesome-icon icon="fa-solid fa-eye-slash" />
+          </div> -->
+
+
+
           </div>
           <div class="flex justify-between mb-4">
             <label class="block text-gray-500 font-bold">
