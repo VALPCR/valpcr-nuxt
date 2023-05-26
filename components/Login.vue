@@ -58,7 +58,7 @@
           </div>
           <div class="flex justify-between mb-4">
             <label class="block text-gray-500 font-bold">
-              <input class="mr-2 leading-tight" type="checkbox" />
+              <input v-model="rememberMe" class="mr-2 leading-tight" type="checkbox" />
               <span class="text-sm"> Remember me </span>
             </label>
             <a class="text-blue-500 hover:text-blue-700 text-sm" href="#">
@@ -84,6 +84,7 @@ export default {
       email: "",
       password: "",
       showPassword: false,
+      rememberMe: false,
     };
   },
   methods: {
@@ -94,6 +95,7 @@ export default {
             data: {
               email: this.email,
               password: this.password,
+              remember_me: this.rememberMe,
             },
           })
           .then((response) => {
