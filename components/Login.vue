@@ -26,31 +26,33 @@
           Please login with your email and password below
         </p>
         <form @submit.prevent="login">
-          <div class="mb-4 relative">
-            <label class="block text-gray-700 font-bold mb-2" for="email">
-              <i class="fas fa-user absolute left-0 top-2"></i>
-              <span class="sr-only">Email</span>
-            </label>
+          <div class="relative flex flex-nowrap items-stretch mb-3">
+            <span
+              class="flex items-center whitespace-nowrap rounded-l border border-r-0 border-solid border-neutral-300 px-3 py-[0.25rem] text-center text-base font-normal leading-[1.6] text-neutral-700 dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200"
+            >
+              <font-awesome-icon icon="fas fa-user" />
+            </span>
             <input
               v-model="email"
-              class="appearance-none border rounded w-full py-2 pl-10 pr-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="email"
-              type="email"
+              type="text"
+              class="relative m-0 block w-[1px] min-w-0 flex-auto rounded-r border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
               placeholder="Email"
-            />
+              aria-label="Email"
+              aria-describedby="addon-wrapping" />
           </div>
-          <div class="mb-4 relative">
-            <label class="block text-gray-700 font-bold mb-2" for="password">
-              <i class="fas fa-lock absolute left-0 top-2"></i>
-              <span class="sr-only">Password</span>
-            </label>
+          <div class="relative flex flex-nowrap items-stretch mb-3">
+            <span
+              class="flex items-center whitespace-nowrap rounded-l border border-r-0 border-solid border-neutral-300 px-3 py-[0.25rem] text-center text-base font-normal leading-[1.6] text-neutral-700 dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200"
+            >
+              <font-awesome-icon icon="fas fa-lock" />
+            </span>
             <input
               v-model="password"
-              class="appearance-none border rounded w-full py-2 pl-10 pr-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="password"
               type="password"
+              class="relative m-0 block w-[1px] min-w-0 flex-auto rounded-r border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
               placeholder="Password"
-            />
+              aria-label="Password"
+              aria-describedby="addon-wrapping" />
           </div>
           <div class="flex justify-between mb-4">
             <label class="block text-gray-500 font-bold">
