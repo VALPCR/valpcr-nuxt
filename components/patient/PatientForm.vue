@@ -1,4 +1,5 @@
 <template>
+
   <div
     data-te-modal-init
     class="fixed left-0 top-10 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
@@ -12,12 +13,166 @@
       data-te-modal-dialog-ref
       class="pointer-events-none relative w-auto translate-y-[-50px] opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:max-w-[500px] min-[992px]:max-w-[800px] min-[1200px]:max-w-[1140px] z-1"
     >
+
       <div
         class="pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600"
       >
+        <ul
+        data-te-stepper-init
+        class="relative m-0 flex list-none justify-between overflow-hidden p-0 transition-[height] duration-200 ease-in-out">
+        <!--Dispatch Data-->
+        <li
+          data-te-stepper-step-ref
+          data-te-stepper-step-active
+          class="w-[4.5rem] flex-auto">
+          <div
+            data-te-stepper-head-ref
+            class="flex cursor-pointer items-center pl-2 leading-[1.3rem] no-underline after:ml-2 after:h-px after:w-full after:flex-1 after:bg-[#e0e0e0] after:content-[''] hover:bg-[#f9f9f9] focus:outline-none dark:after:bg-neutral-600 dark:hover:bg-[#3b3b3b]">
+            <span
+              data-te-stepper-head-icon-ref
+              class="my-6 mr-2 flex h-[1.938rem] w-[1.938rem] items-center justify-center rounded-full bg-[#ebedef] text-sm font-medium text-[#40464f]">
+              1
+            </span>
+            <span
+              data-te-stepper-head-text-ref
+              class="font-medium text-neutral-500 after:flex after:text-[0.8rem] after:content-[data-content] dark:text-neutral-300">
+              Dispatch Data
+            </span>
+          </div>
+          <div
+            data-te-stepper-content-ref
+            class="absolute w-full p-4 transition-all duration-500 ease-in-out">
+
+          </div>
+        </li>
+
+        <!--Patient Information-->
+        <li data-te-stepper-step-ref class="w-[4.5rem] flex-auto">
+          <div
+            data-te-stepper-head-ref
+            class="flex cursor-pointer items-center leading-[1.3rem] no-underline before:mr-2 before:h-px before:w-full before:flex-1 before:bg-[#e0e0e0] before:content-[''] after:ml-2 after:h-px after:w-full after:flex-1 after:bg-[#e0e0e0] after:content-[''] hover:bg-[#f9f9f9] focus:outline-none dark:before:bg-neutral-600 dark:after:bg-neutral-600 dark:hover:bg-[#3b3b3b]">
+            <span
+              data-te-stepper-head-icon-ref
+              class="my-6 mr-2 flex h-[1.938rem] w-[1.938rem] items-center justify-center rounded-full bg-[#ebedef] text-sm font-medium text-[#40464f]">
+              2
+            </span>
+            <span
+              data-te-stepper-head-text-ref
+              class="text-neutral-500 after:flex after:text-[0.8rem] after:content-[data-content] dark:text-neutral-300">
+              Patient Information
+            </span>
+          </div>
+          <div
+            data-te-stepper-content-ref
+            class="absolute left-0 w-full translate-x-[150%] p-4 transition-all duration-500 ease-in-out">
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat.
+          </div>
+        </li>
+
+        <!--Vital Signs-->
+        <li data-te-stepper-step-ref class="w-[4.5rem] flex-auto">
+          <div
+            data-te-stepper-head-ref
+            class="flex cursor-pointer items-center pr-2 leading-[1.3rem] no-underline before:mr-2 before:h-px before:w-full before:flex-1 before:bg-[#e0e0e0] before:content-[''] hover:bg-[#f9f9f9] focus:outline-none dark:before:bg-neutral-600 dark:after:bg-neutral-600 dark:hover:bg-[#3b3b3b]">
+            <span
+              data-te-stepper-head-icon-ref
+              class="my-6 mr-2 flex h-[1.938rem] w-[1.938rem] items-center justify-center rounded-full bg-[#ebedef] text-sm font-medium text-[#40464f]">
+              3
+            </span>
+            <span
+              data-te-stepper-head-text-ref
+              class="text-neutral-500 after:flex after:text-[0.8rem] after:content-[data-content] dark:text-neutral-300">
+              Vital Signs
+            </span>
+          </div>
+          <div
+            data-te-stepper-content-ref
+            class="absolute left-0 w-full translate-x-[150%] p-4 transition-all duration-500 ease-in-out">
+            Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur.
+          </div>
+        </li>
+
+
+        <!--Obstetric History-->
+        <li data-te-stepper-step-ref class="w-[4.5rem] flex-auto">
+          <div
+            data-te-stepper-head-ref
+            class="flex cursor-pointer items-center pr-2 leading-[1.3rem] no-underline before:mr-2 before:h-px before:w-full before:flex-1 before:bg-[#e0e0e0] before:content-[''] hover:bg-[#f9f9f9] focus:outline-none dark:before:bg-neutral-600 dark:after:bg-neutral-600 dark:hover:bg-[#3b3b3b]">
+            <span
+              data-te-stepper-head-icon-ref
+              class="my-6 mr-2 flex h-[1.938rem] w-[1.938rem] items-center justify-center rounded-full bg-[#ebedef] text-sm font-medium text-[#40464f]">
+              4
+            </span>
+            <span
+              data-te-stepper-head-text-ref
+              class="text-neutral-500 after:flex after:text-[0.8rem] after:content-[data-content] dark:text-neutral-300">
+              Obstetric History
+            </span>
+          </div>
+          <div
+            data-te-stepper-content-ref
+            class="absolute left-0 w-full translate-x-[150%] p-4 transition-all duration-500 ease-in-out">
+            Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur.
+          </div>
+        </li>
+
+
+        <!--Treatment Intervention-->
+        <li data-te-stepper-step-ref class="w-[4.5rem] flex-auto">
+          <div
+            data-te-stepper-head-ref
+            class="flex cursor-pointer items-center pr-2 leading-[1.3rem] no-underline before:mr-2 before:h-px before:w-full before:flex-1 before:bg-[#e0e0e0] before:content-[''] hover:bg-[#f9f9f9] focus:outline-none dark:before:bg-neutral-600 dark:after:bg-neutral-600 dark:hover:bg-[#3b3b3b]">
+            <span
+              data-te-stepper-head-icon-ref
+              class="my-6 mr-2 flex h-[1.938rem] w-[1.938rem] items-center justify-center rounded-full bg-[#ebedef] text-sm font-medium text-[#40464f]">
+              5
+            </span>
+            <span
+              data-te-stepper-head-text-ref
+              class="text-neutral-500 after:flex after:text-[0.8rem] after:content-[data-content] dark:text-neutral-300">
+              Treatment Intervention
+            </span>
+          </div>
+          <div
+            data-te-stepper-content-ref
+            class="absolute left-0 w-full translate-x-[150%] p-4 transition-all duration-500 ease-in-out">
+            Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur.
+          </div>
+        </li>
+
+
+         <!--Signature-->
+         <li data-te-stepper-step-ref class="w-[4.5rem] flex-auto">
+          <div
+            data-te-stepper-head-ref
+            class="flex cursor-pointer items-center pr-2 leading-[1.3rem] no-underline before:mr-2 before:h-px before:w-full before:flex-1 before:bg-[#e0e0e0] before:content-[''] hover:bg-[#f9f9f9] focus:outline-none dark:before:bg-neutral-600 dark:after:bg-neutral-600 dark:hover:bg-[#3b3b3b]">
+            <span
+              data-te-stepper-head-icon-ref
+              class="my-6 mr-2 flex h-[1.938rem] w-[1.938rem] items-center justify-center rounded-full bg-[#ebedef] text-sm font-medium text-[#40464f]">
+              6
+            </span>
+            <span
+              data-te-stepper-head-text-ref
+              class="text-neutral-500 after:flex after:text-[0.8rem] after:content-[data-content] dark:text-neutral-300">
+              Signature
+            </span>
+          </div>
+          <div
+            data-te-stepper-content-ref
+            class="absolute left-0 w-full translate-x-[150%] p-4 transition-all duration-500 ease-in-out">
+            Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur.
+          </div>
+        </li>
+      </ul>
         <div
           class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50"
         >
+
           <!--Modal title-->
           <h5
             class="text-xl font-medium leading-normal text-neutral-800 dark:text-neutral-200"
@@ -664,11 +819,11 @@
 </template>
 
 <script>
-import { Modal, initTE, Ripple, Input } from "tw-elements";
+import { Modal, initTE, Ripple, Input, Stepper} from "tw-elements";
 
 export default {
   mounted() {
-    initTE({ Ripple, Modal, Input });
+    initTE({ Ripple, Modal, Input, Stepper});
   },
 };
 </script>
