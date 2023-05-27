@@ -948,8 +948,10 @@
                       </div>
                       <!-- END S/SX-CHIEF COMPLAINT -->
                       <!-- ONSET-->
-                      <div class="onset">
-                        <div class="relative mb-1" data-te-input-wrapper-init>
+                      <div class="onset col-span-2">
+                        <div class="relative mb-1"
+                        data-te-input-wrapper-init
+                        >
                           <input
                             type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
@@ -965,22 +967,133 @@
                           </label>
                         </div>
                       </div>
-
-                      <div class="relative mb-1" data-te-input-wrapper-init>
-                        <input
-                          type="text"
-                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          id="allergies"
-                          aria-describedby="zis/sx-chief complaint"
-                          placeholder="onset"
-                        />
-                        <label
-                          for="allergies"
-                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                      <!-- END ONSET -->
+                     <!-- ALLERGIES-->
+                     <div class="onset col-span-2">
+                        <div class="relative mb-1"
+                        data-te-input-wrapper-init
                         >
-                          Allergies
-                        </label>
+                          <input
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            id="allergies"
+                            aria-describedby="allergies"
+                            placeholder="allergies"
+                          />
+                          <label
+                            for="allergies"
+                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                          >
+                            Allergies
+                          </label>
+                        </div>
                       </div>
+                      <!-- END ALLERGIES -->
+                      <!-- PROVOCATION-->
+                     <div class="provocation col-span-2">
+                        <div class="relative mb-1"
+                        data-te-input-wrapper-init
+                        >
+                          <input
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            id="provocation"
+                            aria-describedby="provocation"
+                            placeholder="provocation"
+                          />
+                          <label
+                            for="provocation"
+                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                          >
+                            Provocation
+                          </label>
+                        </div>
+                      </div>
+                      <!-- END PROVOCATION -->
+                        <!-- MEDICATION-->
+                     <div class="medication col-span-2">
+                        <div class="relative mb-1"
+                        data-te-input-wrapper-init
+                        >
+                          <input
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            id="medication"
+                            aria-describedby="medication"
+                            placeholder="medication"
+                          />
+                          <label
+                            for="medication"
+                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                          >
+                            Medication
+                          </label>
+                        </div>
+                      </div>
+                      <!-- END MEDICATION -->
+                          <!-- QUALITY-->
+                     <div class="quality col-span-2">
+                        <div class="relative mb-1"
+                        data-te-input-wrapper-init
+                        >
+                          <input
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            id="quality"
+                            aria-describedby="quality"
+                            placeholder="quality"
+                          />
+                          <label
+                            for="quality"
+                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                          >
+                            Quality
+                          </label>
+                        </div>
+                      </div>
+                      <!-- END QUALITY -->
+                        <!-- PAST MEDICAL HISTORY-->
+                     <div class="pmh col-span-2">
+                        <div class="relative mb-1"
+                        data-te-input-wrapper-init
+                        >
+                          <input
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            id="pmh"
+                            aria-describedby="pmh"
+                            placeholder="pmh"
+                          />
+                          <label
+                            for="pmh"
+                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                          >
+                            Past Medical History
+                          </label>
+                        </div>
+                      </div>
+                      <!-- END PAST MEDICAL HISTORY -->
+                         <!-- RADIATION-->
+                     <div class="radiation col-span-2">
+                        <div class="relative mb-1"
+                        data-te-input-wrapper-init
+                        >
+                          <input
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            id="radiation"
+                            aria-describedby="radiation"
+                            placeholder="radiation"
+                          />
+                          <label
+                            for="radiation"
+                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                          >
+                            radiation
+                          </label>
+                        </div>
+                      </div>
+                      <!-- END RADIATION -->
                     </div>
                   </form>
                 </div>
