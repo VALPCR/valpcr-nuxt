@@ -117,9 +117,5 @@
 </template>
 
 <script>
-export default {
-  mounted() {
-    console.log(this.$store.$auth.user.first_name);
-  }
-}
+export default { }
 </script>
