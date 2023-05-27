@@ -51,7 +51,7 @@
           </button>
         </div>
       </vue-good-table>
-      <DispatcherForm />
+      <DispatcherForm @reset="refresh" />
     </div>
   </div>
 </template>
@@ -289,6 +289,10 @@ export default {
     capitalize(word) {
       return word.replace(/^\w/, (c) => c.toUpperCase());
     },
+    refresh() {
+      console.log('test');
+      this.$forceUpdate()
+    }
   },
   mounted() {
     initTE({ Ripple, Dropdown });
