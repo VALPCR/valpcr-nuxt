@@ -1,86 +1,55 @@
 <template>
-
   <div
     data-te-modal-init
-    class="fixed left-0 top-20 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
-    id="exampleModalXl"
+    class="fixed left-0 top-10 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+    id="patientForm"
     tabindex="-1"
     aria-labelledby="exampleModalXlLabel"
     aria-modal="true"
     role="dialog"
-
   >
     <div
       data-te-modal-dialog-ref
       class="pointer-events-none relative w-auto translate-y-[-50px] opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:max-w-[500px] min-[992px]:max-w-[800px] min-[1200px]:max-w-[1140px] z-1"
     >
-
       <div
         class="pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600"
       >
-      <!-- Start of Dispatch Data -->
-          <div class="flex justify-between mx-4 mt-4">
-            <!--Modal title-->
-            <h5
-              class="text-xl font-medium leading-normal text-neutral-800 dark:text-neutral-200"
-              id="exampleModalXlLabel"
+        <div
+          class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50"
+        >
+          <!--Modal title-->
+          <h5
+            class="text-xl font-medium leading-normal text-neutral-800 dark:text-neutral-200"
+            id="exampleModalXlLabel"
+          >
+            Dispatch Data
+          </h5>
+          <!--Close button-->
+          <button
+            type="button"
+            class="box-content rounded-none border-none hover:no-underline hover:opacity-75 focus:opacity-100 focus:shadow-none focus:outline-none"
+            data-te-modal-dismiss
+            aria-label="Close"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="h-6 w-6"
             >
-              Dispatch Data
-            </h5>
-            <!--Close button-->
-            <button
-              type="button"
-              class="box-content rounded-none border-none hover:no-underline hover:opacity-75 focus:opacity-100 focus:shadow-none focus:outline-none"
-              data-te-modal-dismiss
-              aria-label="Close"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="h-6 w-6"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
         </div>
 
-
-
-
-        <div class="mx-4">
-        <ul
-        data-te-stepper-init
-        class="relative m-0 flex list-none justify-between overflow-hidden p-0 transition-[height] duration-200 ease-in-out">
-        <!--Dispatch Data-->
-        <li
-          data-te-stepper-step-ref
-          data-te-stepper-step-active
-          class="w-[4.5rem] flex-auto">
-          <div
-            data-te-stepper-head-ref
-            class="flex cursor-pointer items-center pl-2 leading-[1.3rem] no-underline after:ml-2 after:h-px after:w-full after:flex-1 after:bg-[#e0e0e0] after:content-[''] hover:bg-[#f9f9f9] focus:outline-none dark:after:bg-neutral-600 dark:hover:bg-[#3b3b3b]">
-            <span
-              data-te-stepper-head-icon-ref
-              class="my-6 mr-2 flex h-[1.938rem] w-[1.938rem] items-center justify-center rounded-full bg-[#ebedef] text-sm font-medium text-[#40464f]">
-              1
-            </span>
-            <span
-              data-te-stepper-head-text-ref
-              class="font-medium text-neutral-500 after:flex after:text-[0.8rem] after:content-[data-content] dark:text-neutral-300">
-              Dispatch Data
-            </span>
-          </div>
-          <div
-            data-te-stepper-content-ref
-            class="absolute w-full p-4 transition-all duration-500 ease-in-out">
-            <!--Modal body-->
+        <!--Modal body-->
         <div class="relative p-4">
           <form>
             <div
@@ -279,7 +248,7 @@
                 <input
                   type="text"
                   class="relative m-0 block text-right w-1/4 min-w-0 flex-auto rounded-r border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
-                  placeholder="Involved Vehicle(s)"
+                  placeholder="Involved Vhicle(s)"
                   aria-label="involvedVehicles"
                 />
               </div>
@@ -659,7 +628,6 @@
                 <textarea
                   class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                   id="remarks"
-                  rows="3"
                   aria-describedby="remarks"
                 >
                 </textarea>
@@ -671,476 +639,18 @@
               </div>
             </div>
           </form>
-
         </div>
-
-          </div>
-        </li>
-
-        <!--Patient Information-->
-        <li data-te-stepper-step-ref class="w-[4.5rem] flex-auto">
-          <div
-            data-te-stepper-head-ref
-            class="flex cursor-pointer items-center leading-[1.3rem] no-underline before:mr-2 before:h-px before:w-full before:flex-1 before:bg-[#e0e0e0] before:content-[''] after:ml-2 after:h-px after:w-full after:flex-1 after:bg-[#e0e0e0] after:content-[''] hover:bg-[#f9f9f9] focus:outline-none dark:before:bg-neutral-600 dark:after:bg-neutral-600 dark:hover:bg-[#3b3b3b]">
-            <span
-              data-te-stepper-head-icon-ref
-              class="my-6 mr-2 flex h-[1.938rem] w-[1.938rem] items-center justify-center rounded-full bg-[#ebedef] text-sm font-medium text-[#40464f]">
-              2
-            </span>
-            <span
-              data-te-stepper-head-text-ref
-              class="text-neutral-500 after:flex after:text-[0.8rem] after:content-[data-content] dark:text-neutral-300">
-              Patient...
-            </span>
-          </div>
-          <div
-            data-te-stepper-content-ref
-            class="absolute left-0 w-full translate-x-[150%] p-4 transition-all duration-500 ease-in-out">
-            <div class="relative p-4">
-                <form>
-                  <div
-                    class="grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-4"
-                  >
-                    <!-- NAME -->
-                    <div class="relative mb-1" data-te-input-wrapper-init>
-                      <input
-                        v-model="suffix"
-                        type="text"
-                        class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                        id="suffix"
-                        aria-describedby="suffix"
-                        placeholder="Suffix(e.g. Sr., Jr., III)"
-                      />
-                      <label
-                        for="suffix"
-                        class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                      >
-                        Suffix(e.g. Sr., Jr., III)
-                      </label>
-                    </div>
-
-                    <div class="relative mb-1" data-te-input-wrapper-init>
-                      <input
-                        v-model="first_name"
-                        type="text"
-                        class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                        id="firstName"
-                        aria-describedby="firstName"
-                        placeholder="First Name"
-                      />
-                      <label
-                        for="firstName"
-                        class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                      >
-                        First Name
-                      </label>
-                    </div>
-
-                    <div class="relative mb-1" data-te-input-wrapper-init>
-                      <input
-                        v-model="middle_name"
-                        type="text"
-                        class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                        id="midName"
-                        aria-describedby="midName"
-                        placeholder="Middle Name"
-                      />
-                      <label
-                        for="midName"
-                        class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                      >
-                        Middle Name
-                      </label>
-                    </div>
-
-                    <div class="relative mb-1" data-te-input-wrapper-init>
-                      <input
-                        v-model="last_name"
-                        type="text"
-                        class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                        id="lastName"
-                        aria-describedby="lastName"
-                        placeholder="Last Name"
-                      />
-                      <label
-                        for="lastName"
-                        class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                      >
-                        Last Name
-                      </label>
-                    </div>
-                    <!-- END NAME -->
-                    <!-- GENDER -->
-                    <select
-                      v-model="gender"
-                      data-te-select-init
-                      class="w-full bg-neutral-50"
-                    >
-                      <option value="female">Female</option>
-                      <option value="male">Male</option>
-                    </select>
-                    <label data-te-select-label-ref>Gender</label>
-                    <!-- END GENDER -->
-                    <!-- BIRTHDATE -->
-                    <div
-                      class="relative mb-3"
-                      data-te-datepicker-init
-                      data-te-format="dd, mmm, yyyy"
-                      data-te-input-wrapper-init
-                    >
-                      <input
-                        v-model="birthdate"
-                        type="text"
-                        class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                        placeholder="Select a date"
-                      />
-                      <label
-                        class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                      >
-                        Birthdate
-                      </label>
-                    </div>
-                    <!-- END BIRTHDATE -->
-                    <!-- TEAM -->
-                    <select
-                      v-model="team"
-                      data-te-select-init
-                      class="w-full bg-neutral-50"
-                    >
-                      <option value="alpha">Alpha</option>
-                      <option value="bravo">Bravo</option>
-                      <option value="charlie">Charlie</option>
-                      <option value="delta">Delta</option>
-                    </select>
-                    <label data-te-select-label-ref>Team</label>
-                    <!-- END TEAM -->
-                    <!-- ADDRESS -->
-
-                    <select v-model="city" data-te-select-init class="bg-neutral-50">
-                      <option value="----">Select City</option>
-                      <option selected value="valenzuela">City of Valenzuela</option>
-                    </select>
-
-                    <select
-                      v-model="barangay"
-                      data-te-select-init
-                      class="bg-neutral-50"
-                    >
-                      <option selected value="1">Select Barangay</option>
-                      <option value="2">Arkong Bato</option>
-                      <option value="3">Bagbaguin</option>
-                      <option value="4">Balangkas</option>
-                      <option value="5">Bignay</option>
-                      <option value="6">Canumay East (Canumay)</option>
-                      <option value="7">Canumay West (Canumay)</option>
-                      <option value="8">Coloong</option>
-                      <option value="9">Dalandanan</option>
-                      <option value="10">Gen T. De Leon</option>
-                      <option value="11">Isla</option>
-                      <option value="12">Karuhatan</option>
-                      <option value="13">Lawang Bato</option>
-                      <option value="14">Lingunan</option>
-                      <option value="15">Mabolo</option>
-                      <option value="16">Malanday</option>
-                      <option value="17">Malinta</option>
-                      <option value="18">Mapulang Lupa</option>
-                      <option value="19">Marulas</option>
-                      <option value="20">Maysan</option>
-                      <option value="21">Palasan</option>
-                      <option value="22">Parada</option>
-                      <option value="23">Pariancillo Villa</option>
-                      <option value="24">Paso De Blas</option>
-                      <option value="25">Pasolo</option>
-                      <option value="26">Poblacion</option>
-                      <option value="27">Pulo</option>
-                      <option value="28">Punturin</option>
-                      <option value="29">Rincon</option>
-                      <option value="30">Tagalag</option>
-                      <option value="31">Ugong</option>
-                      <option value="32">Viente Reales</option>
-                      <option value="33">Wawang Pulo</option>
-                    </select>
-                    <div class="col-span-2">
-                      <div class="relative mb-1" data-te-input-wrapper-init>
-                        <input
-                          v-model="street"
-                          type="text"
-                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          id="streetAddress"
-                          aria-describedby="streetAddress"
-                          placeholder="Street Address"
-                        />
-                        <label
-                          for="streetAddress"
-                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                        >
-                          Street Address
-                        </label>
-                      </div>
-                    </div>
-
-                    <!-- END ADDRESS -->
-                    <!-- CONTACT -->
-                    <div class="contact align-center">
-                      <div class="relative mb-1 bg-neutral-50" data-te-input-wrapper-init>
-                        <span
-                          class="absolute left-3 top-1/2 transform -translate-y-1/2 text-neutral-500"
-                        >
-                          +63
-                        </span>
-                        <input
-                          v-model="phone"
-                          type="tel"
-                          id="contactNumber"
-                          name="contactNumber"
-                          class="peer block min-h-[auto] w-full pl-10 rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          pattern="[0-9]*"
-                          inputmode="numeric"
-                          maxlength="10"
-                          required
-                        />
-                      </div>
-                    </div>
-
-                    <!-- END CONTACT -->
-                    <!-- EMAIL -->
-                    <div class="col-span-2">
-                    <div class="email">
-                      <div class="relative mb-1" data-te-input-wrapper-init>
-                        <input
-                          v-model="email"
-                          type="email"
-                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          id="email"
-                          aria-describedby="email"
-                          placeholder="Email"
-                        />
-                        <label
-                          for="email"
-                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                        >
-                          Email
-                        </label>
-                      </div>
-                    </div>
-                    </div>
-                    <!-- Zip Code -->
-                    <div class="zip code">
-                      <div class="relative mb-1" data-te-input-wrapper-init>
-                        <input
-                          v-model="zip"
-                          type="text"
-                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          id="zip"
-                          aria-describedby="zip"
-                          placeholder="Zip code"
-                        />
-                        <label
-                          for="zip"
-                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                        >
-                          Zip code
-                        </label>
-                      </div>
-                    </div>
-                    <!-- END ZIP CODE -->
-                     <!-- S/SX-CHIEF COMPLAINT-->
-                     <div class="s/sx-chief complaint">
-                      <div class="relative mb-1" data-te-input-wrapper-init>
-                        <input
-                          v-model="sscc"
-                          type="text"
-                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          id="s/sx-chief complaint"
-                          aria-describedby="s/sx-chief complaint"
-                          placeholder="s/sx-chief complaint"
-                        />
-                        <label
-                          for="s/sx-chief complaint"
-                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                        >
-                          S/SX-CHIEF COMPLAINT
-                        </label>
-                      </div>
-                    </div>
-                    <!-- END S/SX-CHIEF COMPLAINT -->
-                    <!-- ONSET-->
-                    <div class="onset">
-                      <div class="relative mb-1" data-te-input-wrapper-init>
-                        <input
-                          v-model="onset"
-                          type="text"
-                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          id="onset"
-                          aria-describedby="zis/sx-chief complaint"
-                          placeholder="onset"
-                        />
-                        <label
-                          for="onset"
-                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                        >
-                          Onset
-                        </label>
-                      </div>
-                    </div>
-                    <!-- END ONSET -->
-                     <!-- ALLERGIES-->
-                    <div class="allergies">
-                      <div class="relative mb-1" data-te-input-wrapper-init>
-                        <input
-                          v-model="allergies"
-                          type="text"
-                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          id="onset"
-                          aria-describedby="zis/sx-chief complaint"
-                          placeholder="onset"
-                        />
-                        <label
-                          for="allergies"
-                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                        >
-                          Allergies
-                        </label>
-                      </div>
-                    </div>
-                    <!-- END ALLERGIES -->
-                  </div>
-                </form>
-              </div>
-          </div>
-        </li>
-
-        <!--Vital Signs-->
-        <li data-te-stepper-step-ref class="w-[4.5rem] flex-auto">
-          <div
-            data-te-stepper-head-ref
-            class="flex cursor-pointer items-center pr-2 leading-[1.3rem] no-underline before:mr-2 before:h-px before:w-full before:flex-1 before:bg-[#e0e0e0] before:content-[''] hover:bg-[#f9f9f9] focus:outline-none dark:before:bg-neutral-600 dark:after:bg-neutral-600 dark:hover:bg-[#3b3b3b]">
-            <span
-              data-te-stepper-head-icon-ref
-              class="my-6 mr-2 flex h-[1.938rem] w-[1.938rem] items-center justify-center rounded-full bg-[#ebedef] text-sm font-medium text-[#40464f]">
-              3
-            </span>
-            <span
-              data-te-stepper-head-text-ref
-              class="text-neutral-500 after:flex after:text-[0.8rem] after:content-[data-content] dark:text-neutral-300">
-              Vital Signs
-            </span>
-          </div>
-          <div
-            data-te-stepper-content-ref
-            class="absolute left-0 w-full translate-x-[150%] p-4 transition-all duration-500 ease-in-out">
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur.
-          </div>
-        </li>
-
-
-        <!--Obstetric History-->
-        <li data-te-stepper-step-ref class="w-[4.5rem] flex-auto">
-          <div
-            data-te-stepper-head-ref
-            class="flex cursor-pointer items-center pr-2 leading-[1.3rem] no-underline before:mr-2 before:h-px before:w-full before:flex-1 before:bg-[#e0e0e0] before:content-[''] hover:bg-[#f9f9f9] focus:outline-none dark:before:bg-neutral-600 dark:after:bg-neutral-600 dark:hover:bg-[#3b3b3b]">
-            <span
-              data-te-stepper-head-icon-ref
-              class="my-6 mr-2 flex h-[1.938rem] w-[1.938rem] items-center justify-center rounded-full bg-[#ebedef] text-sm font-medium text-[#40464f]">
-              4
-            </span>
-            <span
-              data-te-stepper-head-text-ref
-              class="text-neutral-500 after:flex after:text-[0.8rem] after:content-[data-content] dark:text-neutral-300">
-              Obstetric...
-            </span>
-          </div>
-          <div
-            data-te-stepper-content-ref
-            class="absolute left-0 w-full translate-x-[150%] p-4 transition-all duration-500 ease-in-out">
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur.
-          </div>
-        </li>
-
-
-        <!--Treatment Intervention-->
-        <li data-te-stepper-step-ref class="w-[4.5rem] flex-auto">
-          <div
-            data-te-stepper-head-ref
-            class="flex cursor-pointer items-center pr-2 leading-[1.3rem] no-underline before:mr-2 before:h-px before:w-full before:flex-1 before:bg-[#e0e0e0] before:content-[''] hover:bg-[#f9f9f9] focus:outline-none dark:before:bg-neutral-600 dark:after:bg-neutral-600 dark:hover:bg-[#3b3b3b]">
-            <span
-              data-te-stepper-head-icon-ref
-              class="my-6 mr-2 flex h-[1.938rem] w-[1.938rem] items-center justify-center rounded-full bg-[#ebedef] text-sm font-medium text-[#40464f]">
-              5
-            </span>
-            <span
-              data-te-stepper-head-text-ref
-              class="text-neutral-500 after:flex after:text-[0.8rem] after:content-[data-content] dark:text-neutral-300">
-              Treatment...
-            </span>
-          </div>
-          <div
-            data-te-stepper-content-ref
-            class="absolute left-0 w-full translate-x-[150%] p-4 transition-all duration-500 ease-in-out">
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur.
-          </div>
-        </li>
-
-
-         <!--Signature-->
-         <li data-te-stepper-step-ref class="w-[4.5rem] flex-auto">
-          <div
-            data-te-stepper-head-ref
-            class="flex cursor-pointer items-center pr-2 leading-[1.3rem] no-underline before:mr-2 before:h-px before:w-full before:flex-1 before:bg-[#e0e0e0] before:content-[''] hover:bg-[#f9f9f9] focus:outline-none dark:before:bg-neutral-600 dark:after:bg-neutral-600 dark:hover:bg-[#3b3b3b]">
-            <span
-              data-te-stepper-head-icon-ref
-              class="my-6 mr-2 flex h-[1.938rem] w-[1.938rem] items-center justify-center rounded-full bg-[#ebedef] text-sm font-medium text-[#40464f]">
-              6
-            </span>
-            <span
-              data-te-stepper-head-text-ref
-              class="text-neutral-500 after:flex after:text-[0.8rem] after:content-[data-content] dark:text-neutral-300">
-              Signature
-            </span>
-          </div>
-          <div
-            data-te-stepper-content-ref
-            class="absolute left-0 w-full translate-x-[150%] p-4 transition-all duration-500 ease-in-out">
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur.
-          </div>
-        </li>
-      </ul>
-    </div>
-    <div
-          class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md border-t-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50 min-[0px]:rounded-none"
-        >
-          <button
-            type="button"
-            class="inline-block rounded bg-white text-black px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out focus:outline-none focus:ring-0"
-          >
-            CLEAR
-          </button>
-          <button
-            type="button"
-            class="inline-block ml-4 rounded bg-[#30AD62] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-green-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
-          >
-            SUBMIT
-          </button>
-        </div>
-
-
-
-
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { Modal, initTE, Ripple, Input, Stepper, Datepicker, Select} from "tw-elements";
+import { Modal, initTE, Ripple, Input } from "tw-elements";
 
 export default {
   mounted() {
-    initTE({ Ripple, Modal, Input, Stepper, Datepicker, Select});
+    initTE({ Ripple, Modal, Input });
   },
 };
 </script>

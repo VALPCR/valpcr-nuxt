@@ -5,6 +5,6 @@
 <script>
 import Forgot from "../../components/Forgot";
 export default {
-  components: { Forgot }
-}
+  components: { Forgot },
+};
 </script>

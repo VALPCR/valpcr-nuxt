@@ -178,7 +178,13 @@
                 data-te-select-init
                 class="w-full bg-neutral-50"
               >
-                <option v-for="(item, index) in teams" :key="index" :value="item.id">{{ item.name }}</option>
+                <option
+                  v-for="(item, index) in teams"
+                  :key="index"
+                  :value="item.id"
+                >
+                  {{ item.name }}
+                </option>
               </select>
               <label data-te-select-label-ref>Team</label>
               <!-- END TEAM -->
@@ -352,13 +358,15 @@ export default {
       barangay: "",
       street: "",
       zip: "",
-      age: '',
+      age: "",
       teams: [],
     };
   },
   fetch() {
-    this.$axios.get('team/list').then((response) => {
-      response.data.return.map((team) => this.teams.push({id: team.id, name: team.name}))
+    this.$axios.get("team/list").then((response) => {
+      response.data.return.map((team) =>
+        this.teams.push({ id: team.id, name: team.name })
+      );
     });
   },
   mounted() {
@@ -374,7 +382,10 @@ export default {
         last_name: this.last_name,
         gender: this.gender,
         phone: this.phone,
-        birthdate: this.birthdate !== '' ? new Date(this.birthdate).toLocaleDateString("en-US") : this.birthdate = '',
+        birthdate:
+          this.birthdate !== ""
+            ? new Date(this.birthdate).toLocaleDateString("en-US")
+            : (this.birthdate = ""),
         email: this.email,
         team: parseInt(this.team),
         city: this.city,
@@ -384,23 +395,23 @@ export default {
         age: this.age,
       };
 
-      this.$axios.post('user/register', params).then(() => {
-        this.role = 'emr';
-        this.suffix = '';
-        this.first_name = '';
-        this.middle_name = '';
-        this.last_name = '';
-        this.gender = '';
-        this.phone = '';
-        this.birthdate = '';
-        this.email = '';
-        this.team = '';
-        this.city = '';
-        this.barangay = '';
-        this.street = '';
-        this.zip = '';
-        this.age = '';
-      })
+      this.$axios.post("user/register", params).then(() => {
+        this.role = "emr";
+        this.suffix = "";
+        this.first_name = "";
+        this.middle_name = "";
+        this.last_name = "";
+        this.gender = "";
+        this.phone = "";
+        this.birthdate = "";
+        this.email = "";
+        this.team = "";
+        this.city = "";
+        this.barangay = "";
+        this.street = "";
+        this.zip = "";
+        this.age = "";
+      });
     },
   },
 };

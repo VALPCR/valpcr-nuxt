@@ -81,7 +81,11 @@
               />
               <span class="text-sm"> Remember me </span>
             </label>
-            <NuxtLink to="/forgot" class="text-blue-500 hover:text-blue-700 text-sm" href="#">
+            <NuxtLink
+              to="/forgot"
+              class="text-blue-500 hover:text-blue-700 text-sm"
+              href="#"
+            >
               Forgot password?
             </NuxtLink>
           </div>

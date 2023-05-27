@@ -38,7 +38,8 @@
               class="relative m-0 block w-[1px] min-w-0 flex-auto rounded-r border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
               placeholder="Email"
               aria-label="Email"
-              aria-describedby="addon-wrapping" />
+              aria-describedby="addon-wrapping"
+            />
           </div>
           <button
             class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full mb-5"
@@ -46,7 +47,11 @@
           >
             Reset Password
           </button>
-          <NuxtLink to="/" class="text-blue-500 hover:text-blue-700 text-sm" href="#">
+          <NuxtLink
+            to="/"
+            class="text-blue-500 hover:text-blue-700 text-sm"
+            href="#"
+          >
             Already have an account? Please log in
           </NuxtLink>
         </form>
@@ -64,12 +69,11 @@ export default {
   },
   methods: {
     forgot() {
-      const params = { email: this.email }
-      this.$axios.post('/password/email', params).then((response) => {
+      const params = { email: this.email };
+      this.$axios.post("/password/email", params).then((response) => {
         console.log(response);
-      })
+      });
     },
   },
 };
 </script>
-

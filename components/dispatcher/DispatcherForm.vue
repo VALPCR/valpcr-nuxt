@@ -173,7 +173,13 @@
                 data-te-select-init
                 class="w-full bg-neutral-50"
               >
-                <option v-for="(item, index) in teams" :key="index" :value="item.id">{{ item.name }}</option>
+                <option
+                  v-for="(item, index) in teams"
+                  :key="index"
+                  :value="item.id"
+                >
+                  {{ item.name }}
+                </option>
               </select>
 
               <select v-model="city" data-te-select-init class="bg-neutral-50">
@@ -254,7 +260,10 @@
                 </label>
               </div>
 
-              <div class="relative mb-1 bg-neutral-50" data-te-input-wrapper-init>
+              <div
+                class="relative mb-1 bg-neutral-50"
+                data-te-input-wrapper-init
+              >
                 <span
                   class="absolute left-3 top-1/2 transform -translate-y-1/2 text-neutral-500"
                 >
@@ -289,7 +298,6 @@
                   Email
                 </label>
               </div>
-
             </div>
           </form>
         </div>
@@ -330,13 +338,15 @@ export default {
       barangay: "",
       street: "",
       zip: "",
-      age: '',
+      age: "",
       teams: [],
     };
   },
   fetch() {
-    this.$axios.get('team/list').then((response) => {
-      response.data.return.map((team) => this.teams.push({id: team.id, name: this.capitalize(team.name)}))
+    this.$axios.get("team/list").then((response) => {
+      response.data.return.map((team) =>
+        this.teams.push({ id: team.id, name: this.capitalize(team.name) })
+      );
     });
   },
   mounted() {
@@ -352,7 +362,10 @@ export default {
         last_name: this.last_name,
         gender: this.gender,
         phone: this.phone,
-        birthdate: this.birthdate !== '' ? new Date(this.birthdate).toLocaleDateString("en-US") : this.birthdate = '',
+        birthdate:
+          this.birthdate !== ""
+            ? new Date(this.birthdate).toLocaleDateString("en-US")
+            : (this.birthdate = ""),
         age: this.age,
         role: this.role,
         email: this.email,
@@ -362,27 +375,27 @@ export default {
         zip: this.zip,
       };
 
-      this.$axios.post('user/register', params).then(() => {
-        this.suffix = '';
-        this.first_name = '';
-        this.middle_name = '';
-        this.last_name = '';
-        this.gender = 'female';
-        this.phone = '';
-        this.birthdate = '';
-        this.age = '';
-        this.email = '';
-        this.role = 'dispatcher';
-        this.team_id = '1';
-        this.city = 'Valenzuela';
-        this.barangay = '';
-        this.street = '';
-        this.zip = '';
-        this.$emit('refresh')
-      })
+      this.$axios.post("user/register", params).then(() => {
+        this.suffix = "";
+        this.first_name = "";
+        this.middle_name = "";
+        this.last_name = "";
+        this.gender = "female";
+        this.phone = "";
+        this.birthdate = "";
+        this.age = "";
+        this.email = "";
+        this.role = "dispatcher";
+        this.team_id = "1";
+        this.city = "Valenzuela";
+        this.barangay = "";
+        this.street = "";
+        this.zip = "";
+        this.$emit("refresh");
+      });
     },
     capitalize(word) {
-      return word.replace(/^\w/, c => c.toUpperCase())
+      return word.replace(/^\w/, (c) => c.toUpperCase());
     },
   },
 };
