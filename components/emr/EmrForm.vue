@@ -362,22 +362,22 @@ export default {
         zip: this.zip,
       };
 
-      this.$axios.post('user/register', params).then(() => {
-        this.role = 'emr';
-        this.suffix = '';
-        this.first_name = '';
-        this.middle_name = '';
-        this.last_name = '';
-        this.gender = '';
-        this.phone = '';
-        this.birthdate = '';
-        this.email = '';
-        this.team = '';
-        this.city = '';
-        this.barangay = '';
-        this.street = '';
-        this.zip = '';
-      })
+      this.$axios.post("user/register", params).then(() => {
+        this.role = "emr";
+        this.suffix = "";
+        this.first_name = "";
+        this.middle_name = "";
+        this.last_name = "";
+        this.gender = "";
+        this.phone = "";
+        this.birthdate = "";
+        this.email = "";
+        this.team = "";
+        this.city = "";
+        this.barangay = "";
+        this.street = "";
+        this.zip = "";
+      });
     },
   },
 };

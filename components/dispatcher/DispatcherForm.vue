@@ -356,7 +356,7 @@ export default {
       barangay: "",
       street: "",
       zip: "",
-      age: '',
+      age: "",
     };
   },
   mounted() {
@@ -382,23 +382,23 @@ export default {
         age: this.age,
       };
 
-      this.$axios.post('user/register', params).then(() => {
-        this.role = 'dispatcher';
-        this.suffix = '';
-        this.first_name = '';
-        this.middle_name = '';
-        this.last_name = '';
-        this.gender = '';
-        this.phone = '';
-        this.birthdate = '';
-        this.email = '';
-        this.team = '';
-        this.city = '';
-        this.barangay = '';
-        this.street = '';
-        this.zip = '';
-        this.age = '';
-      })
+      this.$axios.post("user/register", params).then(() => {
+        this.role = "dispatcher";
+        this.suffix = "";
+        this.first_name = "";
+        this.middle_name = "";
+        this.last_name = "";
+        this.gender = "";
+        this.phone = "";
+        this.birthdate = "";
+        this.email = "";
+        this.team = "";
+        this.city = "";
+        this.barangay = "";
+        this.street = "";
+        this.zip = "";
+        this.age = "";
+      });
     },
   },
 };

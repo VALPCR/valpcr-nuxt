@@ -188,13 +188,17 @@ export default {
   },
   fetch() {
     this.role = this.$auth.user.role;
-    this.$axios.get('user/list' + '?role=emr').then((response) => {
-      response.data.return.map(result => {
+    this.$axios.get("user/list" + "?role=emr").then((response) => {
+      response.data.return.map((result) => {
         this.fetchedRows.push({
           id: result.id,
-          name: `${this.capitalize(result.first_name)} ${result.middle_name ?? ''} ${this.capitalize(result.last_name)}`,
+          name: `${this.capitalize(result.first_name)} ${
+            result.middle_name ?? ""
+          } ${this.capitalize(result.last_name)}`,
           team: this.capitalize(result.team.name),
-          address: `${this.capitalize(result.address.street)} ${this.capitalize(result.address.barangay)} ${this.capitalize(result.address.city)} ${result.address.zip}`,
+          address: `${this.capitalize(result.address.street)} ${this.capitalize(
+            result.address.barangay
+          )} ${this.capitalize(result.address.city)} ${result.address.zip}`,
           age: result.age,
           contact: result.email,
           actions:
@@ -243,9 +247,9 @@ export default {
             "    </li>\n" +
             "  </ul>\n" +
             "</div>",
-        })
-      })
-    })
+        });
+      });
+    });
   },
   created() {
     this.filteredRows = this.fetchedRows;
@@ -271,7 +275,7 @@ export default {
       });
     },
     capitalize(word) {
-      return word.replace(/^\w/, c => c.toUpperCase())
+      return word.replace(/^\w/, (c) => c.toUpperCase());
     },
   },
   mounted() {
