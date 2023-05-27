@@ -42,11 +42,7 @@
         <div class="flex items-center">
           <div class="flex items-center ml-3">
             <div class="inline">
-              <p>
-                {{
-                  `${this.$store.$auth.user.first_name} ${this.$store.$auth.user.last_name}`
-                }}
-              </p>
+              <p>{{ `${this.$store.$auth.user.first_name} ${this.$store.$auth.user.last_name}` }}</p>
             </div>
             <div class="inline ml-3">
               <button
@@ -121,9 +117,5 @@
 </template>
 
 <script>
-export default {
-  mounted() {
-    console.log(this.$store.$auth.user.first_name);
-  },
-};
+export default { }
 </script>
