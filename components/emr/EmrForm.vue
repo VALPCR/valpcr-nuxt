@@ -154,6 +154,23 @@
                   Birthdate
                 </label>
               </div>
+
+              <div class="relative mb-3" data-te-input-wrapper-init>
+                <input
+                  v-model="age"
+                  type="text"
+                  class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                  id="age"
+                  aria-describedby="age"
+                  placeholder="Age"
+                />
+                <label
+                  for="age"
+                  class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                >
+                  Age
+                </label>
+              </div>
               <!-- END BIRTHDATE -->
               <!-- TEAM -->
               <select
@@ -161,10 +178,7 @@
                 data-te-select-init
                 class="w-full bg-neutral-50"
               >
-                <option value="alpha">Alpha</option>
-                <option value="bravo">Bravo</option>
-                <option value="charlie">Charlie</option>
-                <option value="delta">Delta</option>
+                <option v-for="(item, index) in teams" :key="index" :value="item.id">{{ item.name }}</option>
               </select>
               <label data-te-select-label-ref>Team</label>
               <!-- END TEAM -->
@@ -338,7 +352,14 @@ export default {
       barangay: "",
       street: "",
       zip: "",
+      age: '',
+      teams: [],
     };
+  },
+  fetch() {
+    this.$axios.get('team/list').then((response) => {
+      response.data.return.map((team) => this.teams.push({id: team.id, name: team.name}))
+    });
   },
   mounted() {
     initTE({ Ripple, Modal, Input, Datepicker, Select });
@@ -353,13 +374,14 @@ export default {
         last_name: this.last_name,
         gender: this.gender,
         phone: this.phone,
-        birthdate: this.birthdate,
+        birthdate: this.birthdate !== '' ? new Date(this.birthdate).toLocaleDateString("en-US") : this.birthdate = '',
         email: this.email,
-        team: this.team,
+        team: parseInt(this.team),
         city: this.city,
         barangay: this.barangay,
         street: this.street,
         zip: this.zip,
+        age: this.age,
       };
 
       this.$axios.post('user/register', params).then(() => {
@@ -377,6 +399,7 @@ export default {
         this.barangay = '';
         this.street = '';
         this.zip = '';
+        this.age = '';
       })
     },
   },
