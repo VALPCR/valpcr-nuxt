@@ -882,7 +882,7 @@
                     <!-- END ADDRESS -->
                     <!-- CONTACT -->
                     <div class="contact align-center">
-                      <div class="relative mb-1 bg-neutral-50">
+                      <div class="relative mb-1 bg-neutral-50" data-te-input-wrapper-init>
                         <span
                           class="absolute left-3 top-1/2 transform -translate-y-1/2 text-neutral-500"
                         >
@@ -904,6 +904,7 @@
 
                     <!-- END CONTACT -->
                     <!-- EMAIL -->
+                    <div class="col-span-2">
                     <div class="email">
                       <div class="relative mb-1" data-te-input-wrapper-init>
                         <input
@@ -922,8 +923,9 @@
                         </label>
                       </div>
                     </div>
-
-                    <div class="emazipil">
+                    </div>
+                    <!-- Zip Code -->
+                    <div class="zip code">
                       <div class="relative mb-1" data-te-input-wrapper-init>
                         <input
                           v-model="zip"
@@ -941,8 +943,67 @@
                         </label>
                       </div>
                     </div>
-
-                    <!-- END EMAIL -->
+                    <!-- END ZIP CODE -->
+                     <!-- S/SX-CHIEF COMPLAINT-->
+                     <div class="s/sx-chief complaint">
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="sscc"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="s/sx-chief complaint"
+                          aria-describedby="s/sx-chief complaint"
+                          placeholder="s/sx-chief complaint"
+                        />
+                        <label
+                          for="s/sx-chief complaint"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          S/SX-CHIEF COMPLAINT
+                        </label>
+                      </div>
+                    </div>
+                    <!-- END S/SX-CHIEF COMPLAINT -->
+                    <!-- ONSET-->
+                    <div class="onset">
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="onset"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="onset"
+                          aria-describedby="zis/sx-chief complaint"
+                          placeholder="onset"
+                        />
+                        <label
+                          for="onset"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          Onset
+                        </label>
+                      </div>
+                    </div>
+                    <!-- END ONSET -->
+                     <!-- ALLERGIES-->
+                    <div class="allergies">
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="allergies"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="onset"
+                          aria-describedby="zis/sx-chief complaint"
+                          placeholder="onset"
+                        />
+                        <label
+                          for="allergies"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          Allergies
+                        </label>
+                      </div>
+                    </div>
+                    <!-- END ALLERGIES -->
                   </div>
                 </form>
               </div>
