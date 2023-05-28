@@ -134,6 +134,7 @@
                 class="w-full bg-neutral-50"
                 required
               >
+              <option selected>Gender</option>
                 <option value="female">Female</option>
                 <option value="male">Male</option>
               </select>
@@ -182,6 +183,7 @@
                 class="w-full bg-neutral-50"
                 required
               >
+              <option selected value="1">Team</option>
                 <option
                   v-for="(item, index) in teams"
                   :key="index"
@@ -388,7 +390,7 @@ export default {
       first_name: "",
       middle_name: "",
       last_name: "",
-      gender: "female",
+      gender: "",
       phone: "",
       birthdate: "",
       email: "",
@@ -441,7 +443,7 @@ export default {
         this.first_name = "";
         this.middle_name = "";
         this.last_name = "";
-        this.gender = "female";
+        this.gender = "";
         this.phone = "";
         this.birthdate = "";
         this.email = "";
