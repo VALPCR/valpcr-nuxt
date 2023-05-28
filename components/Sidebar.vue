@@ -296,9 +296,9 @@ export default {
     return {
       isSidebarOpen: true,
       role: "",
-      dispatcherNotificationCount: 0,
-      emrNotificationCount: 0,
-      pendingCount: 0,
+      dispatcherNotificationCount: '',
+      emrNotificationCount: '',
+      pendingCount: '',
     };
   },
   mounted() {
