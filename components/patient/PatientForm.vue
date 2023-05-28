@@ -88,7 +88,7 @@
                 </label>
               </div>
 
-              <div class="relative mb-1" data-te-input-wrapper-init>
+              <div class="relative mb-1" data-te-timepicker-init data-te-input-wrapper-init>
                 <input
                   v-model="call_receive"
                   type="text"
