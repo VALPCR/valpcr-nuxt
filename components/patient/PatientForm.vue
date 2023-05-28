@@ -139,7 +139,7 @@
                 </label>
               </div>
 
-              <div class="relative mb-1" data-te-input-wrapper-init>
+              <div class="relative mb-1" data-te-timepicker-init data-te-input-wrapper-init>
                 <input
                   v-model="responded"
                   type="text"
@@ -265,7 +265,7 @@
                 />
               </div>
 
-              <div class="relative mb-1" data-te-input-wrapper-init>
+              <div class="relative mb-1" data-te-timepicker-init data-te-input-wrapper-init>
                 <input
                   v-model="en_route_to"
                   type="text"
@@ -318,7 +318,7 @@
 
               <div />
 
-              <div class="relative mb-1" data-te-input-wrapper-init>
+              <div class="relative mb-1" data-te-timepicker-init data-te-input-wrapper-init>
                 <input
                   v-model="arrived_at"
                   type="text"
@@ -416,7 +416,7 @@
                 </div>
               </div>
 
-              <div class="relative mb-1" data-te-input-wrapper-init>
+              <div class="relative mb-1" data-te-timepicker-init data-te-input-wrapper-init>
                 <input
                   v-model="departed"
                   type="text"
@@ -820,5 +820,6 @@ export default {
       });
     },
   },
+
 };
 </script>
