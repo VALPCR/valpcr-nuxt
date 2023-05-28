@@ -240,7 +240,7 @@
             <span
               class="ml-2 inline-block whitespace-nowrap rounded-[0.27rem] bg-primary-300 px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-black-700"
             >
-              7
+              {{ pendingCount }}
             </span>
           </span>
         </li>
@@ -268,7 +268,13 @@ export default {
     return {
       isSidebarOpen: true,
       role: "",
+      pendingCount: '',
     };
+  },
+  fetch() {
+    this.$axios.get("pcr/list?category=pending").then((response) => {
+      this.pendingCount = response.data.return.length
+    });
   },
   methods: {
     toggleSidebar() {

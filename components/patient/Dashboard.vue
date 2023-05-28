@@ -239,7 +239,7 @@ export default {
   },
   fetch() {
     this.role = this.$auth.user.role;
-    this.$axios.get("pcr/list").then((response) => {
+    this.$axios.get("pcr/list?category=completed").then((response) => {
       response.data.return.map((pcr) =>
         this.fetchedRows.push({
           id: pcr.id,
