@@ -52,6 +52,9 @@
         <!--Modal body-->
         <div class="relative p-4">
           <form>
+            <h6 class="mb-3 mt-2 ml-1 text-base font-medium leading-tight text-secondary">
+                  Basic Information
+              </h6>
             <div
               class="grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-4"
             >
@@ -63,6 +66,7 @@
                   id="suffix"
                   aria-describedby="suffix"
                   placeholder="Suffix(e.g. Sr., Jr., III)"
+
                 />
                 <label
                   for="suffix"
@@ -80,6 +84,7 @@
                   id="firstName"
                   aria-describedby="firstName"
                   placeholder="First Name"
+                  required
                 />
                 <label
                   for="firstName"
@@ -97,6 +102,7 @@
                   id="midName"
                   aria-describedby="midName"
                   placeholder="Middle Name"
+                  required
                 />
                 <label
                   for="midName"
@@ -114,6 +120,7 @@
                   id="lastName"
                   aria-describedby="lastName"
                   placeholder="Last Name"
+                  required
                 />
                 <label
                   for="lastName"
@@ -127,6 +134,7 @@
                 v-model="gender"
                 data-te-select-init
                 class="w-full bg-neutral-50"
+
               >
                 <option value="female">Female</option>
                 <option value="male">Male</option>
@@ -143,6 +151,7 @@
                   type="text"
                   class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                   placeholder="Select a date"
+                  required
                 />
                 <label
                   class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
@@ -159,6 +168,7 @@
                   id="age"
                   aria-describedby="age"
                   placeholder="Age"
+                  required
                 />
                 <label
                   for="age"
@@ -172,6 +182,7 @@
                 v-model="team_id"
                 data-te-select-init
                 class="w-full bg-neutral-50"
+                required
               >
                 <option
                   v-for="(item, index) in teams"
@@ -190,6 +201,7 @@
                 v-model="barangay"
                 data-te-select-init
                 class="bg-neutral-50"
+                required
               >
                 <option selected value="1">Select Barangay</option>
                 <option value="Arkong Bato">Arkong Bato</option>
@@ -234,6 +246,7 @@
                   id="streetAddress"
                   aria-describedby="streetAddress"
                   placeholder="Street Address"
+                  required
                 />
                 <label
                   for="streetAddress"
@@ -251,6 +264,7 @@
                   id="zip"
                   aria-describedby="zip"
                   placeholder="Zip code"
+
                 />
                 <label
                   for="zip"
@@ -277,7 +291,7 @@
                   class="peer block min-h-[auto] w-full pl-10 rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                   pattern="[0-9]*"
                   inputmode="numeric"
-                  maxlength="10"
+                  maxlength="11"
                   required
                 />
               </div>
@@ -290,6 +304,7 @@
                   id="email"
                   aria-describedby="email"
                   placeholder="Email"
+                  required
                 />
                 <label
                   for="email"
