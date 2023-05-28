@@ -686,9 +686,6 @@
 <script>
 import { Modal, initTE, Ripple, Input, Select, Timepicker } from "tw-elements";
 
-const pickerInline = document.querySelector("#timepicker-inline-12");
-const timepickerMaxMin = new Timepicker(pickerInline, { format12: true,
-inline: true, });
 
 export default {
   data() {
@@ -719,7 +716,6 @@ export default {
       departed: "",
       station: "",
       ems_location_a: "",
-      barangay_a: "",
       ambulance: "",
       team_id: "1",
       mt_from: "",
@@ -744,6 +740,43 @@ export default {
     capitalize(word) {
       return word.replace(/^\w/, (c) => c.toUpperCase());
     },
+    clear() {
+        this.dispatch_date = "";
+        this.category = "";
+        this.call_source = "";
+        this.call_receive = "";
+        this.barangay = "";
+        this.incident_location = "";
+        this.responded = "";
+        this.t_o = "";
+        this.va_location = "";
+        this.location = "";
+        this.va_location_barangay = "";
+        this.arrive_at_scene = "";
+        this.t_l = "";
+        this.involved_vehicles_a = "";
+        this.involved_vehicles_b = "";
+        this.en_route_to = "";
+        this.tx_o = "";
+        this.plate_number = "";
+        this.arrived_at = "";
+        this.l_o = "";
+        this.driver = "";
+        this.pedestrian = "";
+        this.passenger = "";
+        this.departed = "";
+        this.station = "";
+        this.ems_location_a = "";
+        this.ambulance = "";
+        this.team_id = "1";
+        this.mt_from = "";
+        this.mt_barangay = "";
+        this.ems_location_b = "";
+        this.barangay_b = "";
+        this.priority = "";
+        this.remarks = "";
+    },
+
     register() {
       const params = {
         dispatch_date: this.dispatch_date,
@@ -752,6 +785,7 @@ export default {
         call_receive: this.call_receive,
         barangay: this.barangay,
         incident_location: this.incident_location,
+        location: this.location,
         responded: this.responded,
         t_o: this.t_o,
         va_location: this.va_location,
@@ -771,7 +805,6 @@ export default {
         departed: this.departed,
         station: this.station,
         ems_location_a: this.ems_location_a,
-        barangay_a: this.barangay_a,
         ambulance: this.ambulance,
         team_id: this.team_id,
         mt_from: this.mt_from,
@@ -792,6 +825,7 @@ export default {
         this.responded = "";
         this.t_o = "";
         this.va_location = "";
+        this.location = "";
         this.va_location_barangay = "";
         this.arrive_at_scene = "";
         this.t_l = "";
@@ -808,7 +842,6 @@ export default {
         this.departed = "";
         this.station = "";
         this.ems_location_a = "";
-        this.barangay_a = "";
         this.ambulance = "";
         this.team_id = "1";
         this.mt_from = "";
@@ -818,6 +851,7 @@ export default {
         this.priority = "";
         this.remarks = "";
       });
+
     },
   },
 
