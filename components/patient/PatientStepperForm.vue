@@ -281,7 +281,7 @@
                         <input
                           type="text"
                           class="relative m-0 block text-right w-1/4 min-w-0 flex-auto rounded-r border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
-                          placeholder="Involved Vhicle(s)"
+                          placeholder="Involved Vehicle(s)"
                           aria-label="involvedVehicles"
                         />
                       </div>
@@ -948,7 +948,7 @@
                       </div>
                       <!-- END S/SX-CHIEF COMPLAINT -->
                       <!-- ONSET-->
-                      <div class="onset col-span-2">
+                      <div class="col-span-2">
                         <div class="relative mb-1"
                         data-te-input-wrapper-init
                         >
@@ -969,7 +969,7 @@
                       </div>
                       <!-- END ONSET -->
                      <!-- ALLERGIES-->
-                     <div class="onset col-span-2">
+                     <div class="col-span-2">
                         <div class="relative mb-1"
                         data-te-input-wrapper-init
                         >
@@ -990,7 +990,7 @@
                       </div>
                       <!-- END ALLERGIES -->
                       <!-- PROVOCATION-->
-                     <div class="provocation col-span-2">
+                     <div class="col-span-2">
                         <div class="relative mb-1"
                         data-te-input-wrapper-init
                         >
@@ -1011,7 +1011,7 @@
                       </div>
                       <!-- END PROVOCATION -->
                         <!-- MEDICATION-->
-                     <div class="medication col-span-2">
+                     <div class="col-span-2">
                         <div class="relative mb-1"
                         data-te-input-wrapper-init
                         >
@@ -1032,7 +1032,7 @@
                       </div>
                       <!-- END MEDICATION -->
                           <!-- QUALITY-->
-                     <div class="quality col-span-2">
+                     <div class="col-span-2">
                         <div class="relative mb-1"
                         data-te-input-wrapper-init
                         >
@@ -1053,7 +1053,7 @@
                       </div>
                       <!-- END QUALITY -->
                         <!-- PAST MEDICAL HISTORY-->
-                     <div class="pmh col-span-2">
+                     <div class="col-span-2">
                         <div class="relative mb-1"
                         data-te-input-wrapper-init
                         >
@@ -1074,7 +1074,7 @@
                       </div>
                       <!-- END PAST MEDICAL HISTORY -->
                          <!-- RADIATION-->
-                     <div class="radiation col-span-2">
+                     <div class="col-span-2">
                         <div class="relative mb-1"
                         data-te-input-wrapper-init
                         >
@@ -1095,7 +1095,7 @@
                       </div>
                       <!-- END RADIATION -->
                          <!-- LAST ORAL INTAKE -->
-                     <div class="loi col-span-2">
+                     <div class="col-span-2">
                         <div class="relative mb-1"
                         data-te-input-wrapper-init
                         >
@@ -1171,6 +1171,7 @@
               </div>
             </li>
 
+
             <!--Vital Signs-->
             <li data-te-stepper-step-ref class="w-[4.5rem] flex-auto">
               <div
@@ -1190,12 +1191,46 @@
                   Vital Signs
                 </span>
               </div>
+
               <div
                 data-te-stepper-content-ref
                 class="absolute left-0 w-full translate-x-[150%] p-4 transition-all duration-500 ease-in-out"
               >
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur.
+                  <form>
+                    <div class="col-span-2">
+                        <div class="relative mb-1" data-te-input-wrapper-init>
+                          <input
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            id="time"
+                            aria-describedby="time"
+                            placeholder="time"
+                          />
+                          <label
+                            for="time"
+                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                          >
+                            Time
+                          </label>
+                        </div>
+
+                        <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="BP"
+                          aria-describedby="BP"
+                          placeholder="BP"
+                        />
+                        <label
+                          for="BP"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          BP
+                        </label>
+                      </div>
+                    </div>
+                    </form>
               </div>
             </li>
 
