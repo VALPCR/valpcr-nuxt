@@ -1,6 +1,7 @@
 <template lang="html">
   <div v-if="loading" class="loading-page">
-    <img src="/valpcr_logo_spinner.gif" alt="valpcr spinner">
+    <img src="/images/valpcr_logo_spinner.gif" alt="valpcr spinner" />
+    Loading...
   </div>
 </template>
 
