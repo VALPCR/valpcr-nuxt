@@ -393,6 +393,7 @@ export default {
         zip: this.zip,
       };
 
+      this.$nuxt.$loading.start()
       this.$axios.post("user/register", params).then(() => {
         this.suffix = "";
         this.first_name = "";
@@ -410,6 +411,8 @@ export default {
         this.street = "";
         this.zip = "";
         this.$emit("refresh");
+      }).finally(() => {
+        this.$nuxt.$loading.finish()
       });
     },
     capitalize(word) {
