@@ -21,7 +21,6 @@
           <!--Modal title-->
           <h5
             class="text-xl font-medium leading-normal text-neutral-800 dark:text-neutral-200"
-            id="exampleModalXlLabel"
           >
             Dispatch Data
           </h5>
@@ -676,13 +675,15 @@
 
         <!--Modal footer-->
         <div
-          class="flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md border-t-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50">
+          class="flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md border-t-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50"
+        >
           <button
             @click="register"
             type="button"
             class="ml-1 inline-block rounded bg-success px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
             data-te-ripple-init
-            data-te-ripple-color="light">
+            data-te-ripple-color="light"
+          >
             Submit
           </button>
         </div>
@@ -692,47 +693,47 @@
 </template>
 
 <script>
-import {Modal, initTE, Ripple, Input, Select } from "tw-elements";
+import { Modal, initTE, Ripple, Input, Select } from "tw-elements";
 
 export default {
   data() {
     return {
       teams: [],
-      dispatch_date: '',
-      category: 'dispatch data',
-      call_source: '',
-      call_receive: '',
-      barangay: '',
-      incident_location: '',
-      responded: '',
-      t_o: '',
-      va_location: '',
-      va_location_barangay: '',
-      arrive_at_scene: '',
-      t_l: '',
-      involved_vehicles_a: '',
-      involved_vehicles_b: '',
-      en_route_to: '',
-      tx_o: '',
-      plate_number: '',
-      arrived_at: '',
-      l_o: '',
-      driver: '',
-      pedestrian: '',
-      passenger: '',
-      departed: '',
-      station: '',
-      ems_location_a: '',
-      barangay_a: '',
-      ambulance: '',
-      team_id: '1',
-      mt_from: '',
-      mt_barangay: '',
-      ems_location_b: '',
-      barangay_b: '',
-      priority: '',
-      remarks: '',
-    }
+      dispatch_date: "",
+      category: "dispatch data",
+      call_source: "",
+      call_receive: "",
+      barangay: "",
+      incident_location: "",
+      responded: "",
+      t_o: "",
+      va_location: "",
+      va_location_barangay: "",
+      arrive_at_scene: "",
+      t_l: "",
+      involved_vehicles_a: "",
+      involved_vehicles_b: "",
+      en_route_to: "",
+      tx_o: "",
+      plate_number: "",
+      arrived_at: "",
+      l_o: "",
+      driver: "",
+      pedestrian: "",
+      passenger: "",
+      departed: "",
+      station: "",
+      ems_location_a: "",
+      barangay_a: "",
+      ambulance: "",
+      team_id: "1",
+      mt_from: "",
+      mt_barangay: "",
+      ems_location_b: "",
+      barangay_b: "",
+      priority: "",
+      remarks: "",
+    };
   },
   fetch() {
     this.$axios.get("team/list").then((response) => {
@@ -751,7 +752,7 @@ export default {
     register() {
       const params = {
         dispatch_date: this.dispatch_date,
-        category: 'dispatch data',
+        category: "dispatch data",
         call_source: this.category,
         call_receive: this.call_receive,
         barangay: this.barangay,
@@ -784,44 +785,44 @@ export default {
         barangay_b: this.barangay_b,
         // priority: this.priority,
         remarks: this.remarks,
-      }
+      };
 
-      this.$axios.post('pcr/register', params).then(() => {
-        this.dispatch_date = '';
-        this.category = 'dispatch data';
-        this.call_source = '';
-        this.call_receive = '';
-        this.barangay = '';
-        this.incident_location = '';
-        this. responded = '';
-        this.t_o = '';
-        this.va_location = '';
-        this.va_location_barangay = '';
-        this.arrive_at_scene = '';
-        this.t_l = '';
-        this.involved_vehicles_a = '';
-        this.involved_vehicles_b = '';
-        this.en_route_to = '';
-        this.tx_o = '';
-        this.plate_number = '';
-        this.arrived_at = '';
-        this.l_o = '';
-        this.driver = '';
-        this.pedestrian = '';
-        this.passenger = '';
-        this.departed = '';
-        this.station = '';
-        this.ems_location_a = '';
-        this.barangay_a = '';
-        this.ambulance = '';
-        this.team_id = '1';
-        this.mt_from = '';
-        this.mt_barangay = '';
-        this.ems_location_b = '';
-        this.barangay_b = '';
-        this.priority = '';
-        this.remarks = '';
-      })
+      this.$axios.post("pcr/register", params).then(() => {
+        this.dispatch_date = "";
+        this.category = "dispatch data";
+        this.call_source = "";
+        this.call_receive = "";
+        this.barangay = "";
+        this.incident_location = "";
+        this.responded = "";
+        this.t_o = "";
+        this.va_location = "";
+        this.va_location_barangay = "";
+        this.arrive_at_scene = "";
+        this.t_l = "";
+        this.involved_vehicles_a = "";
+        this.involved_vehicles_b = "";
+        this.en_route_to = "";
+        this.tx_o = "";
+        this.plate_number = "";
+        this.arrived_at = "";
+        this.l_o = "";
+        this.driver = "";
+        this.pedestrian = "";
+        this.passenger = "";
+        this.departed = "";
+        this.station = "";
+        this.ems_location_a = "";
+        this.barangay_a = "";
+        this.ambulance = "";
+        this.team_id = "1";
+        this.mt_from = "";
+        this.mt_barangay = "";
+        this.ems_location_b = "";
+        this.barangay_b = "";
+        this.priority = "";
+        this.remarks = "";
+      });
     },
   },
 };
