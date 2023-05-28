@@ -52,9 +52,11 @@
         <!--Modal body-->
         <div class="relative p-4">
           <form>
-            <h6 class="mb-3 mt-2 ml-1 text-base font-medium leading-tight text-secondary">
-                  Basic Information
-              </h6>
+            <h6
+              class="mb-3 mt-2 ml-1 text-base font-medium leading-tight text-secondary"
+            >
+              Basic Information
+            </h6>
             <div
               class="grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-4"
             >
@@ -134,7 +136,7 @@
                 class="w-full bg-neutral-50"
                 required
               >
-              <option selected>Gender</option>
+                <option selected>Gender</option>
                 <option value="female">Female</option>
                 <option value="male">Male</option>
               </select>
@@ -183,7 +185,7 @@
                 class="w-full bg-neutral-50"
                 required
               >
-              <option selected value="1">Team</option>
+                <option selected value="1">Team</option>
                 <option
                   v-for="(item, index) in teams"
                   :key="index"
@@ -314,8 +316,10 @@
                 </label>
               </div>
 
-              <h6 class="mb-1 mt-2 ml-1 text-base font-medium leading-tight text-secondary col-span-3">
-                  Emergency Contact Person
+              <h6
+                class="mb-1 mt-2 ml-1 text-base font-medium leading-tight text-secondary col-span-3"
+              >
+                Emergency Contact Person
               </h6>
 
               <div class="relative mb-1 col-span-2" data-te-input-wrapper-init>
@@ -358,7 +362,6 @@
                   required
                 />
               </div>
-
             </div>
           </form>
         </div>
@@ -440,28 +443,31 @@ export default {
         ecp_phone: this.ecp_phone,
       };
 
-      this.$nuxt.$loading.start()
-      this.$axios.post("user/register", params).then(() => {
-        this.suffix = "";
-        this.first_name = "";
-        this.middle_name = "";
-        this.last_name = "";
-        this.gender = "";
-        this.phone = "";
-        this.birthdate = "";
-        this.email = "";
-        this.role = "emr";
-        this.team_id = "1";
-        this.city = "Valenzuela";
-        this.barangay = "";
-        this.street = "";
-        this.zip = "";
-        this.age = "";
-        this.emergecy_contact = "";
-        this.ecp_phone = "";
-      }).finally(() => {
-        this.$nuxt.$loading.finish()
-      });
+      this.$nuxt.$loading.start();
+      this.$axios
+        .post("user/register", params)
+        .then(() => {
+          this.suffix = "";
+          this.first_name = "";
+          this.middle_name = "";
+          this.last_name = "";
+          this.gender = "";
+          this.phone = "";
+          this.birthdate = "";
+          this.email = "";
+          this.role = "emr";
+          this.team_id = "1";
+          this.city = "Valenzuela";
+          this.barangay = "";
+          this.street = "";
+          this.zip = "";
+          this.age = "";
+          this.emergecy_contact = "";
+          this.ecp_phone = "";
+        })
+        .finally(() => {
+          this.$nuxt.$loading.finish();
+        });
     },
     capitalize(word) {
       return word.replace(/^\w/, (c) => c.toUpperCase());

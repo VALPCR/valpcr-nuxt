@@ -1,6 +1,10 @@
 <template lang="html">
   <div v-if="loading" class="loading-page">
-    <img src="/images/valpcr_logo_spinner.gif" alt="valpcr spinner" class="m-auto relative top-[175px]" />
+    <img
+      src="/images/valpcr_logo_spinner.gif"
+      alt="valpcr spinner"
+      class="m-auto relative top-[175px]"
+    />
   </div>
 </template>
 
@@ -11,13 +15,13 @@ export default {
   }),
   methods: {
     start() {
-      this.loading = true
+      this.loading = true;
     },
     finish() {
-      this.loading = false
+      this.loading = false;
     },
   },
-}
+};
 </script>
 
 <style>

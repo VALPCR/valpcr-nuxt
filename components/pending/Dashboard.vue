@@ -207,14 +207,14 @@ export default {
   fetch() {
     this.role = this.$auth.user.role;
     this.$axios.get("pcr/list").then((response) => {
-      console.log('response');
+      console.log("response");
       console.log(response.data.return.length);
       response.data.return.map((pcr) =>
         this.fetchedRows.push({
           id: pcr.id,
-          name: '',
+          name: "",
           address: pcr.incident_location,
-          case: '',
+          case: "",
           call: pcr.call_receive,
           arrival: pcr.arrived_at,
           ambulance: pcr.ambulance,

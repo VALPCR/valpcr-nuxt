@@ -268,12 +268,12 @@ export default {
     return {
       isSidebarOpen: true,
       role: "",
-      pendingCount: '',
+      pendingCount: "",
     };
   },
   fetch() {
     this.$axios.get("pcr/list?category=pending").then((response) => {
-      this.pendingCount = response.data.return.length
+      this.pendingCount = response.data.return.length;
     });
   },
   methods: {

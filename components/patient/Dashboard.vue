@@ -243,9 +243,9 @@ export default {
       response.data.return.map((pcr) =>
         this.fetchedRows.push({
           id: pcr.id,
-          name: '',
+          name: "",
           address: pcr.incident_location,
-          case: '',
+          case: "",
           call: pcr.call_receive,
           arrival: pcr.arrived_at,
           ambulance: pcr.ambulance,
