@@ -77,11 +77,11 @@ export default {
   methods: {
     forgot() {
       const params = {
-        email: this.$route.query.email ? this.$route.query.email : '',
+        email: this.$route.query.email ? this.$route.query.email : "",
         password: this.password,
         password_confirmation: this.passwordConfirmation,
-        token: this.$route.query.token ? this.$route.query.token : '',
-      }
+        token: this.$route.query.token ? this.$route.query.token : "",
+      };
       this.$axios.post("/auth/password/reset", params).then((response) => {
         console.log(response);
       });
