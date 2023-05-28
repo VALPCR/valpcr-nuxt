@@ -323,24 +323,25 @@ export default {
     return {
       isSidebarOpen: true,
       role: "",
-      dispatcherNotificationCount: '',
-      emrNotificationCount: '',
-      pendingCount: '',
-      patientCount: '',
+      dispatcherNotificationCount: "",
+      emrNotificationCount: "",
+      pendingCount: "",
+      patientCount: "",
     };
   },
   mounted() {
     this.role = this.$auth.user.role;
-    this.$nuxt.$options.echo.channel('notification')
-      .listen('.NotificationEvent', (user) => {
-        if (user === 'dispatcher') {
-          this.dispatcherNotificationCount ++;
-        } else if (user === 'emr') {
-          this.emrNotificationCount ++;
-        } else if (user === 'dispatch data') {
-          this.pendingCount ++;
-        } else if (user === 'completed') {
-          this.patientCount ++;
+    this.$nuxt.$options.echo
+      .channel("notification")
+      .listen(".NotificationEvent", (user) => {
+        if (user === "dispatcher") {
+          this.dispatcherNotificationCount++;
+        } else if (user === "emr") {
+          this.emrNotificationCount++;
+        } else if (user === "dispatch data") {
+          this.pendingCount++;
+        } else if (user === "completed") {
+          this.patientCount++;
         }
       });
   },
@@ -350,7 +351,7 @@ export default {
     },
     refresh() {
       location.reload();
-    }
+    },
   },
 };
 </script>

@@ -734,8 +734,8 @@
 
 <script>
 import { Modal, initTE, Ripple, Input, Select, Timepicker } from "tw-elements";
-import Echo from 'laravel-echo';
-import Pusher from 'pusher-js';
+import Echo from "laravel-echo";
+import Pusher from "pusher-js";
 
 export default {
   data() {
