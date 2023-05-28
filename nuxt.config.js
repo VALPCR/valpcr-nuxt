@@ -34,6 +34,7 @@ export default {
     { src: "~/plugins/fontawesome.js" },
     { src: "~/plugins/datatable.js" },
     { src: "~/plugins/chart.js", mode: "client" },
+    { src: '~/plugins/echo.js', mode: 'client' },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

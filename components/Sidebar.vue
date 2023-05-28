@@ -79,8 +79,16 @@
           <span
             v-if="isSidebarOpen"
             class="sm:text-xs md:text-sm lg:text-md xl:text-lg"
-            >Dispatchers</span
           >
+            Dispatchers
+            <span
+              @click="refresh"
+              v-if="dispatcherNotificationCount > 0"
+              class="ml-2 inline-block whitespace-nowrap rounded-[0.27rem] bg-primary-300 px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-black-700"
+            >
+              {{ dispatcherNotificationCount }}
+            </span>
+          </span>
         </li>
       </nuxt-link>
       <nuxt-link
@@ -100,7 +108,16 @@
           <!-- <font-awesome-icon icon="fa-solid fa-bell-concierge" /> -->
           <font-awesome-icon icon="fa-solid fa-truck-medical" />
           <!-- <font-awesome-icon icon="fa-sharp fa-solid fa-siren-on" /> -->
-          <span v-if="isSidebarOpen">EMRs</span>
+          <span v-if="isSidebarOpen">
+            EMRs
+            <span
+              @click="refresh"
+              v-if="emrNotificationCount > 0"
+              class="ml-2 inline-block whitespace-nowrap rounded-[0.27rem] bg-primary-300 px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-black-700"
+            >
+              {{ emrNotificationCount }}
+            </span>
+          </span>
         </li>
       </nuxt-link>
       <nuxt-link
@@ -177,7 +194,16 @@
           <!-- <font-awesome-icon icon="fa-solid fa-bell-concierge" /> -->
           <font-awesome-icon icon="fa-solid fa-truck-medical" />
           <!-- <font-awesome-icon icon="fa-sharp fa-solid fa-siren-on" /> -->
-          <span v-if="isSidebarOpen">EMRs</span>
+          <span v-if="isSidebarOpen">
+            EMRs
+            <span
+              @click="refresh"
+              v-if="emrNotificationCount > 0"
+              class="ml-2 inline-block whitespace-nowrap rounded-[0.27rem] bg-primary-300 px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-black-700"
+            >
+              {{ emrNotificationCount }}
+            </span>
+          </span>
         </li>
       </nuxt-link>
       <nuxt-link
@@ -238,6 +264,8 @@
           <span v-if="isSidebarOpen">
             Pending
             <span
+              @click="refresh"
+              v-if="pendingCount > 0"
               class="ml-2 inline-block whitespace-nowrap rounded-[0.27rem] bg-primary-300 px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-black-700"
             >
               {{ pendingCount }}
@@ -268,21 +296,31 @@ export default {
     return {
       isSidebarOpen: true,
       role: "",
-      pendingCount: "",
+      dispatcherNotificationCount: 0,
+      emrNotificationCount: 0,
+      pendingCount: 0,
     };
   },
-  fetch() {
-    this.$axios.get("pcr/list?category=pending").then((response) => {
-      this.pendingCount = response.data.return.length;
-    });
+  mounted() {
+    this.role = this.$auth.user.role;
+    this.$nuxt.$options.echo.channel('notification')
+      .listen('.NotificationEvent', (user) => {
+        if (user === 'dispatcher') {
+          this.dispatcherNotificationCount ++;
+        } else if (user === 'emr') {
+          this.emrNotificationCount ++;
+        } else if (user === 'dispatch data') {
+          this.pendingCount ++;
+        }
+      });
   },
   methods: {
     toggleSidebar() {
       this.isSidebarOpen = !this.isSidebarOpen;
     },
-  },
-  mounted() {
-    this.role = this.$auth.user.role;
+    refresh() {
+      location.reload();
+    }
   },
 };
 </script>
