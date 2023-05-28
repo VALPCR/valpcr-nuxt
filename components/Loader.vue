@@ -1,7 +1,6 @@
 <template lang="html">
   <div v-if="loading" class="loading-page">
-    <img src="/images/valpcr_logo_spinner.gif" alt="valpcr spinner" />
-    Loading...
+    <img src="/images/valpcr_logo_spinner.gif" alt="valpcr spinner" class="m-auto relative top-[175px]" />
   </div>
 </template>
 
@@ -21,17 +20,13 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .loading-page {
   position: fixed;
   top: 175px;
   left: 100px;
   width: 100%;
   height: 100%;
-  text-align: center;
-  padding-top: 200px;
-  font-size: 30px;
-  font-family: sans-serif;
-  z-index: 999999;
+  z-index: 9999;
 }
 </style>
