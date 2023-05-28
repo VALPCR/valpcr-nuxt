@@ -5,6 +5,8 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: "static",
 
+  loading: '@/components/LoadingBar.vue',
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: "valpcr-nuxt",
@@ -75,6 +77,7 @@ export default {
           refresh: { url: "auth/refresh", method: "post" },
           user: { url: "auth/verify", method: "get", propertyName: false },
           logout: { url: "https://valpcr.kbsan.com/api/auth/logout", method: "post" },
+          // logout: { url: "http://valpcr.test/api/auth/logout", method: "post" },
         },
       },
     },
