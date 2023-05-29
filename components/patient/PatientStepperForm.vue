@@ -753,16 +753,9 @@
                     <div
                       class="grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-4"
                     >
-                      <!-- NAME -->
-                      <!-- <h3
-                    class="mb-3 mt-2 ml-1 text-base font-bold leading-tight text-secondary"
-                  >
-                    Basic Information
-                  </h3> -->
-
                       <div class="relative mb-1" data-te-input-wrapper-init>
                         <input
-                          v-model="pnt_suffix"
+                          v-model="suffix"
                           type="text"
                           class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                           id="suffix"
@@ -779,7 +772,7 @@
 
                       <div class="relative mb-1" data-te-input-wrapper-init>
                         <input
-                          v-model="pnt_first_name"
+                          v-model="first_name"
                           type="text"
                           class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                           id="firstName"
@@ -796,7 +789,7 @@
 
                       <div class="relative mb-1" data-te-input-wrapper-init>
                         <input
-                          v-model="pnt_mid_name"
+                          v-model="middle_name"
                           type="text"
                           class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                           id="midName"
@@ -813,7 +806,7 @@
 
                       <div class="relative mb-1" data-te-input-wrapper-init>
                         <input
-                          v-model="pnt_last_name"
+                          v-model="surname"
                           type="text"
                           class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                           id="lastName"
@@ -832,7 +825,7 @@
                       <select
                         data-te-select-init
                         class="w-full bg-neutral-50"
-                        v-model="pnt_gender"
+                        v-model="gender"
                       >
                         <option value="female">Female</option>
                         <option value="male">Male</option>
@@ -847,7 +840,7 @@
                         data-te-input-wrapper-init
                       >
                         <input
-                          v-model="pnt_bdate"
+                          v-model="birthdate"
                           type="text"
                           class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                           placeholder="Select a date"
@@ -862,7 +855,7 @@
 
                       <div class="relative mb-1" data-te-input-wrapper-init>
                         <input
-                          v-model="pnt_age"
+                          v-model="age"
                           type="text"
                           class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                           id="age"
@@ -898,7 +891,7 @@
                       <div class="col-span-2">
                         <select
                           data-te-select-init
-                          v-model="pnt_religion"
+                          v-model="religion"
                           class="bg-neutral-50"
                         >
                           <option selected value="3">Religion</option>
@@ -919,7 +912,7 @@
 
                       <div class="relative mb-1" data-te-input-wrapper-init>
                         <input
-                          v-model="pnt_companion"
+                          v-model="companion"
                           type="text"
                           class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                           id="pntCompanion"
@@ -944,7 +937,7 @@
                           +63
                         </span>
                         <input
-                          v-model="pnt_contact"
+                          v-model="phone"
                           type="tel"
                           id="pntContactNumber"
                           name="pntContactNumber"
@@ -955,13 +948,6 @@
                           required
                         />
                       </div>
-
-                      <!--
-                  <h3
-                    class="mb-3 mt-2 ml-1 text-base font-bold leading-tight text-secondary"
-                  >
-                    Address Details
-                  </h3> -->
 
                       <!-- ADDRESS -->
                       <select v-model="pnt_city" class="bg-neutral-50">
@@ -1056,7 +1042,7 @@
                       <div class="s/sx-chief complaint">
                         <div class="relative mb-1" data-te-input-wrapper-init>
                           <input
-                            v-model="pnt_chief_complaint"
+                            v-model="complaint"
                             type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                             id="s/sx-chief complaint"
@@ -1076,7 +1062,7 @@
                       <div class="col-span-2">
                         <div class="relative mb-1" data-te-input-wrapper-init>
                           <input
-                            v-model="pnt_onset"
+                            v-model="onset"
                             type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                             id="onset"
@@ -1096,7 +1082,7 @@
                       <div class="col-span-2">
                         <div class="relative mb-1" data-te-input-wrapper-init>
                           <input
-                            v-model="pnt_allergies"
+                            v-model="allergies"
                             type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                             id="allergies"
@@ -1116,7 +1102,7 @@
                       <div class="col-span-2">
                         <div class="relative mb-1" data-te-input-wrapper-init>
                           <input
-                            v-model="pnt_provocation"
+                            v-model="provacation"
                             type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                             id="provocation"
@@ -1136,7 +1122,7 @@
                       <div class="col-span-2">
                         <div class="relative mb-1" data-te-input-wrapper-init>
                           <input
-                            v-model="pnt_medication"
+                            v-model="medication"
                             type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                             id="medication"
@@ -1156,7 +1142,7 @@
                       <div class="col-span-2">
                         <div class="relative mb-1" data-te-input-wrapper-init>
                           <input
-                            v-model="pnt_quality"
+                            v-model="quality"
                             type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                             id="quality"
@@ -1176,7 +1162,7 @@
                       <div class="col-span-2">
                         <div class="relative mb-1" data-te-input-wrapper-init>
                           <input
-                            v-model="pnt_med_his"
+                            v-model="medical_history"
                             type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                             id="pmh"
@@ -1196,7 +1182,7 @@
                       <div class="col-span-2">
                         <div class="relative mb-1" data-te-input-wrapper-init>
                           <input
-                            v-model="pnt_radiation"
+                            v-model="radiation"
                             type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                             id="radiation"
@@ -1216,7 +1202,7 @@
                       <div class="col-span-2">
                         <div class="relative mb-1" data-te-input-wrapper-init>
                           <input
-                            v-model="pnt_loi"
+                            v-model="last_oral_intake"
                             type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                             id="loi"
@@ -1236,7 +1222,7 @@
                       <div class="events col-span-2">
                         <div class="relative mb-1" data-te-input-wrapper-init>
                           <input
-                            v-model="pnt_events"
+                            v-model="event_leading_to_injury"
                             type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                             id="events"
@@ -1256,7 +1242,7 @@
                         <select
                           data-te-select-init
                           class="w-full bg-neutral-50"
-                          v-model="pnt_severity"
+                          v-model="severity"
                         >
                           <option value="mild">Mild (1)</option>
                           <option value="moderate">Moderate (5)</option>
@@ -1275,7 +1261,7 @@
                           data-te-input-wrapper-init
                         >
                           <input
-                            v-model="pnt_time"
+                            v-model="time_taken"
                             type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                             id="time"
@@ -2299,31 +2285,33 @@ export default {
       black: "",
       remarks: "",
       cp_age: "",
-      pnt_suffix: "",
-      pnt_first_name: "",
-      pnt_mid_name: "",
-      pnt_gender: "",
-      pnt_bdate: "",
-      pnt_age: "",
-      pnt_religion: "",
-      pnt_companion: "",
-      pnt_contact: "",
+      suffix: "",
+      first_name: "",
+      middle_name: "",
+      surname: "",
+      gender: "",
+      birthdate: "",
+      age: "",
+      status: "",
+      religion: "",
+      companion: "",
+      phone: "",
       pnt_city: "City",
       pnt_brgy: "",
       pnt_st: "",
       pnt_zip: "",
-      pnt_chief_complaint: "",
-      pnt_onset: "",
-      pnt_allergies: "",
-      pnt_provocation: "",
-      pnt_medication: "",
-      pnt_quality: "",
-      pnt_med_his: "",
-      pnt_radiation: "",
-      pnt_loi: "",
-      pnt_events: "",
-      pnt_severity: "",
-      pnt_time: "",
+      complaint: "",
+      onset: "",
+      allergies: "",
+      provacation: "",
+      medication: "",
+      quality: "",
+      medical_history: "",
+      radiation: "",
+      last_oral_intake: "",
+      event_leading_to_injury: "",
+      severity: "",
+      time_taken: "",
       obs_prenatal_checkup: "",
       obs_labor_pains: "",
       obs_last_mens: "",
@@ -2399,53 +2387,55 @@ export default {
       this.black = "";
       this.cp_age = "";
       this.remarks = "";
-      this.pnt_suffix = "";
-      (this.pnt_first_name = ""),
-        (this.pnt_mid_name = ""),
-        (this.pnt_gender = ""),
-        (this.pnt_bdate = ""),
-        (this.pnt_age = ""),
-        (this.pnt_religion = ""),
-        (this.pnt_companion = ""),
-        (this.pnt_contact = ""),
-        (this.pnt_city = ""),
-        (this.pnt_brgy = ""),
-        (this.pnt_st = ""),
-        (this.pnt_zip = ""),
-        (this.pnt_chief_complaint = ""),
-        (this.pnt_onset = ""),
-        (this.pnt_allergies = ""),
-        (this.pnt_provocation = ""),
-        (this.pnt_medication = ""),
-        (this.pnt_quality = ""),
-        (this.pnt_med_his = ""),
-        (this.pnt_radiation = ""),
-        (this.pnt_loi = ""),
-        (this.pnt_events = ""),
-        (this.pnt_severity = ""),
-        (this.pnt_time = ""),
-        (this.obs_prenatal_checkup = ""),
-        (this.obs_labor_pains = ""),
-        (this.obs_last_mens = ""),
-        (this.obs_est_date = ""),
-        (this.obs_gravidity = ""),
-        (this.obs_parity = ""),
-        (this.obs_term_birth = ""),
-        (this.obs_pre_term = ""),
-        (this.obs_abortion = ""),
-        (this.obs_living = ""),
-        (this.obs_remarks = ""),
-        (this.treatment_nasal = ""),
-        (this.treatment_o2_mask = ""),
-        (this.treatment_bvm = ""),
-        (this.treatment_lpm = ""),
-        (this.treatment_wound_care = ""),
-        (this.treatment_splint = ""),
-        (this.treatment_cont_bleeding = ""),
-        (this.treatment_vital_taken_recorded = ""),
-        (this.treatment_applied_cpr = ""),
-        (this.treatment_applied_aed = ""),
-        (this.treatment_problems = "");
+      this.suffix = "";
+      this.first_name = "",
+      this.middle_name = "",
+      this.surname = "",
+      this.gender = "",
+      this.birthdate = "",
+      this.age = "",
+      this.status = "",
+      this.religion = "",
+      this.companion = "",
+      this.phone = "",
+      this.pnt_city = "City",
+      this.pnt_brgy = "",
+      this.pnt_st = "",
+      this.pnt_zip = "",
+      this.complaint = "",
+      this.onset = "",
+      this.allergies = "",
+      this.provacation = "",
+      this.medication = "",
+      this.quality = "",
+      this.medical_history = "",
+      this.radiation = "",
+      this.last_oral_intake = "",
+      this.event_leading_to_injury = "",
+      this.severity = "",
+      this.time_taken = "",
+      this.obs_prenatal_checkup ="",
+      this.obs_labor_pains ="",
+      this.obs_last_mens ="",
+      this.obs_est_date ="",
+      this.obs_gravidity="",
+      this.obs_parity ="",
+      this.obs_term_birth ="",
+      this.obs_pre_term ="",
+      this.obs_abortion ="",
+      this.obs_living ="",
+      this.obs_remarks="",
+      this.treatment_nasal="",
+      this.treatment_o2_mask="",
+      this.treatment_bvm="",
+      this.treatment_lpm="",
+      this.treatment_wound_care="",
+      this.treatment_splint="",
+      this.treatment_cont_bleeding ="",
+      this.treatment_vital_taken_recorded="",
+      this.treatment_applied_cpr="",
+      this.treatment_applied_aed="",
+        this.treatment_problems=""
     },
 
     register() {
