@@ -87,7 +87,7 @@
             >
               <div class="relative mb-1" data-te-input-wrapper-init>
                 <input
-                  v-model="cp_dispatch_date"
+                  v-model="dispatch_date"
                   type="date"
                   class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                   id="date"
@@ -104,7 +104,7 @@
 
               <div class="relative mb-1" data-te-input-wrapper-init>
                 <input
-                  v-model="cp_call_source"
+                  v-model="call_source"
                   type="text"
                   class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                   id="callSource"
@@ -125,7 +125,7 @@
                 data-te-input-wrapper-init
               >
                 <input
-                  v-model="cp_call_receive"
+                  v-model="call_receive"
                   type="text"
                   class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                   id="callReceive"
@@ -142,7 +142,7 @@
 
               <div class="relative mb-1" data-te-input-wrapper-init>
                 <input
-                  v-model="cp_barangay"
+                  v-model="barangay"
                   type="text"
                   class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                   id="barangay"
@@ -159,7 +159,7 @@
 
               <div class="relative mb-1 col-span-2" data-te-input-wrapper-init>
                 <input
-                  v-model="cp_incident_location"
+                  v-model="incident_location"
                   type="text"
                   class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                   id="incidentLocation"
@@ -180,7 +180,7 @@
                 data-te-input-wrapper-init
               >
                 <input
-                  v-model="cp_responded"
+                  v-model="responded"
                   type="text"
                   class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                   id="responded"
@@ -197,7 +197,7 @@
 
               <div class="relative mb-1" data-te-input-wrapper-init>
                 <input
-                  v-model="cp_t_o"
+                  v-model="t_o"
                   type="text"
                   class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                   id="tO"
@@ -214,7 +214,7 @@
 
               <div class="relative mb-1" data-te-input-wrapper-init>
                 <input
-                  v-model="cp_va_location"
+                  v-model="va_location"
                   type="text"
                   class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                   id="vaLocation"
@@ -231,7 +231,7 @@
 
               <div class="relative mb-1" data-te-input-wrapper-init>
                 <input
-                  v-model="cp_va_location_barangay"
+                  v-model="va_location_barangay"
                   type="text"
                   class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                   id="vaLocationBarangay"
@@ -252,7 +252,7 @@
                 data-te-input-wrapper-init
               >
                 <input
-                  v-model="cp_arrive_at_scene"
+                  v-model="arrive_at_scene"
                   type="text"
                   class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                   id="arriveAtScene"
@@ -269,7 +269,7 @@
 
               <div class="relative mb-1" data-te-input-wrapper-init>
                 <input
-                  v-model="cp_t_l"
+                  v-model="t_l"
                   type="text"
                   class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                   id="tL"
@@ -288,7 +288,7 @@
                 class="relative mb-1 flex flex-wrap items-stretch col-span-2"
               >
                 <input
-                  v-model="cp_involved_vehicles_a"
+                  v-model="involved_vehicles_a"
                   type="text"
                   class="relative m-0 block w-1/4 min-w-0 flex-auto rounded-l border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
                   placeholder="Involved Vehicle(s)"
@@ -300,7 +300,7 @@
                   VS
                 </span>
                 <input
-                  v-model="cp_involved_vehicles_b"
+                  v-model="involved_vehicles_b"
                   type="text"
                   class="relative m-0 block text-right w-1/4 min-w-0 flex-auto rounded-r border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
                   placeholder="Involved Vehicle(s)"
@@ -314,7 +314,7 @@
                 data-te-input-wrapper-init
               >
                 <input
-                  v-model="cp_en_route_to"
+                  v-model="en_route_to"
                   type="text"
                   class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                   id="enRouteTo"
@@ -331,7 +331,7 @@
 
               <div class="relative mb-1" data-te-input-wrapper-init>
                 <input
-                  v-model="cp_tx_o"
+                  v-model="tx_o"
                   type="text"
                   class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                   id="tXO"
@@ -348,7 +348,7 @@
 
               <div class="relative mb-1" data-te-input-wrapper-init>
                 <input
-                  v-model="cp_plate_number"
+                  v-model="plate_number"
                   type="text"
                   class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                   id="plateNumber"
@@ -371,7 +371,7 @@
                 data-te-input-wrapper-init
               >
                 <input
-                  v-model="cp_arrived_at"
+                  v-model="arrived_at"
                   type="text"
                   class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                   id="arrivedAt"
@@ -388,7 +388,7 @@
 
               <div class="relative mb-1" data-te-input-wrapper-init>
                 <input
-                  v-model="cp_l_o"
+                  v-model="l_o"
                   type="text"
                   class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                   id="lO"
@@ -414,7 +414,7 @@
                             class="mb-[0.125rem] mr-4 inline-block min-h-[1.5rem] pl-[1.5rem]"
                           >
                             <input
-                              v-model="cp_driver"
+                              v-model="driver"
                               class="relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:border-neutral-600 dark:checked:border-primary dark:checked:after:border-primary dark:checked:after:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:border-primary dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
                               type="radio"
                               id="driver"
@@ -433,7 +433,7 @@
                     class="mb-[0.125rem] mr-4 inline-block min-h-[1.5rem] pl-[1.5rem]"
                   >
                     <input
-                      v-model="cp_pedestrian"
+                      v-model="pedestrian"
                       class="relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:border-neutral-600 dark:checked:border-primary dark:checked:after:border-primary dark:checked:after:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:border-primary dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
                       type="radio"
                       id="pedestrian"
@@ -452,7 +452,7 @@
                     class="mb-[0.125rem] mr-4 inline-block min-h-[1.5rem] pl-[1.5rem]"
                   >
                     <input
-                      v-model="cp_passenger"
+                      v-model="passenger"
                       class="relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:border-neutral-600 dark:checked:border-primary dark:checked:after:border-primary dark:checked:after:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:border-primary dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
                       type="radio"
                       id="passenger"
@@ -475,7 +475,7 @@
                 data-te-input-wrapper-init
               >
                 <input
-                  v-model="cp_departed"
+                  v-model="departed"
                   type="text"
                   class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                   id="departed"
@@ -492,7 +492,7 @@
 
               <div class="relative mb-1" data-te-input-wrapper-init>
                 <input
-                  v-model="cp_station"
+                  v-model="station"
                   type="text"
                   class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                   id="station"
@@ -510,7 +510,7 @@
               <div class="col-span-4 inline-flex">
                 <div class="grid grid-cols-4 gap-x-1">
                   <select
-                    v-model="cp_ems_location_a"
+                    v-model="ems_location_a"
                     data-te-select-init
                     class="bg-neutral-50 mb-1"
                     id="emsLocationA"
@@ -526,7 +526,7 @@
                     data-te-input-wrapper-init
                   >
                     <input
-                      v-model="cp_ems_location_b"
+                      v-model="ems_location_b"
                       type="text"
                       class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                       id="emsLocationB"
@@ -546,7 +546,7 @@
                     data-te-input-wrapper-init
                   >
                     <input
-                      v-model="cp_barangay_b"
+                      v-model="barangay_b"
                       type="text"
                       class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                       id="barangayB"
@@ -568,7 +568,7 @@
                     data-te-input-wrapper-init
                   >
                     <input
-                      v-model="cp_ambulance"
+                      v-model="ambulance"
                       type="text"
                       class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                       id="ambulance"
@@ -584,7 +584,7 @@
                   </div>
 
                   <select
-                    v-model="cp_team_id"
+                    v-model="team_id"
                     data-te-select-init
                     class="w-full bg-neutral-50 col-span-3"
                   >
@@ -604,7 +604,7 @@
                 class="relative mb-1 flex flex-wrap items-stretch col-span-2"
               >
                 <input
-                  v-model="cp_mt_from"
+                  v-model="mt_from"
                   type="text"
                   class="relative m-0 block w-1/4 min-w-0 flex-auto rounded-l border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
                   placeholder="MT From"
@@ -616,7 +616,7 @@
                   To
                 </span>
                 <input
-                  v-model="cp_mt_barangay"
+                  v-model="mt_barangay"
                   type="text"
                   class="relative m-0 block text-right w-1/4 min-w-0 flex-auto rounded-r border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
                   placeholder="Barangay"
@@ -629,7 +629,7 @@
                 data-te-input-wrapper-init
               >
                 <textarea
-                  v-model="cp_remarks"
+                  v-model="remarks"
                   class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                   id="remarks"
                   aria-describedby="remarks"
@@ -649,7 +649,7 @@
                 <div class="grid grid-cols-2 justify-center">
                   <div class="grid-cols-2 ml-9 mt-4">
                     <input
-                      v-model="cp_priority"
+                      v-model="red"
                       class="relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:border-neutral-600 dark:checked:border-primary dark:checked:after:border-primary dark:checked:after:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:border-primary dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
                       type="radio"
                       id="red"
@@ -666,7 +666,7 @@
 
                   <div class="grid-cols-2 ml-9 mt-4">
                     <input
-                      v-model="cp_priority"
+                      v-model="yellow"
                       class="relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:border-neutral-600 dark:checked:border-primary dark:checked:after:border-primary dark:checked:after:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:border-primary dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
                       type="radio"
                       id="yellow"
@@ -683,7 +683,7 @@
 
                   <div class="grid-cols-2 ml-9 mt-4">
                     <input
-                      v-model="cp_priority"
+                      v-model="green"
                       class="relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:border-neutral-600 dark:checked:border-primary dark:checked:after:border-primary dark:checked:after:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:border-primary dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
                       type="radio"
                       id="green"
@@ -700,7 +700,7 @@
 
                   <div class="grid-cols-2 ml-9 mt-4">
                     <input
-                      v-model="cp_priority"
+                      v-model="black"
                       class="relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:border-neutral-600 dark:checked:border-primary dark:checked:after:border-primary dark:checked:after:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:border-primary dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
                       type="radio"
                       id="black"
@@ -720,17 +720,6 @@
           </form>
         </div>
       </div>
-      <!-- <div class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md border-t-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50 min-[0px]:rounded-none">
-        <button
-          @click="clear"
-          type="button"
-          class="ml-1 inline-block rounded bg-secondary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
-          data-te-ripple-init
-          data-te-ripple-color="light"
-        >
-          CLEAR
-        </button>
-      </div> -->
     </li>
 
             <!--Patient Information-->
@@ -2127,39 +2116,42 @@ export default {
   data() {
     return {
       teams: [],
-      cp_dispatch_date: "",
+      dispatch_date: "",
       category: "dispatch data",
-      cp_call_source: "",
-      cp_call_receive: "",
-      cp_barangay: "",
-      cp_incident_location: "",
-      cp_responded: "",
-      cp_t_o: "",
-      cp_va_location: "",
-      cp_va_location_barangay: "",
-      cp_arrive_at_scene: "",
-      cp_t_l: "",
-      cp_involved_vehicles_a: "",
-      cp_involved_vehicles_b: "",
-      cp_en_route_to: "",
-      cp_tx_o: "",
-      cp_plate_number: "",
-      cp_arrived_at: "",
-      cp_l_o: "",
-      cp_driver: "",
-      cp_pedestrian: "",
-      cp_passenger: "",
-      cp_departed: "",
-      cp_station: "",
-      cp_ems_location_a: "",
-      cp_ambulance: "",
-      cp_team_id: "1",
-      cp_mt_from: "",
-      cp_mt_barangay: "",
-      cp_ems_location_b: "",
-      cp_barangay_b: "",
-      cp_priority: "",
-      cp_remarks: "",
+      call_source: "",
+      call_receive: "",
+      barangay: "",
+      incident_location: "",
+      responded: "",
+      t_o: "",
+      va_location: "",
+      va_location_barangay: "",
+      arrive_at_scene: "",
+      t_l: "",
+      involved_vehicles_a: "",
+      involved_vehicles_b: "",
+      en_route_to: "",
+      tx_o: "",
+      plate_number: "",
+      arrived_at: "",
+      l_o: "",
+      driver: "",
+      pedestrian: "",
+      passenger: "",
+      departed: "",
+      station: "",
+      ems_location_a: "",
+      ambulance: "",
+      team_id: "1",
+      mt_from: "",
+      mt_barangay: "",
+      ems_location_b: "",
+      barangay_b: "",
+      red: "",
+      yellow: "",
+      green: "",
+      black: "",
+      remarks: "",
       cp_age: "",
       pnt_suffix: "",
       pnt_first_name: "",
@@ -2224,41 +2216,43 @@ export default {
       return word.replace(/^\w/, (c) => c.toUpperCase());
     },
     clear() {
-      this.cp_dispatch_date = "";
+      this.dispatch_date = "";
       this.category = "";
-      this.cp_call_source = "";
-      this.cp_call_receive = "";
-      this.cp_barangay = "";
-      this.cp_incident_location = "";
-      this.cp_responded = "";
-      this.cp_t_o = "";
-      this.cp_va_location = "";
-      this.location = "";
-      this.cp_va_location_barangay = "";
-      this.cp_arrive_at_scene = "";
-      this.cp_t_l = "";
-      this.cp_involved_vehicles_a = "";
-      this.cp_involved_vehicles_b = "";
-      this.cp_en_route_to = "";
-      this.cp_tx_o = "";
-      this.cp_plate_number = "";
-      this.cp_arrived_at = "";
-      this.cp_l_o = "";
-      this.cp_driver = "";
-      this.cp_pedestrian = "";
-      this.cp_passenger = "";
-      this.cp_departed = "";
-      this.cp_station = "";
-      this.cp_ems_location_a = "";
-      this.cp_ambulance = "";
-      this.cp_team_id = "";
-      this.cp_mt_from = "";
-      this.cp_mt_barangay = "";
-      this.cp_ems_location_b = "";
-      this.cp_barangay_b = "";
-      this.cp_priority = "";
+      this.call_source = "";
+      this.call_receive = "";
+      this.barangay = "";
+      this.incident_location = "";
+      this.responded = "";
+      this.t_o = "";
+      this.va_location = "";
+      this.va_location_barangay = "";
+      this.arrive_at_scene = "";
+      this.t_l = "";
+      this.involved_vehicles_a = "";
+      this.involved_vehicles_b = "";
+      this.en_route_to = "";
+      this.tx_o = "";
+      this.plate_number = "";
+      this.arrived_at = "";
+      this.l_o = "";
+      this.driver = "";
+      this.pedestrian = "";
+      this.passenger = "";
+      this.departed = "";
+      this.station = "";
+      this.ems_location_a = "";
+      this.ambulance = "";
+      this.team_id = "";
+      this.mt_from = "";
+      this.mt_barangay = "";
+      this.ems_location_b = "";
+      this.barangay_b = "";
+      this.red = "";
+      this.yellow = "";
+      this.green = "";
+      this.black = "";
       this.cp_age = "";
-      this.cp_remarks = "";
+      this.remarks = "";
       this.pnt_suffix = "";
       this.pnt_first_name = "",
       this.pnt_mid_name = "",
