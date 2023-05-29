@@ -161,7 +161,7 @@ export default {
           field: "case",
         },
         {
-          label: "CALL RECEIVE",
+          label: "CALL RECEIVED",
           field: "call",
         },
         {
