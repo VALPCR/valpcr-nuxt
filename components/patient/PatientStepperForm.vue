@@ -1832,7 +1832,7 @@
                 data-te-input-wrapper-init
               >
                 <textarea
-                  v-model="remarks"
+                  v-model="obs_remarks"
                   class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                   id="remarks"
                   aria-describedby="remarks"
@@ -2013,6 +2013,17 @@ export default {
       pnt_events: "",
       pnt_severity: "",
       pnt_time: "",
+      obs_prenatal_checkup: "",
+      obs_labor_pains: "",
+      obs_last_mens:"",
+      obs_est_date:"",
+      obs_gravidity:"",
+      obs_parity:"",
+      obs_term_birth:"",
+      obs_pre_term:"",
+      obs_abortion:"",
+      obs_living:"",
+      obs_remarks:"",
     };
   },
 
@@ -2088,8 +2099,18 @@ export default {
       this.pnt_loi = "",
       this.pnt_events = "",
       this.pnt_severity = "",
-      this.pnt_time = ""
-
+      this.pnt_time = "",
+      this.obs_prenatal_checkup ="",
+      this.obs_labor_pains ="",
+      this.obs_last_mens ="",
+      this.obs_est_date ="",
+      this.obs_gravidity="",
+      this.obs_parity ="",
+      this.obs_term_birth ="",
+      this.obs_pre_term ="",
+      this.obs_abortion ="",
+      this.obs_living ="",
+      this.obs_remarks=""
     },
 
     register() {
@@ -2129,7 +2150,17 @@ export default {
         // priority: this.priority,
         cp_age: this.cp_age,
         cp_remarks: this.cp_remarks,
-
+        obs_prenatal_checkup: this.obs_prenatal_checkup,
+        obs_labor_pains: this.obs_labor_pains,
+        obs_last_mens: this.obs_last_mens,
+        obs_est_date: this.obs_est_date,
+        obs_gravidity: this.obs_gravidity,
+        obs_parity: this.obs_parity,
+        obs_term_birth: this.obs_term_birth,
+        obs_pre_term: this.obs_pre_term,
+        obs_abortion: this.obs_abortion,
+        obs_living: this.obs_living,
+        obs_remarks: this.obs_remarks,
       };
 
       this.$axios.post("pcr/register", params).then(() => {
@@ -2168,6 +2199,19 @@ export default {
         this.cp_priority = "";
         this.cp_age = "";
         this.cp_remarks = "";
+        this.cp_age = "";
+        this.cp_remarks = "";
+        this.obs_prenatal_checkup = "";
+        this.obs_labor_pains = "";
+        this.obs_last_mens = "";
+        this.obs_est_date = "";
+        this.obs_gravidity = "";
+        this.obs_parity = "";
+        this.obs_term_birth = "";
+        this.obs_pre_term = "";
+        this.obs_abortion = "";
+        this.obs_living = "";
+        this.obs_remarks = "";
 
       });
     },
