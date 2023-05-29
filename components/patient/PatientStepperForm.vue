@@ -1319,41 +1319,327 @@
                 data-te-stepper-content-ref
                 class="absolute left-0 w-full translate-x-[150%] p-4 transition-all duration-500 ease-in-out"
               >
+              <div class="relative p-4">
                 <form>
-                  <div class="col-span-2">
-                    <div class="relative mb-1" data-te-input-wrapper-init>
-                      <input
-                        type="text"
-                        class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                        aria-describedby="time"
-                        placeholder="time"
-                      />
-                      <label
-                        for="time"
-                        class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                      >
-                        Time
-                      </label>
-                    </div>
+                    <div
+                      class="grid grid-cols-5 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-4"
+                    >
 
-                    <div class="relative mb-1" data-te-input-wrapper-init>
-                      <input
-                        type="text"
-                        class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                        id="BP"
-                        aria-describedby="BP"
-                        placeholder="BP"
-                      />
-                      <label
-                        for="BP"
-                        class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                      >
-                        BP
-                      </label>
-                    </div>
-                  </div>
-                </form>
+                    <div class="flex flex-col col-span-1">
+                          <h4 class="mb-3 font-bold">Time</h4>
+                          <div class="relative mb-2"
+                              data-te-input-wrapper-init
+                              data-te-timepicker-init>
+                                <input
+                                  v-model="v_time1"
+                                  type="time"
+                                  class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                                  id="vTime"
+                                  aria-describedby="vTime"
+                                />
+                            </div>
+                            <div class="relative mb-2"
+                              data-te-input-wrapper-init
+                              data-te-timepicker-init>
+                                <input
+                                  v-model="v_time2"
+                                  type="time"
+                                  class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                                  id="vTime"
+                                  aria-describedby="vTime"
+                                />
+                            </div>
+                            <div class="relative mb-2"
+                              data-te-input-wrapper-init
+                              data-te-timepicker-init>
+                                <input
+                                  v-model="v_time3"
+                                  type="time"
+                                  class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                                  id="vTime"
+                                  aria-describedby="vTime"
+                                />
+                            </div>
+                            <div class="relative mb-2"
+                              data-te-input-wrapper-init
+                              data-te-timepicker-init>
+                                <input
+                                  v-model="v_time4"
+                                  type="time"
+                                  class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                                  id="vTime"
+                                  aria-describedby="vTime"
+                                />
+                            </div>
+                            <div class="relative mb-2"
+                              data-te-input-wrapper-init
+                              data-te-timepicker-init>
+                                <input
+                                  v-model="v_time5"
+                                  type="time"
+                                  class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                                  id="vTime"
+                                  aria-describedby="vTime"
+                                />
+                            </div>
+                        </div>
+                        <div class="inline-flex col-span-5">
+                          <div class="grid grid-cols-5 gap-x-1">
+                            <div class="flex flex-col">
+                            <h4 class="mb-3 font-bold">BP</h4>
+                              <div class="relative mb-2" data-te-input-wrapper-init>
+                                  <input
+                                    v-model="v_bp1"
+                                    type="text/number"
+                                    class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                                    id="vBp1"
+                                    aria-describedby="vBp1"
+                                  />
+                              </div>
+                              <div class="relative mb-2" data-te-input-wrapper-init>
+                                  <input
+                                    v-model="v_bp2"
+                                    type="text/number"
+                                    class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                                    id="vBp2"
+                                    aria-describedby="vBp2"
+                                  />
+                              </div>
+                              <div class="relative mb-2" data-te-input-wrapper-init>
+                                  <input
+                                    v-model="v_bp3"
+                                    type="text/number"
+                                    class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                                    id="vBp3"
+                                    aria-describedby="vBp3"
+                                  />
+                              </div>
+                              <div class="relative mb-2" data-te-input-wrapper-init>
+                                  <input
+                                    v-model="v_bp4"
+                                    type="text/number"
+                                    class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                                    id="vBp4"
+                                    aria-describedby="vBp4"
+                                  />
+                              </div>
+                              <div class="relative mb-2" data-te-input-wrapper-init>
+                                  <input
+                                    v-model="v_bp5"
+                                    type="text/number"
+                                    class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                                    id="vBp5"
+                                    aria-describedby="vBp5"
+                                  />
+                              </div>
+                          </div>
+
+                          <div class="flex flex-col">
+                            <h4 class="mb-3 font-bold">PR</h4>
+                              <div class="relative mb-2" data-te-input-wrapper-init>
+                                  <input
+                                    v-model="v_bp1"
+                                    type="text/number"
+                                    class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                                    id="vBp1"
+                                    aria-describedby="vBp1"
+                                  />
+                              </div>
+                              <div class="relative mb-2" data-te-input-wrapper-init>
+                                  <input
+                                    v-model="v_bp2"
+                                    type="text/number"
+                                    class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                                    id="vBp2"
+                                    aria-describedby="vBp2"
+                                  />
+                              </div>
+                              <div class="relative mb-2" data-te-input-wrapper-init>
+                                  <input
+                                    v-model="v_bp3"
+                                    type="text/number"
+                                    class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                                    id="vBp3"
+                                    aria-describedby="vBp3"
+                                  />
+                              </div>
+                              <div class="relative mb-2" data-te-input-wrapper-init>
+                                  <input
+                                    v-model="v_bp4"
+                                    type="text/number"
+                                    class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                                    id="vBp4"
+                                    aria-describedby="vBp4"
+                                  />
+                              </div>
+                              <div class="relative mb-2" data-te-input-wrapper-init>
+                                  <input
+                                    v-model="v_bp5"
+                                    type="text/number"
+                                    class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                                    id="vBp5"
+                                    aria-describedby="vBp5"
+                                  />
+                              </div>
+                          </div>
+
+                          <div class="flex-col">
+                            <h4 class="mb-3 font-bold">RR</h4>
+                              <div class="relative mb-2" data-te-input-wrapper-init>
+                                  <input
+                                    v-model="v_bp1"
+                                    type="text/number"
+                                    class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                                    id="vBp1"
+                                    aria-describedby="vBp1"
+                                  />
+                              </div>
+                              <div class="relative mb-2" data-te-input-wrapper-init>
+                                  <input
+                                    v-model="v_bp2"
+                                    type="text/number"
+                                    class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                                    id="vBp2"
+                                    aria-describedby="vBp2"
+                                  />
+                              </div>
+                              <div class="relative mb-2" data-te-input-wrapper-init>
+                                  <input
+                                    v-model="v_bp3"
+                                    type="text/number"
+                                    class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                                    id="vBp3"
+                                    aria-describedby="vBp3"
+                                  />
+                              </div>
+                              <div class="relative mb-2" data-te-input-wrapper-init>
+                                  <input
+                                    v-model="v_bp4"
+                                    type="text/number"
+                                    class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                                    id="vBp4"
+                                    aria-describedby="vBp4"
+                                  />
+                              </div>
+                              <div class="relative mb-2" data-te-input-wrapper-init>
+                                  <input
+                                    v-model="v_bp5"
+                                    type="text/number"
+                                    class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                                    id="vBp5"
+                                    aria-describedby="vBp5"
+                                  />
+                              </div>
+
+                              <div class="flex flex-col">
+                            <h4 class="mb-3 font-bold">Temp.</h4>
+                              <div class="relative mb-2" data-te-input-wrapper-init>
+                                  <input
+                                    v-model="v_bp1"
+                                    type="text/number"
+                                    class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                                    id="vBp1"
+                                    aria-describedby="vBp1"
+                                  />
+                              </div>
+                              <div class="relative mb-2" data-te-input-wrapper-init>
+                                  <input
+                                    v-model="v_bp2"
+                                    type="text/number"
+                                    class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                                    id="vBp2"
+                                    aria-describedby="vBp2"
+                                  />
+                              </div>
+                              <div class="relative mb-2" data-te-input-wrapper-init>
+                                  <input
+                                    v-model="v_bp3"
+                                    type="text/number"
+                                    class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                                    id="vBp3"
+                                    aria-describedby="vBp3"
+                                  />
+                              </div>
+                              <div class="relative mb-2" data-te-input-wrapper-init>
+                                  <input
+                                    v-model="v_bp4"
+                                    type="text/number"
+                                    class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                                    id="vBp4"
+                                    aria-describedby="vBp4"
+                                  />
+                              </div>
+                              <div class="relative mb-2" data-te-input-wrapper-init>
+                                  <input
+                                    v-model="v_bp5"
+                                    type="text/number"
+                                    class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                                    id="vBp5"
+                                    aria-describedby="vBp5"
+                                  />
+                              </div>
+                          </div>
+
+
+                              <div class="flex flex-col">
+                            <h4 class="mb-3 font-bold">SPO2</h4>
+                              <div class="relative mb-2" data-te-input-wrapper-init>
+                                  <input
+                                    v-model="v_bp1"
+                                    type="text/number"
+                                    class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                                    id="vBp1"
+                                    aria-describedby="vBp1"
+                                  />
+                              </div>
+                              <div class="relative mb-2" data-te-input-wrapper-init>
+                                  <input
+                                    v-model="v_bp2"
+                                    type="text/number"
+                                    class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                                    id="vBp2"
+                                    aria-describedby="vBp2"
+                                  />
+                              </div>
+                              <div class="relative mb-2" data-te-input-wrapper-init>
+                                  <input
+                                    v-model="v_bp3"
+                                    type="text/number"
+                                    class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                                    id="vBp3"
+                                    aria-describedby="vBp3"
+                                  />
+                              </div>
+                              <div class="relative mb-2" data-te-input-wrapper-init>
+                                  <input
+                                    v-model="v_bp4"
+                                    type="text/number"
+                                    class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                                    id="vBp4"
+                                    aria-describedby="vBp4"
+                                  />
+                              </div>
+                              <div class="relative mb-2" data-te-input-wrapper-init>
+                                  <input
+                                    v-model="v_bp5"
+                                    type="text/number"
+                                    class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                                    id="vBp5"
+                                    aria-describedby="vBp5"
+                                  />
+                              </div>
+                          </div>
+
+                          </div>
+                        </div>
+                      </div>
+
+
+                      </div>
+                  </form>
+                </div>
               </div>
+
             </li>
 
             <!--Obstetric History-->
