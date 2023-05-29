@@ -32,11 +32,17 @@
             <input
               v-model="password"
               type="password"
+              :type="showPassword ? 'text' : 'password'"
               class="relative m-0 block w-[1px] min-w-0 flex-auto rounded-r border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
               placeholder="Password"
               aria-label="password"
               aria-describedby="addon-wrapping"
             />
+            <label
+              @click="togglePasswordShow"
+              class="bg-gray-200 hover:bg-gray-300 rounded px-2 py-2 text-sm text-gray-600 font-mono cursor-pointer js-password-label"
+              >{{ showPassword ? "Hide" : "Show" }}</label
+            >
           </div>
 
           <div class="relative flex flex-nowrap items-stretch mb-3">
@@ -48,11 +54,17 @@
             <input
               v-model="passwordConfirmation"
               type="password"
+              :type="showPassword ? 'text' : 'password'"
               class="relative m-0 block w-[1px] min-w-0 flex-auto rounded-r border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
               placeholder="Confirm Password"
               aria-label="confirmPassword"
               aria-describedby="addon-wrapping"
             />
+            <label
+              @click="togglePasswordShow"
+              class="bg-gray-200 hover:bg-gray-300 rounded px-2 py-2 text-sm text-gray-600 font-mono cursor-pointer js-password-label"
+              >{{ showPassword ? "Hide" : "Show" }}</label
+            >
           </div>
           <button
             class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full"
@@ -72,6 +84,7 @@ export default {
     return {
       password: "",
       passwordConfirmation: "",
+      showPassword: false,
     };
   },
   methods: {
@@ -86,6 +99,11 @@ export default {
         console.log(response);
       });
     },
+    togglePasswordShow() {
+      this.showPassword = !this.showPassword;
+
+    },
+
   },
 };
 </script>
