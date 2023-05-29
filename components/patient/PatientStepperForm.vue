@@ -1320,10 +1320,9 @@
                           data-te-timepicker-init
                         >
                           <input
-                            v-model="v_time1"
+                            v-model="time_a"
                             type="time"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            id="vTime"
                             aria-describedby="vTime"
                           />
                         </div>
@@ -1333,10 +1332,9 @@
                           data-te-timepicker-init
                         >
                           <input
-                            v-model="v_time2"
+                            v-model="time_b"
                             type="time"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            id="vTime"
                             aria-describedby="vTime"
                           />
                         </div>
@@ -1346,10 +1344,9 @@
                           data-te-timepicker-init
                         >
                           <input
-                            v-model="v_time3"
+                            v-model="time_c"
                             type="time"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            id="vTime"
                             aria-describedby="vTime"
                           />
                         </div>
@@ -1359,10 +1356,9 @@
                           data-te-timepicker-init
                         >
                           <input
-                            v-model="v_time4"
+                            v-model="time_d"
                             type="time"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            id="vTime"
                             aria-describedby="vTime"
                           />
                         </div>
@@ -1372,10 +1368,9 @@
                           data-te-timepicker-init
                         >
                           <input
-                            v-model="v_time5"
+                            v-model="time_e"
                             type="time"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            id="vTime"
                             aria-describedby="vTime"
                           />
                         </div>
@@ -1389,11 +1384,9 @@
                               data-te-input-wrapper-init
                             >
                               <input
-                                v-model="v_bp1"
-                                type="text/number"
+                                v-model="bp_a"
+                                type="text"
                                 class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                                id="vBp1"
-                                aria-describedby="vBp1"
                               />
                             </div>
                             <div
@@ -1401,11 +1394,9 @@
                               data-te-input-wrapper-init
                             >
                               <input
-                                v-model="v_bp2"
-                                type="text/number"
+                                v-model="bp_b"
+                                type="text"
                                 class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                                id="vBp2"
-                                aria-describedby="vBp2"
                               />
                             </div>
                             <div
@@ -1413,11 +1404,9 @@
                               data-te-input-wrapper-init
                             >
                               <input
-                                v-model="v_bp3"
-                                type="text/number"
+                                v-model="bp_c"
+                                type="text"
                                 class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                                id="vBp3"
-                                aria-describedby="vBp3"
                               />
                             </div>
                             <div
@@ -1425,11 +1414,9 @@
                               data-te-input-wrapper-init
                             >
                               <input
-                                v-model="v_bp4"
-                                type="text/number"
+                                v-model="bp_d"
+                                type="text"
                                 class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                                id="vBp4"
-                                aria-describedby="vBp4"
                               />
                             </div>
                             <div
@@ -1437,11 +1424,9 @@
                               data-te-input-wrapper-init
                             >
                               <input
-                                v-model="v_bp5"
-                                type="text/number"
+                                v-model="bp_e"
+                                type="text"
                                 class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                                id="vBp5"
-                                aria-describedby="vBp5"
                               />
                             </div>
                           </div>
@@ -1453,11 +1438,9 @@
                               data-te-input-wrapper-init
                             >
                               <input
-                                v-model="v_bp1"
-                                type="text/number"
+                                v-model="pr_a"
+                                type="text"
                                 class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                                id="vBp1"
-                                aria-describedby="vBp1"
                               />
                             </div>
                             <div
@@ -1465,11 +1448,9 @@
                               data-te-input-wrapper-init
                             >
                               <input
-                                v-model="v_bp2"
-                                type="text/number"
+                                v-model="pr_b"
+                                type="text"
                                 class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                                id="vBp2"
-                                aria-describedby="vBp2"
                               />
                             </div>
                             <div
@@ -1477,11 +1458,9 @@
                               data-te-input-wrapper-init
                             >
                               <input
-                                v-model="v_bp3"
-                                type="text/number"
+                                v-model="pr_c"
+                                type="text"
                                 class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                                id="vBp3"
-                                aria-describedby="vBp3"
                               />
                             </div>
                             <div
@@ -1489,11 +1468,9 @@
                               data-te-input-wrapper-init
                             >
                               <input
-                                v-model="v_bp4"
-                                type="text/number"
+                                v-model="pr_d"
+                                type="text"
                                 class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                                id="vBp4"
-                                aria-describedby="vBp4"
                               />
                             </div>
                             <div
@@ -1501,11 +1478,9 @@
                               data-te-input-wrapper-init
                             >
                               <input
-                                v-model="v_bp5"
-                                type="text/number"
+                                v-model="pr_e"
+                                type="text"
                                 class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                                id="vBp5"
-                                aria-describedby="vBp5"
                               />
                             </div>
                           </div>
@@ -1517,11 +1492,9 @@
                               data-te-input-wrapper-init
                             >
                               <input
-                                v-model="v_bp1"
-                                type="text/number"
+                                v-model="rr_a"
+                                type="text"
                                 class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                                id="vBp1"
-                                aria-describedby="vBp1"
                               />
                             </div>
                             <div
@@ -1529,11 +1502,9 @@
                               data-te-input-wrapper-init
                             >
                               <input
-                                v-model="v_bp2"
-                                type="text/number"
+                                v-model="rr_b"
+                                type="text"
                                 class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                                id="vBp2"
-                                aria-describedby="vBp2"
                               />
                             </div>
                             <div
@@ -1541,11 +1512,9 @@
                               data-te-input-wrapper-init
                             >
                               <input
-                                v-model="v_bp3"
-                                type="text/number"
+                                v-model="rr_c"
+                                type="text"
                                 class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                                id="vBp3"
-                                aria-describedby="vBp3"
                               />
                             </div>
                             <div
@@ -1553,11 +1522,9 @@
                               data-te-input-wrapper-init
                             >
                               <input
-                                v-model="v_bp4"
-                                type="text/number"
+                                v-model="rr_d"
+                                type="text"
                                 class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                                id="vBp4"
-                                aria-describedby="vBp4"
                               />
                             </div>
                             <div
@@ -1565,11 +1532,9 @@
                               data-te-input-wrapper-init
                             >
                               <input
-                                v-model="v_bp5"
-                                type="text/number"
+                                v-model="rr_e"
+                                type="text"
                                 class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                                id="vBp5"
-                                aria-describedby="vBp5"
                               />
                             </div>
 
@@ -1580,11 +1545,9 @@
                                 data-te-input-wrapper-init
                               >
                                 <input
-                                  v-model="v_bp1"
-                                  type="text/number"
+                                  v-model="tempt_a"
+                                  type="text"
                                   class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                                  id="vBp1"
-                                  aria-describedby="vBp1"
                                 />
                               </div>
                               <div
@@ -1592,11 +1555,9 @@
                                 data-te-input-wrapper-init
                               >
                                 <input
-                                  v-model="v_bp2"
-                                  type="text/number"
+                                  v-model="tempt_b"
+                                  type="text"
                                   class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                                  id="vBp2"
-                                  aria-describedby="vBp2"
                                 />
                               </div>
                               <div
@@ -1604,11 +1565,9 @@
                                 data-te-input-wrapper-init
                               >
                                 <input
-                                  v-model="v_bp3"
-                                  type="text/number"
+                                  v-model="tempt_c"
+                                  type="text"
                                   class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                                  id="vBp3"
-                                  aria-describedby="vBp3"
                                 />
                               </div>
                               <div
@@ -1616,11 +1575,9 @@
                                 data-te-input-wrapper-init
                               >
                                 <input
-                                  v-model="v_bp4"
-                                  type="text/number"
+                                  v-model="tempt_d"
+                                  type="text"
                                   class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                                  id="vBp4"
-                                  aria-describedby="vBp4"
                                 />
                               </div>
                               <div
@@ -1628,11 +1585,9 @@
                                 data-te-input-wrapper-init
                               >
                                 <input
-                                  v-model="v_bp5"
-                                  type="text/number"
+                                  v-model="tempt_e"
+                                  type="text"
                                   class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                                  id="vBp5"
-                                  aria-describedby="vBp5"
                                 />
                               </div>
                             </div>
@@ -1644,11 +1599,9 @@
                                 data-te-input-wrapper-init
                               >
                                 <input
-                                  v-model="v_bp1"
-                                  type="text/number"
+                                  v-model="spo2_a"
+                                  type="text"
                                   class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                                  id="vBp1"
-                                  aria-describedby="vBp1"
                                 />
                               </div>
                               <div
@@ -1656,11 +1609,9 @@
                                 data-te-input-wrapper-init
                               >
                                 <input
-                                  v-model="v_bp2"
-                                  type="text/number"
+                                  v-model="spo2_b"
+                                  type="text"
                                   class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                                  id="vBp2"
-                                  aria-describedby="vBp2"
                                 />
                               </div>
                               <div
@@ -1668,11 +1619,9 @@
                                 data-te-input-wrapper-init
                               >
                                 <input
-                                  v-model="v_bp3"
-                                  type="text/number"
+                                  v-model="spo2_c"
+                                  type="text"
                                   class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                                  id="vBp3"
-                                  aria-describedby="vBp3"
                                 />
                               </div>
                               <div
@@ -1680,11 +1629,9 @@
                                 data-te-input-wrapper-init
                               >
                                 <input
-                                  v-model="v_bp4"
-                                  type="text/number"
+                                  v-model="spo2_d"
+                                  type="text"
                                   class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                                  id="vBp4"
-                                  aria-describedby="vBp4"
                                 />
                               </div>
                               <div
@@ -1692,11 +1639,9 @@
                                 data-te-input-wrapper-init
                               >
                                 <input
-                                  v-model="v_bp5"
-                                  type="text/number"
+                                  v-model="spo2_e"
+                                  type="text"
                                   class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                                  id="vBp5"
-                                  aria-describedby="vBp5"
                                 />
                               </div>
                             </div>
@@ -2312,6 +2257,36 @@ export default {
       event_leading_to_injury: "",
       severity: "",
       time_taken: "",
+      time_a: "",
+      time_b: "",
+      time_c: "",
+      time_d: "",
+      time_e: "",
+      bp_a: "",
+      bp_b: "",
+      bp_c: "",
+      bp_d: "",
+      bp_e: "",
+      pr_a: "",
+      pr_b: "",
+      pr_c: "",
+      pr_d: "",
+      pr_e: "",
+      rr_a: "",
+      rr_b: "",
+      rr_c: "",
+      rr_d: "",
+      rr_e: "",
+      tempt_a: "",
+      tempt_b: "",
+      tempt_c: "",
+      tempt_d: "",
+      tempt_e: "",
+      spo2_a: "",
+      spo2_b: "",
+      spo2_c: "",
+      spo2_d: "",
+      spo2_e: "",
       obs_prenatal_checkup: "",
       obs_labor_pains: "",
       obs_last_mens: "",
@@ -2414,6 +2389,36 @@ export default {
       this.event_leading_to_injury = "",
       this.severity = "",
       this.time_taken = "",
+      this.time_a = "",
+      this.time_b = "",
+      this.time_c = "",
+      this.time_d = "",
+      this.time_e = "",
+      this.bp_a = "",
+      this.bp_b = "",
+      this.bp_c = "",
+      this.bp_d = "",
+      this.bp_e = "",
+      this.pr_a = "",
+      this.pr_b = "",
+      this.pr_c = "",
+      this.pr_d = "",
+      this.pr_e = "",
+      this.rr_a = "",
+      this.rr_b = "",
+      this.rr_c = "",
+      this.rr_d = "",
+      this.rr_e = "",
+      this.tempt_a = "",
+      this.tempt_b = "",
+      this.tempt_c = "",
+      this.tempt_d = "",
+      this.tempt_e = "",
+      this.spo2_a = "",
+      this.spo2_b = "",
+      this.spo2_c = "",
+      this.spo2_d = "",
+      this.spo2_e = "",
       this.obs_prenatal_checkup ="",
       this.obs_labor_pains ="",
       this.obs_last_mens ="",
