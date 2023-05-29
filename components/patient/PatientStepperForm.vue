@@ -762,6 +762,13 @@
                       class="grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-4"
                     >
                       <!-- NAME -->
+                      <!-- <h3
+                    class="mb-3 mt-2 ml-1 text-base font-bold leading-tight text-secondary"
+                  >
+                    Basic Information
+                  </h3> -->
+
+
                       <div class="relative mb-1" data-te-input-wrapper-init>
                         <input
                           v-model="cp_suffix"
@@ -836,7 +843,7 @@
                       <!-- END GENDER -->
                       <!-- BIRTHDATE -->
                       <div
-                        class="relative mb-3"
+                        class="relative mb-1"
                         data-te-datepicker-init
                         data-te-format="dd, mmm, yyyy"
                         data-te-input-wrapper-init
@@ -854,7 +861,7 @@
                       </div>
                       <!-- END BIRTHDATE -->
 
-                      <div class="relative mb-3" data-te-input-wrapper-init>
+                      <div class="relative mb-1" data-te-input-wrapper-init>
                         <input
                           v-model="cp_age"
                           type="text"
@@ -872,16 +879,92 @@
                         </label>
                       </div>
 
-                      <!-- ADDRESS -->
+                      <div>
+                        <select data-te-select-init v-model="status" class="bg-neutral-50">
+                          <option selected value="2">Status</option>
+                          <option value="single">Single</option>
+                          <option value="married">Married</option>
+                          <option value="divorced">Divorced</option>
+                          <option value="annulled">Annulled</option>
+                          <option value="separated">Separated</option>
+                          <option value="cohabiting">Cohabiting</option>
+                          <option value="notSpecified">Not Specified</option>
+                        </select>
+                      </div>
 
+                      <div class="col-span-2">
+                        <select data-te-select-init v-model="religion" class="bg-neutral-50">
+                          <option selected value="3">Religion</option>
+                          <option value="catholic">Roman Catholic</option>
+                          <option value="islam">Islam</option>
+                          <option value="inc">Iglesia ni Cristo</option>
+                          <option value="aglipay">Aglipay</option>
+                          <option value="igi">Iglesia Filipina Independiente</option>
+                          <option value="bbc">Bible Baptist Church</option>
+                          <option value="jehovah">Jehovah's Witness</option>
+                          <option value="coc">Church of Christ</option>
+                          <option value="others">Others</option>
+                          <option value="none">None </option>
+
+                        </select>
+                      </div>
+
+
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="relativeCom"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="relCom"
+                          aria-describedby="relCom"
+                          placeholder="Relative/Companion"
+                        />
+                        <label
+                          for="relCom"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          Relative/Companion
+                        </label>
+                      </div>
+
+                      <div
+                        class="relative mb-1 bg-neutral-50"
+                        data-te-input-wrapper-init
+                      >
+                        <span
+                          class="absolute left-3 top-1/2 transform -translate-y-1/2 text-neutral-500"
+                        >
+                          +63
+                        </span>
+                        <input
+                          type="tel"
+                          id="contactNumber"
+                          name="contactNumber"
+                          class="peer block min-h-[auto] w-full pl-10 rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          pattern="[0-9]*"
+                          inputmode="numeric"
+                          maxlength="11"
+                          required
+                        />
+                      </div>
+
+<!--
+                  <h3
+                    class="mb-3 mt-2 ml-1 text-base font-bold leading-tight text-secondary"
+                  >
+                    Address Details
+                  </h3> -->
+
+
+                    <!-- ADDRESS -->
                     <select
-                      data-te-select-init
                       v-model="cp_city"
                       class="bg-neutral-50">
 
                       <option selected value="City">Select City</option>
                       <option value="Valenzuela">City of Valenzuela</option>
                       <option value="Others">Others, please specify</option>
+
                     <!-- Expected input box here -->
                     </select>
 
@@ -946,45 +1029,6 @@
                         </label>
                       </div>
 
-                      <div
-                        class="relative mb-1 bg-neutral-50"
-                        data-te-input-wrapper-init
-                      >
-                        <span
-                          class="absolute left-3 top-1/2 transform -translate-y-1/2 text-neutral-500"
-                        >
-                          +63
-                        </span>
-                        <input
-                          type="tel"
-                          id="contactNumber"
-                          name="contactNumber"
-                          class="peer block min-h-[auto] w-full pl-10 rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          pattern="[0-9]*"
-                          inputmode="numeric"
-                          maxlength="11"
-                          required
-                        />
-                      </div>
-
-                      <div
-                        class="relative mb-1 col-span-2"
-                        data-te-input-wrapper-init
-                      >
-                        <input
-                          type="email"
-                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          id="email"
-                          aria-describedby="email"
-                          placeholder="Email"
-                        />
-                        <label
-                          for="email"
-                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                        >
-                          Email
-                        </label>
-                      </div>
 
                       <div class="relative mb-1" data-te-input-wrapper-init>
                         <input
@@ -1191,17 +1235,22 @@
                         </div>
                       </div>
                       <!-- EVENTS LEADING TO INJURY -->
-                      <select data-te-select-init class="w-full bg-neutral-50">
-                        <option value="1. Mild">Mild</option>
-                        <option value="5. Moderate">Moderate</option>
-                        <option value="10. Severe">Severe</option>
+                      <div class="col-span-2">
+                        <select data-te-select-init class="w-full bg-neutral-50">
+                        <option value="mild">Mild (1)</option>
+                        <option value="moderate">Moderate (5)</option>
+                        <option value="severe">Severe (10)</option>
                         <option value="Others">Others</option>
-                      </select>
-                      <label data-te-select-label-ref>Severity</label>
+                        </select>
+                        <label data-te-select-label-ref>Severity</label>
+                      </div>
+
                       <!-- END SEVERITY -->
                       <!-- TIME -->
                       <div class="time col-span-2">
-                        <div class="relative mb-1" data-te-input-wrapper-init>
+                        <div class="relative mb-1"
+                             data-te-timepicker-init
+                             data-te-input-wrapper-init>
                           <input
                             type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
