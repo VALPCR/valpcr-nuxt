@@ -856,7 +856,7 @@
 
                       <div class="relative mb-3" data-te-input-wrapper-init>
                         <input
-                          v-model="age"
+                          v-model="cp_age"
                           type="text"
                           class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                           id="age"
@@ -1450,6 +1450,7 @@ export default {
       cp_barangay_b: "",
       cp_priority: "",
       cp_remarks: "",
+      cp_age: "",
       cp_suffix: "",
       cp_city: "City"
     };
@@ -1501,8 +1502,10 @@ export default {
       this.cp_ems_location_b = "";
       this.cp_barangay_b = "";
       this.cp_priority = "";
+      this.cp_age = "";
       this.cp_remarks = "";
       this.cp_suffix = "";
+
     },
 
     register() {
@@ -1540,6 +1543,7 @@ export default {
         cp_ems_location_b: this.cp_ems_location_b,
         cp_barangay_b: this.cp_barangay_b,
         // priority: this.priority,
+        cp_age: this.cp_age,
         cp_remarks: this.cp_remarks,
         cp_suffix: this.cp_suffix,
       };
@@ -1578,6 +1582,7 @@ export default {
         this.cp_ems_location_b = "";
         this.cp_barangay_b = "";
         this.cp_priority = "";
+        this.cp_age = "";
         this.cp_remarks = "";
         this.cp_suffix = "";
       });
