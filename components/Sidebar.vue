@@ -333,14 +333,14 @@ export default {
     this.role = this.$auth.user.role;
     this.$nuxt.$options.echo
       .channel("notification")
-      .listen(".NotificationEvent", (user) => {
-        if (user === "dispatcher") {
+      .listen(".NotificationEvent", (data) => {
+        if (data === "dispatcher") {
           this.dispatcherNotificationCount++;
-        } else if (user === "emr") {
+        } else if (data === "emr") {
           this.emrNotificationCount++;
-        } else if (user === "dispatch data") {
+        } else if (data === "dispatch data") {
           this.pendingCount++;
-        } else if (user === "completed") {
+        } else if (data === "completed") {
           this.patientCount++;
         }
       });

@@ -2885,32 +2885,32 @@ export default {
         this.cp_age = "";
         this.remarks = "";
         this.suffix = "";
-        this.first_name = "",
-        this.middle_name = "",
-        this.surname = "",
-        this.gender = "",
-        this.birthdate = "",
-        this.age = "",
-        this.status = "",
-        this.religion = "",
-        this.companion = "",
-        this.phone = "",
-        this.pnt_city = "City",
-        this.pnt_brgy = "",
-        this.pnt_st = "",
-        this.pnt_zip = "",
-        this.complaint = "",
-        this.onset = "",
-        this.allergies = "",
-        this.provacation = "",
-        this.medication = "",
-        this.quality = "",
-        this.medical_history = "",
-        this.radiation = "",
-        this.last_oral_intake = "",
-        this.event_leading_to_injury = "",
-        this.severity = "",
-        location.reload()
+        this.first_name = "";
+        this.middle_name = "";
+        this.surname = "";
+        this.gender = "";
+        this.birthdate = "";
+        this.age = "";
+        this.status = "";
+        this.religion = "";
+        this.companion = "";
+        this.phone = "";
+        this.pnt_city = "City";
+        this.pnt_brgy = "";
+        this.pnt_st = "";
+        this.pnt_zip = "";
+        this.complaint = "";
+        this.onset = "";
+        this.allergies = "";
+        this.provacation = "";
+        this.medication = "";
+        this.quality = "";
+        this.medical_history = "";
+        this.radiation = "";
+        this.last_oral_intake = "";
+        this.event_leading_to_injury = "";
+        this.severity = "";
+        // location.reload();
       });
     },
   },
