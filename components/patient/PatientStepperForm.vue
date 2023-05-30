@@ -2554,7 +2554,7 @@ export default {
       passenger: "",
       departed: "",
       station: "",
-      ems_location_a: "",
+      ems_location_a: "ems",
       ambulance: "",
       team_id: "1",
       mt_from: "",
@@ -2686,7 +2686,7 @@ export default {
       this.passenger = "";
       this.departed = "";
       this.station = "";
-      this.ems_location_a = "";
+      this.ems_location_a = "ems";
       this.ambulance = "";
       this.team_id = "";
       this.mt_from = "";
@@ -2847,6 +2847,69 @@ export default {
       };
 
       this.$axios.post("pcr/emr/register", params).then(() => {
+        this.dispatch_date = "";
+        this.category = "";
+        this.call_source = "";
+        this.call_receive = "";
+        this.barangay = "";
+        this.incident_location = "";
+        this.responded = "";
+        this.t_o = "";
+        this.va_location = "";
+        this.va_location_barangay = "";
+        this.arrive_at_scene = "";
+        this.t_l = "";
+        this.involved_vehicles_a = "";
+        this.involved_vehicles_b = "";
+        this.en_route_to = "";
+        this.tx_o = "";
+        this.plate_number = "";
+        this.arrived_at = "";
+        this.l_o = "";
+        this.driver = "";
+        this.pedestrian = "";
+        this.passenger = "";
+        this.departed = "";
+        this.station = "";
+        this.ems_location_a = "ems";
+        this.ambulance = "";
+        this.team_id = "";
+        this.mt_from = "";
+        this.mt_barangay = "";
+        this.ems_location_b = "";
+        this.barangay_b = "";
+        this.red = "";
+        this.yellow = "";
+        this.green = "";
+        this.black = "";
+        this.cp_age = "";
+        this.remarks = "";
+        this.suffix = "";
+        this.first_name = "",
+        this.middle_name = "",
+        this.surname = "",
+        this.gender = "",
+        this.birthdate = "",
+        this.age = "",
+        this.status = "",
+        this.religion = "",
+        this.companion = "",
+        this.phone = "",
+        this.pnt_city = "City",
+        this.pnt_brgy = "",
+        this.pnt_st = "",
+        this.pnt_zip = "",
+        this.complaint = "",
+        this.onset = "",
+        this.allergies = "",
+        this.provacation = "",
+        this.medication = "",
+        this.quality = "",
+        this.medical_history = "",
+        this.radiation = "",
+        this.last_oral_intake = "",
+        this.event_leading_to_injury = "",
+        this.severity = "",
         location.reload()
       });
     },
