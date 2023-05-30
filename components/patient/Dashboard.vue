@@ -239,12 +239,13 @@ export default {
   fetch() {
     this.role = this.$auth.user.role;
     this.$axios.get("pcr/list?category=completed").then((response) => {
+      console.log(response.data.return)
       response.data.return.map((pcr) =>
         this.fetchedRows.push({
           id: pcr.id,
           name: '',
           address: pcr.incident_location,
-          case: pcr.ems_location_a.toUpperCase(),
+          case: pcr.ems_location_a,
           call: pcr.call_receive,
           arrival: pcr.arrived_at,
           ambulance: pcr.ambulance,
