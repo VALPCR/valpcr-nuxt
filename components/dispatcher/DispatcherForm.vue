@@ -455,6 +455,7 @@ export default {
           this.street = "";
           this.zip = "";
           this.$emit("refresh");
+          location.reload();
         })
         .finally(() => {
           this.$nuxt.$loading.finish();

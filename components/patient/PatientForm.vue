@@ -905,6 +905,7 @@ export default {
         this.priority = "";
         this.remarks = "";
         this.assignedEmr = "";
+        location.reload();
       });
     },
   },
