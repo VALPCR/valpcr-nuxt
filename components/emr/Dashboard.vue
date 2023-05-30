@@ -6,7 +6,7 @@
           :columns="filterColumns"
           :rows="emptyRows"
           :search-options="{ enabled: false }"
-        >
+        >f
           <div slot="table-actions-bottom">
             <button
               type="button"
@@ -158,6 +158,11 @@ export default {
         {
           label: "NAME",
           field: "name",
+        },
+        {
+          label: "STATUS",
+          field: "radio",
+          html: true,
         },
         {
           label: "TEAM",
