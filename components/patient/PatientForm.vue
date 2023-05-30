@@ -765,7 +765,7 @@ export default {
       passenger: "",
       departed: "",
       station: "",
-      ems_location_a: "",
+      ems_location_a: "ems",
       ambulance: "",
       team_id: "1",
       mt_from: "",
@@ -818,7 +818,7 @@ export default {
       this.passenger = "";
       this.departed = "";
       this.station = "";
-      this.ems_location_a = "";
+      this.ems_location_a = "ems";
       this.ambulance = "";
       this.team_id = "";
       this.mt_from = "";
@@ -895,7 +895,7 @@ export default {
         this.passenger = "";
         this.departed = "";
         this.station = "";
-        this.ems_location_a = "";
+        this.ems_location_a = "ems";
         this.ambulance = "";
         this.team_id = "1";
         this.mt_from = "";
