@@ -2700,207 +2700,154 @@ export default {
       this.cp_age = "";
       this.remarks = "";
       this.suffix = "";
-      (this.first_name = ""),
-        (this.middle_name = ""),
-        (this.surname = ""),
-        (this.gender = ""),
-        (this.birthdate = ""),
-        (this.age = ""),
-        (this.status = ""),
-        (this.religion = ""),
-        (this.companion = ""),
-        (this.phone = ""),
-        (this.pnt_city = "City"),
-        (this.pnt_brgy = ""),
-        (this.pnt_st = ""),
-        (this.pnt_zip = ""),
-        (this.complaint = ""),
-        (this.onset = ""),
-        (this.allergies = ""),
-        (this.provacation = ""),
-        (this.medication = ""),
-        (this.quality = ""),
-        (this.medical_history = ""),
-        (this.radiation = ""),
-        (this.last_oral_intake = ""),
-        (this.event_leading_to_injury = ""),
-        (this.severity = ""),
-        (this.time_taken = ""),
-        (this.time_a = ""),
-        (this.time_b = ""),
-        (this.time_c = ""),
-        (this.time_d = ""),
-        (this.time_e = ""),
-        (this.bp_a = ""),
-        (this.bp_b = ""),
-        (this.bp_c = ""),
-        (this.bp_d = ""),
-        (this.bp_e = ""),
-        (this.pr_a = ""),
-        (this.pr_b = ""),
-        (this.pr_c = ""),
-        (this.pr_d = ""),
-        (this.pr_e = ""),
-        (this.rr_a = ""),
-        (this.rr_b = ""),
-        (this.rr_c = ""),
-        (this.rr_d = ""),
-        (this.rr_e = ""),
-        (this.tempt_a = ""),
-        (this.tempt_b = ""),
-        (this.tempt_c = ""),
-        (this.tempt_d = ""),
-        (this.tempt_e = ""),
-        (this.spo2_a = ""),
-        (this.spo2_b = ""),
-        (this.spo2_c = ""),
-        (this.spo2_d = ""),
-        (this.spo2_e = ""),
-        (this.obs_prenatal_checkup = ""),
-        (this.obs_labor_pains = ""),
-        (this.obs_last_mens = ""),
-        (this.obs_est_date = ""),
-        (this.obs_gravidity = ""),
-        (this.obs_parity = ""),
-        (this.obs_term_birth = ""),
-        (this.obs_pre_term = ""),
-        (this.obs_abortion = ""),
-        (this.obs_living = ""),
-        (this.obs_remarks = ""),
-        (this.treatment_nasal = ""),
-        (this.treatment_o2_mask = ""),
-        (this.treatment_bvm = ""),
-        (this.treatment_lpm = ""),
-        (this.treatment_wound_care = ""),
-        (this.treatment_splint = ""),
-        (this.treatment_cont_bleeding = ""),
-        (this.treatment_vital_taken_recorded = ""),
-        (this.treatment_applied_cpr = ""),
-        (this.treatment_applied_aed = ""),
-        (this.treatment_problems = "");
+      this.first_name = "",
+      this.middle_name = "",
+      this.surname = "",
+      this.gender = "",
+      this.birthdate = "",
+      this.age = "",
+      this.status = "",
+      this.religion = "",
+      this.companion = "",
+      this.phone = "",
+      this.pnt_city = "City",
+      this.pnt_brgy = "",
+      this.pnt_st = "",
+      this.pnt_zip = "",
+      this.complaint = "",
+      this.onset = "",
+      this.allergies = "",
+      this.provacation = "",
+      this.medication = "",
+      this.quality = "",
+      this.medical_history = "",
+      this.radiation = "",
+      this.last_oral_intake = "",
+      this.event_leading_to_injury = "",
+      this.severity = "",
+      this.time_taken = "",
+      this.time_a = "",
+      this.time_b = "",
+      this.time_c = "",
+      this.time_d = "",
+      this.time_e = "",
+      this.bp_a = "",
+      this.bp_b = "",
+      this.bp_c = "",
+      this.bp_d = "",
+      this.bp_e = "",
+      this.pr_a = "",
+      this.pr_b = "",
+      this.pr_c = "",
+      this.pr_d = "",
+      this.pr_e = "",
+      this.rr_a = "",
+      this.rr_b = "",
+      this.rr_c = "",
+      this.rr_d = "",
+      this.rr_e = "",
+      this.tempt_a = "",
+      this.tempt_b = "",
+      this.tempt_c = "",
+      this.tempt_d = "",
+      this.tempt_e = "",
+      this.spo2_a = "",
+      this.spo2_b = "",
+      this.spo2_c = "",
+      this.spo2_d = "",
+      this.spo2_e = "",
+      this.obs_prenatal_checkup = "",
+      this.obs_labor_pains = "",
+      this.obs_last_mens = "",
+      this.obs_est_date = "",
+      this.obs_gravidity = "",
+      this.obs_parity = "",
+      this.obs_term_birth = "",
+      this.obs_pre_term = "",
+      this.obs_abortion = "",
+      this.obs_living = "",
+      this.obs_remarks = "",
+      this.treatment_nasal = "",
+      this.treatment_o2_mask = "",
+      this.treatment_bvm = "",
+      this.treatment_lpm = "",
+      this.treatment_wound_care = "",
+      this.treatment_splint = "",
+      this.treatment_cont_bleeding = "",
+      this.treatment_vital_taken_recorded = "",
+      this.treatment_applied_cpr = "",
+      this.treatment_applied_aed = "",
+      this.treatment_problems = "";
     },
-
     register() {
       const params = {
-        cp_dispatch_date: this.cp_dispatch_date,
-        category: "dispatch data",
-        cp_call_source: this.category,
-        cp_call_receive: this.cp_call_receive,
-        cp_barangay: this.cp_barangay,
-        cp_incident_location: this.cp_incident_location,
-        location: this.location,
-        cp_responded: this.cp_responded,
-        cp_t_o: this.cp_t_o,
-        cp_va_location: this.cp_va_location,
-        cp_va_location_barangay: this.cp_va_location_barangay,
-        cp_arrive_at_scene: this.cp_arrive_at_scene,
-        cp_t_l: this.cp_t_l,
-        cp_involved_vehicles_a: this.cp_involved_vehicles_a,
-        cp_involved_vehicles_b: this.cp_involved_vehicles_b,
-        cp_en_route_to: this.cp_en_route_to,
-        cp_tx_o: this.cp_tx_o,
-        cp_plate_number: this.cp_plate_number,
-        cp_arrived_at: this.cp_arrived_at,
-        cp_l_o: this.cp_l_o,
-        cp_driver: this.cp_driver,
-        cp_pedestrian: this.cp_pedestrian,
-        cp_passenger: this.cp_passenger,
-        cp_departed: this.cp_departed,
-        cp_station: this.cp_station,
-        cp_ems_location_a: this.cp_ems_location_a,
-        cp_ambulance: this.cp_ambulance,
-        cp_team_id: this.cp_team_id,
-        cp_mt_from: this.cp_mt_from,
-        cp_mt_barangay: this.cp_mt_barangay,
-        cp_ems_location_b: this.cp_ems_location_b,
-        cp_barangay_b: this.cp_barangay_b,
-        // priority: this.priority,
-        cp_age: this.cp_age,
-        cp_remarks: this.cp_remarks,
-        obs_prenatal_checkup: this.obs_prenatal_checkup,
-        obs_labor_pains: this.obs_labor_pains,
-        obs_last_mens: this.obs_last_mens,
-        obs_est_date: this.obs_est_date,
-        obs_gravidity: this.obs_gravidity,
-        obs_parity: this.obs_parity,
-        obs_term_birth: this.obs_term_birth,
-        obs_pre_term: this.obs_pre_term,
-        obs_abortion: this.obs_abortion,
-        obs_living: this.obs_living,
-        obs_remarks: this.obs_remarks,
-        treatment_nasal: this.treatment_nasal,
-        treatment_o2_mask: this.treatment_o2_mask,
-        treatment_bvm: this.treatment_bvm,
-        treatment_lpm: this.treatment_lpm,
-        treatment_wound_care: this.treatment_wound_care,
-        treatment_splint: this.treatment_splint,
-        treatment_cont_bleeding: this.treatment_cont_bleeding,
-        treatment_vital_taken_recorded: this.treatment_vital_taken_recorded,
-        treatment_applied_cpr: this.treatment_applied_cpr,
-        treatment_applied_aed: this.treatment_applied_aed,
-        treatment_problems: this.treatment_problems,
+        dispatch_date: this.dispatch_date,
+        category: "completed",
+        call_source: this.call_source,
+        call_receive: this.call_receive,
+        barangay: this.barangay,
+        incident_location: this.incident_location,
+        responded: this.responded,
+        t_o: this.t_o,
+        va_location: this.va_location,
+        va_location_barangay: this.va_location_barangay,
+        arrive_at_scene: this.arrive_at_scene,
+        t_l: this.t_l,
+        involved_vehicles_a: this.involved_vehicles_a,
+        involved_vehicles_b: this.involved_vehicles_b,
+        en_route_to: this.en_route_to,
+        tx_o: this.tx_o,
+        plate_number: this.plate_number,
+        arrived_at: this.arrived_at,
+        l_o: this.l_o,
+        driver: this.driver,
+        pedestrian: this.pedestrian,
+        passenger: this.passenger,
+        departed: this.departed,
+        station: this.station,
+        ems_location_a: this.ems_location_a,
+        ems_location_b: this.ems_location_b,
+        barangay_b: this.barangay_b,
+        ambulance: this.ambulance,
+        team_id: this.team_id,
+        mt_from: this.mt_from,
+        mt_barangay: this.mt_barangay,
+        remarks: this.remarks,
+        red: this.red,
+        yellow: this.yellow,
+        green: this.green,
+        black: this.black,
+        suffix: this.suffix,
+        first_name: this.first_name,
+        middle_name: this.middle_name,
+        surname: this.surname,
+        gender: this.gender,
+        birthdate: this.birthdate,
+        age: this.age,
+        status: this.status,
+        religion: this.religion,
+        companion: this.companion,
+        phone: this.phone,
+        pnt_city: this.pnt_city,
+        pnt_brgy: this.pnt_brgy,
+        pnt_st: this.pnt_st,
+        pnt_zip: this.pnt_zip,
+        complaint: this.complaint,
+        onset: this.onset,
+        allergies: this.allergies,
+        provacation: this.provacation,
+        medication: this.medication,
+        quality: this.quality,
+        medical_history: this.medical_history,
+        radiation: this.radiation,
+        last_oral_intake: this.last_oral_intake,
+        event_leading_to_injury: this.event_leading_to_injury,
+        severity: this.severity,
+        time_taken: this.time_taken,
       };
 
-      this.$axios.post("pcr/register", params).then(() => {
-        this.cp_dispatch_date = "";
-        this.category = "dispatch data";
-        this.cp_call_source = "";
-        this.cp_call_receive = "";
-        this.cp_barangay = "";
-        this.cp_cp_incident_location = "";
-        this.cp_responded = "";
-        this.cp_t_o = "";
-        this.cp_va_location = "";
-        this.location = "";
-        this.cp_va_location_barangay = "";
-        this.cp_arrive_at_scene = "";
-        this.cp_t_l = "";
-        this.cp_involved_vehicles_a = "";
-        this.cp_involved_vehicles_b = "";
-        this.cp_en_route_to = "";
-        this.cp_tx_o = "";
-        this.cp_plate_number = "";
-        this.cp_arrived_at = "";
-        this.cp_l_o = "";
-        this.cp_driver = "";
-        this.cp_pedestrian = "";
-        this.cp_passenger = "";
-        this.cp_departed = "";
-        this.cp_station = "";
-        this.cp_ems_location_a = "";
-        this.cp_ambulance = "";
-        this.cp_team_id = "1";
-        this.cp_mt_from = "";
-        this.cp_mt_barangay = "";
-        this.cp_ems_location_b = "";
-        this.cp_barangay_b = "";
-        this.cp_priority = "";
-        this.cp_age = "";
-        this.cp_remarks = "";
-        this.cp_age = "";
-        this.cp_remarks = "";
-        this.obs_prenatal_checkup = "";
-        this.obs_labor_pains = "";
-        this.obs_last_mens = "";
-        this.obs_est_date = "";
-        this.obs_gravidity = "";
-        this.obs_parity = "";
-        this.obs_term_birth = "";
-        this.obs_pre_term = "";
-        this.obs_abortion = "";
-        this.obs_living = "";
-        this.obs_remarks = "";
-        this.treatment_nasal = "";
-        this.treatment_o2_mask = "";
-        this.treatment_bvm = "";
-        this.treatment_lpm = "";
-        this.treatment_wound_care = "";
-        this.treatment_splint = "";
-        this.treatment_cont_bleeding = "";
-        this.treatment_vital_taken_recorded = "";
-        this.treatment_applied_cpr = "";
-        this.treatment_applied_aed = "";
-        this.treatment_problems = "";
+      this.$axios.post("pcr/emr/register", params).then(() => {
+        location.reload()
       });
     },
   },
