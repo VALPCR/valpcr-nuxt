@@ -91,12 +91,11 @@ export default {
             styleClass: "class1", // class to be added to the parent th element
             enabled: true, // enable filter for this column
             filterDropdownItems: [
-              "Brain Hemorrhage",
-              "Car Accident",
-              "Heart Attack",
-              "Heart Stroke",
-              "Heat Stroke",
-              "Motorcycle Accident",
+              "Vehicular Accident",
+              "EMS",
+              "Search and Rescue",
+              "Fire",
+              "Medical Transport",
             ],
             trigger: "enter", //only trigger on enter not on keyup
           },
