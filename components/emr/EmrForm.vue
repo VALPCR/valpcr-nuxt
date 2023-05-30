@@ -92,6 +92,9 @@
                   class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                 >
                   First Name
+                  <small class="text-red-600 font-bold">
+                    *
+                  </small>
                 </label>
               </div>
 
@@ -127,6 +130,9 @@
                   class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                 >
                   Last Name
+                  <small class="text-red-600 font-bold">
+                    *
+                  </small>
                 </label>
               </div>
 
@@ -136,7 +142,11 @@
                 class="w-full bg-neutral-50"
                 required
               >
-                <option selected>Gender</option>
+                <option selected >Gender
+                  <span class="text-red-600 font-bold">
+                    *
+                  </span>
+                </option>
                 <option value="female">Female</option>
                 <option value="male">Male</option>
               </select>
@@ -158,6 +168,9 @@
                   class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                 >
                   Birthdate
+                  <small class="text-red-600 font-bold">
+                    *
+                  </small>
                 </label>
               </div>
 
@@ -176,6 +189,9 @@
                   class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                 >
                   Age
+                  <span class="text-red-600 font-bold">
+                    *
+                  </span>
                 </label>
               </div>
 
@@ -185,7 +201,12 @@
                 class="w-full bg-neutral-50"
                 required
               >
-                <option selected value="1">Team</option>
+                <option selected value="1">
+                  Team
+                  <span class="text-red-600 font-bold">
+                    *
+                  </span>
+                </option>
                 <option
                   v-for="(item, index) in teams"
                   :key="index"
@@ -196,7 +217,11 @@
               </select>
 
               <select v-model="city" data-te-select-init class="bg-neutral-50">
-                <option value="Valenzuela">City of Valenzuela</option>
+                <option value="Valenzuela">City of Valenzuela
+                  <small class="text-red-600 font-bold">
+                    *
+                  </small>
+                </option>
               </select>
 
               <select
@@ -205,7 +230,11 @@
                 class="bg-neutral-50"
                 required
               >
-                <option selected value="1">Select Barangay</option>
+                <option selected value="1">Select Barangay
+                  <small class="text-red-600 font-bold">
+                    *
+                  </small>
+                </option>
                 <option value="Arkong Bato">Arkong Bato</option>
                 <option value="Bagbaguin">Bagbaguin</option>
                 <option value="Balangkas">Balangkas</option>
@@ -255,6 +284,9 @@
                   class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                 >
                   Street Address
+                  <span class="text-red-600 font-bold">
+                    *
+                  </span>
                 </label>
               </div>
 
@@ -284,6 +316,9 @@
                   class="absolute left-3 top-1/2 transform -translate-y-1/2 text-neutral-500"
                 >
                   +63
+                  <span class="text-red-600 font-bold">
+                    *
+                  </span>
                 </span>
                 <input
                   v-model="phone"
@@ -313,6 +348,9 @@
                   class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                 >
                   Email
+                  <span class="text-red-600 font-bold">
+                    *
+                  </span>
                 </label>
               </div>
 
@@ -337,6 +375,9 @@
                   class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                 >
                   Full Name
+                  <span class="text-red-600 font-bold">
+                    *
+                  </span>
                 </label>
               </div>
 
@@ -348,7 +389,8 @@
                 <span
                   class="absolute left-3 top-1/2 transform -translate-y-1/2 text-neutral-500"
                 >
-                  +63
+                  +63 *
+
                 </span>
                 <input
                   v-model="ecp_phone"
