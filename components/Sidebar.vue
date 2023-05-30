@@ -334,13 +334,13 @@ export default {
     this.$nuxt.$options.echo
       .channel("notification")
       .listen(".NotificationEvent", (data) => {
-        if (data === "dispatcher") {
+        if (data.message === "dispatcher") {
           this.dispatcherNotificationCount++;
-        } else if (data === "emr") {
+        } else if (data.message === "emr") {
           this.emrNotificationCount++;
-        } else if (data === "dispatch data") {
+        } else if (data.message === "dispatch data") {
           this.pendingCount++;
-        } else if (data === "completed") {
+        } else if (data.message === "completed") {
           this.patientCount++;
         }
       });
