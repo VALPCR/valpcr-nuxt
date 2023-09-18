@@ -123,6 +123,7 @@
                         class="relative mb-1"
                         data-te-timepicker-init
                         data-te-input-wrapper-init
+                        @click.stop="setCallReceived"
                       >
                         <input
                           v-model="call_receive"
@@ -181,6 +182,7 @@
                         class="relative mb-1"
                         data-te-timepicker-init
                         data-te-input-wrapper-init
+                        @click.stop="setResponded"
                       >
                         <input
                           v-model="responded"
@@ -253,6 +255,7 @@
                         class="relative mb-1"
                         data-te-timepicker-init
                         data-te-input-wrapper-init
+                        @click.stop="setArrivedScene"
                       >
                         <input
                           v-model="arrive_at_scene"
@@ -315,6 +318,7 @@
                         class="relative mb-1"
                         data-te-timepicker-init
                         data-te-input-wrapper-init
+                        @click.stop="setEnRoute"
                       >
                         <input
                           v-model="en_route_to"
@@ -372,6 +376,7 @@
                         class="relative mb-1"
                         data-te-timepicker-init
                         data-te-input-wrapper-init
+                        @click.stop="setArrivedAt"
                       >
                         <input
                           v-model="arrived_at"
@@ -476,6 +481,7 @@
                         class="relative mb-1"
                         data-te-timepicker-init
                         data-te-input-wrapper-init
+                        @click.stop="setDeparted"
                       >
                         <input
                           v-model="departed"
@@ -827,10 +833,11 @@
                         class="w-full bg-neutral-50"
                         v-model="gender"
                       >
+                        <option value="patientGender">Sex</option>
                         <option value="female">Female</option>
                         <option value="male">Male</option>
                       </select>
-                      <label data-te-select-label-ref>Gender</label>
+                      <!-- <label data-te-select-label-ref>Gender</label> -->
                       <!-- END GENDER -->
                       <!-- BIRTHDATE -->
                       <div
@@ -942,18 +949,21 @@
                           class="peer block min-h-[auto] w-full pl-10 rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                           pattern="[0-9]*"
                           inputmode="numeric"
-                          maxlength="11"
+                          maxlength="10"
                           required
                         />
                       </div>
 
                       <!-- ADDRESS -->
-                      <select v-model="pnt_city" class="bg-neutral-50">
-                        <option selected value="City">Select City</option>
-                        <option value="Valenzuela">City of Valenzuela</option>
-                        <option value="Others">Others, please specify</option>
-
-                        <!-- Expected input box here -->
+                      <select
+                          data-te-select-init
+                          class="bg-neutral-50"
+                          v-model="pnt_city"
+                          >
+                            <option selected value="City">Select City</option>
+                            <option value="Valenzuela">City of Valenzuela</option>
+                            <option value="Others">Others, please specify</option>
+                            <!-- Expected input box here -->
                       </select>
 
                       <div>
@@ -1051,7 +1061,7 @@
                             for="s/sx-chief complaint"
                             class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                           >
-                            S/SX-CHIEF COMPLAINT
+                            S/SX-Chief Complaint
                           </label>
                         </div>
                       </div>
@@ -1239,15 +1249,15 @@
                       <div class="col-span-2">
                         <select
                           data-te-select-init
-                          class="w-full bg-neutral-50"
+                          class="w-full bg-neutral-50 text-gray"
                           v-model="severity"
                         >
+                          <option value="severity">Severity</option>
                           <option value="mild">Mild (1)</option>
                           <option value="moderate">Moderate (5)</option>
                           <option value="severe">Severe (10)</option>
                           <option value="Others">Others</option>
                         </select>
-                        <label data-te-select-label-ref>Severity</label>
                       </div>
 
                       <!-- END SEVERITY -->
@@ -2525,6 +2535,17 @@ import {
 export default {
   mounted() {
     initTE({ Ripple, Modal, Input, Stepper, Datepicker, Select, Timepicker });
+
+     // Function to update the date field
+     function updateDateField() {
+      this.dispatch_date = new Date().toISOString().split('T')[0];
+    }
+
+    // Initial call to set the date on component mount
+    updateDateField.call(this);
+
+    // Schedule the update to occur once per day (24 hours)
+    setInterval(updateDateField.bind(this), 24 * 60 * 60 * 1000); // 24 hours in milliseconds
   },
 
   data() {
@@ -2658,6 +2679,30 @@ export default {
   },
 
   methods: {
+    setCallReceived(){
+      const currentDate = new Date();
+      this.call_receive = currentDate.toLocaleTimeString();
+    },
+    setResponded(){
+      const currentDate = new Date();
+      this.responded = currentDate.toLocaleTimeString();
+    },
+    setArrivedScene(){
+      const currentDate = new Date();
+      this.arrive_at_scene = currentDate.toLocaleTimeString();
+    },
+    setArrivedAt(){
+      const currentDate = new Date();
+      this.arrived_at = currentDate.toLocaleTimeString();
+    },
+    setEnRoute(){
+      const currentDate = new Date();
+      this.en_route_to = currentDate.toLocaleTimeString();
+    },
+    setDeparted(){
+      const currentDate = new Date();
+      this.departed = currentDate.toLocaleTimeString();
+    },
     capitalize(word) {
       return word.replace(/^\w/, (c) => c.toUpperCase());
     },
@@ -2844,6 +2889,36 @@ export default {
         event_leading_to_injury: this.event_leading_to_injury,
         severity: this.severity,
         time_taken: this.time_taken,
+        time_a: this.time_a,
+        time_b: this.time_b,
+        time_c: this.time_c,
+        time_d: this.time_d,
+        time_e: this.time_e,
+        bp_a: this.bp_a,
+        bp_b: this.bp_b,
+        bp_c: this.bp_c,
+        bp_d: this.bp_d,
+        bp_e: this.bp_e,
+        pr_a: this.pr_a,
+        pr_b: this.pr_b,
+        pr_c: this.pr_c,
+        pr_d: this.pr_d,
+        pr_e: this.pr_e,
+        rr_a: this.rr_a,
+        rr_b: this.rr_b,
+        rr_c: this.rr_c,
+        rr_d: this.rr_d,
+        rr_e: this.rr_e,
+        tempt_a: this.tempt_a,
+        tempt_b: this.tempt_b,
+        tempt_c: this.tempt_c,
+        tempt_d: this.tempt_d,
+        tempt_e: this.tempt_e,
+        spo2_a: this.spo2_a,
+        spo2_b: this.spo2_b,
+        spo2_c: this.spo2_c,
+        spo2_a: this.spo2_d,
+        spo2_b: this.spo2_e,
       };
 
       this.$axios.post("pcr/emr/register", params).then(() => {
@@ -2910,6 +2985,36 @@ export default {
         this.last_oral_intake = "";
         this.event_leading_to_injury = "";
         this.severity = "";
+        this.time_a = "";
+        this.time_b = "";
+        this.time_c = "";
+        this.time_d = "";
+        this.time_e = "";
+        this.bp_a = "";
+        this.bp_b = "";
+        this.bp_c = "";
+        this.bp_d = "";
+        this.bp_e = "";
+        this.pr_a = "";
+        this.pr_b = "";
+        this.pr_c = "";
+        this.pr_d = "";
+        this.pr_e = "";
+        this.rr_a = "";
+        this.rr_b = "";
+        this.rr_c = "";
+        this.rr_d = "";
+        this.rr_e = "";
+        this.tempt_a = "";
+        this.tempt_b = "";
+        this.tempt_c = "";
+        this.tempt_d = "";
+        this.tempt_e = "";
+        this.spo2_a = "";
+        this.spo2_b = "";
+        this.spo2_c = "";
+        this.spo2_d = "";
+        this.spo2_e = "";
         // location.reload();
       });
     },
