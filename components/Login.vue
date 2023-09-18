@@ -1,29 +1,19 @@
 <template>
-  <div class="min-h-screen flex flex-col lg:flex-row">
-    <div
-      class="lg:w-1/2 bg-cover bg-center flex items-center justify-center text-white"
-      style="background-image: url('/images/valpcr_login_bg.jpg')"
-    >
-      <div class="text-center px-6">
-        <img
+<section class="bg-gray-50">
+  <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+    <img
           src="/images/valpcr_logo.svg"
           height="auto"
-          width="50%"
+          width="7%"
+          mr="2"
           class="mx-auto mb-4"
           alt="valpcr logo"
         />
-        <h2 class="text-4xl font-bold mb-4">Welcome to ValPCR</h2>
-        <p>The first electronic patient care reporting (EPCR)</p>
-        <p>system in Valenzuela City.</p>
-      </div>
-    </div>
-    <div
-      class="lg:w-1/2 bg-[#D7E4F3] text-white flex items-center justify-center"
-    >
+        <h1 class="text-7xl font-bold text-dark-1 mx-auto mb-8"><i> Welcome to ValPCR </i></h1>
       <div class="p-8 max-w-md w-full bg-white rounded-lg shadow-lg">
-        <h1 class="text-3xl mb-8 text-center text-black">USER LOG IN</h1>
-        <p class="ml-1 mr-1 text-center text-black mb-8">
-          Please login with your email and password below
+        <h1 class="text-3xl mb-5 text-center text-black font-bold">Sign in to your account</h1>
+        <p class="ml-1 mr-1 text-left text-gray-500">
+          Your Email
         </p>
         <form @submit.prevent="login">
           <div class="relative flex flex-nowrap items-stretch mb-3">
@@ -41,6 +31,9 @@
               aria-describedby="addon-wrapping"
             />
           </div>
+          <p class="ml-1 mr-1 text-left text-gray-500">
+          Password
+        </p>
           <div class="relative flex flex-nowrap items-stretch mb-3">
             <span
               class="flex items-center whitespace-nowrap rounded-l border border-r-0 border-solid border-neutral-300 px-3 py-[0.25rem] text-center text-base font-normal leading-[1.6] text-neutral-700 dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200"
@@ -90,15 +83,15 @@
             </NuxtLink>
           </div>
           <button
-            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full"
+            class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full"
             type="submit"
           >
             Log In
           </button>
         </form>
       </div>
-    </div>
   </div>
+</section>
 </template>
 
 <script>
