@@ -1325,10 +1325,12 @@
                         <div
                           class="relative mb-2"
                           data-te-input-wrapper-init
+                          data-te-timepicker-init
+                          @click.stop="setTimeA"
                         >
                           <input
                             v-model="time_a"
-                            type="time"
+                            type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                             aria-describedby="vTime"
                           />
@@ -1336,10 +1338,12 @@
                         <div
                           class="relative mb-2"
                           data-te-input-wrapper-init
+                          data-te-timepicker-init
+                          @click.stop="setTimeB"
                         >
                           <input
                             v-model="time_b"
-                            type="time"
+                            type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                             aria-describedby="vTime"
                           />
@@ -1347,10 +1351,12 @@
                         <div
                           class="relative mb-2"
                           data-te-input-wrapper-init
+                          data-te-timepicker-init
+                          @click.stop="setTimeC"
                         >
                           <input
                             v-model="time_c"
-                            type="time"
+                            type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                             aria-describedby="vTime"
                           />
@@ -1358,10 +1364,12 @@
                         <div
                           class="relative mb-2"
                           data-te-input-wrapper-init
+                          data-te-timepicker-init
+                          @click.stop="setTimeD"
                         >
                           <input
                             v-model="time_d"
-                            type="time"
+                            type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                             aria-describedby="vTime"
                           />
@@ -1369,10 +1377,12 @@
                         <div
                           class="relative mb-2"
                           data-te-input-wrapper-init
+                          data-te-timepicker-init
+                          @click.stop="setTimeE"
                         >
                           <input
                             v-model="time_e"
-                            type="time"
+                            type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                             aria-describedby="vTime"
                           />
@@ -2703,6 +2713,28 @@ export default {
       const currentDate = new Date();
       this.departed = currentDate.toLocaleTimeString();
     },
+    setTimeA(){
+      const currentDate = new Date();
+      this.time_a = currentDate.toLocaleTimeString();
+    },
+    setTimeB(){
+      const currentDate = new Date();
+      this.time_b = currentDate.toLocaleTimeString();
+    },
+    setTimeC(){
+      const currentDate = new Date();
+      this.time_c = currentDate.toLocaleTimeString();
+    },
+    setTimeD(){
+      const currentDate = new Date();
+      this.time_d = currentDate.toLocaleTimeString();
+    },
+    setTimeE(){
+      const currentDate = new Date();
+      this.time_e = currentDate.toLocaleTimeString();
+    },
+
+
     capitalize(word) {
       return word.replace(/^\w/, (c) => c.toUpperCase());
     },
