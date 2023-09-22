@@ -22,7 +22,7 @@
             class="text-xl font-medium leading-normal text-neutral-800 dark:text-neutral-200"
             id="exampleModalXlLabel"
           >
-            Dispatch Data!!!
+            Dispatch Data
           </h5>
           <!--Close button-->
           <button
