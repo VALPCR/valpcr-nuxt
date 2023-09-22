@@ -34,8 +34,8 @@
               alt="ValPCR Logo"
             />
             <span
-              class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white italic"
-              >ValPCR</span
+              class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white italic"
+              >Valenzuela Patient Care Reporting</span
             >
           </a>
         </div>
