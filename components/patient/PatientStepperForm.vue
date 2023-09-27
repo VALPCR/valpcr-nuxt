@@ -2949,8 +2949,8 @@ export default {
         spo2_a: this.spo2_a,
         spo2_b: this.spo2_b,
         spo2_c: this.spo2_c,
-        spo2_a: this.spo2_d,
-        spo2_b: this.spo2_e,
+        spo2_d: this.spo2_d,
+        spo2_e: this.spo2_e,
       };
 
       this.$axios.post("pcr/emr/register", params).then(() => {
