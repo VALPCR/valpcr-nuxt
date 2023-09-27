@@ -949,7 +949,7 @@
                           class="peer block min-h-[auto] w-full pl-10 rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                           pattern="[0-9]*"
                           inputmode="numeric"
-                          maxlength="10"
+                          maxlength="9"
                           required
                         />
                       </div>
@@ -1669,7 +1669,7 @@
                           class="relative mb-3 col-span-1"
                         >
                           <input
-                            v-model="pearl"
+                            v-model="left_pearl"
                             type="checkbox"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                           />
@@ -1678,7 +1678,7 @@
                           class="relative mb-4 col-span-1"
                         >
                           <input
-                            v-model="dilated"
+                            v-model="left_dilated"
                             type="checkbox"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                           />
@@ -1687,7 +1687,7 @@
                           class="relative mb-4 col-span-1"
                         >
                           <input
-                            v-model="constricted"
+                            v-model="left_constricted"
                             type="checkbox"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                           />
@@ -1696,7 +1696,7 @@
                           class="relative mb-4 col-span-1"
                         >
                           <input
-                            v-model="non_reactive"
+                            v-model="left_non_reactive"
                             type="checkbox"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                           />
@@ -1705,7 +1705,7 @@
                           class="relative mb-4 col-span-1"
                         >
                           <input
-                            v-model="cataract"
+                            v-model="left_cataract"
                             type="checkbox"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                           />
@@ -1717,7 +1717,7 @@
                           class="relative mb-4 col-span-1"
                         >
                           <input
-                            v-model="pearl"
+                            v-model="right_pearl"
                             type="checkbox"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                           />
@@ -1726,7 +1726,7 @@
                           class="relative mb-4 col-span-1"
                         >
                           <input
-                            v-model="dilated"
+                            v-model="right_dilated"
                             type="checkbox"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                           />
@@ -1735,7 +1735,7 @@
                           class="relative mb-4 col-span-1"
                         >
                           <input
-                            v-model="constricted"
+                            v-model="right_constricted"
                             type="checkbox"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                           />
@@ -1744,7 +1744,7 @@
                           class="relative mb-4 col-span-1"
                         >
                           <input
-                            v-model="non_reactive"
+                            v-model="right_non_reactive"
                             type="checkbox"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                           />
@@ -1753,7 +1753,7 @@
                           class="relative mb-4 col-span-1"
                         >
                           <input
-                            v-model="cataract"
+                            v-model="right_cataract"
                             type="checkbox"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                           />
@@ -2655,6 +2655,16 @@ export default {
       spo2_c: "",
       spo2_d: "",
       spo2_e: "",
+      right_pearl: "",
+      right_dilated: "",
+      right_constrict: "",
+      right_non_reactive: "",
+      right_cataract: "",
+      left_pearl: "",
+      left_dilated: "",
+      left_constrict: "",
+      left_non_reactive: "",
+      left_cataract: "",
       obs_prenatal_checkup: "",
       obs_labor_pains: "",
       obs_last_mens: "",
@@ -2833,6 +2843,16 @@ export default {
       this.spo2_c = "",
       this.spo2_d = "",
       this.spo2_e = "",
+      this.left_pearl = "",
+      this.left_dilated = "",
+      this.left_constrict = "",
+      this.left_non_reactive = "",
+      this.left_cataract = "",
+      this.right_pearl = "",
+      this.right_dilated = "",
+      this.right_constrict = "",
+      this.right_non_reactive = "",
+      this.right_cataract = "",
       this.obs_prenatal_checkup = "",
       this.obs_labor_pains = "",
       this.obs_last_mens = "",
@@ -2951,6 +2971,16 @@ export default {
         spo2_c: this.spo2_c,
         spo2_d: this.spo2_d,
         spo2_e: this.spo2_e,
+        left: this.left_pearl,
+        left: this.left_dilated,
+        left: this.left_constrict,
+        left: this.left_non_reactive,
+        left: this.left_cataract,
+        right: this.right_pearl,
+        right: this.right_dilated,
+        right: this.right_constrict,
+        right: this.right_non_reactive,
+        right: this.right_cataract,
       };
 
       this.$axios.post("pcr/emr/register", params).then(() => {
@@ -3047,6 +3077,16 @@ export default {
         this.spo2_c = "";
         this.spo2_d = "";
         this.spo2_e = "";
+        this.left_pearl = "",
+        this.left_dilated = "",
+        this.left_constrict = "",
+        this.left_non_reactive = "",
+        this.left_cataract = "",
+        this.right_pearl = "",
+        this.right_dilated = "",
+        this.right_constrict = "",
+        this.right_non_reactive = "",
+        this.right_cataract = ""
         // location.reload();
       });
     },
