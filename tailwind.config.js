@@ -12,10 +12,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+      /** Colors: Tailwind default colors
+            slate - 100, 300 For 'Clear' button
+            green - 600, 700 For 'Add New' button
+            amber - 500, 600 For 'Export' button
+      */
           'dark-blue': '#172554',
           'blue': '#1890FF',
-          'green': '#30AD62',
-          'yellow': '#F7B928',
           'dark-1': '#111827', /** Used Mainly in Text */
           'dark-2': '#131A2D',
           'light-1': '#EFEFEF', /** Used Mainly in Background */
