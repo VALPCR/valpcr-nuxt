@@ -18,7 +18,6 @@ module.exports = {
             amber - 500, 600 For 'Export' button
       */
           'dark-blue': '#172554',
-          'blue': '#1890FF',
           'dark-1': '#111827', /** Used Mainly in Text */
           'dark-2': '#131A2D',
           'light-1': '#EFEFEF', /** Used Mainly in Background */
