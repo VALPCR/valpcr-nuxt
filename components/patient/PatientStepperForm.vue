@@ -135,7 +135,7 @@
                         />
                         <label
                           for="callReceive"
-                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
                         >
                           Call Received
                         </label>
@@ -194,7 +194,7 @@
                         />
                         <label
                           for="responded"
-                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
                         >
                           Responded
                         </label>
@@ -267,7 +267,7 @@
                         />
                         <label
                           for="arriveAtScene"
-                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
                         >
                           Arrived at scene
                         </label>
@@ -330,7 +330,7 @@
                         />
                         <label
                           for="enRouteTo"
-                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
                         >
                           En route to
                         </label>
@@ -388,7 +388,7 @@
                         />
                         <label
                           for="arrivedAt"
-                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
                         >
                           Arrived at
                         </label>
@@ -493,7 +493,7 @@
                         />
                         <label
                           for="departed"
-                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
                         >
                           Departed
                         </label>
@@ -900,16 +900,17 @@
                           class="bg-neutral-50"
                         >
                           <option selected value="3">Religion</option>
-                          <option value="catholic">Roman Catholic</option>
+                          <option value="roman catholic">Roman Catholic</option>
                           <option value="islam">Islam</option>
-                          <option value="inc">Iglesia ni Cristo</option>
+                          <option value="iglesia ni cristo">Iglesia ni Cristo</option>
                           <option value="aglipay">Aglipay</option>
-                          <option value="igi">
+                          <option value="iglesia filipina independiente">
                             Iglesia Filipina Independiente
                           </option>
-                          <option value="bbc">Bible Baptist Church</option>
-                          <option value="jehovah">Jehovah's Witness</option>
-                          <option value="coc">Church of Christ</option>
+                          <option value="bible baptist church">Bible Baptist Church</option>
+                          <option value="united church of christ in the philippines">United Church of Christ in the Philippines</option>
+                          <option value="jehovas witness">Jehovah's Witness</option>
+                          <option value="church of christ">Church of Christ</option>
                           <option value="others">Others</option>
                           <option value="none">None</option>
                         </select>
@@ -1789,7 +1790,6 @@
                         </select>
                       </div>
 
-
                       <div class="relative mr-2 left-3 top-4 col-span-2">
                         <select
                           data-te-select-init
@@ -1797,10 +1797,10 @@
                           class="bg-neutral-50"
                         >
                           <option selected value="2"> Verbal</option>
-                          <option value="spontaneous">5 - Oriented</option>
-                          <option value="verbal">4 - Confused</option>
-                          <option value="pain">3 - Inappropriate words</option>
-                          <option value="none">2 - Incomprehensible sounds</option>
+                          <option value="oriented">5 - Oriented</option>
+                          <option value="confused">4 - Confused</option>
+                          <option value="inappropriate word">3 - Inappropriate words</option>
+                          <option value="incomprehensible sounds">2 - Incomprehensible sounds</option>
                           <option value="none">1 - None</option>
                         </select>
                       </div>
@@ -1812,13 +1812,12 @@
                           class="bg-neutral-50"
                         >
                           <option selected value="2">Motor</option>
-                          <option value="spontaneous">6 - Obeys Command</option>
-                          <option value="verbal">5 - Localize Pain</option>
-                          <option value="spontaneous">4 -  Withdraws to Pain</option>
-                          <option value="verbal">3 - Abnormal Flexion </option>
-                          <option value="spontaneous">2 - Abnormal Extension </option>
-                          <option value="verbal">1 - None</option>
-
+                          <option value="obeys command">6 - Obeys Command</option>
+                          <option value="localize pain">5 - Localize Pain</option>
+                          <option value="withdraws to pain">4 -  Withdraws to Pain</option>
+                          <option value="abnormal flexion">3 - Abnormal Flexion </option>
+                          <option value="abnormal extension">2 - Abnormal Extension </option>
+                          <option value="none">1 - None</option>
                         </select>
                       </div>
 
@@ -2700,50 +2699,82 @@ export default {
   methods: {
     setCallReceived(){
       const currentDate = new Date();
-      this.call_receive = currentDate.toLocaleTimeString();
+      this.call_receive = currentDate.toLocaleTimeString([], {
+        hour: 'numeric',
+        minute: 'numeric'
+      });
+      console.log(this.call_receive);
     },
     setResponded(){
       const currentDate = new Date();
-      this.responded = currentDate.toLocaleTimeString();
+      this.responded = currentDate.toLocaleTimeString([], {
+        hour: 'numeric',
+        minute: 'numeric'
+      });
     },
     setArrivedScene(){
       const currentDate = new Date();
-      this.arrive_at_scene = currentDate.toLocaleTimeString();
+      this.arrive_at_scene = currentDate.toLocaleTimeString([], {
+        hour: 'numeric',
+        minute: 'numeric'
+      });
     },
     setArrivedAt(){
       const currentDate = new Date();
-      this.arrived_at = currentDate.toLocaleTimeString();
+      this.arrived_at = currentDate.toLocaleTimeString([], {
+        hour: 'numeric',
+        minute: 'numeric'
+      });
     },
     setEnRoute(){
       const currentDate = new Date();
-      this.en_route_to = currentDate.toLocaleTimeString();
+      this.en_route_to = currentDate.toLocaleTimeString([], {
+        hour: 'numeric',
+        minute: 'numeric'
+      });
     },
     setDeparted(){
       const currentDate = new Date();
-      this.departed = currentDate.toLocaleTimeString();
+      this.departed = currentDate.toLocaleTimeString([], {
+        hour: 'numeric',
+        minute: 'numeric'
+      });
     },
     setTimeA(){
       const currentDate = new Date();
-      this.time_a = currentDate.toLocaleTimeString();
+      this.time_a = currentDate.toLocaleTimeString([], {
+        hour: 'numeric',
+        minute: 'numeric'
+      });
     },
     setTimeB(){
       const currentDate = new Date();
-      this.time_b = currentDate.toLocaleTimeString();
+      this.time_b = currentDate.toLocaleTimeString([], {
+        hour: 'numeric',
+        minute: 'numeric'
+      });
     },
     setTimeC(){
       const currentDate = new Date();
-      this.time_c = currentDate.toLocaleTimeString();
+      this.time_c = currentDate.toLocaleTimeString([], {
+        hour: 'numeric',
+        minute: 'numeric'
+      });
     },
     setTimeD(){
       const currentDate = new Date();
-      this.time_d = currentDate.toLocaleTimeString();
+      this.time_d = currentDate.toLocaleTimeString([], {
+        hour: 'numeric',
+        minute: 'numeric'
+      });
     },
     setTimeE(){
       const currentDate = new Date();
-      this.time_e = currentDate.toLocaleTimeString();
+      this.time_e = currentDate.toLocaleTimeString([], {
+        hour: 'numeric',
+        minute: 'numeric'
+      });
     },
-
-
     capitalize(word) {
       return word.replace(/^\w/, (c) => c.toUpperCase());
     },
@@ -2786,108 +2817,108 @@ export default {
       this.cp_age = "";
       this.remarks = "";
       this.suffix = "";
-      this.first_name = "",
-      this.middle_name = "",
-      this.surname = "",
-      this.gender = "",
-      this.birthdate = "",
-      this.age = "",
-      this.status = "",
-      this.religion = "",
-      this.companion = "",
-      this.phone = "",
-      this.pnt_city = "City",
-      this.pnt_brgy = "",
-      this.pnt_st = "",
-      this.pnt_zip = "",
-      this.complaint = "",
-      this.onset = "",
-      this.allergies = "",
-      this.provacation = "",
-      this.medication = "",
-      this.quality = "",
-      this.medical_history = "",
-      this.radiation = "",
-      this.last_oral_intake = "",
-      this.event_leading_to_injury = "",
-      this.severity = "",
-      this.time_taken = "",
-      this.time_a = "",
-      this.time_b = "",
-      this.time_c = "",
-      this.time_d = "",
-      this.time_e = "",
-      this.bp_a = "",
-      this.bp_b = "",
-      this.bp_c = "",
-      this.bp_d = "",
-      this.bp_e = "",
-      this.pr_a = "",
-      this.pr_b = "",
-      this.pr_c = "",
-      this.pr_d = "",
-      this.pr_e = "",
-      this.rr_a = "",
-      this.rr_b = "",
-      this.rr_c = "",
-      this.rr_d = "",
-      this.rr_e = "",
-      this.tempt_a = "",
-      this.tempt_b = "",
-      this.tempt_c = "",
-      this.tempt_d = "",
-      this.tempt_e = "",
-      this.spo2_a = "",
-      this.spo2_b = "",
-      this.spo2_c = "",
-      this.spo2_d = "",
-      this.spo2_e = "",
-      this.left_pearl = "",
-      this.left_dilated = "",
-      this.left_constrict = "",
-      this.left_non_reactive = "",
-      this.left_cataract = "",
-      this.right_pearl = "",
-      this.right_dilated = "",
-      this.right_constrict = "",
-      this.right_non_reactive = "",
-      this.right_cataract = "",
-      this.skin_color = "",
-      this.eyes = "",
-      this.verbal = "",
-      this.motor = "",
-      this.prenatal_checkup = "",
-      this.labor_pains = "",
-      this.last_menstrual_period = "",
-      this.estimated_date_of_delivery = "",
-      this.gravidity = "",
-      this.parity = "",
-      this.term_of_birth = "",
-      this.pre_term = "",
-      this.abortion = "",
-      this.living = "",
-      this.obs_remarks = "",
-      this.nasal = "",
-      this.o2_mask = "",
-      this.bvm = "",
-      this.lpm = "",
-      this.wound_care = "",
-      this.splinting_applied = "",
-      this.control_bleeding = "",
-      this.vital_sign_taken = "",
-      this.applied_cpr = "",
-      this.applied_aed = "",
-      this.problems = ""
-      this.received_by = "",
-      this.received_by_signature = "",
-      this.medical_facility = "",
-      this.medical_facility_signature = "",
-      this.team_leader = "",
-      this.team_leader_signature = "",
-      this.gloves = "",
-      this.mask = "",
-      this.gauze = "",
-      this.others = ""
+      this.first_name = "";
+      this.middle_name = "";
+      this.surname = "";
+      this.gender = "";
+      this.birthdate = "";
+      this.age = "";
+      this.status = "";
+      this.religion = "";
+      this.companion = "";
+      this.phone = "";
+      this.pnt_city = "City";
+      this.pnt_brgy = "";
+      this.pnt_st = "";
+      this.pnt_zip = "";
+      this.complaint = "";
+      this.onset = "";
+      this.allergies = "";
+      this.provacation = "";
+      this.medication = "";
+      this.quality = "";
+      this.medical_history = "";
+      this.radiation = "";
+      this.last_oral_intake = "";
+      this.event_leading_to_injury = "";
+      this.severity = "";
+      this.time_taken = "";
+      this.time_a = "";
+      this.time_b = "";
+      this.time_c = "";
+      this.time_d = "";
+      this.time_e = "";
+      this.bp_a = "";
+      this.bp_b = "";
+      this.bp_c = "";
+      this.bp_d = "";
+      this.bp_e = "";
+      this.pr_a = "";
+      this.pr_b = "";
+      this.pr_c = "";
+      this.pr_d = "";
+      this.pr_e = "";
+      this.rr_a = "";
+      this.rr_b = "";
+      this.rr_c = "";
+      this.rr_d = "";
+      this.rr_e = "";
+      this.tempt_a = "";
+      this.tempt_b = "";
+      this.tempt_c = "";
+      this.tempt_d = "";
+      this.tempt_e = "";
+      this.spo2_a = "";
+      this.spo2_b = "";
+      this.spo2_c = "";
+      this.spo2_d = "";
+      this.spo2_e = "";
+      this.left_pearl = "";
+      this.left_dilated = "";
+      this.left_constrict = "";
+      this.left_non_reactive = "";
+      this.left_cataract = "";
+      this.right_pearl = "";
+      this.right_dilated = "";
+      this.right_constrict = "";
+      this.right_non_reactive = "";
+      this.right_cataract = "";
+      this.skin_color = "";
+      this.eyes = "";
+      this.verbal = "";
+      this.motor = "";
+      this.prenatal_checkup = "";
+      this.labor_pains = "";
+      this.last_menstrual_period = "";
+      this.estimated_date_of_delivery = "";
+      this.gravidity = "";
+      this.parity = "";
+      this.term_of_birth = "";
+      this.pre_term = "";
+      this.abortion = "";
+      this.living = "";
+      this.obs_remarks = "";
+      this.nasal = "";
+      this.o2_mask = "";
+      this.bvm = "";
+      this.lpm = "";
+      this.wound_care = "";
+      this.splinting_applied = "";
+      this.control_bleeding = "";
+      this.vital_sign_taken = "";
+      this.applied_cpr = "";
+      this.applied_aed = "";
+      this.problems = "";
+      this.received_by = "";
+      this.received_by_signature = "";
+      this.medical_facility = "";
+      this.medical_facility_signature = "";
+      this.team_leader = "";
+      this.team_leader_signature = "";
+      this.gloves = "";
+      this.mask = "";
+      this.gauze = "";
+      this.others = "";
     },
     register() {
       const params = {
@@ -2984,16 +3015,16 @@ export default {
         spo2_c: this.spo2_c,
         spo2_d: this.spo2_d,
         spo2_e: this.spo2_e,
-        left: this.left_pearl,
-        left: this.left_dilated,
-        left: this.left_constrict,
-        left: this.left_non_reactive,
-        left: this.left_cataract,
-        right: this.right_pearl,
-        right: this.right_dilated,
-        right: this.right_constrict,
-        right: this.right_non_reactive,
-        right: this.right_cataract,
+        left_pearl: this.left_pearl,
+        left_dilated: this.left_dilated,
+        left_constrict: this.left_constrict,
+        left_non_reactive: this.left_non_reactive,
+        left_cataract: this.left_cataract,
+        right_pearl: this.right_pearl,
+        right_dilated: this.right_dilated,
+        right_constrict: this.right_constrict,
+        right_non_reactive: this.right_non_reactive,
+        right_cataract: this.right_cataract,
         skin_color: this.skin_color,
         eyes: this.eyes,
         verbal: this.verbal,
@@ -3126,54 +3157,54 @@ export default {
         this.spo2_c = "";
         this.spo2_d = "";
         this.spo2_e = "";
-        this.left_pearl = "",
-        this.left_dilated = "",
-        this.left_constrict = "",
-        this.left_non_reactive = "",
-        this.left_cataract = "",
-        this.right_pearl = "",
-        this.right_dilated = "",
-        this.right_constrict = "",
-        this.right_non_reactive = "",
-        this.right_cataract = "",
-        this.skin_color = "",
-        this.eyes = "",
-        this.verbal = "",
-        this.motor = "",
-        this.prenatal_checkup = "",
-        this.labor_pains = "",
-        this.last_menstrual_period = "",
-        this.estimated_date_of_delivery = "",
-        this.gravidity = "",
-        this.parity = "",
-        this.term_of_birth = "",
-        this.pre_term = "",
-        this.abortion = "",
-        this.living = "",
-        this.obs_remarks = "",
-        this.nasal = "",
-        this.o2_mask = "",
-        this.bvm = "",
-        this.lpm = "",
-        this.wound_care = "",
-        this.splinting_applied = "",
-        this.control_bleeding = "",
-        this.vital_sign_taken = "",
-        this.applied_cpr = "",
-        this.applied_aed = "",
-        this.problems = ""
-        this.received_by = "",
-        this.received_by_signature = "",
-        this.medical_facility = "",
-        this.medical_facility_signature = "",
-        this.team_leader = "",
-        this.team_leader_signature = "",
-        this.gloves = "",
-        this.mask = "",
-        this.gauze = "",
-        this.others = ""
+        this.left_pearl = "";
+        this.left_dilated = "";
+        this.left_constrict = "";
+        this.left_non_reactive = "";
+        this.left_cataract = "";
+        this.right_pearl = "";
+        this.right_dilated = "";
+        this.right_constrict = "";
+        this.right_non_reactive = "";
+        this.right_cataract = "";
+        this.skin_color = "";
+        this.eyes = "";
+        this.verbal = "";
+        this.motor = "";
+        this.prenatal_checkup = "";
+        this.labor_pains = "";
+        this.last_menstrual_period = "";
+        this.estimated_date_of_delivery = "";
+        this.gravidity = "";
+        this.parity = "";
+        this.term_of_birth = "";
+        this.pre_term = "";
+        this.abortion = "";
+        this.living = "";
+        this.obs_remarks = "";
+        this.nasal = "";
+        this.o2_mask = "";
+        this.bvm = "";
+        this.lpm = "";
+        this.wound_care = "";
+        this.splinting_applied = "";
+        this.control_bleeding = "";
+        this.vital_sign_taken = "";
+        this.applied_cpr = "";
+        this.applied_aed = "";
+        this.problems = "";
+        this.received_by = "";
+        this.received_by_signature = "";
+        this.medical_facility = "";
+        this.medical_facility_signature = "";
+        this.team_leader = "";
+        this.team_leader_signature = "";
+        this.gloves = "";
+        this.mask = "";
+        this.gauze = "";
+        this.others = "";
 
-        // location.reload();
+        location.reload();
       });
     },
   },
