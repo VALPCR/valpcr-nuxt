@@ -232,6 +232,10 @@ export default {
           field: "ambulance",
         },
         {
+          label: "ASSIGNEE",
+          field: "assignee",
+        },
+        {
           label: "ACTIONS",
           field: "actions",
           sortable: false,
@@ -254,6 +258,7 @@ export default {
           call: pcr.call_receive,
           arrival: pcr.arrived_at,
           ambulance: pcr.ambulance,
+          assignee: pcr.user_pcr.user.first_name + ' ' + pcr.user_pcr.user.last_name + ' (' + (pcr.user_pcr.user.role === 'emr' ? 'Responder' : 'Dispatcher') + ')',
           actions:
             '<div class="relative" data-te-dropdown-ref>\n' +
             "  <button\n" +

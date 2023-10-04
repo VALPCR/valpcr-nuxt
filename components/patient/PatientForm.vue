@@ -92,6 +92,7 @@
                 class="relative mb-1"
                 data-te-timepicker-init
                 data-te-input-wrapper-init
+                @click.stop="setCallReceived"
               >
                 <input
                   v-model="call_receive"
@@ -103,7 +104,7 @@
                 />
                 <label
                   for="callReceive"
-                  class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                  class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
                 >
                   Call Received
                 </label>
@@ -147,6 +148,7 @@
                 class="relative mb-1"
                 data-te-timepicker-init
                 data-te-input-wrapper-init
+                @click.stop="setResponded"
               >
                 <input
                   v-model="responded"
@@ -158,7 +160,7 @@
                 />
                 <label
                   for="responded"
-                  class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                  class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
                 >
                   Responded
                 </label>
@@ -185,10 +187,11 @@
                 <input
                   v-model="va_location"
                   type="text"
-                  class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                  :class="`peer block min-h-[auto] w-full rounded border-0 ${ems_location_a !== 'va' ? 'bg-gray-100 cursor-not-allowed' : 'bg-transparent' } px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0`"
                   id="vaLocation"
                   aria-describedby="vaLocation"
                   placeholder="V.A Location"
+                  :disabled="ems_location_a !== 'va'"
                 />
                 <label
                   for="vaLocation"
@@ -202,10 +205,11 @@
                 <input
                   v-model="va_location_barangay"
                   type="text"
-                  class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                  :class="`peer block min-h-[auto] w-full rounded border-0 ${ems_location_a !== 'va' ? 'bg-gray-100 cursor-not-allowed' : 'bg-transparent' } px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0`"
                   id="vaLocationBarangay"
                   aria-describedby="vaLocationBarangay"
                   placeholder="Barangay"
+                  :disabled="ems_location_a !== 'va'"
                 />
                 <label
                   for="vaLocationBarangay"
@@ -219,6 +223,7 @@
                 class="relative mb-1"
                 data-te-timepicker-init
                 data-te-input-wrapper-init
+                @click.stop="setArrivedScene"
               >
                 <input
                   v-model="arrive_at_scene"
@@ -230,7 +235,7 @@
                 />
                 <label
                   for="arriveAtScene"
-                  class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                  class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
                 >
                   Arrived at scene
                 </label>
@@ -259,9 +264,10 @@
                 <input
                   v-model="involved_vehicles_a"
                   type="text"
-                  class="relative m-0 block w-1/4 min-w-0 flex-auto rounded-l border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
+                  :class="`relative m-0 block w-1/4 min-w-0 flex-auto rounded-l border border-solid border-neutral-300 ${ems_location_a !== 'va' ? 'bg-gray-100 cursor-not-allowed' : 'bg-transparent' } bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary`"
                   placeholder="Involved Vehicle(s)"
                   aria-label="involvedVehicles"
+                  :disabled="ems_location_a !== 'va'"
                 />
                 <span
                   class="flex items-center whitespace-nowrap border border-x-0 border-solid border-neutral-300 px-3 py-[0.25rem] text-center text-base font-normal leading-[1.6] text-neutral-700 dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200"
@@ -271,9 +277,10 @@
                 <input
                   v-model="involved_vehicles_b"
                   type="text"
-                  class="relative m-0 block text-right w-1/4 min-w-0 flex-auto rounded-r border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
+                  :class="`relative m-0 block w-1/4 min-w-0 flex-auto rounded-l border border-solid border-neutral-300 ${ems_location_a !== 'va' ? 'bg-gray-100 cursor-not-allowed' : 'bg-transparent' } bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary`"
                   placeholder="Involved Vehicle(s)"
                   aria-label="involvedVehicles"
+                  :disabled="ems_location_a !== 'va'"
                 />
               </div>
 
@@ -281,6 +288,7 @@
                 class="relative mb-1"
                 data-te-timepicker-init
                 data-te-input-wrapper-init
+                @click.stop="setEnRoute"
               >
                 <input
                   v-model="en_route_to"
@@ -292,7 +300,7 @@
                 />
                 <label
                   for="enRouteTo"
-                  class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                  class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
                 >
                   En route to
                 </label>
@@ -319,10 +327,11 @@
                 <input
                   v-model="plate_number"
                   type="text"
-                  class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                  :class="`peer block min-h-[auto] w-full rounded border-0 ${ems_location_a !== 'va' ? 'bg-gray-100 cursor-not-allowed' : 'bg-transparent' } px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0`"
                   id="plateNumber"
                   aria-describedby="plateNumber"
                   placeholder="Plate Number"
+                  :disabled="ems_location_a !== 'va'"
                 />
                 <label
                   for="plateNumber"
@@ -338,6 +347,7 @@
                 class="relative mb-1"
                 data-te-timepicker-init
                 data-te-input-wrapper-init
+                @click.stop="setArrivedAt"
               >
                 <input
                   v-model="arrived_at"
@@ -349,7 +359,7 @@
                 />
                 <label
                   for="arrivedAt"
-                  class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                  class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
                 >
                   Arrived at
                 </label>
@@ -380,11 +390,12 @@
                   >
                     <input
                       v-model="driver"
-                      class="relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:border-neutral-600 dark:checked:border-primary dark:checked:after:border-primary dark:checked:after:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:border-primary dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                      :class="`${ems_location_a !== 'va' ? 'bg-gray-100 cursor-not-allowed' : 'bg-transparent' } relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:border-neutral-600 dark:checked:border-primary dark:checked:after:border-primary dark:checked:after:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:border-primary dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]`"
                       type="radio"
                       id="driver"
                       name="patientRadio"
                       value="driver"
+                      :disabled="ems_location_a !== 'va'"
                     />
                     <label
                       class="inline-block pl-[0.15rem] hover:cursor-pointer"
@@ -399,11 +410,12 @@
                   >
                     <input
                       v-model="pedestrian"
-                      class="relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:border-neutral-600 dark:checked:border-primary dark:checked:after:border-primary dark:checked:after:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:border-primary dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                      :class="`${ems_location_a !== 'va' ? 'bg-gray-100 cursor-not-allowed' : 'bg-transparent' } relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:border-neutral-600 dark:checked:border-primary dark:checked:after:border-primary dark:checked:after:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:border-primary dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]`"
                       type="radio"
                       id="pedestrian"
                       name="patientRadio"
-                      value="pedestrian"
+                      value="driver"
+                      :disabled="ems_location_a !== 'va'"
                     />
                     <label
                       class="inline-block pl-[0.15rem] hover:cursor-pointer"
@@ -418,11 +430,12 @@
                   >
                     <input
                       v-model="passenger"
-                      class="relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:border-neutral-600 dark:checked:border-primary dark:checked:after:border-primary dark:checked:after:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:border-primary dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                      :class="`${ems_location_a !== 'va' ? 'bg-gray-100 cursor-not-allowed' : 'bg-transparent' } relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:border-neutral-600 dark:checked:border-primary dark:checked:after:border-primary dark:checked:after:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:border-primary dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]`"
                       type="radio"
                       id="passenger"
                       name="patientRadio"
-                      value="passenger"
+                      value="driver"
+                      :disabled="ems_location_a !== 'va'"
                     />
                     <label
                       class="inline-block pl-[0.15rem] hover:cursor-pointer"
@@ -438,6 +451,7 @@
                 class="relative mb-1"
                 data-te-timepicker-init
                 data-te-input-wrapper-init
+                @click.stop="setDeparted"
               >
                 <input
                   v-model="departed"
@@ -449,7 +463,7 @@
                 />
                 <label
                   for="departed"
-                  class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                  class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
                 >
                   Departed
                 </label>
@@ -484,6 +498,8 @@
                     <option value="ems">EMS</option>
                     <option value="fire">FIRE</option>
                     <option value="sar">SAR</option>
+                    <option value="va">V.A</option>
+                    <option value="mt">M.T</option>
                   </select>
 
                   <div
@@ -493,10 +509,11 @@
                     <input
                       v-model="ems_location_b"
                       type="text"
-                      class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                      :class="`peer block min-h-[auto] w-full ${ems_location_a === 'va' || ems_location_a === 'mt' ? 'bg-gray-100 cursor-not-allowed' : 'bg-transparent' } rounded border-0 px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0`"
                       id="emsLocationB"
                       aria-describedby="emsLocationB"
                       placeholder="Location"
+                      :disabled="ems_location_a === 'va' || ems_location_a === 'mt'"
                     />
                     <label
                       for="emsLocationB"
@@ -513,10 +530,11 @@
                     <input
                       v-model="barangay_b"
                       type="text"
-                      class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                      :class="`peer block min-h-[auto] w-full rounded border-0 ${ems_location_a === 'va' || ems_location_a === 'mt' ? 'bg-gray-100 cursor-not-allowed' : 'bg-transparent' } px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0`"
                       id="barangayB"
                       aria-describedby="barangayB"
                       placeholder="Barangay"
+                      :disabled="ems_location_a === 'va' || ems_location_a === 'mt'"
                     />
                     <label
                       for="barangayB"
@@ -571,9 +589,10 @@
                 <input
                   v-model="mt_from"
                   type="text"
-                  class="relative m-0 block w-1/4 min-w-0 flex-auto rounded-l border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
+                  :class="`relative m-0 block w-1/4 min-w-0 flex-auto rounded-l border border-solid border-neutral-300 ${ems_location_a !== 'mt' ? 'bg-gray-100 cursor-not-allowed' : 'bg-transparent' } bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary`"
                   placeholder="MT From"
                   aria-label="mtFrom"
+                  :disabled="ems_location_a !== 'mt'"
                 />
                 <span
                   class="flex items-center whitespace-nowrap border border-x-0 border-solid border-neutral-300 px-3 py-[0.25rem] text-center text-base font-normal leading-[1.6] text-neutral-700 dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200"
@@ -583,9 +602,10 @@
                 <input
                   v-model="mt_barangay"
                   type="text"
-                  class="relative m-0 block text-right w-1/4 min-w-0 flex-auto rounded-r border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
+                  :class="`relative m-0 block text-right w-1/4 min-w-0 flex-auto rounded-r border border-solid border-neutral-300 ${ems_location_a !== 'mt' ? 'bg-gray-100 cursor-not-allowed' : 'bg-transparent' } bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary`"
                   placeholder="Barangay"
                   aria-label="barangay"
+                  :disabled="ems_location_a !== 'mt'"
                 />
               </div>
 
@@ -614,7 +634,7 @@
                 <div class="grid grid-cols-2 justify-center">
                   <div class="grid-cols-2 ml-9 mt-4">
                     <input
-                      v-model="priority"
+                      v-model="red"
                       class="relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:border-neutral-600 dark:checked:border-primary dark:checked:after:border-primary dark:checked:after:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:border-primary dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
                       type="radio"
                       id="red"
@@ -631,7 +651,7 @@
 
                   <div class="grid-cols-2 ml-9 mt-4">
                     <input
-                      v-model="priority"
+                      v-model="yellow"
                       class="relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:border-neutral-600 dark:checked:border-primary dark:checked:after:border-primary dark:checked:after:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:border-primary dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
                       type="radio"
                       id="yellow"
@@ -648,7 +668,7 @@
 
                   <div class="grid-cols-2 ml-9 mt-4">
                     <input
-                      v-model="priority"
+                      v-model="green"
                       class="relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:border-neutral-600 dark:checked:border-primary dark:checked:after:border-primary dark:checked:after:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:border-primary dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
                       type="radio"
                       id="green"
@@ -665,7 +685,7 @@
 
                   <div class="grid-cols-2 ml-9 mt-4">
                     <input
-                      v-model="priority"
+                      v-model="black"
                       class="relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:border-neutral-600 dark:checked:border-primary dark:checked:after:border-primary dark:checked:after:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:border-primary dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
                       type="radio"
                       id="black"
@@ -684,19 +704,25 @@
               <div />
               <div />
 
-              <div class="relative mb-3" data-te-input-wrapper-init>
-                <input
+              <div class="relative mb-3">
+                <label>
+                  EMR
+                </label>
+                <select
                   v-model="assignedEmr"
-                  type="search"
-                  class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                  id="exampleSearch2"
-                  placeholder="Type query"
-                />
-                <label
-                  for="exampleSearch2"
-                  class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                  >Assign EMR</label
+                  data-te-select-init
+                  id="assignedEmr"
+                  class="bg-neutral-50 mb-1"
+                  required
                 >
+                  <option
+                    v-for="(item, index) in emrs"
+                    :key="index"
+                    :value="item.id"
+                  >
+                    {{ item.name }}
+                  </option>
+                </select>
               </div>
 
               <!-- <vue-good-table :columns="filterColumns"> </vue-good-table> -->
@@ -733,14 +759,13 @@
 </template>
 
 <script>
-import { Modal, initTE, Ripple, Input, Select, Timepicker } from "tw-elements";
-import Echo from "laravel-echo";
-import Pusher from "pusher-js";
+import {Modal, initTE, Ripple, Input, Select, Timepicker, Stepper, Datepicker} from "tw-elements";
 
 export default {
   data() {
     return {
       teams: [],
+      emrs: [],
       dispatch_date: "",
       category: "dispatch data",
       call_source: "",
@@ -774,6 +799,10 @@ export default {
       barangay_b: "",
       priority: "",
       remarks: "",
+      red: "",
+      yellow: "",
+      green: "",
+      black: "",
       assignedEmr: "",
     };
   },
@@ -784,11 +813,105 @@ export default {
         this.teams.push({ id: team.id, name: this.capitalize(team.name) })
       );
     });
+    this.$axios.get("user/list" + "?role=emr").then((response) => {
+      response.data.return.map((emr) =>
+        this.emrs.push({ id: emr.id, name: `${emr.first_name !== null ? emr.first_name : ''} ${emr.middle_name !== null ? emr.middle_name : '' } ${emr.last_name !== null ? emr.last_name : ''}`})
+      );
+    });
   },
   mounted() {
-    initTE({ Ripple, Modal, Input, Select, Timepicker });
+    initTE({ Ripple, Modal, Input, Stepper, Datepicker, Select, Timepicker });
+
+    // Function to update the date field
+    function updateDateField() {
+      this.dispatch_date = new Date().toISOString().split('T')[0];
+    }
+
+    // Initial call to set the date on component mount
+    updateDateField.call(this);
+
+    // Schedule the update to occur once per day (24 hours)
+    setInterval(updateDateField.bind(this), 24 * 60 * 60 * 1000); // 24 hours in milliseconds
   },
   methods: {
+    setCallReceived(){
+      const currentDate = new Date();
+      this.call_receive = currentDate.toLocaleTimeString([], {
+        hour: 'numeric',
+        minute: 'numeric'
+      });
+      console.log(this.call_receive);
+    },
+    setResponded(){
+      const currentDate = new Date();
+      this.responded = currentDate.toLocaleTimeString([], {
+        hour: 'numeric',
+        minute: 'numeric'
+      });
+    },
+    setArrivedScene(){
+      const currentDate = new Date();
+      this.arrive_at_scene = currentDate.toLocaleTimeString([], {
+        hour: 'numeric',
+        minute: 'numeric'
+      });
+    },
+    setArrivedAt(){
+      const currentDate = new Date();
+      this.arrived_at = currentDate.toLocaleTimeString([], {
+        hour: 'numeric',
+        minute: 'numeric'
+      });
+    },
+    setEnRoute(){
+      const currentDate = new Date();
+      this.en_route_to = currentDate.toLocaleTimeString([], {
+        hour: 'numeric',
+        minute: 'numeric'
+      });
+    },
+    setDeparted(){
+      const currentDate = new Date();
+      this.departed = currentDate.toLocaleTimeString([], {
+        hour: 'numeric',
+        minute: 'numeric'
+      });
+    },
+    setTimeA(){
+      const currentDate = new Date();
+      this.time_a = currentDate.toLocaleTimeString([], {
+        hour: 'numeric',
+        minute: 'numeric'
+      });
+    },
+    setTimeB(){
+      const currentDate = new Date();
+      this.time_b = currentDate.toLocaleTimeString([], {
+        hour: 'numeric',
+        minute: 'numeric'
+      });
+    },
+    setTimeC(){
+      const currentDate = new Date();
+      this.time_c = currentDate.toLocaleTimeString([], {
+        hour: 'numeric',
+        minute: 'numeric'
+      });
+    },
+    setTimeD(){
+      const currentDate = new Date();
+      this.time_d = currentDate.toLocaleTimeString([], {
+        hour: 'numeric',
+        minute: 'numeric'
+      });
+    },
+    setTimeE(){
+      const currentDate = new Date();
+      this.time_e = currentDate.toLocaleTimeString([], {
+        hour: 'numeric',
+        minute: 'numeric'
+      });
+    },
     capitalize(word) {
       return word.replace(/^\w/, (c) => c.toUpperCase());
     },
@@ -857,15 +980,16 @@ export default {
         passenger: this.passenger,
         departed: this.departed,
         station: this.station,
-        ems_location_a: this.ems_location_a,
+        barangay_b: this.barangay_b,
         ambulance: this.ambulance,
         team_id: this.team_id,
         mt_from: this.mt_from,
         mt_barangay: this.mt_barangay,
-        ems_location_b: this.ems_location_b,
-        barangay_b: this.barangay_b,
-        // priority: this.priority,
         remarks: this.remarks,
+        red: this.red,
+        yellow: this.yellow,
+        green: this.green,
+        black: this.black,
         assignedEmr: this.assignedEmr,
       };
 
@@ -905,7 +1029,7 @@ export default {
         this.priority = "";
         this.remarks = "";
         this.assignedEmr = "";
-        // location.reload();
+        location.reload();
       });
     },
   },

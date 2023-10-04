@@ -2711,6 +2711,10 @@ export default {
   },
 
   methods: {
+    // setAge() {
+    //   const birthYear = this.birthdate.slice(0, 4);
+    //   const currentYear = new Date().getFullYear();
+    // },
     setCallReceived(){
       const currentDate = new Date();
       this.call_receive = currentDate.toLocaleTimeString([], {
