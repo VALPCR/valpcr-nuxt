@@ -183,6 +183,10 @@ export default {
           field: "case",
         },
         {
+          label: "DATE",
+          field: "date",
+        },
+        {
           label: "CALL RECEIVED",
           field: "call",
         },
@@ -193,6 +197,10 @@ export default {
         {
           label: "AMBULANCE",
           field: "ambulance",
+        },
+        {
+          label: "ASSIGNEE",
+          field: "assignee",
         },
         {
           label: "ACTIONS",
@@ -206,17 +214,17 @@ export default {
   fetch() {
     this.role = this.$auth.user.role;
     this.$axios.get("pcr/list").then((response) => {
-      console.log("response");
-      console.log(response.data.return.length);
       response.data.return.map((pcr) =>
         this.fetchedRows.push({
           id: pcr.id,
           name: "",
           address: pcr.incident_location,
           case: "",
+          date: pcr.dispatch_date,
           call: pcr.call_receive,
           arrival: pcr.arrived_at,
           ambulance: pcr.ambulance,
+          assignee: pcr.user_pcr.user.first_name + ' ' + pcr.user_pcr.user.last_name + ' (' + (pcr.user_pcr.user.role === 'emr' ? 'Responder' : 'Dispatcher') + ')',
           actions:
             '<div class="relative" data-te-dropdown-ref>\n' +
             "  <button\n" +
