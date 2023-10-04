@@ -216,6 +216,10 @@ export default {
           field: "case",
         },
         {
+          label: "DATE",
+          field: "date",
+        },
+        {
           label: "CALL RECEIVED",
           field: "call",
         },
@@ -245,7 +249,8 @@ export default {
           id: pcr.id,
           name: pcr.pcr_patient !== null ? pcr.pcr_patient.patient.first_name + ' ' + pcr.pcr_patient.patient.surname : '',
           address: pcr.incident_location,
-          case: pcr.ems_location_a,
+          case: pcr.ems_location_a.toUpperCase(),
+          date: pcr.dispatch_date,
           call: pcr.call_receive,
           arrival: pcr.arrived_at,
           ambulance: pcr.ambulance,
