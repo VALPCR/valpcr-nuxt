@@ -518,6 +518,7 @@ export default {
           this.age = "";
           this.emergency_contact = "";
           this.ecp_phone = "";
+          location.reload();
         })
         .finally(() => {
           this.$nuxt.$loading.finish();
