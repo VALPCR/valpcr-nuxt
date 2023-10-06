@@ -51,8 +51,11 @@
             <label
               @click="togglePasswordShow"
               class="bg-gray-200 hover:bg-gray-300 rounded px-2 py-2 text-sm text-gray-600 font-mono cursor-pointer js-password-label"
-              >{{ showPassword ? "Hide" : "Show" }}</label
-            >
+              >
+              <font-awesome-icon v-if="showPassword" :icon="['fas', 'eye-slash']" />
+              <font-awesome-icon v-else :icon="['fas', 'eye']" />
+            </label>
+            
             <!-- EYE ICONS FOR PASSWORD VISIBILITY -->
             <!-- <div
             @click="togglePasswordShow"
