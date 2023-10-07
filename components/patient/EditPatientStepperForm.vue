@@ -1,0 +1,3236 @@
+<template>
+  <div
+    data-te-modal-init
+    data-te-backdrop="static"
+    data-te-keyboard="false"
+    class="fixed left-0 top-20 z-[1055] hidden h-full w-full outline-none"
+    id="editPatientFormStepper"
+    tabindex="-1"
+    aria-labelledby="exampleModalXlLabel"
+    aria-modal="true"
+    role="dialog"
+  >
+    <div
+      data-te-modal-dialog-ref
+      class="pointer-events-none relative w-auto translate-y-[-50px] opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:max-w-[500px] min-[992px]:max-w-[800px] min-[1200px]:max-w-[1140px] z-1"
+    >
+      <div
+        class="pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600"
+      >
+        <!-- Start of Dispatch Data -->
+        <div class="flex justify-between mx-4 mt-4">
+          <!--Modal title-->
+          <h5
+            class="text-xl font-medium leading-normal text-neutral-800 dark:text-neutral-200"
+            id="exampleModalXlLabel"
+          >
+            Dispatch Data
+          </h5>
+          <!--Close button-->
+          <button
+            type="button"
+            class="box-content rounded-none border-none hover:no-underline hover:opacity-75 focus:opacity-100 focus:shadow-none focus:outline-none"
+            data-te-modal-dismiss
+            aria-label="Close"
+            @click="hideModal"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="h-6 w-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div class="mx-4">
+          <ul
+            data-te-stepper-init
+            class="relative m-0 flex list-none justify-between overflow-hidden p-0 transition-[height] duration-200 ease-in-out"
+          >
+            <!--Dispatch Data-->
+            <li
+              data-te-stepper-step-ref
+              data-te-stepper-step-active
+              class="w-[4.5rem] flex-auto"
+            >
+              <div
+                data-te-stepper-head-ref
+                class="flex cursor-pointer items-center pl-2 leading-[1.3rem] no-underline after:ml-2 after:h-px after:w-full after:flex-1 after:bg-[#e0e0e0] after:content-[''] hover:bg-[#f9f9f9] focus:outline-none dark:after:bg-neutral-600 dark:hover:bg-[#3b3b3b]"
+              >
+                <span
+                  data-te-stepper-head-icon-ref
+                  class="my-6 mr-2 flex h-[1.938rem] w-[1.938rem] items-center justify-center rounded-full bg-[#ebedef] text-sm font-medium text-[#40464f]"
+                >
+                  1
+                </span>
+                <span
+                  data-te-stepper-head-text-ref
+                  class="font-medium text-neutral-500 after:flex after:text-[0.8rem] after:content-[data-content] dark:text-neutral-300"
+                >
+                  Dispatch Data
+                </span>
+              </div>
+              <div
+                data-te-stepper-content-ref
+                class="absolute w-full p-4 transition-all duration-500 ease-in-out"
+              >
+                <div class="relative p-4">
+                  <form>
+                    <div
+                      class="grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-4"
+                    >
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="dispatch_date"
+                          type="date"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="date"
+                          aria-describedby="emailHelp123"
+                          placeholder="First name"
+                        />
+                        <label
+                          for="date"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          Date
+                        </label>
+                      </div>
+
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="call_source"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="callSource"
+                          aria-describedby="emailHelp124"
+                          placeholder="Call Source"
+                        />
+                        <label
+                          for="callSource"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          Call Source
+                        </label>
+                      </div>
+
+                      <div
+                        class="relative mb-1"
+                        data-te-timepicker-init
+                        data-te-input-wrapper-init
+                        @click.stop="setCallReceived"
+                      >
+                        <input
+                          v-model="call_receive"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="callReceive"
+                          aria-describedby="callReceive"
+                          placeholder="Call Received"
+                        />
+                        <label
+                          for="callReceive"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
+                        >
+                          Call Received
+                        </label>
+                      </div>
+
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="barangay"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="barangay"
+                          aria-describedby="barangay"
+                          placeholder="Barangay"
+                        />
+                        <label
+                          for="barangay"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          Barangay
+                        </label>
+                      </div>
+
+                      <div
+                        class="relative mb-1 col-span-2"
+                        data-te-input-wrapper-init
+                      >
+                        <input
+                          v-model="incident_location"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="incidentLocation"
+                          aria-describedby="incidentLocation"
+                          placeholder="Incident Location"
+                        />
+                        <label
+                          for="incidentLocation"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          Incident Location
+                        </label>
+                      </div>
+
+                      <div
+                        class="relative mb-1"
+                        data-te-timepicker-init
+                        data-te-input-wrapper-init
+                        @click.stop="setResponded"
+                      >
+                        <input
+                          v-model="responded"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="responded"
+                          aria-describedby="responded"
+                          placeholder="Responded"
+                        />
+                        <label
+                          for="responded"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
+                        >
+                          Responded
+                        </label>
+                      </div>
+
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="t_o"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="tO"
+                          aria-describedby="tO"
+                          placeholder="T/O"
+                        />
+                        <label
+                          for="tO"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          T/O
+                        </label>
+                      </div>
+
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="va_location"
+                          type="text"
+                          :class="`peer block min-h-[auto] w-full rounded border-0 ${ems_location_a !== 'va' ? 'bg-gray-100 cursor-not-allowed' : 'bg-transparent' } px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0`"
+                          id="vaLocation"
+                          aria-describedby="vaLocation"
+                          placeholder="V.A Location"
+                          :disabled="ems_location_a !== 'va'"
+                        />
+                        <label
+                          for="vaLocation"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          V.A Location
+                        </label>
+                      </div>
+
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="va_location_barangay"
+                          type="text"
+                          :class="`peer block min-h-[auto] w-full rounded border-0 ${ems_location_a !== 'va' ? 'bg-gray-100 cursor-not-allowed' : 'bg-transparent' } px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0`"
+                          id="vaLocationBarangay"
+                          aria-describedby="vaLocationBarangay"
+                          placeholder="Barangay"
+                          :disabled="ems_location_a !== 'va'"
+                        />
+                        <label
+                          for="vaLocationBarangay"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          Barangay
+                        </label>
+                      </div>
+
+                      <div
+                        class="relative mb-1"
+                        data-te-timepicker-init
+                        data-te-input-wrapper-init
+                        @click.stop="setArrivedScene"
+                      >
+                        <input
+                          v-model="arrive_at_scene"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="arriveAtScene"
+                          aria-describedby="arriveAtScene"
+                          placeholder="Arrived at scene"
+                        />
+                        <label
+                          for="arriveAtScene"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
+                        >
+                          Arrived at scene
+                        </label>
+                      </div>
+
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="t_l"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="tL"
+                          aria-describedby="tL"
+                          placeholder="T/L"
+                        />
+                        <label
+                          for="tL"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          T/L
+                        </label>
+                      </div>
+
+                      <div
+                        class="relative mb-1 flex flex-wrap items-stretch col-span-2"
+                      >
+                        <input
+                          v-model="involved_vehicles_a"
+                          type="text"
+                          :class="`relative m-0 block w-1/4 min-w-0 flex-auto rounded-l border border-solid border-neutral-300 ${ems_location_a !== 'va' ? 'bg-gray-100 cursor-not-allowed' : 'bg-transparent' } bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary`"
+                          placeholder="Involved Vehicle(s)"
+                          aria-label="involvedVehicles"
+                          :disabled="ems_location_a !== 'va'"
+                        />
+                        <span
+                          class="flex items-center whitespace-nowrap border border-x-0 border-solid border-neutral-300 px-3 py-[0.25rem] text-center text-base font-normal leading-[1.6] text-neutral-700 dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200"
+                        >
+                          VS
+                        </span>
+                        <input
+                          v-model="involved_vehicles_b"
+                          type="text"
+                          :class="`relative m-0 block text-right w-1/4 min-w-0 flex-auto rounded-r border border-solid border-neutral-300 ${ems_location_a !== 'va' ? 'bg-gray-100 cursor-not-allowed' : 'bg-transparent' } bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary`"
+                          placeholder="Involved Vehicle(s)"
+                          aria-label="involvedVehicles"
+                          :disabled="ems_location_a !== 'va'"
+                        />
+                      </div>
+
+                      <div
+                        class="relative mb-1"
+                        data-te-timepicker-init
+                        data-te-input-wrapper-init
+                        @click.stop="setEnRoute"
+                      >
+                        <input
+                          v-model="en_route_to"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="enRouteTo"
+                          aria-describedby="enRouteTo"
+                          placeholder="En route to"
+                        />
+                        <label
+                          for="enRouteTo"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
+                        >
+                          En route to
+                        </label>
+                      </div>
+
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="tx_o"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="tXO"
+                          aria-describedby="tXO"
+                          placeholder="TX/O"
+                        />
+                        <label
+                          for="tXO"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          TX/O
+                        </label>
+                      </div>
+
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="plate_number"
+                          type="text"
+                          :class="`peer block min-h-[auto] w-full rounded border-0 ${ems_location_a !== 'va' ? 'bg-gray-100 cursor-not-allowed' : 'bg-transparent' } px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0`"
+                          id="plateNumber"
+                          aria-describedby="plateNumber"
+                          placeholder="Plate Number"
+                          :disabled="ems_location_a !== 'va'"
+                        />
+                        <label
+                          for="plateNumber"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          Plate Number
+                        </label>
+                      </div>
+
+                      <div />
+
+                      <div
+                        class="relative mb-1"
+                        data-te-timepicker-init
+                        data-te-input-wrapper-init
+                        @click.stop="setArrivedAt"
+                      >
+                        <input
+                          v-model="arrived_at"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="arrivedAt"
+                          aria-describedby="arrivedAt"
+                          placeholder="Arrived at"
+                        />
+                        <label
+                          for="arrivedAt"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
+                        >
+                          Arrived at
+                        </label>
+                      </div>
+
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="l_o"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="lO"
+                          aria-describedby="lO"
+                          placeholder="L/O"
+                        />
+                        <label
+                          for="lO"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          L/O
+                        </label>
+                      </div>
+
+                      <div class="relative mb-1 col-span-2 flex">
+                        <label class="left-5 top-5 mb-0 font-bold">
+                          Patient:
+                        </label>
+                        <div
+                          class="relative mb-1 col-span-2 flex ml-3 justify-left"
+                        >
+                          <div
+                            class="mb-[0.125rem] mr-4 inline-block min-h-[1.5rem] pl-[1.5rem]"
+                          >
+                            <input
+                              v-model="driver"
+                              :class="`${ems_location_a !== 'va' ? 'bg-gray-100 cursor-not-allowed' : 'bg-transparent' } relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:border-neutral-600 dark:checked:border-primary dark:checked:after:border-primary dark:checked:after:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:border-primary dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]`"
+                              type="radio"
+                              id="driver"
+                              name="patientRadio"
+                              value="driver"
+                              :disabled="ems_location_a !== 'va'"
+                            />
+                            <label
+                              class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                              for="driver"
+                            >
+                              Driver
+                            </label>
+                          </div>
+
+                          <div
+                            class="mb-[0.125rem] mr-4 inline-block min-h-[1.5rem] pl-[1.5rem]"
+                          >
+                            <input
+                              v-model="pedestrian"
+                              :class="`${ems_location_a !== 'va' ? 'bg-gray-100 cursor-not-allowed' : 'bg-transparent' } relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:border-neutral-600 dark:checked:border-primary dark:checked:after:border-primary dark:checked:after:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:border-primary dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]`"
+                              type="radio"
+                              id="pedestrian"
+                              name="patientRadio"
+                              value="pedestrian"
+                              :disabled="ems_location_a !== 'va'"
+                            />
+                            <label
+                              class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                              for="pedestrian"
+                            >
+                              Pedestrian
+                            </label>
+                          </div>
+
+                          <div
+                            class="mb-[0.125rem] mr-4 inline-block min-h-[1.5rem] pl-[1.5rem]"
+                          >
+                            <input
+                              v-model="passenger"
+                              :class="`${ems_location_a !== 'va' ? 'bg-gray-100 cursor-not-allowed' : 'bg-transparent' } relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:border-neutral-600 dark:checked:border-primary dark:checked:after:border-primary dark:checked:after:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:border-primary dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]`"
+                              type="radio"
+                              id="passenger"
+                              name="patientRadio"
+                              value="passenger"
+                              :disabled="ems_location_a !== 'va'"
+                            />
+                            <label
+                              class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                              for="passenger"
+                            >
+                              Passenger
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="relative mb-1"
+                        data-te-timepicker-init
+                        data-te-input-wrapper-init
+                        @click.stop="setDeparted"
+                      >
+                        <input
+                          v-model="departed"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="departed"
+                          aria-describedby="departed"
+                          placeholder="Departed"
+                        />
+                        <label
+                          for="departed"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
+                        >
+                          Departed
+                        </label>
+                      </div>
+
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="station"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="station"
+                          aria-describedby="station"
+                          placeholder="Station"
+                        />
+                        <label
+                          for="station"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          Station
+                        </label>
+                      </div>
+
+                      <div class="col-span-4 inline-flex">
+                        <div class="grid grid-cols-4 gap-x-1">
+                          <select
+                            v-model="ems_location_a"
+                            data-te-select-init
+                            class="bg-neutral-50 mb-1"
+                            id="emsLocationA"
+                            required
+                          >
+                            <option value="ems">EMS</option>
+                            <option value="fire">FIRE</option>
+                            <option value="sar">SAR</option>
+                            <option value="va">V.A</option>
+                            <option value="mt">M.T</option>
+                          </select>
+
+                          <div
+                            class="relative mb-1 col-span-2"
+                            data-te-input-wrapper-init
+                          >
+                            <input
+                              v-model="ems_location_b"
+                              type="text"
+                              :class="`peer block min-h-[auto] w-full ${ems_location_a === 'va' || ems_location_a === 'mt' ? 'bg-gray-100 cursor-not-allowed' : 'bg-transparent' } rounded border-0 px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0`"
+                              id="emsLocationB"
+                              aria-describedby="emsLocationB"
+                              placeholder="Location"
+                              :disabled="ems_location_a === 'va' || ems_location_a === 'mt'"
+                            />
+                            <label
+                              for="emsLocationB"
+                              class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                            >
+                              Location
+                            </label>
+                          </div>
+
+                          <div
+                            class="relative mb-1 col-span-1 mr-2"
+                            data-te-input-wrapper-init
+                          >
+                            <input
+                              v-model="barangay_b"
+                              type="text"
+                              :class="`peer block min-h-[auto] w-full rounded border-0 ${ems_location_a === 'va' || ems_location_a === 'mt' ? 'bg-gray-100 cursor-not-allowed' : 'bg-transparent' } px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0`"
+                              id="barangayB"
+                              aria-describedby="barangayB"
+                              placeholder="Barangay"
+                              :disabled="ems_location_a === 'va' || ems_location_a === 'mt'"
+                            />
+                            <label
+                              for="barangayB"
+                              class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                            >
+                              Barangay
+                            </label>
+                          </div>
+                        </div>
+
+                        <div class="grid grid-cols-4 space-x-2">
+                          <div
+                            class="relative mb-1 col-span-2"
+                            data-te-input-wrapper-init
+                          >
+                            <input
+                              v-model="ambulance"
+                              type="text"
+                              class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                              id="ambulance"
+                              aria-describedby="ambulance"
+                              placeholder="Ambulance"
+                            />
+                            <label
+                              for="ambulance"
+                              class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                            >
+                              Ambulance
+                            </label>
+                          </div>
+
+                          <select
+                            v-model="team_id"
+                            data-te-select-init
+                            class="w-full bg-neutral-50 col-span-3"
+                          >
+                            <option selected value="1">Team</option>
+                            <option
+                              v-for="(item, index) in teams"
+                              :key="index"
+                              :value="item.id"
+                            >
+                              {{ item.name }}
+                            </option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div
+                        class="relative mb-1 flex flex-wrap items-stretch col-span-2"
+                      >
+                        <input
+                          v-model="mt_from"
+                          type="text"
+                          :class="`relative m-0 block w-1/4 min-w-0 flex-auto rounded-l border border-solid border-neutral-300 ${ems_location_a !== 'mt' ? 'bg-gray-100 cursor-not-allowed' : 'bg-transparent' } bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary`"
+                          placeholder="MT From"
+                          aria-label="mtFrom"
+                          :disabled="ems_location_a !== 'mt'"
+                        />
+                        <span
+                          class="flex items-center whitespace-nowrap border border-x-0 border-solid border-neutral-300 px-3 py-[0.25rem] text-center text-base font-normal leading-[1.6] text-neutral-700 dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200"
+                        >
+                          To
+                        </span>
+                        <input
+                          v-model="mt_barangay"
+                          type="text"
+                          :class="`relative m-0 block text-right w-1/4 min-w-0 flex-auto rounded-r border border-solid border-neutral-300 ${ems_location_a !== 'mt' ? 'bg-gray-100 cursor-not-allowed' : 'bg-transparent' } bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary`"
+                          placeholder="Barangay"
+                          aria-label="barangay"
+                          :disabled="ems_location_a !== 'mt'"
+                        />
+                      </div>
+
+                      <div
+                        class="relative mb-1 col-span-2 row-span-2"
+                        data-te-input-wrapper-init
+                      >
+                        <textarea
+                          v-model="remarks"
+                          class="`peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="remarks"
+                          aria-describedby="remarks"
+                        >
+                        </textarea>
+                        <label
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          Remarks
+                        </label>
+                      </div>
+
+                      <div class="relative mb-1 col-span-2">
+                        <label class="left-5 top-5 mb-0 font-bold">
+                          MCI/ Transport Priority
+                        </label>
+                        <div class="grid grid-cols-2 justify-center">
+                          <div class="grid-cols-2 ml-9 mt-4">
+                            <input
+                              v-model="red"
+                              class="relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:border-neutral-600 dark:checked:border-primary dark:checked:after:border-primary dark:checked:after:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:border-primary dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                              type="radio"
+                              id="red"
+                              name="priorityRadio"
+                              value="red"
+                            />
+                            <label
+                              class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                              for="red"
+                            >
+                              Priority#1(Red)
+                            </label>
+                          </div>
+
+                          <div class="grid-cols-2 ml-9 mt-4">
+                            <input
+                              v-model="yellow"
+                              class="relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:border-neutral-600 dark:checked:border-primary dark:checked:after:border-primary dark:checked:after:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:border-primary dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                              type="radio"
+                              id="yellow"
+                              name="priorityRadio"
+                              value="yellow"
+                            />
+                            <label
+                              class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                              for="yellow"
+                            >
+                              Priority#2(Yellow)
+                            </label>
+                          </div>
+
+                          <div class="grid-cols-2 ml-9 mt-4">
+                            <input
+                              v-model="green"
+                              class="relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:border-neutral-600 dark:checked:border-primary dark:checked:after:border-primary dark:checked:after:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:border-primary dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                              type="radio"
+                              id="green"
+                              name="priorityRadio"
+                              value="green"
+                            />
+                            <label
+                              class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                              for="green"
+                            >
+                              Priority#3(Green)
+                            </label>
+                          </div>
+
+                          <div class="grid-cols-2 ml-9 mt-4">
+                            <input
+                              v-model="black"
+                              class="relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:border-neutral-600 dark:checked:border-primary dark:checked:after:border-primary dark:checked:after:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:border-primary dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                              type="radio"
+                              id="black"
+                              name="priorityRadio"
+                              value="black"
+                            />
+                            <label
+                              class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                              for="black"
+                            >
+                              Priority#4(Black)
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </li>
+
+            <!--Patient Information-->
+            <li data-te-stepper-step-ref class="w-[4.5rem] flex-auto">
+              <div
+                data-te-stepper-head-ref
+                class="flex cursor-pointer items-center leading-[1.3rem] no-underline before:mr-2 before:h-px before:w-full before:flex-1 before:bg-[#e0e0e0] before:content-[''] after:ml-2 after:h-px after:w-full after:flex-1 after:bg-[#e0e0e0] after:content-[''] hover:bg-[#f9f9f9] focus:outline-none dark:before:bg-neutral-600 dark:after:bg-neutral-600 dark:hover:bg-[#3b3b3b]"
+              >
+                <span
+                  data-te-stepper-head-icon-ref
+                  class="my-6 mr-2 flex h-[1.938rem] w-[1.938rem] items-center justify-center rounded-full bg-[#ebedef] text-sm font-medium text-[#40464f]"
+                >
+                  2
+                </span>
+                <span
+                  data-te-stepper-head-text-ref
+                  class="text-neutral-500 after:flex after:text-[0.8rem] after:content-[data-content] dark:text-neutral-300"
+                >
+                  Patient...
+                </span>
+              </div>
+              <div
+                data-te-stepper-content-ref
+                class="absolute left-0 w-full translate-x-[150%] p-4 transition-all duration-500 ease-in-out"
+              >
+                <div class="relative p-4">
+                  <form>
+                    <div
+                      class="grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-4"
+                    >
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="suffix"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="suffix"
+                          aria-describedby="suffix"
+                          placeholder="Suffix(e.g. Sr., Jr., III)"
+                        />
+                        <label
+                          for="suffix"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          Suffix(e.g. Sr., Jr., III)
+                        </label>
+                      </div>
+
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="first_name"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="firstName"
+                          aria-describedby="firstName"
+                          placeholder="First Name"
+                        />
+                        <label
+                          for="firstName"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          First Name
+                        </label>
+                      </div>
+
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="middle_name"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="midName"
+                          aria-describedby="midName"
+                          placeholder="Middle Name"
+                        />
+                        <label
+                          for="midName"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          Middle Name
+                        </label>
+                      </div>
+
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="surname"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="lastName"
+                          aria-describedby="lastName"
+                          placeholder="Last Name"
+                        />
+                        <label
+                          for="lastName"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          Last Name
+                        </label>
+                      </div>
+                      <!-- END NAME -->
+                      <!-- GENDER -->
+                      <select
+                        data-te-select-init
+                        class="w-full bg-neutral-50"
+                        v-model="gender"
+                      >
+                        <option value="patientGender">Sex</option>
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                      </select>
+                      <!-- <label data-te-select-label-ref>Gender</label> -->
+                      <!-- END GENDER -->
+                      <!-- BIRTHDATE -->
+                      <div
+                        class="relative mb-1"
+                        data-te-input-wrapper-init
+                      >
+                        <input
+                          v-model="birthdate"
+                          type="date"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          placeholder="Select a date"
+                        />
+                        <label
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          Birthdate
+                        </label>
+                      </div>
+                      <!-- END BIRTHDATE -->
+
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="age"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="age"
+                          aria-describedby="age"
+                          placeholder="Age"
+                          required
+                        />
+                        <label
+                          for="age"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          Age
+                        </label>
+                      </div>
+
+                      <div>
+                        <select
+                          data-te-select-init
+                          v-model="status"
+                          class="bg-neutral-50"
+                        >
+                          <option selected value="2">Status</option>
+                          <option value="single">Single</option>
+                          <option value="married">Married</option>
+                          <option value="divorced">Divorced</option>
+                          <option value="annulled">Annulled</option>
+                          <option value="separated">Separated</option>
+                          <option value="cohabiting">Cohabiting</option>
+                          <option value="notSpecified">Not Specified</option>
+                        </select>
+                      </div>
+
+                      <div class="col-span-2">
+                        <select
+                          data-te-select-init
+                          v-model="religion"
+                          class="bg-neutral-50"
+                        >
+                          <option selected value="3">Religion</option>
+                          <option value="roman catholic">Roman Catholic</option>
+                          <option value="islam">Islam</option>
+                          <option value="iglesia ni cristo">Iglesia ni Cristo</option>
+                          <option value="aglipay">Aglipay</option>
+                          <option value="iglesia filipina independiente">
+                            Iglesia Filipina Independiente
+                          </option>
+                          <option value="bible baptist church">Bible Baptist Church</option>
+                          <option value="united church of christ in the philippines">United Church of Christ in the Philippines</option>
+                          <option value="jehovas witness">Jehovah's Witness</option>
+                          <option value="church of christ">Church of Christ</option>
+                          <option value="others">Others</option>
+                          <option value="none">None</option>
+                        </select>
+                      </div>
+
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="companion"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="pntCompanion"
+                          aria-describedby="pntCompanion"
+                          placeholder="Relative/Companion"
+                        />
+                        <label
+                          for="pntCompanion"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          Relative/Companion
+                        </label>
+                      </div>
+
+                      <div
+                        class="relative mb-1 bg-neutral-50"
+                        data-te-input-wrapper-init
+                      >
+                        <span
+                          class="absolute left-3 top-1/2 transform -translate-y-1/2 text-neutral-500"
+                        >
+                          +63
+                        </span>
+                        <input
+                          v-model="phone"
+                          type="tel"
+                          id="pntContactNumber"
+                          name="pntContactNumber"
+                          class="peer block min-h-[auto] w-full pl-10 rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          pattern="[0-9]*"
+                          inputmode="numeric"
+                          maxlength="9"
+                          required
+                        />
+                      </div>
+
+                      <!-- ADDRESS -->
+                      <select
+                          data-te-select-init
+                          class="bg-neutral-50"
+                          v-model="pnt_city"
+                          >
+                            <option selected value="City">Select City</option>
+                            <option value="Valenzuela">City of Valenzuela</option>
+                            <option value="Others">Others, please specify</option>
+                            <!-- Expected input box here -->
+                      </select>
+
+                      <div>
+                        <select
+                          data-te-select-init
+                          class="bg-neutral-50"
+                          v-model="pnt_brgy"
+                        >
+                          <option selected value="1">Select Barangay</option>
+                          <option value="Arkong Bato">Arkong Bato</option>
+                          <option value="Bagbaguin">Bagbaguin</option>
+                          <option value="Balangkas">Balangkas</option>
+                          <option value="Bignay">Bignay</option>
+                          <option value="Canumay East">Canumay East</option>
+                          <option value="Canumay West">Canumay West</option>
+                          <option value="Coloong">Coloong</option>
+                          <option value="Dalandanan">Dalandanan</option>
+                          <option value="Gen T. De Leon">Gen T. De Leon</option>
+                          <option value="Isla">Isla</option>
+                          <option value="Karuhatan">Karuhatan</option>
+                          <option value="Lawang Bato">Lawang Bato</option>
+                          <option value="Lingunan">Lingunan</option>
+                          <option value="Mabolo">Mabolo</option>
+                          <option value="Malanday">Malanday</option>
+                          <option value="Malinta">Malinta</option>
+                          <option value="Mapulang Lupa">Mapulang Lupa</option>
+                          <option value="Marulas">Marulas</option>
+                          <option value="Maysan">Maysan</option>
+                          <option value="Palasan">Palasan</option>
+                          <option value="Parada">Parada</option>
+                          <option value="Pariancillo Villa">
+                            Pariancillo Villa
+                          </option>
+                          <option value="Paso De Blas">Paso De Blas</option>
+                          <option value="Pasolo">Pasolo</option>
+                          <option value="Poblacion">Poblacion</option>
+                          <option value="Pulo">Pulo</option>
+                          <option value="Punturin">Punturin</option>
+                          <option value="Rincon">Rincon</option>
+                          <option value="Tagalag">Tagalag</option>
+                          <option value="Ugong">Ugong</option>
+                          <option value="Viente Reales">Viente Reales</option>
+                          <option value="Wawang Pulo">Wawang Pulo</option>
+                        </select>
+                      </div>
+
+                      <div
+                        class="relative mb-1 col-span-2"
+                        data-te-input-wrapper-init
+                      >
+                        <input
+                          v-model="pnt_st"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="streetAddress"
+                          aria-describedby="streetAddress"
+                          placeholder="Street Address"
+                        />
+                        <label
+                          for="streetAddress"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          Street Address
+                        </label>
+                      </div>
+
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="pnt_zip"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="zip"
+                          aria-describedby="zip"
+                          placeholder="Zip code"
+                        />
+                        <label
+                          for="zip"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          Zip code
+                        </label>
+                      </div>
+
+                      <div class="s/sx-chief complaint">
+                        <div class="relative mb-1" data-te-input-wrapper-init>
+                          <input
+                            v-model="complaint"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            id="s/sx-chief complaint"
+                            aria-describedby="s/sx-chief complaint"
+                            placeholder="s/sx-chief complaint"
+                          />
+                          <label
+                            for="s/sx-chief complaint"
+                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                          >
+                            S/SX-Chief Complaint
+                          </label>
+                        </div>
+                      </div>
+                      <!-- END S/SX-CHIEF COMPLAINT -->
+                      <!-- ONSET-->
+                      <div class="col-span-2">
+                        <div class="relative mb-1" data-te-input-wrapper-init>
+                          <input
+                            v-model="onset"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            id="onset"
+                            aria-describedby="zis/sx-chief complaint"
+                            placeholder="onset"
+                          />
+                          <label
+                            for="onset"
+                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                          >
+                            Onset
+                          </label>
+                        </div>
+                      </div>
+                      <!-- END ONSET -->
+                      <!-- ALLERGIES-->
+                      <div class="col-span-2">
+                        <div class="relative mb-1" data-te-input-wrapper-init>
+                          <input
+                            v-model="allergies"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            id="allergies"
+                            aria-describedby="allergies"
+                            placeholder="allergies"
+                          />
+                          <label
+                            for="allergies"
+                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                          >
+                            Allergies
+                          </label>
+                        </div>
+                      </div>
+                      <!-- END ALLERGIES -->
+                      <!-- PROVOCATION-->
+                      <div class="col-span-2">
+                        <div class="relative mb-1" data-te-input-wrapper-init>
+                          <input
+                            v-model="provacation"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            id="provocation"
+                            aria-describedby="provocation"
+                            placeholder="provocation"
+                          />
+                          <label
+                            for="provocation"
+                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                          >
+                            Provocation
+                          </label>
+                        </div>
+                      </div>
+                      <!-- END PROVOCATION -->
+                      <!-- MEDICATION-->
+                      <div class="col-span-2">
+                        <div class="relative mb-1" data-te-input-wrapper-init>
+                          <input
+                            v-model="medication"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            id="medication"
+                            aria-describedby="medication"
+                            placeholder="medication"
+                          />
+                          <label
+                            for="medication"
+                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                          >
+                            Medication
+                          </label>
+                        </div>
+                      </div>
+                      <!-- END MEDICATION -->
+                      <!-- QUALITY-->
+                      <div class="col-span-2">
+                        <div class="relative mb-1" data-te-input-wrapper-init>
+                          <input
+                            v-model="quality"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            id="quality"
+                            aria-describedby="quality"
+                            placeholder="quality"
+                          />
+                          <label
+                            for="quality"
+                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                          >
+                            Quality
+                          </label>
+                        </div>
+                      </div>
+                      <!-- END QUALITY -->
+                      <!-- PAST MEDICAL HISTORY-->
+                      <div class="col-span-2">
+                        <div class="relative mb-1" data-te-input-wrapper-init>
+                          <input
+                            v-model="medical_history"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            id="pmh"
+                            aria-describedby="pmh"
+                            placeholder="pmh"
+                          />
+                          <label
+                            for="pmh"
+                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                          >
+                            Past Medical History
+                          </label>
+                        </div>
+                      </div>
+                      <!-- END PAST MEDICAL HISTORY -->
+                      <!-- RADIATION-->
+                      <div class="col-span-2">
+                        <div class="relative mb-1" data-te-input-wrapper-init>
+                          <input
+                            v-model="radiation"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            id="radiation"
+                            aria-describedby="radiation"
+                            placeholder="radiation"
+                          />
+                          <label
+                            for="radiation"
+                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                          >
+                            Radiation
+                          </label>
+                        </div>
+                      </div>
+                      <!-- END RADIATION -->
+                      <!-- LAST ORAL INTAKE -->
+                      <div class="col-span-2">
+                        <div class="relative mb-1" data-te-input-wrapper-init>
+                          <input
+                            v-model="last_oral_intake"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            id="loi"
+                            aria-describedby="loi"
+                            placeholder="loi"
+                          />
+                          <label
+                            for="loi"
+                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                          >
+                            Last Oral Intake
+                          </label>
+                        </div>
+                      </div>
+                      <!-- END LAST ORAL INTAKE -->
+                      <!-- EVENTS LEADING TO INJURY -->
+                      <div class="events col-span-2">
+                        <div class="relative mb-1" data-te-input-wrapper-init>
+                          <input
+                            v-model="event_leading_to_injury"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            id="events"
+                            aria-describedby="events"
+                            placeholder="events"
+                          />
+                          <label
+                            for="events"
+                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                          >
+                            Events Leading to Injury
+                          </label>
+                        </div>
+                      </div>
+                      <!-- EVENTS LEADING TO INJURY -->
+                      <div class="col-span-2">
+                        <select
+                          data-te-select-init
+                          class="w-full bg-neutral-50 text-gray"
+                          v-model="severity"
+                        >
+                          <option value="severity">Severity</option>
+                          <option value="mild">Mild (1)</option>
+                          <option value="moderate">Moderate (5)</option>
+                          <option value="severe">Severe (10)</option>
+                          <option value="Others">Others</option>
+                        </select>
+                      </div>
+
+                      <!-- END SEVERITY -->
+                      <!-- TIME -->
+                      <div class="time col-span-2">
+                        <div
+                          class="relative mb-1"
+                          data-te-timepicker-init
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="time_taken"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            id="time"
+                            aria-describedby="time"
+                            placeholder="time"
+                          />
+                          <label
+                            for="time"
+                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                          >
+                            Time
+                          </label>
+                        </div>
+                      </div>
+                      <!-- EVENTS LEADING TO INJURY -->
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </li>
+
+            <!--Vital Signs-->
+            <li data-te-stepper-step-ref class="w-[4.5rem] flex-auto">
+              <div
+                data-te-stepper-head-ref
+                class="flex cursor-pointer items-center pr-2 leading-[1.3rem] no-underline before:mr-2 before:h-px before:w-full before:flex-1 before:bg-[#e0e0e0] before:content-[''] hover:bg-[#f9f9f9] focus:outline-none dark:before:bg-neutral-600 dark:after:bg-neutral-600 dark:hover:bg-[#3b3b3b]"
+              >
+                <span
+                  data-te-stepper-head-icon-ref
+                  class="my-6 mr-2 flex h-[1.938rem] w-[1.938rem] items-center justify-center rounded-full bg-[#ebedef] text-sm font-medium text-[#40464f]"
+                >
+                  3
+                </span>
+                <span
+                  data-te-stepper-head-text-ref
+                  class="text-neutral-500 after:flex after:text-[0.8rem] after:content-[data-content] dark:text-neutral-300"
+                >
+                  Vital Signs
+                </span>
+              </div>
+
+              <div
+                data-te-stepper-content-ref
+                class="absolute left-0 w-full translate-x-[150%] p-4 transition-all duration-500 ease-in-out"
+              >
+                <div class="relative p-4">
+                  <form>
+                    <div
+                      class="grid grid-cols-6"
+                    >
+                      <div class="">
+                        <h4 class="mb-3 font-bold">Time</h4>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                          data-te-timepicker-init
+                          @click.stop="setTimeA"
+                        >
+                          <input
+                            v-model="time_a"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            aria-describedby="vTime"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                          data-te-timepicker-init
+                          @click.stop="setTimeB"
+                        >
+                          <input
+                            v-model="time_b"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            aria-describedby="vTime"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                          data-te-timepicker-init
+                          @click.stop="setTimeC"
+                        >
+                          <input
+                            v-model="time_c"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            aria-describedby="vTime"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                          data-te-timepicker-init
+                          @click.stop="setTimeD"
+                        >
+                          <input
+                            v-model="time_d"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            aria-describedby="vTime"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                          data-te-timepicker-init
+                          @click.stop="setTimeE"
+                        >
+                          <input
+                            v-model="time_e"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            aria-describedby="vTime"
+                          />
+                        </div>
+                      </div>
+                      <div class="">
+                        <h4 class="mb-3 font-bold">BP</h4>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="bp_a"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="bp_b"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="bp_c"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="bp_d"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="bp_e"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                      </div>
+                      <div class="">
+                        <h4 class="mb-3 font-bold">PR</h4>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="pr_a"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="pr_b"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="pr_c"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="pr_d"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="pr_e"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                      </div>
+                      <div class="">
+                        <h4 class="mb-3 font-bold">RR</h4>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="rr_a"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="rr_b"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="rr_c"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="rr_d"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="rr_e"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                      </div>
+                      <div class="">
+                        <h4 class="mb-3 font-bold">Temp.</h4>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="tempt_a"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="tempt_b"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="tempt_c"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="tempt_d"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="tempt_e"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                      </div>
+                      <div class="">
+                        <h4 class="mb-3 font-bold">SPO2</h4>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="spo2_a"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="spo2_b"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="spo2_c"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="spo2_d"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="spo2_e"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="grid grid-cols-10">
+                      <div>
+                        <h4 class="mb-3 font-bold">Pupil</h4>
+                        <h5 class="relative mb-1 font-small col-span-1 text-gray-700">Pearl</h5>
+                        <h5 class="relative mb-1 font-small col-span-1 text-gray-700">Dilated</h5>
+                        <h5 class="relative mb-1 font-small col-span-1 text-gray-700">Constricted</h5>
+                        <h5 class="relative mb-1 font-small col-span-1 text-gray-700">Non-reactive</h5>
+                        <h5 class="relative mb-1 font-small col-span-1 text-gray-700">Cataract</h5>
+                      </div>
+                      <div>
+                        <h4 class="mb-4 font-bold text-center">Left</h4>
+                        <div
+                          class="relative mb-3 col-span-1"
+                        >
+                          <input
+                            v-model="left_pearl"
+                            type="checkbox"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-4 col-span-1"
+                        >
+                          <input
+                            v-model="left_dilated"
+                            type="checkbox"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-4 col-span-1"
+                        >
+                          <input
+                            v-model="left_constrict"
+                            type="checkbox"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-4 col-span-1"
+                        >
+                          <input
+                            v-model="left_non_reactive"
+                            type="checkbox"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-4 col-span-1"
+                        >
+                          <input
+                            v-model="left_cataract"
+                            type="checkbox"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <h4 class="mb-3 font-bold text-center">Right</h4>
+                        <div
+                          class="relative mb-4 col-span-1"
+                        >
+                          <input
+                            v-model="right_pearl"
+                            type="checkbox"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-4 col-span-1"
+                        >
+                          <input
+                            v-model="right_dilated"
+                            type="checkbox"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-4 col-span-1"
+                        >
+                          <input
+                            v-model="right_constrict"
+                            type="checkbox"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-4 col-span-1"
+                        >
+                          <input
+                            v-model="right_non_reactive"
+                            type="checkbox"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-4 col-span-1"
+                        >
+                          <input
+                            v-model="right_cataract"
+                            type="checkbox"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                      </div>
+
+                      <div class="relative mr-1 left-2 top-4 col-span-2">
+                        <select
+                          data-te-select-init
+                          v-model="skin_color"
+                          class="bg-neutral-50"
+                        >
+                          <option selected value="2">Skin Color</option>
+                          <option value="normal">Normal</option>
+                          <option value="cyanotic">Cyanotic</option>
+                          <option value="pale">Pale</option>
+                          <option value="flushed">Flushed</option>
+                          <option value="jaundice">Jaundice</option>
+                        </select>
+                      </div>
+
+                      <div class="relative mr-2 left-3 top-4 col-span-1">
+                        <select
+                          data-te-select-init
+                          v-model="eyes"
+                          class="bg-neutral-50"
+                        >
+                          <option selected value="2">Eyes</option>
+                          <option value="spontaneous">4 - Spontaneous</option>
+                          <option value="verbal">3 - Verbal</option>
+                          <option value="pain">2 - Pain</option>
+                          <option value="none">1 - None</option>
+                        </select>
+                      </div>
+
+                      <div class="relative mr-2 left-3 top-4 col-span-2">
+                        <select
+                          data-te-select-init
+                          v-model="verbal"
+                          class="bg-neutral-50"
+                        >
+                          <option selected value="2"> Verbal</option>
+                          <option value="oriented">5 - Oriented</option>
+                          <option value="confused">4 - Confused</option>
+                          <option value="inappropriate word">3 - Inappropriate words</option>
+                          <option value="incomprehensible sounds">2 - Incomprehensible sounds</option>
+                          <option value="none">1 - None</option>
+                        </select>
+                      </div>
+
+                      <div class="relative mr-2 left-3 top-4 col-span-2 place-content-start">
+                        <select
+                          data-te-select-init
+                          v-model="motor"
+                          class="bg-neutral-50"
+                        >
+                          <option selected value="2">Motor</option>
+                          <option value="obeys command">6 - Obeys Command</option>
+                          <option value="localize pain">5 - Localize Pain</option>
+                          <option value="withdraws to pain">4 -  Withdraws to Pain</option>
+                          <option value="abnormal flexion">3 - Abnormal Flexion </option>
+                          <option value="abnormal extension">2 - Abnormal Extension </option>
+                          <option value="none">1 - None</option>
+                        </select>
+                      </div>
+
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </li>
+
+            <!--Obstetric History-->
+            <li data-te-stepper-step-ref class="w-[4.5rem] flex-auto">
+              <div
+                data-te-stepper-head-ref
+                class="flex cursor-pointer items-center pr-2 leading-[1.3rem] no-underline before:mr-2 before:h-px before:w-full before:flex-1 before:bg-[#e0e0e0] before:content-[''] hover:bg-[#f9f9f9] focus:outline-none dark:before:bg-neutral-600 dark:after:bg-neutral-600 dark:hover:bg-[#3b3b3b]"
+              >
+                <span
+                  data-te-stepper-head-icon-ref
+                  class="my-6 mr-2 flex h-[1.938rem] w-[1.938rem] items-center justify-center rounded-full bg-[#ebedef] text-sm font-medium text-[#40464f]"
+                >
+                  4
+                </span>
+                <span
+                  data-te-stepper-head-text-ref
+                  class="text-neutral-500 after:flex after:text-[0.8rem] after:content-[data-content] dark:text-neutral-300"
+                >
+                  Obstetric...
+                </span>
+              </div>
+              <div
+                data-te-stepper-content-ref
+                class="absolute left-0 w-full translate-x-[150%] p-4 transition-all duration-500 ease-in-out"
+              >
+                <div class="relative p-4">
+                  <form>
+                    <div
+                      class="grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-4"
+                    >
+                      <div
+                        class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
+                      >
+                        <input
+                          v-model="prenatal_checkup"
+                          class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                          type="checkbox"
+                          value=""
+                          id="prenCheckup"
+                        />
+                        <label
+                          class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                          for="prenCheckup"
+                        >
+                          Prenatal Checkup
+                        </label>
+                      </div>
+
+                      <div
+                        class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
+                      >
+                        <input
+                          v-model="labor_pains"
+                          class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                          type="checkbox"
+                          value=""
+                          id="labPains"
+                        />
+                        <label
+                          class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                          for="labPains"
+                        >
+                          Labor Pains
+                        </label>
+                      </div>
+
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="last_menstrual_period"
+                          type="date"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="lastMens"
+                          aria-describedby="lastMens"
+                          placeholder="Last Menstrual Period"
+                        />
+                        <label
+                          for="lastMens"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          Last Menstrual Period
+                        </label>
+                      </div>
+
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="estimated_date_of_delivery"
+                          type="date"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="estDateDelivery"
+                          aria-describedby="estDateDelivery"
+                          placeholder="Estimated Date of Delivery"
+                        />
+                        <label
+                          for="estDateDelivery"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          Estimated Date of Delivery
+                        </label>
+                      </div>
+
+                      <!-- MISSING AGE OF GESTATION FIELD -->
+
+                      <div
+                        class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
+                      >
+                        <input
+                          v-model="gravidity"
+                          class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                          type="checkbox"
+                          value=""
+                          id="gravidity"
+                        />
+                        <label
+                          class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                          for="gravidity"
+                        >
+                          Gravidity
+                        </label>
+                      </div>
+
+                      <div
+                        class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
+                      >
+                        <input
+                          v-model="parity"
+                          class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                          type="checkbox"
+                          value=""
+                          id="parity"
+                        />
+                        <label
+                          class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                          for="parity"
+                        >
+                          Parity
+                          <div
+                            class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
+                          >
+                            <input
+                              v-model="term_of_birth"
+                              class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                              type="checkbox"
+                              value=""
+                              id="termBirth"
+                            />
+                            <label
+                              class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                              for="termBirth"
+                            >
+                              term birth
+                            </label>
+                          </div>
+
+                          <div
+                            class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
+                          >
+                            <input
+                              v-model="pre_term"
+                              class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                              type="checkbox"
+                              value=""
+                              id="preTerm"
+                            />
+                            <label
+                              class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                              for="termBirth"
+                            >
+                              pre term
+                            </label>
+                          </div>
+
+                          <div
+                            class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
+                          >
+                            <input
+                              v-model="abortion"
+                              class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                              type="checkbox"
+                              value=""
+                              id="abortion"
+                            />
+                            <label
+                              class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                              for="abortion"
+                            >
+                              abortion
+                            </label>
+                          </div>
+
+                          <div
+                            class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
+                          >
+                            <input
+                              v-model="living"
+                              class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                              type="checkbox"
+                              value=""
+                              id="living"
+                            />
+                            <label
+                              class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                              for="living"
+                            >
+                              living
+                            </label>
+                          </div>
+                        </label>
+                      </div>
+
+                      <div
+                        class="relative mb-1 col-span-2 row-span-2"
+                        data-te-input-wrapper-init
+                      >
+                        <textarea
+                          v-model="obs_remarks"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="remarks"
+                          aria-describedby="remarks"
+                        >
+                        </textarea>
+                        <label
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          Remarks
+                        </label>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </li>
+
+            <!--Treatment Intervention-->
+            <li data-te-stepper-step-ref class="w-[4.5rem] flex-auto">
+              <div
+                data-te-stepper-head-ref
+                class="flex cursor-pointer items-center pr-2 leading-[1.3rem] no-underline before:mr-2 before:h-px before:w-full before:flex-1 before:bg-[#e0e0e0] before:content-[''] hover:bg-[#f9f9f9] focus:outline-none dark:before:bg-neutral-600 dark:after:bg-neutral-600 dark:hover:bg-[#3b3b3b]"
+              >
+                <span
+                  data-te-stepper-head-icon-ref
+                  class="my-6 mr-2 flex h-[1.938rem] w-[1.938rem] items-center justify-center rounded-full bg-[#ebedef] text-sm font-medium text-[#40464f]"
+                >
+                  5
+                </span>
+                <span
+                  data-te-stepper-head-text-ref
+                  class="text-neutral-500 after:flex after:text-[0.8rem] after:content-[data-content] dark:text-neutral-300"
+                >
+                  Treatment...
+                </span>
+              </div>
+              <div
+                data-te-stepper-content-ref
+                class="absolute left-0 w-full translate-x-[150%] p-4 transition-all duration-500 ease-in-out"
+              >
+                <div class="relative p-4">
+                  <form>
+                    <h4 class="mb-3 font-bold">O2 Given Via:</h4>
+                    <div
+                      class="grid grid-col-5 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-4"
+                    >
+                      <div
+                        class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
+                      >
+                        <input
+                          v-model="nasal"
+                          class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                          type="checkbox"
+                          value=""
+                          id="nasal"
+                        />
+                        <label
+                          class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                          for="nasal"
+                        >
+                          Nasal
+                        </label>
+                      </div>
+
+                      <div
+                        class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
+                      >
+                        <input
+                          v-model="o2_mask"
+                          class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                          type="checkbox"
+                          value=""
+                          id="o2mask"
+                        />
+                        <label
+                          class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                          for="o2mask"
+                        >
+                          O2 Mask
+                        </label>
+                      </div>
+
+                      <div
+                        class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
+                      >
+                        <input
+                          v-model="bvm"
+                          class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                          type="checkbox"
+                          value=""
+                          id="bvm"
+                        />
+                        <label
+                          class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                          for="bvm"
+                        >
+                          BVM at
+                        </label>
+                      </div>
+
+                      <div
+                        class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
+                      >
+                        <input
+                          v-model="lpm"
+                          class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                          type="checkbox"
+                          value=""
+                          id="lpm"
+                        />
+                        <label
+                          class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                          for="lpm"
+                        >
+                          LPM
+                        </label>
+                      </div>
+
+                      <div class="grid grid-rows-6">
+                        <div
+                          class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
+                        >
+                          <input
+                            v-model="wound_care"
+                            class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                            type="checkbox"
+                            value=""
+                            id="woundCare"
+                          />
+                          <label
+                            class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                            for="woundCare"
+                          >
+                            Wound Care
+                          </label>
+                        </div>
+
+                        <div
+                          class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
+                        >
+                          <input
+                            v-model="splinting_applied"
+                            class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                            type="checkbox"
+                            value=""
+                            id="splintingApplied"
+                          />
+                          <label
+                            class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                            for="splintingApplied"
+                          >
+                            Splinting Applied
+                          </label>
+                        </div>
+
+                        <div
+                          class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
+                        >
+                          <input
+                            v-model="control_bleeding"
+                            class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                            type="checkbox"
+                            value=""
+                            id="contBleeding"
+                          />
+                          <label
+                            class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                            for="contBleeding"
+                          >
+                            Control Bleeding
+                          </label>
+                        </div>
+
+                        <div
+                          class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
+                        >
+                          <input
+                            v-model="vital_sign_taken"
+                            class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                            type="checkbox"
+                            value=""
+                            id="vitRecorded"
+                          />
+                          <label
+                            class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                            for="vitRecorded"
+                          >
+                            Vital Sign Taken and Recorded
+                          </label>
+                        </div>
+
+                        <div
+                          class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
+                        >
+                          <input
+                            v-model="applied_cpr"
+                            class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                            type="checkbox"
+                            value=""
+                            id="appCpr"
+                          />
+                          <label
+                            class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                            for="appCpr"
+                          >
+                            Applied CPR
+                          </label>
+                        </div>
+
+                        <div
+                          class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
+                        >
+                          <input
+                            v-model="applied_aed"
+                            class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                            type="checkbox"
+                            value=""
+                            id="appAed"
+                          />
+                          <label
+                            class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                            for="appAed"
+                          >
+                            Applied AED
+                          </label>
+                        </div>
+                      </div>
+                      <div />
+
+                      <div
+                        class="relative mb-1 col-span-2 row-span-2"
+                        data-te-input-wrapper-init
+                      >
+                        <textarea
+                          v-model="problems"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="problems"
+                          aria-describedby="problems"
+                        >
+                        </textarea>
+                        <label
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          Problems
+                        </label>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </li>
+
+            <!--Signature-->
+            <li data-te-stepper-step-ref class="w-[4.5rem] flex-auto">
+              <div
+                data-te-stepper-head-ref
+                class="flex cursor-pointer items-center pr-2 leading-[1.3rem] no-underline before:mr-2 before:h-px before:w-full before:flex-1 before:bg-[#e0e0e0] before:content-[''] hover:bg-[#f9f9f9] focus:outline-none dark:before:bg-neutral-600 dark:after:bg-neutral-600 dark:hover:bg-[#3b3b3b]"
+              >
+                <span
+                  data-te-stepper-head-icon-ref
+                  class="my-6 mr-2 flex h-[1.938rem] w-[1.938rem] items-center justify-center rounded-full bg-[#ebedef] text-sm font-medium text-[#40464f]"
+                >
+                  6
+                </span>
+                <span
+                  data-te-stepper-head-text-ref
+                  class="text-neutral-500 after:flex after:text-[0.8rem] after:content-[data-content] dark:text-neutral-300"
+                >
+                  Signature
+                </span>
+              </div>
+              <div
+                data-te-stepper-content-ref
+                class="absolute left-0 w-full translate-x-[150%] p-4 transition-all duration-500 ease-in-out"
+              >
+              <div class="relative mb-1" data-te-input-wrapper-init>
+                    <input
+                      v-model="received_by"
+                      type="text"
+                      class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                      id="receivedBy"
+                      aria-describedby="receivedBy"
+                      placeholder="Received By"
+                    />
+                    <label
+                      for="receivedBy"
+                      class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                    >
+                      Received By
+                    </label>
+                  </div>
+                  <div class="relative mb-3" data-te-input-wrapper-init>
+                    <textarea
+                      v-model="received_by_signature"
+                      class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                      rows="4"
+                    />
+                    <label
+                      class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                      >Signature Here
+                    </label>
+                  </div>
+
+                  <h4 class="mb-3 mt-7 font-bold">R.A. 8344 REFUSAL TO ADMIT</h4>
+
+                  <div class="relative mb-1" data-te-input-wrapper-init>
+                    <input
+                      v-model="medical_facility"
+                      type="text"
+                      class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                      id="medFac"
+                      aria-describedby="medicalFacility"
+                      placeholder="Medical Facility"
+                    />
+                    <label
+                      for="medFac"
+                      class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                    >
+                      Medical Facility
+                    </label>
+                  </div>
+
+                  <div class="relative mb-3" data-te-input-wrapper-init>
+                    <textarea
+                      v-model="medical_facility_signature"
+                      class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                      rows="4"
+                    />
+                    <label
+                      class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                      >Signature Here
+                    </label>
+                  </div>
+
+
+                  <h4 class="mb-3 mt-7 font-bold">SUPPLIES USED</h4>
+                  <div class="grid grid-cols-8 space-x-2">
+                      <div class="relative mb-3 col-span-1" data-te-input-wrapper-init>
+                      <input
+                        v-model="gloves"
+                        type="number"
+                        class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        id="gloves"
+                        placeholder="Gloves" />
+                      <label
+                        for="gloves"
+                        class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >Gloves
+                      </label>
+                    </div>
+
+                    <div class="relative mb-3  col-span-1" data-te-input-wrapper-init>
+                      <input
+                        v-model="gauze"
+                        type="number"
+                        class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        id="gauze"
+                        placeholder="gauze"/>
+                      <label
+                        for="gauze"
+                        class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >Gauze
+                      </label>
+                    </div>
+
+                    <div class="relative mb-3  col-span-1" data-te-input-wrapper-init>
+                      <input
+                        v-model="mask"
+                        type="number"
+                        class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        id="mask"
+                        placeholder="mask"/>
+                      <label
+                        for="mask"
+                        class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >Mask
+                      </label>
+                    </div>
+
+                    <div class="relative mb-1" data-te-input-wrapper-init>
+                    <input
+                      v-model="others"
+                      type="text"
+                      class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                      id="others"
+                      aria-describedby="others"
+                      placeholder="others"
+                    />
+                    <label
+                      for="others"
+                      class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                    >
+                      Others:
+                    </label>
+                  </div>
+
+                  </div>
+
+
+                  <div class="relative mb-1" data-te-input-wrapper-init>
+                    <input
+                      v-model="team_leader"
+                      type="text"
+                      class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                      id="teamLead"
+                      aria-describedby="teamLead"
+                      placeholder="Team Leader"
+                    />
+                    <label
+                      for="teamLead"
+                      class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                    >
+                      Team Leader
+                    </label>
+                  </div>
+
+                  <div class="relative mb-3" data-te-input-wrapper-init>
+                    <textarea
+                      v-model="team_leader_signature"
+                      class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                      rows="4"
+                    />
+                    <label
+                      class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                      >Signature Here
+                    </label>
+                  </div>s
+                  <h5 class="fw-bold">Have a saved signature?</h5>
+                  <div class="mb-3">
+                    <label
+                      for="formFile"
+                      class="mb-2 inline-block text-neutral-700 dark:text-neutral-200"
+                      >Upload Your Signature Here</label
+                    >
+                    <input
+                      class="relative m-0 block w-full min-w-0 flex-auto rounded border border-solid border-neutral-300 bg-clip-padding px-3 py-[0.32rem] text-base font-normal text-neutral-700 transition duration-300 ease-in-out file:-mx-3 file:-my-[0.32rem] file:overflow-hidden file:rounded-none file:border-0 file:border-solid file:border-inherit file:bg-neutral-100 file:px-3 file:py-[0.32rem] file:text-neutral-700 file:transition file:duration-150 file:ease-in-out file:[border-inline-end-width:1px] file:[margin-inline-end:0.75rem] hover:file:bg-neutral-200 focus:border-primary focus:text-neutral-700 focus:shadow-te-primary focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:file:bg-neutral-700 dark:file:text-neutral-100 dark:focus:border-primary"
+                      type="file"
+                      id="formFile" />
+                  </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md border-t-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50 min-[0px]:rounded-none"
+        >
+          <button
+            @click="clear"
+            type="button"
+            class="ml-1 inline-block rounded border border-slate-400 bg-slate-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out hover:bg-slate-300 hover:border-slate-400 hover:bg-slate-300 focus:bg-slate-300 focus:shadow-[0_4px_9px_-4px_#3b71ca] focus:ring-0 active:bg-slate-300"
+            data-te-ripple-init
+            data-te-ripple-color="light"
+          >
+            CLEAR
+          </button>
+          <button
+            @click="register"
+            type="button"
+            class="inline-block ml-4 rounded bg-[#30AD62] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white  transition duration-150 ease-in-out hover:bg-green-700 focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+            data-te-ripple-init
+            data-te-ripple-color="light"
+          >
+            SUBMIT
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import {
+  initTE,
+  Ripple,
+  Input,
+  Stepper,
+  Datepicker,
+  Select,
+  Timepicker,
+} from "tw-elements";
+
+export default {
+  data() {
+    return {
+      patientStepperFormFields: [],
+      teams: [],
+      dispatch_date: "",
+      category: "dispatch data",
+      call_source: "",
+      call_receive: "",
+      barangay: "",
+      incident_location: "",
+      responded: "",
+      t_o: "",
+      va_location: "",
+      va_location_barangay: "",
+      arrive_at_scene: "",
+      t_l: "",
+      involved_vehicles_a: "",
+      involved_vehicles_b: "",
+      en_route_to: "",
+      tx_o: "",
+      plate_number: "",
+      arrived_at: "",
+      l_o: "",
+      driver: "",
+      pedestrian: "",
+      passenger: "",
+      departed: "",
+      station: "",
+      ems_location_a: "ems",
+      ambulance: "",
+      team_id: "1",
+      mt_from: "",
+      mt_barangay: "",
+      ems_location_b: "",
+      barangay_b: "",
+      red: "",
+      yellow: "",
+      green: "",
+      black: "",
+      remarks: "",
+      cp_age: "",
+      suffix: "",
+      first_name: "",
+      middle_name: "",
+      surname: "",
+      gender: "",
+      birthdate: "",
+      age: "",
+      status: "",
+      religion: "",
+      companion: "",
+      phone: "",
+      pnt_city: "City",
+      pnt_brgy: "",
+      pnt_st: "",
+      pnt_zip: "",
+      complaint: "",
+      onset: "",
+      allergies: "",
+      provacation: "",
+      medication: "",
+      quality: "",
+      medical_history: "",
+      radiation: "",
+      last_oral_intake: "",
+      event_leading_to_injury: "",
+      severity: "",
+      time_taken: "",
+      time_a: "",
+      time_b: "",
+      time_c: "",
+      time_d: "",
+      time_e: "",
+      bp_a: "",
+      bp_b: "",
+      bp_c: "",
+      bp_d: "",
+      bp_e: "",
+      pr_a: "",
+      pr_b: "",
+      pr_c: "",
+      pr_d: "",
+      pr_e: "",
+      rr_a: "",
+      rr_b: "",
+      rr_c: "",
+      rr_d: "",
+      rr_e: "",
+      tempt_a: "",
+      tempt_b: "",
+      tempt_c: "",
+      tempt_d: "",
+      tempt_e: "",
+      spo2_a: "",
+      spo2_b: "",
+      spo2_c: "",
+      spo2_d: "",
+      spo2_e: "",
+      right_pearl: "",
+      right_dilated: "",
+      right_constrict: "",
+      right_non_reactive: "",
+      right_cataract: "",
+      left_pearl: "",
+      left_dilated: "",
+      left_constrict: "",
+      left_non_reactive: "",
+      left_cataract: "",
+      prenatal_checkup: "",
+      labor_pains: "",
+      last_menstrual_period: "",
+      estimated_date_of_delivery: "",
+      gravidity: "",
+      parity: "",
+      term_of_birth: "",
+      pre_term: "",
+      abortion: "",
+      living: "",
+      obs_remarks: "",
+      nasal: "",
+      o2_mask: "",
+      bvm: "",
+      lpm: "",
+      wound_care: "",
+      splinting_applied: "",
+      control_bleeding: "",
+      vital_sign_taken: "",
+      applied_cpr: "",
+      applied_aed: "",
+      problems: "",
+      skin_color: "",
+      eyes: "",
+      verbal: "",
+      motor: "",
+      received_by: "",
+      received_by_signature: "",
+      medical_facility: "",
+      medical_facility_signature: "",
+      team_leader: "",
+      team_leader_signature: "",
+      gloves: "",
+      mask: "",
+      gauze: "",
+      others: "",
+    };
+  },
+  fetch() {
+    this.$axios.get("team/list").then((response) => {
+      response.data.return.map((team) =>
+        this.teams.push({ id: team.id, name: this.capitalize(team.name) })
+      );
+    });
+  },
+  mounted() {
+    initTE({ Ripple, Input, Datepicker, Select, Timepicker });
+  },
+  watch: {
+    '$store.state.editPatientStepperForm'() {
+      if (this.$store.getters['getEditPatientStepperForm']) {
+        initTE({Stepper});
+      }
+    },
+    '$store.state.editPatientStepperFormArg'() {
+      if (this.$store.getters['getEditPatientStepperFormArg'] !== undefined) {
+        const params = {
+          id: this.$store.getters['getEditPatientStepperFormArg'],
+          emrId: this.$auth.user.id
+        }
+        this.$store.dispatch('getSinglePcr', params);
+      }
+    },
+    '$store.state.editPatientStepperFormFields'() {
+      this.patientStepperFormFields = this.$store.getters['getEditPatientStepperFormFields'];
+      console.log(this.patientStepperFormFields);
+      this.call_source = this.patientStepperFormFields.call_source;
+    }
+  },
+  methods: {
+    hideModal() {
+      this.$store.commit('setEditPatientStepperForm', false);
+      this.$store.commit('setEditPatientStepperFormArg', undefined);
+    },
+    setCallReceived(){
+      const currentDate = new Date();
+      this.call_receive = currentDate.toLocaleTimeString([], {
+        hour: 'numeric',
+        minute: 'numeric'
+      });
+      console.log(this.call_receive);
+    },
+    setResponded(){
+      const currentDate = new Date();
+      this.responded = currentDate.toLocaleTimeString([], {
+        hour: 'numeric',
+        minute: 'numeric'
+      });
+    },
+    setArrivedScene(){
+      const currentDate = new Date();
+      this.arrive_at_scene = currentDate.toLocaleTimeString([], {
+        hour: 'numeric',
+        minute: 'numeric'
+      });
+    },
+    setArrivedAt(){
+      const currentDate = new Date();
+      this.arrived_at = currentDate.toLocaleTimeString([], {
+        hour: 'numeric',
+        minute: 'numeric'
+      });
+    },
+    setEnRoute(){
+      const currentDate = new Date();
+      this.en_route_to = currentDate.toLocaleTimeString([], {
+        hour: 'numeric',
+        minute: 'numeric'
+      });
+    },
+    setDeparted(){
+      const currentDate = new Date();
+      this.departed = currentDate.toLocaleTimeString([], {
+        hour: 'numeric',
+        minute: 'numeric'
+      });
+    },
+    setTimeA(){
+      const currentDate = new Date();
+      this.time_a = currentDate.toLocaleTimeString([], {
+        hour: 'numeric',
+        minute: 'numeric'
+      });
+    },
+    setTimeB(){
+      const currentDate = new Date();
+      this.time_b = currentDate.toLocaleTimeString([], {
+        hour: 'numeric',
+        minute: 'numeric'
+      });
+    },
+    setTimeC(){
+      const currentDate = new Date();
+      this.time_c = currentDate.toLocaleTimeString([], {
+        hour: 'numeric',
+        minute: 'numeric'
+      });
+    },
+    setTimeD(){
+      const currentDate = new Date();
+      this.time_d = currentDate.toLocaleTimeString([], {
+        hour: 'numeric',
+        minute: 'numeric'
+      });
+    },
+    setTimeE(){
+      const currentDate = new Date();
+      this.time_e = currentDate.toLocaleTimeString([], {
+        hour: 'numeric',
+        minute: 'numeric'
+      });
+    },
+    capitalize(word) {
+      return word.replace(/^\w/, (c) => c.toUpperCase());
+    },
+    clear() {
+      this.dispatch_date = "";
+      this.category = "";
+      this.call_source = "";
+      this.call_receive = "";
+      this.barangay = "";
+      this.incident_location = "";
+      this.responded = "";
+      this.t_o = "";
+      this.va_location = "";
+      this.va_location_barangay = "";
+      this.arrive_at_scene = "";
+      this.t_l = "";
+      this.involved_vehicles_a = "";
+      this.involved_vehicles_b = "";
+      this.en_route_to = "";
+      this.tx_o = "";
+      this.plate_number = "";
+      this.arrived_at = "";
+      this.l_o = "";
+      this.driver = "";
+      this.pedestrian = "";
+      this.passenger = "";
+      this.departed = "";
+      this.station = "";
+      this.ems_location_a = "ems";
+      this.ambulance = "";
+      this.team_id = "";
+      this.mt_from = "";
+      this.mt_barangay = "";
+      this.ems_location_b = "";
+      this.barangay_b = "";
+      this.red = "";
+      this.yellow = "";
+      this.green = "";
+      this.black = "";
+      this.cp_age = "";
+      this.remarks = "";
+      this.suffix = "";
+      this.first_name = "";
+      this.middle_name = "";
+      this.surname = "";
+      this.gender = "";
+      this.birthdate = "";
+      this.age = "";
+      this.status = "";
+      this.religion = "";
+      this.companion = "";
+      this.phone = "";
+      this.pnt_city = "City";
+      this.pnt_brgy = "";
+      this.pnt_st = "";
+      this.pnt_zip = "";
+      this.complaint = "";
+      this.onset = "";
+      this.allergies = "";
+      this.provacation = "";
+      this.medication = "";
+      this.quality = "";
+      this.medical_history = "";
+      this.radiation = "";
+      this.last_oral_intake = "";
+      this.event_leading_to_injury = "";
+      this.severity = "";
+      this.time_taken = "";
+      this.time_a = "";
+      this.time_b = "";
+      this.time_c = "";
+      this.time_d = "";
+      this.time_e = "";
+      this.bp_a = "";
+      this.bp_b = "";
+      this.bp_c = "";
+      this.bp_d = "";
+      this.bp_e = "";
+      this.pr_a = "";
+      this.pr_b = "";
+      this.pr_c = "";
+      this.pr_d = "";
+      this.pr_e = "";
+      this.rr_a = "";
+      this.rr_b = "";
+      this.rr_c = "";
+      this.rr_d = "";
+      this.rr_e = "";
+      this.tempt_a = "";
+      this.tempt_b = "";
+      this.tempt_c = "";
+      this.tempt_d = "";
+      this.tempt_e = "";
+      this.spo2_a = "";
+      this.spo2_b = "";
+      this.spo2_c = "";
+      this.spo2_d = "";
+      this.spo2_e = "";
+      this.left_pearl = "";
+      this.left_dilated = "";
+      this.left_constrict = "";
+      this.left_non_reactive = "";
+      this.left_cataract = "";
+      this.right_pearl = "";
+      this.right_dilated = "";
+      this.right_constrict = "";
+      this.right_non_reactive = "";
+      this.right_cataract = "";
+      this.skin_color = "";
+      this.eyes = "";
+      this.verbal = "";
+      this.motor = "";
+      this.prenatal_checkup = "";
+      this.labor_pains = "";
+      this.last_menstrual_period = "";
+      this.estimated_date_of_delivery = "";
+      this.gravidity = "";
+      this.parity = "";
+      this.term_of_birth = "";
+      this.pre_term = "";
+      this.abortion = "";
+      this.living = "";
+      this.obs_remarks = "";
+      this.nasal = "";
+      this.o2_mask = "";
+      this.bvm = "";
+      this.lpm = "";
+      this.wound_care = "";
+      this.splinting_applied = "";
+      this.control_bleeding = "";
+      this.vital_sign_taken = "";
+      this.applied_cpr = "";
+      this.applied_aed = "";
+      this.problems = "";
+      this.received_by = "";
+      this.received_by_signature = "";
+      this.medical_facility = "";
+      this.medical_facility_signature = "";
+      this.team_leader = "";
+      this.team_leader_signature = "";
+      this.gloves = "";
+      this.mask = "";
+      this.gauze = "";
+      this.others = "";
+    },
+    register() {
+      const params = {
+        dispatch_date: this.dispatch_date,
+        category: "completed",
+        call_source: this.call_source,
+        call_receive: this.call_receive,
+        barangay: this.barangay,
+        incident_location: this.incident_location,
+        responded: this.responded,
+        t_o: this.t_o,
+        va_location: this.va_location,
+        va_location_barangay: this.va_location_barangay,
+        arrive_at_scene: this.arrive_at_scene,
+        t_l: this.t_l,
+        involved_vehicles_a: this.involved_vehicles_a,
+        involved_vehicles_b: this.involved_vehicles_b,
+        en_route_to: this.en_route_to,
+        tx_o: this.tx_o,
+        plate_number: this.plate_number,
+        arrived_at: this.arrived_at,
+        l_o: this.l_o,
+        driver: this.driver,
+        pedestrian: this.pedestrian,
+        passenger: this.passenger,
+        departed: this.departed,
+        station: this.station,
+        ems_location_a: this.ems_location_a,
+        ems_location_b: this.ems_location_b,
+        barangay_b: this.barangay_b,
+        ambulance: this.ambulance,
+        team_id: this.team_id,
+        mt_from: this.mt_from,
+        mt_barangay: this.mt_barangay,
+        remarks: this.remarks,
+        red: this.red,
+        yellow: this.yellow,
+        green: this.green,
+        black: this.black,
+        suffix: this.suffix,
+        first_name: this.first_name,
+        middle_name: this.middle_name,
+        surname: this.surname,
+        gender: this.gender,
+        birthdate: this.birthdate,
+        age: this.age,
+        status: this.status,
+        religion: this.religion,
+        companion: this.companion,
+        phone: this.phone,
+        pnt_city: this.pnt_city,
+        pnt_brgy: this.pnt_brgy,
+        pnt_st: this.pnt_st,
+        pnt_zip: this.pnt_zip,
+        complaint: this.complaint,
+        onset: this.onset,
+        allergies: this.allergies,
+        provacation: this.provacation,
+        medication: this.medication,
+        quality: this.quality,
+        medical_history: this.medical_history,
+        radiation: this.radiation,
+        last_oral_intake: this.last_oral_intake,
+        event_leading_to_injury: this.event_leading_to_injury,
+        severity: this.severity,
+        time_taken: this.time_taken,
+        time_a: this.time_a,
+        time_b: this.time_b,
+        time_c: this.time_c,
+        time_d: this.time_d,
+        time_e: this.time_e,
+        bp_a: this.bp_a,
+        bp_b: this.bp_b,
+        bp_c: this.bp_c,
+        bp_d: this.bp_d,
+        bp_e: this.bp_e,
+        pr_a: this.pr_a,
+        pr_b: this.pr_b,
+        pr_c: this.pr_c,
+        pr_d: this.pr_d,
+        pr_e: this.pr_e,
+        rr_a: this.rr_a,
+        rr_b: this.rr_b,
+        rr_c: this.rr_c,
+        rr_d: this.rr_d,
+        rr_e: this.rr_e,
+        tempt_a: this.tempt_a,
+        tempt_b: this.tempt_b,
+        tempt_c: this.tempt_c,
+        tempt_d: this.tempt_d,
+        tempt_e: this.tempt_e,
+        spo2_a: this.spo2_a,
+        spo2_b: this.spo2_b,
+        spo2_c: this.spo2_c,
+        spo2_d: this.spo2_d,
+        spo2_e: this.spo2_e,
+        left_pearl: this.left_pearl,
+        left_dilated: this.left_dilated,
+        left_constrict: this.left_constrict,
+        left_non_reactive: this.left_non_reactive,
+        left_cataract: this.left_cataract,
+        right_pearl: this.right_pearl,
+        right_dilated: this.right_dilated,
+        right_constrict: this.right_constrict,
+        right_non_reactive: this.right_non_reactive,
+        right_cataract: this.right_cataract,
+        skin_color: this.skin_color,
+        eyes: this.eyes,
+        verbal: this.verbal,
+        motor: this.motor,
+        prenatal_checkup: this.prenatal_checkup,
+        labor_pains: this.labor_pains,
+        last_menstrual_period: this.last_menstrual_period,
+        estimated_date_of_delivery: this.estimated_date_of_delivery,
+        gravidity: this.gravidity,
+        parity: this.parity,
+        term_of_birth: this.term_of_birth,
+        pre_term: this.pre_term,
+        abortion: this.abortion,
+        living: this.living,
+        obs_remarks: this.obs_remarks,
+        nasal: this.nasal = "",
+        o2_mask: this.o2_mask = "",
+        bvm: this.bvm = "",
+        lpm: this.lpm = "",
+        wound_care: this.wound_care = "",
+        splinting_applied: this.splinting_applied = "",
+        control_bleeding: this.control_bleeding = "",
+        vital_sign_taken: this.vital_sign_taken = "",
+        applied_cpr: this.applied_cpr = "",
+        applied_aed: this.applied_aed = "",
+        problems: this.problems = "",
+        received_by: this.received_by = "",
+        received_by_signature: this.received_by_signature = "",
+        medical_facility: this.medical_facility = "",
+        medical_facility_signature: this.medical_facility_signature = "",
+        team_leader: this.team_leader = "",
+        team_leader_signature: this.team_leader_signature = "",
+        gloves: this.gloves = "",
+        mask: this.mask = "",
+        gauze: this.gauze = "",
+        others: this.others = ""
+      };
+
+      this.$axios.post("pcr/emr/register", params).then(() => {
+        this.dispatch_date = "";
+        this.category = "";
+        this.call_source = "";
+        this.call_receive = "";
+        this.barangay = "";
+        this.incident_location = "";
+        this.responded = "";
+        this.t_o = "";
+        this.va_location = "";
+        this.va_location_barangay = "";
+        this.arrive_at_scene = "";
+        this.t_l = "";
+        this.involved_vehicles_a = "";
+        this.involved_vehicles_b = "";
+        this.en_route_to = "";
+        this.tx_o = "";
+        this.plate_number = "";
+        this.arrived_at = "";
+        this.l_o = "";
+        this.driver = "";
+        this.pedestrian = "";
+        this.passenger = "";
+        this.departed = "";
+        this.station = "";
+        this.ems_location_a = "ems";
+        this.ambulance = "";
+        this.team_id = "";
+        this.mt_from = "";
+        this.mt_barangay = "";
+        this.ems_location_b = "";
+        this.barangay_b = "";
+        this.red = "";
+        this.yellow = "";
+        this.green = "";
+        this.black = "";
+        this.cp_age = "";
+        this.remarks = "";
+        this.suffix = "";
+        this.first_name = "";
+        this.middle_name = "";
+        this.surname = "";
+        this.gender = "";
+        this.birthdate = "";
+        this.age = "";
+        this.status = "";
+        this.religion = "";
+        this.companion = "";
+        this.phone = "";
+        this.pnt_city = "City";
+        this.pnt_brgy = "";
+        this.pnt_st = "";
+        this.pnt_zip = "";
+        this.complaint = "";
+        this.onset = "";
+        this.allergies = "";
+        this.provacation = "";
+        this.medication = "";
+        this.quality = "";
+        this.medical_history = "";
+        this.radiation = "";
+        this.last_oral_intake = "";
+        this.event_leading_to_injury = "";
+        this.severity = "";
+        this.time_a = "";
+        this.time_b = "";
+        this.time_c = "";
+        this.time_d = "";
+        this.time_e = "";
+        this.bp_a = "";
+        this.bp_b = "";
+        this.bp_c = "";
+        this.bp_d = "";
+        this.bp_e = "";
+        this.pr_a = "";
+        this.pr_b = "";
+        this.pr_c = "";
+        this.pr_d = "";
+        this.pr_e = "";
+        this.rr_a = "";
+        this.rr_b = "";
+        this.rr_c = "";
+        this.rr_d = "";
+        this.rr_e = "";
+        this.tempt_a = "";
+        this.tempt_b = "";
+        this.tempt_c = "";
+        this.tempt_d = "";
+        this.tempt_e = "";
+        this.spo2_a = "";
+        this.spo2_b = "";
+        this.spo2_c = "";
+        this.spo2_d = "";
+        this.spo2_e = "";
+        this.left_pearl = "";
+        this.left_dilated = "";
+        this.left_constrict = "";
+        this.left_non_reactive = "";
+        this.left_cataract = "";
+        this.right_pearl = "";
+        this.right_dilated = "";
+        this.right_constrict = "";
+        this.right_non_reactive = "";
+        this.right_cataract = "";
+        this.skin_color = "";
+        this.eyes = "";
+        this.verbal = "";
+        this.motor = "";
+        this.prenatal_checkup = "";
+        this.labor_pains = "";
+        this.last_menstrual_period = "";
+        this.estimated_date_of_delivery = "";
+        this.gravidity = "";
+        this.parity = "";
+        this.term_of_birth = "";
+        this.pre_term = "";
+        this.abortion = "";
+        this.living = "";
+        this.obs_remarks = "";
+        this.nasal = "";
+        this.o2_mask = "";
+        this.bvm = "";
+        this.lpm = "";
+        this.wound_care = "";
+        this.splinting_applied = "";
+        this.control_bleeding = "";
+        this.vital_sign_taken = "";
+        this.applied_cpr = "";
+        this.applied_aed = "";
+        this.problems = "";
+        this.received_by = "";
+        this.received_by_signature = "";
+        this.medical_facility = "";
+        this.medical_facility_signature = "";
+        this.team_leader = "";
+        this.team_leader_signature = "";
+        this.gloves = "";
+        this.mask = "";
+        this.gauze = "";
+        this.others = "";
+
+        location.reload();
+      });
+    },
+  },
+};
+</script>

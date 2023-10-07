@@ -36,16 +36,16 @@
         class="bg-white rounded shadow"
       />
     </div>
-    <PatientStepperForm />
+    <EditPatientStepperForm />
   </div>
 </template>
 
 <script>
-import PatientStepperForm from "../patient/PatientStepperForm";
-import { Dropdown, Ripple, initTE } from "tw-elements";
+import EditPatientStepperForm from "../patient/EditPatientStepperForm";
+import { Modal, Dropdown, Ripple, initTE } from "tw-elements";
 
 export default {
-  components: { Ripple, Dropdown, PatientStepperForm },
+  components: { Ripple, Modal, Dropdown, EditPatientStepperForm },
   data() {
     return {
       role: "",
@@ -229,13 +229,15 @@ export default {
     this.filteredRows = this.fetchedRows;
   },
   mounted() {
-    initTE({ Ripple, Dropdown });
+    initTE({ Ripple, Modal, Dropdown });
     this.role = this.$auth.user.role;
   },
   methods: {
     onRowClick(params) {
-      console.log('params');
-      console.log(params);
+      const editModal = new Modal(document.getElementById('editPatientFormStepper'));
+      this.$store.commit('setEditPatientStepperForm', true);
+      this.$store.commit('setEditPatientStepperFormArg', params.row.id);
+      editModal.show();
     },
   }
 };
