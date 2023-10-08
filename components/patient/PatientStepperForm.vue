@@ -151,11 +151,11 @@
                             id="emsLocationA"
                             required
                           >
-                            <option value="ems">EMS</option>
-                            <option value="fire">FIRE</option>
-                            <option value="sar">SAR</option>
-                            <option value="va">V.A</option>
-                            <option value="mt">M.T</option>
+                            <option value="ems">Emergency Medical Service</option>
+                            <option value="fire">Fire</option>
+                            <option value="sar">Search and Rescue</option>
+                            <option value="va">Vehicular Accident</option>
+                            <option value="mt">Medical Transport</option>
                           </select>
 
                           <div
