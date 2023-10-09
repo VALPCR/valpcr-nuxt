@@ -957,7 +957,7 @@ export default {
       const params = {
         dispatch_date: this.dispatch_date,
         category: "dispatch data",
-        call_source: this.category,
+        call_source: this.call_source,
         call_receive: this.call_receive,
         barangay: this.barangay,
         incident_location: this.incident_location,
