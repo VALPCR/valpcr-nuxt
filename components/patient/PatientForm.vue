@@ -980,6 +980,7 @@ export default {
         passenger: this.passenger,
         departed: this.departed,
         station: this.station,
+        ems_location_a: this.ems_location_a,
         barangay_b: this.barangay_b,
         ambulance: this.ambulance,
         team_id: this.team_id,

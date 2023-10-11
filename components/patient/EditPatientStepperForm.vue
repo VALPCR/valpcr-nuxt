@@ -612,7 +612,7 @@
                             data-te-select-init
                             class="w-full bg-neutral-50 col-span-3"
                           >
-                            <option selected value="1">Team</option>
+                            <option>Team</option>
                             <option
                               v-for="(item, index) in teams"
                               :key="index"
@@ -656,7 +656,7 @@
                       >
                         <textarea
                           v-model="remarks"
-                          class="`peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                           id="remarks"
                           aria-describedby="remarks"
                         >
@@ -2713,7 +2713,44 @@ export default {
     '$store.state.editPatientStepperFormFields'() {
       this.patientStepperFormFields = this.$store.getters['getEditPatientStepperFormFields'];
       console.log(this.patientStepperFormFields);
+      this.ambulance = this.patientStepperFormFields.ambulance;
+      this.arrive_at_scene = this.patientStepperFormFields.arrive_at_scene;
+      this.arrived_at = this.patientStepperFormFields.arrived_at;
+      this.barangay = this.patientStepperFormFields.barangay;
+      this.barangay_b = this.patientStepperFormFields.barangay_b;
+      this.black = this.patientStepperFormFields.black === 1 ? 'black' : '';
+      this.call_receive = this.patientStepperFormFields.call_receive;
       this.call_source = this.patientStepperFormFields.call_source;
+      this.category = this.patientStepperFormFields.category;
+      this.created_at = this.patientStepperFormFields.created_at;
+      this.departed = this.patientStepperFormFields.departed;
+      this.dispatch_date = this.patientStepperFormFields.dispatch_date;
+      this.driver = this.patientStepperFormFields.driver;
+      this.ems_location_a = this.patientStepperFormFields.ems_location_a;
+      this.ems_location_b = this.patientStepperFormFields.ems_location_b;
+      this.en_route_to = this.patientStepperFormFields.en_route_to;
+      this.green = this.patientStepperFormFields.green === 1 ? 'green' : '';
+      this.incident_location = this.patientStepperFormFields.incident_location;
+      this.involved_vehicles_a = this.patientStepperFormFields.involved_vehicles_a;
+      this.involved_vehicles_b = this.patientStepperFormFields.involved_vehicles_b;
+      this.l_o = this.patientStepperFormFields.l_o;
+      this.mt_barangay = this.patientStepperFormFields.mt_barangay;
+      this.mt_from = this.patientStepperFormFields.mt_from;
+      this.passenger = this.patientStepperFormFields.passenger;
+      this.pedestrian = this.patientStepperFormFields.pedestrian;
+      this.plate_number = this.patientStepperFormFields.plate_number;
+      this.red = this.patientStepperFormFields.red === 1 ? 'red' : '';
+      this.remarks = this.patientStepperFormFields.remarks;
+      this.responded = this.patientStepperFormFields.responded;
+      this.station = this.patientStepperFormFields.station
+      this.t_l = this.patientStepperFormFields.t_l;
+      this.t_o = this.patientStepperFormFields.t_o;
+      this.team_id = this.patientStepperFormFields.team_id;
+      this.tx_o = this.patientStepperFormFields.tx_o;
+      this.qr_code = this.patientStepperFormFields.qr_code;
+      this.va_location = this.patientStepperFormFields.va_location;
+      this.va_location_barangay = this.patientStepperFormFields.va_location_barangay;
+      this.yellow = this.patientStepperFormFields.yellow === 1 ? 'yellow' : '';
     }
   },
   methods: {
