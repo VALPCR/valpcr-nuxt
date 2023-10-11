@@ -2719,96 +2719,53 @@ export default {
     },
   },
   methods: {
-    // setAge() {
-    //   const birthYear = this.birthdate.slice(0, 4);
-    //   const currentYear = new Date().getFullYear();
-    // },
     hideModal() {
       this.$store.commit('setAddPatientStepperForm', false);
     },
-    setCallReceived(){
+    formattedDateTime() {
       const currentDate = new Date();
-      this.call_receive = currentDate.toLocaleTimeString([], {
+      return currentDate.toLocaleTimeString([], {
         hour: 'numeric',
         minute: 'numeric'
       });
-      console.log(this.call_receive);
+    },
+    setCallReceived(){
+      this.call_receive = this.formattedDateTime();
     },
     setResponded(){
-      const currentDate = new Date();
-      this.responded = currentDate.toLocaleTimeString([], {
-        hour: 'numeric',
-        minute: 'numeric'
-      });
+      this.responded = this.formattedDateTime();
     },
     setArrivedScene(){
-      const currentDate = new Date();
-      this.arrive_at_scene = currentDate.toLocaleTimeString([], {
-        hour: 'numeric',
-        minute: 'numeric'
-      });
+      this.arrive_at_scene = this.formattedDateTime();
     },
     setArrivedAt(){
-      const currentDate = new Date();
-      this.arrived_at = currentDate.toLocaleTimeString([], {
-        hour: 'numeric',
-        minute: 'numeric'
-      });
+      this.arrived_at = this.formattedDateTime();
     },
     setEnRoute(){
-      const currentDate = new Date();
-      this.en_route_to = currentDate.toLocaleTimeString([], {
-        hour: 'numeric',
-        minute: 'numeric'
-      });
+      this.en_route_to = this.formattedDateTime();
     },
     setDeparted(){
-      const currentDate = new Date();
-      this.departed = currentDate.toLocaleTimeString([], {
-        hour: 'numeric',
-        minute: 'numeric'
-      });
+      this.departed = this.formattedDateTime();
     },
     setTimeA(){
-      const currentDate = new Date();
-      this.time_a = currentDate.toLocaleTimeString([], {
-        hour: 'numeric',
-        minute: 'numeric'
-      });
+      this.time_a = this.formattedDateTime();
     },
     setTimeB(){
-      const currentDate = new Date();
-      this.time_b = currentDate.toLocaleTimeString([], {
-        hour: 'numeric',
-        minute: 'numeric'
-      });
+      this.time_b = this.formattedDateTime();
     },
     setTimeC(){
-      const currentDate = new Date();
-      this.time_c = currentDate.toLocaleTimeString([], {
-        hour: 'numeric',
-        minute: 'numeric'
-      });
+      this.time_c = this.formattedDateTime();
     },
     setTimeD(){
-      const currentDate = new Date();
-      this.time_d = currentDate.toLocaleTimeString([], {
-        hour: 'numeric',
-        minute: 'numeric'
-      });
+      this.time_d = this.formattedDateTime();
     },
     setTimeE(){
-      const currentDate = new Date();
-      this.time_e = currentDate.toLocaleTimeString([], {
-        hour: 'numeric',
-        minute: 'numeric'
-      });
+      this.time_e = this.formattedDateTime();
     },
     capitalize(word) {
       return word.replace(/^\w/, (c) => c.toUpperCase());
     },
     clear() {
-      // this.dispatch_date = "";
       this.category = "";
       this.call_source = "";
       this.call_receive = "";
