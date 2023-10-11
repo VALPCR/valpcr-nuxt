@@ -531,7 +531,6 @@
                         <div class="grid grid-cols-4 gap-x-1">
                           <select
                             v-model="ems_location_a"
-                            data-te-select-init
                             class="bg-neutral-50 mb-1"
                             id="emsLocationA"
                             required

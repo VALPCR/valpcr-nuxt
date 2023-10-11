@@ -2547,7 +2547,7 @@ import {
 
 export default {
   mounted() {
-    initTE({ Ripple, Modal, Input, Stepper, Datepicker, Select, Timepicker });
+    initTE({ Ripple, Modal, Input, Datepicker, Select, Timepicker });
 
      // Function to update the date field
      function updateDateField() {
@@ -2714,7 +2714,13 @@ export default {
       );
     });
   },
-
+  watch: {
+    '$store.state.addPatientStepperForm'() {
+      if (this.$store.getters['getAddPatientStepperForm']) {
+        initTE({Stepper});
+      }
+    },
+  },
   methods: {
     // setAge() {
     //   const birthYear = this.birthdate.slice(0, 4);

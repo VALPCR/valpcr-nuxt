@@ -1,4 +1,5 @@
 export const state = () => ({
+  addPatientStepperForm: false,
   editPatientStepperForm: false,
   editPatientStepperFormFields: [],
   editPatientStepperFormArg: undefined,
@@ -6,6 +7,9 @@ export const state = () => ({
 
 
 export const getters = {
+  getAddPatientStepperForm(state) {
+    return state.addPatientStepperForm;
+  },
   getEditPatientStepperForm(state) {
     return state.editPatientStepperForm;
   },
@@ -18,6 +22,9 @@ export const getters = {
 };
 
 export const mutations = {
+  setAddPatientStepperForm(state, value) {
+    state.addPatientStepperForm = value;
+  },
   setEditPatientStepperForm(state, value) {
     state.editPatientStepperForm = value;
   },
