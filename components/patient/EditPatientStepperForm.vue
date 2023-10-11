@@ -2763,7 +2763,6 @@ export default {
         hour: 'numeric',
         minute: 'numeric'
       });
-      console.log(this.call_receive);
     },
     setResponded(){
       const currentDate = new Date();

@@ -1,6 +1,8 @@
 <template>
   <div
     data-te-modal-init
+    data-te-backdrop="static"
+    data-te-keyboard="false"
     class="fixed left-0 top-20 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
     id="patientFormStepper"
     tabindex="-1"
@@ -30,6 +32,7 @@
             class="box-content rounded-none border-none hover:no-underline hover:opacity-75 focus:opacity-100 focus:shadow-none focus:outline-none"
             data-te-modal-dismiss
             aria-label="Close"
+            @click="hideModal"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -2354,10 +2357,8 @@
                     <textarea
                       v-model="received_by_signature"
                       class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                      id="exampleFormControlTextarea1"
                       rows="4"></textarea>
                     <label
-                      for="exampleFormControlTextarea1"
                       class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                       >Signature Here
                     </label>
@@ -2370,7 +2371,7 @@
                       v-model="medical_facility"
                       type="text"
                       class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                      id="receivedBy"
+                      id="medFac"
                       aria-describedby="receivedBy"
                       placeholder="Medical Facility"
                     />
@@ -2386,10 +2387,8 @@
                     <textarea
                       v-model="medical_facility_signature"
                       class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                      id="exampleFormControlTextarea1"
                       rows="4"></textarea>
                     <label
-                      for="exampleFormControlTextarea1"
                       class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                       >Signature Here
                     </label>
@@ -2481,10 +2480,8 @@
                     <textarea
                       v-model="team_leader_signature"
                       class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                      id="exampleFormControlTextarea1"
                       rows="4"></textarea>
                     <label
-                      for="exampleFormControlTextarea1"
                       class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                       >Signature Here
                     </label>
@@ -2726,6 +2723,9 @@ export default {
     //   const birthYear = this.birthdate.slice(0, 4);
     //   const currentYear = new Date().getFullYear();
     // },
+    hideModal() {
+      this.$store.commit('setAddPatientStepperForm', false);
+    },
     setCallReceived(){
       const currentDate = new Date();
       this.call_receive = currentDate.toLocaleTimeString([], {
