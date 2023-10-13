@@ -2512,13 +2512,13 @@
             CLEAR
           </button>
           <button
-            @click="register"
+            @click="update"
             type="button"
             class="inline-block ml-4 rounded bg-[#30AD62] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white  transition duration-150 ease-in-out hover:bg-green-700 focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
             data-te-ripple-init
             data-te-ripple-color="light"
           >
-            SUBMIT
+            UPDATE
           </button>
         </div>
       </div>
@@ -2542,6 +2542,7 @@ export default {
     return {
       patientStepperFormFields: [],
       teams: [],
+      id: "",
       dispatch_date: "",
       category: "dispatch data",
       call_source: "",
@@ -2712,6 +2713,7 @@ export default {
     '$store.state.editPatientStepperFormFields'() {
       this.patientStepperFormFields = this.$store.getters['getEditPatientStepperFormFields'];
       console.log(this.patientStepperFormFields);
+      this.id = this.patientStepperFormFields.id;
       this.ambulance = this.patientStepperFormFields.ambulance;
       this.arrive_at_scene = this.patientStepperFormFields.arrive_at_scene;
       this.arrived_at = this.patientStepperFormFields.arrived_at;
@@ -2942,8 +2944,9 @@ export default {
       this.gauze = "";
       this.others = "";
     },
-    register() {
+    update() {
       const params = {
+        id: this.id,
         dispatch_date: this.dispatch_date,
         category: "completed",
         call_source: this.call_source,
@@ -3085,7 +3088,8 @@ export default {
         others: this.others = ""
       };
 
-      this.$axios.post("pcr/emr/register", params).then(() => {
+      this.$axios.post("pcr/emr/update", params).then(() => {
+        this.id = "";
         this.dispatch_date = "";
         this.category = "";
         this.call_source = "";
@@ -3225,7 +3229,6 @@ export default {
         this.mask = "";
         this.gauze = "";
         this.others = "";
-
         location.reload();
       });
     },
