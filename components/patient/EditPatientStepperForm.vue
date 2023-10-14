@@ -963,7 +963,7 @@
                           class="peer block min-h-[auto] w-full pl-10 rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                           pattern="[0-9]*"
                           inputmode="numeric"
-                          maxlength="9"
+                          maxlength="10"
                           required
                         />
                       </div>
@@ -2472,7 +2472,7 @@
                       class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                       >Signature Here
                     </label>
-                  </div>s
+                  </div>
                   <h5 class="fw-bold">Have a saved signature?</h5>
                   <div class="mb-3">
                     <label
@@ -2699,8 +2699,6 @@ export default {
     },
     '$store.state.editPatientStepperFormFields'() {
       this.patientStepperFormFields = this.$store.getters['getEditPatientStepperFormFields'];
-      console.log(this.patientStepperFormFields);
-
       this.id = this.patientStepperFormFields.id;
       this.ambulance = this.patientStepperFormFields.ambulance;
       this.arrive_at_scene = this.patientStepperFormFields.arrive_at_scene;
@@ -3147,27 +3145,27 @@ export default {
         abortion: this.abortion,
         living: this.living,
         obs_remarks: this.obs_remarks,
-        nasal: this.nasal = "",
-        o2_mask: this.o2_mask = "",
-        bvm: this.bvm = "",
-        lpm: this.lpm = "",
-        wound_care: this.wound_care = "",
-        splinting_applied: this.splinting_applied = "",
-        control_bleeding: this.control_bleeding = "",
-        vital_sign_taken: this.vital_sign_taken = "",
-        applied_cpr: this.applied_cpr = "",
-        applied_aed: this.applied_aed = "",
-        problems: this.problems = "",
-        received_by: this.received_by = "",
-        received_by_signature: this.received_by_signature = "",
-        medical_facility: this.medical_facility = "",
-        medical_facility_signature: this.medical_facility_signature = "",
-        team_leader: this.team_leader = "",
-        team_leader_signature: this.team_leader_signature = "",
-        gloves: this.gloves = "",
-        mask: this.mask = "",
-        gauze: this.gauze = "",
-        others: this.others = ""
+        nasal: this.nasal,
+        o2_mask: this.o2_mask,
+        bvm: this.bvm,
+        lpm: this.lpm,
+        wound_care: this.wound_care,
+        splinting_applied: this.splinting_applied,
+        control_bleeding: this.control_bleeding,
+        vital_sign_taken: this.vital_sign_taken,
+        applied_cpr: this.applied_cpr,
+        applied_aed: this.applied_aed,
+        problems: this.problems,
+        received_by: this.received_by,
+        received_by_signature: this.received_by_signature,
+        medical_facility: this.medical_facility,
+        medical_facility_signature: this.medical_facility_signature,
+        team_leader: this.team_leader,
+        team_leader_signature: this.team_leader_signature,
+        gloves: this.gloves,
+        mask: this.mask,
+        gauze: this.gauze,
+        others: this.others,
       };
 
       this.$axios.post("pcr/emr/update", params).then(() => {
