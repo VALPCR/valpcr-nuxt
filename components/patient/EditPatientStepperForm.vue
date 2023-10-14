@@ -845,7 +845,6 @@
                       <!-- END NAME -->
                       <!-- GENDER -->
                       <select
-                        data-te-select-init
                         class="w-full bg-neutral-50"
                         v-model="gender"
                       >
@@ -894,7 +893,6 @@
 
                       <div>
                         <select
-                          data-te-select-init
                           v-model="status"
                           class="bg-neutral-50"
                         >
@@ -911,7 +909,6 @@
 
                       <div class="col-span-2">
                         <select
-                          data-te-select-init
                           v-model="religion"
                           class="bg-neutral-50"
                         >
@@ -973,7 +970,6 @@
 
                       <!-- ADDRESS -->
                       <select
-                          data-te-select-init
                           class="bg-neutral-50"
                           v-model="pnt_city"
                           >
@@ -985,7 +981,6 @@
 
                       <div>
                         <select
-                          data-te-select-init
                           class="bg-neutral-50"
                           v-model="pnt_brgy"
                         >
@@ -1265,7 +1260,6 @@
                       <!-- EVENTS LEADING TO INJURY -->
                       <div class="col-span-2">
                         <select
-                          data-te-select-init
                           class="w-full bg-neutral-50 text-gray"
                           v-model="severity"
                         >
@@ -1779,7 +1773,6 @@
 
                       <div class="relative mr-1 left-2 top-4 col-span-2">
                         <select
-                          data-te-select-init
                           v-model="skin_color"
                           class="bg-neutral-50"
                         >
@@ -1794,7 +1787,6 @@
 
                       <div class="relative mr-2 left-3 top-4 col-span-1">
                         <select
-                          data-te-select-init
                           v-model="eyes"
                           class="bg-neutral-50"
                         >
@@ -1808,7 +1800,6 @@
 
                       <div class="relative mr-2 left-3 top-4 col-span-2">
                         <select
-                          data-te-select-init
                           v-model="verbal"
                           class="bg-neutral-50"
                         >
@@ -1823,7 +1814,6 @@
 
                       <div class="relative mr-2 left-3 top-4 col-span-2 place-content-start">
                         <select
-                          data-te-select-init
                           v-model="motor"
                           class="bg-neutral-50"
                         >
@@ -2774,6 +2764,82 @@ export default {
       this.event_leading_to_injury = this.patientStepperFormFields.patient_data.event_leading_to_injury;
       this.severity = this.patientStepperFormFields.patient_data.severity;
       this.time_taken = this.patientStepperFormFields.patient_data.time_taken;
+      this.time_a = this.patientStepperFormFields.pcr_vital.time_a;
+      this.time_b = this.patientStepperFormFields.pcr_vital.time_b;
+      this.time_c = this.patientStepperFormFields.pcr_vital.time_c;
+      this.time_d = this.patientStepperFormFields.pcr_vital.time_d;
+      this.time_e = this.patientStepperFormFields.pcr_vital.time_e;
+      this.bp_a = this.patientStepperFormFields.pcr_vital.bp_a;
+      this.bp_b = this.patientStepperFormFields.pcr_vital.bp_b;
+      this.bp_c = this.patientStepperFormFields.pcr_vital.bp_c;
+      this.bp_d = this.patientStepperFormFields.pcr_vital.bp_d;
+      this.bp_e = this.patientStepperFormFields.pcr_vital.bp_e;
+      this.pr_a = this.patientStepperFormFields.pcr_vital.pr_a;
+      this.pr_b = this.patientStepperFormFields.pcr_vital.pr_b;
+      this.pr_c = this.patientStepperFormFields.pcr_vital.pr_c;
+      this.pr_d = this.patientStepperFormFields.pcr_vital.pr_d;
+      this.pr_e = this.patientStepperFormFields.pcr_vital.pr_e;
+      this.rr_a = this.patientStepperFormFields.pcr_vital.rr_a;
+      this.rr_b = this.patientStepperFormFields.pcr_vital.rr_b;
+      this.rr_c = this.patientStepperFormFields.pcr_vital.rr_c;
+      this.rr_d = this.patientStepperFormFields.pcr_vital.rr_d;
+      this.rr_e = this.patientStepperFormFields.pcr_vital.rr_e;
+      this.tempt_a = this.patientStepperFormFields.pcr_vital.tempt_a;
+      this.tempt_b = this.patientStepperFormFields.pcr_vital.tempt_b;
+      this.tempt_c = this.patientStepperFormFields.pcr_vital.tempt_c;
+      this.tempt_d = this.patientStepperFormFields.pcr_vital.tempt_d;
+      this.tempt_e = this.patientStepperFormFields.pcr_vital.tempt_e;
+      this.spo2_a = this.patientStepperFormFields.pcr_vital.spo2_a;
+      this.spo2_b = this.patientStepperFormFields.pcr_vital.spo2_b;
+      this.spo2_c = this.patientStepperFormFields.pcr_vital.spo2_c;
+      this.spo2_d = this.patientStepperFormFields.pcr_vital.spo2_d;
+      this.spo2_e = this.patientStepperFormFields.pcr_vital.spo2_e;
+      this.skin_color = this.patientStepperFormFields.pcr_vital.skin_color;
+      this.eyes = this.patientStepperFormFields.pcr_vital.eyes;
+      this.verbal = this.patientStepperFormFields.pcr_vital.verbal;
+      this.motor = this.patientStepperFormFields.pcr_vital.motor;
+      this.left_pearl = this.patientStepperFormFields.pcr_vital_pupils.left_pearl;
+      this.left_dilated = this.patientStepperFormFields.pcr_vital_pupils.left_dilated;
+      this.left_constrict = this.patientStepperFormFields.pcr_vital_pupils.left_constrict;
+      this.left_non_reactive = this.patientStepperFormFields.pcr_vital_pupils.left_non_reactive;
+      this.left_cataract = this.patientStepperFormFields.pcr_vital_pupils.left_cataract;
+      this.right_pearl = this.patientStepperFormFields.pcr_vital_pupils.right_pearl;
+      this.right_dilated = this.patientStepperFormFields.pcr_vital_pupils.right_dilated;
+      this.right_constrict = this.patientStepperFormFields.pcr_vital_pupils.right_constrict;
+      this.right_non_reactive = this.patientStepperFormFields.pcr_vital_pupils.right_non_reactive;
+      this.right_cataract = this.patientStepperFormFields.pcr_vital_pupils.right_cataract;
+      this.prenatal_checkup = this.patientStepperFormFields.pcr_obstetrics.prenatal_checkup;
+      this.labor_pains = this.patientStepperFormFields.pcr_obstetrics.labor_pains;
+      this.last_menstrual_period = this.patientStepperFormFields.pcr_obstetrics.last_menstrual_period;
+      this.estimated_date_of_delivery = this.patientStepperFormFields.pcr_obstetrics.estimated_date_of_delivery;
+      this.gravidity = this.patientStepperFormFields.pcr_obstetrics.gravidity;
+      this.parity = this.patientStepperFormFields.pcr_obstetrics.parity;
+      this.term_of_birth = this.patientStepperFormFields.pcr_obstetrics.term_of_birth;
+      this.pre_term = this.patientStepperFormFields.pcr_obstetrics.pre_term;
+      this.abortion = this.patientStepperFormFields.pcr_obstetrics.abortion;
+      this.living = this.patientStepperFormFields.pcr_obstetrics.living;
+      this.obs_remarks = this.patientStepperFormFields.pcr_obstetrics.remarks;
+      this.nasal = this.patientStepperFormFields.pcr_treatments.nasal;
+      this.o2_mask = this.patientStepperFormFields.pcr_treatments.o2_mask;
+      this.bvm = this.patientStepperFormFields.pcr_treatments.bvm;
+      this.lpm = this.patientStepperFormFields.pcr_treatments.lpm;
+      this.wound_care = this.patientStepperFormFields.pcr_treatments.wound_care;
+      this.splinting_applied = this.patientStepperFormFields.pcr_treatments.splinting_applied;
+      this.control_bleeding = this.patientStepperFormFields.pcr_treatments.control_bleeding;
+      this.vital_sign_taken = this.patientStepperFormFields.pcr_treatments.vital_sign_taken;
+      this.applied_cpr = this.patientStepperFormFields.pcr_treatments.applied_cpr;
+      this.applied_aed = this.patientStepperFormFields.pcr_treatments.applied_aed;
+      this.problems = this.patientStepperFormFields.pcr_treatments.problems;
+      this.received_by = this.patientStepperFormFields.pcr_signature.received_by;
+      this.received_by_signature = this.patientStepperFormFields.pcr_signature.received_by_signature;
+      this.medical_facility = this.patientStepperFormFields.pcr_signature.medical_facility;
+      this.medical_facility_signature = this.patientStepperFormFields.pcr_signature.medical_facility_signature;
+      this.team_leader = this.patientStepperFormFields.pcr_signature.team_leader;
+      this.team_leader_signature = this.patientStepperFormFields.pcr_signature.team_leader_signature;
+      this.gloves = this.patientStepperFormFields.pcr_signature.gloves;
+      this.mask = this.patientStepperFormFields.pcr_signature.mask;
+      this.gauze = this.patientStepperFormFields.pcr_signature.gauze;
+      this.others = this.patientStepperFormFields.pcr_signature.others;
     }
   },
   methods: {
