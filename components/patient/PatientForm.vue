@@ -957,7 +957,7 @@ export default {
       const params = {
         dispatch_date: this.dispatch_date,
         category: "dispatch data",
-        call_source: this.category,
+        call_source: this.call_source,
         call_receive: this.call_receive,
         barangay: this.barangay,
         incident_location: this.incident_location,
@@ -980,6 +980,7 @@ export default {
         passenger: this.passenger,
         departed: this.departed,
         station: this.station,
+        ems_location_a: this.ems_location_a,
         barangay_b: this.barangay_b,
         ambulance: this.ambulance,
         team_id: this.team_id,

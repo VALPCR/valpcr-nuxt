@@ -214,51 +214,11 @@ export default {
           arrival: "4/13/2023 9:15 AM",
           ambulance: "EMS 1",
           actions:
-            '<div class="relative" data-te-dropdown-ref>\n' +
-            "  <button\n" +
-            '    class="flex items-center whitespace-nowrap rounded bg-white px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-black shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] motion-reduce:transition-none dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"\n' +
-            '    type="button"\n' +
-            '    id="dropdownMenuButton1"\n' +
-            "    data-te-dropdown-toggle-ref\n" +
-            '    aria-expanded="false"\n' +
-            "    data-te-ripple-init\n" +
-            '    data-te-ripple-color="light">\n' +
-            "    SELECT\n" +
-            '    <span class="ml-2 w-2">\n' +
-            "      <svg\n" +
-            '        xmlns="http://www.w3.org/2000/svg"\n' +
-            '        viewBox="0 0 20 20"\n' +
-            '        fill="currentColor"\n' +
-            '        class="h-5 w-5">\n' +
-            "        <path\n" +
-            '          fill-rule="evenodd"\n' +
-            '          d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"\n' +
-            '          clip-rule="evenodd" />\n' +
-            "      </svg>\n" +
-            "    </span>\n" +
-            "  </button>\n" +
-            "  <ul\n" +
-            '    class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg dark:bg-neutral-700 [&[data-te-dropdown-show]]:block"\n' +
-            '    aria-labelledby="dropdownMenuButton1"\n' +
-            "    data-te-dropdown-menu-ref>\n" +
-            "    <li>\n" +
-            "      <a\n" +
-            '        class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"\n' +
-            '        href="#"\n' +
-            "        data-te-dropdown-item-ref\n" +
-            "        >Restore</a\n" +
-            "      >\n" +
-            "    </li>\n" +
-            "    <li>\n" +
-            "      <a\n" +
-            '        class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"\n' +
-            '        href="#"\n' +
-            "        data-te-dropdown-item-ref\n" +
-            "        >Delete</a\n" +
-            "      >\n" +
-            "    </li>\n" +
-            "  </ul>\n" +
-            "</div>",
+          '<div class="flex gap-12">' +
+            
+            '<button><svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#7d7d7d}</style><path d="M163.8 0H284.2c12.1 0 23.2 6.8 28.6 17.7L320 32h96c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 96 0 81.7 0 64S14.3 32 32 32h96l7.2-14.3C140.6 6.8 151.7 0 163.8 0zM32 128H416V448c0 35.3-28.7 64-64 64H96c-35.3 0-64-28.7-64-64V128zm192 64c-6.4 0-12.5 2.5-17 7l-80 80c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l39-39V408c0 13.3 10.7 24 24 24s24-10.7 24-24V273.9l39 39c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-80-80c-4.5-4.5-10.6-7-17-7z"/></svg></button>' + 
+
+          '</div>',
         },
         {
           id: 2,
@@ -269,51 +229,11 @@ export default {
           arrival: "4/13/2023 9:15 AM",
           ambulance: "EMS 5",
           actions:
-            '<div class="relative" data-te-dropdown-ref>\n' +
-            "  <button\n" +
-            '    class="flex items-center whitespace-nowrap rounded bg-white px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-black shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] motion-reduce:transition-none dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"\n' +
-            '    type="button"\n' +
-            '    id="dropdownMenuButton1"\n' +
-            "    data-te-dropdown-toggle-ref\n" +
-            '    aria-expanded="false"\n' +
-            "    data-te-ripple-init\n" +
-            '    data-te-ripple-color="light">\n' +
-            "    SELECT\n" +
-            '    <span class="ml-2 w-2">\n' +
-            "      <svg\n" +
-            '        xmlns="http://www.w3.org/2000/svg"\n' +
-            '        viewBox="0 0 20 20"\n' +
-            '        fill="currentColor"\n' +
-            '        class="h-5 w-5">\n' +
-            "        <path\n" +
-            '          fill-rule="evenodd"\n' +
-            '          d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"\n' +
-            '          clip-rule="evenodd" />\n' +
-            "      </svg>\n" +
-            "    </span>\n" +
-            "  </button>\n" +
-            "  <ul\n" +
-            '    class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg dark:bg-neutral-700 [&[data-te-dropdown-show]]:block"\n' +
-            '    aria-labelledby="dropdownMenuButton1"\n' +
-            "    data-te-dropdown-menu-ref>\n" +
-            "    <li>\n" +
-            "      <a\n" +
-            '        class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"\n' +
-            '        href="#"\n' +
-            "        data-te-dropdown-item-ref\n" +
-            "        >Restore</a\n" +
-            "      >\n" +
-            "    </li>\n" +
-            "    <li>\n" +
-            "      <a\n" +
-            '        class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"\n' +
-            '        href="#"\n' +
-            "        data-te-dropdown-item-ref\n" +
-            "        >Delete</a\n" +
-            "      >\n" +
-            "    </li>\n" +
-            "  </ul>\n" +
-            "</div>",
+          '<div class="flex gap-12">' +
+            
+            '<button><svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#7d7d7d}</style><path d="M163.8 0H284.2c12.1 0 23.2 6.8 28.6 17.7L320 32h96c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 96 0 81.7 0 64S14.3 32 32 32h96l7.2-14.3C140.6 6.8 151.7 0 163.8 0zM32 128H416V448c0 35.3-28.7 64-64 64H96c-35.3 0-64-28.7-64-64V128zm192 64c-6.4 0-12.5 2.5-17 7l-80 80c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l39-39V408c0 13.3 10.7 24 24 24s24-10.7 24-24V273.9l39 39c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-80-80c-4.5-4.5-10.6-7-17-7z"/></svg></button>' + 
+
+          '</div>',
         },
         {
           id: 3,
@@ -324,51 +244,11 @@ export default {
           arrival: "4/13/2023 9:15 AM",
           ambulance: "EMS 3",
           actions:
-            '<div class="relative" data-te-dropdown-ref>\n' +
-            "  <button\n" +
-            '    class="flex items-center whitespace-nowrap rounded bg-white px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-black shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] motion-reduce:transition-none dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"\n' +
-            '    type="button"\n' +
-            '    id="dropdownMenuButton1"\n' +
-            "    data-te-dropdown-toggle-ref\n" +
-            '    aria-expanded="false"\n' +
-            "    data-te-ripple-init\n" +
-            '    data-te-ripple-color="light">\n' +
-            "    SELECT\n" +
-            '    <span class="ml-2 w-2">\n' +
-            "      <svg\n" +
-            '        xmlns="http://www.w3.org/2000/svg"\n' +
-            '        viewBox="0 0 20 20"\n' +
-            '        fill="currentColor"\n' +
-            '        class="h-5 w-5">\n' +
-            "        <path\n" +
-            '          fill-rule="evenodd"\n' +
-            '          d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"\n' +
-            '          clip-rule="evenodd" />\n' +
-            "      </svg>\n" +
-            "    </span>\n" +
-            "  </button>\n" +
-            "  <ul\n" +
-            '    class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg dark:bg-neutral-700 [&[data-te-dropdown-show]]:block"\n' +
-            '    aria-labelledby="dropdownMenuButton1"\n' +
-            "    data-te-dropdown-menu-ref>\n" +
-            "    <li>\n" +
-            "      <a\n" +
-            '        class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"\n' +
-            '        href="#"\n' +
-            "        data-te-dropdown-item-ref\n" +
-            "        >Restore</a\n" +
-            "      >\n" +
-            "    </li>\n" +
-            "    <li>\n" +
-            "      <a\n" +
-            '        class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"\n' +
-            '        href="#"\n' +
-            "        data-te-dropdown-item-ref\n" +
-            "        >Delete</a\n" +
-            "      >\n" +
-            "    </li>\n" +
-            "  </ul>\n" +
-            "</div>",
+          '<div class="flex gap-12">' +
+            
+            '<button><svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#7d7d7d}</style><path d="M163.8 0H284.2c12.1 0 23.2 6.8 28.6 17.7L320 32h96c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 96 0 81.7 0 64S14.3 32 32 32h96l7.2-14.3C140.6 6.8 151.7 0 163.8 0zM32 128H416V448c0 35.3-28.7 64-64 64H96c-35.3 0-64-28.7-64-64V128zm192 64c-6.4 0-12.5 2.5-17 7l-80 80c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l39-39V408c0 13.3 10.7 24 24 24s24-10.7 24-24V273.9l39 39c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-80-80c-4.5-4.5-10.6-7-17-7z"/></svg></button>' + 
+
+          '</div>',
         },
         {
           id: 4,
@@ -379,51 +259,11 @@ export default {
           arrival: "4/13/2023 9:15 AM",
           ambulance: "EMS 4",
           actions:
-            '<div class="relative" data-te-dropdown-ref>\n' +
-            "  <button\n" +
-            '    class="flex items-center whitespace-nowrap rounded bg-white px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-black shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] motion-reduce:transition-none dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"\n' +
-            '    type="button"\n' +
-            '    id="dropdownMenuButton1"\n' +
-            "    data-te-dropdown-toggle-ref\n" +
-            '    aria-expanded="false"\n' +
-            "    data-te-ripple-init\n" +
-            '    data-te-ripple-color="light">\n' +
-            "    SELECT\n" +
-            '    <span class="ml-2 w-2">\n' +
-            "      <svg\n" +
-            '        xmlns="http://www.w3.org/2000/svg"\n' +
-            '        viewBox="0 0 20 20"\n' +
-            '        fill="currentColor"\n' +
-            '        class="h-5 w-5">\n' +
-            "        <path\n" +
-            '          fill-rule="evenodd"\n' +
-            '          d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"\n' +
-            '          clip-rule="evenodd" />\n' +
-            "      </svg>\n" +
-            "    </span>\n" +
-            "  </button>\n" +
-            "  <ul\n" +
-            '    class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg dark:bg-neutral-700 [&[data-te-dropdown-show]]:block"\n' +
-            '    aria-labelledby="dropdownMenuButton1"\n' +
-            "    data-te-dropdown-menu-ref>\n" +
-            "    <li>\n" +
-            "      <a\n" +
-            '        class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"\n' +
-            '        href="#"\n' +
-            "        data-te-dropdown-item-ref\n" +
-            "        >Restore</a\n" +
-            "      >\n" +
-            "    </li>\n" +
-            "    <li>\n" +
-            "      <a\n" +
-            '        class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"\n' +
-            '        href="#"\n' +
-            "        data-te-dropdown-item-ref\n" +
-            "        >Delete</a\n" +
-            "      >\n" +
-            "    </li>\n" +
-            "  </ul>\n" +
-            "</div>",
+          '<div class="flex gap-12">' +
+            
+            '<button><svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#7d7d7d}</style><path d="M163.8 0H284.2c12.1 0 23.2 6.8 28.6 17.7L320 32h96c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 96 0 81.7 0 64S14.3 32 32 32h96l7.2-14.3C140.6 6.8 151.7 0 163.8 0zM32 128H416V448c0 35.3-28.7 64-64 64H96c-35.3 0-64-28.7-64-64V128zm192 64c-6.4 0-12.5 2.5-17 7l-80 80c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l39-39V408c0 13.3 10.7 24 24 24s24-10.7 24-24V273.9l39 39c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-80-80c-4.5-4.5-10.6-7-17-7z"/></svg></button>' + 
+
+          '</div>',
         },
         {
           id: 5,
@@ -434,51 +274,11 @@ export default {
           arrival: "4/13/2023 9:15 AM",
           ambulance: "EMS 1",
           actions:
-            '<div class="relative" data-te-dropdown-ref>\n' +
-            "  <button\n" +
-            '    class="flex items-center whitespace-nowrap rounded bg-white px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-black shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] motion-reduce:transition-none dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"\n' +
-            '    type="button"\n' +
-            '    id="dropdownMenuButton1"\n' +
-            "    data-te-dropdown-toggle-ref\n" +
-            '    aria-expanded="false"\n' +
-            "    data-te-ripple-init\n" +
-            '    data-te-ripple-color="light">\n' +
-            "    SELECT\n" +
-            '    <span class="ml-2 w-2">\n' +
-            "      <svg\n" +
-            '        xmlns="http://www.w3.org/2000/svg"\n' +
-            '        viewBox="0 0 20 20"\n' +
-            '        fill="currentColor"\n' +
-            '        class="h-5 w-5">\n' +
-            "        <path\n" +
-            '          fill-rule="evenodd"\n' +
-            '          d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"\n' +
-            '          clip-rule="evenodd" />\n' +
-            "      </svg>\n" +
-            "    </span>\n" +
-            "  </button>\n" +
-            "  <ul\n" +
-            '    class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg dark:bg-neutral-700 [&[data-te-dropdown-show]]:block"\n' +
-            '    aria-labelledby="dropdownMenuButton1"\n' +
-            "    data-te-dropdown-menu-ref>\n" +
-            "    <li>\n" +
-            "      <a\n" +
-            '        class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"\n' +
-            '        href="#"\n' +
-            "        data-te-dropdown-item-ref\n" +
-            "        >Restore</a\n" +
-            "      >\n" +
-            "    </li>\n" +
-            "    <li>\n" +
-            "      <a\n" +
-            '        class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"\n' +
-            '        href="#"\n' +
-            "        data-te-dropdown-item-ref\n" +
-            "        >Delete</a\n" +
-            "      >\n" +
-            "    </li>\n" +
-            "  </ul>\n" +
-            "</div>",
+          '<div class="flex gap-12">' +
+            
+            '<button><svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#7d7d7d}</style><path d="M163.8 0H284.2c12.1 0 23.2 6.8 28.6 17.7L320 32h96c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 96 0 81.7 0 64S14.3 32 32 32h96l7.2-14.3C140.6 6.8 151.7 0 163.8 0zM32 128H416V448c0 35.3-28.7 64-64 64H96c-35.3 0-64-28.7-64-64V128zm192 64c-6.4 0-12.5 2.5-17 7l-80 80c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l39-39V408c0 13.3 10.7 24 24 24s24-10.7 24-24V273.9l39 39c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-80-80c-4.5-4.5-10.6-7-17-7z"/></svg></button>' + 
+
+          '</div>',
         },
         {
           id: 6,
@@ -489,51 +289,11 @@ export default {
           arrival: "4/13/2023 9:15 AM",
           ambulance: "EMS 8",
           actions:
-            '<div class="relative" data-te-dropdown-ref>\n' +
-            "  <button\n" +
-            '    class="flex items-center whitespace-nowrap rounded bg-white px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-black shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] motion-reduce:transition-none dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"\n' +
-            '    type="button"\n' +
-            '    id="dropdownMenuButton1"\n' +
-            "    data-te-dropdown-toggle-ref\n" +
-            '    aria-expanded="false"\n' +
-            "    data-te-ripple-init\n" +
-            '    data-te-ripple-color="light">\n' +
-            "    SELECT\n" +
-            '    <span class="ml-2 w-2">\n' +
-            "      <svg\n" +
-            '        xmlns="http://www.w3.org/2000/svg"\n' +
-            '        viewBox="0 0 20 20"\n' +
-            '        fill="currentColor"\n' +
-            '        class="h-5 w-5">\n' +
-            "        <path\n" +
-            '          fill-rule="evenodd"\n' +
-            '          d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"\n' +
-            '          clip-rule="evenodd" />\n' +
-            "      </svg>\n" +
-            "    </span>\n" +
-            "  </button>\n" +
-            "  <ul\n" +
-            '    class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg dark:bg-neutral-700 [&[data-te-dropdown-show]]:block"\n' +
-            '    aria-labelledby="dropdownMenuButton1"\n' +
-            "    data-te-dropdown-menu-ref>\n" +
-            "    <li>\n" +
-            "      <a\n" +
-            '        class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"\n' +
-            '        href="#"\n' +
-            "        data-te-dropdown-item-ref\n" +
-            "        >Restore</a\n" +
-            "      >\n" +
-            "    </li>\n" +
-            "    <li>\n" +
-            "      <a\n" +
-            '        class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"\n' +
-            '        href="#"\n' +
-            "        data-te-dropdown-item-ref\n" +
-            "        >Delete</a\n" +
-            "      >\n" +
-            "    </li>\n" +
-            "  </ul>\n" +
-            "</div>",
+          '<div class="flex gap-12">' +
+            
+            '<button><svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#7d7d7d}</style><path d="M163.8 0H284.2c12.1 0 23.2 6.8 28.6 17.7L320 32h96c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 96 0 81.7 0 64S14.3 32 32 32h96l7.2-14.3C140.6 6.8 151.7 0 163.8 0zM32 128H416V448c0 35.3-28.7 64-64 64H96c-35.3 0-64-28.7-64-64V128zm192 64c-6.4 0-12.5 2.5-17 7l-80 80c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l39-39V408c0 13.3 10.7 24 24 24s24-10.7 24-24V273.9l39 39c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-80-80c-4.5-4.5-10.6-7-17-7z"/></svg></button>' + 
+
+          '</div>',
         },
         {
           id: 7,
@@ -544,51 +304,11 @@ export default {
           arrival: "4/13/2023 9:15 AM",
           ambulance: "EMS 5",
           actions:
-            '<div class="relative" data-te-dropdown-ref>\n' +
-            "  <button\n" +
-            '    class="flex items-center whitespace-nowrap rounded bg-white px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-black shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] motion-reduce:transition-none dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"\n' +
-            '    type="button"\n' +
-            '    id="dropdownMenuButton1"\n' +
-            "    data-te-dropdown-toggle-ref\n" +
-            '    aria-expanded="false"\n' +
-            "    data-te-ripple-init\n" +
-            '    data-te-ripple-color="light">\n' +
-            "    SELECT\n" +
-            '    <span class="ml-2 w-2">\n' +
-            "      <svg\n" +
-            '        xmlns="http://www.w3.org/2000/svg"\n' +
-            '        viewBox="0 0 20 20"\n' +
-            '        fill="currentColor"\n' +
-            '        class="h-5 w-5">\n' +
-            "        <path\n" +
-            '          fill-rule="evenodd"\n' +
-            '          d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"\n' +
-            '          clip-rule="evenodd" />\n' +
-            "      </svg>\n" +
-            "    </span>\n" +
-            "  </button>\n" +
-            "  <ul\n" +
-            '    class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg dark:bg-neutral-700 [&[data-te-dropdown-show]]:block"\n' +
-            '    aria-labelledby="dropdownMenuButton1"\n' +
-            "    data-te-dropdown-menu-ref>\n" +
-            "    <li>\n" +
-            "      <a\n" +
-            '        class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"\n' +
-            '        href="#"\n' +
-            "        data-te-dropdown-item-ref\n" +
-            "        >Restore</a\n" +
-            "      >\n" +
-            "    </li>\n" +
-            "    <li>\n" +
-            "      <a\n" +
-            '        class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"\n' +
-            '        href="#"\n' +
-            "        data-te-dropdown-item-ref\n" +
-            "        >Delete</a\n" +
-            "      >\n" +
-            "    </li>\n" +
-            "  </ul>\n" +
-            "</div>",
+          '<div class="flex gap-12">' +
+            
+            '<button><svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#7d7d7d}</style><path d="M163.8 0H284.2c12.1 0 23.2 6.8 28.6 17.7L320 32h96c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 96 0 81.7 0 64S14.3 32 32 32h96l7.2-14.3C140.6 6.8 151.7 0 163.8 0zM32 128H416V448c0 35.3-28.7 64-64 64H96c-35.3 0-64-28.7-64-64V128zm192 64c-6.4 0-12.5 2.5-17 7l-80 80c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l39-39V408c0 13.3 10.7 24 24 24s24-10.7 24-24V273.9l39 39c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-80-80c-4.5-4.5-10.6-7-17-7z"/></svg></button>' + 
+
+          '</div>',
         },
         {
           id: 8,
@@ -599,51 +319,11 @@ export default {
           arrival: "4/13/2023 9:15 AM",
           ambulance: "EMS 1",
           actions:
-            '<div class="relative" data-te-dropdown-ref>\n' +
-            "  <button\n" +
-            '    class="flex items-center whitespace-nowrap rounded bg-white px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-black shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] motion-reduce:transition-none dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"\n' +
-            '    type="button"\n' +
-            '    id="dropdownMenuButton1"\n' +
-            "    data-te-dropdown-toggle-ref\n" +
-            '    aria-expanded="false"\n' +
-            "    data-te-ripple-init\n" +
-            '    data-te-ripple-color="light">\n' +
-            "    SELECT\n" +
-            '    <span class="ml-2 w-2">\n' +
-            "      <svg\n" +
-            '        xmlns="http://www.w3.org/2000/svg"\n' +
-            '        viewBox="0 0 20 20"\n' +
-            '        fill="currentColor"\n' +
-            '        class="h-5 w-5">\n' +
-            "        <path\n" +
-            '          fill-rule="evenodd"\n' +
-            '          d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"\n' +
-            '          clip-rule="evenodd" />\n' +
-            "      </svg>\n" +
-            "    </span>\n" +
-            "  </button>\n" +
-            "  <ul\n" +
-            '    class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg dark:bg-neutral-700 [&[data-te-dropdown-show]]:block"\n' +
-            '    aria-labelledby="dropdownMenuButton1"\n' +
-            "    data-te-dropdown-menu-ref>\n" +
-            "    <li>\n" +
-            "      <a\n" +
-            '        class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"\n' +
-            '        href="#"\n' +
-            "        data-te-dropdown-item-ref\n" +
-            "        >Restore</a\n" +
-            "      >\n" +
-            "    </li>\n" +
-            "    <li>\n" +
-            "      <a\n" +
-            '        class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"\n' +
-            '        href="#"\n' +
-            "        data-te-dropdown-item-ref\n" +
-            "        >Delete</a\n" +
-            "      >\n" +
-            "    </li>\n" +
-            "  </ul>\n" +
-            "</div>",
+          '<div class="flex gap-12">' +
+            
+            '<button><svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#7d7d7d}</style><path d="M163.8 0H284.2c12.1 0 23.2 6.8 28.6 17.7L320 32h96c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 96 0 81.7 0 64S14.3 32 32 32h96l7.2-14.3C140.6 6.8 151.7 0 163.8 0zM32 128H416V448c0 35.3-28.7 64-64 64H96c-35.3 0-64-28.7-64-64V128zm192 64c-6.4 0-12.5 2.5-17 7l-80 80c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l39-39V408c0 13.3 10.7 24 24 24s24-10.7 24-24V273.9l39 39c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-80-80c-4.5-4.5-10.6-7-17-7z"/></svg></button>' + 
+
+          '</div>',
         },
         {
           id: 9,
@@ -654,51 +334,11 @@ export default {
           arrival: "4/13/2023 9:15 AM",
           ambulance: "EMS 9",
           actions:
-            '<div class="relative" data-te-dropdown-ref>\n' +
-            "  <button\n" +
-            '    class="flex items-center whitespace-nowrap rounded bg-white px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-black shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] motion-reduce:transition-none dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"\n' +
-            '    type="button"\n' +
-            '    id="dropdownMenuButton1"\n' +
-            "    data-te-dropdown-toggle-ref\n" +
-            '    aria-expanded="false"\n' +
-            "    data-te-ripple-init\n" +
-            '    data-te-ripple-color="light">\n' +
-            "    SELECT\n" +
-            '    <span class="ml-2 w-2">\n' +
-            "      <svg\n" +
-            '        xmlns="http://www.w3.org/2000/svg"\n' +
-            '        viewBox="0 0 20 20"\n' +
-            '        fill="currentColor"\n' +
-            '        class="h-5 w-5">\n' +
-            "        <path\n" +
-            '          fill-rule="evenodd"\n' +
-            '          d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"\n' +
-            '          clip-rule="evenodd" />\n' +
-            "      </svg>\n" +
-            "    </span>\n" +
-            "  </button>\n" +
-            "  <ul\n" +
-            '    class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg dark:bg-neutral-700 [&[data-te-dropdown-show]]:block"\n' +
-            '    aria-labelledby="dropdownMenuButton1"\n' +
-            "    data-te-dropdown-menu-ref>\n" +
-            "    <li>\n" +
-            "      <a\n" +
-            '        class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"\n' +
-            '        href="#"\n' +
-            "        data-te-dropdown-item-ref\n" +
-            "        >Restore</a\n" +
-            "      >\n" +
-            "    </li>\n" +
-            "    <li>\n" +
-            "      <a\n" +
-            '        class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"\n' +
-            '        href="#"\n' +
-            "        data-te-dropdown-item-ref\n" +
-            "        >Delete</a\n" +
-            "      >\n" +
-            "    </li>\n" +
-            "  </ul>\n" +
-            "</div>",
+          '<div class="flex gap-12">' +
+            
+            '<button><svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#7d7d7d}</style><path d="M163.8 0H284.2c12.1 0 23.2 6.8 28.6 17.7L320 32h96c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 96 0 81.7 0 64S14.3 32 32 32h96l7.2-14.3C140.6 6.8 151.7 0 163.8 0zM32 128H416V448c0 35.3-28.7 64-64 64H96c-35.3 0-64-28.7-64-64V128zm192 64c-6.4 0-12.5 2.5-17 7l-80 80c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l39-39V408c0 13.3 10.7 24 24 24s24-10.7 24-24V273.9l39 39c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-80-80c-4.5-4.5-10.6-7-17-7z"/></svg></button>' + 
+
+          '</div>',
         },
         {
           id: 10,
@@ -709,51 +349,11 @@ export default {
           arrival: "4/13/2023 9:15 AM",
           ambulance: "EMS 9",
           actions:
-            '<div class="relative" data-te-dropdown-ref>\n' +
-            "  <button\n" +
-            '    class="flex items-center whitespace-nowrap rounded bg-white px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-black shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] motion-reduce:transition-none dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"\n' +
-            '    type="button"\n' +
-            '    id="dropdownMenuButton1"\n' +
-            "    data-te-dropdown-toggle-ref\n" +
-            '    aria-expanded="false"\n' +
-            "    data-te-ripple-init\n" +
-            '    data-te-ripple-color="light">\n' +
-            "    SELECT\n" +
-            '    <span class="ml-2 w-2">\n' +
-            "      <svg\n" +
-            '        xmlns="http://www.w3.org/2000/svg"\n' +
-            '        viewBox="0 0 20 20"\n' +
-            '        fill="currentColor"\n' +
-            '        class="h-5 w-5">\n' +
-            "        <path\n" +
-            '          fill-rule="evenodd"\n' +
-            '          d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"\n' +
-            '          clip-rule="evenodd" />\n' +
-            "      </svg>\n" +
-            "    </span>\n" +
-            "  </button>\n" +
-            "  <ul\n" +
-            '    class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg dark:bg-neutral-700 [&[data-te-dropdown-show]]:block"\n' +
-            '    aria-labelledby="dropdownMenuButton1"\n' +
-            "    data-te-dropdown-menu-ref>\n" +
-            "    <li>\n" +
-            "      <a\n" +
-            '        class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"\n' +
-            '        href="#"\n' +
-            "        data-te-dropdown-item-ref\n" +
-            "        >Restore</a\n" +
-            "      >\n" +
-            "    </li>\n" +
-            "    <li>\n" +
-            "      <a\n" +
-            '        class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"\n' +
-            '        href="#"\n' +
-            "        data-te-dropdown-item-ref\n" +
-            "        >Delete</a\n" +
-            "      >\n" +
-            "    </li>\n" +
-            "  </ul>\n" +
-            "</div>",
+          '<div class="flex gap-12">' +
+
+            '<button><svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#7d7d7d}</style><path d="M163.8 0H284.2c12.1 0 23.2 6.8 28.6 17.7L320 32h96c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 96 0 81.7 0 64S14.3 32 32 32h96l7.2-14.3C140.6 6.8 151.7 0 163.8 0zM32 128H416V448c0 35.3-28.7 64-64 64H96c-35.3 0-64-28.7-64-64V128zm192 64c-6.4 0-12.5 2.5-17 7l-80 80c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l39-39V408c0 13.3 10.7 24 24 24s24-10.7 24-24V273.9l39 39c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-80-80c-4.5-4.5-10.6-7-17-7z"/></svg></button>' + 
+
+          '</div>',
         },
       ],
     };
