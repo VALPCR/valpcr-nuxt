@@ -26,7 +26,7 @@
               v-model="email"
               type="text"
               class="relative m-0 block w-[1px] min-w-0 flex-auto rounded-r border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
-              placeholder="Email"
+              placeholder="Email" required
               aria-label="Email"
               aria-describedby="addon-wrapping"
             />
@@ -44,7 +44,7 @@
               v-model="password"
               :type="showPassword ? 'text' : 'password'"
               class="relative m-0 block w-[1px] min-w-0 flex-auto rounded-r border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
-              placeholder="Password"
+              placeholder="Password" required
               aria-label="Password"
               aria-describedby="addon-wrapping"
             />
@@ -127,7 +127,7 @@ export default {
             }
           })
           .catch((e) => {
-            this.error = e.response.data.message;
+            this.email = 'Email is incorrect';
           });
       } catch (e) {
         console.log(e);
