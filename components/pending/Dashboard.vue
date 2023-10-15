@@ -201,8 +201,12 @@ export default {
           field: "ambulance",
         },
         {
-          label: "ASSIGNEE",
-          field: "assignee",
+          label: "CREATED BY",
+          field: "created",
+        },
+        {
+          label: "CATEGORY",
+          field: "category",
         },
       ],
     };
@@ -220,7 +224,8 @@ export default {
           call: pcr.call_receive !== null ? pcr.call_receive : '',
           arrival: pcr.arrived_at,
           ambulance: pcr.ambulance !== null ? pcr.ambulance : '',
-          assignee: pcr.user_pcr.user.first_name + ' ' + pcr.user_pcr.user.last_name + ' (' + (pcr.user_pcr.user.role === 'emr' ? 'Responder' : 'Dispatcher') + ')',
+          created: pcr.user_pcr.user.first_name + ' ' + pcr.user_pcr.user.last_name + ' (' + (pcr.user_pcr.user.role === 'emr' ? 'Responder' : 'Dispatcher') + ')',
+          category: pcr.category,
         })
       );
     });
