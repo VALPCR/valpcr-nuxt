@@ -36,6 +36,7 @@
         :rows="fetchedRows"
         :search-options="{ enabled: true }"
         :pagination-options="{ enabled: true }"
+        @on-row-click="onRowClick"
         styleClass="vgt-table striped bordered"
         compactMode
         class="bg-white rounded shadow"
@@ -48,7 +49,7 @@
             v-if="role === 'emr'"
             type="button"
             class="inline-block rounded bg-green-600 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-green-700 focus:bg-green-700 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
-            @click="onRowClick"
+            @click="addPcr"
           >
             ADD NEW
           </button>
@@ -65,6 +66,7 @@
       </vue-good-table>
       <PatientForm v-if="role === 'dispatcher'" />
       <PatientStepperForm v-if="role === 'emr'" />
+      <EditPatientStepperForm v-if="role === 'emr'" />
     </div>
   </div>
 </template>
@@ -72,10 +74,11 @@
 <script>
 import PatientForm from "./PatientForm";
 import PatientStepperForm from "./PatientStepperForm";
+import EditPatientStepperForm from "./EditPatientStepperForm";
 import { Modal, Dropdown, Ripple, initTE } from "tw-elements";
 
 export default {
-  components: { Ripple, Modal, Dropdown, PatientForm, PatientStepperForm },
+  components: { Ripple, Modal, Dropdown, PatientForm, PatientStepperForm, EditPatientStepperForm },
   data() {
     return {
       role: "",
@@ -278,10 +281,16 @@ export default {
     initTE({ Ripple, Modal, Dropdown });
   },
   methods: {
-    onRowClick() {
+    addPcr() {
       const addModal = new Modal(document.getElementById('patientFormStepper'));
       this.$store.commit('setAddPatientStepperForm', true);
       addModal.show();
+    },
+    onRowClick(params) {
+      const editModal = new Modal(document.getElementById('editPatientFormStepper'));
+      this.$store.commit('setEditPatientStepperForm', true);
+      this.$store.commit('setEditPatientStepperFormArg', params.row.id);
+      editModal.show();
     },
   },
 };
