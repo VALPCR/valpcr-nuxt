@@ -2534,7 +2534,7 @@ export default {
       teams: [],
       id: "",
       dispatch_date: "",
-      category: "dispatch data",
+      category: "completed",
       call_source: "",
       call_receive: "",
       barangay: "",
