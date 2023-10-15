@@ -213,7 +213,7 @@ export default {
       response.data.return.map((pcr) =>
         this.fetchedRows.push({
           id: pcr.id,
-          name: pcr.pcr_patient.patient.first_name !== null ? pcr.pcr_patient.patient.first_name : ''  + ' ' + pcr.pcr_patient.patient.middle_name !== null ? pcr.pcr_patient.patient.middle_name : '' + ' ' + pcr.pcr_patient.patient.surname !== null ? pcr.pcr_patient.patient.surname : '',
+          name: (pcr.pcr_patient.patient.first_name !== null ? pcr.pcr_patient.patient.first_name : '')  + ' ' + (pcr.pcr_patient.patient.middle_name !== null ? pcr.pcr_patient.patient.middle_name : '') + ' ' + (pcr.pcr_patient.patient.surname !== null ? pcr.pcr_patient.patient.surname : ''),
           address: pcr.incident_location,
           case: pcr.ems_location_a !== null ? pcr.ems_location_a.toUpperCase() : '',
           date: pcr.dispatch_date,
