@@ -10,7 +10,7 @@
             class="mx-auto mb-4"
             alt="valpcr logo"
           />
-          <h1 class="text-7xl font-bold text-dark-1 mx-auto mb-8"><i> Welcome to ValPCR! </i></h1>
+          <h1 class="text-6xl font-bold text-dark-1 mx-auto mb-8"><i> Welcome to ValPCR! </i></h1>
         <div class="p-8 max-w-md w-full bg-white rounded-lg shadow-lg">
           <h1 class="text-3xl mb-5 text-center text-black font-bold">Sign in to your account</h1>
           <p class="ml-1 mr-1 text-left text-gray-500">
