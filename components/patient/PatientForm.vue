@@ -570,8 +570,9 @@
                     v-model="team_id"
                     data-te-select-init
                     class="w-full bg-neutral-50 col-span-3"
+                    :disabled="this.$auth.user.role === 'dispatcher'"
                   >
-                    <option selected value="1">Team</option>
+                    <option value="0">Team</option>
                     <option
                       v-for="(item, index) in teams"
                       :key="index"
@@ -809,7 +810,7 @@ export default {
         this.teams.push({ id: team.id, name: this.capitalize(team.name) })
       );
     });
-    this.$axios.get("user/list" + "?role=emr").then((response) => {
+    this.$axios.get("user/list" + "?role=emr" + "&team=" + this.$auth.user.team_id).then((response) => {
       response.data.return.map((emr) =>
         this.emrs.push({ id: emr.id, name: `${emr.first_name !== null ? emr.first_name : ''} ${emr.middle_name !== null ? emr.middle_name : '' } ${emr.last_name !== null ? emr.last_name : ''}`})
       );
@@ -828,6 +829,10 @@ export default {
 
     // Schedule the update to occur once per day (24 hours)
     setInterval(updateDateField.bind(this), 24 * 60 * 60 * 1000); // 24 hours in milliseconds
+
+    if (this.$auth.user.role === 'dispatcher') {
+      this.team_id = this.$auth.user.team_id;
+    }
   },
   methods: {
     setCallReceived(){

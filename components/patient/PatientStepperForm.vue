@@ -15,8 +15,9 @@
       class="pointer-events-none relative w-auto translate-y-[-50px] opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:max-w-[500px] min-[992px]:max-w-[800px] min-[1200px]:max-w-[1140px] z-1"
     >
       <div
-        class="pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600"
+        class="pointer-events-auto relative flex flex-wrap space-x-4 p-4 w-full overflow-x-auto flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600"
       >
+        
         <!-- Start of Dispatch Data -->
         <div class="flex justify-between mx-4 mt-4">
           <!--Modal title-->
@@ -51,6 +52,7 @@
           </button>
         </div>
 
+        
         <div class="mx-4">
           <ul
             data-te-stepper-init
@@ -76,7 +78,7 @@
                   data-te-stepper-head-text-ref
                   class="font-medium text-neutral-500 after:flex after:text-[0.8rem] after:content-[data-content] dark:text-neutral-300"
                 >
-                  Dispatch Data
+                  Dispatch...
                 </span>
               </div>
               <div
@@ -1248,7 +1250,23 @@
                           </label>
                         </div>
                       </div>
-                      <!-- END LAST ORAL INTAKE -->
+                      
+                      <!--SEVERITY-->
+                      <div class="col-span-2">
+                        <select
+                          data-te-select-init
+                          class="w-full bg-neutral-50 text-gray"
+                          v-model="severity"
+                        >
+                          <option value="severity">Severity</option>
+                          <option value="mild">Mild (1)</option>
+                          <option value="moderate">Moderate (5)</option>
+                          <option value="severe">Severe (10)</option>
+                          <option value="Others">Others</option>
+                        </select>
+                      </div>
+
+
                       <!-- EVENTS LEADING TO INJURY -->
                       <div class="events col-span-2">
                         <div class="relative mb-1" data-te-input-wrapper-init>
@@ -1268,22 +1286,10 @@
                           </label>
                         </div>
                       </div>
-                      <!-- EVENTS LEADING TO INJURY -->
-                      <div class="col-span-2">
-                        <select
-                          data-te-select-init
-                          class="w-full bg-neutral-50 text-gray"
-                          v-model="severity"
-                        >
-                          <option value="severity">Severity</option>
-                          <option value="mild">Mild (1)</option>
-                          <option value="moderate">Moderate (5)</option>
-                          <option value="severe">Severe (10)</option>
-                          <option value="Others">Others</option>
-                        </select>
-                      </div>
 
-                      <!-- END SEVERITY -->
+                      
+
+
                       <!-- TIME -->
                       <div class="time col-span-2">
                         <div
@@ -1330,7 +1336,966 @@
                   data-te-stepper-head-text-ref
                   class="text-neutral-500 after:flex after:text-[0.8rem] after:content-[data-content] dark:text-neutral-300"
                 >
-                  Vital Signs
+                  Vital...
+                </span>
+              </div>
+
+              <div
+                data-te-stepper-content-ref
+                class="absolute left-0 w-full translate-x-[150%] p-4 transition-all duration-500 ease-in-out"
+              >
+                <div class="relative p-4">
+                  <form>
+                    <div
+                      class="grid grid-cols-6 gap-3"
+                    >
+                      <div class="">
+                        <h4 class="mb-3 font-bold">Time</h4>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                          data-te-timepicker-init
+                          @click.stop="setTimeA"
+                        >
+                          <input
+                            v-model="time_a"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            aria-describedby="vTime"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                          data-te-timepicker-init
+                          @click.stop="setTimeB"
+                        >
+                          <input
+                            v-model="time_b"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            aria-describedby="vTime"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                          data-te-timepicker-init
+                          @click.stop="setTimeC"
+                        >
+                          <input
+                            v-model="time_c"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            aria-describedby="vTime"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                          data-te-timepicker-init
+                          @click.stop="setTimeD"
+                        >
+                          <input
+                            v-model="time_d"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            aria-describedby="vTime"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                          data-te-timepicker-init
+                          @click.stop="setTimeE"
+                        >
+                          <input
+                            v-model="time_e"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            aria-describedby="vTime"
+                          />
+                        </div>
+                      </div>
+                      <div class="">
+                        <h4 class="mb-3 font-bold">BP</h4>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="bp_a"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="bp_b"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="bp_c"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="bp_d"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="bp_e"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                      </div>
+                      <div class="">
+                        <h4 class="mb-3 font-bold">PR</h4>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="pr_a"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="pr_b"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="pr_c"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="pr_d"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="pr_e"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                      </div>
+                      <div class="">
+                        <h4 class="mb-3 font-bold">RR</h4>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="rr_a"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="rr_b"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="rr_c"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="rr_d"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="rr_e"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                      </div>
+                      <div class="">
+                        <h4 class="mb-3 font-bold">Temp.</h4>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="tempt_a"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="tempt_b"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="tempt_c"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="tempt_d"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="tempt_e"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                      </div>
+                      <div class="">
+                        <h4 class="mb-3 font-bold">SPO2</h4>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="spo2_a"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="spo2_b"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="spo2_c"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="spo2_d"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-2"
+                          data-te-input-wrapper-init
+                        >
+                          <input
+                            v-model="spo2_e"
+                            type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="grid grid-cols-10">
+                      <div>
+                        <h4 class="mb-3 font-bold">Pupil</h4>
+                        <h5 class="relative mb-1 font-small col-span-1 text-gray-700">Pearl</h5>
+                        <h5 class="relative mb-1 font-small col-span-1 text-gray-700">Dilated</h5>
+                        <h5 class="relative mb-1 font-small col-span-1 text-gray-700">Constricted</h5>
+                        <h5 class="relative mb-1 font-small col-span-1 text-gray-700">Non-reactive</h5>
+                        <h5 class="relative mb-1 font-small col-span-1 text-gray-700">Cataract</h5>
+                      </div>
+                      <div>
+                        <h4 class="mb-4 font-bold text-center">Left</h4>
+                        <div
+                          class="relative mb-3 col-span-1"
+                        >
+                          <input
+                            v-model="left_pearl"
+                            type="checkbox"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-150"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-4 col-span-1"
+                        >
+                          <input
+                            v-model="left_dilated"
+                            type="checkbox"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-150"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-4 col-span-1"
+                        >
+                          <input
+                            v-model="left_constrict"
+                            type="checkbox"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-150"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-4 col-span-1"
+                        >
+                          <input
+                            v-model="left_non_reactive"
+                            type="checkbox"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-150"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-4 col-span-1"
+                        >
+                          <input
+                            v-model="left_cataract"
+                            type="checkbox"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-150"
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <h4 class="mb-3 font-bold text-center">Right</h4>
+                        <div
+                          class="relative mb-4 col-span-1"
+                        >
+                          <input
+                            v-model="right_pearl"
+                            type="checkbox"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-150"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-4 col-span-1"
+                        >
+                          <input
+                            v-model="right_dilated"
+                            type="checkbox"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-150"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-4 col-span-1"
+                        >
+                          <input
+                            v-model="right_constrict"
+                            type="checkbox"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-150"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-4 col-span-1"
+                        >
+                          <input
+                            v-model="right_non_reactive"
+                            type="checkbox"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-150"
+                          />
+                        </div>
+                        <div
+                          class="relative mb-4 col-span-1"
+                        >
+                          <input
+                            v-model="right_cataract"
+                            type="checkbox"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-150"
+                          />
+                        </div>
+                      </div>
+
+                      <div class="relative mr-1 left-2 top-4 col-span-2">
+                        <select
+                          data-te-select-init
+                          v-model="skin_color"
+                          class="bg-neutral-50"
+                        >
+                          <option selected value="2">Skin Color</option>
+                          <option value="normal">Normal</option>
+                          <option value="cyanotic">Cyanotic</option>
+                          <option value="pale">Pale</option>
+                          <option value="flushed">Flushed</option>
+                          <option value="jaundice">Jaundice</option>
+                        </select>
+                      </div>
+
+                      <div class="relative mr-2 left-3 top-4 col-span-1">
+                        <select
+                          data-te-select-init
+                          v-model="eyes"
+                          class="bg-neutral-50"
+                        >
+                          <option selected value="2">Eyes</option>
+                          <option value="spontaneous">4 - Spontaneous</option>
+                          <option value="verbal">3 - Verbal</option>
+                          <option value="pain">2 - Pain</option>
+                          <option value="none">1 - None</option>
+                        </select>
+                      </div>
+
+                      <div class="relative mr-2 left-3 top-4 col-span-2">
+                        <select
+                          data-te-select-init
+                          v-model="verbal"
+                          class="bg-neutral-50"
+                        >
+                          <option selected value="2"> Verbal</option>
+                          <option value="oriented">5 - Oriented</option>
+                          <option value="confused">4 - Confused</option>
+                          <option value="inappropriate word">3 - Inappropriate words</option>
+                          <option value="incomprehensible sounds">2 - Incomprehensible sounds</option>
+                          <option value="none">1 - None</option>
+                        </select>
+                      </div>
+
+                      <div class="relative mr-2 left-3 top-4 col-span-2 place-content-start">
+                        <select
+                          data-te-select-init
+                          v-model="motor"
+                          class="bg-neutral-50"
+                        >
+                          <option selected value="2">Motor</option>
+                          <option value="obeys command">6 - Obeys Command</option>
+                          <option value="localize pain">5 - Localize Pain</option>
+                          <option value="withdraws to pain">4 -  Withdraws to Pain</option>
+                          <option value="abnormal flexion">3 - Abnormal Flexion </option>
+                          <option value="abnormal extension">2 - Abnormal Extension </option>
+                          <option value="none">1 - None</option>
+                        </select>
+                      </div>
+
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </li>
+
+
+            <!--Body Injuries-->
+            <li data-te-stepper-step-ref class="w-[4.5rem] flex-auto">
+              <div
+                data-te-stepper-head-ref
+                class="flex cursor-pointer items-center pr-2 leading-[1.3rem] no-underline before:mr-2 before:h-px before:w-full before:flex-1 before:bg-[#e0e0e0] before:content-[''] hover:bg-[#f9f9f9] focus:outline-none dark:before:bg-neutral-600 dark:after:bg-neutral-600 dark:hover:bg-[#3b3b3b]"
+              >
+                <span
+                  data-te-stepper-head-icon-ref
+                  class="my-6 mr-2 flex h-[1.938rem] w-[1.938rem] items-center justify-center rounded-full bg-[#ebedef] text-sm font-medium text-[#40464f]"
+                >
+                  4
+                </span>
+                <span
+                  data-te-stepper-head-text-ref
+                  class="text-neutral-500 after:flex after:text-[0.8rem] after:content-[data-content] dark:text-neutral-300"
+                >
+                  Body...
+                </span>
+              </div>
+
+              <div
+                data-te-stepper-content-ref
+                class="absolute left-0 w-full translate-x-[150%] p-4 transition-all duration-500 ease-in-out"
+              >
+                <div class="relative p-4">
+                  <form>
+                    <h4 class="mb-4 font-bold">Anterior</h4>
+                    <div class="flex items-center">
+                      <div class="text-center mb-3 w-1/5">
+                        <label class="mb-0">Head</label>
+                      </div>
+                      <div class="relative mb-3 w-4/5">
+                        <select data-te-select-init multiple class="w-full">
+                          <option value="1">Deformity</option>
+                          <option value="2">Contusion</option>
+                          <option value="3">Abrasion</option>
+                          <option value="4">Puncture</option>
+                          <option value="5">Burn</option>
+                          <option value="6">Tenderness</option>
+                          <option value="7">Laceration</option>
+                          <option value="8">Swelling</option>
+                          <option value="9">Edema</option>
+                          <option value="10">Battle Sign </option>
+                          <option value="11">Racoon Eye</option>
+                          <option value="12">Gunshot</option>
+                          <option value="13">JVD</option>
+                          <option value="14">Bleeding</option>
+                          <option value="15">Pain</option>
+                        </select>
+                        <label data-te-select-label-ref>Select as many items as apply</label>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center">
+                      <div class="text-center mb-3 w-1/5">
+                        <label class="mb-0">Chest/Lungs</label>
+                      </div>
+                      <div class="relative mb-3 w-4/5">
+                        <select data-te-select-init multiple class="w-full">
+                          <option value="1">Deformity</option>
+                          <option value="2">Contusion</option>
+                          <option value="3">Abrasion</option>
+                          <option value="4">Puncture</option>
+                          <option value="5">Burn</option>
+                          <option value="6">Tenderness</option>
+                          <option value="7">Laceration</option>
+                          <option value="8">Swelling</option>
+                          <option value="9">Edema</option>
+                          <option value="10">Battle Sign </option>
+                          <option value="11">Racoon Eye</option>
+                          <option value="12">Gunshot</option>
+                          <option value="13">JVD</option>
+                          <option value="14">Bleeding</option>
+                          <option value="15">Pain</option>
+                        </select>
+                        <label data-te-select-label-ref>Select as many items as apply</label>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center">
+                      <div class="text-center mb-3 w-1/5">
+                        <label class="mb-0">Pelvis/GU</label>
+                      </div>
+                      <div class="relative mb-3 w-4/5">
+                        <select data-te-select-init multiple class="w-full">
+                          <option value="1">Deformity</option>
+                          <option value="2">Contusion</option>
+                          <option value="3">Abrasion</option>
+                          <option value="4">Puncture</option>
+                          <option value="5">Burn</option>
+                          <option value="6">Tenderness</option>
+                          <option value="7">Laceration</option>
+                          <option value="8">Swelling</option>
+                          <option value="9">Edema</option>
+                          <option value="10">Battle Sign </option>
+                          <option value="11">Racoon Eye</option>
+                          <option value="12">Gunshot</option>
+                          <option value="13">JVD</option>
+                          <option value="14">Bleeding</option>
+                          <option value="15">Pain</option>
+                        </select>
+                        <label data-te-select-label-ref>Select as many items as apply</label>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center">
+                      <div class="text-center mb-3 w-1/5">
+                        <label class="mb-0">Left Arm</label>
+                      </div>
+                      <div class="relative mb-3 w-4/5">
+                        <select data-te-select-init multiple class="w-full">
+                          <option value="1">Deformity</option>
+                          <option value="2">Contusion</option>
+                          <option value="3">Abrasion</option>
+                          <option value="4">Puncture</option>
+                          <option value="5">Burn</option>
+                          <option value="6">Tenderness</option>
+                          <option value="7">Laceration</option>
+                          <option value="8">Swelling</option>
+                          <option value="9">Edema</option>
+                          <option value="10">Battle Sign </option>
+                          <option value="11">Racoon Eye</option>
+                          <option value="12">Gunshot</option>
+                          <option value="13">JVD</option>
+                          <option value="14">Bleeding</option>
+                          <option value="15">Pain</option>
+                        </select>
+                        <label data-te-select-label-ref>Select as many items as apply</label>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center">
+                      <div class="text-center mb-3 w-1/5">
+                        <label class="mb-0">Right Arm</label>
+                      </div>
+                      <div class="relative mb-3 w-4/5">
+                        <select data-te-select-init multiple class="w-full">
+                          <option value="1">Deformity</option>
+                          <option value="2">Contusion</option>
+                          <option value="3">Abrasion</option>
+                          <option value="4">Puncture</option>
+                          <option value="5">Burn</option>
+                          <option value="6">Tenderness</option>
+                          <option value="7">Laceration</option>
+                          <option value="8">Swelling</option>
+                          <option value="9">Edema</option>
+                          <option value="10">Battle Sign </option>
+                          <option value="11">Racoon Eye</option>
+                          <option value="12">Gunshot</option>
+                          <option value="13">JVD</option>
+                          <option value="14">Bleeding</option>
+                          <option value="15">Pain</option>
+                        </select>
+                        <label data-te-select-label-ref>Select as many items as apply</label>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center">
+                      <div class="text-center mb-3 w-1/5">
+                        <label class="mb-0">Left Leg</label>
+                      </div>
+                      <div class="relative mb-3 w-4/5">
+                        <select data-te-select-init multiple class="w-full">
+                          <option value="1">Deformity</option>
+                          <option value="2">Contusion</option>
+                          <option value="3">Abrasion</option>
+                          <option value="4">Puncture</option>
+                          <option value="5">Burn</option>
+                          <option value="6">Tenderness</option>
+                          <option value="7">Laceration</option>
+                          <option value="8">Swelling</option>
+                          <option value="9">Edema</option>
+                          <option value="10">Battle Sign </option>
+                          <option value="11">Racoon Eye</option>
+                          <option value="12">Gunshot</option>
+                          <option value="13">JVD</option>
+                          <option value="14">Bleeding</option>
+                          <option value="15">Pain</option>
+                        </select>
+                        <label data-te-select-label-ref>Select as many items as apply</label>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center">
+                      <div class="text-center mb-3 w-1/5">
+                        <label class="mb-0">Right Leg</label>
+                      </div>
+                      <div class="relative mb-3 w-4/5">
+                        <select data-te-select-init multiple class="w-full">
+                          <option value="1">Deformity</option>
+                          <option value="2">Contusion</option>
+                          <option value="3">Abrasion</option>
+                          <option value="4">Puncture</option>
+                          <option value="5">Burn</option>
+                          <option value="6">Tenderness</option>
+                          <option value="7">Laceration</option>
+                          <option value="8">Swelling</option>
+                          <option value="9">Edema</option>
+                          <option value="10">Battle Sign </option>
+                          <option value="11">Racoon Eye</option>
+                          <option value="12">Gunshot</option>
+                          <option value="13">JVD</option>
+                          <option value="14">Bleeding</option>
+                          <option value="15">Pain</option>
+                        </select>
+                        <label data-te-select-label-ref>Select as many items as apply</label>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center">
+                      <div class="text-center mb-3 w-1/5">
+                        <label class="mb-0">Genitalia</label>
+                      </div>
+                      <div class="relative mb-3 w-4/5">
+                        <select data-te-select-init multiple class="w-full">
+                          <option value="1">Deformity</option>
+                          <option value="2">Contusion</option>
+                          <option value="3">Abrasion</option>
+                          <option value="4">Puncture</option>
+                          <option value="5">Burn</option>
+                          <option value="6">Tenderness</option>
+                          <option value="7">Laceration</option>
+                          <option value="8">Swelling</option>
+                          <option value="9">Edema</option>
+                          <option value="10">Battle Sign </option>
+                          <option value="11">Racoon Eye</option>
+                          <option value="12">Gunshot</option>
+                          <option value="13">JVD</option>
+                          <option value="14">Bleeding</option>
+                          <option value="15">Pain</option>
+                        </select>
+                        <label data-te-select-label-ref>Select as many items as apply</label>
+                      </div>
+                    </div>
+                    
+                    
+                    <h4 class="mb-4 font-bold">Posterior</h4>
+                    <div class="flex items-center">
+                      <div class="text-center mb-3 w-1/5">
+                        <label class="mb-0">Head</label>
+                      </div>
+                      <div class="relative mb-3 w-4/5">
+                        <select data-te-select-init multiple class="w-full">
+                          <option value="1">Deformity</option>
+                          <option value="2">Contusion</option>
+                          <option value="3">Abrasion</option>
+                          <option value="4">Puncture</option>
+                          <option value="5">Burn</option>
+                          <option value="6">Tenderness</option>
+                          <option value="7">Laceration</option>
+                          <option value="8">Swelling</option>
+                          <option value="9">Edema</option>
+                          <option value="10">Battle Sign </option>
+                          <option value="11">Racoon Eye</option>
+                          <option value="12">Gunshot</option>
+                          <option value="13">JVD</option>
+                          <option value="14">Bleeding</option>
+                          <option value="15">Pain</option>
+                        </select>
+                        <label data-te-select-label-ref>Select as many items as apply</label>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center">
+                      <div class="text-center mb-3 w-1/5">
+                        <label class="mb-0">Chest/Lungs</label>
+                      </div>
+                      <div class="relative mb-3 w-4/5">
+                        <select data-te-select-init multiple class="w-full">
+                          <option value="1">Deformity</option>
+                          <option value="2">Contusion</option>
+                          <option value="3">Abrasion</option>
+                          <option value="4">Puncture</option>
+                          <option value="5">Burn</option>
+                          <option value="6">Tenderness</option>
+                          <option value="7">Laceration</option>
+                          <option value="8">Swelling</option>
+                          <option value="9">Edema</option>
+                          <option value="10">Battle Sign </option>
+                          <option value="11">Racoon Eye</option>
+                          <option value="12">Gunshot</option>
+                          <option value="13">JVD</option>
+                          <option value="14">Bleeding</option>
+                          <option value="15">Pain</option>
+                        </select>
+                        <label data-te-select-label-ref>Select as many items as apply</label>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center">
+                      <div class="text-center mb-3 w-1/5">
+                        <label class="mb-0">Pelvis/GU</label>
+                      </div>
+                      <div class="relative mb-3 w-4/5">
+                        <select data-te-select-init multiple class="w-full">
+                          <option value="1">Deformity</option>
+                          <option value="2">Contusion</option>
+                          <option value="3">Abrasion</option>
+                          <option value="4">Puncture</option>
+                          <option value="5">Burn</option>
+                          <option value="6">Tenderness</option>
+                          <option value="7">Laceration</option>
+                          <option value="8">Swelling</option>
+                          <option value="9">Edema</option>
+                          <option value="10">Battle Sign </option>
+                          <option value="11">Racoon Eye</option>
+                          <option value="12">Gunshot</option>
+                          <option value="13">JVD</option>
+                          <option value="14">Bleeding</option>
+                          <option value="15">Pain</option>
+                        </select>
+                        <label data-te-select-label-ref>Select as many items as apply</label>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center">
+                      <div class="text-center mb-3 w-1/5">
+                        <label class="mb-0">Left Arm</label>
+                      </div>
+                      <div class="relative mb-3 w-4/5">
+                        <select data-te-select-init multiple class="w-full">
+                          <option value="1">Deformity</option>
+                          <option value="2">Contusion</option>
+                          <option value="3">Abrasion</option>
+                          <option value="4">Puncture</option>
+                          <option value="5">Burn</option>
+                          <option value="6">Tenderness</option>
+                          <option value="7">Laceration</option>
+                          <option value="8">Swelling</option>
+                          <option value="9">Edema</option>
+                          <option value="10">Battle Sign </option>
+                          <option value="11">Racoon Eye</option>
+                          <option value="12">Gunshot</option>
+                          <option value="13">JVD</option>
+                          <option value="14">Bleeding</option>
+                          <option value="15">Pain</option>
+                        </select>
+                        <label data-te-select-label-ref>Select as many items as apply</label>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center">
+                      <div class="text-center mb-3 w-1/5">
+                        <label class="mb-0">Right Arm</label>
+                      </div>
+                      <div class="relative mb-3 w-4/5">
+                        <select data-te-select-init multiple class="w-full">
+                          <option value="1">Deformity</option>
+                          <option value="2">Contusion</option>
+                          <option value="3">Abrasion</option>
+                          <option value="4">Puncture</option>
+                          <option value="5">Burn</option>
+                          <option value="6">Tenderness</option>
+                          <option value="7">Laceration</option>
+                          <option value="8">Swelling</option>
+                          <option value="9">Edema</option>
+                          <option value="10">Battle Sign </option>
+                          <option value="11">Racoon Eye</option>
+                          <option value="12">Gunshot</option>
+                          <option value="13">JVD</option>
+                          <option value="14">Bleeding</option>
+                          <option value="15">Pain</option>
+                        </select>
+                        <label data-te-select-label-ref>Select as many items as apply</label>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center">
+                      <div class="text-center mb-3 w-1/5">
+                        <label class="mb-0">Left Leg</label>
+                      </div>
+                      <div class="relative mb-3 w-4/5">
+                        <select data-te-select-init multiple class="w-full">
+                          <option value="1">Deformity</option>
+                          <option value="2">Contusion</option>
+                          <option value="3">Abrasion</option>
+                          <option value="4">Puncture</option>
+                          <option value="5">Burn</option>
+                          <option value="6">Tenderness</option>
+                          <option value="7">Laceration</option>
+                          <option value="8">Swelling</option>
+                          <option value="9">Edema</option>
+                          <option value="10">Battle Sign </option>
+                          <option value="11">Racoon Eye</option>
+                          <option value="12">Gunshot</option>
+                          <option value="13">JVD</option>
+                          <option value="14">Bleeding</option>
+                          <option value="15">Pain</option>
+                        </select>
+                        <label data-te-select-label-ref>Select as many items as apply</label>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center">
+                      <div class="text-center mb-3 w-1/5">
+                        <label class="mb-0">Right Leg</label>
+                      </div>
+                      <div class="relative mb-3 w-4/5">
+                        <select data-te-select-init multiple class="w-full">
+                          <option value="1">Deformity</option>
+                          <option value="2">Contusion</option>
+                          <option value="3">Abrasion</option>
+                          <option value="4">Puncture</option>
+                          <option value="5">Burn</option>
+                          <option value="6">Tenderness</option>
+                          <option value="7">Laceration</option>
+                          <option value="8">Swelling</option>
+                          <option value="9">Edema</option>
+                          <option value="10">Battle Sign </option>
+                          <option value="11">Racoon Eye</option>
+                          <option value="12">Gunshot</option>
+                          <option value="13">JVD</option>
+                          <option value="14">Bleeding</option>
+                          <option value="15">Pain</option>
+                        </select>
+                        <label data-te-select-label-ref>Select as many items as apply</label>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </li>
+
+            <!--Burn Percentage-->
+            <li data-te-stepper-step-ref class="w-[4.5rem] flex-auto">
+              <div
+                data-te-stepper-head-ref
+                class="flex cursor-pointer items-center pr-2 leading-[1.3rem] no-underline before:mr-2 before:h-px before:w-full before:flex-1 before:bg-[#e0e0e0] before:content-[''] hover:bg-[#f9f9f9] focus:outline-none dark:before:bg-neutral-600 dark:after:bg-neutral-600 dark:hover:bg-[#3b3b3b]"
+              >
+                <span
+                  data-te-stepper-head-icon-ref
+                  class="my-6 mr-2 flex h-[1.938rem] w-[1.938rem] items-center justify-center rounded-full bg-[#ebedef] text-sm font-medium text-[#40464f]"
+                >
+                  5
+                </span>
+                <span
+                  data-te-stepper-head-text-ref
+                  class="text-neutral-500 after:flex after:text-[0.8rem] after:content-[data-content] dark:text-neutral-300"
+                >
+                  Burn...
                 </span>
               </div>
 
@@ -1734,120 +2699,13 @@
                           />
                         </div>
                       </div>
-                      <div>
-                        <h4 class="mb-3 font-bold text-center">Right</h4>
-                        <div
-                          class="relative mb-4 col-span-1"
-                        >
-                          <input
-                            v-model="right_pearl"
-                            type="checkbox"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                        <div
-                          class="relative mb-4 col-span-1"
-                        >
-                          <input
-                            v-model="right_dilated"
-                            type="checkbox"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                        <div
-                          class="relative mb-4 col-span-1"
-                        >
-                          <input
-                            v-model="right_constrict"
-                            type="checkbox"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                        <div
-                          class="relative mb-4 col-span-1"
-                        >
-                          <input
-                            v-model="right_non_reactive"
-                            type="checkbox"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                        <div
-                          class="relative mb-4 col-span-1"
-                        >
-                          <input
-                            v-model="right_cataract"
-                            type="checkbox"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                      </div>
-
-                      <div class="relative mr-1 left-2 top-4 col-span-2">
-                        <select
-                          data-te-select-init
-                          v-model="skin_color"
-                          class="bg-neutral-50"
-                        >
-                          <option selected value="2">Skin Color</option>
-                          <option value="normal">Normal</option>
-                          <option value="cyanotic">Cyanotic</option>
-                          <option value="pale">Pale</option>
-                          <option value="flushed">Flushed</option>
-                          <option value="jaundice">Jaundice</option>
-                        </select>
-                      </div>
-
-                      <div class="relative mr-2 left-3 top-4 col-span-1">
-                        <select
-                          data-te-select-init
-                          v-model="eyes"
-                          class="bg-neutral-50"
-                        >
-                          <option selected value="2">Eyes</option>
-                          <option value="spontaneous">4 - Spontaneous</option>
-                          <option value="verbal">3 - Verbal</option>
-                          <option value="pain">2 - Pain</option>
-                          <option value="none">1 - None</option>
-                        </select>
-                      </div>
-
-                      <div class="relative mr-2 left-3 top-4 col-span-2">
-                        <select
-                          data-te-select-init
-                          v-model="verbal"
-                          class="bg-neutral-50"
-                        >
-                          <option selected value="2"> Verbal</option>
-                          <option value="oriented">5 - Oriented</option>
-                          <option value="confused">4 - Confused</option>
-                          <option value="inappropriate word">3 - Inappropriate words</option>
-                          <option value="incomprehensible sounds">2 - Incomprehensible sounds</option>
-                          <option value="none">1 - None</option>
-                        </select>
-                      </div>
-
-                      <div class="relative mr-2 left-3 top-4 col-span-2 place-content-start">
-                        <select
-                          data-te-select-init
-                          v-model="motor"
-                          class="bg-neutral-50"
-                        >
-                          <option selected value="2">Motor</option>
-                          <option value="obeys command">6 - Obeys Command</option>
-                          <option value="localize pain">5 - Localize Pain</option>
-                          <option value="withdraws to pain">4 -  Withdraws to Pain</option>
-                          <option value="abnormal flexion">3 - Abnormal Flexion </option>
-                          <option value="abnormal extension">2 - Abnormal Extension </option>
-                          <option value="none">1 - None</option>
-                        </select>
-                      </div>
-
+               
                     </div>
                   </form>
                 </div>
               </div>
             </li>
+
 
             <!--Obstetric History-->
             <li data-te-stepper-step-ref class="w-[4.5rem] flex-auto">
@@ -1859,7 +2717,7 @@
                   data-te-stepper-head-icon-ref
                   class="my-6 mr-2 flex h-[1.938rem] w-[1.938rem] items-center justify-center rounded-full bg-[#ebedef] text-sm font-medium text-[#40464f]"
                 >
-                  4
+                  6
                 </span>
                 <span
                   data-te-stepper-head-text-ref
@@ -2089,7 +2947,7 @@
                   data-te-stepper-head-icon-ref
                   class="my-6 mr-2 flex h-[1.938rem] w-[1.938rem] items-center justify-center rounded-full bg-[#ebedef] text-sm font-medium text-[#40464f]"
                 >
-                  5
+                  7
                 </span>
                 <span
                   data-te-stepper-head-text-ref
@@ -2324,7 +3182,7 @@
                   data-te-stepper-head-icon-ref
                   class="my-6 mr-2 flex h-[1.938rem] w-[1.938rem] items-center justify-center rounded-full bg-[#ebedef] text-sm font-medium text-[#40464f]"
                 >
-                  6
+                  8
                 </span>
                 <span
                   data-te-stepper-head-text-ref

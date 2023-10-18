@@ -3,6 +3,9 @@ export const state = () => ({
   editPatientStepperForm: false,
   editPatientStepperFormFields: [],
   editPatientStepperFormArg: undefined,
+  editEmrModalXl: false,
+  editEmrModalXlFields: [],
+  editEmrModalXlArg: undefined,
 })
 
 
@@ -18,7 +21,13 @@ export const getters = {
   },
   getEditPatientStepperFormArg(state) {
     return state.editPatientStepperFormArg;
-  }
+  },
+  getEditEmrModalXlArg(state) {
+    return state.editEmrModalXlArg;
+  },
+  getEditEmrModalXlFields(state) {
+    return state.editEmrModalXlFields;
+  },
 };
 
 export const mutations = {
@@ -33,6 +42,15 @@ export const mutations = {
   },
   setEditPatientStepperFormArg(state, value) {
     state.editPatientStepperFormArg = value;
+  },
+  setEditEmrModalXl(state, value) {
+    state.editEmrModalXl = value;
+  },
+  setEditEmrModalXlFields(state, value) {
+    state.editEmrModalXlFields = value;
+  },
+  setEditEmrModalXlArg(state, value) {
+    state.editEmrModalXlArg = value;
   }
 }
 
@@ -43,6 +61,14 @@ export const actions = {
       .then((response) => {
         const pcr = response.data.return;
           context.commit('setEditPatientStepperFormFields', pcr)
+      })
+  },
+  getSingleUser(context, params) {
+    return this.$axios
+      .get('user/single?id=' + params.id)
+      .then((response) => {
+        const user = response.data.return;
+        context.commit('setEditEmrModalXlFields', user)
       })
   }
 }

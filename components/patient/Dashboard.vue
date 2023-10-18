@@ -66,7 +66,7 @@
       </vue-good-table>
       <PatientForm v-if="role === 'dispatcher'" />
       <PatientStepperForm v-if="role === 'emr'" />
-      <EditPatientStepperForm v-if="role === 'emr'" />
+      <EditPatientStepperForm />
     </div>
   </div>
 </template>
