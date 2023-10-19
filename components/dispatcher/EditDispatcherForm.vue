@@ -4,9 +4,9 @@
     data-te-backdrop="static"
     data-te-keyboard="false"
     class="fixed left-0 top-10 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
-    id="editEmrModalXl"
+    id="editDispatcherModalXl"
     tabindex="-1"
-    aria-labelledby="editEmrModalXl"
+    aria-labelledby="editDispatcherModalXl"
     aria-modal="true"
     role="dialog"
   >
@@ -23,9 +23,9 @@
           <!--Modal title-->
           <h5
             class="text-xl font-medium leading-normal text-neutral-800 dark:text-neutral-200"
-            id="emrModalXllLabel"
+            id="dispatcherModalXllLabel"
           >
-            EMR Details
+            Dispatcher Details
           </h5>
           <!--Close button-->
           <button
@@ -95,9 +95,9 @@
                   class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                 >
                   First Name
-                  <small class="text-red-600 font-bold">
+                  <span class="text-red-600 font-bold">
                     *
-                  </small>
+                  </span>
                 </label>
               </div>
 
@@ -109,6 +109,7 @@
                   id="midName"
                   aria-describedby="midName"
                   placeholder="Middle Name"
+                  required
                 />
                 <label
                   for="midName"
@@ -133,9 +134,9 @@
                   class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                 >
                   Last Name
-                  <small class="text-red-600 font-bold">
+                  <span class="text-red-600 font-bold">
                     *
-                  </small>
+                  </span>
                 </label>
               </div>
 
@@ -144,7 +145,7 @@
                 class="w-full bg-neutral-50"
                 required
               >
-                <option >Gender
+                <option selected>Gender
                   <span class="text-red-600 font-bold">
                     *
                   </span>
@@ -170,9 +171,9 @@
                   class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                 >
                   Birthdate
-                  <small class="text-red-600 font-bold">
+                  <span class="text-red-600 font-bold">
                     *
-                  </small>
+                  </span>
                 </label>
               </div>
 
@@ -200,12 +201,11 @@
               <select
                 v-model="team_id"
                 data-te-select-init
-                class="w-full bg-gray-100 cursor-not-allowed"
-                disabled
+                class="w-full bg-neutral-50"
                 required
+                disabled
               >
-                <option selected value="0">
-                  Team
+                <option selected value="1">Team
                   <span class="text-red-600 font-bold">
                     *
                   </span>
@@ -220,22 +220,19 @@
               </select>
 
               <select v-model="city" class="bg-neutral-50">
-                <option value="Valenzuela">City of Valenzuela
-                  <small class="text-red-600 font-bold">
-                    *
-                  </small>
-                </option>
+                <option value="Valenzuela">City of Valenzuela</option>
               </select>
 
               <select
                 v-model="barangay"
                 class="bg-neutral-50"
                 required
+
               >
                 <option selected value="1">Select Barangay
-                  <small class="text-red-600 font-bold">
+                  <span class="text-red-600 font-bold">
                     *
-                  </small>
+                  </span>
                 </option>
                 <option value="Arkong Bato">Arkong Bato</option>
                 <option value="Bagbaguin">Bagbaguin</option>
@@ -315,15 +312,11 @@
               <div
                 class="relative mb-1 bg-neutral-50"
                 data-te-input-wrapper-init
-                required
               >
                 <span
                   class="absolute left-3 top-1/2 transform -translate-y-1/2 text-neutral-500"
                 >
-                  +63
-                  <span class="text-red-600 font-bold">
-                    *
-                  </span>
+                  +63*
                 </span>
                 <input
                   v-model="phone"
@@ -359,57 +352,6 @@
                   </span>
                 </label>
               </div>
-
-              <h6
-                class="mb-1 mt-2 ml-1 text-base font-medium leading-tight text-secondary col-span-3"
-              >
-                Emergency Contact Person
-              </h6>
-
-              <div class="relative mb-1 col-span-2" data-te-input-wrapper-init>
-                <input
-                  v-model="emergency_contact"
-                  type="text"
-                  class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                  id="emergency_contact"
-                  aria-describedby="fullName"
-                  placeholder="Full Name"
-                  required
-                />
-                <label
-                  for="emergency_contact"
-                  class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                >
-                  Full Name
-                  <span class="text-red-600 font-bold">
-                    *
-                  </span>
-                </label>
-              </div>
-
-              <div
-                class="relative mb-1 bg-neutral-50"
-                data-te-input-wrapper-init
-                required
-              >
-                <span
-                  class="absolute left-3 top-1/2 transform -translate-y-1/2 text-neutral-500"
-                >
-                  +63 *
-
-                </span>
-                <input
-                  v-model="ecp_phone"
-                  type="tel"
-                  id="ecpContactNumber"
-                  name="ecpContactNumber"
-                  class="peer block min-h-[auto] w-full pl-10 rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                  pattern="[0-9]*"
-                  inputmode="numeric"
-                  maxlength="11"
-                  required
-                />
-              </div>
             </div>
           </form>
         </div>
@@ -436,8 +378,8 @@ import { Modal, initTE, Ripple, Input, Datepicker, Select } from "tw-elements";
 export default {
   data() {
     return {
-      emrFields: [],
-      role: "emr",
+      dispatcherFields: [],
+      role: "dispatcher",
       id: "",
       suffix: "",
       first_name: "",
@@ -469,40 +411,38 @@ export default {
     initTE({ Ripple, Modal, Input, Datepicker, Select });
   },
   watch: {
-    '$store.state.editEmrModalXlArg'() {
-      if (this.$store.getters['getEditEmrModalXlArg'] !== undefined) {
+    '$store.state.editDispatcherModalXlArg'() {
+      if (this.$store.getters['getEditDispatcherModalXlArg'] !== undefined) {
         const params = {
-          id: this.$store.getters['getEditEmrModalXlArg'],
+          id: this.$store.getters['getEditDispatcherModalXlArg'],
         }
 
-        this.$store.dispatch('getSingleEmr', params);
+        this.$store.dispatch('getSingleDispatcher', params);
       }
     },
-    '$store.state.editEmrModalXlFields'() {
-      this.emrFields = this.$store.getters['getEditEmrModalXlFields'];
-      this.id = this.emrFields.id;
-      this.suffix = this.emrFields.suffix;
-      this.first_name = this.emrFields.first_name;
-      this.middle_name = this.emrFields.middle_name;
-      this.last_name = this.emrFields.last_name;
-      this.gender = this.emrFields.gender;
-      this.birthdate = this.emrFields.birthdate;
-      this.age = this.emrFields.age;
-      this.team_id = this.emrFields.team_id;
-      this.city = this.emrFields.address.city;
-      this.street = this.emrFields.address.street;
-      this.barangay = this.emrFields.address.barangay;
-      this.zip = this.emrFields.address.zip;
-      this.phone = this.emrFields.phone;
-      this.email = this.emrFields.email;
-      this.emergency_contact = this.emrFields.emergency_contact;
-      this.ecp_phone = this.emrFields.ecp_phone;
+    '$store.state.editDispatcherModalXlFields'() {
+      this.dispatcherFields = this.$store.getters['getEditDispatcherModalXlFields'];
+      this.id = this.dispatcherFields.id;
+      this.suffix = this.dispatcherFields.suffix;
+      this.first_name = this.dispatcherFields.first_name;
+      this.middle_name = this.dispatcherFields.middle_name;
+      this.last_name = this.dispatcherFields.last_name;
+      this.gender = this.dispatcherFields.gender;
+      this.birthdate = this.dispatcherFields.birthdate;
+      this.age = this.dispatcherFields.age;
+      this.team_id = this.dispatcherFields.team_id;
+      this.city = this.dispatcherFields.address.city;
+      this.street = this.dispatcherFields.address.street;
+      this.barangay = this.dispatcherFields.address.barangay;
+      this.zip = this.dispatcherFields.address.zip;
+      this.phone = this.dispatcherFields.phone;
+      this.email = this.dispatcherFields.email;
     }
   },
   methods: {
     hideModal() {
-      this.$store.commit('setEditEmrModalXl', false);
-      this.$store.commit('setEditEmrModalXlArg', undefined);
+      this.$store.commit('setEditDispatcherModalXl', false);
+      this.$store.commit('setEditDispatcherModalXlArg', undefined);
     },
     update() {
       const params = {
@@ -521,9 +461,7 @@ export default {
         city: this.city,
         barangay: this.barangay,
         street: this.street,
-        zip: this.zip,
-        emergency_contact: this.emergency_contact,
-        ecp_phone: this.ecp_phone,
+        zip: this.zip
       };
 
       this.$nuxt.$loading.start();
@@ -538,16 +476,15 @@ export default {
           this.gender = "";
           this.phone = "";
           this.birthdate = "";
+          this.age = "";
           this.email = "";
-          this.role = "emr";
+          this.role = "dispatcher";
           this.team_id = "0";
           this.city = "Valenzuela";
           this.barangay = "";
           this.street = "";
           this.zip = "";
-          this.age = "";
-          this.emergency_contact = "";
-          this.ecp_phone = "";
+          this.$emit("refresh");
           location.reload();
         })
         .finally(() => {

@@ -2493,6 +2493,7 @@
           class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md border-t-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50 min-[0px]:rounded-none"
         >
           <button
+            v-if="role !== 'head'"
             @click="clear"
             type="button"
             class="ml-1 inline-block rounded border border-slate-400 bg-slate-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out hover:bg-slate-300 hover:border-slate-400 hover:bg-slate-300 focus:bg-slate-300 focus:shadow-[0_4px_9px_-4px_#3b71ca] focus:ring-0 active:bg-slate-300"
@@ -2502,6 +2503,7 @@
             CLEAR
           </button>
           <button
+            v-if="role !== 'head'"
             @click="update"
             type="button"
             class="inline-block ml-4 rounded bg-[#30AD62] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white  transition duration-150 ease-in-out hover:bg-green-700 focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
@@ -2530,6 +2532,7 @@ import {
 export default {
   data() {
     return {
+      role: '',
       patientStepperFormFields: [],
       teams: [],
       id: "",
@@ -2673,6 +2676,7 @@ export default {
     };
   },
   fetch() {
+    this.role = this.$auth.user.role;
     this.$axios.get("team/list").then((response) => {
       response.data.return.map((team) =>
         this.teams.push({ id: team.id, name: this.capitalize(team.name) })
