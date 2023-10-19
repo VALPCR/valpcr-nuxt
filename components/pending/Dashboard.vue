@@ -225,7 +225,7 @@ export default {
           arrival: pcr.arrived_at,
           ambulance: pcr.ambulance !== null ? pcr.ambulance : '',
           created: pcr.user_pcr.user.first_name + ' ' + pcr.user_pcr.user.last_name + ' (' + (pcr.user_pcr.user.role === 'emr' ? 'Responder' : 'Dispatcher') + ')',
-          category: pcr.category,
+          category: this.capitalize(pcr.category),
         })
       );
     });
@@ -243,6 +243,9 @@ export default {
       this.$store.commit('setEditPatientStepperForm', true);
       this.$store.commit('setEditPatientStepperFormArg', params.row.id);
       editModal.show();
+    },
+    capitalize(word) {
+      return word.replace(/^\w/, (c) => c.toUpperCase());
     },
   }
 };
