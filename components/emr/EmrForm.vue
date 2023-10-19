@@ -200,6 +200,7 @@
                 data-te-select-init
                 class="w-full bg-neutral-50"
                 required
+                disabled
               >
                 <option selected value="1">
                   Team
@@ -463,6 +464,7 @@ export default {
     };
   },
   fetch() {
+    this.team_id = this.$auth.user.team_id;
     this.$axios.get("team/list").then((response) => {
       response.data.return.map((team) =>
         this.teams.push({ id: team.id, name: this.capitalize(team.name) })
@@ -475,7 +477,7 @@ export default {
   methods: {
     register() {
       const params = {
-        team_id: parseInt(this.team_id),
+        team_id: parseInt(this.$auth.user.team_id),
         suffix: this.suffix,
         first_name: this.first_name,
         middle_name: this.middle_name,
