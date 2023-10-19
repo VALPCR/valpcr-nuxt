@@ -2696,7 +2696,7 @@ export default {
       if (this.$store.getters['getEditPatientStepperFormArg'] !== undefined) {
         const params = {
           id: this.$store.getters['getEditPatientStepperFormArg'],
-          emrId: this.$auth.user.id
+          emrId: this.$auth.user.role === 'emr' ? this.$auth.user.id : 0
         }
         this.$store.dispatch('getSinglePcr', params);
       }
