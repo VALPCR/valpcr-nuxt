@@ -23,7 +23,7 @@
             class="text-xl font-medium leading-normal text-neutral-800 dark:text-neutral-200"
             id="emrModalXllLabel"
           >
-            EMR Registration
+            EMR Details
           </h5>
           <!--Close button-->
           <button
