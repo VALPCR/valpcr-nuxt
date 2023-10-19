@@ -2381,10 +2381,11 @@
                         />
                         <label
                          
-                          class="mb-0 text-blue-700 font-medium text-sm px-5 py-2.5 text-center hover:text-white focus:text-white dark:text-blue-700 dark:focus:text-white"
+                          class="absolute mb-0 text-blue-700 font-medium text-sm px-5 py-2.5 text-center hover:text-white focus:text-white dark:text-blue-700 dark:focus:text-white"
                           >1st Degree
                         </label>
 
+                      
                         
                   
                        
