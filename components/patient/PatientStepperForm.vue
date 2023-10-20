@@ -2856,7 +2856,7 @@
                   <div
                     class="grid grid-col-2 sm:grid-cols-2 gap-3"
                   >
-                    <div class="relative mb-1" data-te-input-wrapper-init>
+                    <div class="relative mb-5" data-te-input-wrapper-init>
                       <input
                         v-model="medical_facility"
                         type="text"
@@ -2886,6 +2886,42 @@
                     </div>
                   </div>
                 </div>
+
+                <div
+                  class="grid grid-col-2 sm:grid-cols-2 gap-3"
+                >
+                  <div class="relative mb-1" data-te-input-wrapper-init>
+                    <input
+                      v-model="team_leader"
+                      type="text"
+                      class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                      id="teamLead"
+                      aria-describedby="teamLead"
+                      placeholder="Team Leader"
+                    />
+                    <label
+                      for="teamLead"
+                      class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                    >
+                      Team Leader
+                    </label>
+                  </div>
+
+                  <div class="relative mb-3">
+                    <vue-signature
+                      ref="team_leader_signature"
+                      :w="'600px'"
+                      :h="'200px'"
+                    />
+                    <label
+                      class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                    >Signature Here
+                    </label>
+                  </div>
+                </div>
+
+
+
 
                 <div
                   class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
@@ -2953,38 +2989,8 @@
                   </div>
                 </div>
 
-                <div
-                  class="grid grid-col-2 sm:grid-cols-2 gap-3"
-                >
-                  <div class="relative mb-1" data-te-input-wrapper-init>
-                    <input
-                      v-model="team_leader"
-                      type="text"
-                      class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                      id="teamLead"
-                      aria-describedby="teamLead"
-                      placeholder="Team Leader"
-                    />
-                    <label
-                      for="teamLead"
-                      class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                    >
-                      Team Leader
-                    </label>
-                  </div>
 
-                  <div class="relative mb-3">
-                    <vue-signature
-                      ref="team_leader_signature"
-                      :w="'600px'"
-                      :h="'200px'"
-                    />
-                    <label
-                      class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                    >Signature Here
-                    </label>
-                  </div>
-                </div>
+
               </div>
             </li>
           </ul>
