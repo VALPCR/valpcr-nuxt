@@ -17,7 +17,7 @@
       <div
         class="pointer-events-auto relative flex flex-wrap space-x-4 p-4 w-full overflow-x-auto flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600"
       >
-        
+
         <!-- Start of Dispatch Data -->
         <div class="flex justify-between mx-4 mt-4">
           <!--Modal title-->
@@ -52,7 +52,7 @@
           </button>
         </div>
 
-        
+
         <div class="mx-4">
           <ul
             data-te-stepper-init
@@ -145,7 +145,7 @@
                               Incident Location
                             </label>
                         </div>
-                        
+
                         <label class="left-5 top-5 mb-0 font-bold">
                           Type of Response:
                         </label>
@@ -162,7 +162,6 @@
                             <option value="va">Vehicular Accident</option>
                             <option value="mt">Medical Transport</option>
                           </select>
-                        
 
                           <div
                           class="relative mb-1"
@@ -1251,7 +1250,7 @@
                           </label>
                         </div>
                       </div>
-                      
+
                       <!--SEVERITY-->
                       <div class="col-span-2">
                         <select
@@ -1288,7 +1287,7 @@
                         </div>
                       </div>
 
-                      
+
 
 
                       <!-- TIME -->
@@ -1889,9 +1888,9 @@
                         <label class="mb-0">Head</label>
                       </div>
                       <div class="relative mb-3 w-4/5">
-                        <select 
+                        <select
                           v-model="anterior_head_injury"
-                          data-te-select-init multiple 
+                          data-te-select-init multiple
                           class="w-full"
                         >
 
@@ -1923,9 +1922,9 @@
                         <label class="mb-0">Chest/Lungs</label>
                       </div>
                       <div class="relative mb-3 w-4/5">
-                        <select 
+                        <select
                           v-model="anterior_chest_injury"
-                          data-te-select-init multiple 
+                          data-te-select-init multiple
                           class="w-full"
                         >
                           <option value="1">Deformity</option>
@@ -1953,9 +1952,9 @@
                         <label class="mb-0">Pelvis/GU</label>
                       </div>
                       <div class="relative mb-3 w-4/5">
-                        <select 
+                        <select
                           v-model="anterior_pelvis_injury"
-                          data-te-select-init multiple 
+                          data-te-select-init multiple
                           class="w-full"
                         >
                           <option value="1">Deformity</option>
@@ -1983,9 +1982,9 @@
                         <label class="mb-0">Left Arm</label>
                       </div>
                       <div class="relative mb-3 w-4/5">
-                        <select 
+                        <select
                           v-model="anterior_left_arm_injury"
-                          data-te-select-init multiple 
+                          data-te-select-init multiple
                           class="w-full"
                         >
                           <option value="1">Deformity</option>
@@ -2013,9 +2012,9 @@
                         <label class="mb-0">Right Arm</label>
                       </div>
                       <div class="relative mb-3 w-4/5">
-                        <select 
+                        <select
                           v-model="anterior_right_arm_injury"
-                          data-te-select-init multiple 
+                          data-te-select-init multiple
                           class="w-full"
                         >
                           <option value="1">Deformity</option>
@@ -2043,9 +2042,9 @@
                         <label class="mb-0">Left Leg</label>
                       </div>
                       <div class="relative mb-3 w-4/5">
-                        <select 
+                        <select
                           v-model="anterior_left_leg_injury"
-                          data-te-select-init multiple 
+                          data-te-select-init multiple
                           class="w-full"
                         >
                           <option value="1">Deformity</option>
@@ -2073,9 +2072,9 @@
                         <label class="mb-0">Right Leg</label>
                       </div>
                       <div class="relative mb-3 w-4/5">
-                        <select 
+                        <select
                           v-model="anterior_right_leg_injury"
-                          data-te-select-init multiple 
+                          data-te-select-init multiple
                           class="w-full"
                         >
                           <option value="1">Deformity</option>
@@ -2103,9 +2102,9 @@
                         <label class="mb-0">Genitalia</label>
                       </div>
                       <div class="relative mb-3 w-4/5">
-                        <select 
+                        <select
                           v-model="anterior_genitalia_injury"
-                          data-te-select-init multiple 
+                          data-te-select-init multiple
                           class="w-full"
                         >
                           <option value="1">Deformity</option>
@@ -2127,17 +2126,17 @@
                         <label data-te-select-label-ref>Select as many items as apply</label>
                       </div>
                     </div>
-                    
-                    
+
+
                     <h4 class="mb-4 font-bold">Posterior</h4>
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
                         <label class="mb-0">Head</label>
                       </div>
                       <div class="relative mb-3 w-4/5">
-                        <select 
+                        <select
                           v-model="posterior_head_injury"
-                          data-te-select-init multiple 
+                          data-te-select-init multiple
                           class="w-full"
                         >
                           <option value="1">Deformity</option>
@@ -2165,9 +2164,9 @@
                         <label class="mb-0">Chest/Lungs</label>
                       </div>
                       <div class="relative mb-3 w-4/5">
-                        <select 
+                        <select
                           v-model="posterior_chest_injury"
-                          data-te-select-init multiple 
+                          data-te-select-init multiple
                           class="w-full"
                         >
                           <option value="1">Deformity</option>
@@ -2195,9 +2194,9 @@
                         <label class="mb-0">Pelvis/GU</label>
                       </div>
                       <div class="relative mb-3 w-4/5">
-                        <select 
+                        <select
                           v-model="posterior_pelvis_injury"
-                          data-te-select-init multiple 
+                          data-te-select-init multiple
                           class="w-full"
                         >
                           <option value="1">Deformity</option>
@@ -2225,9 +2224,9 @@
                         <label class="mb-0">Left Arm</label>
                       </div>
                       <div class="relative mb-3 w-4/5">
-                        <select 
+                        <select
                           v-model="posterior_left_arm_injury"
-                          data-te-select-init multiple 
+                          data-te-select-init multiple
                           class="w-full"
                         >
                           <option value="1">Deformity</option>
@@ -2255,9 +2254,9 @@
                         <label class="mb-0">Right Arm</label>
                       </div>
                       <div class="relative mb-3 w-4/5">
-                        <select 
+                        <select
                           v-model="posterior_right_arm_injury"
-                          data-te-select-init multiple 
+                          data-te-select-init multiple
                           class="w-full"
                         >
                           <option value="1">Deformity</option>
@@ -2285,9 +2284,9 @@
                         <label class="mb-0">Left Leg</label>
                       </div>
                       <div class="relative mb-3 w-4/5">
-                        <select 
+                        <select
                           v-model="posterior_left_leg_injury"
-                          data-te-select-init multiple 
+                          data-te-select-init multiple
                           class="w-full"
                         >
                           <option value="1">Deformity</option>
@@ -2315,9 +2314,9 @@
                         <label class="mb-0">Right Leg</label>
                       </div>
                       <div class="relative mb-3 w-4/5">
-                        <select 
+                        <select
                           v-model="posterior_right_leg_injury"
-                          data-te-select-init multiple 
+                          data-te-select-init multiple
                           class="w-full"
                         >
                           <option value="1">Deformity</option>
@@ -2380,20 +2379,20 @@
                           v-model="anterior_head_degree"
                           type="button"
                           class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
-                        
+
                         />
                         <label
-                         
+
                           class="absolute mb-0 text-blue-700 font-medium text-sm px-5 py-2.5 text-center hover:text-white focus:text-white dark:text-blue-700 dark:focus:text-white"
                           >1st Degree
                         </label>
 
-                      
-                        
-                  
-                       
 
-                      
+
+
+
+
+
 
 
                       </div>
@@ -2475,8 +2474,8 @@
                         <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">3rd Degree</button>
                       </div>
                     </div>
-                    
-                    
+
+
                     <h4 class="mb-4 font-bold">Posterior</h4>
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
@@ -2817,11 +2816,14 @@
                 data-te-stepper-content-ref
                 class="absolute left-0 w-full translate-x-[150%] p-4 transition-all duration-500 ease-in-out"
               >
-              <div class="relative mb-1" data-te-input-wrapper-init>
+                <div
+                  class="grid grid-col-2 sm:grid-cols-2 gap-3"
+                >
+                  <div class="relative mb-1" data-te-input-wrapper-init>
                     <input
                       v-model="received_by"
                       type="text"
-                      class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                      class="peer block min-h-[auto] rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                       id="receivedBy"
                       aria-describedby="receivedBy"
                       placeholder="Received By"
@@ -2833,51 +2835,64 @@
                       Received By
                     </label>
                   </div>
-                  <div class="relative mb-3" data-te-input-wrapper-init>
-                    <textarea
-                      v-model="received_by_signature"
-                      class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                      rows="4"></textarea>
-                    <label
-                      class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                      >Signature Here
-                    </label>
-                  </div>
 
-                  <h4 class="mb-3 mt-7 font-bold">R.A. 8344 REFUSAL TO ADMIT</h4>
-
-                  <div class="relative mb-1" data-te-input-wrapper-init>
-                    <input
-                      v-model="medical_facility"
-                      type="text"
-                      class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                      id="medFac"
-                      aria-describedby="receivedBy"
-                      placeholder="Medical Facility"
+                  <div class="relative mb-3">
+                    <vue-signature
+                      ref="received_by_signature"
+                      :w="'600px'"
+                      :h="'200px'"
                     />
                     <label
-                      for="medFac"
                       class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                     >
-                      Medical Facility
+                      Signature Here
                     </label>
                   </div>
+                </div>
 
-                  <div class="relative mb-3" data-te-input-wrapper-init>
-                    <textarea
-                      v-model="medical_facility_signature"
-                      class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                      rows="4"></textarea>
-                    <label
-                      class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                <div>
+                  <h4 class="mb-3 mt-7 font-bold">R.A. 8344 REFUSAL TO ADMIT</h4>
+
+                  <div
+                    class="grid grid-col-2 sm:grid-cols-2 gap-3"
+                  >
+                    <div class="relative mb-1" data-te-input-wrapper-init>
+                      <input
+                        v-model="medical_facility"
+                        type="text"
+                        class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        id="medFac"
+                        aria-describedby="receivedBy"
+                        placeholder="Medical Facility"
+                      />
+                      <label
+                        for="medFac"
+                        class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                      >
+                        Medical Facility
+                      </label>
+                    </div>
+
+                    <div class="relative mb-3">
+                      <vue-signature
+                        ref="medical_facility_signature"
+                        :w="'600px'"
+                        :h="'200px'"
+                      />
+                      <label
+                        class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                       >Signature Here
-                    </label>
+                      </label>
+                    </div>
                   </div>
+                </div>
 
-
+                <div
+                  class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
+                >
                   <h4 class="mb-3 mt-7 font-bold">SUPPLIES USED</h4>
-                  <div class="grid grid-cols-8 space-x-2">
-                      <div class="relative mb-3 col-span-1" data-te-input-wrapper-init>
+                  <div class="grid grid-cols-4 space-x-2">
+                    <div class="relative mb-3 col-span-1" data-te-input-wrapper-init>
                       <input
                         v-model="gloves"
                         type="number"
@@ -2887,11 +2902,11 @@
                       <label
                         for="gloves"
                         class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                        >Gloves
+                      >Gloves
                       </label>
                     </div>
 
-                    <div class="relative mb-3  col-span-1" data-te-input-wrapper-init>
+                    <div class="relative mb-3 col-span-1" data-te-input-wrapper-init>
                       <input
                         v-model="gauze"
                         type="number"
@@ -2901,11 +2916,11 @@
                       <label
                         for="gauze"
                         class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                        >Gauze
+                      >Gauze
                       </label>
                     </div>
 
-                    <div class="relative mb-3  col-span-1" data-te-input-wrapper-init>
+                    <div class="relative mb-3 col-span-1" data-te-input-wrapper-init>
                       <input
                         v-model="mask"
                         type="number"
@@ -2915,30 +2930,32 @@
                       <label
                         for="mask"
                         class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                        >Mask
+                      >Mask
                       </label>
                     </div>
 
-                    <div class="relative mb-1" data-te-input-wrapper-init>
-                    <input
-                      v-model="others"
-                      type="text"
-                      class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                      id="others"
-                      aria-describedby="others"
-                      placeholder="others"
-                    />
-                    <label
-                      for="others"
-                      class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                    >
-                      Others:
-                    </label>
+                    <div class="relative mb-3 col-span-1" data-te-input-wrapper-init>
+                      <input
+                        v-model="others"
+                        type="text"
+                        class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        id="others"
+                        aria-describedby="others"
+                        placeholder="others"
+                      />
+                      <label
+                        for="others"
+                        class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                      >
+                        Others:
+                      </label>
+                    </div>
                   </div>
+                </div>
 
-                  </div>
-
-
+                <div
+                  class="grid grid-col-2 sm:grid-cols-2 gap-3"
+                >
                   <div class="relative mb-1" data-te-input-wrapper-init>
                     <input
                       v-model="team_leader"
@@ -2956,29 +2973,18 @@
                     </label>
                   </div>
 
-                  <div class="relative mb-3" data-te-input-wrapper-init>
-                    <textarea
-                      v-model="team_leader_signature"
-                      class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                      rows="4"></textarea>
+                  <div class="relative mb-3">
+                    <vue-signature
+                      ref="team_leader_signature"
+                      :w="'600px'"
+                      :h="'200px'"
+                    />
                     <label
                       class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                      >Signature Here
+                    >Signature Here
                     </label>
                   </div>
-                  <h5 class="fw-bold">Have a saved signature?</h5>
-                  <div class="mb-3">
-                    <label
-                      for="formFile"
-                      class="mb-2 inline-block text-neutral-700 dark:text-neutral-200"
-                      >Upload Your Signature Here</label
-                    >
-                    <input
-                      class="relative m-0 block w-full min-w-0 flex-auto rounded border border-solid border-neutral-300 bg-clip-padding px-3 py-[0.32rem] text-base font-normal text-neutral-700 transition duration-300 ease-in-out file:-mx-3 file:-my-[0.32rem] file:overflow-hidden file:rounded-none file:border-0 file:border-solid file:border-inherit file:bg-neutral-100 file:px-3 file:py-[0.32rem] file:text-neutral-700 file:transition file:duration-150 file:ease-in-out file:[border-inline-end-width:1px] file:[margin-inline-end:0.75rem] hover:file:bg-neutral-200 focus:border-primary focus:text-neutral-700 focus:shadow-te-primary focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:file:bg-neutral-700 dark:file:text-neutral-100 dark:focus:border-primary"
-                      type="file"
-                      id="formFile" />
-                  </div>
-
+                </div>
               </div>
             </li>
           </ul>
@@ -3526,11 +3532,11 @@ export default {
         applied_aed: this.applied_aed,
         problems: this.problems,
         received_by: this.received_by,
-        received_by_signature: this.received_by_signature,
+        received_by_signature: this.$refs.received_by_signature.save(),
         medical_facility: this.medical_facility,
-        medical_facility_signature: this.medical_facility_signature,
+        medical_facility_signature: this.$refs.medical_facility_signature.save(),
         team_leader: this.team_leader,
-        team_leader_signature: this.team_leader_signature,
+        team_leader_signature: this.$refs.team_leader_signature.save(),
         gloves: this.gloves,
         mask: this.mask,
         gauze: this.gauze,

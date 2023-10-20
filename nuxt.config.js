@@ -33,6 +33,7 @@ export default {
     { src: "~/plugins/jsPDF" },
     { src: "~/plugins/fontawesome.js" },
     { src: "~/plugins/datatable.js" },
+    { src: "~/plugins/vueSignature.js" },
     { src: "~/plugins/chart.js", mode: "client" },
     { src: "~/plugins/echo.js", mode: "client" },
   ],
