@@ -1855,7 +1855,6 @@
               </div>
             </li>
 
-
             <!--Body Injuries-->
             <li data-te-stepper-step-ref class="w-[4.5rem] flex-auto">
               <div
@@ -2372,26 +2371,13 @@
                         <label class="mb-0">Head</label>
                       </div>
                       <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
-                        <input
-                          v-model="anterior_head_degree"
+                        <button
                           type="button"
-                          class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
-
-                        />
-                        <label
-
-                          class="absolute mb-0 text-blue-700 font-medium text-sm px-5 py-2.5 text-center hover:text-white focus:text-white dark:text-blue-700 dark:focus:text-white"
-                          >1st Degree
-                        </label>
-
-
-
-
-
-
-
-
-
+                          :class="`text-blue-700 border border-blue-700 ${anterior_head_degree ? 'focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800' : ''} font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500`"
+                          @click="clickAnterior()"
+                        >
+                        1st Degree
+                        </button>
                       </div>
                     </div>
 
@@ -3181,6 +3167,7 @@ export default {
       gauze: "",
       others: "",
       selectedButton: null,
+      anterior_head_degree: false,
     };
   },
   fetch() {
@@ -3384,6 +3371,9 @@ export default {
       this.mask = "";
       this.gauze = "";
       this.others = "";
+    },
+    clickAnterior() {
+      this.anterior_head_degree = !this.anterior_head_degree;
     },
     register() {
       const params = {
