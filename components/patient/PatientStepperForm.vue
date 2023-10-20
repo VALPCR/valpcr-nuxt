@@ -1888,7 +1888,12 @@
                         <label class="mb-0">Head</label>
                       </div>
                       <div class="relative mb-3 w-4/5">
-                        <select data-te-select-init multiple class="w-full">
+                        <select
+                          v-model="anterior_head_injury"
+                          data-te-select-init multiple
+                          class="w-full"
+                        >
+
                           <option value="1">Deformity</option>
                           <option value="2">Contusion</option>
                           <option value="3">Abrasion</option>
@@ -1914,7 +1919,11 @@
                         <label class="mb-0">Chest/Lungs</label>
                       </div>
                       <div class="relative mb-3 w-4/5">
-                        <select data-te-select-init multiple class="w-full">
+                        <select
+                          v-model="anterior_chest_injury"
+                          data-te-select-init multiple
+                          class="w-full"
+                        >
                           <option value="1">Deformity</option>
                           <option value="2">Contusion</option>
                           <option value="3">Abrasion</option>
@@ -1940,7 +1949,11 @@
                         <label class="mb-0">Pelvis/GU</label>
                       </div>
                       <div class="relative mb-3 w-4/5">
-                        <select data-te-select-init multiple class="w-full">
+                        <select
+                          v-model="anterior_pelvis_injury"
+                          data-te-select-init multiple
+                          class="w-full"
+                        >
                           <option value="1">Deformity</option>
                           <option value="2">Contusion</option>
                           <option value="3">Abrasion</option>
@@ -1966,7 +1979,11 @@
                         <label class="mb-0">Left Arm</label>
                       </div>
                       <div class="relative mb-3 w-4/5">
-                        <select data-te-select-init multiple class="w-full">
+                        <select
+                          v-model="anterior_left_arm_injury"
+                          data-te-select-init multiple
+                          class="w-full"
+                        >
                           <option value="1">Deformity</option>
                           <option value="2">Contusion</option>
                           <option value="3">Abrasion</option>
@@ -1992,7 +2009,11 @@
                         <label class="mb-0">Right Arm</label>
                       </div>
                       <div class="relative mb-3 w-4/5">
-                        <select data-te-select-init multiple class="w-full">
+                        <select
+                          v-model="anterior_right_arm_injury"
+                          data-te-select-init multiple
+                          class="w-full"
+                        >
                           <option value="1">Deformity</option>
                           <option value="2">Contusion</option>
                           <option value="3">Abrasion</option>
@@ -2018,7 +2039,11 @@
                         <label class="mb-0">Left Leg</label>
                       </div>
                       <div class="relative mb-3 w-4/5">
-                        <select data-te-select-init multiple class="w-full">
+                        <select
+                          v-model="anterior_left_leg_injury"
+                          data-te-select-init multiple
+                          class="w-full"
+                        >
                           <option value="1">Deformity</option>
                           <option value="2">Contusion</option>
                           <option value="3">Abrasion</option>
@@ -2044,7 +2069,11 @@
                         <label class="mb-0">Right Leg</label>
                       </div>
                       <div class="relative mb-3 w-4/5">
-                        <select data-te-select-init multiple class="w-full">
+                        <select
+                          v-model="anterior_right_leg_injury"
+                          data-te-select-init multiple
+                          class="w-full"
+                        >
                           <option value="1">Deformity</option>
                           <option value="2">Contusion</option>
                           <option value="3">Abrasion</option>
@@ -2070,7 +2099,11 @@
                         <label class="mb-0">Genitalia</label>
                       </div>
                       <div class="relative mb-3 w-4/5">
-                        <select data-te-select-init multiple class="w-full">
+                        <select
+                          v-model="anterior_genitalia_injury"
+                          data-te-select-init multiple
+                          class="w-full"
+                        >
                           <option value="1">Deformity</option>
                           <option value="2">Contusion</option>
                           <option value="3">Abrasion</option>
@@ -2098,7 +2131,11 @@
                         <label class="mb-0">Head</label>
                       </div>
                       <div class="relative mb-3 w-4/5">
-                        <select data-te-select-init multiple class="w-full">
+                        <select
+                          v-model="posterior_head_injury"
+                          data-te-select-init multiple
+                          class="w-full"
+                        >
                           <option value="1">Deformity</option>
                           <option value="2">Contusion</option>
                           <option value="3">Abrasion</option>
@@ -2124,7 +2161,11 @@
                         <label class="mb-0">Chest/Lungs</label>
                       </div>
                       <div class="relative mb-3 w-4/5">
-                        <select data-te-select-init multiple class="w-full">
+                        <select
+                          v-model="posterior_chest_injury"
+                          data-te-select-init multiple
+                          class="w-full"
+                        >
                           <option value="1">Deformity</option>
                           <option value="2">Contusion</option>
                           <option value="3">Abrasion</option>
@@ -2150,7 +2191,11 @@
                         <label class="mb-0">Pelvis/GU</label>
                       </div>
                       <div class="relative mb-3 w-4/5">
-                        <select data-te-select-init multiple class="w-full">
+                        <select
+                          v-model="posterior_pelvis_injury"
+                          data-te-select-init multiple
+                          class="w-full"
+                        >
                           <option value="1">Deformity</option>
                           <option value="2">Contusion</option>
                           <option value="3">Abrasion</option>
@@ -2176,7 +2221,11 @@
                         <label class="mb-0">Left Arm</label>
                       </div>
                       <div class="relative mb-3 w-4/5">
-                        <select data-te-select-init multiple class="w-full">
+                        <select
+                          v-model="posterior_left_arm_injury"
+                          data-te-select-init multiple
+                          class="w-full"
+                        >
                           <option value="1">Deformity</option>
                           <option value="2">Contusion</option>
                           <option value="3">Abrasion</option>
@@ -2202,7 +2251,11 @@
                         <label class="mb-0">Right Arm</label>
                       </div>
                       <div class="relative mb-3 w-4/5">
-                        <select data-te-select-init multiple class="w-full">
+                        <select
+                          v-model="posterior_right_arm_injury"
+                          data-te-select-init multiple
+                          class="w-full"
+                        >
                           <option value="1">Deformity</option>
                           <option value="2">Contusion</option>
                           <option value="3">Abrasion</option>
@@ -2228,7 +2281,11 @@
                         <label class="mb-0">Left Leg</label>
                       </div>
                       <div class="relative mb-3 w-4/5">
-                        <select data-te-select-init multiple class="w-full">
+                        <select
+                          v-model="posterior_left_leg_injury"
+                          data-te-select-init multiple
+                          class="w-full"
+                        >
                           <option value="1">Deformity</option>
                           <option value="2">Contusion</option>
                           <option value="3">Abrasion</option>
@@ -2254,7 +2311,11 @@
                         <label class="mb-0">Right Leg</label>
                       </div>
                       <div class="relative mb-3 w-4/5">
-                        <select data-te-select-init multiple class="w-full">
+                        <select
+                          v-model="posterior_right_leg_injury"
+                          data-te-select-init multiple
+                          class="w-full"
+                        >
                           <option value="1">Deformity</option>
                           <option value="2">Contusion</option>
                           <option value="3">Abrasion</option>
@@ -2305,631 +2366,188 @@
               >
                 <div class="relative p-4">
                   <form>
-                    <div
-                      class="grid grid-cols-6"
-                    >
-                      <div class="">
-                        <h4 class="mb-3 font-bold">Time</h4>
-                        <div
-                          class="relative mb-2"
-                          data-te-input-wrapper-init
-                          data-te-timepicker-init
-                          @click.stop="setTimeA"
-                        >
-                          <input
-                            v-model="time_a"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            aria-describedby="vTime"
-                          />
-                        </div>
-                        <div
-                          class="relative mb-2"
-                          data-te-input-wrapper-init
-                          data-te-timepicker-init
-                          @click.stop="setTimeB"
-                        >
-                          <input
-                            v-model="time_b"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            aria-describedby="vTime"
-                          />
-                        </div>
-                        <div
-                          class="relative mb-2"
-                          data-te-input-wrapper-init
-                          data-te-timepicker-init
-                          @click.stop="setTimeC"
-                        >
-                          <input
-                            v-model="time_c"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            aria-describedby="vTime"
-                          />
-                        </div>
-                        <div
-                          class="relative mb-2"
-                          data-te-input-wrapper-init
-                          data-te-timepicker-init
-                          @click.stop="setTimeD"
-                        >
-                          <input
-                            v-model="time_d"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            aria-describedby="vTime"
-                          />
-                        </div>
-                        <div
-                          class="relative mb-2"
-                          data-te-input-wrapper-init
-                          data-te-timepicker-init
-                          @click.stop="setTimeE"
-                        >
-                          <input
-                            v-model="time_e"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            aria-describedby="vTime"
-                          />
-                        </div>
+                    <h4 class="mb-4 font-bold">Anterior</h4>
+                    <div class="flex items-center">
+                      <div class="text-center mb-3 w-1/5">
+                        <label class="mb-0">Head</label>
                       </div>
-                      <div class="">
-                        <h4 class="mb-3 font-bold">BP</h4>
-                        <div
-                          class="relative mb-2"
-                          data-te-input-wrapper-init
-                        >
-                          <input
-                            v-model="bp_a"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                        <div
-                          class="relative mb-2"
-                          data-te-input-wrapper-init
-                        >
-                          <input
-                            v-model="bp_b"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                        <div
-                          class="relative mb-2"
-                          data-te-input-wrapper-init
-                        >
-                          <input
-                            v-model="bp_c"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                        <div
-                          class="relative mb-2"
-                          data-te-input-wrapper-init
-                        >
-                          <input
-                            v-model="bp_d"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                        <div
-                          class="relative mb-2"
-                          data-te-input-wrapper-init
-                        >
-                          <input
-                            v-model="bp_e"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                      </div>
-                      <div class="">
-                        <h4 class="mb-3 font-bold">PR</h4>
-                        <div
-                          class="relative mb-2"
-                          data-te-input-wrapper-init
-                        >
-                          <input
-                            v-model="pr_a"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                        <div
-                          class="relative mb-2"
-                          data-te-input-wrapper-init
-                        >
-                          <input
-                            v-model="pr_b"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                        <div
-                          class="relative mb-2"
-                          data-te-input-wrapper-init
-                        >
-                          <input
-                            v-model="pr_c"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                        <div
-                          class="relative mb-2"
-                          data-te-input-wrapper-init
-                        >
-                          <input
-                            v-model="pr_d"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                        <div
-                          class="relative mb-2"
-                          data-te-input-wrapper-init
-                        >
-                          <input
-                            v-model="pr_e"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                      </div>
-                      <div class="">
-                        <h4 class="mb-3 font-bold">RR</h4>
-                        <div
-                          class="relative mb-2"
-                          data-te-input-wrapper-init
-                        >
-                          <input
-                            v-model="rr_a"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                        <div
-                          class="relative mb-2"
-                          data-te-input-wrapper-init
-                        >
-                          <input
-                            v-model="rr_b"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                        <div
-                          class="relative mb-2"
-                          data-te-input-wrapper-init
-                        >
-                          <input
-                            v-model="rr_c"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                        <div
-                          class="relative mb-2"
-                          data-te-input-wrapper-init
-                        >
-                          <input
-                            v-model="rr_d"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                        <div
-                          class="relative mb-2"
-                          data-te-input-wrapper-init
-                        >
-                          <input
-                            v-model="rr_e"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                      </div>
-                      <div class="">
-                        <h4 class="mb-3 font-bold">Temp.</h4>
-                        <div
-                          class="relative mb-2"
-                          data-te-input-wrapper-init
-                        >
-                          <input
-                            v-model="tempt_a"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                        <div
-                          class="relative mb-2"
-                          data-te-input-wrapper-init
-                        >
-                          <input
-                            v-model="tempt_b"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                        <div
-                          class="relative mb-2"
-                          data-te-input-wrapper-init
-                        >
-                          <input
-                            v-model="tempt_c"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                        <div
-                          class="relative mb-2"
-                          data-te-input-wrapper-init
-                        >
-                          <input
-                            v-model="tempt_d"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                        <div
-                          class="relative mb-2"
-                          data-te-input-wrapper-init
-                        >
-                          <input
-                            v-model="tempt_e"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                      </div>
-                      <div class="">
-                        <h4 class="mb-3 font-bold">SPO2</h4>
-                        <div
-                          class="relative mb-2"
-                          data-te-input-wrapper-init
-                        >
-                          <input
-                            v-model="spo2_a"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                        <div
-                          class="relative mb-2"
-                          data-te-input-wrapper-init
-                        >
-                          <input
-                            v-model="spo2_b"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                        <div
-                          class="relative mb-2"
-                          data-te-input-wrapper-init
-                        >
-                          <input
-                            v-model="spo2_c"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                        <div
-                          class="relative mb-2"
-                          data-te-input-wrapper-init
-                        >
-                          <input
-                            v-model="spo2_d"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                        <div
-                          class="relative mb-2"
-                          data-te-input-wrapper-init
-                        >
-                          <input
-                            v-model="spo2_e"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
+                      <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
+                        <input
+                          v-model="anterior_head_degree"
+                          type="button"
+                          class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+
+                        />
+                        <label
+
+                          class="absolute mb-0 text-blue-700 font-medium text-sm px-5 py-2.5 text-center hover:text-white focus:text-white dark:text-blue-700 dark:focus:text-white"
+                          >1st Degree
+                        </label>
+
+
+
+
+
+
+
+
+
                       </div>
                     </div>
-                    <div class="grid grid-cols-10">
-                      <div>
-                        <h4 class="mb-3 font-bold">Pupil</h4>
-                        <h5 class="relative mb-1 font-small col-span-1 text-gray-700">Pearl</h5>
-                        <h5 class="relative mb-1 font-small col-span-1 text-gray-700">Dilated</h5>
-                        <h5 class="relative mb-1 font-small col-span-1 text-gray-700">Constricted</h5>
-                        <h5 class="relative mb-1 font-small col-span-1 text-gray-700">Non-reactive</h5>
-                        <h5 class="relative mb-1 font-small col-span-1 text-gray-700">Cataract</h5>
-                      </div>
-                      <div>
-                        <h4 class="mb-4 font-bold text-center">Left</h4>
-                        <div
-                          class="relative mb-3 col-span-1"
-                        >
-                          <input
-                            v-model="left_pearl"
-                            type="checkbox"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                        <div
-                          class="relative mb-4 col-span-1"
-                        >
-                          <input
-                            v-model="left_dilated"
-                            type="checkbox"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                        <div
-                          class="relative mb-4 col-span-1"
-                        >
-                          <input
-                            v-model="left_constrict"
-                            type="checkbox"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                        <div
-                          class="relative mb-4 col-span-1"
-                        >
-                          <input
-                            v-model="left_non_reactive"
-                            type="checkbox"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                        <div
-                          class="relative mb-4 col-span-1"
-                        >
-                          <input
-                            v-model="left_cataract"
-                            type="checkbox"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                      </div>
 
+                    <div class="flex items-center">
+                      <div class="text-center mb-3 w-1/5">
+                        <label class="mb-0">Chest/Lungs</label>
+                      </div>
+                      <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
+                        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">1st Degree</button>
+                        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">2nd Degree</button>
+                        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">3rd Degree</button>
+                      </div>
                     </div>
-                  </form>
-                </div>
-              </div>
-            </li>
 
-
-            <!--Obstetric History-->
-            <li data-te-stepper-step-ref class="w-[4.5rem] flex-auto">
-              <div
-                data-te-stepper-head-ref
-                class="flex cursor-pointer items-center pr-2 leading-[1.3rem] no-underline before:mr-2 before:h-px before:w-full before:flex-1 before:bg-[#e0e0e0] before:content-[''] hover:bg-[#f9f9f9] focus:outline-none dark:before:bg-neutral-600 dark:after:bg-neutral-600 dark:hover:bg-[#3b3b3b]"
-              >
-                <span
-                  data-te-stepper-head-icon-ref
-                  class="my-6 mr-2 flex h-[1.938rem] w-[1.938rem] items-center justify-center rounded-full bg-[#ebedef] text-sm font-medium text-[#40464f]"
-                >
-                  6
-                </span>
-                <span
-                  data-te-stepper-head-text-ref
-                  class="text-neutral-500 after:flex after:text-[0.8rem] after:content-[data-content] dark:text-neutral-300"
-                >
-                  Obstetric...
-                </span>
-              </div>
-              <div
-                data-te-stepper-content-ref
-                class="absolute left-0 w-full translate-x-[150%] p-4 transition-all duration-500 ease-in-out"
-              >
-                <div class="relative p-4">
-                  <form>
-                    <div
-                      class="grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-4"
-                    >
-                      <div
-                        class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
-                      >
-                        <input
-                          v-model="prenatal_checkup"
-                          class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
-                          type="checkbox"
-                          value=""
-                          id="prenCheckup"
-                        />
-                        <label
-                          class="inline-block pl-[0.15rem] hover:cursor-pointer"
-                          for="prenCheckup"
-                        >
-                          Prenatal Checkup
-                        </label>
+                    <div class="flex items-center">
+                      <div class="text-center mb-3 w-1/5">
+                        <label class="mb-0">Pelvis/GU</label>
                       </div>
-
-                      <div
-                        class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
-                      >
-                        <input
-                          v-model="labor_pains"
-                          class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
-                          type="checkbox"
-                          value=""
-                          id="labPains"
-                        />
-                        <label
-                          class="inline-block pl-[0.15rem] hover:cursor-pointer"
-                          for="labPains"
-                        >
-                          Labor Pains
-                        </label>
+                      <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
+                        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">1st Degree</button>
+                        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">2nd Degree</button>
+                        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">3rd Degree</button>
                       </div>
+                    </div>
 
-                      <div class="relative mb-1" data-te-input-wrapper-init>
-                        <input
-                          v-model="last_menstrual_period"
-                          type="date"
-                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          id="lastMens"
-                          aria-describedby="lastMens"
-                          placeholder="Last Menstrual Period"
-                        />
-                        <label
-                          for="lastMens"
-                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                        >
-                          Last Menstrual Period
-                        </label>
+                    <div class="flex items-center">
+                      <div class="text-center mb-3 w-1/5">
+                        <label class="mb-0">Left Arm</label>
                       </div>
-
-                      <div class="relative mb-1" data-te-input-wrapper-init>
-                        <input
-                          v-model="estimated_date_of_delivery"
-                          type="date"
-                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          id="estDateDelivery"
-                          aria-describedby="estDateDelivery"
-                          placeholder="Estimated Date of Delivery"
-                        />
-                        <label
-                          for="estDateDelivery"
-                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                        >
-                          Estimated Date of Delivery
-                        </label>
+                      <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
+                        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">1st Degree</button>
+                        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">2nd Degree</button>
+                        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">3rd Degree</button>
                       </div>
+                    </div>
 
-                      <!-- MISSING AGE OF GESTATION FIELD -->
-
-                      <div
-                        class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
-                      >
-                        <input
-                          v-model="gravidity"
-                          class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
-                          type="checkbox"
-                          value=""
-                          id="gravidity"
-                        />
-                        <label
-                          class="inline-block pl-[0.15rem] hover:cursor-pointer"
-                          for="gravidity"
-                        >
-                          Gravidity
-                        </label>
+                    <div class="flex items-center">
+                      <div class="text-center mb-3 w-1/5">
+                        <label class="mb-0">Right Arm</label>
                       </div>
-
-                      <div
-                        class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
-                      >
-                        <input
-                          v-model="parity"
-                          class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
-                          type="checkbox"
-                          value=""
-                          id="parity"
-                        />
-                        <label
-                          class="inline-block pl-[0.15rem] hover:cursor-pointer"
-                          for="parity"
-                        >
-                          Parity
-                          <div
-                            class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
-                          >
-                            <input
-                              v-model="term_of_birth"
-                              class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
-                              type="checkbox"
-                              value=""
-                              id="termBirth"
-                            />
-                            <label
-                              class="inline-block pl-[0.15rem] hover:cursor-pointer"
-                              for="termBirth"
-                            >
-                              term birth
-                            </label>
-                          </div>
-
-                          <div
-                            class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
-                          >
-                            <input
-                              v-model="pre_term"
-                              class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
-                              type="checkbox"
-                              value=""
-                              id="preTerm"
-                            />
-                            <label
-                              class="inline-block pl-[0.15rem] hover:cursor-pointer"
-                              for="termBirth"
-                            >
-                              pre term
-                            </label>
-                          </div>
-
-                          <div
-                            class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
-                          >
-                            <input
-                              v-model="abortion"
-                              class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
-                              type="checkbox"
-                              value=""
-                              id="abortion"
-                            />
-                            <label
-                              class="inline-block pl-[0.15rem] hover:cursor-pointer"
-                              for="abortion"
-                            >
-                              abortion
-                            </label>
-                          </div>
-
-                          <div
-                            class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
-                          >
-                            <input
-                              v-model="living"
-                              class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
-                              type="checkbox"
-                              value=""
-                              id="living"
-                            />
-                            <label
-                              class="inline-block pl-[0.15rem] hover:cursor-pointer"
-                              for="living"
-                            >
-                              living
-                            </label>
-                          </div>
-                        </label>
+                      <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
+                        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">1st Degree</button>
+                        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">2nd Degree</button>
+                        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">3rd Degree</button>
                       </div>
+                    </div>
 
-                      <div
-                        class="relative mb-1 col-span-2 row-span-2"
-                        data-te-input-wrapper-init
-                      >
-                        <textarea
-                          v-model="obs_remarks"
-                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          id="remarks"
-                          aria-describedby="remarks"
-                        >
-                        </textarea>
-                        <label
-                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                        >
-                          Remarks
-                        </label>
+                    <div class="flex items-center">
+                      <div class="text-center mb-3 w-1/5">
+                        <label class="mb-0">Left Leg</label>
+                      </div>
+                      <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
+                        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">1st Degree</button>
+                        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">2nd Degree</button>
+                        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">3rd Degree</button>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center">
+                      <div class="text-center mb-3 w-1/5">
+                        <label class="mb-0">Right Leg</label>
+                      </div>
+                      <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
+                        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">1st Degree</button>
+                        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">2nd Degree</button>
+                        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">3rd Degree</button>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center">
+                      <div class="text-center mb-3 w-1/5">
+                        <label class="mb-0">Genitalia</label>
+                      </div>
+                      <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
+                        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">1st Degree</button>
+                        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">2nd Degree</button>
+                        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">3rd Degree</button>
+                      </div>
+                    </div>
+
+
+                    <h4 class="mb-4 font-bold">Posterior</h4>
+                    <div class="flex items-center">
+                      <div class="text-center mb-3 w-1/5">
+                        <label class="mb-0">Head</label>
+                      </div>
+                      <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
+                        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">1st Degree</button>
+                        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">2nd Degree</button>
+                        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">3rd Degree</button>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center">
+                      <div class="text-center mb-3 w-1/5">
+                        <label class="mb-0">Chest/Lungs</label>
+                      </div>
+                      <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
+                        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">1st Degree</button>
+                        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">2nd Degree</button>
+                        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">3rd Degree</button>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center">
+                      <div class="text-center mb-3 w-1/5">
+                        <label class="mb-0">Pelvis/GU</label>
+                      </div>
+                      <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
+                        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">1st Degree</button>
+                        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">2nd Degree</button>
+                        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">3rd Degree</button>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center">
+                      <div class="text-center mb-3 w-1/5">
+                        <label class="mb-0">Left Arm</label>
+                      </div>
+                      <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
+                        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">1st Degree</button>
+                        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">2nd Degree</button>
+                        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">3rd Degree</button>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center">
+                      <div class="text-center mb-3 w-1/5">
+                        <label class="mb-0">Right Arm</label>
+                      </div>
+                      <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
+                        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">1st Degree</button>
+                        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">2nd Degree</button>
+                        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">3rd Degree</button>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center">
+                      <div class="text-center mb-3 w-1/5">
+                        <label class="mb-0">Left Leg</label>
+                      </div>
+                      <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
+                        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">1st Degree</button>
+                        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">2nd Degree</button>
+                        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">3rd Degree</button>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center">
+                      <div class="text-center mb-3 w-1/5">
+                        <label class="mb-0">Right Leg</label>
+                      </div>
+                      <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
+                        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">1st Degree</button>
+                        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">2nd Degree</button>
+                        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">3rd Degree</button>
                       </div>
                     </div>
                   </form>
@@ -3562,6 +3180,7 @@ export default {
       mask: "",
       gauze: "",
       others: "",
+      selectedButton: null,
     };
   },
   fetch() {
@@ -3624,6 +3243,9 @@ export default {
     },
     capitalize(word) {
       return word.replace(/^\w/, (c) => c.toUpperCase());
+    },
+    selectButton(button) {
+      this.selectedButton = button;
     },
     clear() {
       this.category = "";
