@@ -1912,6 +1912,9 @@
                           <option value="15">Pain</option>
                         </select>
                         <label data-te-select-label-ref>Select as many items as apply</label>
+                        <ul>
+                          <li v-for="option in anterior_head_injury" :key="option">{{ option }}</li>
+                        </ul>
                       </div>
                     </div>
 
@@ -3174,7 +3177,21 @@ export default {
       mask: "",
       gauze: "",
       others: "",
-      selectedButton: null,
+      anterior_head_injury: [],
+      anterior_chest_injury: [],
+      anterior_pelvis_injury: [],
+      anterior_left_arm_injury: [],
+      anterior_right_arm_injury: [],
+      anterior_left_leg_injury: [],
+      anterior_right_leg_injury: [],
+      anterior_genitalia_injury: [],
+      posterior_head_injury: [],
+      posterior_chest_injury: [],
+      posterior_pelvis_injury: [],
+      posterior_left_arm_injury: [],
+      posterior_right_arm_injury: [],
+      posterior_left_leg_injury: [],
+      posterior_right_leg_injury: [],
     };
   },
   fetch() {
@@ -3518,6 +3535,22 @@ export default {
         mask: this.mask,
         gauze: this.gauze,
         others: this.others,
+        anterior_head_injury: this.anterior_head_injury,
+        anterior_chest_injury: this.anterior_chest_injury,
+        anterior_pelvis_injury: this.anterior_pelvis_injury,
+        anterior_left_arm_injury: this.anterior_left_arm_injury,
+        anterior_right_arm_injury: this.anterior_right_arm_injury,
+        anterior_left_leg_injury: this.anterior_left_leg_injury,
+        anterior_right_leg_injury: this.anterior_right_leg_injury,
+        anterior_genitalia_injury: this.anterior_genitalia_injury,
+        posterior_head_injury: this.posterior_head_injury,
+        posterior_chest_injury: this.posterior_chest_injury,
+        posterior_pelvis_injury: this.posterior_pelvis_injury,
+        posterior_left_arm_injury: this.posterior_left_arm_injury,
+        posterior_right_arm_injury: this.posterior_right_arm_injury,
+        posterior_left_leg_injury: this.posterior_left_leg_injury,
+        posterior_right_leg_injury: this.posterior_right_leg_injury,
+        
       };
 
       this.$axios.post("pcr/emr/register", params).then(() => {
@@ -3657,6 +3690,21 @@ export default {
         this.mask = "";
         this.gauze = "";
         this.others = "";
+        this.anterior_head_injury = "";
+        this.anterior_chest_injury = "";
+        this.anterior_pelvis_injury = "";
+        this.anterior_left_arm_injury = "";
+        this.anterior_right_arm_injury = "";
+        this.anterior_left_leg_injury = "";
+        this.anterior_right_leg_injury = "";
+        this.anterior_genitalia_injury = "";
+        this.posterior_head_injury = "";
+        this.posterior_chest_injury = "";
+        this.posterior_pelvis_injury = "";
+        this.posterior_left_arm_injury = "";
+        this.posterior_right_arm_injury = "";
+        this.posterior_left_leg_injury = "";
+        this.posterior_right_leg_injury = "";
         location.reload();
       });
     },
