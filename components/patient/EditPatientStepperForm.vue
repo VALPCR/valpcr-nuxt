@@ -2341,11 +2341,31 @@
                     </label>
                   </div>
 
-                  <div class="relative mb-3">
+                  <div v-if="received_by_signature !== ''" class="relative mb-3">
                     <img :src="received_by_signature" alt="Image" height="auto" width="600px" />
                     <label
                       class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                     >Signature Here
+                    </label>
+                    <button
+                      v-if="received_by_signature !== ''"
+                      class="ml-1 inline-block rounded border border-slate-400 bg-slate-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out hover:bg-slate-300 hover:border-slate-400 hover:bg-slate-300 focus:bg-slate-300 focus:shadow-[0_4px_9px_-4px_#3b71ca] focus:ring-0 active:bg-slate-300"
+                      @click="received_by_signature = ''"
+                    >
+                      Clear
+                    </button>
+                  </div>
+
+                  <div v-if="received_by_signature === ''" class="relative mb-3">
+                    <vue-signature
+                      ref="received_by_signature"
+                      :w="'600px'"
+                      :h="'200px'"
+                    />
+                    <label
+                      class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                    >
+                      Signature Here
                     </label>
                   </div>
                 </div>
@@ -2372,11 +2392,32 @@
                       </label>
                     </div>
 
-                    <div class="relative mb-3">
+                    <div v-if="medical_facility_signature !== ''" class="relative mb-3">
                       <img :src="medical_facility_signature" alt="Image" height="auto" width="600px" />
                       <label
                         class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                      >Signature Here
+                      >
+                        Signature Here
+                      </label>
+                      <button
+                        v-if="medical_facility_signature !== ''"
+                        class="ml-1 inline-block rounded border border-slate-400 bg-slate-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out hover:bg-slate-300 hover:border-slate-400 hover:bg-slate-300 focus:bg-slate-300 focus:shadow-[0_4px_9px_-4px_#3b71ca] focus:ring-0 active:bg-slate-300"
+                        @click="medical_facility_signature = ''"
+                      >
+                        Clear
+                      </button>
+                    </div>
+
+                    <div v-if="medical_facility_signature === ''" class="relative mb-3">
+                      <vue-signature
+                        ref="medical_facility_signature"
+                        :w="'600px'"
+                        :h="'200px'"
+                      />
+                      <label
+                        class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                      >
+                        Signature Here
                       </label>
                     </div>
                   </div>
@@ -2468,11 +2509,32 @@
                     </label>
                   </div>
 
-                  <div class="relative mb-3">
+                  <div v-if="team_leader_signature !== ''" class="relative mb-3">
                     <img :src="team_leader_signature" alt="Image" height="auto" width="600px" />
                     <label
                       class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                    >Signature Here
+                    >
+                      Signature Here
+                    </label>
+                    <button
+                      v-if="team_leader_signature !== ''"
+                      class="ml-1 inline-block rounded border border-slate-400 bg-slate-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out hover:bg-slate-300 hover:border-slate-400 hover:bg-slate-300 focus:bg-slate-300 focus:shadow-[0_4px_9px_-4px_#3b71ca] focus:ring-0 active:bg-slate-300"
+                      @click="team_leader_signature = ''"
+                    >
+                      Clear
+                    </button>
+                  </div>
+
+                  <div v-if="team_leader_signature === ''" class="relative mb-3">
+                    <vue-signature
+                      ref="team_leader_signature"
+                      :w="'600px'"
+                      :h="'200px'"
+                    />
+                    <label
+                      class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                    >
+                      Signature Here
                     </label>
                   </div>
                 </div>
@@ -3152,11 +3214,11 @@ export default {
         applied_aed: this.applied_aed,
         problems: this.problems,
         received_by: this.received_by,
-        received_by_signature: this.received_by_signature,
+        received_by_signature: this.$refs.received_by_signature.save(),
         medical_facility: this.medical_facility,
-        medical_facility_signature: this.medical_facility_signature,
+        medical_facility_signature: this.$refs.medical_facility_signature.save(),
         team_leader: this.team_leader,
-        team_leader_signature: this.team_leader_signature,
+        team_leader_signature: this.$refs.team_leader_signature.save(),
         gloves: this.gloves,
         mask: this.mask,
         gauze: this.gauze,
