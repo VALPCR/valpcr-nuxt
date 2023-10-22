@@ -9,8 +9,7 @@ export const state = () => ({
   editDispatcherModalXl: false,
   editDispatcherModalXlFields: [],
   editDispatcherModalXlArg: undefined,
-})
-
+});
 
 export const getters = {
   getAddPatientStepperForm(state) {
@@ -69,32 +68,28 @@ export const mutations = {
   },
   setEditDispatcherModalXlArg(state, value) {
     state.editDispatcherModalXlArg = value;
-  }
-}
+  },
+};
 
 export const actions = {
   getSinglePcr(context, params) {
     return this.$axios
-      .get('pcr/single?id=' + params.id + '&emrId=' + params.emrId)
+      .get("pcr/single?id=" + params.id + "&emrId=" + params.emrId)
       .then((response) => {
         const pcr = response.data.return;
-          context.commit('setEditPatientStepperFormFields', pcr)
-      })
+        context.commit("setEditPatientStepperFormFields", pcr);
+      });
   },
   getSingleEmr(context, params) {
-    return this.$axios
-      .get('user/single?id=' + params.id)
-      .then((response) => {
-        const user = response.data.return;
-        context.commit('setEditEmrModalXlFields', user)
-      })
+    return this.$axios.get("user/single?id=" + params.id).then((response) => {
+      const user = response.data.return;
+      context.commit("setEditEmrModalXlFields", user);
+    });
   },
   getSingleDispatcher(context, params) {
-    return this.$axios
-      .get('user/single?id=' + params.id)
-      .then((response) => {
-        const user = response.data.return;
-        context.commit('setEditDispatcherModalXlFields', user)
-      })
-  }
-}
+    return this.$axios.get("user/single?id=" + params.id).then((response) => {
+      const user = response.data.return;
+      context.commit("setEditDispatcherModalXlFields", user);
+    });
+  },
+};

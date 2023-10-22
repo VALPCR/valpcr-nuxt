@@ -187,7 +187,11 @@
                 <input
                   v-model="va_location"
                   type="text"
-                  :class="`peer block min-h-[auto] w-full rounded border-0 ${ems_location_a !== 'va' ? 'bg-gray-100 cursor-not-allowed' : 'bg-transparent' } px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0`"
+                  :class="`peer block min-h-[auto] w-full rounded border-0 ${
+                    ems_location_a !== 'va'
+                      ? 'bg-gray-100 cursor-not-allowed'
+                      : 'bg-transparent'
+                  } px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0`"
                   id="vaLocation"
                   aria-describedby="vaLocation"
                   placeholder="V.A Location"
@@ -205,7 +209,11 @@
                 <input
                   v-model="va_location_barangay"
                   type="text"
-                  :class="`peer block min-h-[auto] w-full rounded border-0 ${ems_location_a !== 'va' ? 'bg-gray-100 cursor-not-allowed' : 'bg-transparent' } px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0`"
+                  :class="`peer block min-h-[auto] w-full rounded border-0 ${
+                    ems_location_a !== 'va'
+                      ? 'bg-gray-100 cursor-not-allowed'
+                      : 'bg-transparent'
+                  } px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0`"
                   id="vaLocationBarangay"
                   aria-describedby="vaLocationBarangay"
                   placeholder="Barangay"
@@ -264,7 +272,11 @@
                 <input
                   v-model="involved_vehicles_a"
                   type="text"
-                  :class="`relative m-0 block w-1/4 min-w-0 flex-auto rounded-l border border-solid border-neutral-300 ${ems_location_a !== 'va' ? 'bg-gray-100 cursor-not-allowed' : 'bg-transparent' } bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary`"
+                  :class="`relative m-0 block w-1/4 min-w-0 flex-auto rounded-l border border-solid border-neutral-300 ${
+                    ems_location_a !== 'va'
+                      ? 'bg-gray-100 cursor-not-allowed'
+                      : 'bg-transparent'
+                  } bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary`"
                   placeholder="Involved Vehicle(s)"
                   aria-label="involvedVehicles"
                   :disabled="ems_location_a !== 'va'"
@@ -277,7 +289,11 @@
                 <input
                   v-model="involved_vehicles_b"
                   type="text"
-                  :class="`relative m-0 block w-1/4 min-w-0 flex-auto rounded-l border border-solid border-neutral-300 ${ems_location_a !== 'va' ? 'bg-gray-100 cursor-not-allowed' : 'bg-transparent' } bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary`"
+                  :class="`relative m-0 block w-1/4 min-w-0 flex-auto rounded-l border border-solid border-neutral-300 ${
+                    ems_location_a !== 'va'
+                      ? 'bg-gray-100 cursor-not-allowed'
+                      : 'bg-transparent'
+                  } bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary`"
                   placeholder="Involved Vehicle(s)"
                   aria-label="involvedVehicles"
                   :disabled="ems_location_a !== 'va'"
@@ -327,7 +343,11 @@
                 <input
                   v-model="plate_number"
                   type="text"
-                  :class="`peer block min-h-[auto] w-full rounded border-0 ${ems_location_a !== 'va' ? 'bg-gray-100 cursor-not-allowed' : 'bg-transparent' } px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0`"
+                  :class="`peer block min-h-[auto] w-full rounded border-0 ${
+                    ems_location_a !== 'va'
+                      ? 'bg-gray-100 cursor-not-allowed'
+                      : 'bg-transparent'
+                  } px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0`"
                   id="plateNumber"
                   aria-describedby="plateNumber"
                   placeholder="Plate Number"
@@ -390,7 +410,11 @@
                   >
                     <input
                       v-model="driver"
-                      :class="`${ems_location_a !== 'va' ? 'bg-gray-100 cursor-not-allowed' : 'bg-transparent' } relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:border-neutral-600 dark:checked:border-primary dark:checked:after:border-primary dark:checked:after:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:border-primary dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]`"
+                      :class="`${
+                        ems_location_a !== 'va'
+                          ? 'bg-gray-100 cursor-not-allowed'
+                          : 'bg-transparent'
+                      } relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:border-neutral-600 dark:checked:border-primary dark:checked:after:border-primary dark:checked:after:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:border-primary dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]`"
                       type="radio"
                       id="driver"
                       name="patientRadio"
@@ -410,7 +434,11 @@
                   >
                     <input
                       v-model="pedestrian"
-                      :class="`${ems_location_a !== 'va' ? 'bg-gray-100 cursor-not-allowed' : 'bg-transparent' } relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:border-neutral-600 dark:checked:border-primary dark:checked:after:border-primary dark:checked:after:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:border-primary dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]`"
+                      :class="`${
+                        ems_location_a !== 'va'
+                          ? 'bg-gray-100 cursor-not-allowed'
+                          : 'bg-transparent'
+                      } relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:border-neutral-600 dark:checked:border-primary dark:checked:after:border-primary dark:checked:after:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:border-primary dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]`"
                       type="radio"
                       id="pedestrian"
                       name="patientRadio"
@@ -430,7 +458,11 @@
                   >
                     <input
                       v-model="passenger"
-                      :class="`${ems_location_a !== 'va' ? 'bg-gray-100 cursor-not-allowed' : 'bg-transparent' } relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:border-neutral-600 dark:checked:border-primary dark:checked:after:border-primary dark:checked:after:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:border-primary dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]`"
+                      :class="`${
+                        ems_location_a !== 'va'
+                          ? 'bg-gray-100 cursor-not-allowed'
+                          : 'bg-transparent'
+                      } relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:border-neutral-600 dark:checked:border-primary dark:checked:after:border-primary dark:checked:after:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:border-primary dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]`"
                       type="radio"
                       id="passenger"
                       name="patientRadio"
@@ -509,11 +541,17 @@
                     <input
                       v-model="ems_location_b"
                       type="text"
-                      :class="`peer block min-h-[auto] w-full ${ems_location_a === 'va' || ems_location_a === 'mt' ? 'bg-gray-100 cursor-not-allowed' : 'bg-transparent' } rounded border-0 px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0`"
+                      :class="`peer block min-h-[auto] w-full ${
+                        ems_location_a === 'va' || ems_location_a === 'mt'
+                          ? 'bg-gray-100 cursor-not-allowed'
+                          : 'bg-transparent'
+                      } rounded border-0 px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0`"
                       id="emsLocationB"
                       aria-describedby="emsLocationB"
                       placeholder="Location"
-                      :disabled="ems_location_a === 'va' || ems_location_a === 'mt'"
+                      :disabled="
+                        ems_location_a === 'va' || ems_location_a === 'mt'
+                      "
                     />
                     <label
                       for="emsLocationB"
@@ -530,11 +568,17 @@
                     <input
                       v-model="barangay_b"
                       type="text"
-                      :class="`peer block min-h-[auto] w-full rounded border-0 ${ems_location_a === 'va' || ems_location_a === 'mt' ? 'bg-gray-100 cursor-not-allowed' : 'bg-transparent' } px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0`"
+                      :class="`peer block min-h-[auto] w-full rounded border-0 ${
+                        ems_location_a === 'va' || ems_location_a === 'mt'
+                          ? 'bg-gray-100 cursor-not-allowed'
+                          : 'bg-transparent'
+                      } px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0`"
                       id="barangayB"
                       aria-describedby="barangayB"
                       placeholder="Barangay"
-                      :disabled="ems_location_a === 'va' || ems_location_a === 'mt'"
+                      :disabled="
+                        ems_location_a === 'va' || ems_location_a === 'mt'
+                      "
                     />
                     <label
                       for="barangayB"
@@ -590,7 +634,11 @@
                 <input
                   v-model="mt_from"
                   type="text"
-                  :class="`relative m-0 block w-1/4 min-w-0 flex-auto rounded-l border border-solid border-neutral-300 ${ems_location_a !== 'mt' ? 'bg-gray-100 cursor-not-allowed' : 'bg-transparent' } bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary`"
+                  :class="`relative m-0 block w-1/4 min-w-0 flex-auto rounded-l border border-solid border-neutral-300 ${
+                    ems_location_a !== 'mt'
+                      ? 'bg-gray-100 cursor-not-allowed'
+                      : 'bg-transparent'
+                  } bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary`"
                   placeholder="MT From"
                   aria-label="mtFrom"
                   :disabled="ems_location_a !== 'mt'"
@@ -603,7 +651,11 @@
                 <input
                   v-model="mt_barangay"
                   type="text"
-                  :class="`relative m-0 block text-right w-1/4 min-w-0 flex-auto rounded-r border border-solid border-neutral-300 ${ems_location_a !== 'mt' ? 'bg-gray-100 cursor-not-allowed' : 'bg-transparent' } bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary`"
+                  :class="`relative m-0 block text-right w-1/4 min-w-0 flex-auto rounded-r border border-solid border-neutral-300 ${
+                    ems_location_a !== 'mt'
+                      ? 'bg-gray-100 cursor-not-allowed'
+                      : 'bg-transparent'
+                  } bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary`"
                   placeholder="Barangay"
                   aria-label="barangay"
                   :disabled="ems_location_a !== 'mt'"
@@ -706,9 +758,7 @@
               <div />
 
               <div class="relative mb-3">
-                <label>
-                  EMR
-                </label>
+                <label> EMR </label>
                 <select
                   v-model="assignedEmr"
                   data-te-select-init
@@ -760,7 +810,16 @@
 </template>
 
 <script>
-import {Modal, initTE, Ripple, Input, Select, Timepicker, Stepper, Datepicker} from "tw-elements";
+import {
+  Modal,
+  initTE,
+  Ripple,
+  Input,
+  Select,
+  Timepicker,
+  Stepper,
+  Datepicker,
+} from "tw-elements";
 
 export default {
   data() {
@@ -810,18 +869,25 @@ export default {
         this.teams.push({ id: team.id, name: this.capitalize(team.name) })
       );
     });
-    this.$axios.get("user/list" + "?role=emr" + "&team=" + this.$auth.user.team_id).then((response) => {
-      response.data.return.map((emr) =>
-        this.emrs.push({ id: emr.id, name: `${emr.first_name !== null ? emr.first_name : ''} ${emr.middle_name !== null ? emr.middle_name : '' } ${emr.last_name !== null ? emr.last_name : ''}`})
-      );
-    });
+    this.$axios
+      .get("user/list" + "?role=emr" + "&team=" + this.$auth.user.team_id)
+      .then((response) => {
+        response.data.return.map((emr) =>
+          this.emrs.push({
+            id: emr.id,
+            name: `${emr.first_name !== null ? emr.first_name : ""} ${
+              emr.middle_name !== null ? emr.middle_name : ""
+            } ${emr.last_name !== null ? emr.last_name : ""}`,
+          })
+        );
+      });
   },
   mounted() {
     initTE({ Ripple, Modal, Input, Stepper, Datepicker, Select, Timepicker });
 
     // Function to update the date field
     function updateDateField() {
-      this.dispatch_date = new Date().toISOString().split('T')[0];
+      this.dispatch_date = new Date().toISOString().split("T")[0];
     }
 
     // Initial call to set the date on component mount
@@ -830,87 +896,87 @@ export default {
     // Schedule the update to occur once per day (24 hours)
     setInterval(updateDateField.bind(this), 24 * 60 * 60 * 1000); // 24 hours in milliseconds
 
-    if (this.$auth.user.role === 'dispatcher') {
+    if (this.$auth.user.role === "dispatcher") {
       this.team_id = this.$auth.user.team_id;
     }
   },
   methods: {
-    setCallReceived(){
+    setCallReceived() {
       const currentDate = new Date();
       this.call_receive = currentDate.toLocaleTimeString([], {
-        hour: 'numeric',
-        minute: 'numeric'
+        hour: "numeric",
+        minute: "numeric",
       });
       console.log(this.call_receive);
     },
-    setResponded(){
+    setResponded() {
       const currentDate = new Date();
       this.responded = currentDate.toLocaleTimeString([], {
-        hour: 'numeric',
-        minute: 'numeric'
+        hour: "numeric",
+        minute: "numeric",
       });
     },
-    setArrivedScene(){
+    setArrivedScene() {
       const currentDate = new Date();
       this.arrive_at_scene = currentDate.toLocaleTimeString([], {
-        hour: 'numeric',
-        minute: 'numeric'
+        hour: "numeric",
+        minute: "numeric",
       });
     },
-    setArrivedAt(){
+    setArrivedAt() {
       const currentDate = new Date();
       this.arrived_at = currentDate.toLocaleTimeString([], {
-        hour: 'numeric',
-        minute: 'numeric'
+        hour: "numeric",
+        minute: "numeric",
       });
     },
-    setEnRoute(){
+    setEnRoute() {
       const currentDate = new Date();
       this.en_route_to = currentDate.toLocaleTimeString([], {
-        hour: 'numeric',
-        minute: 'numeric'
+        hour: "numeric",
+        minute: "numeric",
       });
     },
-    setDeparted(){
+    setDeparted() {
       const currentDate = new Date();
       this.departed = currentDate.toLocaleTimeString([], {
-        hour: 'numeric',
-        minute: 'numeric'
+        hour: "numeric",
+        minute: "numeric",
       });
     },
-    setTimeA(){
+    setTimeA() {
       const currentDate = new Date();
       this.time_a = currentDate.toLocaleTimeString([], {
-        hour: 'numeric',
-        minute: 'numeric'
+        hour: "numeric",
+        minute: "numeric",
       });
     },
-    setTimeB(){
+    setTimeB() {
       const currentDate = new Date();
       this.time_b = currentDate.toLocaleTimeString([], {
-        hour: 'numeric',
-        minute: 'numeric'
+        hour: "numeric",
+        minute: "numeric",
       });
     },
-    setTimeC(){
+    setTimeC() {
       const currentDate = new Date();
       this.time_c = currentDate.toLocaleTimeString([], {
-        hour: 'numeric',
-        minute: 'numeric'
+        hour: "numeric",
+        minute: "numeric",
       });
     },
-    setTimeD(){
+    setTimeD() {
       const currentDate = new Date();
       this.time_d = currentDate.toLocaleTimeString([], {
-        hour: 'numeric',
-        minute: 'numeric'
+        hour: "numeric",
+        minute: "numeric",
       });
     },
-    setTimeE(){
+    setTimeE() {
       const currentDate = new Date();
       this.time_e = currentDate.toLocaleTimeString([], {
-        hour: 'numeric',
-        minute: 'numeric'
+        hour: "numeric",
+        minute: "numeric",
       });
     },
     capitalize(word) {
