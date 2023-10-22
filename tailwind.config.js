@@ -12,20 +12,20 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-      /** Colors: Tailwind default colors
+        /** Colors: Tailwind default colors
             slate - 100, 300 For 'Clear' button
             green - 600, 700 For 'Add New' button
             amber - 500, 600 For 'Export' button
       */
-          'dark-blue': '#172554',
-          'dark-1': '#111827', /** Used Mainly in Text */
-          'dark-2': '#131A2D',
-          'light-1': '#EFEFEF', /** Used Mainly in Background */
-          'light-2': '#F3F6F9',
-          'light-3': '#F6FAFE'
-      }
+        "dark-blue": "#172554",
+        "dark-1": "#111827" /** Used Mainly in Text */,
+        "dark-2": "#131A2D",
+        "light-1": "#EFEFEF" /** Used Mainly in Background */,
+        "light-2": "#F3F6F9",
+        "light-3": "#F6FAFE",
+      },
     },
-    fontFamily:'Roboto' 
+    fontFamily: "Roboto",
   },
   darkMode: "class",
   plugins: [require("tw-elements/dist/plugin.cjs", require("flowbite/plugin"))],

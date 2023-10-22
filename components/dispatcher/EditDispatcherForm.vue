@@ -95,9 +95,7 @@
                   class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                 >
                   First Name
-                  <span class="text-red-600 font-bold">
-                    *
-                  </span>
+                  <span class="text-red-600 font-bold"> * </span>
                 </label>
               </div>
 
@@ -134,21 +132,14 @@
                   class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                 >
                   Last Name
-                  <span class="text-red-600 font-bold">
-                    *
-                  </span>
+                  <span class="text-red-600 font-bold"> * </span>
                 </label>
               </div>
 
-              <select
-                v-model="gender"
-                class="w-full bg-neutral-50"
-                required
-              >
-                <option selected>Gender
-                  <span class="text-red-600 font-bold">
-                    *
-                  </span>
+              <select v-model="gender" class="w-full bg-neutral-50" required>
+                <option selected>
+                  Gender
+                  <span class="text-red-600 font-bold"> * </span>
                 </option>
                 <option value="female">Female</option>
                 <option value="male">Male</option>
@@ -171,9 +162,7 @@
                   class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                 >
                   Birthdate
-                  <span class="text-red-600 font-bold">
-                    *
-                  </span>
+                  <span class="text-red-600 font-bold"> * </span>
                 </label>
               </div>
 
@@ -192,9 +181,7 @@
                   class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                 >
                   Age
-                  <span class="text-red-600 font-bold">
-                    *
-                  </span>
+                  <span class="text-red-600 font-bold"> * </span>
                 </label>
               </div>
 
@@ -205,10 +192,9 @@
                 required
                 disabled
               >
-                <option selected value="1">Team
-                  <span class="text-red-600 font-bold">
-                    *
-                  </span>
+                <option selected value="1">
+                  Team
+                  <span class="text-red-600 font-bold"> * </span>
                 </option>
                 <option
                   v-for="(item, index) in teams"
@@ -223,16 +209,10 @@
                 <option value="Valenzuela">City of Valenzuela</option>
               </select>
 
-              <select
-                v-model="barangay"
-                class="bg-neutral-50"
-                required
-
-              >
-                <option selected value="1">Select Barangay
-                  <span class="text-red-600 font-bold">
-                    *
-                  </span>
+              <select v-model="barangay" class="bg-neutral-50" required>
+                <option selected value="1">
+                  Select Barangay
+                  <span class="text-red-600 font-bold"> * </span>
                 </option>
                 <option value="Arkong Bato">Arkong Bato</option>
                 <option value="Bagbaguin">Bagbaguin</option>
@@ -283,9 +263,7 @@
                   class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                 >
                   Street Address
-                  <span class="text-red-600 font-bold">
-                    *
-                  </span>
+                  <span class="text-red-600 font-bold"> * </span>
                 </label>
               </div>
 
@@ -303,9 +281,7 @@
                   class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                 >
                   Zip code
-                  <span class="text-red-600 font-bold">
-                    *
-                  </span>
+                  <span class="text-red-600 font-bold"> * </span>
                 </label>
               </div>
 
@@ -347,9 +323,7 @@
                   class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                 >
                   Email
-                  <span class="text-red-600 font-bold">
-                    *
-                  </span>
+                  <span class="text-red-600 font-bold"> * </span>
                 </label>
               </div>
             </div>
@@ -362,7 +336,7 @@
           <button
             @click="update"
             type="button"
-            class="inline-block ml-4 rounded bg-[#30AD62] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white  transition duration-150 ease-in-out hover:bg-green-700 focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+            class="inline-block ml-4 rounded bg-[#30AD62] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-green-700 focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
           >
             UPDATE
           </button>
@@ -411,17 +385,18 @@ export default {
     initTE({ Ripple, Modal, Input, Datepicker, Select });
   },
   watch: {
-    '$store.state.editDispatcherModalXlArg'() {
-      if (this.$store.getters['getEditDispatcherModalXlArg'] !== undefined) {
+    "$store.state.editDispatcherModalXlArg"() {
+      if (this.$store.getters["getEditDispatcherModalXlArg"] !== undefined) {
         const params = {
-          id: this.$store.getters['getEditDispatcherModalXlArg'],
-        }
+          id: this.$store.getters["getEditDispatcherModalXlArg"],
+        };
 
-        this.$store.dispatch('getSingleDispatcher', params);
+        this.$store.dispatch("getSingleDispatcher", params);
       }
     },
-    '$store.state.editDispatcherModalXlFields'() {
-      this.dispatcherFields = this.$store.getters['getEditDispatcherModalXlFields'];
+    "$store.state.editDispatcherModalXlFields"() {
+      this.dispatcherFields =
+        this.$store.getters["getEditDispatcherModalXlFields"];
       this.id = this.dispatcherFields.id;
       this.suffix = this.dispatcherFields.suffix;
       this.first_name = this.dispatcherFields.first_name;
@@ -437,12 +412,12 @@ export default {
       this.zip = this.dispatcherFields.address.zip;
       this.phone = this.dispatcherFields.phone;
       this.email = this.dispatcherFields.email;
-    }
+    },
   },
   methods: {
     hideModal() {
-      this.$store.commit('setEditDispatcherModalXl', false);
-      this.$store.commit('setEditDispatcherModalXlArg', undefined);
+      this.$store.commit("setEditDispatcherModalXl", false);
+      this.$store.commit("setEditDispatcherModalXlArg", undefined);
     },
     update() {
       const params = {
@@ -461,7 +436,7 @@ export default {
         city: this.city,
         barangay: this.barangay,
         street: this.street,
-        zip: this.zip
+        zip: this.zip,
       };
 
       this.$nuxt.$loading.start();

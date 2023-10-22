@@ -63,7 +63,14 @@ import DispatcherForm from "./DispatcherForm";
 import EditDispatcherForm from "./EditDispatcherForm";
 import { Modal, Dropdown, Ripple, initTE } from "tw-elements";
 export default {
-  components: { Modal, Dropdown, Ripple, initTE, DispatcherForm, EditDispatcherForm },
+  components: {
+    Modal,
+    Dropdown,
+    Ripple,
+    initTE,
+    DispatcherForm,
+    EditDispatcherForm,
+  },
   data() {
     return {
       role: "",
@@ -247,11 +254,13 @@ export default {
       this.$forceUpdate();
     },
     onRowClick(params) {
-      const editModal = new Modal(document.getElementById('editDispatcherModalXl'));
-      this.$store.commit('setEditDispatcherModalXl', true);
-      this.$store.commit('setEditDispatcherModalXlArg', params.row.id);
+      const editModal = new Modal(
+        document.getElementById("editDispatcherModalXl")
+      );
+      this.$store.commit("setEditDispatcherModalXl", true);
+      this.$store.commit("setEditDispatcherModalXlArg", params.row.id);
       editModal.show();
-    }
+    },
   },
 };
 </script>
