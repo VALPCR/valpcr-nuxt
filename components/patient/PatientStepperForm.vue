@@ -850,7 +850,7 @@
                           Last Name
                         </label>
                       </div>
-                      <!-- END NAME -->
+                  
                       <!-- GENDER -->
                       <select
                         data-te-select-init
@@ -861,8 +861,7 @@
                         <option value="female">Female</option>
                         <option value="male">Male</option>
                       </select>
-                      <!-- <label data-te-select-label-ref>Gender</label> -->
-                      <!-- END GENDER -->
+                     
                       <!-- BIRTHDATE -->
                       <div
                         class="relative mb-1"
@@ -1090,7 +1089,7 @@
                           </label>
                         </div>
                       </div>
-                      <!-- END S/SX-CHIEF COMPLAINT -->
+                     
                       <!-- ONSET-->
                       <div class="col-span-2">
                         <div class="relative mb-1" data-te-input-wrapper-init>
@@ -1110,7 +1109,7 @@
                           </label>
                         </div>
                       </div>
-                      <!-- END ONSET -->
+                     
                       <!-- ALLERGIES-->
                       <div class="col-span-2">
                         <div class="relative mb-1" data-te-input-wrapper-init>
@@ -1130,7 +1129,7 @@
                           </label>
                         </div>
                       </div>
-                      <!-- END ALLERGIES -->
+                     
                       <!-- PROVOCATION-->
                       <div class="col-span-2">
                         <div class="relative mb-1" data-te-input-wrapper-init>
@@ -1150,7 +1149,7 @@
                           </label>
                         </div>
                       </div>
-                      <!-- END PROVOCATION -->
+                    
                       <!-- MEDICATION-->
                       <div class="col-span-2">
                         <div class="relative mb-1" data-te-input-wrapper-init>
@@ -1170,7 +1169,7 @@
                           </label>
                         </div>
                       </div>
-                      <!-- END MEDICATION -->
+                    
                       <!-- QUALITY-->
                       <div class="col-span-2">
                         <div class="relative mb-1" data-te-input-wrapper-init>
@@ -1190,7 +1189,7 @@
                           </label>
                         </div>
                       </div>
-                      <!-- END QUALITY -->
+                   
                       <!-- PAST MEDICAL HISTORY-->
                       <div class="col-span-2">
                         <div class="relative mb-1" data-te-input-wrapper-init>
@@ -1210,7 +1209,7 @@
                           </label>
                         </div>
                       </div>
-                      <!-- END PAST MEDICAL HISTORY -->
+                   
                       <!-- RADIATION-->
                       <div class="col-span-2">
                         <div class="relative mb-1" data-te-input-wrapper-init>
@@ -1230,7 +1229,7 @@
                           </label>
                         </div>
                       </div>
-                      <!-- END RADIATION -->
+                    
                       <!-- LAST ORAL INTAKE -->
                       <div class="col-span-2">
                         <div class="relative mb-1" data-te-input-wrapper-init>
@@ -1294,8 +1293,9 @@
                       <div class="time col-span-2">
                         <div
                           class="relative mb-1"
-                          data-te-timepicker-init
                           data-te-input-wrapper-init
+                          data-te-timepicker-init
+                          @click.stop="setTimePatient"
                         >
                           <input
                             v-model="time_taken"
@@ -2377,11 +2377,30 @@
                         <button
                           type="button"
                           :class="`text-blue-700 border border-blue-700 ${anterior_head_degree ? 'focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800' : ''} font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500`"
-                          @click="clickAnterior()"
+                          @click="clickAnteriorHead()"
                         >
                         1st Degree
                         </button>
+
+                        <button
+                          type="button"
+                          :class="`text-blue-700 border border-blue-700 ${anterior_head_degree ? 'focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800' : ''} font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500`"
+                          @click="clickAnteriorHead()"
+                        >
+                        2nd Degree
+                        </button>
+
+                        <button
+                          type="button"
+                          :class="`text-blue-700 border border-blue-700 ${anterior_head_degree ? 'focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800' : ''} font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500`"
+                          @click="clickAnteriorHead()"
+                        >
+                        3rd Degree
+                        </button>
                       </div>
+
+                     
+                      
                     </div>
 
                     <div class="flex items-center">
@@ -3190,7 +3209,7 @@ export default {
       posterior_right_arm_injury: [],
       posterior_left_leg_injury: [],
       posterior_right_leg_injury: [],
-      selectedButton: null,
+     
       anterior_head_degree: false,
     };
   },
@@ -3251,6 +3270,9 @@ export default {
     },
     setTimeE(){
       this.time_e = this.formattedDateTime();
+    },
+    setTimePatient(){
+      this.time_taken = this.formattedDateTime();
     },
     capitalize(word) {
       return word.replace(/^\w/, (c) => c.toUpperCase());
@@ -3396,9 +3418,10 @@ export default {
       this.gauze = "";
       this.others = "";
     },
-    clickAnterior() {
+    clickAnteriorHead() {
       this.anterior_head_degree = !this.anterior_head_degree;
     },
+
     register() {
       const params = {
         emrId: this.$auth.user.id,
