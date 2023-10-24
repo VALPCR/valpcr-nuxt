@@ -4003,6 +4003,21 @@ export default {
       this.mask = "";
       this.gauze = "";
       this.others = "";
+      this.anterior_head_degree = "";
+      this.anterior_chest_degree = "";
+      this.anterior_pelvis_degree = "";
+      this.anterior_left_arm_degree = "";
+      this.anterior_right_arm_degree = "";
+      this.anterior_left_leg_degree = "";
+      this.anterior_right_leg_degree = "";
+      this.anterior_genitalia_degree = "";
+      this.posterior_head_degree = "";
+      this.posterior_chest_degree = "";
+      this.posterior_pelvis_degree = "";
+      this.posterior_left_arm_degree = "";
+      this.posterior_right_arm_degree = "";
+      this.posterior_left_leg_degree = "";
+      this.posterior_right_leg_degree = "";
     },
    
     register() {
@@ -4160,6 +4175,21 @@ export default {
         posterior_right_arm_injury: this.posterior_right_arm_injury,
         posterior_left_leg_injury: this.posterior_left_leg_injury,
         posterior_right_leg_injury: this.posterior_right_leg_injury,
+        anterior_head_degree: this.anterior_head_degree,
+        anterior_chest_degree: this.anterior_chest_degree,
+        anterior_pelvis_degree: this.anterior_pelvis_degree,
+        anterior_left_arm_degree: this.anterior_left_arm_degree,
+        anterior_right_arm_degree: this.anterior_right_arm_degree,
+        anterior_left_leg_degree: this.anterior_left_leg_degree,
+        anterior_right_leg_degree: this.anterior_right_leg_degree,
+        anterior_genitalia_degree: this.anterior_genitalia_degree,
+        posterior_head_degree: this.posterior_head_degree,
+        posterior_chest_degree: this.posterior_chest_degree,
+        posterior_pelvis_degree: this.posterior_pelvis_degree,
+        posterior_left_arm_degree: this.posterior_left_arm_degree,
+        posterior_right_arm_degree: this.posterior_right_arm_degree,
+        posterior_left_leg_degree: this.posterior_left_leg_degree,
+        posterior_right_leg_degree: this.posterior_right_leg_degree,
       };
 
       this.$axios.post("pcr/emr/register", params).then(() => {
@@ -4314,6 +4344,21 @@ export default {
         this.posterior_right_arm_injury = "";
         this.posterior_left_leg_injury = "";
         this.posterior_right_leg_injury = "";
+        this.anterior_head_degree = "";
+        this.anterior_chest_degree = "";
+        this.anterior_pelvis_degree = "";
+        this.anterior_left_arm_degree = "";
+        this.anterior_right_arm_degree = "";
+        this.anterior_left_leg_degree = "";
+        this.anterior_right_leg_degree = "";
+        this.anterior_genitalia_degree = "";
+        this.posterior_head_degree = "";
+        this.posterior_chest_degree = "";
+        this.posterior_pelvis_degree = "";
+        this.posterior_left_arm_degree = "";
+        this.posterior_right_arm_degree = "";
+        this.posterior_left_leg_degree = "";
+        this.posterior_right_leg_degree = "";
         location.reload();
       });
     },
