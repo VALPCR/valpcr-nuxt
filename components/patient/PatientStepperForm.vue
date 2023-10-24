@@ -2400,6 +2400,7 @@
                 <div class="relative p-4">
                   <form>
                     <h4 class="mb-4 font-bold">Anterior</h4>
+                    <!-- Anterior Head Degree -->
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
                         <label class="mb-0">Head</label>
@@ -2407,37 +2408,46 @@
                       <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
                         <button
                           type="button"
-                          :class="`text-blue-700 border border-blue-700 ${
-                            anterior_head_degree
-                              ? 'focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800'
-                              : ''
-                          } font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500`"
-                          @click="clickAnterior()"
+                          @click="anterior_head_degree = anterior_head_degree === '1st Degree' ? '' : '1st Degree'"
+                          :class="[
+                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                            anterior_head_degree === '1st Degree'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                          ]"
                         >
                           1st Degree
                         </button>
-
                         <button
                           type="button"
-                          :class="`text-blue-700 border border-blue-700 ${anterior_head_degree ? 'focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800' : ''} font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500`"
-                          @click="clickAnteriorHead()"
+                          @click="anterior_head_degree = anterior_head_degree === '2nd Degree' ? '' : '2nd Degree'"
+                          :class="[
+                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                            anterior_head_degree === '2nd Degree'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                          ]"
+                          
                         >
-                        2nd Degree
+                          2nd Degree
                         </button>
-
                         <button
                           type="button"
-                          :class="`text-blue-700 border border-blue-700 ${anterior_head_degree ? 'focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800' : ''} font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500`"
-                          @click="clickAnteriorHead()"
+                          @click="anterior_head_degree = anterior_head_degree === '3rd Degree' ? '' : '3rd Degree'"
+                          :class="[
+                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                            anterior_head_degree === '3rd Degree'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                          ]"
                         >
-                        3rd Degree
+                          3rd Degree
                         </button>
+                        <input type="hidden" v-model="anterior_head_degree" name="anterior_head_degree">
                       </div>
-
-                     
-                      
                     </div>
-
+                    
+                     <!-- Anterior Chest/Lungs Degree -->
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
                         <label class="mb-0">Chest/Lungs</label>
@@ -2445,25 +2455,46 @@
                       <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
                         <button
                           type="button"
-                          class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+                          @click="anterior_chest_degree = anterior_chest_degree === '1st Degree' ? '' : '1st Degree'"
+                          :class="[
+                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                            anterior_chest_degree === '1st Degree'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                          ]"
                         >
                           1st Degree
                         </button>
                         <button
                           type="button"
-                          class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+                          @click="anterior_chest_degree = anterior_chest_degree === '2nd Degree' ? '' : '2nd Degree'"
+                          :class="[
+                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                            anterior_chest_degree === '2nd Degree'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                          ]"
+                          
                         >
                           2nd Degree
                         </button>
                         <button
                           type="button"
-                          class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+                          @click="anterior_chest_degree = anterior_chest_degree === '3rd Degree' ? '' : '3rd Degree'"
+                          :class="[
+                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                            anterior_chest_degree === '3rd Degree'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                          ]"
                         >
                           3rd Degree
                         </button>
+                        <input type="hidden" v-model="anterior_chest_degree" name="anterior_chest_degree">
                       </div>
                     </div>
 
+                    <!-- Anterior Pelvis/GU Degree -->
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
                         <label class="mb-0">Pelvis/GU</label>
@@ -2471,25 +2502,46 @@
                       <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
                         <button
                           type="button"
-                          class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+                          @click="anterior_pelvis_degree = anterior_pelvis_degree === '1st Degree' ? '' : '1st Degree'"
+                          :class="[
+                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                            anterior_pelvis_degree === '1st Degree'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                          ]"
                         >
                           1st Degree
                         </button>
                         <button
                           type="button"
-                          class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+                          @click="anterior_pelvis_degree = anterior_pelvis_degree === '2nd Degree' ? '' : '2nd Degree'"
+                          :class="[
+                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                            anterior_pelvis_degree === '2nd Degree'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                          ]"
+                          
                         >
                           2nd Degree
                         </button>
                         <button
                           type="button"
-                          class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+                          @click="anterior_pelvis_degree = anterior_pelvis_degree === '3rd Degree' ? '' : '3rd Degree'"
+                          :class="[
+                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                            anterior_pelvis_degree === '3rd Degree'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                          ]"
                         >
                           3rd Degree
                         </button>
+                        <input type="hidden" v-model="anterior_pelvis_degree" name="anterior_pelvis_degree">
                       </div>
                     </div>
 
+                    <!-- Anterior Left Arm Degree -->
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
                         <label class="mb-0">Left Arm</label>
@@ -2497,25 +2549,47 @@
                       <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
                         <button
                           type="button"
-                          class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+                          @click="anterior_left_arm_degree = anterior_left_arm_degree === '1st Degree' ? '' : '1st Degree'"
+                          :class="[
+                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                            anterior_left_arm_degree === '1st Degree'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                          ]"
                         >
                           1st Degree
                         </button>
                         <button
                           type="button"
-                          class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+                          @click="anterior_left_arm_degree = anterior_left_arm_degree === '2nd Degree' ? '' : '2nd Degree'"
+                          :class="[
+                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                            anterior_left_arm_degree === '2nd Degree'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                          ]"
+                          
                         >
                           2nd Degree
                         </button>
                         <button
                           type="button"
-                          class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+                          @click="anterior_left_arm_degree = anterior_left_arm_degree === '3rd Degree' ? '' : '3rd Degree'"
+                          :class="[
+                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                            anterior_left_arm_degree === '3rd Degree'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                          ]"
                         >
                           3rd Degree
                         </button>
+                        <input type="hidden" v-model="anterior_left_arm_degree" name="anterior_left_arm_degree">
                       </div>
                     </div>
 
+
+                    <!-- Anterior Right Arm Degree -->
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
                         <label class="mb-0">Right Arm</label>
@@ -2523,25 +2597,46 @@
                       <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
                         <button
                           type="button"
-                          class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+                          @click="anterior_right_arm_degree = anterior_right_arm_degree === '1st Degree' ? '' : '1st Degree'"
+                          :class="[
+                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                            anterior_right_arm_degree === '1st Degree'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                          ]"
                         >
                           1st Degree
                         </button>
                         <button
                           type="button"
-                          class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+                          @click="anterior_right_arm_degree = anterior_right_arm_degree === '2nd Degree' ? '' : '2nd Degree'"
+                          :class="[
+                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                            anterior_right_arm_degree === '2nd Degree'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                          ]"
+                          
                         >
                           2nd Degree
                         </button>
                         <button
                           type="button"
-                          class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+                          @click="anterior_right_arm_degree = anterior_right_arm_degree === '3rd Degree' ? '' : '3rd Degree'"
+                          :class="[
+                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                            anterior_right_arm_degree === '3rd Degree'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                          ]"
                         >
                           3rd Degree
                         </button>
+                        <input type="hidden" v-model="anterior_right_arm_degree" name="anterior_right_arm_degree">
                       </div>
                     </div>
 
+                    <!-- Anterior Left Leg Degree -->
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
                         <label class="mb-0">Left Leg</label>
@@ -2549,25 +2644,47 @@
                       <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
                         <button
                           type="button"
-                          class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+                          @click="anterior_left_leg_degree = anterior_left_leg_degree === '1st Degree' ? '' : '1st Degree'"
+                          :class="[
+                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                            anterior_left_leg_degree === '1st Degree'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                          ]"
                         >
                           1st Degree
                         </button>
                         <button
                           type="button"
-                          class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+                          @click="anterior_left_leg_degree = anterior_left_leg_degree === '2nd Degree' ? '' : '2nd Degree'"
+                          :class="[
+                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                            anterior_left_leg_degree === '2nd Degree'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                          ]"
+                          
                         >
                           2nd Degree
                         </button>
                         <button
                           type="button"
-                          class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+                          @click="anterior_left_leg_degree = anterior_left_leg_degree === '3rd Degree' ? '' : '3rd Degree'"
+                          :class="[
+                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                            anterior_left_leg_degree === '3rd Degree'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                          ]"
                         >
                           3rd Degree
                         </button>
+                        <input type="hidden" v-model="anterior_left_leg_degree" name="anterior_left_leg_degree">
                       </div>
                     </div>
 
+
+                    <!-- Anterior Right Leg Degree -->
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
                         <label class="mb-0">Right Leg</label>
@@ -2575,25 +2692,46 @@
                       <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
                         <button
                           type="button"
-                          class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+                          @click="anterior_right_leg_degree = anterior_right_leg_degree === '1st Degree' ? '' : '1st Degree'"
+                          :class="[
+                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                            anterior_right_leg_degree === '1st Degree'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                          ]"
                         >
                           1st Degree
                         </button>
                         <button
                           type="button"
-                          class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+                          @click="anterior_right_leg_degree = anterior_right_leg_degree === '2nd Degree' ? '' : '2nd Degree'"
+                          :class="[
+                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                            anterior_right_leg_degree === '2nd Degree'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                          ]"
+                          
                         >
                           2nd Degree
                         </button>
                         <button
                           type="button"
-                          class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+                          @click="anterior_right_leg_degree = anterior_right_leg_degree === '3rd Degree' ? '' : '3rd Degree'"
+                          :class="[
+                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                            anterior_right_leg_degree === '3rd Degree'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                          ]"
                         >
                           3rd Degree
                         </button>
+                        <input type="hidden" v-model="anterior_right_leg_degree" name="anterior_right_leg_degree">
                       </div>
                     </div>
 
+                    <!-- Anterior Genitalia Degree -->
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
                         <label class="mb-0">Genitalia</label>
@@ -2601,25 +2739,46 @@
                       <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
                         <button
                           type="button"
-                          class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+                          @click="anterior_genitalia_degree = anterior_genitalia_degree === '1st Degree' ? '' : '1st Degree'"
+                          :class="[
+                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                            anterior_genitalia_degree === '1st Degree'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                          ]"
                         >
                           1st Degree
                         </button>
                         <button
                           type="button"
-                          class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+                          @click="anterior_genitalia_degree = anterior_genitalia_degree === '2nd Degree' ? '' : '2nd Degree'"
+                          :class="[
+                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                            anterior_genitalia_degree === '2nd Degree'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                          ]"
+                          
                         >
                           2nd Degree
                         </button>
                         <button
                           type="button"
-                          class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+                          @click="anterior_genitalia_degree = anterior_genitalia_degree === '3rd Degree' ? '' : '3rd Degree'"
+                          :class="[
+                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                            anterior_genitalia_degree === '3rd Degree'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                          ]"
                         >
                           3rd Degree
                         </button>
+                        <input type="hidden" v-model="anterior_genitalia_degree" name="anterior_genitalia_degree">
                       </div>
                     </div>
 
+                    <!-- Posterior Head Degree -->
                     <h4 class="mb-4 font-bold">Posterior</h4>
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
@@ -2628,25 +2787,46 @@
                       <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
                         <button
                           type="button"
-                          class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+                          @click="posterior_head_degree = posterior_head_degree === '1st Degree' ? '' : '1st Degree'"
+                          :class="[
+                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                            posterior_head_degree === '1st Degree'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                          ]"
                         >
                           1st Degree
                         </button>
                         <button
                           type="button"
-                          class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+                          @click="posterior_head_degree = posterior_head_degree === '2nd Degree' ? '' : '2nd Degree'"
+                          :class="[
+                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                            posterior_head_degree === '2nd Degree'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                          ]"
+                          
                         >
                           2nd Degree
                         </button>
                         <button
                           type="button"
-                          class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+                          @click="posterior_head_degree = posterior_head_degree === '3rd Degree' ? '' : '3rd Degree'"
+                          :class="[
+                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                            posterior_head_degree === '3rd Degree'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                          ]"
                         >
                           3rd Degree
                         </button>
+                        <input type="hidden" v-model="posterior_head_degree" name="posterior_head_degree">
                       </div>
                     </div>
 
+                     <!-- Posterior Chest/Lungs Degree -->
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
                         <label class="mb-0">Chest/Lungs</label>
@@ -2654,25 +2834,46 @@
                       <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
                         <button
                           type="button"
-                          class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+                          @click="posterior_chest_degree = posterior_chest_degree === '1st Degree' ? '' : '1st Degree'"
+                          :class="[
+                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                            posterior_chest_degree === '1st Degree'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                          ]"
                         >
                           1st Degree
                         </button>
                         <button
                           type="button"
-                          class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+                          @click="posterior_chest_degree = posterior_chest_degree === '2nd Degree' ? '' : '2nd Degree'"
+                          :class="[
+                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                            posterior_chest_degree === '2nd Degree'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                          ]"
+                          
                         >
                           2nd Degree
                         </button>
                         <button
                           type="button"
-                          class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+                          @click="posterior_chest_degree = posterior_chest_degree === '3rd Degree' ? '' : '3rd Degree'"
+                          :class="[
+                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                            posterior_chest_degree === '3rd Degree'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                          ]"
                         >
                           3rd Degree
                         </button>
+                        <input type="hidden" v-model="posterior_chest_degree" name="posterior_chest_degree">
                       </div>
                     </div>
 
+                    <!-- Posterior Pelvis/GU Degree -->
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
                         <label class="mb-0">Pelvis/GU</label>
@@ -2680,25 +2881,47 @@
                       <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
                         <button
                           type="button"
-                          class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+                          @click="posterior_pelvis_degree = posterior_pelvis_degree === '1st Degree' ? '' : '1st Degree'"
+                          :class="[
+                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                            posterior_pelvis_degree === '1st Degree'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                          ]"
                         >
                           1st Degree
                         </button>
                         <button
                           type="button"
-                          class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+                          @click="posterior_pelvis_degree = posterior_pelvis_degree === '2nd Degree' ? '' : '2nd Degree'"
+                          :class="[
+                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                            posterior_pelvis_degree === '2nd Degree'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                          ]"
+                          
                         >
                           2nd Degree
                         </button>
                         <button
                           type="button"
-                          class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+                          @click="posterior_pelvis_degree = posterior_pelvis_degree === '3rd Degree' ? '' : '3rd Degree'"
+                          :class="[
+                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                            posterior_pelvis_degree === '3rd Degree'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                          ]"
                         >
                           3rd Degree
                         </button>
+                        <input type="hidden" v-model="posterior_pelvis_degree" name="posterior_pelvis_degree">
                       </div>
                     </div>
+                    
 
+                    <!-- Posterior Left Arm Degree -->
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
                         <label class="mb-0">Left Arm</label>
@@ -2706,25 +2929,46 @@
                       <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
                         <button
                           type="button"
-                          class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+                          @click="posterior_left_arm_degree = posterior_left_arm_degree === '1st Degree' ? '' : '1st Degree'"
+                          :class="[
+                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                            posterior_left_arm_degree === '1st Degree'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                          ]"
                         >
                           1st Degree
                         </button>
                         <button
                           type="button"
-                          class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+                          @click="posterior_left_arm_degree = posterior_left_arm_degree === '2nd Degree' ? '' : '2nd Degree'"
+                          :class="[
+                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                            posterior_left_arm_degree === '2nd Degree'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                          ]"
+                          
                         >
                           2nd Degree
                         </button>
                         <button
                           type="button"
-                          class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+                          @click="posterior_left_arm_degree = posterior_left_arm_degree === '3rd Degree' ? '' : '3rd Degree'"
+                          :class="[
+                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                            posterior_left_arm_degree === '3rd Degree'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                          ]"
                         >
                           3rd Degree
                         </button>
+                        <input type="hidden" v-model="posterior_left_arm_degree" name="posterior_left_arm_degree">
                       </div>
                     </div>
 
+                    <!-- Posterior Right Arm Degree -->
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
                         <label class="mb-0">Right Arm</label>
@@ -2732,25 +2976,46 @@
                       <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
                         <button
                           type="button"
-                          class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+                          @click="posterior_right_arm_degree = posterior_right_arm_degree === '1st Degree' ? '' : '1st Degree'"
+                          :class="[
+                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                            posterior_right_arm_degree === '1st Degree'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                          ]"
                         >
                           1st Degree
                         </button>
                         <button
                           type="button"
-                          class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+                          @click="posterior_right_arm_degree = posterior_right_arm_degree === '2nd Degree' ? '' : '2nd Degree'"
+                          :class="[
+                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                            posterior_right_arm_degree === '2nd Degree'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                          ]"
+                          
                         >
                           2nd Degree
                         </button>
                         <button
                           type="button"
-                          class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+                          @click="posterior_right_arm_degree = posterior_right_arm_degree === '3rd Degree' ? '' : '3rd Degree'"
+                          :class="[
+                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                            posterior_right_arm_degree === '3rd Degree'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                          ]"
                         >
                           3rd Degree
                         </button>
+                        <input type="hidden" v-model="posterior_right_arm_degree" name="posterior_right_arm_degree">
                       </div>
                     </div>
 
+                    <!-- Posterior Left Leg Degree -->
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
                         <label class="mb-0">Left Leg</label>
@@ -2758,25 +3023,46 @@
                       <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
                         <button
                           type="button"
-                          class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+                          @click="posterior_left_leg_degree = posterior_left_leg_degree === '1st Degree' ? '' : '1st Degree'"
+                          :class="[
+                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                            posterior_left_leg_degree === '1st Degree'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                          ]"
                         >
                           1st Degree
                         </button>
                         <button
                           type="button"
-                          class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+                          @click="posterior_left_leg_degree = posterior_left_leg_degree === '2nd Degree' ? '' : '2nd Degree'"
+                          :class="[
+                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                            posterior_left_leg_degree === '2nd Degree'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                          ]"
+                          
                         >
                           2nd Degree
                         </button>
                         <button
                           type="button"
-                          class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+                          @click="posterior_left_leg_degree = posterior_left_leg_degree === '3rd Degree' ? '' : '3rd Degree'"
+                          :class="[
+                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                            posterior_left_leg_degree === '3rd Degree'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                          ]"
                         >
                           3rd Degree
                         </button>
+                        <input type="hidden" v-model="posterior_left_leg_degree" name="posterior_left_leg_degree">
                       </div>
                     </div>
 
+                    <!-- Posterior Right Leg Degree -->
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
                         <label class="mb-0">Right Leg</label>
@@ -2784,22 +3070,42 @@
                       <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
                         <button
                           type="button"
-                          class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+                          @click="posterior_right_leg_degree = posterior_right_leg_degree === '1st Degree' ? '' : '1st Degree'"
+                          :class="[
+                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                            posterior_right_leg_degree === '1st Degree'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                          ]"
                         >
                           1st Degree
                         </button>
                         <button
                           type="button"
-                          class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+                          @click="posterior_right_leg_degree = posterior_right_leg_degree === '2nd Degree' ? '' : '2nd Degree'"
+                          :class="[
+                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                            posterior_right_leg_degree === '2nd Degree'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                          ]"
+                          
                         >
                           2nd Degree
                         </button>
                         <button
                           type="button"
-                          class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+                          @click="posterior_right_leg_degree = posterior_right_leg_degree === '3rd Degree' ? '' : '3rd Degree'"
+                          :class="[
+                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                            posterior_right_leg_degree === '3rd Degree'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                          ]"
                         >
                           3rd Degree
                         </button>
+                        <input type="hidden" v-model="posterior_right_leg_degree" name="posterior_right_leg_degree">
                       </div>
                     </div>
                   </form>
@@ -3474,8 +3780,23 @@ export default {
       posterior_right_arm_injury: [],
       posterior_left_leg_injury: [],
       posterior_right_leg_injury: [],
-     
-      anterior_head_degree: false,
+      anterior_head_degree: "",
+      anterior_chest_degree: "",
+      anterior_pelvis_degree: "",
+      anterior_left_arm_degree: "",
+      anterior_right_arm_degree: "",
+      anterior_left_leg_degree: "",
+      anterior_right_leg_degree: "",
+      anterior_genitalia_degree: "",
+      posterior_head_degree: "",
+      posterior_chest_degree: "",
+      posterior_pelvis_degree: "",
+      posterior_left_arm_degree: "",
+      posterior_right_arm_degree: "",
+      posterior_left_leg_degree: "",
+      posterior_right_leg_degree: "",
+
+
     };
   },
   fetch() {
@@ -3683,10 +4004,7 @@ export default {
       this.gauze = "";
       this.others = "";
     },
-    clickAnteriorHead() {
-      this.anterior_head_degree = !this.anterior_head_degree;
-    },
-
+   
     register() {
       const params = {
         emrId: this.$auth.user.id,
