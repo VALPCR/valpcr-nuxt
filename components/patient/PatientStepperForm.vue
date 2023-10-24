@@ -890,7 +890,7 @@
                           Last Name
                         </label>
                       </div>
-                  
+
                       <!-- GENDER -->
                       <select
                         data-te-select-init
@@ -901,7 +901,7 @@
                         <option value="female">Female</option>
                         <option value="male">Male</option>
                       </select>
-                     
+
                       <!-- BIRTHDATE -->
                       <div class="relative mb-1" data-te-input-wrapper-init>
                         <input
@@ -1138,7 +1138,7 @@
                           </label>
                         </div>
                       </div>
-                     
+
                       <!-- ONSET-->
                       <div class="col-span-2">
                         <div class="relative mb-1" data-te-input-wrapper-init>
@@ -1158,7 +1158,7 @@
                           </label>
                         </div>
                       </div>
-                     
+
                       <!-- ALLERGIES-->
                       <div class="col-span-2">
                         <div class="relative mb-1" data-te-input-wrapper-init>
@@ -1178,7 +1178,7 @@
                           </label>
                         </div>
                       </div>
-                     
+
                       <!-- PROVOCATION-->
                       <div class="col-span-2">
                         <div class="relative mb-1" data-te-input-wrapper-init>
@@ -1198,7 +1198,7 @@
                           </label>
                         </div>
                       </div>
-                    
+
                       <!-- MEDICATION-->
                       <div class="col-span-2">
                         <div class="relative mb-1" data-te-input-wrapper-init>
@@ -1218,7 +1218,7 @@
                           </label>
                         </div>
                       </div>
-                    
+
                       <!-- QUALITY-->
                       <div class="col-span-2">
                         <div class="relative mb-1" data-te-input-wrapper-init>
@@ -1238,7 +1238,7 @@
                           </label>
                         </div>
                       </div>
-                   
+
                       <!-- PAST MEDICAL HISTORY-->
                       <div class="col-span-2">
                         <div class="relative mb-1" data-te-input-wrapper-init>
@@ -1258,7 +1258,7 @@
                           </label>
                         </div>
                       </div>
-                   
+
                       <!-- RADIATION-->
                       <div class="col-span-2">
                         <div class="relative mb-1" data-te-input-wrapper-init>
@@ -1278,7 +1278,7 @@
                           </label>
                         </div>
                       </div>
-                    
+
                       <!-- LAST ORAL INTAKE -->
                       <div class="col-span-2">
                         <div class="relative mb-1" data-te-input-wrapper-init>
@@ -1895,14 +1895,6 @@
                         <label data-te-select-label-ref
                           >Select as many items as apply</label
                         >
-                        <ul>
-                          <li
-                            v-for="option in anterior_head_injury"
-                            :key="option"
-                          >
-                            {{ option }}
-                          </li>
-                        </ul>
                       </div>
                     </div>
 
@@ -2427,7 +2419,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
                           ]"
-                          
+
                         >
                           2nd Degree
                         </button>
@@ -2446,7 +2438,7 @@
                         <input type="hidden" v-model="anterior_head_degree" name="anterior_head_degree">
                       </div>
                     </div>
-                    
+
                      <!-- Anterior Chest/Lungs Degree -->
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
@@ -2474,7 +2466,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
                           ]"
-                          
+
                         >
                           2nd Degree
                         </button>
@@ -2521,7 +2513,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
                           ]"
-                          
+
                         >
                           2nd Degree
                         </button>
@@ -2568,7 +2560,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
                           ]"
-                          
+
                         >
                           2nd Degree
                         </button>
@@ -2616,7 +2608,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
                           ]"
-                          
+
                         >
                           2nd Degree
                         </button>
@@ -2663,7 +2655,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
                           ]"
-                          
+
                         >
                           2nd Degree
                         </button>
@@ -2711,7 +2703,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
                           ]"
-                          
+
                         >
                           2nd Degree
                         </button>
@@ -2758,7 +2750,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
                           ]"
-                          
+
                         >
                           2nd Degree
                         </button>
@@ -2806,7 +2798,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
                           ]"
-                          
+
                         >
                           2nd Degree
                         </button>
@@ -2853,7 +2845,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
                           ]"
-                          
+
                         >
                           2nd Degree
                         </button>
@@ -2900,7 +2892,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
                           ]"
-                          
+
                         >
                           2nd Degree
                         </button>
@@ -2919,7 +2911,7 @@
                         <input type="hidden" v-model="posterior_pelvis_degree" name="posterior_pelvis_degree">
                       </div>
                     </div>
-                    
+
 
                     <!-- Posterior Left Arm Degree -->
                     <div class="flex items-center">
@@ -2948,7 +2940,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
                           ]"
-                          
+
                         >
                           2nd Degree
                         </button>
@@ -2995,7 +2987,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
                           ]"
-                          
+
                         >
                           2nd Degree
                         </button>
@@ -3042,7 +3034,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
                           ]"
-                          
+
                         >
                           2nd Degree
                         </button>
@@ -3089,7 +3081,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
                           ]"
-                          
+
                         >
                           2nd Degree
                         </button>
@@ -3795,8 +3787,6 @@ export default {
       posterior_right_arm_degree: "",
       posterior_left_leg_degree: "",
       posterior_right_leg_degree: "",
-
-
     };
   },
   fetch() {
@@ -4003,6 +3993,21 @@ export default {
       this.mask = "";
       this.gauze = "";
       this.others = "";
+      this.anterior_head_injury = [];
+      this.anterior_chest_injury = [];
+      this.anterior_pelvis_injury = [];
+      this.anterior_left_arm_injury = [];
+      this.anterior_right_arm_injury = [];
+      this.anterior_left_leg_injury = [];
+      this.anterior_right_leg_injury = [];
+      this.anterior_genitalia_injury = [];
+      this.posterior_head_injury = [];
+      this.posterior_chest_injury = [];
+      this.posterior_pelvis_injury = [];
+      this.posterior_left_arm_injury = [];
+      this.posterior_right_arm_injury = [];
+      this.posterior_left_leg_injury = [];
+      this.posterior_right_leg_injury = [];
       this.anterior_head_degree = "";
       this.anterior_chest_degree = "";
       this.anterior_pelvis_degree = "";
@@ -4019,7 +4024,6 @@ export default {
       this.posterior_left_leg_degree = "";
       this.posterior_right_leg_degree = "";
     },
-   
     register() {
       const params = {
         emrId: this.$auth.user.id,
@@ -4329,21 +4333,21 @@ export default {
         this.mask = "";
         this.gauze = "";
         this.others = "";
-        this.anterior_head_injury = "";
-        this.anterior_chest_injury = "";
-        this.anterior_pelvis_injury = "";
-        this.anterior_left_arm_injury = "";
-        this.anterior_right_arm_injury = "";
-        this.anterior_left_leg_injury = "";
-        this.anterior_right_leg_injury = "";
-        this.anterior_genitalia_injury = "";
-        this.posterior_head_injury = "";
-        this.posterior_chest_injury = "";
-        this.posterior_pelvis_injury = "";
-        this.posterior_left_arm_injury = "";
-        this.posterior_right_arm_injury = "";
-        this.posterior_left_leg_injury = "";
-        this.posterior_right_leg_injury = "";
+        this.anterior_head_injury = [];
+        this.anterior_chest_injury = [];
+        this.anterior_pelvis_injury = [];
+        this.anterior_left_arm_injury = [];
+        this.anterior_right_arm_injury = [];
+        this.anterior_left_leg_injury = [];
+        this.anterior_right_leg_injury = [];
+        this.anterior_genitalia_injury = [];
+        this.posterior_head_injury = [];
+        this.posterior_chest_injury = [];
+        this.posterior_pelvis_injury = [];
+        this.posterior_left_arm_injury = [];
+        this.posterior_right_arm_injury = [];
+        this.posterior_left_leg_injury = [];
+        this.posterior_right_leg_injury = [];
         this.anterior_head_degree = "";
         this.anterior_chest_degree = "";
         this.anterior_pelvis_degree = "";
