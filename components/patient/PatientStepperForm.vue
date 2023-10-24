@@ -1876,21 +1876,21 @@
                           multiple
                           class="w-full"
                         >
-                          <option value="1">Deformity</option>
-                          <option value="2">Contusion</option>
-                          <option value="3">Abrasion</option>
-                          <option value="4">Puncture</option>
-                          <option value="5">Burn</option>
-                          <option value="6">Tenderness</option>
-                          <option value="7">Laceration</option>
-                          <option value="8">Swelling</option>
-                          <option value="9">Edema</option>
-                          <option value="10">Battle Sign</option>
-                          <option value="11">Racoon Eye</option>
-                          <option value="12">Gunshot</option>
-                          <option value="13">JVD</option>
-                          <option value="14">Bleeding</option>
-                          <option value="15">Pain</option>
+                          <option value="Deformity">Deformity</option>
+                          <option value="Contusion">Contusion</option>
+                          <option value="Abrasion">Abrasion</option>
+                          <option value="Puncture">Puncture</option>
+                          <option value="Burn">Burn</option>
+                          <option value="Tenderness">Tenderness</option>
+                          <option value="Laceration">Laceration</option>
+                          <option value="Swelling">Swelling</option>
+                          <option value="Edema">Edema</option>
+                          <option value="Battle Sign">Battle Sign</option>
+                          <option value="Racoon Eye">Racoon Eye</option>
+                          <option value="Gunshot">Gunshot</option>
+                          <option value="JVD">JVD</option>
+                          <option value="Bleeding">Bleeding</option>
+                          <option value="Pain">Pain</option>
                         </select>
                         <label data-te-select-label-ref
                           >Select as many items as apply</label
@@ -1917,21 +1917,21 @@
                           multiple
                           class="w-full"
                         >
-                          <option value="1">Deformity</option>
-                          <option value="2">Contusion</option>
-                          <option value="3">Abrasion</option>
-                          <option value="4">Puncture</option>
-                          <option value="5">Burn</option>
-                          <option value="6">Tenderness</option>
-                          <option value="7">Laceration</option>
-                          <option value="8">Swelling</option>
-                          <option value="9">Edema</option>
-                          <option value="10">Battle Sign</option>
-                          <option value="11">Racoon Eye</option>
-                          <option value="12">Gunshot</option>
-                          <option value="13">JVD</option>
-                          <option value="14">Bleeding</option>
-                          <option value="15">Pain</option>
+                          <option value="Deformity">Deformity</option>
+                          <option value="Contusion">Contusion</option>
+                          <option value="Abrasion">Abrasion</option>
+                          <option value="Puncture">Puncture</option>
+                          <option value="Burn">Burn</option>
+                          <option value="Tenderness">Tenderness</option>
+                          <option value="Laceration">Laceration</option>
+                          <option value="Swelling">Swelling</option>
+                          <option value="Edema">Edema</option>
+                          <option value="Battle Sign">Battle Sign</option>
+                          <option value="Racoon Eye">Racoon Eye</option>
+                          <option value="Gunshot">Gunshot</option>
+                          <option value="JVD">JVD</option>
+                          <option value="Bleeding">Bleeding</option>
+                          <option value="Pain">Pain</option>
                         </select>
                         <label data-te-select-label-ref
                           >Select as many items as apply</label
@@ -1950,21 +1950,21 @@
                           multiple
                           class="w-full"
                         >
-                          <option value="1">Deformity</option>
-                          <option value="2">Contusion</option>
-                          <option value="3">Abrasion</option>
-                          <option value="4">Puncture</option>
-                          <option value="5">Burn</option>
-                          <option value="6">Tenderness</option>
-                          <option value="7">Laceration</option>
-                          <option value="8">Swelling</option>
-                          <option value="9">Edema</option>
-                          <option value="10">Battle Sign</option>
-                          <option value="11">Racoon Eye</option>
-                          <option value="12">Gunshot</option>
-                          <option value="13">JVD</option>
-                          <option value="14">Bleeding</option>
-                          <option value="15">Pain</option>
+                          <option value="Deformity">Deformity</option>
+                          <option value="Contusion">Contusion</option>
+                          <option value="Abrasion">Abrasion</option>
+                          <option value="Puncture">Puncture</option>
+                          <option value="Burn">Burn</option>
+                          <option value="Tenderness">Tenderness</option>
+                          <option value="Laceration">Laceration</option>
+                          <option value="Swelling">Swelling</option>
+                          <option value="Edema">Edema</option>
+                          <option value="Battle Sign">Battle Sign</option>
+                          <option value="Racoon Eye">Racoon Eye</option>
+                          <option value="Gunshot">Gunshot</option>
+                          <option value="JVD">JVD</option>
+                          <option value="Bleeding">Bleeding</option>
+                          <option value="Pain">Pain</option>
                         </select>
                         <label data-te-select-label-ref
                           >Select as many items as apply</label
@@ -1983,21 +1983,21 @@
                           multiple
                           class="w-full"
                         >
-                          <option value="1">Deformity</option>
-                          <option value="2">Contusion</option>
-                          <option value="3">Abrasion</option>
-                          <option value="4">Puncture</option>
-                          <option value="5">Burn</option>
-                          <option value="6">Tenderness</option>
-                          <option value="7">Laceration</option>
-                          <option value="8">Swelling</option>
-                          <option value="9">Edema</option>
-                          <option value="10">Battle Sign</option>
-                          <option value="11">Racoon Eye</option>
-                          <option value="12">Gunshot</option>
-                          <option value="13">JVD</option>
-                          <option value="14">Bleeding</option>
-                          <option value="15">Pain</option>
+                          <option value="Deformity">Deformity</option>
+                          <option value="Contusion">Contusion</option>
+                          <option value="Abrasion">Abrasion</option>
+                          <option value="Puncture">Puncture</option>
+                          <option value="Burn">Burn</option>
+                          <option value="Tenderness">Tenderness</option>
+                          <option value="Laceration">Laceration</option>
+                          <option value="Swelling">Swelling</option>
+                          <option value="Edema">Edema</option>
+                          <option value="Battle Sign">Battle Sign</option>
+                          <option value="Racoon Eye">Racoon Eye</option>
+                          <option value="Gunshot">Gunshot</option>
+                          <option value="JVD">JVD</option>
+                          <option value="Bleeding">Bleeding</option>
+                          <option value="Pain">Pain</option>
                         </select>
                         <label data-te-select-label-ref
                           >Select as many items as apply</label
@@ -2016,21 +2016,21 @@
                           multiple
                           class="w-full"
                         >
-                          <option value="1">Deformity</option>
-                          <option value="2">Contusion</option>
-                          <option value="3">Abrasion</option>
-                          <option value="4">Puncture</option>
-                          <option value="5">Burn</option>
-                          <option value="6">Tenderness</option>
-                          <option value="7">Laceration</option>
-                          <option value="8">Swelling</option>
-                          <option value="9">Edema</option>
-                          <option value="10">Battle Sign</option>
-                          <option value="11">Racoon Eye</option>
-                          <option value="12">Gunshot</option>
-                          <option value="13">JVD</option>
-                          <option value="14">Bleeding</option>
-                          <option value="15">Pain</option>
+                          <option value="Deformity">Deformity</option>
+                          <option value="Contusion">Contusion</option>
+                          <option value="Abrasion">Abrasion</option>
+                          <option value="Puncture">Puncture</option>
+                          <option value="Burn">Burn</option>
+                          <option value="Tenderness">Tenderness</option>
+                          <option value="Laceration">Laceration</option>
+                          <option value="Swelling">Swelling</option>
+                          <option value="Edema">Edema</option>
+                          <option value="Battle Sign">Battle Sign</option>
+                          <option value="Racoon Eye">Racoon Eye</option>
+                          <option value="Gunshot">Gunshot</option>
+                          <option value="JVD">JVD</option>
+                          <option value="Bleeding">Bleeding</option>
+                          <option value="Pain">Pain</option>
                         </select>
                         <label data-te-select-label-ref
                           >Select as many items as apply</label
@@ -2049,21 +2049,21 @@
                           multiple
                           class="w-full"
                         >
-                          <option value="1">Deformity</option>
-                          <option value="2">Contusion</option>
-                          <option value="3">Abrasion</option>
-                          <option value="4">Puncture</option>
-                          <option value="5">Burn</option>
-                          <option value="6">Tenderness</option>
-                          <option value="7">Laceration</option>
-                          <option value="8">Swelling</option>
-                          <option value="9">Edema</option>
-                          <option value="10">Battle Sign</option>
-                          <option value="11">Racoon Eye</option>
-                          <option value="12">Gunshot</option>
-                          <option value="13">JVD</option>
-                          <option value="14">Bleeding</option>
-                          <option value="15">Pain</option>
+                          <option value="Deformity">Deformity</option>
+                          <option value="Contusion">Contusion</option>
+                          <option value="Abrasion">Abrasion</option>
+                          <option value="Puncture">Puncture</option>
+                          <option value="Burn">Burn</option>
+                          <option value="Tenderness">Tenderness</option>
+                          <option value="Laceration">Laceration</option>
+                          <option value="Swelling">Swelling</option>
+                          <option value="Edema">Edema</option>
+                          <option value="Battle Sign">Battle Sign</option>
+                          <option value="Racoon Eye">Racoon Eye</option>
+                          <option value="Gunshot">Gunshot</option>
+                          <option value="JVD">JVD</option>
+                          <option value="Bleeding">Bleeding</option>
+                          <option value="Pain">Pain</option>
                         </select>
                         <label data-te-select-label-ref
                           >Select as many items as apply</label
@@ -2082,21 +2082,21 @@
                           multiple
                           class="w-full"
                         >
-                          <option value="1">Deformity</option>
-                          <option value="2">Contusion</option>
-                          <option value="3">Abrasion</option>
-                          <option value="4">Puncture</option>
-                          <option value="5">Burn</option>
-                          <option value="6">Tenderness</option>
-                          <option value="7">Laceration</option>
-                          <option value="8">Swelling</option>
-                          <option value="9">Edema</option>
-                          <option value="10">Battle Sign</option>
-                          <option value="11">Racoon Eye</option>
-                          <option value="12">Gunshot</option>
-                          <option value="13">JVD</option>
-                          <option value="14">Bleeding</option>
-                          <option value="15">Pain</option>
+                          <option value="Deformity">Deformity</option>
+                          <option value="Contusion">Contusion</option>
+                          <option value="Abrasion">Abrasion</option>
+                          <option value="Puncture">Puncture</option>
+                          <option value="Burn">Burn</option>
+                          <option value="Tenderness">Tenderness</option>
+                          <option value="Laceration">Laceration</option>
+                          <option value="Swelling">Swelling</option>
+                          <option value="Edema">Edema</option>
+                          <option value="Battle Sign">Battle Sign</option>
+                          <option value="Racoon Eye">Racoon Eye</option>
+                          <option value="Gunshot">Gunshot</option>
+                          <option value="JVD">JVD</option>
+                          <option value="Bleeding">Bleeding</option>
+                          <option value="Pain">Pain</option>
                         </select>
                         <label data-te-select-label-ref
                           >Select as many items as apply</label
@@ -2115,21 +2115,21 @@
                           multiple
                           class="w-full"
                         >
-                          <option value="1">Deformity</option>
-                          <option value="2">Contusion</option>
-                          <option value="3">Abrasion</option>
-                          <option value="4">Puncture</option>
-                          <option value="5">Burn</option>
-                          <option value="6">Tenderness</option>
-                          <option value="7">Laceration</option>
-                          <option value="8">Swelling</option>
-                          <option value="9">Edema</option>
-                          <option value="10">Battle Sign</option>
-                          <option value="11">Racoon Eye</option>
-                          <option value="12">Gunshot</option>
-                          <option value="13">JVD</option>
-                          <option value="14">Bleeding</option>
-                          <option value="15">Pain</option>
+                          <option value="Deformity">Deformity</option>
+                          <option value="Contusion">Contusion</option>
+                          <option value="Abrasion">Abrasion</option>
+                          <option value="Puncture">Puncture</option>
+                          <option value="Burn">Burn</option>
+                          <option value="Tenderness">Tenderness</option>
+                          <option value="Laceration">Laceration</option>
+                          <option value="Swelling">Swelling</option>
+                          <option value="Edema">Edema</option>
+                          <option value="Battle Sign">Battle Sign</option>
+                          <option value="Racoon Eye">Racoon Eye</option>
+                          <option value="Gunshot">Gunshot</option>
+                          <option value="JVD">JVD</option>
+                          <option value="Bleeding">Bleeding</option>
+                          <option value="Pain">Pain</option>
                         </select>
                         <label data-te-select-label-ref
                           >Select as many items as apply</label
@@ -2149,21 +2149,21 @@
                           multiple
                           class="w-full"
                         >
-                          <option value="1">Deformity</option>
-                          <option value="2">Contusion</option>
-                          <option value="3">Abrasion</option>
-                          <option value="4">Puncture</option>
-                          <option value="5">Burn</option>
-                          <option value="6">Tenderness</option>
-                          <option value="7">Laceration</option>
-                          <option value="8">Swelling</option>
-                          <option value="9">Edema</option>
-                          <option value="10">Battle Sign</option>
-                          <option value="11">Racoon Eye</option>
-                          <option value="12">Gunshot</option>
-                          <option value="13">JVD</option>
-                          <option value="14">Bleeding</option>
-                          <option value="15">Pain</option>
+                          <option value="Deformity">Deformity</option>
+                          <option value="Contusion">Contusion</option>
+                          <option value="Abrasion">Abrasion</option>
+                          <option value="Puncture">Puncture</option>
+                          <option value="Burn">Burn</option>
+                          <option value="Tenderness">Tenderness</option>
+                          <option value="Laceration">Laceration</option>
+                          <option value="Swelling">Swelling</option>
+                          <option value="Edema">Edema</option>
+                          <option value="Battle Sign">Battle Sign</option>
+                          <option value="Racoon Eye">Racoon Eye</option>
+                          <option value="Gunshot">Gunshot</option>
+                          <option value="JVD">JVD</option>
+                          <option value="Bleeding">Bleeding</option>
+                          <option value="Pain">Pain</option>
                         </select>
                         <label data-te-select-label-ref
                           >Select as many items as apply</label
@@ -2182,21 +2182,21 @@
                           multiple
                           class="w-full"
                         >
-                          <option value="1">Deformity</option>
-                          <option value="2">Contusion</option>
-                          <option value="3">Abrasion</option>
-                          <option value="4">Puncture</option>
-                          <option value="5">Burn</option>
-                          <option value="6">Tenderness</option>
-                          <option value="7">Laceration</option>
-                          <option value="8">Swelling</option>
-                          <option value="9">Edema</option>
-                          <option value="10">Battle Sign</option>
-                          <option value="11">Racoon Eye</option>
-                          <option value="12">Gunshot</option>
-                          <option value="13">JVD</option>
-                          <option value="14">Bleeding</option>
-                          <option value="15">Pain</option>
+                          <option value="Deformity">Deformity</option>
+                          <option value="Contusion">Contusion</option>
+                          <option value="Abrasion">Abrasion</option>
+                          <option value="Puncture">Puncture</option>
+                          <option value="Burn">Burn</option>
+                          <option value="Tenderness">Tenderness</option>
+                          <option value="Laceration">Laceration</option>
+                          <option value="Swelling">Swelling</option>
+                          <option value="Edema">Edema</option>
+                          <option value="Battle Sign">Battle Sign</option>
+                          <option value="Racoon Eye">Racoon Eye</option>
+                          <option value="Gunshot">Gunshot</option>
+                          <option value="JVD">JVD</option>
+                          <option value="Bleeding">Bleeding</option>
+                          <option value="Pain">Pain</option>
                         </select>
                         <label data-te-select-label-ref
                           >Select as many items as apply</label
@@ -2215,21 +2215,21 @@
                           multiple
                           class="w-full"
                         >
-                          <option value="1">Deformity</option>
-                          <option value="2">Contusion</option>
-                          <option value="3">Abrasion</option>
-                          <option value="4">Puncture</option>
-                          <option value="5">Burn</option>
-                          <option value="6">Tenderness</option>
-                          <option value="7">Laceration</option>
-                          <option value="8">Swelling</option>
-                          <option value="9">Edema</option>
-                          <option value="10">Battle Sign</option>
-                          <option value="11">Racoon Eye</option>
-                          <option value="12">Gunshot</option>
-                          <option value="13">JVD</option>
-                          <option value="14">Bleeding</option>
-                          <option value="15">Pain</option>
+                          <option value="Deformity">Deformity</option>
+                          <option value="Contusion">Contusion</option>
+                          <option value="Abrasion">Abrasion</option>
+                          <option value="Puncture">Puncture</option>
+                          <option value="Burn">Burn</option>
+                          <option value="Tenderness">Tenderness</option>
+                          <option value="Laceration">Laceration</option>
+                          <option value="Swelling">Swelling</option>
+                          <option value="Edema">Edema</option>
+                          <option value="Battle Sign">Battle Sign</option>
+                          <option value="Racoon Eye">Racoon Eye</option>
+                          <option value="Gunshot">Gunshot</option>
+                          <option value="JVD">JVD</option>
+                          <option value="Bleeding">Bleeding</option>
+                          <option value="Pain">Pain</option>
                         </select>
                         <label data-te-select-label-ref
                           >Select as many items as apply</label
@@ -2248,21 +2248,21 @@
                           multiple
                           class="w-full"
                         >
-                          <option value="1">Deformity</option>
-                          <option value="2">Contusion</option>
-                          <option value="3">Abrasion</option>
-                          <option value="4">Puncture</option>
-                          <option value="5">Burn</option>
-                          <option value="6">Tenderness</option>
-                          <option value="7">Laceration</option>
-                          <option value="8">Swelling</option>
-                          <option value="9">Edema</option>
-                          <option value="10">Battle Sign</option>
-                          <option value="11">Racoon Eye</option>
-                          <option value="12">Gunshot</option>
-                          <option value="13">JVD</option>
-                          <option value="14">Bleeding</option>
-                          <option value="15">Pain</option>
+                          <option value="Deformity">Deformity</option>
+                          <option value="Contusion">Contusion</option>
+                          <option value="Abrasion">Abrasion</option>
+                          <option value="Puncture">Puncture</option>
+                          <option value="Burn">Burn</option>
+                          <option value="Tenderness">Tenderness</option>
+                          <option value="Laceration">Laceration</option>
+                          <option value="Swelling">Swelling</option>
+                          <option value="Edema">Edema</option>
+                          <option value="Battle Sign">Battle Sign</option>
+                          <option value="Racoon Eye">Racoon Eye</option>
+                          <option value="Gunshot">Gunshot</option>
+                          <option value="JVD">JVD</option>
+                          <option value="Bleeding">Bleeding</option>
+                          <option value="Pain">Pain</option>
                         </select>
                         <label data-te-select-label-ref
                           >Select as many items as apply</label
@@ -2281,21 +2281,21 @@
                           multiple
                           class="w-full"
                         >
-                          <option value="1">Deformity</option>
-                          <option value="2">Contusion</option>
-                          <option value="3">Abrasion</option>
-                          <option value="4">Puncture</option>
-                          <option value="5">Burn</option>
-                          <option value="6">Tenderness</option>
-                          <option value="7">Laceration</option>
-                          <option value="8">Swelling</option>
-                          <option value="9">Edema</option>
-                          <option value="10">Battle Sign</option>
-                          <option value="11">Racoon Eye</option>
-                          <option value="12">Gunshot</option>
-                          <option value="13">JVD</option>
-                          <option value="14">Bleeding</option>
-                          <option value="15">Pain</option>
+                          <option value="Deformity">Deformity</option>
+                          <option value="Contusion">Contusion</option>
+                          <option value="Abrasion">Abrasion</option>
+                          <option value="Puncture">Puncture</option>
+                          <option value="Burn">Burn</option>
+                          <option value="Tenderness">Tenderness</option>
+                          <option value="Laceration">Laceration</option>
+                          <option value="Swelling">Swelling</option>
+                          <option value="Edema">Edema</option>
+                          <option value="Battle Sign">Battle Sign</option>
+                          <option value="Racoon Eye">Racoon Eye</option>
+                          <option value="Gunshot">Gunshot</option>
+                          <option value="JVD">JVD</option>
+                          <option value="Bleeding">Bleeding</option>
+                          <option value="Pain">Pain</option>
                         </select>
                         <label data-te-select-label-ref
                           >Select as many items as apply</label
@@ -2314,21 +2314,21 @@
                           multiple
                           class="w-full"
                         >
-                          <option value="1">Deformity</option>
-                          <option value="2">Contusion</option>
-                          <option value="3">Abrasion</option>
-                          <option value="4">Puncture</option>
-                          <option value="5">Burn</option>
-                          <option value="6">Tenderness</option>
-                          <option value="7">Laceration</option>
-                          <option value="8">Swelling</option>
-                          <option value="9">Edema</option>
-                          <option value="10">Battle Sign</option>
-                          <option value="11">Racoon Eye</option>
-                          <option value="12">Gunshot</option>
-                          <option value="13">JVD</option>
-                          <option value="14">Bleeding</option>
-                          <option value="15">Pain</option>
+                          <option value="Deformity">Deformity</option>
+                          <option value="Contusion">Contusion</option>
+                          <option value="Abrasion">Abrasion</option>
+                          <option value="Puncture">Puncture</option>
+                          <option value="Burn">Burn</option>
+                          <option value="Tenderness">Tenderness</option>
+                          <option value="Laceration">Laceration</option>
+                          <option value="Swelling">Swelling</option>
+                          <option value="Edema">Edema</option>
+                          <option value="Battle Sign">Battle Sign</option>
+                          <option value="Racoon Eye">Racoon Eye</option>
+                          <option value="Gunshot">Gunshot</option>
+                          <option value="JVD">JVD</option>
+                          <option value="Bleeding">Bleeding</option>
+                          <option value="Pain">Pain</option>
                         </select>
                         <label data-te-select-label-ref
                           >Select as many items as apply</label
@@ -2347,21 +2347,21 @@
                           multiple
                           class="w-full"
                         >
-                          <option value="1">Deformity</option>
-                          <option value="2">Contusion</option>
-                          <option value="3">Abrasion</option>
-                          <option value="4">Puncture</option>
-                          <option value="5">Burn</option>
-                          <option value="6">Tenderness</option>
-                          <option value="7">Laceration</option>
-                          <option value="8">Swelling</option>
-                          <option value="9">Edema</option>
-                          <option value="10">Battle Sign</option>
-                          <option value="11">Racoon Eye</option>
-                          <option value="12">Gunshot</option>
-                          <option value="13">JVD</option>
-                          <option value="14">Bleeding</option>
-                          <option value="15">Pain</option>
+                          <option value="Deformity">Deformity</option>
+                          <option value="Contusion">Contusion</option>
+                          <option value="Abrasion">Abrasion</option>
+                          <option value="Puncture">Puncture</option>
+                          <option value="Burn">Burn</option>
+                          <option value="Tenderness">Tenderness</option>
+                          <option value="Laceration">Laceration</option>
+                          <option value="Swelling">Swelling</option>
+                          <option value="Edema">Edema</option>
+                          <option value="Battle Sign">Battle Sign</option>
+                          <option value="Racoon Eye">Racoon Eye</option>
+                          <option value="Gunshot">Gunshot</option>
+                          <option value="JVD">JVD</option>
+                          <option value="Bleeding">Bleeding</option>
+                          <option value="Pain">Pain</option>
                         </select>
                         <label data-te-select-label-ref
                           >Select as many items as apply</label
