@@ -4083,7 +4083,6 @@ export default {
     "$store.state.editPatientStepperFormFields"() {
       this.patientStepperFormFields =
         this.$store.getters["getEditPatientStepperFormFields"];
-      console.log(this.patientStepperFormFields);
       this.id = this.patientStepperFormFields.id;
       this.ambulance = this.patientStepperFormFields.ambulance;
       this.arrive_at_scene = this.patientStepperFormFields.arrive_at_scene;
