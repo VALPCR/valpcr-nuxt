@@ -654,6 +654,7 @@
                             v-model="team_id"
                             data-te-select-init
                             class="w-full bg-neutral-50 col-span-3"
+                            disabled
                           >
                             <option>Team</option>
                             <option
