@@ -757,8 +757,9 @@
                           v-model="team_id"
                           data-te-select-init
                           class="w-full bg-neutral-50"
+                          disabled
                         >
-                          <option selected value="1">Team</option>
+                          <option>Team</option>
                           <option
                             v-for="(item, index) in teams"
                             :key="index"
@@ -4016,6 +4017,7 @@ export default {
     };
   },
   fetch() {
+    this.team_id = this.$auth.user.team_id;
     this.$axios.get("team/list").then((response) => {
       response.data.return.map((team) =>
         this.teams.push({ id: team.id, name: this.capitalize(team.name) })
