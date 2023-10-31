@@ -49,7 +49,12 @@ export default {
     // https://go.nuxtjs.dev/bootstrap
     "@nuxtjs/axios",
     "@nuxtjs/auth-next",
+    "@nuxtjs/device",
   ],
+
+  device: {
+    refreshOnResize: true
+  },
 
   axios: {
     baseURL: process.env.BASE_URL,
@@ -79,7 +84,7 @@ export default {
           refresh: { url: "auth/refresh", method: "post" },
           user: { url: "auth/verify", method: "get", propertyName: false },
           // logout: { url: "https://valpcr.kbsan.com/api/auth/logout", method: "post" },
-          logout: { url: "http://valpcr.test/api/auth/logout", method: "post" },
+          logout: { url: "https://www.valpcr.com/api/auth/logout", method: "post" },
         },
       },
     },

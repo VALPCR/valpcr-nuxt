@@ -33,14 +33,12 @@ export default {
 .sidebar {
   position: relative;
   margin-top: 60px;
-  /* Other sidebar styles */
 }
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 9999; /* Adjust the z-index value as needed */
-  /* Other navbar styles */
+  z-index: 9999;
 }
 </style>

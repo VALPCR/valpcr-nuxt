@@ -57,7 +57,11 @@
             class="relative m-0 flex list-none justify-between overflow-hidden p-0 transition-[height] duration-200 ease-in-out"
           >
             <!--Dispatch Data-->
-            <li data-te-stepper-step-ref data-te-stepper-step-active class="w-[4.5rem] flex-auto">
+            <li
+              data-te-stepper-step-ref
+              data-te-stepper-step-active
+              class="w-[4.5rem] flex-auto"
+            >
               <div
                 data-te-stepper-head-ref
                 class="flex cursor-pointer items-center pl-2 leading-[1.3rem] no-underline after:ml-2 after:h-px after:w-full after:flex-1 after:bg-[#e0e0e0] after:content-[''] hover:bg-[#f9f9f9] focus:outline-none dark:after:bg-neutral-600 dark:hover:bg-[#3b3b3b]"
@@ -602,6 +606,23 @@
                           </label>
                         </div>
 
+                          <select
+                            v-model="team_id"
+                            data-te-select-init
+                            class="w-full bg-neutral-50 col-span-3"
+                            disabled
+                          >
+                            <option>Team</option>
+                            <option
+                              v-for="(item, index) in teams"
+                              :key="index"
+                              :value="item.id"
+                            >
+                              {{ item.name }}
+                            </option>
+                          </select>
+                        </div>
+                      </div>
                         <div class="relative mb-1" data-te-input-wrapper-init>
                           <input
                             v-model="t_l"
@@ -1825,517 +1846,517 @@
                 class="absolute left-0 w-full translate-x-[150%] p-4 transition-all duration-500 ease-in-out"
               >
                 <div class="relative p-4">
-                    <h4 class="mb-4 font-bold">Anterior</h4>
-                    <div class="flex items-center">
-                      <div class="text-center mb-3 w-1/5">
-                        <label class="mb-0">Head</label>
-                      </div>
-                      <div class="relative mb-3 w-4/5">
-                        <select
-                          v-model="anterior_head_injury"
-                          data-te-select-init
-                          multiple
-                          class="w-full"
-                          id="anterior_head_injury"
-                        >
-                          <option value="Deformity">Deformity</option>
-                          <option value="Contusion">Contusion</option>
-                          <option value="Abrasion">Abrasion</option>
-                          <option value="Puncture">Puncture</option>
-                          <option value="Burn">Burn</option>
-                          <option value="Tenderness">Tenderness</option>
-                          <option value="Laceration">Laceration</option>
-                          <option value="Swelling">Swelling</option>
-                          <option value="Edema">Edema</option>
-                          <option value="Battle Sign">Battle Sign</option>
-                          <option value="Racoon Eye">Racoon Eye</option>
-                          <option value="Gunshot">Gunshot</option>
-                          <option value="JVD">JVD</option>
-                          <option value="Bleeding">Bleeding</option>
-                          <option value="Pain">Pain</option>
-                        </select>
-                        <label data-te-select-label-ref
-                        >Select as many items as apply</label
-                        >
-                      </div>
+                  <h4 class="mb-4 font-bold">Anterior</h4>
+                  <div class="flex items-center">
+                    <div class="text-center mb-3 w-1/5">
+                      <label class="mb-0">Head</label>
                     </div>
+                    <div class="relative mb-3 w-4/5">
+                      <select
+                        v-model="anterior_head_injury"
+                        data-te-select-init
+                        multiple
+                        class="w-full"
+                        id="anterior_head_injury"
+                      >
+                        <option value="Deformity">Deformity</option>
+                        <option value="Contusion">Contusion</option>
+                        <option value="Abrasion">Abrasion</option>
+                        <option value="Puncture">Puncture</option>
+                        <option value="Burn">Burn</option>
+                        <option value="Tenderness">Tenderness</option>
+                        <option value="Laceration">Laceration</option>
+                        <option value="Swelling">Swelling</option>
+                        <option value="Edema">Edema</option>
+                        <option value="Battle Sign">Battle Sign</option>
+                        <option value="Racoon Eye">Racoon Eye</option>
+                        <option value="Gunshot">Gunshot</option>
+                        <option value="JVD">JVD</option>
+                        <option value="Bleeding">Bleeding</option>
+                        <option value="Pain">Pain</option>
+                      </select>
+                      <label data-te-select-label-ref
+                        >Select as many items as apply</label
+                      >
+                    </div>
+                  </div>
 
-                    <div class="flex items-center">
-                      <div class="text-center mb-3 w-1/5">
-                        <label class="mb-0">Chest/Lungs</label>
-                      </div>
-                      <div class="relative mb-3 w-4/5">
-                        <select
-                          v-model="anterior_chest_injury"
-                          data-te-select-init
-                          multiple
-                          class="w-full"
-                          id="anterior_chest_injury"
-                        >
-                          <option value="Deformity">Deformity</option>
-                          <option value="Contusion">Contusion</option>
-                          <option value="Abrasion">Abrasion</option>
-                          <option value="Puncture">Puncture</option>
-                          <option value="Burn">Burn</option>
-                          <option value="Tenderness">Tenderness</option>
-                          <option value="Laceration">Laceration</option>
-                          <option value="Swelling">Swelling</option>
-                          <option value="Edema">Edema</option>
-                          <option value="Battle Sign">Battle Sign</option>
-                          <option value="Racoon Eye">Racoon Eye</option>
-                          <option value="Gunshot">Gunshot</option>
-                          <option value="JVD">JVD</option>
-                          <option value="Bleeding">Bleeding</option>
-                          <option value="Pain">Pain</option>
-                        </select>
-                        <label data-te-select-label-ref
-                        >Select as many items as apply</label
-                        >
-                      </div>
+                  <div class="flex items-center">
+                    <div class="text-center mb-3 w-1/5">
+                      <label class="mb-0">Chest/Lungs</label>
                     </div>
+                    <div class="relative mb-3 w-4/5">
+                      <select
+                        v-model="anterior_chest_injury"
+                        data-te-select-init
+                        multiple
+                        class="w-full"
+                        id="anterior_chest_injury"
+                      >
+                        <option value="Deformity">Deformity</option>
+                        <option value="Contusion">Contusion</option>
+                        <option value="Abrasion">Abrasion</option>
+                        <option value="Puncture">Puncture</option>
+                        <option value="Burn">Burn</option>
+                        <option value="Tenderness">Tenderness</option>
+                        <option value="Laceration">Laceration</option>
+                        <option value="Swelling">Swelling</option>
+                        <option value="Edema">Edema</option>
+                        <option value="Battle Sign">Battle Sign</option>
+                        <option value="Racoon Eye">Racoon Eye</option>
+                        <option value="Gunshot">Gunshot</option>
+                        <option value="JVD">JVD</option>
+                        <option value="Bleeding">Bleeding</option>
+                        <option value="Pain">Pain</option>
+                      </select>
+                      <label data-te-select-label-ref
+                        >Select as many items as apply</label
+                      >
+                    </div>
+                  </div>
 
-                    <div class="flex items-center">
-                      <div class="text-center mb-3 w-1/5">
-                        <label class="mb-0">Pelvis/GU</label>
-                      </div>
-                      <div class="relative mb-3 w-4/5">
-                        <select
-                          v-model="anterior_pelvis_injury"
-                          data-te-select-init
-                          multiple
-                          class="w-full"
-                          id="anterior_pelvis_injury"
-                        >
-                          <option value="Deformity">Deformity</option>
-                          <option value="Contusion">Contusion</option>
-                          <option value="Abrasion">Abrasion</option>
-                          <option value="Puncture">Puncture</option>
-                          <option value="Burn">Burn</option>
-                          <option value="Tenderness">Tenderness</option>
-                          <option value="Laceration">Laceration</option>
-                          <option value="Swelling">Swelling</option>
-                          <option value="Edema">Edema</option>
-                          <option value="Battle Sign">Battle Sign</option>
-                          <option value="Racoon Eye">Racoon Eye</option>
-                          <option value="Gunshot">Gunshot</option>
-                          <option value="JVD">JVD</option>
-                          <option value="Bleeding">Bleeding</option>
-                          <option value="Pain">Pain</option>
-                        </select>
-                        <label data-te-select-label-ref
-                        >Select as many items as apply</label
-                        >
-                      </div>
+                  <div class="flex items-center">
+                    <div class="text-center mb-3 w-1/5">
+                      <label class="mb-0">Pelvis/GU</label>
                     </div>
+                    <div class="relative mb-3 w-4/5">
+                      <select
+                        v-model="anterior_pelvis_injury"
+                        data-te-select-init
+                        multiple
+                        class="w-full"
+                        id="anterior_pelvis_injury"
+                      >
+                        <option value="Deformity">Deformity</option>
+                        <option value="Contusion">Contusion</option>
+                        <option value="Abrasion">Abrasion</option>
+                        <option value="Puncture">Puncture</option>
+                        <option value="Burn">Burn</option>
+                        <option value="Tenderness">Tenderness</option>
+                        <option value="Laceration">Laceration</option>
+                        <option value="Swelling">Swelling</option>
+                        <option value="Edema">Edema</option>
+                        <option value="Battle Sign">Battle Sign</option>
+                        <option value="Racoon Eye">Racoon Eye</option>
+                        <option value="Gunshot">Gunshot</option>
+                        <option value="JVD">JVD</option>
+                        <option value="Bleeding">Bleeding</option>
+                        <option value="Pain">Pain</option>
+                      </select>
+                      <label data-te-select-label-ref
+                        >Select as many items as apply</label
+                      >
+                    </div>
+                  </div>
 
-                    <div class="flex items-center">
-                      <div class="text-center mb-3 w-1/5">
-                        <label class="mb-0">Left Arm</label>
-                      </div>
-                      <div class="relative mb-3 w-4/5">
-                        <select
-                          v-model="anterior_left_arm_injury"
-                          data-te-select-init
-                          multiple
-                          class="w-full"
-                          id="anterior_left_arm_injury"
-                        >
-                          <option value="Deformity">Deformity</option>
-                          <option value="Contusion">Contusion</option>
-                          <option value="Abrasion">Abrasion</option>
-                          <option value="Puncture">Puncture</option>
-                          <option value="Burn">Burn</option>
-                          <option value="Tenderness">Tenderness</option>
-                          <option value="Laceration">Laceration</option>
-                          <option value="Swelling">Swelling</option>
-                          <option value="Edema">Edema</option>
-                          <option value="Battle Sign">Battle Sign</option>
-                          <option value="Racoon Eye">Racoon Eye</option>
-                          <option value="Gunshot">Gunshot</option>
-                          <option value="JVD">JVD</option>
-                          <option value="Bleeding">Bleeding</option>
-                          <option value="Pain">Pain</option>
-                        </select>
-                        <label data-te-select-label-ref
-                        >Select as many items as apply</label
-                        >
-                      </div>
+                  <div class="flex items-center">
+                    <div class="text-center mb-3 w-1/5">
+                      <label class="mb-0">Left Arm</label>
                     </div>
+                    <div class="relative mb-3 w-4/5">
+                      <select
+                        v-model="anterior_left_arm_injury"
+                        data-te-select-init
+                        multiple
+                        class="w-full"
+                        id="anterior_left_arm_injury"
+                      >
+                        <option value="Deformity">Deformity</option>
+                        <option value="Contusion">Contusion</option>
+                        <option value="Abrasion">Abrasion</option>
+                        <option value="Puncture">Puncture</option>
+                        <option value="Burn">Burn</option>
+                        <option value="Tenderness">Tenderness</option>
+                        <option value="Laceration">Laceration</option>
+                        <option value="Swelling">Swelling</option>
+                        <option value="Edema">Edema</option>
+                        <option value="Battle Sign">Battle Sign</option>
+                        <option value="Racoon Eye">Racoon Eye</option>
+                        <option value="Gunshot">Gunshot</option>
+                        <option value="JVD">JVD</option>
+                        <option value="Bleeding">Bleeding</option>
+                        <option value="Pain">Pain</option>
+                      </select>
+                      <label data-te-select-label-ref
+                        >Select as many items as apply</label
+                      >
+                    </div>
+                  </div>
 
-                    <div class="flex items-center">
-                      <div class="text-center mb-3 w-1/5">
-                        <label class="mb-0">Right Arm</label>
-                      </div>
-                      <div class="relative mb-3 w-4/5">
-                        <select
-                          v-model="anterior_right_arm_injury"
-                          data-te-select-init
-                          multiple
-                          class="w-full"
-                          id="anterior_right_arm_injury"
-                        >
-                          <option value="Deformity">Deformity</option>
-                          <option value="Contusion">Contusion</option>
-                          <option value="Abrasion">Abrasion</option>
-                          <option value="Puncture">Puncture</option>
-                          <option value="Burn">Burn</option>
-                          <option value="Tenderness">Tenderness</option>
-                          <option value="Laceration">Laceration</option>
-                          <option value="Swelling">Swelling</option>
-                          <option value="Edema">Edema</option>
-                          <option value="Battle Sign">Battle Sign</option>
-                          <option value="Racoon Eye">Racoon Eye</option>
-                          <option value="Gunshot">Gunshot</option>
-                          <option value="JVD">JVD</option>
-                          <option value="Bleeding">Bleeding</option>
-                          <option value="Pain">Pain</option>
-                        </select>
-                        <label data-te-select-label-ref
-                        >Select as many items as apply</label
-                        >
-                      </div>
+                  <div class="flex items-center">
+                    <div class="text-center mb-3 w-1/5">
+                      <label class="mb-0">Right Arm</label>
                     </div>
+                    <div class="relative mb-3 w-4/5">
+                      <select
+                        v-model="anterior_right_arm_injury"
+                        data-te-select-init
+                        multiple
+                        class="w-full"
+                        id="anterior_right_arm_injury"
+                      >
+                        <option value="Deformity">Deformity</option>
+                        <option value="Contusion">Contusion</option>
+                        <option value="Abrasion">Abrasion</option>
+                        <option value="Puncture">Puncture</option>
+                        <option value="Burn">Burn</option>
+                        <option value="Tenderness">Tenderness</option>
+                        <option value="Laceration">Laceration</option>
+                        <option value="Swelling">Swelling</option>
+                        <option value="Edema">Edema</option>
+                        <option value="Battle Sign">Battle Sign</option>
+                        <option value="Racoon Eye">Racoon Eye</option>
+                        <option value="Gunshot">Gunshot</option>
+                        <option value="JVD">JVD</option>
+                        <option value="Bleeding">Bleeding</option>
+                        <option value="Pain">Pain</option>
+                      </select>
+                      <label data-te-select-label-ref
+                        >Select as many items as apply</label
+                      >
+                    </div>
+                  </div>
 
-                    <div class="flex items-center">
-                      <div class="text-center mb-3 w-1/5">
-                        <label class="mb-0">Left Leg</label>
-                      </div>
-                      <div class="relative mb-3 w-4/5">
-                        <select
-                          v-model="anterior_left_leg_injury"
-                          data-te-select-init
-                          multiple
-                          class="w-full"
-                          id="anterior_left_leg_injury"
-                        >
-                          <option value="Deformity">Deformity</option>
-                          <option value="Contusion">Contusion</option>
-                          <option value="Abrasion">Abrasion</option>
-                          <option value="Puncture">Puncture</option>
-                          <option value="Burn">Burn</option>
-                          <option value="Tenderness">Tenderness</option>
-                          <option value="Laceration">Laceration</option>
-                          <option value="Swelling">Swelling</option>
-                          <option value="Edema">Edema</option>
-                          <option value="Battle Sign">Battle Sign</option>
-                          <option value="Racoon Eye">Racoon Eye</option>
-                          <option value="Gunshot">Gunshot</option>
-                          <option value="JVD">JVD</option>
-                          <option value="Bleeding">Bleeding</option>
-                          <option value="Pain">Pain</option>
-                        </select>
-                        <label data-te-select-label-ref
-                        >Select as many items as apply</label
-                        >
-                      </div>
+                  <div class="flex items-center">
+                    <div class="text-center mb-3 w-1/5">
+                      <label class="mb-0">Left Leg</label>
                     </div>
+                    <div class="relative mb-3 w-4/5">
+                      <select
+                        v-model="anterior_left_leg_injury"
+                        data-te-select-init
+                        multiple
+                        class="w-full"
+                        id="anterior_left_leg_injury"
+                      >
+                        <option value="Deformity">Deformity</option>
+                        <option value="Contusion">Contusion</option>
+                        <option value="Abrasion">Abrasion</option>
+                        <option value="Puncture">Puncture</option>
+                        <option value="Burn">Burn</option>
+                        <option value="Tenderness">Tenderness</option>
+                        <option value="Laceration">Laceration</option>
+                        <option value="Swelling">Swelling</option>
+                        <option value="Edema">Edema</option>
+                        <option value="Battle Sign">Battle Sign</option>
+                        <option value="Racoon Eye">Racoon Eye</option>
+                        <option value="Gunshot">Gunshot</option>
+                        <option value="JVD">JVD</option>
+                        <option value="Bleeding">Bleeding</option>
+                        <option value="Pain">Pain</option>
+                      </select>
+                      <label data-te-select-label-ref
+                        >Select as many items as apply</label
+                      >
+                    </div>
+                  </div>
 
-                    <div class="flex items-center">
-                      <div class="text-center mb-3 w-1/5">
-                        <label class="mb-0">Right Leg</label>
-                      </div>
-                      <div class="relative mb-3 w-4/5">
-                        <select
-                          v-model="anterior_right_leg_injury"
-                          data-te-select-init
-                          multiple
-                          class="w-full"
-                          id="anterior_right_leg_injury"
-                        >
-                          <option value="Deformity">Deformity</option>
-                          <option value="Contusion">Contusion</option>
-                          <option value="Abrasion">Abrasion</option>
-                          <option value="Puncture">Puncture</option>
-                          <option value="Burn">Burn</option>
-                          <option value="Tenderness">Tenderness</option>
-                          <option value="Laceration">Laceration</option>
-                          <option value="Swelling">Swelling</option>
-                          <option value="Edema">Edema</option>
-                          <option value="Battle Sign">Battle Sign</option>
-                          <option value="Racoon Eye">Racoon Eye</option>
-                          <option value="Gunshot">Gunshot</option>
-                          <option value="JVD">JVD</option>
-                          <option value="Bleeding">Bleeding</option>
-                          <option value="Pain">Pain</option>
-                        </select>
-                        <label data-te-select-label-ref
-                        >Select as many items as apply</label
-                        >
-                      </div>
+                  <div class="flex items-center">
+                    <div class="text-center mb-3 w-1/5">
+                      <label class="mb-0">Right Leg</label>
                     </div>
+                    <div class="relative mb-3 w-4/5">
+                      <select
+                        v-model="anterior_right_leg_injury"
+                        data-te-select-init
+                        multiple
+                        class="w-full"
+                        id="anterior_right_leg_injury"
+                      >
+                        <option value="Deformity">Deformity</option>
+                        <option value="Contusion">Contusion</option>
+                        <option value="Abrasion">Abrasion</option>
+                        <option value="Puncture">Puncture</option>
+                        <option value="Burn">Burn</option>
+                        <option value="Tenderness">Tenderness</option>
+                        <option value="Laceration">Laceration</option>
+                        <option value="Swelling">Swelling</option>
+                        <option value="Edema">Edema</option>
+                        <option value="Battle Sign">Battle Sign</option>
+                        <option value="Racoon Eye">Racoon Eye</option>
+                        <option value="Gunshot">Gunshot</option>
+                        <option value="JVD">JVD</option>
+                        <option value="Bleeding">Bleeding</option>
+                        <option value="Pain">Pain</option>
+                      </select>
+                      <label data-te-select-label-ref
+                        >Select as many items as apply</label
+                      >
+                    </div>
+                  </div>
 
-                    <div class="flex items-center">
-                      <div class="text-center mb-3 w-1/5">
-                        <label class="mb-0">Genitalia</label>
-                      </div>
-                      <div class="relative mb-3 w-4/5">
-                        <select
-                          v-model="anterior_genitalia_injury"
-                          data-te-select-init
-                          multiple
-                          class="w-full"
-                          id="anterior_genitalia_injury"
-                        >
-                          <option value="Deformity">Deformity</option>
-                          <option value="Contusion">Contusion</option>
-                          <option value="Abrasion">Abrasion</option>
-                          <option value="Puncture">Puncture</option>
-                          <option value="Burn">Burn</option>
-                          <option value="Tenderness">Tenderness</option>
-                          <option value="Laceration">Laceration</option>
-                          <option value="Swelling">Swelling</option>
-                          <option value="Edema">Edema</option>
-                          <option value="Battle Sign">Battle Sign</option>
-                          <option value="Racoon Eye">Racoon Eye</option>
-                          <option value="Gunshot">Gunshot</option>
-                          <option value="JVD">JVD</option>
-                          <option value="Bleeding">Bleeding</option>
-                          <option value="Pain">Pain</option>
-                        </select>
-                        <label data-te-select-label-ref
-                        >Select as many items as apply</label
-                        >
-                      </div>
+                  <div class="flex items-center">
+                    <div class="text-center mb-3 w-1/5">
+                      <label class="mb-0">Genitalia</label>
                     </div>
+                    <div class="relative mb-3 w-4/5">
+                      <select
+                        v-model="anterior_genitalia_injury"
+                        data-te-select-init
+                        multiple
+                        class="w-full"
+                        id="anterior_genitalia_injury"
+                      >
+                        <option value="Deformity">Deformity</option>
+                        <option value="Contusion">Contusion</option>
+                        <option value="Abrasion">Abrasion</option>
+                        <option value="Puncture">Puncture</option>
+                        <option value="Burn">Burn</option>
+                        <option value="Tenderness">Tenderness</option>
+                        <option value="Laceration">Laceration</option>
+                        <option value="Swelling">Swelling</option>
+                        <option value="Edema">Edema</option>
+                        <option value="Battle Sign">Battle Sign</option>
+                        <option value="Racoon Eye">Racoon Eye</option>
+                        <option value="Gunshot">Gunshot</option>
+                        <option value="JVD">JVD</option>
+                        <option value="Bleeding">Bleeding</option>
+                        <option value="Pain">Pain</option>
+                      </select>
+                      <label data-te-select-label-ref
+                        >Select as many items as apply</label
+                      >
+                    </div>
+                  </div>
 
-                    <h4 class="mb-4 font-bold">Posterior</h4>
-                    <div class="flex items-center">
-                      <div class="text-center mb-3 w-1/5">
-                        <label class="mb-0">Head</label>
-                      </div>
-                      <div class="relative mb-3 w-4/5">
-                        <select
-                          v-model="posterior_head_injury"
-                          data-te-select-init
-                          multiple
-                          class="w-full"
-                          id="posterior_head_injury"
-                        >
-                          <option value="Deformity">Deformity</option>
-                          <option value="Contusion">Contusion</option>
-                          <option value="Abrasion">Abrasion</option>
-                          <option value="Puncture">Puncture</option>
-                          <option value="Burn">Burn</option>
-                          <option value="Tenderness">Tenderness</option>
-                          <option value="Laceration">Laceration</option>
-                          <option value="Swelling">Swelling</option>
-                          <option value="Edema">Edema</option>
-                          <option value="Battle Sign">Battle Sign</option>
-                          <option value="Racoon Eye">Racoon Eye</option>
-                          <option value="Gunshot">Gunshot</option>
-                          <option value="JVD">JVD</option>
-                          <option value="Bleeding">Bleeding</option>
-                          <option value="Pain">Pain</option>
-                        </select>
-                        <label data-te-select-label-ref
-                        >Select as many items as apply</label
-                        >
-                      </div>
+                  <h4 class="mb-4 font-bold">Posterior</h4>
+                  <div class="flex items-center">
+                    <div class="text-center mb-3 w-1/5">
+                      <label class="mb-0">Head</label>
                     </div>
+                    <div class="relative mb-3 w-4/5">
+                      <select
+                        v-model="posterior_head_injury"
+                        data-te-select-init
+                        multiple
+                        class="w-full"
+                        id="posterior_head_injury"
+                      >
+                        <option value="Deformity">Deformity</option>
+                        <option value="Contusion">Contusion</option>
+                        <option value="Abrasion">Abrasion</option>
+                        <option value="Puncture">Puncture</option>
+                        <option value="Burn">Burn</option>
+                        <option value="Tenderness">Tenderness</option>
+                        <option value="Laceration">Laceration</option>
+                        <option value="Swelling">Swelling</option>
+                        <option value="Edema">Edema</option>
+                        <option value="Battle Sign">Battle Sign</option>
+                        <option value="Racoon Eye">Racoon Eye</option>
+                        <option value="Gunshot">Gunshot</option>
+                        <option value="JVD">JVD</option>
+                        <option value="Bleeding">Bleeding</option>
+                        <option value="Pain">Pain</option>
+                      </select>
+                      <label data-te-select-label-ref
+                        >Select as many items as apply</label
+                      >
+                    </div>
+                  </div>
 
-                    <div class="flex items-center">
-                      <div class="text-center mb-3 w-1/5">
-                        <label class="mb-0">Chest/Lungs</label>
-                      </div>
-                      <div class="relative mb-3 w-4/5">
-                        <select
-                          v-model="posterior_chest_injury"
-                          data-te-select-init
-                          multiple
-                          class="w-full"
-                          id="posterior_chest_injury"
-                        >
-                          <option value="Deformity">Deformity</option>
-                          <option value="Contusion">Contusion</option>
-                          <option value="Abrasion">Abrasion</option>
-                          <option value="Puncture">Puncture</option>
-                          <option value="Burn">Burn</option>
-                          <option value="Tenderness">Tenderness</option>
-                          <option value="Laceration">Laceration</option>
-                          <option value="Swelling">Swelling</option>
-                          <option value="Edema">Edema</option>
-                          <option value="Battle Sign">Battle Sign</option>
-                          <option value="Racoon Eye">Racoon Eye</option>
-                          <option value="Gunshot">Gunshot</option>
-                          <option value="JVD">JVD</option>
-                          <option value="Bleeding">Bleeding</option>
-                          <option value="Pain">Pain</option>
-                        </select>
-                        <label data-te-select-label-ref
-                        >Select as many items as apply</label
-                        >
-                      </div>
+                  <div class="flex items-center">
+                    <div class="text-center mb-3 w-1/5">
+                      <label class="mb-0">Chest/Lungs</label>
                     </div>
+                    <div class="relative mb-3 w-4/5">
+                      <select
+                        v-model="posterior_chest_injury"
+                        data-te-select-init
+                        multiple
+                        class="w-full"
+                        id="posterior_chest_injury"
+                      >
+                        <option value="Deformity">Deformity</option>
+                        <option value="Contusion">Contusion</option>
+                        <option value="Abrasion">Abrasion</option>
+                        <option value="Puncture">Puncture</option>
+                        <option value="Burn">Burn</option>
+                        <option value="Tenderness">Tenderness</option>
+                        <option value="Laceration">Laceration</option>
+                        <option value="Swelling">Swelling</option>
+                        <option value="Edema">Edema</option>
+                        <option value="Battle Sign">Battle Sign</option>
+                        <option value="Racoon Eye">Racoon Eye</option>
+                        <option value="Gunshot">Gunshot</option>
+                        <option value="JVD">JVD</option>
+                        <option value="Bleeding">Bleeding</option>
+                        <option value="Pain">Pain</option>
+                      </select>
+                      <label data-te-select-label-ref
+                        >Select as many items as apply</label
+                      >
+                    </div>
+                  </div>
 
-                    <div class="flex items-center">
-                      <div class="text-center mb-3 w-1/5">
-                        <label class="mb-0">Pelvis/GU</label>
-                      </div>
-                      <div class="relative mb-3 w-4/5">
-                        <select
-                          v-model="posterior_pelvis_injury"
-                          data-te-select-init
-                          multiple
-                          class="w-full"
-                          id="posterior_pelvis_injury"
-                        >
-                          <option value="Deformity">Deformity</option>
-                          <option value="Contusion">Contusion</option>
-                          <option value="Abrasion">Abrasion</option>
-                          <option value="Puncture">Puncture</option>
-                          <option value="Burn">Burn</option>
-                          <option value="Tenderness">Tenderness</option>
-                          <option value="Laceration">Laceration</option>
-                          <option value="Swelling">Swelling</option>
-                          <option value="Edema">Edema</option>
-                          <option value="Battle Sign">Battle Sign</option>
-                          <option value="Racoon Eye">Racoon Eye</option>
-                          <option value="Gunshot">Gunshot</option>
-                          <option value="JVD">JVD</option>
-                          <option value="Bleeding">Bleeding</option>
-                          <option value="Pain">Pain</option>
-                        </select>
-                        <label data-te-select-label-ref
-                        >Select as many items as apply</label
-                        >
-                      </div>
+                  <div class="flex items-center">
+                    <div class="text-center mb-3 w-1/5">
+                      <label class="mb-0">Pelvis/GU</label>
                     </div>
+                    <div class="relative mb-3 w-4/5">
+                      <select
+                        v-model="posterior_pelvis_injury"
+                        data-te-select-init
+                        multiple
+                        class="w-full"
+                        id="posterior_pelvis_injury"
+                      >
+                        <option value="Deformity">Deformity</option>
+                        <option value="Contusion">Contusion</option>
+                        <option value="Abrasion">Abrasion</option>
+                        <option value="Puncture">Puncture</option>
+                        <option value="Burn">Burn</option>
+                        <option value="Tenderness">Tenderness</option>
+                        <option value="Laceration">Laceration</option>
+                        <option value="Swelling">Swelling</option>
+                        <option value="Edema">Edema</option>
+                        <option value="Battle Sign">Battle Sign</option>
+                        <option value="Racoon Eye">Racoon Eye</option>
+                        <option value="Gunshot">Gunshot</option>
+                        <option value="JVD">JVD</option>
+                        <option value="Bleeding">Bleeding</option>
+                        <option value="Pain">Pain</option>
+                      </select>
+                      <label data-te-select-label-ref
+                        >Select as many items as apply</label
+                      >
+                    </div>
+                  </div>
 
-                    <div class="flex items-center">
-                      <div class="text-center mb-3 w-1/5">
-                        <label class="mb-0">Left Arm</label>
-                      </div>
-                      <div class="relative mb-3 w-4/5">
-                        <select
-                          v-model="posterior_left_arm_injury"
-                          data-te-select-init
-                          multiple
-                          class="w-full"
-                          id="posterior_left_arm_injury"
-                        >
-                          <option value="Deformity">Deformity</option>
-                          <option value="Contusion">Contusion</option>
-                          <option value="Abrasion">Abrasion</option>
-                          <option value="Puncture">Puncture</option>
-                          <option value="Burn">Burn</option>
-                          <option value="Tenderness">Tenderness</option>
-                          <option value="Laceration">Laceration</option>
-                          <option value="Swelling">Swelling</option>
-                          <option value="Edema">Edema</option>
-                          <option value="Battle Sign">Battle Sign</option>
-                          <option value="Racoon Eye">Racoon Eye</option>
-                          <option value="Gunshot">Gunshot</option>
-                          <option value="JVD">JVD</option>
-                          <option value="Bleeding">Bleeding</option>
-                          <option value="Pain">Pain</option>
-                        </select>
-                        <label data-te-select-label-ref
-                        >Select as many items as apply</label
-                        >
-                      </div>
+                  <div class="flex items-center">
+                    <div class="text-center mb-3 w-1/5">
+                      <label class="mb-0">Left Arm</label>
                     </div>
+                    <div class="relative mb-3 w-4/5">
+                      <select
+                        v-model="posterior_left_arm_injury"
+                        data-te-select-init
+                        multiple
+                        class="w-full"
+                        id="posterior_left_arm_injury"
+                      >
+                        <option value="Deformity">Deformity</option>
+                        <option value="Contusion">Contusion</option>
+                        <option value="Abrasion">Abrasion</option>
+                        <option value="Puncture">Puncture</option>
+                        <option value="Burn">Burn</option>
+                        <option value="Tenderness">Tenderness</option>
+                        <option value="Laceration">Laceration</option>
+                        <option value="Swelling">Swelling</option>
+                        <option value="Edema">Edema</option>
+                        <option value="Battle Sign">Battle Sign</option>
+                        <option value="Racoon Eye">Racoon Eye</option>
+                        <option value="Gunshot">Gunshot</option>
+                        <option value="JVD">JVD</option>
+                        <option value="Bleeding">Bleeding</option>
+                        <option value="Pain">Pain</option>
+                      </select>
+                      <label data-te-select-label-ref
+                        >Select as many items as apply</label
+                      >
+                    </div>
+                  </div>
 
-                    <div class="flex items-center">
-                      <div class="text-center mb-3 w-1/5">
-                        <label class="mb-0">Right Arm</label>
-                      </div>
-                      <div class="relative mb-3 w-4/5">
-                        <select
-                          v-model="posterior_right_arm_injury"
-                          data-te-select-init
-                          multiple
-                          class="w-full"
-                          id="posterior_right_arm_injury"
-                        >
-                          <option value="Deformity">Deformity</option>
-                          <option value="Contusion">Contusion</option>
-                          <option value="Abrasion">Abrasion</option>
-                          <option value="Puncture">Puncture</option>
-                          <option value="Burn">Burn</option>
-                          <option value="Tenderness">Tenderness</option>
-                          <option value="Laceration">Laceration</option>
-                          <option value="Swelling">Swelling</option>
-                          <option value="Edema">Edema</option>
-                          <option value="Battle Sign">Battle Sign</option>
-                          <option value="Racoon Eye">Racoon Eye</option>
-                          <option value="Gunshot">Gunshot</option>
-                          <option value="JVD">JVD</option>
-                          <option value="Bleeding">Bleeding</option>
-                          <option value="Pain">Pain</option>
-                        </select>
-                        <label data-te-select-label-ref
-                        >Select as many items as apply</label
-                        >
-                      </div>
+                  <div class="flex items-center">
+                    <div class="text-center mb-3 w-1/5">
+                      <label class="mb-0">Right Arm</label>
                     </div>
+                    <div class="relative mb-3 w-4/5">
+                      <select
+                        v-model="posterior_right_arm_injury"
+                        data-te-select-init
+                        multiple
+                        class="w-full"
+                        id="posterior_right_arm_injury"
+                      >
+                        <option value="Deformity">Deformity</option>
+                        <option value="Contusion">Contusion</option>
+                        <option value="Abrasion">Abrasion</option>
+                        <option value="Puncture">Puncture</option>
+                        <option value="Burn">Burn</option>
+                        <option value="Tenderness">Tenderness</option>
+                        <option value="Laceration">Laceration</option>
+                        <option value="Swelling">Swelling</option>
+                        <option value="Edema">Edema</option>
+                        <option value="Battle Sign">Battle Sign</option>
+                        <option value="Racoon Eye">Racoon Eye</option>
+                        <option value="Gunshot">Gunshot</option>
+                        <option value="JVD">JVD</option>
+                        <option value="Bleeding">Bleeding</option>
+                        <option value="Pain">Pain</option>
+                      </select>
+                      <label data-te-select-label-ref
+                        >Select as many items as apply</label
+                      >
+                    </div>
+                  </div>
 
-                    <div class="flex items-center">
-                      <div class="text-center mb-3 w-1/5">
-                        <label class="mb-0">Left Leg</label>
-                      </div>
-                      <div class="relative mb-3 w-4/5">
-                        <select
-                          v-model="posterior_left_leg_injury"
-                          data-te-select-init
-                          multiple
-                          class="w-full"
-                          id="posterior_left_leg_injury"
-                        >
-                          <option value="Deformity">Deformity</option>
-                          <option value="Contusion">Contusion</option>
-                          <option value="Abrasion">Abrasion</option>
-                          <option value="Puncture">Puncture</option>
-                          <option value="Burn">Burn</option>
-                          <option value="Tenderness">Tenderness</option>
-                          <option value="Laceration">Laceration</option>
-                          <option value="Swelling">Swelling</option>
-                          <option value="Edema">Edema</option>
-                          <option value="Battle Sign">Battle Sign</option>
-                          <option value="Racoon Eye">Racoon Eye</option>
-                          <option value="Gunshot">Gunshot</option>
-                          <option value="JVD">JVD</option>
-                          <option value="Bleeding">Bleeding</option>
-                          <option value="Pain">Pain</option>
-                        </select>
-                        <label data-te-select-label-ref
-                        >Select as many items as apply</label
-                        >
-                      </div>
+                  <div class="flex items-center">
+                    <div class="text-center mb-3 w-1/5">
+                      <label class="mb-0">Left Leg</label>
                     </div>
+                    <div class="relative mb-3 w-4/5">
+                      <select
+                        v-model="posterior_left_leg_injury"
+                        data-te-select-init
+                        multiple
+                        class="w-full"
+                        id="posterior_left_leg_injury"
+                      >
+                        <option value="Deformity">Deformity</option>
+                        <option value="Contusion">Contusion</option>
+                        <option value="Abrasion">Abrasion</option>
+                        <option value="Puncture">Puncture</option>
+                        <option value="Burn">Burn</option>
+                        <option value="Tenderness">Tenderness</option>
+                        <option value="Laceration">Laceration</option>
+                        <option value="Swelling">Swelling</option>
+                        <option value="Edema">Edema</option>
+                        <option value="Battle Sign">Battle Sign</option>
+                        <option value="Racoon Eye">Racoon Eye</option>
+                        <option value="Gunshot">Gunshot</option>
+                        <option value="JVD">JVD</option>
+                        <option value="Bleeding">Bleeding</option>
+                        <option value="Pain">Pain</option>
+                      </select>
+                      <label data-te-select-label-ref
+                        >Select as many items as apply</label
+                      >
+                    </div>
+                  </div>
 
-                    <div class="flex items-center">
-                      <div class="text-center mb-3 w-1/5">
-                        <label class="mb-0">Right Leg</label>
-                      </div>
-                      <div class="relative mb-3 w-4/5">
-                        <select
-                          v-model="posterior_right_leg_injury"
-                          data-te-select-init
-                          multiple
-                          class="w-full"
-                          id="posterior_right_leg_injury"
-                        >
-                          <option value="Deformity">Deformity</option>
-                          <option value="Contusion">Contusion</option>
-                          <option value="Abrasion">Abrasion</option>
-                          <option value="Puncture">Puncture</option>
-                          <option value="Burn">Burn</option>
-                          <option value="Tenderness">Tenderness</option>
-                          <option value="Laceration">Laceration</option>
-                          <option value="Swelling">Swelling</option>
-                          <option value="Edema">Edema</option>
-                          <option value="Battle Sign">Battle Sign</option>
-                          <option value="Racoon Eye">Racoon Eye</option>
-                          <option value="Gunshot">Gunshot</option>
-                          <option value="JVD">JVD</option>
-                          <option value="Bleeding">Bleeding</option>
-                          <option value="Pain">Pain</option>
-                        </select>
-                        <label data-te-select-label-ref
-                        >Select as many items as apply</label
-                        >
-                      </div>
+                  <div class="flex items-center">
+                    <div class="text-center mb-3 w-1/5">
+                      <label class="mb-0">Right Leg</label>
                     </div>
+                    <div class="relative mb-3 w-4/5">
+                      <select
+                        v-model="posterior_right_leg_injury"
+                        data-te-select-init
+                        multiple
+                        class="w-full"
+                        id="posterior_right_leg_injury"
+                      >
+                        <option value="Deformity">Deformity</option>
+                        <option value="Contusion">Contusion</option>
+                        <option value="Abrasion">Abrasion</option>
+                        <option value="Puncture">Puncture</option>
+                        <option value="Burn">Burn</option>
+                        <option value="Tenderness">Tenderness</option>
+                        <option value="Laceration">Laceration</option>
+                        <option value="Swelling">Swelling</option>
+                        <option value="Edema">Edema</option>
+                        <option value="Battle Sign">Battle Sign</option>
+                        <option value="Racoon Eye">Racoon Eye</option>
+                        <option value="Gunshot">Gunshot</option>
+                        <option value="JVD">JVD</option>
+                        <option value="Bleeding">Bleeding</option>
+                        <option value="Pain">Pain</option>
+                      </select>
+                      <label data-te-select-label-ref
+                        >Select as many items as apply</label
+                      >
+                    </div>
+                  </div>
                 </div>
               </div>
             </li>
@@ -2375,42 +2396,60 @@
                       <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
                         <button
                           type="button"
-                          @click="anterior_head_degree = anterior_head_degree === '1st Degree' ? '' : '1st Degree'"
+                          @click="
+                            anterior_head_degree =
+                              anterior_head_degree === '1st Degree'
+                                ? ''
+                                : '1st Degree'
+                          "
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             anterior_head_degree === '1st Degree'
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
                           1st Degree
                         </button>
                         <button
                           type="button"
-                          @click="anterior_head_degree = anterior_head_degree === '2nd Degree' ? '' : '2nd Degree'"
+                          @click="
+                            anterior_head_degree =
+                              anterior_head_degree === '2nd Degree'
+                                ? ''
+                                : '2nd Degree'
+                          "
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             anterior_head_degree === '2nd Degree'
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
-
                         >
                           2nd Degree
                         </button>
                         <button
                           type="button"
-                          @click="anterior_head_degree = anterior_head_degree === '3rd Degree' ? '' : '3rd Degree'"
+                          @click="
+                            anterior_head_degree =
+                              anterior_head_degree === '3rd Degree'
+                                ? ''
+                                : '3rd Degree'
+                          "
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             anterior_head_degree === '3rd Degree'
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
                           3rd Degree
                         </button>
-                        <input type="hidden" v-model="anterior_head_degree" name="anterior_head_degree">
+                        <input
+                          type="hidden"
+                          v-model="anterior_head_degree"
+                          name="anterior_head_degree"
+                        />
                       </div>
                     </div>
 
@@ -2422,42 +2461,60 @@
                       <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
                         <button
                           type="button"
-                          @click="anterior_chest_degree = anterior_chest_degree === '1st Degree' ? '' : '1st Degree'"
+                          @click="
+                            anterior_chest_degree =
+                              anterior_chest_degree === '1st Degree'
+                                ? ''
+                                : '1st Degree'
+                          "
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             anterior_chest_degree === '1st Degree'
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
                           1st Degree
                         </button>
                         <button
                           type="button"
-                          @click="anterior_chest_degree = anterior_chest_degree === '2nd Degree' ? '' : '2nd Degree'"
+                          @click="
+                            anterior_chest_degree =
+                              anterior_chest_degree === '2nd Degree'
+                                ? ''
+                                : '2nd Degree'
+                          "
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             anterior_chest_degree === '2nd Degree'
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
-
                         >
                           2nd Degree
                         </button>
                         <button
                           type="button"
-                          @click="anterior_chest_degree = anterior_chest_degree === '3rd Degree' ? '' : '3rd Degree'"
+                          @click="
+                            anterior_chest_degree =
+                              anterior_chest_degree === '3rd Degree'
+                                ? ''
+                                : '3rd Degree'
+                          "
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             anterior_chest_degree === '3rd Degree'
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
                           3rd Degree
                         </button>
-                        <input type="hidden" v-model="anterior_chest_degree" name="anterior_chest_degree">
+                        <input
+                          type="hidden"
+                          v-model="anterior_chest_degree"
+                          name="anterior_chest_degree"
+                        />
                       </div>
                     </div>
 
@@ -2469,42 +2526,60 @@
                       <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
                         <button
                           type="button"
-                          @click="anterior_pelvis_degree = anterior_pelvis_degree === '1st Degree' ? '' : '1st Degree'"
+                          @click="
+                            anterior_pelvis_degree =
+                              anterior_pelvis_degree === '1st Degree'
+                                ? ''
+                                : '1st Degree'
+                          "
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             anterior_pelvis_degree === '1st Degree'
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
                           1st Degree
                         </button>
                         <button
                           type="button"
-                          @click="anterior_pelvis_degree = anterior_pelvis_degree === '2nd Degree' ? '' : '2nd Degree'"
+                          @click="
+                            anterior_pelvis_degree =
+                              anterior_pelvis_degree === '2nd Degree'
+                                ? ''
+                                : '2nd Degree'
+                          "
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             anterior_pelvis_degree === '2nd Degree'
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
-
                         >
                           2nd Degree
                         </button>
                         <button
                           type="button"
-                          @click="anterior_pelvis_degree = anterior_pelvis_degree === '3rd Degree' ? '' : '3rd Degree'"
+                          @click="
+                            anterior_pelvis_degree =
+                              anterior_pelvis_degree === '3rd Degree'
+                                ? ''
+                                : '3rd Degree'
+                          "
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             anterior_pelvis_degree === '3rd Degree'
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
                           3rd Degree
                         </button>
-                        <input type="hidden" v-model="anterior_pelvis_degree" name="anterior_pelvis_degree">
+                        <input
+                          type="hidden"
+                          v-model="anterior_pelvis_degree"
+                          name="anterior_pelvis_degree"
+                        />
                       </div>
                     </div>
 
@@ -2516,45 +2591,62 @@
                       <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
                         <button
                           type="button"
-                          @click="anterior_left_arm_degree = anterior_left_arm_degree === '1st Degree' ? '' : '1st Degree'"
+                          @click="
+                            anterior_left_arm_degree =
+                              anterior_left_arm_degree === '1st Degree'
+                                ? ''
+                                : '1st Degree'
+                          "
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             anterior_left_arm_degree === '1st Degree'
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
                           1st Degree
                         </button>
                         <button
                           type="button"
-                          @click="anterior_left_arm_degree = anterior_left_arm_degree === '2nd Degree' ? '' : '2nd Degree'"
+                          @click="
+                            anterior_left_arm_degree =
+                              anterior_left_arm_degree === '2nd Degree'
+                                ? ''
+                                : '2nd Degree'
+                          "
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             anterior_left_arm_degree === '2nd Degree'
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
-
                         >
                           2nd Degree
                         </button>
                         <button
                           type="button"
-                          @click="anterior_left_arm_degree = anterior_left_arm_degree === '3rd Degree' ? '' : '3rd Degree'"
+                          @click="
+                            anterior_left_arm_degree =
+                              anterior_left_arm_degree === '3rd Degree'
+                                ? ''
+                                : '3rd Degree'
+                          "
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             anterior_left_arm_degree === '3rd Degree'
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
                           3rd Degree
                         </button>
-                        <input type="hidden" v-model="anterior_left_arm_degree" name="anterior_left_arm_degree">
+                        <input
+                          type="hidden"
+                          v-model="anterior_left_arm_degree"
+                          name="anterior_left_arm_degree"
+                        />
                       </div>
                     </div>
-
 
                     <!-- Anterior Right Arm Degree -->
                     <div class="flex items-center">
@@ -2564,42 +2656,60 @@
                       <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
                         <button
                           type="button"
-                          @click="anterior_right_arm_degree = anterior_right_arm_degree === '1st Degree' ? '' : '1st Degree'"
+                          @click="
+                            anterior_right_arm_degree =
+                              anterior_right_arm_degree === '1st Degree'
+                                ? ''
+                                : '1st Degree'
+                          "
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             anterior_right_arm_degree === '1st Degree'
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
                           1st Degree
                         </button>
                         <button
                           type="button"
-                          @click="anterior_right_arm_degree = anterior_right_arm_degree === '2nd Degree' ? '' : '2nd Degree'"
+                          @click="
+                            anterior_right_arm_degree =
+                              anterior_right_arm_degree === '2nd Degree'
+                                ? ''
+                                : '2nd Degree'
+                          "
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             anterior_right_arm_degree === '2nd Degree'
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
-
                         >
                           2nd Degree
                         </button>
                         <button
                           type="button"
-                          @click="anterior_right_arm_degree = anterior_right_arm_degree === '3rd Degree' ? '' : '3rd Degree'"
+                          @click="
+                            anterior_right_arm_degree =
+                              anterior_right_arm_degree === '3rd Degree'
+                                ? ''
+                                : '3rd Degree'
+                          "
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             anterior_right_arm_degree === '3rd Degree'
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
                           3rd Degree
                         </button>
-                        <input type="hidden" v-model="anterior_right_arm_degree" name="anterior_right_arm_degree">
+                        <input
+                          type="hidden"
+                          v-model="anterior_right_arm_degree"
+                          name="anterior_right_arm_degree"
+                        />
                       </div>
                     </div>
 
@@ -2611,45 +2721,62 @@
                       <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
                         <button
                           type="button"
-                          @click="anterior_left_leg_degree = anterior_left_leg_degree === '1st Degree' ? '' : '1st Degree'"
+                          @click="
+                            anterior_left_leg_degree =
+                              anterior_left_leg_degree === '1st Degree'
+                                ? ''
+                                : '1st Degree'
+                          "
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             anterior_left_leg_degree === '1st Degree'
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
                           1st Degree
                         </button>
                         <button
                           type="button"
-                          @click="anterior_left_leg_degree = anterior_left_leg_degree === '2nd Degree' ? '' : '2nd Degree'"
+                          @click="
+                            anterior_left_leg_degree =
+                              anterior_left_leg_degree === '2nd Degree'
+                                ? ''
+                                : '2nd Degree'
+                          "
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             anterior_left_leg_degree === '2nd Degree'
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
-
                         >
                           2nd Degree
                         </button>
                         <button
                           type="button"
-                          @click="anterior_left_leg_degree = anterior_left_leg_degree === '3rd Degree' ? '' : '3rd Degree'"
+                          @click="
+                            anterior_left_leg_degree =
+                              anterior_left_leg_degree === '3rd Degree'
+                                ? ''
+                                : '3rd Degree'
+                          "
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             anterior_left_leg_degree === '3rd Degree'
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
                           3rd Degree
                         </button>
-                        <input type="hidden" v-model="anterior_left_leg_degree" name="anterior_left_leg_degree">
+                        <input
+                          type="hidden"
+                          v-model="anterior_left_leg_degree"
+                          name="anterior_left_leg_degree"
+                        />
                       </div>
                     </div>
-
 
                     <!-- Anterior Right Leg Degree -->
                     <div class="flex items-center">
@@ -2659,42 +2786,60 @@
                       <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
                         <button
                           type="button"
-                          @click="anterior_right_leg_degree = anterior_right_leg_degree === '1st Degree' ? '' : '1st Degree'"
+                          @click="
+                            anterior_right_leg_degree =
+                              anterior_right_leg_degree === '1st Degree'
+                                ? ''
+                                : '1st Degree'
+                          "
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             anterior_right_leg_degree === '1st Degree'
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
                           1st Degree
                         </button>
                         <button
                           type="button"
-                          @click="anterior_right_leg_degree = anterior_right_leg_degree === '2nd Degree' ? '' : '2nd Degree'"
+                          @click="
+                            anterior_right_leg_degree =
+                              anterior_right_leg_degree === '2nd Degree'
+                                ? ''
+                                : '2nd Degree'
+                          "
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             anterior_right_leg_degree === '2nd Degree'
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
-
                         >
                           2nd Degree
                         </button>
                         <button
                           type="button"
-                          @click="anterior_right_leg_degree = anterior_right_leg_degree === '3rd Degree' ? '' : '3rd Degree'"
+                          @click="
+                            anterior_right_leg_degree =
+                              anterior_right_leg_degree === '3rd Degree'
+                                ? ''
+                                : '3rd Degree'
+                          "
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             anterior_right_leg_degree === '3rd Degree'
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
                           3rd Degree
                         </button>
-                        <input type="hidden" v-model="anterior_right_leg_degree" name="anterior_right_leg_degree">
+                        <input
+                          type="hidden"
+                          v-model="anterior_right_leg_degree"
+                          name="anterior_right_leg_degree"
+                        />
                       </div>
                     </div>
 
@@ -2706,42 +2851,60 @@
                       <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
                         <button
                           type="button"
-                          @click="anterior_genitalia_degree = anterior_genitalia_degree === '1st Degree' ? '' : '1st Degree'"
+                          @click="
+                            anterior_genitalia_degree =
+                              anterior_genitalia_degree === '1st Degree'
+                                ? ''
+                                : '1st Degree'
+                          "
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             anterior_genitalia_degree === '1st Degree'
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
                           1st Degree
                         </button>
                         <button
                           type="button"
-                          @click="anterior_genitalia_degree = anterior_genitalia_degree === '2nd Degree' ? '' : '2nd Degree'"
+                          @click="
+                            anterior_genitalia_degree =
+                              anterior_genitalia_degree === '2nd Degree'
+                                ? ''
+                                : '2nd Degree'
+                          "
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             anterior_genitalia_degree === '2nd Degree'
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
-
                         >
                           2nd Degree
                         </button>
                         <button
                           type="button"
-                          @click="anterior_genitalia_degree = anterior_genitalia_degree === '3rd Degree' ? '' : '3rd Degree'"
+                          @click="
+                            anterior_genitalia_degree =
+                              anterior_genitalia_degree === '3rd Degree'
+                                ? ''
+                                : '3rd Degree'
+                          "
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             anterior_genitalia_degree === '3rd Degree'
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
                           3rd Degree
                         </button>
-                        <input type="hidden" v-model="anterior_genitalia_degree" name="anterior_genitalia_degree">
+                        <input
+                          type="hidden"
+                          v-model="anterior_genitalia_degree"
+                          name="anterior_genitalia_degree"
+                        />
                       </div>
                     </div>
 
@@ -2754,42 +2917,60 @@
                       <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
                         <button
                           type="button"
-                          @click="posterior_head_degree = posterior_head_degree === '1st Degree' ? '' : '1st Degree'"
+                          @click="
+                            posterior_head_degree =
+                              posterior_head_degree === '1st Degree'
+                                ? ''
+                                : '1st Degree'
+                          "
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             posterior_head_degree === '1st Degree'
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
                           1st Degree
                         </button>
                         <button
                           type="button"
-                          @click="posterior_head_degree = posterior_head_degree === '2nd Degree' ? '' : '2nd Degree'"
+                          @click="
+                            posterior_head_degree =
+                              posterior_head_degree === '2nd Degree'
+                                ? ''
+                                : '2nd Degree'
+                          "
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             posterior_head_degree === '2nd Degree'
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
-
                         >
                           2nd Degree
                         </button>
                         <button
                           type="button"
-                          @click="posterior_head_degree = posterior_head_degree === '3rd Degree' ? '' : '3rd Degree'"
+                          @click="
+                            posterior_head_degree =
+                              posterior_head_degree === '3rd Degree'
+                                ? ''
+                                : '3rd Degree'
+                          "
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             posterior_head_degree === '3rd Degree'
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
                           3rd Degree
                         </button>
-                        <input type="hidden" v-model="posterior_head_degree" name="posterior_head_degree">
+                        <input
+                          type="hidden"
+                          v-model="posterior_head_degree"
+                          name="posterior_head_degree"
+                        />
                       </div>
                     </div>
 
@@ -2801,42 +2982,60 @@
                       <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
                         <button
                           type="button"
-                          @click="posterior_chest_degree = posterior_chest_degree === '1st Degree' ? '' : '1st Degree'"
+                          @click="
+                            posterior_chest_degree =
+                              posterior_chest_degree === '1st Degree'
+                                ? ''
+                                : '1st Degree'
+                          "
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             posterior_chest_degree === '1st Degree'
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
                           1st Degree
                         </button>
                         <button
                           type="button"
-                          @click="posterior_chest_degree = posterior_chest_degree === '2nd Degree' ? '' : '2nd Degree'"
+                          @click="
+                            posterior_chest_degree =
+                              posterior_chest_degree === '2nd Degree'
+                                ? ''
+                                : '2nd Degree'
+                          "
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             posterior_chest_degree === '2nd Degree'
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
-
                         >
                           2nd Degree
                         </button>
                         <button
                           type="button"
-                          @click="posterior_chest_degree = posterior_chest_degree === '3rd Degree' ? '' : '3rd Degree'"
+                          @click="
+                            posterior_chest_degree =
+                              posterior_chest_degree === '3rd Degree'
+                                ? ''
+                                : '3rd Degree'
+                          "
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             posterior_chest_degree === '3rd Degree'
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
                           3rd Degree
                         </button>
-                        <input type="hidden" v-model="posterior_chest_degree" name="posterior_chest_degree">
+                        <input
+                          type="hidden"
+                          v-model="posterior_chest_degree"
+                          name="posterior_chest_degree"
+                        />
                       </div>
                     </div>
 
@@ -2848,45 +3047,62 @@
                       <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
                         <button
                           type="button"
-                          @click="posterior_pelvis_degree = posterior_pelvis_degree === '1st Degree' ? '' : '1st Degree'"
+                          @click="
+                            posterior_pelvis_degree =
+                              posterior_pelvis_degree === '1st Degree'
+                                ? ''
+                                : '1st Degree'
+                          "
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             posterior_pelvis_degree === '1st Degree'
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
                           1st Degree
                         </button>
                         <button
                           type="button"
-                          @click="posterior_pelvis_degree = posterior_pelvis_degree === '2nd Degree' ? '' : '2nd Degree'"
+                          @click="
+                            posterior_pelvis_degree =
+                              posterior_pelvis_degree === '2nd Degree'
+                                ? ''
+                                : '2nd Degree'
+                          "
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             posterior_pelvis_degree === '2nd Degree'
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
-
                         >
                           2nd Degree
                         </button>
                         <button
                           type="button"
-                          @click="posterior_pelvis_degree = posterior_pelvis_degree === '3rd Degree' ? '' : '3rd Degree'"
+                          @click="
+                            posterior_pelvis_degree =
+                              posterior_pelvis_degree === '3rd Degree'
+                                ? ''
+                                : '3rd Degree'
+                          "
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             posterior_pelvis_degree === '3rd Degree'
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
                           3rd Degree
                         </button>
-                        <input type="hidden" v-model="posterior_pelvis_degree" name="posterior_pelvis_degree">
+                        <input
+                          type="hidden"
+                          v-model="posterior_pelvis_degree"
+                          name="posterior_pelvis_degree"
+                        />
                       </div>
                     </div>
-
 
                     <!-- Posterior Left Arm Degree -->
                     <div class="flex items-center">
@@ -2896,42 +3112,60 @@
                       <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
                         <button
                           type="button"
-                          @click="posterior_left_arm_degree = posterior_left_arm_degree === '1st Degree' ? '' : '1st Degree'"
+                          @click="
+                            posterior_left_arm_degree =
+                              posterior_left_arm_degree === '1st Degree'
+                                ? ''
+                                : '1st Degree'
+                          "
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             posterior_left_arm_degree === '1st Degree'
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
                           1st Degree
                         </button>
                         <button
                           type="button"
-                          @click="posterior_left_arm_degree = posterior_left_arm_degree === '2nd Degree' ? '' : '2nd Degree'"
+                          @click="
+                            posterior_left_arm_degree =
+                              posterior_left_arm_degree === '2nd Degree'
+                                ? ''
+                                : '2nd Degree'
+                          "
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             posterior_left_arm_degree === '2nd Degree'
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
-
                         >
                           2nd Degree
                         </button>
                         <button
                           type="button"
-                          @click="posterior_left_arm_degree = posterior_left_arm_degree === '3rd Degree' ? '' : '3rd Degree'"
+                          @click="
+                            posterior_left_arm_degree =
+                              posterior_left_arm_degree === '3rd Degree'
+                                ? ''
+                                : '3rd Degree'
+                          "
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             posterior_left_arm_degree === '3rd Degree'
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
                           3rd Degree
                         </button>
-                        <input type="hidden" v-model="posterior_left_arm_degree" name="posterior_left_arm_degree">
+                        <input
+                          type="hidden"
+                          v-model="posterior_left_arm_degree"
+                          name="posterior_left_arm_degree"
+                        />
                       </div>
                     </div>
 
@@ -2943,42 +3177,60 @@
                       <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
                         <button
                           type="button"
-                          @click="posterior_right_arm_degree = posterior_right_arm_degree === '1st Degree' ? '' : '1st Degree'"
+                          @click="
+                            posterior_right_arm_degree =
+                              posterior_right_arm_degree === '1st Degree'
+                                ? ''
+                                : '1st Degree'
+                          "
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             posterior_right_arm_degree === '1st Degree'
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
                           1st Degree
                         </button>
                         <button
                           type="button"
-                          @click="posterior_right_arm_degree = posterior_right_arm_degree === '2nd Degree' ? '' : '2nd Degree'"
+                          @click="
+                            posterior_right_arm_degree =
+                              posterior_right_arm_degree === '2nd Degree'
+                                ? ''
+                                : '2nd Degree'
+                          "
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             posterior_right_arm_degree === '2nd Degree'
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
-
                         >
                           2nd Degree
                         </button>
                         <button
                           type="button"
-                          @click="posterior_right_arm_degree = posterior_right_arm_degree === '3rd Degree' ? '' : '3rd Degree'"
+                          @click="
+                            posterior_right_arm_degree =
+                              posterior_right_arm_degree === '3rd Degree'
+                                ? ''
+                                : '3rd Degree'
+                          "
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             posterior_right_arm_degree === '3rd Degree'
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
                           3rd Degree
                         </button>
-                        <input type="hidden" v-model="posterior_right_arm_degree" name="posterior_right_arm_degree">
+                        <input
+                          type="hidden"
+                          v-model="posterior_right_arm_degree"
+                          name="posterior_right_arm_degree"
+                        />
                       </div>
                     </div>
 
@@ -2990,42 +3242,60 @@
                       <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
                         <button
                           type="button"
-                          @click="posterior_left_leg_degree = posterior_left_leg_degree === '1st Degree' ? '' : '1st Degree'"
+                          @click="
+                            posterior_left_leg_degree =
+                              posterior_left_leg_degree === '1st Degree'
+                                ? ''
+                                : '1st Degree'
+                          "
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             posterior_left_leg_degree === '1st Degree'
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
                           1st Degree
                         </button>
                         <button
                           type="button"
-                          @click="posterior_left_leg_degree = posterior_left_leg_degree === '2nd Degree' ? '' : '2nd Degree'"
+                          @click="
+                            posterior_left_leg_degree =
+                              posterior_left_leg_degree === '2nd Degree'
+                                ? ''
+                                : '2nd Degree'
+                          "
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             posterior_left_leg_degree === '2nd Degree'
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
-
                         >
                           2nd Degree
                         </button>
                         <button
                           type="button"
-                          @click="posterior_left_leg_degree = posterior_left_leg_degree === '3rd Degree' ? '' : '3rd Degree'"
+                          @click="
+                            posterior_left_leg_degree =
+                              posterior_left_leg_degree === '3rd Degree'
+                                ? ''
+                                : '3rd Degree'
+                          "
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             posterior_left_leg_degree === '3rd Degree'
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
                           3rd Degree
                         </button>
-                        <input type="hidden" v-model="posterior_left_leg_degree" name="posterior_left_leg_degree">
+                        <input
+                          type="hidden"
+                          v-model="posterior_left_leg_degree"
+                          name="posterior_left_leg_degree"
+                        />
                       </div>
                     </div>
 
@@ -3037,42 +3307,60 @@
                       <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
                         <button
                           type="button"
-                          @click="posterior_right_leg_degree = posterior_right_leg_degree === '1st Degree' ? '' : '1st Degree'"
+                          @click="
+                            posterior_right_leg_degree =
+                              posterior_right_leg_degree === '1st Degree'
+                                ? ''
+                                : '1st Degree'
+                          "
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             posterior_right_leg_degree === '1st Degree'
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
                           1st Degree
                         </button>
                         <button
                           type="button"
-                          @click="posterior_right_leg_degree = posterior_right_leg_degree === '2nd Degree' ? '' : '2nd Degree'"
+                          @click="
+                            posterior_right_leg_degree =
+                              posterior_right_leg_degree === '2nd Degree'
+                                ? ''
+                                : '2nd Degree'
+                          "
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             posterior_right_leg_degree === '2nd Degree'
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
-
                         >
                           2nd Degree
                         </button>
                         <button
                           type="button"
-                          @click="posterior_right_leg_degree = posterior_right_leg_degree === '3rd Degree' ? '' : '3rd Degree'"
+                          @click="
+                            posterior_right_leg_degree =
+                              posterior_right_leg_degree === '3rd Degree'
+                                ? ''
+                                : '3rd Degree'
+                          "
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             posterior_right_leg_degree === '3rd Degree'
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white'
+                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
                           3rd Degree
                         </button>
-                        <input type="hidden" v-model="posterior_right_leg_degree" name="posterior_right_leg_degree">
+                        <input
+                          type="hidden"
+                          v-model="posterior_right_leg_degree"
+                          name="posterior_right_leg_degree"
+                        />
                       </div>
                     </div>
                   </form>
@@ -3829,7 +4117,6 @@
                 </div>
               </div>
             </li>
-
           </ul>
         </div>
         <div
@@ -4260,51 +4547,117 @@ export default {
       this.mask = this.patientStepperFormFields.pcr_signature.mask;
       this.gauze = this.patientStepperFormFields.pcr_signature.gauze;
       this.others = this.patientStepperFormFields.pcr_signature.others;
-      this.anterior_head_injury = this.patientStepperFormFields.pcr_body_injuries.anterior_head_injury;
-      this.anterior_chest_injury = this.patientStepperFormFields.pcr_body_injuries.anterior_chest_injury;
-      this.anterior_pelvis_injury = this.patientStepperFormFields.pcr_body_injuries.anterior_pelvis_injury;
-      this.anterior_left_arm_injury = this.patientStepperFormFields.pcr_body_injuries.anterior_left_arm_injury;
-      this.anterior_right_arm_injury = this.patientStepperFormFields.pcr_body_injuries.anterior_right_arm_injury;
-      this.anterior_left_leg_injury = this.patientStepperFormFields.pcr_body_injuries.anterior_left_leg_injury;
-      this.anterior_right_leg_injury = this.patientStepperFormFields.pcr_body_injuries.anterior_right_leg_injury;
-      this.anterior_genitalia_injury = this.patientStepperFormFields.pcr_body_injuries.anterior_genitalia_injury;
-      this.SetSelectValue('anterior_head_injury', this.anterior_head_injury)
-      this.SetSelectValue('anterior_chest_injury', this.anterior_chest_injury)
-      this.SetSelectValue('anterior_pelvis_injury', this.anterior_pelvis_injury)
-      this.SetSelectValue('anterior_left_arm_injury', this.anterior_left_arm_injury)
-      this.SetSelectValue('anterior_right_arm_injury', this.anterior_right_arm_injury)
-      this.SetSelectValue('anterior_left_leg_injury', this.anterior_left_leg_injury)
-      this.SetSelectValue('anterior_right_leg_injury', this.anterior_right_leg_injury)
-      this.SetSelectValue('anterior_genitalia_injury', this.anterior_genitalia_injury)
-      this.posterior_head_injury = this.patientStepperFormFields.pcr_body_injuries.posterior_head_injury;
-      this.posterior_chest_injury = this.patientStepperFormFields.pcr_body_injuries.posterior_chest_injury;
-      this.posterior_pelvis_injury = this.patientStepperFormFields.pcr_body_injuries.posterior_pelvis_injury;
-      this.posterior_left_arm_injury = this.patientStepperFormFields.pcr_body_injuries.posterior_left_arm_injury;
-      this.posterior_right_arm_injury = this.patientStepperFormFields.pcr_body_injuries.posterior_right_arm_injury;
-      this.posterior_left_leg_injury = this.patientStepperFormFields.pcr_body_injuries.posterior_left_leg_injury;
-      this.posterior_right_leg_injury = this.patientStepperFormFields.pcr_body_injuries.posterior_right_leg_injury;
-      this.SetSelectValue('posterior_head_injury', this.posterior_head_injury);
-      this.SetSelectValue('posterior_chest_injury', this.posterior_chest_injury);
-      this.SetSelectValue('posterior_pelvis_injury', this.posterior_pelvis_injury);
-      this.SetSelectValue('posterior_left_arm_injury', this.posterior_left_arm_injury);
-      this.SetSelectValue('posterior_right_arm_injury', this.posterior_right_arm_injury);
-      this.SetSelectValue('posterior_left_leg_injury', this.posterior_left_leg_injury);
-      this.SetSelectValue('posterior_right_leg_injury', this.posterior_right_leg_injury);
-      this.anterior_head_degree = this.patientStepperFormFields.pcr_burn_percentage.anterior_head_degree;
-      this.anterior_chest_degree = this.patientStepperFormFields.pcr_burn_percentage.anterior_chest_degree;
-      this.anterior_pelvis_degree = this.patientStepperFormFields.pcr_burn_percentage.anterior_pelvis_degree;
-      this.anterior_left_arm_degree = this.patientStepperFormFields.pcr_burn_percentage.anterior_left_arm_degree;
-      this.anterior_right_arm_degree = this.patientStepperFormFields.pcr_burn_percentage.anterior_right_arm_degree;
-      this.anterior_left_leg_degree = this.patientStepperFormFields.pcr_burn_percentage.anterior_left_leg_degree;
-      this.anterior_right_leg_degree = this.patientStepperFormFields.pcr_burn_percentage.anterior_right_leg_degree;
-      this.anterior_genitalia_degree = this.patientStepperFormFields.pcr_burn_percentage.anterior_genitalia_degree;
-      this.posterior_head_degree = this.patientStepperFormFields.pcr_burn_percentage.posterior_head_degree;
-      this.posterior_chest_degree = this.patientStepperFormFields.pcr_burn_percentage.posterior_chest_degree;
-      this.posterior_pelvis_degree = this.patientStepperFormFields.pcr_burn_percentage.posterior_pelvis_degree;
-      this.posterior_left_arm_degree = this.patientStepperFormFields.pcr_burn_percentage.posterior_left_arm_degree;
-      this.posterior_right_arm_degree = this.patientStepperFormFields.pcr_burn_percentage.posterior_right_arm_degree;
-      this.posterior_left_leg_degree = this.patientStepperFormFields.pcr_burn_percentage.posterior_left_leg_degree;
-      this.posterior_right_leg_degree = this.patientStepperFormFields.pcr_burn_percentage.posterior_right_leg_degree;
+      this.anterior_head_injury =
+        this.patientStepperFormFields.pcr_body_injuries.anterior_head_injury;
+      this.anterior_chest_injury =
+        this.patientStepperFormFields.pcr_body_injuries.anterior_chest_injury;
+      this.anterior_pelvis_injury =
+        this.patientStepperFormFields.pcr_body_injuries.anterior_pelvis_injury;
+      this.anterior_left_arm_injury =
+        this.patientStepperFormFields.pcr_body_injuries.anterior_left_arm_injury;
+      this.anterior_right_arm_injury =
+        this.patientStepperFormFields.pcr_body_injuries.anterior_right_arm_injury;
+      this.anterior_left_leg_injury =
+        this.patientStepperFormFields.pcr_body_injuries.anterior_left_leg_injury;
+      this.anterior_right_leg_injury =
+        this.patientStepperFormFields.pcr_body_injuries.anterior_right_leg_injury;
+      this.anterior_genitalia_injury =
+        this.patientStepperFormFields.pcr_body_injuries.anterior_genitalia_injury;
+      this.SetSelectValue("anterior_head_injury", this.anterior_head_injury);
+      this.SetSelectValue("anterior_chest_injury", this.anterior_chest_injury);
+      this.SetSelectValue(
+        "anterior_pelvis_injury",
+        this.anterior_pelvis_injury
+      );
+      this.SetSelectValue(
+        "anterior_left_arm_injury",
+        this.anterior_left_arm_injury
+      );
+      this.SetSelectValue(
+        "anterior_right_arm_injury",
+        this.anterior_right_arm_injury
+      );
+      this.SetSelectValue(
+        "anterior_left_leg_injury",
+        this.anterior_left_leg_injury
+      );
+      this.SetSelectValue(
+        "anterior_right_leg_injury",
+        this.anterior_right_leg_injury
+      );
+      this.SetSelectValue(
+        "anterior_genitalia_injury",
+        this.anterior_genitalia_injury
+      );
+      this.posterior_head_injury =
+        this.patientStepperFormFields.pcr_body_injuries.posterior_head_injury;
+      this.posterior_chest_injury =
+        this.patientStepperFormFields.pcr_body_injuries.posterior_chest_injury;
+      this.posterior_pelvis_injury =
+        this.patientStepperFormFields.pcr_body_injuries.posterior_pelvis_injury;
+      this.posterior_left_arm_injury =
+        this.patientStepperFormFields.pcr_body_injuries.posterior_left_arm_injury;
+      this.posterior_right_arm_injury =
+        this.patientStepperFormFields.pcr_body_injuries.posterior_right_arm_injury;
+      this.posterior_left_leg_injury =
+        this.patientStepperFormFields.pcr_body_injuries.posterior_left_leg_injury;
+      this.posterior_right_leg_injury =
+        this.patientStepperFormFields.pcr_body_injuries.posterior_right_leg_injury;
+      this.SetSelectValue("posterior_head_injury", this.posterior_head_injury);
+      this.SetSelectValue(
+        "posterior_chest_injury",
+        this.posterior_chest_injury
+      );
+      this.SetSelectValue(
+        "posterior_pelvis_injury",
+        this.posterior_pelvis_injury
+      );
+      this.SetSelectValue(
+        "posterior_left_arm_injury",
+        this.posterior_left_arm_injury
+      );
+      this.SetSelectValue(
+        "posterior_right_arm_injury",
+        this.posterior_right_arm_injury
+      );
+      this.SetSelectValue(
+        "posterior_left_leg_injury",
+        this.posterior_left_leg_injury
+      );
+      this.SetSelectValue(
+        "posterior_right_leg_injury",
+        this.posterior_right_leg_injury
+      );
+      this.anterior_head_degree =
+        this.patientStepperFormFields.pcr_burn_percentage.anterior_head_degree;
+      this.anterior_chest_degree =
+        this.patientStepperFormFields.pcr_burn_percentage.anterior_chest_degree;
+      this.anterior_pelvis_degree =
+        this.patientStepperFormFields.pcr_burn_percentage.anterior_pelvis_degree;
+      this.anterior_left_arm_degree =
+        this.patientStepperFormFields.pcr_burn_percentage.anterior_left_arm_degree;
+      this.anterior_right_arm_degree =
+        this.patientStepperFormFields.pcr_burn_percentage.anterior_right_arm_degree;
+      this.anterior_left_leg_degree =
+        this.patientStepperFormFields.pcr_burn_percentage.anterior_left_leg_degree;
+      this.anterior_right_leg_degree =
+        this.patientStepperFormFields.pcr_burn_percentage.anterior_right_leg_degree;
+      this.anterior_genitalia_degree =
+        this.patientStepperFormFields.pcr_burn_percentage.anterior_genitalia_degree;
+      this.posterior_head_degree =
+        this.patientStepperFormFields.pcr_burn_percentage.posterior_head_degree;
+      this.posterior_chest_degree =
+        this.patientStepperFormFields.pcr_burn_percentage.posterior_chest_degree;
+      this.posterior_pelvis_degree =
+        this.patientStepperFormFields.pcr_burn_percentage.posterior_pelvis_degree;
+      this.posterior_left_arm_degree =
+        this.patientStepperFormFields.pcr_burn_percentage.posterior_left_arm_degree;
+      this.posterior_right_arm_degree =
+        this.patientStepperFormFields.pcr_burn_percentage.posterior_right_arm_degree;
+      this.posterior_left_leg_degree =
+        this.patientStepperFormFields.pcr_burn_percentage.posterior_left_leg_degree;
+      this.posterior_right_leg_degree =
+        this.patientStepperFormFields.pcr_burn_percentage.posterior_right_leg_degree;
     },
   },
   methods: {
@@ -4659,12 +5012,20 @@ export default {
         applied_aed: this.applied_aed,
         problems: this.problems,
         received_by: this.received_by,
-        received_by_signature: typeof this.$refs.received_by_signature === 'undefined' ? this.received_by_signature : this.$refs.received_by_signature.save(),
+        received_by_signature:
+          typeof this.$refs.received_by_signature === "undefined"
+            ? this.received_by_signature
+            : this.$refs.received_by_signature.save(),
         medical_facility: this.medical_facility,
         medical_facility_signature:
-          typeof this.$refs.medical_facility_signature === 'undefined' ? this.medical_facility_signature : this.$refs.medical_facility_signature.save(),
+          typeof this.$refs.medical_facility_signature === "undefined"
+            ? this.medical_facility_signature
+            : this.$refs.medical_facility_signature.save(),
         team_leader: this.team_leader,
-        team_leader_signature: typeof this.$refs.team_leader_signature === 'undefined' ? this.team_leader_signature : this.$refs.team_leader_signature.save(),
+        team_leader_signature:
+          typeof this.$refs.team_leader_signature === "undefined"
+            ? this.team_leader_signature
+            : this.$refs.team_leader_signature.save(),
         gloves: this.gloves,
         mask: this.mask,
         gauze: this.gauze,

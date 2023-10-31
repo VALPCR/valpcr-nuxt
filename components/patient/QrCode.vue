@@ -52,7 +52,14 @@
           <h6
             class="text-center mb-3 mt-2 ml-1 text-base font-medium leading-tight text-secondary"
           >
-            Here's the QR code for: <strong>{{ (first_name ?? '') + ' ' + (middle_name ?? '') + ' ' + (surname ?? '') }}</strong>
+            Here's the QR code for:
+            <strong>{{
+              (first_name ?? "") +
+              " " +
+              (middle_name ?? "") +
+              " " +
+              (surname ?? "")
+            }}</strong>
           </h6>
           <section class="text-center w-full">
             <img
@@ -89,7 +96,7 @@ export default {
       this.middle_name =
         this.patientStepperFormFields.pcr_patient.patient.middle_name;
       this.surname = this.patientStepperFormFields.pcr_patient.patient.surname;
-    }
+    },
   },
 };
 </script>
