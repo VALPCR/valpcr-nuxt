@@ -1,10 +1,10 @@
 <template>
   <div
     :class="{ 'w-60': isSidebarOpen, 'w-12': !isSidebarOpen }"
-    class="bg-[#131A2D] overflow-auto"
+    class="bg-[#131A2D]"
   >
     <div class="text-right">
-      <button @click="toggleSidebar" class="p-4 text-white">
+      <button @click="toggleSidebar" :class="`p-4 text-white ${!isSidebarOpen ? 'right-[10px]' : 'left-[8px]'} relative`">
         <svg
           v-if="isSidebarOpen"
           xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +32,7 @@
           stroke-width="2"
           stroke-linecap="round"
           stroke-linejoin="round"
-          class="feather feather-chevrons-right sm:right-1.5 md:right-0 lg:right-0 xl:right-0 relative"
+          class="feather feather-chevrons-right"
         >
           <polyline points="13 17 18 12 13 7"></polyline>
           <polyline points="6 17 11 12 6 7"></polyline>
