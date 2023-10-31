@@ -8,6 +8,7 @@
   >
     <div class="text-right">
       <button
+        v-if="$device.isDesktop"
         @click="toggleSidebar"
         :class="`p-4 text-white ${
           !$store.getters['getSideBarState'] ? 'right-[10px]' : 'left-[8px]'
@@ -269,8 +270,8 @@
         <li
           :class="`${
             isSidebarOpen
-              ? 'space-x-2 mb-4 hover:bg-white md:pl-10 lg:pl-10 xl:pl-10 text-center md:text-justify lg:text-justify'
-              : 'space-x-2 mb-4 sm:right-1.5 md:right-0 lg:right-0 xl:right-0 relative hover:text-[#1B295A]'
+              ? 'space-x-2 mb-4 mt-2 hover:bg-white md:pl-10 lg:pl-10 xl:pl-10 text-center md:text-justify lg:text-justify'
+              : 'space-x-2 mb-4 mt-2 sm:right-1.5 md:right-0 lg:right-0 xl:right-0 relative hover:text-[#1B295A]'
           }`"
         >
           <font-awesome-icon :icon="['fas', 'file-medical']" size="lg" /><span

@@ -6,6 +6,7 @@
       <div class="flex items-center justify-between">
         <div class="flex items-center justify-start">
           <button
+            @click="toggleSidebar"
             data-drawer-target="logo-sidebar"
             data-drawer-toggle="logo-sidebar"
             aria-controls="logo-sidebar"
@@ -121,5 +122,14 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    toggleSidebar() {
+      this.$store.commit(
+        "setSideBarState",
+        !this.$store.getters["getSideBarState"]
+      );
+    },
+  }
+};
 </script>
