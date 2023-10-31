@@ -84,7 +84,6 @@
                 class="absolute w-full p-4 transition-all duration-500 ease-in-out"
               >
                 <div class="relative p-4">
-                  <form>
                     <div
                       class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4"
                     >
@@ -606,180 +605,13 @@
                           </label>
                         </div>
 
-                          <select
-                            v-model="team_id"
-                            data-te-select-init
-                            class="w-full bg-neutral-50 col-span-3"
-                            disabled
-                          >
-                            <option>Team</option>
-                            <option
-                              v-for="(item, index) in teams"
-                              :key="index"
-                              :value="item.id"
-                            >
-                              {{ item.name }}
-                            </option>
-                          </select>
-                        </div>
-                      </div>
-                        <div class="relative mb-1" data-te-input-wrapper-init>
-                          <input
-                            v-model="t_l"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            id="tL"
-                            aria-describedby="tL"
-                            placeholder="T/L"
-                          />
-                          <label
-                            for="tL"
-                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                          >
-                            T/L
-                          </label>
-                        </div>
-
-                        <div
-                          class="relative mb-1"
-                          data-te-timepicker-init
-                          data-te-input-wrapper-init
-                          @click.stop="setEnRoute"
-                        >
-                          <input
-                            v-model="en_route_to"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            id="enRouteTo"
-                            aria-describedby="enRouteTo"
-                            placeholder="En route to"
-                          />
-                          <label
-                            for="enRouteTo"
-                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
-                          >
-                            En route to
-                          </label>
-                        </div>
-
-                        <div class="relative mb-1" data-te-input-wrapper-init>
-                          <input
-                            v-model="tx_o"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            id="tXO"
-                            aria-describedby="tXO"
-                            placeholder="TX/O"
-                          />
-                          <label
-                            for="tXO"
-                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                          >
-                            TX/O
-                          </label>
-                        </div>
-
-                        <div
-                          class="relative mb-1"
-                          data-te-timepicker-init
-                          data-te-input-wrapper-init
-                          @click.stop="setArrivedAt"
-                        >
-                          <input
-                            v-model="arrived_at"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            id="arrivedAt"
-                            aria-describedby="arrivedAt"
-                            placeholder="Arrived at"
-                          />
-                          <label
-                            for="arrivedAt"
-                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
-                          >
-                            Arrived at
-                          </label>
-                        </div>
-
-                        <div class="relative mb-1" data-te-input-wrapper-init>
-                          <input
-                            v-model="l_o"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            id="lO"
-                            aria-describedby="lO"
-                            placeholder="L/O"
-                          />
-                          <label
-                            for="lO"
-                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                          >
-                            L/O
-                          </label>
-                        </div>
-
-                        <div
-                          class="relative mb-1"
-                          data-te-timepicker-init
-                          data-te-input-wrapper-init
-                          @click.stop="setDeparted"
-                        >
-                          <input
-                            v-model="departed"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            id="departed"
-                            aria-describedby="departed"
-                            placeholder="Departed"
-                          />
-                          <label
-                            for="departed"
-                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
-                          >
-                            Departed
-                          </label>
-                        </div>
-
-                        <div class="relative mb-1" data-te-input-wrapper-init>
-                          <input
-                            v-model="station"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            id="station"
-                            aria-describedby="station"
-                            placeholder="Station"
-                          />
-                          <label
-                            for="station"
-                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                          >
-                            Station
-                          </label>
-                        </div>
-
-                        <div class="relative mb-1" data-te-input-wrapper-init>
-                          <input
-                            v-model="ambulance"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            id="ambulance"
-                            aria-describedby="ambulance"
-                            placeholder="Ambulance"
-                          />
-                          <label
-                            for="ambulance"
-                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                          >
-                            Ambulance
-                          </label>
-                        </div>
-
                         <select
                           v-model="team_id"
                           data-te-select-init
-                          class="w-full bg-neutral-50"
+                          class="w-full bg-neutral-50 col-span-3"
+                          disabled
                         >
-                          <option selected value="1">Team</option>
+                          <option>Team</option>
                           <option
                             v-for="(item, index) in teams"
                             :key="index"
@@ -788,26 +620,190 @@
                             {{ item.name }}
                           </option>
                         </select>
-
-                        <div
-                          class="relative mb-1 col-span-2 row-span-3"
-                          data-te-input-wrapper-init
+                      </div>
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="t_l"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="tL"
+                          aria-describedby="tL"
+                          placeholder="T/L"
+                        />
+                        <label
+                          for="tL"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                         >
-                          <textarea
-                            v-model="remarks"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            id="remarks"
-                            aria-describedby="remarks"
-                          />
-                          <label
-                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                          >
-                            Remarks
-                          </label>
-                        </div>
+                          T/L
+                        </label>
+                      </div>
+
+                      <div
+                        class="relative mb-1"
+                        data-te-timepicker-init
+                        data-te-input-wrapper-init
+                        @click.stop="setEnRoute"
+                      >
+                        <input
+                          v-model="en_route_to"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="enRouteTo"
+                          aria-describedby="enRouteTo"
+                          placeholder="En route to"
+                        />
+                        <label
+                          for="enRouteTo"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
+                        >
+                          En route to
+                        </label>
+                      </div>
+
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="tx_o"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="tXO"
+                          aria-describedby="tXO"
+                          placeholder="TX/O"
+                        />
+                        <label
+                          for="tXO"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          TX/O
+                        </label>
+                      </div>
+
+                      <div
+                        class="relative mb-1"
+                        data-te-timepicker-init
+                        data-te-input-wrapper-init
+                        @click.stop="setArrivedAt"
+                      >
+                        <input
+                          v-model="arrived_at"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="arrivedAt"
+                          aria-describedby="arrivedAt"
+                          placeholder="Arrived at"
+                        />
+                        <label
+                          for="arrivedAt"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
+                        >
+                          Arrived at
+                        </label>
+                      </div>
+
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="l_o"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="lO"
+                          aria-describedby="lO"
+                          placeholder="L/O"
+                        />
+                        <label
+                          for="lO"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          L/O
+                        </label>
+                      </div>
+
+                      <div
+                        class="relative mb-1"
+                        data-te-timepicker-init
+                        data-te-input-wrapper-init
+                        @click.stop="setDeparted"
+                      >
+                        <input
+                          v-model="departed"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="departed"
+                          aria-describedby="departed"
+                          placeholder="Departed"
+                        />
+                        <label
+                          for="departed"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
+                        >
+                          Departed
+                        </label>
+                      </div>
+
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="station"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="station"
+                          aria-describedby="station"
+                          placeholder="Station"
+                        />
+                        <label
+                          for="station"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          Station
+                        </label>
+                      </div>
+
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="ambulance"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="ambulance"
+                          aria-describedby="ambulance"
+                          placeholder="Ambulance"
+                        />
+                        <label
+                          for="ambulance"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          Ambulance
+                        </label>
+                      </div>
+
+                      <select
+                        v-model="team_id"
+                        data-te-select-init
+                        class="w-full bg-neutral-50"
+                      >
+                        <option selected value="1">Team</option>
+                        <option
+                          v-for="(item, index) in teams"
+                          :key="index"
+                          :value="item.id"
+                        >
+                          {{ item.name }}
+                        </option>
+                      </select>
+
+                      <div
+                        class="relative mb-1 col-span-2 row-span-3"
+                        data-te-input-wrapper-init
+                      >
+                        <textarea
+                          v-model="remarks"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="remarks"
+                          aria-describedby="remarks"
+                        />
+                        <label
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          Remarks
+                        </label>
                       </div>
                     </div>
-                  </form>
                 </div>
               </div>
             </li>
@@ -836,7 +832,6 @@
                 class="absolute left-0 w-full translate-x-[150%] p-4 transition-all duration-500 ease-in-out"
               >
                 <div class="relative p-4">
-                  <form>
                     <div
                       class="grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-4"
                     >
@@ -1136,7 +1131,7 @@
                           </label>
                         </div>
                       </div>
-      
+
                       <!-- ONSET-->
                       <div class="col-span-2">
                         <div class="relative mb-1" data-te-input-wrapper-init>
@@ -1156,7 +1151,7 @@
                           </label>
                         </div>
                       </div>
-    
+
                       <!-- ALLERGIES-->
                       <div class="col-span-2">
                         <div class="relative mb-1" data-te-input-wrapper-init>
@@ -1196,7 +1191,7 @@
                           </label>
                         </div>
                       </div>
-            
+
                       <!-- MEDICATION-->
                       <div class="col-span-2">
                         <div class="relative mb-1" data-te-input-wrapper-init>
@@ -1216,7 +1211,7 @@
                           </label>
                         </div>
                       </div>
-                    
+
                       <!-- QUALITY-->
                       <div class="col-span-2">
                         <div class="relative mb-1" data-te-input-wrapper-init>
@@ -1236,7 +1231,7 @@
                           </label>
                         </div>
                       </div>
-                      
+
                       <!-- PAST MEDICAL HISTORY-->
                       <div class="col-span-2">
                         <div class="relative mb-1" data-te-input-wrapper-init>
@@ -1256,7 +1251,7 @@
                           </label>
                         </div>
                       </div>
-                  
+
                       <!-- RADIATION-->
                       <div class="col-span-2">
                         <div class="relative mb-1" data-te-input-wrapper-init>
@@ -1276,7 +1271,7 @@
                           </label>
                         </div>
                       </div>
-                   
+
                       <!-- LAST ORAL INTAKE -->
                       <div class="col-span-2">
                         <div class="relative mb-1" data-te-input-wrapper-init>
@@ -1296,7 +1291,7 @@
                           </label>
                         </div>
                       </div>
-                      
+
 
                       <!-- SEVERITY -->
                       <div class="col-span-2">
@@ -1312,7 +1307,7 @@
                         </select>
                       </div>
 
-                      
+
                       <!-- EVENTS LEADING TO INJURY -->
                       <div class="events col-span-2">
                         <div class="relative mb-1" data-te-input-wrapper-init>
@@ -1332,9 +1327,9 @@
                           </label>
                         </div>
                       </div>
-                
 
-        
+
+
                       <!-- TIME -->
                       <div class="time col-span-2">
                         <div
