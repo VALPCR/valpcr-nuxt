@@ -49,7 +49,12 @@ export default {
     // https://go.nuxtjs.dev/bootstrap
     "@nuxtjs/axios",
     "@nuxtjs/auth-next",
+    "@nuxtjs/device",
   ],
+
+  device: {
+    refreshOnResize: true
+  },
 
   axios: {
     baseURL: process.env.BASE_URL,

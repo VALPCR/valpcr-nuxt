@@ -9,6 +9,8 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@capacitor/android": "^5.5.1",
+    "@capacitor/core": "^5.5.1",
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@fortawesome/free-brands-svg-icons": "^6.4.0",
     "@fortawesome/free-regular-svg-icons": "^6.4.0",
@@ -16,6 +18,7 @@
     "@fortawesome/vue-fontawesome": "^2.0.10",
     "@nuxtjs/auth-next": "5.0.0-1667386184.dfbbb54",
     "@nuxtjs/axios": "^5.13.6",
+    "@nuxtjs/device": "^2.2.0",
     "chart.js": "^3.8.2",
     "core-js": "^3.25.3",
     "cors": "^2.8.5",
@@ -33,6 +36,7 @@
     "vue-template-compiler": "^2.7.10"
   },
   "devDependencies": {
+    "@capacitor/cli": "^5.5.1",
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.23",
     "pusher-js": "^8.0.2",
