@@ -1,10 +1,18 @@
 <template>
   <div
-    :class="{ 'w-60': $store.getters['getSideBarState'], 'w-12': !$store.getters['getSideBarState'] }"
+    :class="{
+      'w-60': $store.getters['getSideBarState'],
+      'w-12': !$store.getters['getSideBarState'],
+    }"
     class="bg-[#131A2D]"
   >
     <div class="text-right">
-      <button @click="toggleSidebar" :class="`p-4 text-white ${!$store.getters['getSideBarState'] ? 'right-[10px]' : 'left-[8px]'} relative`">
+      <button
+        @click="toggleSidebar"
+        :class="`p-4 text-white ${
+          !$store.getters['getSideBarState'] ? 'right-[10px]' : 'left-[8px]'
+        } relative`"
+      >
         <svg
           v-if="$store.getters['getSideBarState']"
           xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +57,8 @@
       >
         <li
           :class="{
-            'hover:bg-white md:pl-10 lg:pl-10 xl:pl-10': $store.getters['getSideBarState'],
+            'hover:bg-white md:pl-10 lg:pl-10 xl:pl-10':
+              $store.getters['getSideBarState'],
             'sm:right-1.5 md:right-0 lg:right-0 xl:right-0 relative hover:text-[#1B295A]':
               !$store.getters['getSideBarState'],
           }"
@@ -77,7 +86,8 @@
       >
         <li
           :class="{
-            'hover:bg-white sm:pl-0 md:pl-10 lg:pl-10 xl:pl-10': $store.getters['getSideBarState'],
+            'hover:bg-white sm:pl-0 md:pl-10 lg:pl-10 xl:pl-10':
+              $store.getters['getSideBarState'],
             'sm:right-1.5 md:right-0 lg:right-0 xl:right-0 relative hover:text-[#1B295A]':
               !$store.getters['getSideBarState'],
           }"
@@ -257,9 +267,15 @@
         class="text-white"
       >
         <li
-          :class="`${isSidebarOpen ? 'space-x-2 mb-4 hover:bg-white md:pl-10 lg:pl-10 xl:pl-10 text-center md:text-justify lg:text-justify' : 'space-x-2 mb-4 sm:right-1.5 md:right-0 lg:right-0 xl:right-0 relative hover:text-[#1B295A]'}`"
+          :class="`${
+            isSidebarOpen
+              ? 'space-x-2 mb-4 hover:bg-white md:pl-10 lg:pl-10 xl:pl-10 text-center md:text-justify lg:text-justify'
+              : 'space-x-2 mb-4 sm:right-1.5 md:right-0 lg:right-0 xl:right-0 relative hover:text-[#1B295A]'
+          }`"
         >
-          <font-awesome-icon :icon="['fas', 'file-medical']" size="lg" /><span v-if="isSidebarOpen">
+          <font-awesome-icon :icon="['fas', 'file-medical']" size="lg" /><span
+            v-if="isSidebarOpen"
+          >
             Prehospital Forms
             <span
               @click="refresh"
@@ -278,7 +294,11 @@
         class="text-white"
       >
         <li
-          :class="`${isSidebarOpen ? 'space-x-2 mb-4 hover:bg-white md:pl-10 lg:pl-10 xl:pl-10 text-center md:text-justify lg:text-justify' : 'space-x-2 mb-4 sm:right-1.5 md:right-0 lg:right-0 xl:right-0 relative hover:text-[#1B295A]'}`"
+          :class="`${
+            isSidebarOpen
+              ? 'space-x-2 mb-4 hover:bg-white md:pl-10 lg:pl-10 xl:pl-10 text-center md:text-justify lg:text-justify'
+              : 'space-x-2 mb-4 sm:right-1.5 md:right-0 lg:right-0 xl:right-0 relative hover:text-[#1B295A]'
+          }`"
         >
           <font-awesome-icon :icon="['fas', 'clock-rotate-left']" size="lg" />
           <span v-if="isSidebarOpen">
@@ -340,12 +360,15 @@ export default {
   },
   watch: {
     "$store.state.isSidebarOpen"() {
-      this.isSidebarOpen = this.$store.getters['getSideBarState'];
-    }
+      this.isSidebarOpen = this.$store.getters["getSideBarState"];
+    },
   },
   methods: {
     toggleSidebar() {
-      this.$store.commit('setSideBarState', !this.$store.getters['getSideBarState']);
+      this.$store.commit(
+        "setSideBarState",
+        !this.$store.getters["getSideBarState"]
+      );
     },
     refresh() {
       location.reload();

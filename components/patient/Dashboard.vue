@@ -51,7 +51,7 @@
             class="inline-block rounded bg-green-600 px-4 pb-1.5 pt-1.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-green-700 focus:bg-green-700 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
             @click="addPcr"
           >
-            ADD {{ !$device.isMobile ? 'NEW' : '' }}
+            ADD {{ !$device.isMobile ? "NEW" : "" }}
           </button>
           <button
             v-if="role === 'dispatcher'"
@@ -60,7 +60,7 @@
             data-te-target="#patientForm"
             class="inline-block rounded bg-green-600 px-4 pb-1.5 pt-1.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-green-700 focus:bg-green-700 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
           >
-            ADD {{ !$device.isMobile ? 'NEW' : '' }}
+            ADD {{ !$device.isMobile ? "NEW" : "" }}
           </button>
         </div>
       </vue-good-table>
@@ -307,8 +307,8 @@ export default {
   },
   watch: {
     "$store.state.isSidebarOpen"() {
-      this.isSidebarOpen = this.$store.getters['getSideBarState'];
-    }
+      this.isSidebarOpen = this.$store.getters["getSideBarState"];
+    },
   },
   created() {
     this.filteredRows = this.fetchedRows;
@@ -319,21 +319,23 @@ export default {
   methods: {
     addPcr() {
       if (this.$device.isDesktop) {
-        const addModal = new Modal(document.getElementById("patientFormStepper"));
+        const addModal = new Modal(
+          document.getElementById("patientFormStepper")
+        );
         this.$store.commit("setAddPatientStepperForm", true);
         addModal.show();
       } else if (this.$device.isMobile) {
-        const addModal = new Modal(document.getElementById("patientFormMobile"));
+        const addModal = new Modal(
+          document.getElementById("patientFormMobile")
+        );
         addModal.show();
       }
     },
     onRowClick(params) {
       this.$store.commit("setEditPatientStepperForm", true);
       this.$store.commit("setEditPatientStepperFormArg", params.row.id);
-      if (params.event.target.id.includes('qr')) {
-        const qrModal = new Modal(
-          document.getElementById("qrCode")
-        );
+      if (params.event.target.id.includes("qr")) {
+        const qrModal = new Modal(document.getElementById("qrCode"));
         qrModal.show();
       } else {
         const editModal = new Modal(
