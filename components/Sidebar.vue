@@ -258,7 +258,7 @@
       >
         <li
           :class="{
-            'hover:bg-white md:pl-10 lg:pl-10 xl:pl-10': isSidebarOpen,
+            'hover:bg-white md:pl-10 lg:pl-10 xl:pl-10 text-center': isSidebarOpen,
             'sm:right-1.5 md:right-0 lg:right-0 xl:right-0 relative hover:text-[#1B295A]':
               !isSidebarOpen,
           }"
@@ -286,7 +286,7 @@
       >
         <li
           :class="{
-            'hover:bg-white md:pl-10 lg:pl-10 xl:pl-10': isSidebarOpen,
+            'hover:bg-white md:pl-10 lg:pl-10 xl:pl-10 text-center': isSidebarOpen,
             'sm:right-1.5 md:right-0 lg:right-0 xl:right-0 relative hover:text-[#1B295A]':
               !isSidebarOpen,
           }"
