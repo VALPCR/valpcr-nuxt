@@ -78,7 +78,7 @@
         </div>
       </div>
     </div>
-</section>
+  </section>
 </template>
 
 <script>
@@ -104,9 +104,7 @@ export default {
     },
     togglePasswordShow() {
       this.showPassword = !this.showPassword;
-
     },
-
   },
 };
 </script>
@@ -123,13 +121,12 @@ export default {
 }
 
 .bg2 {
-  background-color: #131A2D;
+  background-color: #131a2d;
   position: absolute;
   top: 60%;
   left: 0;
   right: 0;
-  bottom: 0; 
+  bottom: 0;
   z-index: 0;
 }
-
 </style>

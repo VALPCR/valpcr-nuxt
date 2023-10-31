@@ -6,8 +6,10 @@ export const state = () => ({
   editEmrModalXl: false,
   editEmrModalXlFields: [],
   editEmrModalXlArg: undefined,
-})
-
+  editDispatcherModalXl: false,
+  editDispatcherModalXlFields: [],
+  editDispatcherModalXlArg: undefined,
+});
 
 export const getters = {
   getAddPatientStepperForm(state) {
@@ -27,6 +29,12 @@ export const getters = {
   },
   getEditEmrModalXlFields(state) {
     return state.editEmrModalXlFields;
+  },
+  getEditDispatcherModalXlArg(state) {
+    return state.editDispatcherModalXlArg;
+  },
+  getEditDispatcherModalXlFields(state) {
+    return state.editDispatcherModalXlFields;
   },
 };
 
@@ -51,24 +59,37 @@ export const mutations = {
   },
   setEditEmrModalXlArg(state, value) {
     state.editEmrModalXlArg = value;
-  }
-}
+  },
+  setEditDispatcherModalXl(state, value) {
+    state.editDispatcherModalXl = value;
+  },
+  setEditDispatcherModalXlFields(state, value) {
+    state.editDispatcherModalXlFields = value;
+  },
+  setEditDispatcherModalXlArg(state, value) {
+    state.editDispatcherModalXlArg = value;
+  },
+};
 
 export const actions = {
   getSinglePcr(context, params) {
     return this.$axios
-      .get('pcr/single?id=' + params.id + '&emrId=' + params.emrId)
+      .get("pcr/single?id=" + params.id + "&emrId=" + params.emrId)
       .then((response) => {
         const pcr = response.data.return;
-          context.commit('setEditPatientStepperFormFields', pcr)
-      })
+        context.commit("setEditPatientStepperFormFields", pcr);
+      });
   },
-  getSingleUser(context, params) {
-    return this.$axios
-      .get('user/single?id=' + params.id)
-      .then((response) => {
-        const user = response.data.return;
-        context.commit('setEditEmrModalXlFields', user)
-      })
-  }
-}
+  getSingleEmr(context, params) {
+    return this.$axios.get("user/single?id=" + params.id).then((response) => {
+      const user = response.data.return;
+      context.commit("setEditEmrModalXlFields", user);
+    });
+  },
+  getSingleDispatcher(context, params) {
+    return this.$axios.get("user/single?id=" + params.id).then((response) => {
+      const user = response.data.return;
+      context.commit("setEditDispatcherModalXlFields", user);
+    });
+  },
+};

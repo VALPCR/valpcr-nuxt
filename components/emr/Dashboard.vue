@@ -6,7 +6,7 @@
           :columns="filterColumns"
           :rows="emptyRows"
           :search-options="{ enabled: false }"
-        >f
+          >f
           <div slot="table-actions-bottom">
             <button
               type="button"
@@ -185,46 +185,38 @@ export default {
           field: "contact",
           sortable: false,
         },
-        {
-          label: "ACTIONS",
-          field: "actions",
-          sortable: false,
-          html: true,
-        },
       ],
     };
   },
   fetch() {
     this.role = this.$auth.user.role;
-    this.$axios.get("user/list" + "?role=emr" + "&team=" + this.$auth.user.team_id).then((response) => {
-      response.data.return.map((result) => {
-        this.fetchedRows.push({
-          id: result.id,
-          name: `${this.capitalize(result.first_name)} ${
-            result.middle_name ?? ""
-          } ${this.capitalize(result.last_name)}`,
-          radio:
-            "<input\n" +
-            "  class=\"mr-2 mt-[0.3rem] h-3.5 w-8 appearance-none rounded-[0.4375rem] bg-neutral-300 before:pointer-events-none before:absolute before:h-3.5 before:w-3.5 before:rounded-full before:bg-transparent before:content-[''] after:absolute after:z-[2] after:-mt-[0.1875rem] after:h-5 after:w-5 after:rounded-full after:border-none after:bg-neutral-100 after:shadow-[0_0px_3px_0_rgb(0_0_0_/_7%),_0_2px_2px_0_rgb(0_0_0_/_4%)] after:transition-[background-color_0.2s,transform_0.2s] after:content-[''] checked:bg-primary checked:after:absolute checked:after:z-[2] checked:after:-mt-[3px] checked:after:ml-[1.0625rem] checked:after:h-5 checked:after:w-5 checked:after:rounded-full checked:after:border-none checked:after:bg-primary checked:after:shadow-[0_3px_1px_-2px_rgba(0,0,0,0.2),_0_2px_2px_0_rgba(0,0,0,0.14),_0_1px_5px_0_rgba(0,0,0,0.12)] checked:after:transition-[background-color_0.2s,transform_0.2s] checked:after:content-[''] hover:cursor-pointer focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[3px_-1px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-5 focus:after:w-5 focus:after:rounded-full focus:after:content-[''] checked:focus:border-primary checked:focus:bg-primary checked:focus:before:ml-[1.0625rem] checked:focus:before:scale-100 checked:focus:before:shadow-[3px_-1px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:bg-neutral-600 dark:after:bg-neutral-400 dark:checked:bg-primary dark:checked:after:bg-primary dark:focus:before:shadow-[3px_-1px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[3px_-1px_0px_13px_#3b71ca]\"\n" +
-            '  type="checkbox"\n' +
-            '  role="switch"\n' +
-            '  id="flexSwitchChecked"\n' +
-            "  checked />",
-          team: this.capitalize(result.team.name),
-          address: `${this.capitalize(result.address.street)} ${this.capitalize(
-            result.address.barangay
-          )} ${this.capitalize(result.address.city)} ${result.address.zip}`,
-          age: result.age,
-          contact: result.email,
-          actions:
-          '<div class="flex gap-12">' +
-
-            '<button><svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#7d7d7d}</style><path d="M471.6 21.7c-21.9-21.9-57.3-21.9-79.2 0L362.3 51.7l97.9 97.9 30.1-30.1c21.9-21.9 21.9-57.3 0-79.2L471.6 21.7zm-299.2 220c-6.1 6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l88.8-29.6c8.2-2.7 15.7-7.4 21.9-13.5L437.7 172.3 339.7 74.3 172.4 241.7zM96 64C43 64 0 107 0 160V416c0 53 43 96 96 96H352c53 0 96-43 96-96V320c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H96z"/></svg></button>' +
-
-          '</div>',
+    this.$axios
+      .get("user/list" + "?role=emr" + "&team=" + this.$auth.user.team_id)
+      .then((response) => {
+        response.data.return.map((result) => {
+          this.fetchedRows.push({
+            id: result.id,
+            name: `${this.capitalize(result.first_name)} ${
+              result.middle_name ?? ""
+            } ${this.capitalize(result.last_name)}`,
+            radio:
+              "<input\n" +
+              "  class=\"mr-2 mt-[0.3rem] h-3.5 w-8 appearance-none rounded-[0.4375rem] bg-neutral-300 before:pointer-events-none before:absolute before:h-3.5 before:w-3.5 before:rounded-full before:bg-transparent before:content-[''] after:absolute after:z-[2] after:-mt-[0.1875rem] after:h-5 after:w-5 after:rounded-full after:border-none after:bg-neutral-100 after:shadow-[0_0px_3px_0_rgb(0_0_0_/_7%),_0_2px_2px_0_rgb(0_0_0_/_4%)] after:transition-[background-color_0.2s,transform_0.2s] after:content-[''] checked:bg-primary checked:after:absolute checked:after:z-[2] checked:after:-mt-[3px] checked:after:ml-[1.0625rem] checked:after:h-5 checked:after:w-5 checked:after:rounded-full checked:after:border-none checked:after:bg-primary checked:after:shadow-[0_3px_1px_-2px_rgba(0,0,0,0.2),_0_2px_2px_0_rgba(0,0,0,0.14),_0_1px_5px_0_rgba(0,0,0,0.12)] checked:after:transition-[background-color_0.2s,transform_0.2s] checked:after:content-[''] hover:cursor-pointer focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[3px_-1px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-5 focus:after:w-5 focus:after:rounded-full focus:after:content-[''] checked:focus:border-primary checked:focus:bg-primary checked:focus:before:ml-[1.0625rem] checked:focus:before:scale-100 checked:focus:before:shadow-[3px_-1px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:bg-neutral-600 dark:after:bg-neutral-400 dark:checked:bg-primary dark:checked:after:bg-primary dark:focus:before:shadow-[3px_-1px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[3px_-1px_0px_13px_#3b71ca]\"\n" +
+              '  type="checkbox"\n' +
+              '  role="switch"\n' +
+              '  id="flexSwitchChecked"\n' +
+              "  checked />",
+            team: this.capitalize(result.team.name),
+            address: `${this.capitalize(
+              result.address.street
+            )} ${this.capitalize(result.address.barangay)} ${this.capitalize(
+              result.address.city
+            )} ${result.address.zip}`,
+            age: result.age,
+            contact: result.email,
+          });
         });
       });
-    });
   },
   mounted() {
     initTE({ Ripple, Dropdown });
@@ -256,9 +248,9 @@ export default {
       return word.replace(/^\w/, (c) => c.toUpperCase());
     },
     onRowClick(params) {
-      const editModal = new Modal(document.getElementById('editEmrModalXl'));
-      this.$store.commit('setEditEmrModalXl', true);
-      this.$store.commit('setEditEmrModalXlArg', params.row.id);
+      const editModal = new Modal(document.getElementById("editEmrModalXl"));
+      this.$store.commit("setEditEmrModalXl", true);
+      this.$store.commit("setEditEmrModalXlArg", params.row.id);
       editModal.show();
     },
   },

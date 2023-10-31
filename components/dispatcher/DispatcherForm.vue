@@ -1,7 +1,7 @@
 <template>
   <div
     data-te-modal-init
-    class="fixed left-0 top-10 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+    class="fixed left-0 top-20 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
     id="dispatcherModalXl"
     tabindex="-1"
     aria-labelledby="dispatcherModalXllLabel"
@@ -16,11 +16,11 @@
         class="pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600"
       >
         <div
-          class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50"
+          class="flex flex-shrink-0 items-center bg-dark-blue text-white justify-between rounded-t-md border-b-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50"
         >
           <!--Modal title-->
           <h5
-            class="text-xl font-medium leading-normal text-neutral-800 dark:text-neutral-200"
+            class="text-xl font-medium leading-normal text-white dark:text-neutral-200"
             id="dispatcherModalXllLabel"
           >
             Dispatcher Registration
@@ -92,9 +92,7 @@
                   class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                 >
                   First Name
-                  <span class="text-red-600 font-bold">
-                    *
-                  </span>
+                  <span class="text-red-600 font-bold"> * </span>
                 </label>
               </div>
 
@@ -131,9 +129,7 @@
                   class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                 >
                   Last Name
-                  <span class="text-red-600 font-bold">
-                    *
-                  </span>
+                  <span class="text-red-600 font-bold"> * </span>
                 </label>
               </div>
 
@@ -143,10 +139,9 @@
                 class="w-full bg-neutral-50"
                 required
               >
-                <option selected>Gender
-                  <span class="text-red-600 font-bold">
-                    *
-                  </span>
+                <option selected>
+                  Gender
+                  <span class="text-red-600 font-bold"> * </span>
                 </option>
                 <option value="female">Female</option>
                 <option value="male">Male</option>
@@ -169,9 +164,7 @@
                   class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                 >
                   Birthdate
-                  <span class="text-red-600 font-bold">
-                    *
-                  </span>
+                  <span class="text-red-600 font-bold"> * </span>
                 </label>
               </div>
 
@@ -190,9 +183,7 @@
                   class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                 >
                   Age
-                  <span class="text-red-600 font-bold">
-                    *
-                  </span>
+                  <span class="text-red-600 font-bold"> * </span>
                 </label>
               </div>
 
@@ -202,10 +193,9 @@
                 class="w-full bg-neutral-50"
                 required
               >
-                <option selected value="1">Team
-                  <span class="text-red-600 font-bold">
-                    *
-                  </span>
+                <option selected value="1">
+                  Team
+                  <span class="text-red-600 font-bold"> * </span>
                 </option>
                 <option
                   v-for="(item, index) in teams"
@@ -225,12 +215,10 @@
                 data-te-select-init
                 class="bg-neutral-50"
                 required
-
               >
-                <option selected value="1">Select Barangay
-                  <span class="text-red-600 font-bold">
-                    *
-                  </span>
+                <option selected value="1">
+                  Select Barangay
+                  <span class="text-red-600 font-bold"> * </span>
                 </option>
                 <option value="Arkong Bato">Arkong Bato</option>
                 <option value="Bagbaguin">Bagbaguin</option>
@@ -281,9 +269,7 @@
                   class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                 >
                   Street Address
-                  <span class="text-red-600 font-bold">
-                    *
-                  </span>
+                  <span class="text-red-600 font-bold"> * </span>
                 </label>
               </div>
 
@@ -301,9 +287,7 @@
                   class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                 >
                   Zip code
-                  <span class="text-red-600 font-bold">
-                    *
-                  </span>
+                  <span class="text-red-600 font-bold"> * </span>
                 </label>
               </div>
 
@@ -344,9 +328,7 @@
                   class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                 >
                   Email
-                  <span class="text-red-600 font-bold">
-                    *
-                  </span>
+                  <span class="text-red-600 font-bold"> * </span>
                 </label>
               </div>
             </div>
@@ -357,18 +339,18 @@
           class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md border-t-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50 min-[0px]:rounded-none"
         >
           <button
-              @click="clear"
-              type="button"
-              class="ml-1 inline-block rounded border border-slate-400 bg-slate-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out hover:bg-slate-300 hover:border-slate-400 hover:bg-slate-300 focus:bg-slate-300 focus:shadow-[0_4px_9px_-4px_#3b71ca] focus:ring-0 active:bg-slate-300"
-              data-te-ripple-init
-              data-te-ripple-color="light"
-            >
-              CLEAR
+            @click="clear"
+            type="button"
+            class="ml-1 inline-block rounded border border-slate-400 bg-slate-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out hover:bg-slate-300 hover:border-slate-400 hover:bg-slate-300 focus:bg-slate-300 focus:shadow-[0_4px_9px_-4px_#3b71ca] focus:ring-0 active:bg-slate-300"
+            data-te-ripple-init
+            data-te-ripple-color="light"
+          >
+            CLEAR
           </button>
           <button
             @click="register"
             type="button"
-            class="inline-block ml-4 rounded bg-[#30AD62] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white  transition duration-150 ease-in-out hover:bg-green-700 focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+            class="inline-block ml-4 rounded bg-[#30AD62] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-green-700 focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
           >
             SUBMIT
           </button>
@@ -464,7 +446,7 @@ export default {
     capitalize(word) {
       return word.replace(/^\w/, (c) => c.toUpperCase());
     },
-    clear(){
+    clear() {
       this.suffix = "";
       this.first_name = "";
       this.middle_name = "";
@@ -480,7 +462,7 @@ export default {
       this.barangay = "";
       this.street = "";
       this.zip = "";
-    }
+    },
   },
 };
 </script>

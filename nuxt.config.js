@@ -33,6 +33,7 @@ export default {
     { src: "~/plugins/jsPDF" },
     { src: "~/plugins/fontawesome.js" },
     { src: "~/plugins/datatable.js" },
+    { src: "~/plugins/vueSignature.js" },
     { src: "~/plugins/chart.js", mode: "client" },
     { src: "~/plugins/echo.js", mode: "client" },
   ],
@@ -78,7 +79,7 @@ export default {
           refresh: { url: "auth/refresh", method: "post" },
           user: { url: "auth/verify", method: "get", propertyName: false },
           // logout: { url: "https://valpcr.kbsan.com/api/auth/logout", method: "post" },
-          logout: { url: "http://valpcr.test/api/auth/logout", method: "post" },
+          logout: { url: "https://www.valpcr.com/api/auth/logout", method: "post" },
         },
       },
     },
@@ -99,5 +100,5 @@ export default {
       },
     },
     compact: true,
-  }
+  },
 };

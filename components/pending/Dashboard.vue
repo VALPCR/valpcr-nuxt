@@ -60,7 +60,7 @@ export default {
             styleClass: "class1", // class to be added to the parent th element
             enabled: true, // enable filter for this column
             filterDropdownItems: [
-            "Vehicular Accident",
+              "Vehicular Accident",
               "EMS",
               "Search and Rescue",
               "Fire",
@@ -217,15 +217,33 @@ export default {
       response.data.return.map((pcr) =>
         this.fetchedRows.push({
           id: pcr.id,
-          name: (pcr.pcr_patient.patient.first_name !== null ? pcr.pcr_patient.patient.first_name : '')  + ' ' + (pcr.pcr_patient.patient.middle_name !== null ? pcr.pcr_patient.patient.middle_name : '') + ' ' + (pcr.pcr_patient.patient.surname !== null ? pcr.pcr_patient.patient.surname : ''),
+          name:
+            (pcr.pcr_patient.patient.first_name !== null
+              ? pcr.pcr_patient.patient.first_name
+              : "") +
+            " " +
+            (pcr.pcr_patient.patient.middle_name !== null
+              ? pcr.pcr_patient.patient.middle_name
+              : "") +
+            " " +
+            (pcr.pcr_patient.patient.surname !== null
+              ? pcr.pcr_patient.patient.surname
+              : ""),
           address: pcr.incident_location,
-          case: pcr.ems_location_a !== null ? pcr.ems_location_a.toUpperCase() : '',
+          case:
+            pcr.ems_location_a !== null ? pcr.ems_location_a.toUpperCase() : "",
           date: pcr.dispatch_date,
-          call: pcr.call_receive !== null ? pcr.call_receive : '',
+          call: pcr.call_receive !== null ? pcr.call_receive : "",
           arrival: pcr.arrived_at,
-          ambulance: pcr.ambulance !== null ? pcr.ambulance : '',
-          created: pcr.user_pcr.user.first_name + ' ' + pcr.user_pcr.user.last_name + ' (' + (pcr.user_pcr.user.role === 'emr' ? 'Responder' : 'Dispatcher') + ')',
-          category: pcr.category,
+          ambulance: pcr.ambulance !== null ? pcr.ambulance : "",
+          created:
+            pcr.user_pcr.user.first_name +
+            " " +
+            pcr.user_pcr.user.last_name +
+            " (" +
+            (pcr.user_pcr.user.role === "emr" ? "Responder" : "Dispatcher") +
+            ")",
+          category: this.capitalize(pcr.category),
         })
       );
     });
@@ -239,11 +257,16 @@ export default {
   },
   methods: {
     onRowClick(params) {
-      const editModal = new Modal(document.getElementById('editPatientFormStepper'));
-      this.$store.commit('setEditPatientStepperForm', true);
-      this.$store.commit('setEditPatientStepperFormArg', params.row.id);
+      const editModal = new Modal(
+        document.getElementById("editPatientFormStepper")
+      );
+      this.$store.commit("setEditPatientStepperForm", true);
+      this.$store.commit("setEditPatientStepperFormArg", params.row.id);
       editModal.show();
     },
-  }
+    capitalize(word) {
+      return word.replace(/^\w/, (c) => c.toUpperCase());
+    },
+  },
 };
 </script>

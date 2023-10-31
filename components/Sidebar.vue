@@ -143,7 +143,7 @@
           }"
           class="space-x-2 mb-4"
         >
-        <font-awesome-icon :icon="['fas', 'chart-simple']" size="lg" />
+          <font-awesome-icon :icon="['fas', 'chart-simple']" size="lg" />
           <span v-if="isSidebarOpen">Analytics</span>
         </li>
       </nuxt-link>
@@ -161,7 +161,10 @@
           }"
           class="space-x-2 mb-4"
         >
-        <font-awesome-icon :icon="['fas', 'prescription-bottle-medical']" size="lg" />
+          <font-awesome-icon
+            :icon="['fas', 'prescription-bottle-medical']"
+            size="lg"
+          />
           <span v-if="isSidebarOpen">Archive</span>
         </li>
       </nuxt-link>
@@ -238,7 +241,10 @@
           }"
           class="space-x-2 mb-4"
         >
-        <font-awesome-icon :icon="['fas', 'prescription-bottle-medical']" size="lg" />
+          <font-awesome-icon
+            :icon="['fas', 'prescription-bottle-medical']"
+            size="lg"
+          />
           <span v-if="isSidebarOpen">Archive</span>
         </li>
       </nuxt-link>
