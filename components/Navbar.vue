@@ -35,7 +35,9 @@
               alt="ValPCR Logo"
             />
             <span
-              :class="`self-center ${$device.isMobile ? '' : 'text-2xl' } font-semibold whitespace-nowrap dark:text-white italic`"
+              :class="`self-center ${
+                $device.isMobile ? '' : 'text-2xl'
+              } font-semibold whitespace-nowrap dark:text-white italic`"
               >Valenzuela Patient Care Reporting</span
             >
           </a>
@@ -130,6 +132,6 @@ export default {
         !this.$store.getters["getSideBarState"]
       );
     },
-  }
+  },
 };
 </script>

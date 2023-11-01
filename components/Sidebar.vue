@@ -345,6 +345,12 @@ export default {
   },
   mounted() {
     this.role = this.$auth.user.role;
+    if (this.$device.isMobile) {
+      this.$store.commit(
+        "setSideBarState",
+        !this.$store.getters["getSideBarState"]
+      );
+    }
     this.$nuxt.$options.echo
       .channel("notification")
       .listen(".NotificationEvent", (data) => {
