@@ -1,25 +1,13 @@
 <template>
-  <section class="dual-bg">
-    <div class="bg2"></div>
-    <div
-      class="bg1 flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0"
-    >
-      <img
-        src="/images/valpcr_logo.svg"
-        height="auto"
-        width="7%"
-        mr="2"
-        class="mx-auto mb-4"
-        alt="valpcr logo"
-      />
-      <h1 class="text-6xl font-bold text-dark-1 mx-auto mb-8">
-        <i> Welcome to ValPCR! </i>
-      </h1>
-      <div class="p-8 max-w-md w-full bg-white rounded-lg shadow-lg">
-        <h1 class="text-3xl mb-5 text-center text-black font-bold">
-          Sign in to your account
-        </h1>
-        <p class="ml-1 mr-1 text-left text-gray-500">Your Email</p>
+<section class="bg-split">
+  <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0 mx-auto mb-4 w-7/100 md: w-20/100 lg:w-50/100">
+        <img src="/images/valpcr_logo.svg" class="mx-auto mb-4" alt="valpcr logo" />
+        <h1 class="text-5xl font-bold text-dark-1 mx-auto mb-4"><i> Welcome to ValPCR! </i></h1>
+      <div class="p-8 max-w-md w-full bg-white rounded-lg drop-shadow-xl">
+        <h1 class="text-2xl mb-5 text-left text-slate-800 font-bold">Sign in to your account</h1>
+        <p class="ml-1 mr-1 text-left text-gray-500">
+          Your Email
+        </p>
         <form @submit.prevent="login">
           <div class="relative flex flex-nowrap items-stretch mb-3">
             <span
@@ -36,7 +24,9 @@
               aria-describedby="addon-wrapping"
             />
           </div>
-          <p class="ml-1 mr-1 text-left text-gray-500">Password</p>
+          <p class="ml-1 mr-1 text-left text-gray-500">
+          Password
+        </p>
           <div class="relative flex flex-nowrap items-stretch mb-3">
             <span
               class="flex items-center whitespace-nowrap rounded-l border border-r-0 border-solid border-neutral-300 px-3 py-[0.25rem] text-center text-base font-normal leading-[1.6] text-neutral-700 dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200"
@@ -54,11 +44,8 @@
             <label
               @click="togglePasswordShow"
               class="bg-gray-200 hover:bg-gray-300 rounded px-2 py-2 text-sm text-gray-600 font-mono cursor-pointer js-password-label"
-            >
-              <font-awesome-icon
-                v-if="showPassword"
-                :icon="['fas', 'eye-slash']"
-              />
+              >
+              <font-awesome-icon v-if="showPassword" :icon="['fas', 'eye-slash']" />
               <font-awesome-icon v-else :icon="['fas', 'eye']" />
             </label>
           </div>
@@ -80,15 +67,15 @@
             </NuxtLink>
           </div>
           <button
-            class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full"
+            class="bg-red-500 hover:bg-red-700 text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full"
             type="submit"
           >
             Log In
           </button>
         </form>
       </div>
-    </div>
-  </section>
+  </div>
+</section>
 </template>
 
 <script>
@@ -102,6 +89,7 @@ export default {
     };
   },
   methods: {
+    
     async login() {
       try {
         await this.$auth
@@ -125,6 +113,7 @@ export default {
           })
           .catch((e) => {
             this.error = e.response.data.message;
+            console.error("Login Error:", e.response.data.message);
           });
       } catch (e) {
         console.log(e);
@@ -138,23 +127,7 @@ export default {
 </script>
 
 <style scoped>
-.dual-bg {
-  position: relative;
-  overflow: hidden;
-}
-
-.bg1 {
-  position: relative;
-  z-index: 1;
-}
-
-.bg2 {
-  background-color: #131a2d;
-  position: absolute;
-  top: 60%;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 0;
+.bg-split {
+  background: linear-gradient(to bottom, #F9F9F9 50%, #131a2d 50%);
 }
 </style>
