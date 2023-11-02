@@ -50,6 +50,7 @@ export default {
     "@nuxtjs/axios",
     "@nuxtjs/auth-next",
     "@nuxtjs/device",
+    "@nuxtjs/toast",
   ],
 
   device: {
