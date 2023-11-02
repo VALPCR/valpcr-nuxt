@@ -2410,7 +2410,7 @@
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             anterior_head_degree === '1st Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
@@ -2427,7 +2427,7 @@
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             anterior_head_degree === '2nd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
@@ -2444,7 +2444,7 @@
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             anterior_head_degree === '3rd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
@@ -2475,7 +2475,7 @@
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             anterior_chest_degree === '1st Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
@@ -2492,7 +2492,7 @@
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             anterior_chest_degree === '2nd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
@@ -2509,7 +2509,7 @@
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             anterior_chest_degree === '3rd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
@@ -2540,7 +2540,7 @@
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             anterior_pelvis_degree === '1st Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
@@ -2557,7 +2557,7 @@
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             anterior_pelvis_degree === '2nd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
@@ -2574,7 +2574,7 @@
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             anterior_pelvis_degree === '3rd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
@@ -2605,7 +2605,7 @@
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             anterior_left_arm_degree === '1st Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
@@ -2622,7 +2622,7 @@
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             anterior_left_arm_degree === '2nd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
@@ -2639,7 +2639,7 @@
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             anterior_left_arm_degree === '3rd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
@@ -2670,7 +2670,7 @@
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             anterior_right_arm_degree === '1st Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
@@ -2687,7 +2687,7 @@
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             anterior_right_arm_degree === '2nd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
@@ -2704,7 +2704,7 @@
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             anterior_right_arm_degree === '3rd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
@@ -2735,7 +2735,7 @@
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             anterior_left_leg_degree === '1st Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
@@ -2752,7 +2752,7 @@
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             anterior_left_leg_degree === '2nd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
@@ -2769,7 +2769,7 @@
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             anterior_left_leg_degree === '3rd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
@@ -2800,7 +2800,7 @@
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             anterior_right_leg_degree === '1st Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
@@ -2817,7 +2817,7 @@
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             anterior_right_leg_degree === '2nd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
@@ -2834,7 +2834,7 @@
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             anterior_right_leg_degree === '3rd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
@@ -2865,7 +2865,7 @@
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             anterior_genitalia_degree === '1st Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
@@ -2882,7 +2882,7 @@
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             anterior_genitalia_degree === '2nd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
@@ -2899,7 +2899,7 @@
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             anterior_genitalia_degree === '3rd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
@@ -2931,7 +2931,7 @@
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             posterior_head_degree === '1st Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
@@ -2948,7 +2948,7 @@
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             posterior_head_degree === '2nd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
@@ -2965,7 +2965,7 @@
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             posterior_head_degree === '3rd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
@@ -2996,7 +2996,7 @@
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             posterior_chest_degree === '1st Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
@@ -3013,7 +3013,7 @@
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             posterior_chest_degree === '2nd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
@@ -3030,7 +3030,7 @@
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             posterior_chest_degree === '3rd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
@@ -3061,7 +3061,7 @@
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             posterior_pelvis_degree === '1st Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
@@ -3078,7 +3078,7 @@
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             posterior_pelvis_degree === '2nd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
@@ -3095,7 +3095,7 @@
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             posterior_pelvis_degree === '3rd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
@@ -3126,7 +3126,7 @@
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             posterior_left_arm_degree === '1st Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
@@ -3143,7 +3143,7 @@
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             posterior_left_arm_degree === '2nd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
@@ -3160,7 +3160,7 @@
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             posterior_left_arm_degree === '3rd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
@@ -3191,7 +3191,7 @@
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             posterior_right_arm_degree === '1st Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
@@ -3208,7 +3208,7 @@
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             posterior_right_arm_degree === '2nd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
@@ -3225,7 +3225,7 @@
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             posterior_right_arm_degree === '3rd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
@@ -3256,7 +3256,7 @@
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             posterior_left_leg_degree === '1st Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
@@ -3273,7 +3273,7 @@
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             posterior_left_leg_degree === '2nd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
@@ -3290,7 +3290,7 @@
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             posterior_left_leg_degree === '3rd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
@@ -3321,7 +3321,7 @@
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             posterior_right_leg_degree === '1st Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
@@ -3338,7 +3338,7 @@
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             posterior_right_leg_degree === '2nd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
@@ -3355,7 +3355,7 @@
                           :class="[
                             'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
                             posterior_right_leg_degree === '3rd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300'
+                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
                         >
