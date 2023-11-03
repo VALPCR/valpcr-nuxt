@@ -1,9 +1,7 @@
 <template>
   <section class="bg-split">
-    <spinner v-if="isLoading"></spinner>
     <div
-      class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0 mx-auto mb-4 w-7/100 md: w-20/100 lg:w-50/100"
-      v-if="!isLoading">
+      class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0 mx-auto mb-4 w-7/100 md: w-20/100 lg:w-50/100">
       <img src="/images/valpcr_logo.svg" class="mx-auto mb-4" alt="valpcr logo" />
       <h1 class="text-5xl font-bold text-dark-1 mx-auto mb-4"><i> Welcome to ValPCR! </i></h1>
       <div class="p-8 max-w-md w-full bg-white rounded-lg drop-shadow-xl">
@@ -73,7 +71,6 @@ export default {
 
     async login() {
       try {
-        this.isLoading = true;
         await this.$auth
           .loginWith("local", {
             data: {
@@ -95,12 +92,9 @@ export default {
           })
           .catch((e) => {
             this.error = e.response.data.message;
-            this.isLoading = false;
             console.error("Login Error:", e.response.data.message);
           });
-        this.isLoading = false;
       } catch (e) {
-
         console.log(e);
       }
     },
