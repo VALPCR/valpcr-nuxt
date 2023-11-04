@@ -345,7 +345,7 @@ export default {
   },
   mounted() {
     this.role = this.$auth.user.role;
-    if (this.$device.isMobile) {
+    if (this.$device.isTablet) {
       this.$store.commit(
         "setSideBarState",
         !this.$store.getters["getSideBarState"]
