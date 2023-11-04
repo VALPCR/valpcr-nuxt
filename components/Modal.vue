@@ -13,27 +13,37 @@
 
           <button
             class="inline-block rounded bg-info px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white"
-            @click="$emit('cancel-action')" data-te-ripple-init data-te-ripple-color="light">CANCEL</button>
+            @click="$emit('cancel-action')"
+            data-te-ripple-init
+            data-te-ripple-color="light"
+          >
+            CANCEL
+          </button>
           <button
             class="inline-block rounded bg-red-500 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white"
-            @click="$emit('delete-action')" data-te-ripple-init data-te-ripple-color="light">DELETE</button>
+            @click="$emit('delete-action')"
+            data-te-ripple-init
+            data-te-ripple-color="light"
+          >
+            DELETE
+          </button>
         </footer>
       </div>
     </div>
   </div>
 </template>
-  
+
 <script>
 export default {
   props: {
     title: {
       type: String,
-      required: true
-    }
-  }
-}
+      required: true,
+    },
+  },
+};
 </script>
-  
+
 <style>
 .modal-mask {
   position: fixed;
@@ -42,9 +52,9 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, 0.5);
   display: table;
-  transition: opacity .3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .modal-wrapper {
@@ -60,8 +70,8 @@ export default {
   text-align: left;
   background-color: #fff;
   border-radius: 2px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
-  transition: all .3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+  transition: all 0.3s ease;
 }
 
 footer {

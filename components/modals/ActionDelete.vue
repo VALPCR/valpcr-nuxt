@@ -11,12 +11,18 @@
           <!-- Pwede ka maglagay ng hanggat ilang actions mo gusto pero need mo syang ipartner sa emit action -->
           <button
             class="inline-block rounded bg-blue-500 hover:bg-blue-700 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white"
-            @click="$emit('confirm-action')" data-te-ripple-init data-te-ripple-color="light">
+            @click="$emit('confirm-action')"
+            data-te-ripple-init
+            data-te-ripple-color="light"
+          >
             Yes
           </button>
           <button
             class="inline-block rounded bg-blue-500 hover:bg-blue-700 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white"
-            @click="$emit('cancel-action')" data-te-ripple-init data-te-ripple-color="light">
+            @click="$emit('cancel-action')"
+            data-te-ripple-init
+            data-te-ripple-color="light"
+          >
             No
           </button>
         </footer>
