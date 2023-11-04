@@ -822,7 +822,6 @@ export default {
       category: "dispatch data",
       call_source: "",
       call_receive: "",
-      barangay: "",
       incident_location: "",
       responded: "",
       t_o: "",
@@ -979,7 +978,6 @@ export default {
       this.category = "";
       this.call_source = "";
       this.call_receive = "";
-      this.barangay = "";
       this.incident_location = "";
       this.responded = "";
       this.t_o = "";
@@ -1018,7 +1016,6 @@ export default {
         category: "dispatch data",
         call_source: this.call_source,
         call_receive: this.call_receive,
-        barangay: this.barangay,
         incident_location: this.incident_location,
         location: this.location,
         responded: this.responded,
@@ -1055,7 +1052,6 @@ export default {
         this.category = "dispatch data";
         this.call_source = "";
         this.call_receive = "";
-        this.barangay = "";
         this.incident_location = "";
         this.responded = "";
         this.t_o = "";
