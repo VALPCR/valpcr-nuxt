@@ -3,7 +3,7 @@
     data-te-modal-init
     data-te-backdrop="static"
     data-te-keyboard="false"
-    class="fixed left-0 top-20 z-[1055] hidden h-[780px] w-full overflow-y-auto overflow-x-hidden outline-none"
+    class="fixed left-0 top-20 z-[1055] hidden h-[85%] w-full overflow-y-auto overflow-x-hidden outline-none"
     id="patientFormStepper"
     tabindex="-1"
     aria-labelledby="exampleModalXlLabel"
@@ -127,7 +127,7 @@
                         </div>
 
                         <div
-                          class="relative mb-1 col-span-2"
+                          class="relative col-span-2"
                           data-te-input-wrapper-init
                         >
                           <input
@@ -146,29 +146,36 @@
                           </label>
                         </div>
 
-                        <label class="left-5 top-5 mb-0 font-bold">
+                        <!-- <label class="left-5 top-5 mb-0 font-bold">
                           Type of Response:
-                        </label>
-                        <select
-                          v-model="ems_location_a"
-                          data-te-select-init
-                          class="bg-neutral-50 col-span-3"
-                          id="emsLocationA"
-                          required
-                        >
-                          <option value="ems">Emergency Medical Service</option>
-                          <option value="fire">Fire</option>
-                          <option value="sar">Search and Rescue</option>
-                          <option value="va">Vehicular Accident</option>
-                          <option value="mt">Medical Transport</option>
-                        </select>
+                        </label> -->
+                        <div class="relative col-span-2">
+                          <select
+                            v-model="ems_location_a"
+                            data-te-select-init
+                            class="bg-neutral-50"
+                            id="emsLocationA"
+                            required
+                          >
+                            <option value="tor">Type of Response</option>
+                            <option value="ems">
+                              Emergency Medical Service
+                            </option>
+                            <option value="fire">Fire</option>
+                            <option value="sar">Search and Rescue</option>
+                            <option value="va">Vehicular Accident</option>
+                            <option value="mt">Medical Transport</option>
+                          </select>
+                        </div>
 
-                        <div class="relative mb-1" data-te-input-wrapper-init>
+                        <div class="relative" data-te-input-wrapper-init>
                           <input
                             v-model="ems_location_b"
                             type="text"
                             :class="`peer block min-h-[auto] w-full ${
-                              ems_location_a === 'va' || ems_location_a === 'mt'
+                              ems_location_a === 'tor' ||
+                              ems_location_a === 'va' ||
+                              ems_location_a === 'mt'
                                 ? 'bg-gray-100 cursor-not-allowed'
                                 : 'bg-transparent'
                             } rounded border-0 px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0`"
@@ -176,7 +183,9 @@
                             aria-describedby="emsLocationB"
                             placeholder="Location"
                             :disabled="
-                              ems_location_a === 'va' || ems_location_a === 'mt'
+                              ems_location_a === 'tor' ||
+                              ems_location_a === 'va' ||
+                              ems_location_a === 'mt'
                             "
                           />
                           <label
@@ -187,12 +196,14 @@
                           </label>
                         </div>
 
-                        <div class="relative mb-1" data-te-input-wrapper-init>
+                        <div class="relative" data-te-input-wrapper-init>
                           <input
                             v-model="barangay_b"
                             type="text"
                             :class="`peer block min-h-[auto] w-full rounded border-0 ${
-                              ems_location_a === 'va' || ems_location_a === 'mt'
+                              ems_location_a === 'tor' ||
+                              ems_location_a === 'va' ||
+                              ems_location_a === 'mt'
                                 ? 'bg-gray-100 cursor-not-allowed'
                                 : 'bg-transparent'
                             } px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0`"
@@ -200,7 +211,9 @@
                             aria-describedby="barangayB"
                             placeholder="Barangay"
                             :disabled="
-                              ems_location_a === 'va' || ems_location_a === 'mt'
+                              ems_location_a === 'tor' ||
+                              ems_location_a === 'va' ||
+                              ems_location_a === 'mt'
                             "
                           />
                           <label
@@ -522,27 +535,14 @@
                           />
                           <label
                             for="callReceive"
-                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
+                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-neutral peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
                           >
                             Call Received
                           </label>
                         </div>
 
-                        <div class="relative mb-1" data-te-input-wrapper-init>
-                          <input
-                            v-model="barangay"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            id="barangay"
-                            aria-describedby="barangay"
-                            placeholder="Barangay"
-                          />
-                          <label
-                            for="barangay"
-                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                          >
-                            Barangay
-                          </label>
+                        <div class="relative text-center mt-2 mb-1">
+                          <label class="mb-0 font-bold"> Responders: </label>
                         </div>
 
                         <div
@@ -561,7 +561,7 @@
                           />
                           <label
                             for="responded"
-                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
+                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-neutral peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
                           >
                             Responded
                           </label>
@@ -600,7 +600,7 @@
                           />
                           <label
                             for="arriveAtScene"
-                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
+                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-neutral peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
                           >
                             Arrived at scene
                           </label>
@@ -639,7 +639,7 @@
                           />
                           <label
                             for="enRouteTo"
-                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
+                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-neutral peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
                           >
                             En route to
                           </label>
@@ -678,7 +678,7 @@
                           />
                           <label
                             for="arrivedAt"
-                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
+                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-neutral peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
                           >
                             Arrived at
                           </label>
@@ -717,7 +717,7 @@
                           />
                           <label
                             for="departed"
-                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
+                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-neutral peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
                           >
                             Departed
                           </label>
@@ -774,13 +774,14 @@
                         </select>
 
                         <div
-                          class="relative mb-1 col-span-2 row-span-3"
+                          class="relative mb-1 mt-3 col-span-2"
                           data-te-input-wrapper-init
                         >
                           <textarea
                             v-model="remarks"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                             id="remarks"
+                            rows="9"
                             aria-describedby="remarks"
                           />
                           <label
@@ -1035,7 +1036,7 @@
                         v-model="pnt_city"
                       >
                         <option selected value="City">Select City</option>
-                        <option value="Valenzuela">City of Valenzuela</option>
+                        <option value="Valenzuela">Valenzuela City</option>
                         <option value="Others">Others, please specify</option>
                         <!-- Expected input box here -->
                       </select>
@@ -1046,7 +1047,7 @@
                           class="bg-neutral-50"
                           v-model="pnt_brgy"
                         >
-                          <option selected value="1">Select Barangay</option>
+                          <option selected value="1">Barangay</option>
                           <option value="Arkong Bato">Arkong Bato</option>
                           <option value="Bagbaguin">Bagbaguin</option>
                           <option value="Balangkas">Balangkas</option>
@@ -1104,24 +1105,7 @@
                         </label>
                       </div>
 
-                      <div class="relative mb-1" data-te-input-wrapper-init>
-                        <input
-                          v-model="pnt_zip"
-                          type="text"
-                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          id="zip"
-                          aria-describedby="zip"
-                          placeholder="Zip code"
-                        />
-                        <label
-                          for="zip"
-                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                        >
-                          Zip code
-                        </label>
-                      </div>
-
-                      <div class="s/sx-chief complaint">
+                      <div class="s/sx-chief complaint col-span-2">
                         <div class="relative mb-1" data-te-input-wrapper-init>
                           <input
                             v-model="complaint"
@@ -4122,7 +4106,6 @@ export default {
       category: "dispatch data",
       call_source: "",
       call_receive: "",
-      barangay: "",
       incident_location: "",
       responded: "",
       t_o: "",
@@ -4142,7 +4125,7 @@ export default {
       passenger: "",
       departed: "",
       station: "",
-      ems_location_a: "ems",
+      ems_location_a: "tor",
       ambulance: "",
       team_id: "1",
       mt_from: "",
@@ -4166,7 +4149,6 @@ export default {
       pnt_city: "City",
       pnt_brgy: "",
       pnt_st: "",
-      pnt_zip: "",
       complaint: "",
       onset: "",
       allergies: "",
@@ -4356,7 +4338,6 @@ export default {
       this.category = "";
       this.call_source = "";
       this.call_receive = "";
-      this.barangay = "";
       this.incident_location = "";
       this.responded = "";
       this.t_o = "";
@@ -4376,7 +4357,7 @@ export default {
       this.passenger = "";
       this.departed = "";
       this.station = "";
-      this.ems_location_a = "ems";
+      this.ems_location_a = "tor";
       this.ambulance = "";
       this.team_id = "";
       this.mt_from = "";
@@ -4400,7 +4381,6 @@ export default {
       this.pnt_city = "City";
       this.pnt_brgy = "";
       this.pnt_st = "";
-      this.pnt_zip = "";
       this.complaint = "";
       this.onset = "";
       this.allergies = "";
@@ -4527,7 +4507,6 @@ export default {
         category: "dispatch data",
         call_source: this.call_source,
         call_receive: this.call_receive,
-        barangay: this.barangay,
         incident_location: this.incident_location,
         responded: this.responded,
         t_o: this.t_o,
@@ -4570,7 +4549,6 @@ export default {
         pnt_city: this.pnt_city,
         pnt_brgy: this.pnt_brgy,
         pnt_st: this.pnt_st,
-        pnt_zip: this.pnt_zip,
         complaint: this.complaint,
         onset: this.onset,
         allergies: this.allergies,
@@ -4697,7 +4675,6 @@ export default {
         this.category = "";
         this.call_source = "";
         this.call_receive = "";
-        this.barangay = "";
         this.incident_location = "";
         this.responded = "";
         this.t_o = "";
@@ -4717,7 +4694,7 @@ export default {
         this.passenger = "";
         this.departed = "";
         this.station = "";
-        this.ems_location_a = "ems";
+        this.ems_location_a = "tor";
         this.ambulance = "";
         this.team_id = "";
         this.mt_from = "";
@@ -4741,7 +4718,6 @@ export default {
         this.pnt_city = "City";
         this.pnt_brgy = "";
         this.pnt_st = "";
-        this.pnt_zip = "";
         this.complaint = "";
         this.onset = "";
         this.allergies = "";
