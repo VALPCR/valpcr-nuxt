@@ -54,7 +54,7 @@ export default {
   ],
 
   device: {
-    refreshOnResize: true
+    refreshOnResize: true,
   },
 
   axios: {
@@ -85,7 +85,10 @@ export default {
           refresh: { url: "auth/refresh", method: "post" },
           user: { url: "auth/verify", method: "get", propertyName: false },
           // logout: { url: "https://valpcr.kbsan.com/api/auth/logout", method: "post" },
-          logout: { url: "https://www.valpcr.com/api/auth/logout", method: "post" },
+          logout: {
+            url: "https://www.valpcr.com/api/auth/logout",
+            method: "post",
+          },
         },
       },
     },

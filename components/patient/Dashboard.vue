@@ -331,7 +331,7 @@ export default {
         addModal.show();
       }
     },
-   
+
     onRowClick(params) {
       this.$store.commit("setEditPatientStepperForm", true);
       this.$store.commit("setEditPatientStepperFormArg", params.row.id);
