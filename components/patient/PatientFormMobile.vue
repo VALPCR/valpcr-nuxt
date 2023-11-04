@@ -23,7 +23,7 @@
           <h5
             class="text-xl font-medium leading-normal text-dark-blue font-bold dark:text-neutral-200"
             id="exampleModalXlLabel"
-        />
+          />
           <!--Close button-->
           <button
             type="button"
@@ -92,717 +92,712 @@
             >
               <div class="px-5 py-4 mt-7 mb-7">
                 <form>
+                  <div
+                    class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4"
+                  >
+                    <!-- FIRST DISPATCH DATA COLUMN -->
                     <div
                       class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4"
                     >
-                      <!-- FIRST DISPATCH DATA COLUMN -->
-                      <div
-                        class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4"
-                      >
-                        <div class="relative mb-1" data-te-input-wrapper-init>
-                          <input
-                            v-model="dispatch_date"
-                            type="date"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            id="date"
-                            aria-describedby="emailHelp123"
-                            placeholder="First name"
-                          />
-                          <label
-                            for="date"
-                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                          >
-                            Date
-                          </label>
-                        </div>
-
-                        <div class="relative mb-1" data-te-input-wrapper-init>
-                          <input
-                            v-model="call_source"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            id="callSource"
-                            aria-describedby="emailHelp124"
-                            placeholder="Call Source"
-                          />
-                          <label
-                            for="callSource"
-                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                          >
-                            Call Source
-                          </label>
-                        </div>
-
-                        <div
-                          class="relative mb-1 col-span-2"
-                          data-te-input-wrapper-init
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="dispatch_date"
+                          type="date"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="date"
+                        />
+                        <label
+                          for="date"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                         >
-                          <input
-                            v-model="incident_location"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            id="incidentLocation"
-                            aria-describedby="incidentLocation"
-                            placeholder="Incident Location"
-                          />
-                          <label
-                            for="incidentLocation"
-                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                          >
-                            Incident Location
-                          </label>
-                        </div>
+                          Date
+                        </label>
+                      </div>
 
-                        <!-- <label class="left-5 top-5 mb-0 font-bold">
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="call_source"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="callSource"
+                          aria-describedby="emailHelp124"
+                          placeholder="Call Source"
+                        />
+                        <label
+                          for="callSource"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          Call Source
+                        </label>
+                      </div>
+
+                      <div
+                        class="relative col-span-2"
+                        data-te-input-wrapper-init
+                      >
+                        <input
+                          v-model="incident_location"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="incidentLocation"
+                          aria-describedby="incidentLocation"
+                          placeholder="Incident Location"
+                        />
+                        <label
+                          for="incidentLocation"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          Incident Location
+                        </label>
+                      </div>
+
+                      <!-- <label class="left-5 top-5 mb-0 font-bold">
                           Type of Response:
                         </label> -->
-                        <div class="relative mb-1 col-span-2">
-                          <select
-                            v-model="ems_location_a"
-                            data-te-select-init
-                            class="bg-neutral-50"
-                            id="emsLocationA"
-                            required
-                          >
-                            <option value="tor">Type of Response</option>
-                            <option value="ems">Emergency Medical Service</option>
-                            <option value="fire">Fire</option>
-                            <option value="sar">Search and Rescue</option>
-                            <option value="va">Vehicular Accident</option>
-                            <option value="mt">Medical Transport</option>
-                          </select>
-                        </div>
-                        
-
-                        <div class="relative mb-1" data-te-input-wrapper-init>
-                          <input
-                            v-model="ems_location_b"
-                            type="text"
-                            :class="`peer block min-h-[auto] w-full ${
-                              ems_location_a === 'tor' || ems_location_a === 'va' || ems_location_a === 'mt'
-                                 ? 'bg-gray-100 cursor-not-allowed'
-                                : 'bg-transparent'
-                            } rounded border-0 px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0`"
-                            id="emsLocationB"
-                            aria-describedby="emsLocationB"
-                            placeholder="Location"
-                            :disabled="
-                              ems_location_a === 'tor' || ems_location_a === 'va' || ems_location_a === 'mt'
-                            "
-                          />
-                          <label
-                            for="emsLocationB"
-                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                          >
-                            Location
-                          </label>
-                        </div>
-
-                        <div class="relative mb-1" data-te-input-wrapper-init>
-                          <input
-                            v-model="barangay_b"
-                            type="text"
-                            :class="`peer block min-h-[auto] w-full rounded border-0 ${
-                              ems_location_a === 'tor' || ems_location_a === 'va' || ems_location_a === 'mt'
-                                ? 'bg-gray-100 cursor-not-allowed'
-                                : 'bg-transparent'
-                            } px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0`"
-                            id="barangayB"
-                            aria-describedby="barangayB"
-                            placeholder="Barangay"
-                            :disabled="
-                              ems_location_a === 'tor' || ems_location_a === 'va' || ems_location_a === 'mt'
-                            "
-                          />
-                          <label
-                            for="barangayB"
-                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                          >
-                            Barangay
-                          </label>
-                        </div>
-
-                        <div
-                          class="relative mb-1 flex flex-wrap items-stretch col-span-2"
+                      <div class="relative mt-1 mb-1 col-span-2">
+                        <select
+                          v-model="ems_location_a"
+                          data-te-select-init
+                          class="bg-neutral-50"
+                          id="emsLocationA"
+                          required
                         >
-                          <input
-                            v-model="mt_from"
-                            type="text"
-                            :class="`relative m-0 block w-1/4 min-w-0 flex-auto rounded-l border border-solid border-neutral-300 ${
-                              ems_location_a !== 'mt'
-                                ? 'bg-gray-100 cursor-not-allowed'
-                                : 'bg-transparent'
-                            } bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary`"
-                            placeholder="MT From"
-                            aria-label="mtFrom"
-                            :disabled="ems_location_a !== 'mt'"
-                          />
-                          <span
-                            class="flex items-center whitespace-nowrap border border-x-0 border-solid border-neutral-300 px-3 py-[0.25rem] text-center text-base font-normal leading-[1.6] text-neutral-700 dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200"
-                          >
-                            To
-                          </span>
-                          <input
-                            v-model="mt_barangay"
-                            type="text"
-                            :class="`relative m-0 block text-right w-1/4 min-w-0 flex-auto rounded-r border border-solid border-neutral-300 ${
-                              ems_location_a !== 'mt'
-                                ? 'bg-gray-100 cursor-not-allowed'
-                                : 'bg-transparent'
-                            } bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary`"
-                            placeholder="Barangay"
-                            aria-label="barangay"
-                            :disabled="ems_location_a !== 'mt'"
-                          />
-                        </div>
+                          <option value="tor">Type of Response</option>
+                          <option value="ems">Emergency Medical Service</option>
+                          <option value="fire">Fire</option>
+                          <option value="sar">Search and Rescue</option>
+                          <option value="va">Vehicular Accident</option>
+                          <option value="mt">Medical Transport</option>
+                        </select>
+                      </div>
 
-                        <div class="relative mb-1" data-te-input-wrapper-init>
-                          <input
-                            v-model="va_location"
-                            type="text"
-                            :class="`peer block min-h-[auto] w-full rounded border-0 ${
-                              ems_location_a !== 'va'
-                                ? 'bg-gray-100 cursor-not-allowed'
-                                : 'bg-transparent'
-                            } px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0`"
-                            id="vaLocation"
-                            aria-describedby="vaLocation"
-                            placeholder="V.A Location"
-                            :disabled="ems_location_a !== 'va'"
-                          />
-                          <label
-                            for="vaLocation"
-                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                          >
-                            V.A Location
-                          </label>
-                        </div>
-
-                        <div class="relative mb-1" data-te-input-wrapper-init>
-                          <input
-                            v-model="va_location_barangay"
-                            type="text"
-                            :class="`peer block min-h-[auto] w-full rounded border-0 ${
-                              ems_location_a !== 'va'
-                                ? 'bg-gray-100 cursor-not-allowed'
-                                : 'bg-transparent'
-                            } px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0`"
-                            id="vaLocationBarangay"
-                            aria-describedby="vaLocationBarangay"
-                            placeholder="Barangay"
-                            :disabled="ems_location_a !== 'va'"
-                          />
-                          <label
-                            for="vaLocationBarangay"
-                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                          >
-                            Barangay
-                          </label>
-                        </div>
-
-                        <div
-                          class="relative mb-1 flex flex-wrap items-stretch col-span-2"
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="ems_location_b"
+                          type="text"
+                          :class="`peer block min-h-[auto] w-full ${
+                            ems_location_a === 'tor' ||
+                            ems_location_a === 'va' ||
+                            ems_location_a === 'mt'
+                              ? 'bg-gray-100 cursor-not-allowed'
+                              : 'bg-transparent'
+                          } rounded border-0 px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0`"
+                          id="emsLocationB"
+                          aria-describedby="emsLocationB"
+                          placeholder="Location"
+                          :disabled="
+                            ems_location_a === 'tor' ||
+                            ems_location_a === 'va' ||
+                            ems_location_a === 'mt'
+                          "
+                        />
+                        <label
+                          for="emsLocationB"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                         >
-                          <input
-                            v-model="involved_vehicles_a"
-                            type="text"
-                            :class="`relative m-0 block w-1/4 min-w-0 flex-auto rounded-l border border-solid border-neutral-300 ${
-                              ems_location_a !== 'va'
-                                ? 'bg-gray-100 cursor-not-allowed'
-                                : 'bg-transparent'
-                            } bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary`"
-                            placeholder="Involved Vehicle(s)"
-                            aria-label="involvedVehicles"
-                            :disabled="ems_location_a !== 'va'"
-                          />
-                          <span
-                            class="flex items-center whitespace-nowrap border border-x-0 border-solid border-neutral-300 px-3 py-[0.25rem] text-center text-base font-normal leading-[1.6] text-neutral-700 dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200"
-                          >
-                            VS
-                          </span>
-                          <input
-                            v-model="involved_vehicles_b"
-                            type="text"
-                            :class="`relative m-0 block text-right w-1/4 min-w-0 flex-auto rounded-r border border-solid border-neutral-300 ${
-                              ems_location_a !== 'va'
-                                ? 'bg-gray-100 cursor-not-allowed'
-                                : 'bg-transparent'
-                            } bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary`"
-                            placeholder="Involved Vehicle(s)"
-                            aria-label="involvedVehicles"
-                            :disabled="ems_location_a !== 'va'"
-                          />
-                        </div>
+                          Location
+                        </label>
+                      </div>
 
-                        <div class="relative mb-1" data-te-input-wrapper-init>
-                          <input
-                            v-model="plate_number"
-                            type="text"
-                            :class="`peer block min-h-[auto] w-full rounded border-0 ${
-                              ems_location_a !== 'va'
-                                ? 'bg-gray-100 cursor-not-allowed'
-                                : 'bg-transparent'
-                            } px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0`"
-                            id="plateNumber"
-                            aria-describedby="plateNumber"
-                            placeholder="Plate Number"
-                            :disabled="ems_location_a !== 'va'"
-                          />
-                          <label
-                            for="plateNumber"
-                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                          >
-                            Plate Number
-                          </label>
-                        </div>
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="barangay_b"
+                          type="text"
+                          :class="`peer block min-h-[auto] w-full rounded border-0 ${
+                            ems_location_a === 'tor' ||
+                            ems_location_a === 'va' ||
+                            ems_location_a === 'mt'
+                              ? 'bg-gray-100 cursor-not-allowed'
+                              : 'bg-transparent'
+                          } px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0`"
+                          id="barangayB"
+                          aria-describedby="barangayB"
+                          placeholder="Barangay"
+                          :disabled="
+                            ems_location_a === 'tor' ||
+                            ems_location_a === 'va' ||
+                            ems_location_a === 'mt'
+                          "
+                        />
+                        <label
+                          for="barangayB"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          Barangay
+                        </label>
+                      </div>
 
-                        <div class="relative mb-1 col-span-2 flex">
-                          <label class="left-5 top-5 mb-0 font-bold">
-                            Patient:
-                          </label>
+                      <div
+                        class="relative mb-1 flex flex-wrap items-stretch col-span-2"
+                      >
+                        <input
+                          v-model="mt_from"
+                          type="text"
+                          :class="`relative m-0 block w-1/4 min-w-0 flex-auto rounded-l border border-solid border-neutral-300 ${
+                            ems_location_a !== 'mt'
+                              ? 'bg-gray-100 cursor-not-allowed'
+                              : 'bg-transparent'
+                          } bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary`"
+                          placeholder="MT From"
+                          aria-label="mtFrom"
+                          :disabled="ems_location_a !== 'mt'"
+                        />
+                        <span
+                          class="flex items-center whitespace-nowrap border border-x-0 border-solid border-neutral-300 px-3 py-[0.25rem] text-center text-base font-normal leading-[1.6] text-neutral-700 dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200"
+                        >
+                          To
+                        </span>
+                        <input
+                          v-model="mt_barangay"
+                          type="text"
+                          :class="`relative m-0 block text-right w-1/4 min-w-0 flex-auto rounded-r border border-solid border-neutral-300 ${
+                            ems_location_a !== 'mt'
+                              ? 'bg-gray-100 cursor-not-allowed'
+                              : 'bg-transparent'
+                          } bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary`"
+                          placeholder="Barangay"
+                          aria-label="barangay"
+                          :disabled="ems_location_a !== 'mt'"
+                        />
+                      </div>
+
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="va_location"
+                          type="text"
+                          :class="`peer block min-h-[auto] w-full rounded border-0 ${
+                            ems_location_a !== 'va'
+                              ? 'bg-gray-100 cursor-not-allowed'
+                              : 'bg-transparent'
+                          } px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0`"
+                          id="vaLocation"
+                          aria-describedby="vaLocation"
+                          placeholder="V.A Location"
+                          :disabled="ems_location_a !== 'va'"
+                        />
+                        <label
+                          for="vaLocation"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          V.A Location
+                        </label>
+                      </div>
+
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="va_location_barangay"
+                          type="text"
+                          :class="`peer block min-h-[auto] w-full rounded border-0 ${
+                            ems_location_a !== 'va'
+                              ? 'bg-gray-100 cursor-not-allowed'
+                              : 'bg-transparent'
+                          } px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0`"
+                          id="vaLocationBarangay"
+                          aria-describedby="vaLocationBarangay"
+                          placeholder="Barangay"
+                          :disabled="ems_location_a !== 'va'"
+                        />
+                        <label
+                          for="vaLocationBarangay"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          Barangay
+                        </label>
+                      </div>
+
+                      <div
+                        class="relative mb-1 flex flex-wrap items-stretch col-span-2"
+                      >
+                        <input
+                          v-model="involved_vehicles_a"
+                          type="text"
+                          :class="`relative m-0 block w-1/4 min-w-0 flex-auto rounded-l border border-solid border-neutral-300 ${
+                            ems_location_a !== 'va'
+                              ? 'bg-gray-100 cursor-not-allowed'
+                              : 'bg-transparent'
+                          } bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary`"
+                          placeholder="Involved Vehicle(s)"
+                          aria-label="involvedVehicles"
+                          :disabled="ems_location_a !== 'va'"
+                        />
+                        <span
+                          class="flex items-center whitespace-nowrap border border-x-0 border-solid border-neutral-300 px-3 py-[0.25rem] text-center text-base font-normal leading-[1.6] text-neutral-700 dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200"
+                        >
+                          VS
+                        </span>
+                        <input
+                          v-model="involved_vehicles_b"
+                          type="text"
+                          :class="`relative m-0 block text-right w-1/4 min-w-0 flex-auto rounded-r border border-solid border-neutral-300 ${
+                            ems_location_a !== 'va'
+                              ? 'bg-gray-100 cursor-not-allowed'
+                              : 'bg-transparent'
+                          } bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary`"
+                          placeholder="Involved Vehicle(s)"
+                          aria-label="involvedVehicles"
+                          :disabled="ems_location_a !== 'va'"
+                        />
+                      </div>
+
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="plate_number"
+                          type="text"
+                          :class="`peer block min-h-[auto] w-full rounded border-0 ${
+                            ems_location_a !== 'va'
+                              ? 'bg-gray-100 cursor-not-allowed'
+                              : 'bg-transparent'
+                          } px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0`"
+                          id="plateNumber"
+                          aria-describedby="plateNumber"
+                          placeholder="Plate Number"
+                          :disabled="ems_location_a !== 'va'"
+                        />
+                        <label
+                          for="plateNumber"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          Plate Number
+                        </label>
+                      </div>
+
+                      <div
+                        class="relative mb-1 col-span-2 flex md:inline-block"
+                      >
+                        <label class="left-5 top-5 mb-0 font-bold md:text-5">
+                          Patient:
+                        </label>
+                        <div
+                          class="relative mb-1 col-span-2 flex ml-3 justify-left md:mt-2 md:ml-2"
+                        >
                           <div
-                            class="relative mb-1 col-span-2 flex ml-3 justify-left"
+                            class="mb-[0.125rem] mr-4 inline-block min-h-[1.5rem] pl-[1.5rem]"
                           >
-                            <div
-                              class="mb-[0.125rem] mr-4 inline-block min-h-[1.5rem] pl-[1.5rem]"
+                            <input
+                              v-model="driver"
+                              :class="`${
+                                ems_location_a !== 'va'
+                                  ? 'bg-gray-100 cursor-not-allowed'
+                                  : 'bg-transparent'
+                              } relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:border-neutral-600 dark:checked:border-primary dark:checked:after:border-primary dark:checked:after:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:border-primary dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]`"
+                              type="radio"
+                              id="driver"
+                              name="patientRadio"
+                              value="driver"
+                              :disabled="ems_location_a !== 'va'"
+                            />
+                            <label
+                              class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                              for="driver"
                             >
-                              <input
-                                v-model="driver"
-                                :class="`${
-                                  ems_location_a !== 'va'
-                                    ? 'bg-gray-100 cursor-not-allowed'
-                                    : 'bg-transparent'
-                                } relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:border-neutral-600 dark:checked:border-primary dark:checked:after:border-primary dark:checked:after:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:border-primary dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]`"
-                                type="radio"
-                                id="driver"
-                                name="patientRadio"
-                                value="driver"
-                                :disabled="ems_location_a !== 'va'"
-                              />
-                              <label
-                                class="inline-block pl-[0.15rem] hover:cursor-pointer"
-                                for="driver"
-                              >
-                                Driver
-                              </label>
-                            </div>
-
-                            <div
-                              class="mb-[0.125rem] mr-4 inline-block min-h-[1.5rem] pl-[1.5rem]"
-                            >
-                              <input
-                                v-model="pedestrian"
-                                :class="`${
-                                  ems_location_a !== 'va'
-                                    ? 'bg-gray-100 cursor-not-allowed'
-                                    : 'bg-transparent'
-                                } relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:border-neutral-600 dark:checked:border-primary dark:checked:after:border-primary dark:checked:after:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:border-primary dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]`"
-                                type="radio"
-                                id="pedestrian"
-                                name="patientRadio"
-                                value="pedestrian"
-                                :disabled="ems_location_a !== 'va'"
-                              />
-                              <label
-                                class="inline-block pl-[0.15rem] hover:cursor-pointer"
-                                for="pedestrian"
-                              >
-                                Pedestrian
-                              </label>
-                            </div>
-
-                            <div
-                              class="mb-[0.125rem] mr-4 inline-block min-h-[1.5rem] pl-[1.5rem]"
-                            >
-                              <input
-                                v-model="passenger"
-                                :class="`${
-                                  ems_location_a !== 'va'
-                                    ? 'bg-gray-100 cursor-not-allowed'
-                                    : 'bg-transparent'
-                                } relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:border-neutral-600 dark:checked:border-primary dark:checked:after:border-primary dark:checked:after:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:border-primary dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]`"
-                                type="radio"
-                                id="passenger"
-                                name="patientRadio"
-                                value="passenger"
-                                :disabled="ems_location_a !== 'va'"
-                              />
-                              <label
-                                class="inline-block pl-[0.15rem] hover:cursor-pointer"
-                                for="passenger"
-                              >
-                                Passenger
-                              </label>
-                            </div>
+                              Driver
+                            </label>
                           </div>
-                        </div>
 
-                        <div class="relative mb-1 col-span-2">
-                          <label class="left-5 top-5 mb-0 font-bold">
-                            MCI/ Transport Priority
-                          </label>
-                          <div class="grid grid-cols-2 justify-center">
-                            <div class="grid-cols-2 ml-9 mt-4">
-                              <input
-                                v-model="priority"
-                                class="relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:border-neutral-600 dark:checked:border-primary dark:checked:after:border-primary dark:checked:after:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:border-primary dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
-                                type="radio"
-                                id="red"
-                                name="priorityRadio"
-                                value="red"
-                              />
-                              <label
-                                class="inline-block pl-[0.15rem] hover:cursor-pointer"
-                                for="red"
-                              >
-                                Priority#1(Red)
-                              </label>
-                            </div>
+                          <div
+                            class="mb-[0.125rem] mr-4 inline-block min-h-[1.5rem] pl-[1.5rem]"
+                          >
+                            <input
+                              v-model="pedestrian"
+                              :class="`${
+                                ems_location_a !== 'va'
+                                  ? 'bg-gray-100 cursor-not-allowed'
+                                  : 'bg-transparent'
+                              } relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:border-neutral-600 dark:checked:border-primary dark:checked:after:border-primary dark:checked:after:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:border-primary dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]`"
+                              type="radio"
+                              id="pedestrian"
+                              name="patientRadio"
+                              value="pedestrian"
+                              :disabled="ems_location_a !== 'va'"
+                            />
+                            <label
+                              class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                              for="pedestrian"
+                            >
+                              Pedestrian
+                            </label>
+                          </div>
 
-                            <div class="grid-cols-2 ml-9 mt-4">
-                              <input
-                                v-model="priority"
-                                class="relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:border-neutral-600 dark:checked:border-primary dark:checked:after:border-primary dark:checked:after:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:border-primary dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
-                                type="radio"
-                                id="yellow"
-                                name="priorityRadio"
-                                value="yellow"
-                              />
-                              <label
-                                class="inline-block pl-[0.15rem] hover:cursor-pointer"
-                                for="yellow"
-                              >
-                                Priority#2(Yellow)
-                              </label>
-                            </div>
-
-                            <div class="grid-cols-2 ml-9 mt-4">
-                              <input
-                                v-model="priority"
-                                class="relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:border-neutral-600 dark:checked:border-primary dark:checked:after:border-primary dark:checked:after:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:border-primary dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
-                                type="radio"
-                                id="green"
-                                name="priorityRadio"
-                                value="green"
-                              />
-                              <label
-                                class="inline-block pl-[0.15rem] hover:cursor-pointer"
-                                for="green"
-                              >
-                                Priority#3(Green)
-                              </label>
-                            </div>
-
-                            <div class="grid-cols-2 ml-9 mt-4">
-                              <input
-                                v-model="priority"
-                                class="relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:border-neutral-600 dark:checked:border-primary dark:checked:after:border-primary dark:checked:after:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:border-primary dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
-                                type="radio"
-                                id="black"
-                                name="priorityRadio"
-                                value="black"
-                              />
-                              <label
-                                class="inline-block pl-[0.15rem] hover:cursor-pointer"
-                                for="black"
-                              >
-                                Priority#4(Black)
-                              </label>
-                            </div>
+                          <div
+                            class="mb-[0.125rem] mr-4 inline-block min-h-[1.5rem] pl-[1.5rem]"
+                          >
+                            <input
+                              v-model="passenger"
+                              :class="`${
+                                ems_location_a !== 'va'
+                                  ? 'bg-gray-100 cursor-not-allowed'
+                                  : 'bg-transparent'
+                              } relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:border-neutral-600 dark:checked:border-primary dark:checked:after:border-primary dark:checked:after:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:border-primary dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]`"
+                              type="radio"
+                              id="passenger"
+                              name="patientRadio"
+                              value="passenger"
+                              :disabled="ems_location_a !== 'va'"
+                            />
+                            <label
+                              class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                              for="passenger"
+                            >
+                              Passenger
+                            </label>
                           </div>
                         </div>
                       </div>
 
-                      <!-- SECOND DISPATCH DATA COLUMN -->
-                      <div
-                        class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4"
-                      >
-                        <div
-                          class="relative mb-1"
-                          data-te-timepicker-init
-                          data-te-input-wrapper-init
-                          @click.stop="setCallReceived"
-                        >
-                          <input
-                            v-model="call_receive"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            id="callReceive"
-                            aria-describedby="callReceive"
-                            placeholder="Call Received"
-                          />
-                          <label
-                            for="callReceive"
-                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.5] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
-                          >
-                            Call Received
-                          </label>
-                        </div>
+                      <div class="relative mb-1 col-span-2">
+                        <label class="left-5 top-5 mb-0 font-bold">
+                          MCI/ Transport Priority
+                        </label>
+                        <div class="grid grid-cols-2 justify-center md:mt-2">
+                          <div class="grid-cols-2 ml-7 mt-4">
+                            <input
+                              v-model="priority"
+                              class="relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:border-neutral-600 dark:checked:border-primary dark:checked:after:border-primary dark:checked:after:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:border-primary dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                              type="radio"
+                              id="red"
+                              name="priorityRadio"
+                              value="red"
+                            />
+                            <label
+                              class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                              for="red"
+                            >
+                              Priority#1(Red)
+                            </label>
+                          </div>
 
-                        <div class="relative mb-1" data-te-input-wrapper-init>
-                          <input
-                            v-model="barangay"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            id="barangay"
-                            aria-describedby="barangay"
-                            placeholder="Barangay"
-                          />
-                          <label
-                            for="barangay"
-                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                          >
-                            Barangay
-                          </label>
-                        </div>
+                          <div class="grid-cols-2 ml-7 mt-4">
+                            <input
+                              v-model="priority"
+                              class="relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:border-neutral-600 dark:checked:border-primary dark:checked:after:border-primary dark:checked:after:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:border-primary dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                              type="radio"
+                              id="yellow"
+                              name="priorityRadio"
+                              value="yellow"
+                            />
+                            <label
+                              class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                              for="yellow"
+                            >
+                              Priority#2(Yellow)
+                            </label>
+                          </div>
 
-                        <div
-                          class="relative mb-1"
-                          data-te-timepicker-init
-                          data-te-input-wrapper-init
-                          @click.stop="setResponded"
-                        >
-                          <input
-                            v-model="responded"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            id="responded"
-                            aria-describedby="responded"
-                            placeholder="Responded"
-                          />
-                          <label
-                            for="responded"
-                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
-                          >
-                            Responded
-                          </label>
-                        </div>
+                          <div class="grid-cols-2 ml-7 mt-4">
+                            <input
+                              v-model="priority"
+                              class="relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:border-neutral-600 dark:checked:border-primary dark:checked:after:border-primary dark:checked:after:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:border-primary dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                              type="radio"
+                              id="green"
+                              name="priorityRadio"
+                              value="green"
+                            />
+                            <label
+                              class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                              for="green"
+                            >
+                              Priority#3(Green)
+                            </label>
+                          </div>
 
-                        <div class="relative mb-1" data-te-input-wrapper-init>
-                          <input
-                            v-model="t_o"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            id="tO"
-                            aria-describedby="tO"
-                            placeholder="T/O"
-                          />
-                          <label
-                            for="tO"
-                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                          >
-                            T/O
-                          </label>
-                        </div>
-
-                        <div
-                          class="relative mb-1"
-                          data-te-timepicker-init
-                          data-te-input-wrapper-init
-                          @click.stop="setArrivedScene"
-                        >
-                          <input
-                            v-model="arrive_at_scene"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            id="arriveAtScene"
-                            aria-describedby="arriveAtScene"
-                            placeholder="Arrived at scene"
-                          />
-                          <label
-                            for="arriveAtScene"
-                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
-                          >
-                            Arrived at scene
-                          </label>
-                        </div>
-
-                        <div class="relative mb-1" data-te-input-wrapper-init>
-                          <input
-                            v-model="t_l"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            id="tL"
-                            aria-describedby="tL"
-                            placeholder="T/L"
-                          />
-                          <label
-                            for="tL"
-                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                          >
-                            T/L
-                          </label>
-                        </div>
-
-                        <div
-                          class="relative mb-1"
-                          data-te-timepicker-init
-                          data-te-input-wrapper-init
-                          @click.stop="setEnRoute"
-                        >
-                          <input
-                            v-model="en_route_to"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            id="enRouteTo"
-                            aria-describedby="enRouteTo"
-                            placeholder="En route to"
-                          />
-                          <label
-                            for="enRouteTo"
-                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
-                          >
-                            En route to
-                          </label>
-                        </div>
-
-                        <div class="relative mb-1" data-te-input-wrapper-init>
-                          <input
-                            v-model="tx_o"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            id="tXO"
-                            aria-describedby="tXO"
-                            placeholder="TX/O"
-                          />
-                          <label
-                            for="tXO"
-                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                          >
-                            TX/O
-                          </label>
-                        </div>
-
-                        <div
-                          class="relative mb-1"
-                          data-te-timepicker-init
-                          data-te-input-wrapper-init
-                          @click.stop="setArrivedAt"
-                        >
-                          <input
-                            v-model="arrived_at"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            id="arrivedAt"
-                            aria-describedby="arrivedAt"
-                            placeholder="Arrived at"
-                          />
-                          <label
-                            for="arrivedAt"
-                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
-                          >
-                            Arrived at
-                          </label>
-                        </div>
-
-                        <div class="relative mb-1" data-te-input-wrapper-init>
-                          <input
-                            v-model="l_o"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            id="lO"
-                            aria-describedby="lO"
-                            placeholder="L/O"
-                          />
-                          <label
-                            for="lO"
-                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                          >
-                            L/O
-                          </label>
-                        </div>
-
-                        <div
-                          class="relative mb-1"
-                          data-te-timepicker-init
-                          data-te-input-wrapper-init
-                          @click.stop="setDeparted"
-                        >
-                          <input
-                            v-model="departed"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            id="departed"
-                            aria-describedby="departed"
-                            placeholder="Departed"
-                          />
-                          <label
-                            for="departed"
-                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
-                          >
-                            Departed
-                          </label>
-                        </div>
-
-                        <div class="relative mb-1" data-te-input-wrapper-init>
-                          <input
-                            v-model="station"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            id="station"
-                            aria-describedby="station"
-                            placeholder="Station"
-                          />
-                          <label
-                            for="station"
-                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                          >
-                            Station
-                          </label>
-                        </div>
-
-                        <div class="relative mb-1" data-te-input-wrapper-init>
-                          <input
-                            v-model="ambulance"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            id="ambulance"
-                            aria-describedby="ambulance"
-                            placeholder="Ambulance"
-                          />
-                          <label
-                            for="ambulance"
-                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                          >
-                            Ambulance
-                          </label>
-                        </div>
-
-                        <select
-                          v-model="team_id"
-                          data-te-select-init
-                          class="w-full bg-neutral-50"
-                          disabled
-                        >
-                          <option>Team</option>
-                          <option
-                            v-for="(item, index) in teams"
-                            :key="index"
-                            :value="item.id"
-                          >
-                            {{ item.name }}
-                          </option>
-                        </select>
-
-                        <div
-                          class="relative mb-1 col-span-2 row-span-3"
-                          data-te-input-wrapper-init
-                        >
-                          <textarea
-                            v-model="remarks"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            id="remarks"
-                            aria-describedby="remarks"
-                          />
-                          <label
-                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                          >
-                            Remarks
-                          </label>
+                          <div class="grid-cols-2 ml-7 mt-4">
+                            <input
+                              v-model="priority"
+                              class="relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:border-neutral-600 dark:checked:border-primary dark:checked:after:border-primary dark:checked:after:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:border-primary dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                              type="radio"
+                              id="black"
+                              name="priorityRadio"
+                              value="black"
+                            />
+                            <label
+                              class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                              for="black"
+                            >
+                              Priority#4(Black)
+                            </label>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </form>
+
+                    <!-- SECOND DISPATCH DATA COLUMN -->
+                    <div
+                      class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4"
+                    >
+                      <div
+                        class="relative mb-1"
+                        data-te-input-wrapper-init
+                        data-te-timepicker-init
+                        @click.stop="setCallReceived"
+                      >
+                        <input
+                          v-model="call_receive"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.16rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="callReceive"
+                          aria-describedby="callReceive"
+                          placeholder="Call Received"
+                        />
+                        <label
+                          for="callReceive"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-neutral peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
+                        >
+                          Call Received
+                        </label>
+                      </div>
+
+                      <div class="relative text-center mt-2 mb-1">
+                        <label class="mb-0 font-bold"> Responders: </label>
+                      </div>
+
+                      <div
+                        class="relative mb-1"
+                        data-te-timepicker-init
+                        data-te-input-wrapper-init
+                        @click.stop="setResponded"
+                      >
+                        <input
+                          v-model="responded"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="responded"
+                          aria-describedby="responded"
+                          placeholder="Responded"
+                        />
+                        <label
+                          for="responded"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-neutral peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
+                        >
+                          Responded
+                        </label>
+                      </div>
+
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="t_o"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="tO"
+                          aria-describedby="tO"
+                          placeholder="T/O"
+                        />
+                        <label
+                          for="tO"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          T/O
+                        </label>
+                      </div>
+
+                      <div
+                        class="relative mb-1"
+                        data-te-timepicker-init
+                        data-te-input-wrapper-init
+                        @click.stop="setArrivedScene"
+                      >
+                        <input
+                          v-model="arrive_at_scene"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="arriveAtScene"
+                          aria-describedby="arriveAtScene"
+                          placeholder="Arrived at scene"
+                        />
+                        <label
+                          for="arriveAtScene"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-neutral peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
+                        >
+                          Arrived at scene
+                        </label>
+                      </div>
+
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="t_l"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="tL"
+                          aria-describedby="tL"
+                          placeholder="T/L"
+                        />
+                        <label
+                          for="tL"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          T/L
+                        </label>
+                      </div>
+
+                      <div
+                        class="relative mb-1"
+                        data-te-timepicker-init
+                        data-te-input-wrapper-init
+                        @click.stop="setEnRoute"
+                      >
+                        <input
+                          v-model="en_route_to"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="enRouteTo"
+                          aria-describedby="enRouteTo"
+                          placeholder="En route to"
+                        />
+                        <label
+                          for="enRouteTo"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-neutral peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
+                        >
+                          En route to
+                        </label>
+                      </div>
+
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="tx_o"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="tXO"
+                          aria-describedby="tXO"
+                          placeholder="TX/O"
+                        />
+                        <label
+                          for="tXO"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          TX/O
+                        </label>
+                      </div>
+
+                      <div
+                        class="relative mb-1"
+                        data-te-timepicker-init
+                        data-te-input-wrapper-init
+                        @click.stop="setArrivedAt"
+                      >
+                        <input
+                          v-model="arrived_at"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="arrivedAt"
+                          aria-describedby="arrivedAt"
+                          placeholder="Arrived at"
+                        />
+                        <label
+                          for="arrivedAt"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-neutral peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
+                        >
+                          Arrived at
+                        </label>
+                      </div>
+
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="l_o"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="lO"
+                          aria-describedby="lO"
+                          placeholder="L/O"
+                        />
+                        <label
+                          for="lO"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          L/O
+                        </label>
+                      </div>
+
+                      <div
+                        class="relative mb-1"
+                        data-te-timepicker-init
+                        data-te-input-wrapper-init
+                        @click.stop="setDeparted"
+                      >
+                        <input
+                          v-model="departed"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="departed"
+                          aria-describedby="departed"
+                          placeholder="Departed"
+                        />
+                        <label
+                          for="departed"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-neutral peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
+                        >
+                          Departed
+                        </label>
+                      </div>
+
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="station"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="station"
+                          aria-describedby="station"
+                          placeholder="Station"
+                        />
+                        <label
+                          for="station"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          Station
+                        </label>
+                      </div>
+
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="ambulance"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="ambulance"
+                          aria-describedby="ambulance"
+                          placeholder="Ambulance"
+                        />
+                        <label
+                          for="ambulance"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          Ambulance
+                        </label>
+                      </div>
+
+                      <select
+                        v-model="team_id"
+                        data-te-select-init
+                        class="w-full bg-neutral-50"
+                        disabled
+                      >
+                        <option>Team</option>
+                        <option
+                          v-for="(item, index) in teams"
+                          :key="index"
+                          :value="item.id"
+                        >
+                          {{ item.name }}
+                        </option>
+                      </select>
+
+                      <div
+                        class="relative mb-1 mt-3 col-span-2"
+                        data-te-input-wrapper-init
+                      >
+                        <textarea
+                          v-model="remarks"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="remarks"
+                          rows="9"
+                          aria-describedby="remarks"
+                        />
+                        <label
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          Remarks
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
@@ -847,549 +842,532 @@
               aria-labelledby="flush-headingTwo"
               data-te-parent="#accordionFlushExample"
             >
-              <div class="px-5 py-4">
+              <div class="px-5 py-4 mt-7 mb-7">
                 <form>
-                    <div
-                      class="grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-4"
+                  <div
+                    class="grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-4"
+                  >
+                    <div class="relative mb-1" data-te-input-wrapper-init>
+                      <input
+                        v-model="suffix"
+                        type="text"
+                        class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        id="suffix"
+                        aria-describedby="suffix"
+                        placeholder="Suffix(e.g. Sr., Jr., III)"
+                      />
+                      <label
+                        for="suffix"
+                        class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                      >
+                        Suffix(e.g. Sr., Jr., III)
+                      </label>
+                    </div>
+
+                    <div class="relative mb-1" data-te-input-wrapper-init>
+                      <input
+                        v-model="first_name"
+                        type="text"
+                        class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        id="firstName"
+                        aria-describedby="firstName"
+                        placeholder="First Name"
+                      />
+                      <label
+                        for="firstName"
+                        class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                      >
+                        First Name
+                      </label>
+                    </div>
+
+                    <div class="relative mb-1" data-te-input-wrapper-init>
+                      <input
+                        v-model="middle_name"
+                        type="text"
+                        class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        id="midName"
+                        aria-describedby="midName"
+                        placeholder="Middle Name"
+                      />
+                      <label
+                        for="midName"
+                        class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                      >
+                        Middle Name
+                      </label>
+                    </div>
+
+                    <div class="relative mb-1" data-te-input-wrapper-init>
+                      <input
+                        v-model="surname"
+                        type="text"
+                        class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        id="lastName"
+                        aria-describedby="lastName"
+                        placeholder="Last Name"
+                      />
+                      <label
+                        for="lastName"
+                        class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                      >
+                        Last Name
+                      </label>
+                    </div>
+
+                    <!-- GENDER -->
+                    <select
+                      data-te-select-init
+                      class="w-full bg-neutral-50"
+                      v-model="gender"
                     >
-                      <div class="relative mb-1" data-te-input-wrapper-init>
-                        <input
-                          v-model="suffix"
-                          type="text"
-                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          id="suffix"
-                          aria-describedby="suffix"
-                          placeholder="Suffix(e.g. Sr., Jr., III)"
-                        />
-                        <label
-                          for="suffix"
-                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                        >
-                          Suffix(e.g. Sr., Jr., III)
-                        </label>
-                      </div>
+                      <option value="patientGender">Sex</option>
+                      <option value="female">Female</option>
+                      <option value="male">Male</option>
+                    </select>
 
-                      <div class="relative mb-1" data-te-input-wrapper-init>
-                        <input
-                          v-model="first_name"
-                          type="text"
-                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          id="firstName"
-                          aria-describedby="firstName"
-                          placeholder="First Name"
-                        />
-                        <label
-                          for="firstName"
-                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                        >
-                          First Name
-                        </label>
-                      </div>
+                    <!-- BIRTHDATE -->
+                    <div class="relative mb-1" data-te-input-wrapper-init>
+                      <input
+                        v-model="birthdate"
+                        type="date"
+                        class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        placeholder="Select a date"
+                      />
+                      <label
+                        class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                      >
+                        Birthdate
+                      </label>
+                    </div>
+                    <!-- END BIRTHDATE -->
 
-                      <div class="relative mb-1" data-te-input-wrapper-init>
-                        <input
-                          v-model="middle_name"
-                          type="text"
-                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          id="midName"
-                          aria-describedby="midName"
-                          placeholder="Middle Name"
-                        />
-                        <label
-                          for="midName"
-                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                        >
-                          Middle Name
-                        </label>
-                      </div>
+                    <div class="relative mb-1" data-te-input-wrapper-init>
+                      <input
+                        v-model="age"
+                        type="text"
+                        class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        id="age"
+                        aria-describedby="age"
+                        placeholder="Age"
+                        required
+                      />
+                      <label
+                        for="age"
+                        class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                      >
+                        Age
+                      </label>
+                    </div>
 
-                      <div class="relative mb-1" data-te-input-wrapper-init>
-                        <input
-                          v-model="surname"
-                          type="text"
-                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          id="lastName"
-                          aria-describedby="lastName"
-                          placeholder="Last Name"
-                        />
-                        <label
-                          for="lastName"
-                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                        >
-                          Last Name
-                        </label>
-                      </div>
-
-                      <!-- GENDER -->
+                    <div>
                       <select
                         data-te-select-init
-                        class="w-full bg-neutral-50"
-                        v-model="gender"
+                        v-model="status"
+                        class="bg-neutral-50"
                       >
-                        <option value="patientGender">Sex</option>
-                        <option value="female">Female</option>
-                        <option value="male">Male</option>
+                        <option selected value="2">Status</option>
+                        <option value="single">Single</option>
+                        <option value="married">Married</option>
+                        <option value="divorced">Divorced</option>
+                        <option value="annulled">Annulled</option>
+                        <option value="separated">Separated</option>
+                        <option value="cohabiting">Cohabiting</option>
+                        <option value="notSpecified">Not Specified</option>
                       </select>
+                    </div>
 
-                      <!-- BIRTHDATE -->
-                      <div class="relative mb-1" data-te-input-wrapper-init>
-                        <input
-                          v-model="birthdate"
-                          type="date"
-                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          placeholder="Select a date"
-                        />
-                        <label
-                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                        >
-                          Birthdate
-                        </label>
-                      </div>
-                      <!-- END BIRTHDATE -->
-
-                      <div class="relative mb-1" data-te-input-wrapper-init>
-                        <input
-                          v-model="age"
-                          type="text"
-                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          id="age"
-                          aria-describedby="age"
-                          placeholder="Age"
-                          required
-                        />
-                        <label
-                          for="age"
-                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                        >
-                          Age
-                        </label>
-                      </div>
-
-                      <div>
-                        <select
-                          data-te-select-init
-                          v-model="status"
-                          class="bg-neutral-50"
-                        >
-                          <option selected value="2">Status</option>
-                          <option value="single">Single</option>
-                          <option value="married">Married</option>
-                          <option value="divorced">Divorced</option>
-                          <option value="annulled">Annulled</option>
-                          <option value="separated">Separated</option>
-                          <option value="cohabiting">Cohabiting</option>
-                          <option value="notSpecified">Not Specified</option>
-                        </select>
-                      </div>
-
-                      <div class="col-span-2">
-                        <select
-                          data-te-select-init
-                          v-model="religion"
-                          class="bg-neutral-50"
-                        >
-                          <option selected value="3">Religion</option>
-                          <option value="roman catholic">Roman Catholic</option>
-                          <option value="islam">Islam</option>
-                          <option value="iglesia ni cristo">
-                            Iglesia ni Cristo
-                          </option>
-                          <option value="aglipay">Aglipay</option>
-                          <option value="iglesia filipina independiente">
-                            Iglesia Filipina Independiente
-                          </option>
-                          <option value="bible baptist church">
-                            Bible Baptist Church
-                          </option>
-                          <option
-                            value="united church of christ in the philippines"
-                          >
-                            United Church of Christ in the Philippines
-                          </option>
-                          <option value="jehovas witness">
-                            Jehovah's Witness
-                          </option>
-                          <option value="church of christ">
-                            Church of Christ
-                          </option>
-                          <option value="others">Others</option>
-                          <option value="none">None</option>
-                        </select>
-                      </div>
-
-                      <div class="relative mb-1" data-te-input-wrapper-init>
-                        <input
-                          v-model="companion"
-                          type="text"
-                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          id="pntCompanion"
-                          aria-describedby="pntCompanion"
-                          placeholder="Relative/Companion"
-                        />
-                        <label
-                          for="pntCompanion"
-                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                        >
-                          Relative/Companion
-                        </label>
-                      </div>
-
-                      <div
-                        class="relative mb-1 bg-neutral-50"
-                        data-te-input-wrapper-init
+                    <div class="col-span-2">
+                      <select
+                        data-te-select-init
+                        v-model="religion"
+                        class="bg-neutral-50"
                       >
-                        <span
-                          class="absolute left-3 top-1/2 transform -translate-y-1/2 text-neutral-500"
+                        <option selected value="3">Religion</option>
+                        <option value="roman catholic">Roman Catholic</option>
+                        <option value="islam">Islam</option>
+                        <option value="iglesia ni cristo">
+                          Iglesia ni Cristo
+                        </option>
+                        <option value="aglipay">Aglipay</option>
+                        <option value="iglesia filipina independiente">
+                          Iglesia Filipina Independiente
+                        </option>
+                        <option value="bible baptist church">
+                          Bible Baptist Church
+                        </option>
+                        <option
+                          value="united church of christ in the philippines"
                         >
-                          +63
-                        </span>
-                        <input
-                          v-model="phone"
-                          type="tel"
-                          id="pntContactNumber"
-                          name="pntContactNumber"
-                          class="peer block min-h-[auto] w-full pl-10 rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          pattern="[0-9]*"
-                          inputmode="numeric"
-                          maxlength="10"
-                          required
-                        />
-                      </div>
+                          United Church of Christ in the Philippines
+                        </option>
+                        <option value="jehovas witness">
+                          Jehovah's Witness
+                        </option>
+                        <option value="church of christ">
+                          Church of Christ
+                        </option>
+                        <option value="others">Others</option>
+                        <option value="none">None</option>
+                      </select>
+                    </div>
 
-                      <!-- ADDRESS -->
+                    <div class="relative mb-1" data-te-input-wrapper-init>
+                      <input
+                        v-model="companion"
+                        type="text"
+                        class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        id="pntCompanion"
+                        aria-describedby="pntCompanion"
+                        placeholder="Relative/Companion"
+                      />
+                      <label
+                        for="pntCompanion"
+                        class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                      >
+                        Relative/Companion
+                      </label>
+                    </div>
+
+                    <div
+                      class="relative mb-1 bg-neutral-50"
+                      data-te-input-wrapper-init
+                    >
+                      <span
+                        class="absolute left-3 top-1/2 transform -translate-y-1/2 text-neutral-500"
+                      >
+                        +63
+                      </span>
+                      <input
+                        v-model="phone"
+                        type="tel"
+                        id="pntContactNumber"
+                        name="pntContactNumber"
+                        class="peer block min-h-[auto] w-full pl-10 rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        pattern="[0-9]*"
+                        inputmode="numeric"
+                        maxlength="10"
+                        required
+                      />
+                    </div>
+
+                    <!-- ADDRESS -->
+                    <select
+                      data-te-select-init
+                      class="bg-neutral-50"
+                      v-model="pnt_city"
+                    >
+                      <option selected value="City">Select City</option>
+                      <option value="Valenzuela">Valenzuela City</option>
+                      <option value="Others">Others, please specify</option>
+                      <!-- Expected input box here -->
+                    </select>
+
+                    <div>
                       <select
                         data-te-select-init
                         class="bg-neutral-50"
-                        v-model="pnt_city"
+                        v-model="pnt_brgy"
                       >
-                        <option selected value="City">Select City</option>
-                        <option value="Valenzuela">City of Valenzuela</option>
-                        <option value="Others">Others, please specify</option>
-                        <!-- Expected input box here -->
+                        <option selected value="1">Barangay</option>
+                        <option value="Arkong Bato">Arkong Bato</option>
+                        <option value="Bagbaguin">Bagbaguin</option>
+                        <option value="Balangkas">Balangkas</option>
+                        <option value="Bignay">Bignay</option>
+                        <option value="Canumay East">Canumay East</option>
+                        <option value="Canumay West">Canumay West</option>
+                        <option value="Coloong">Coloong</option>
+                        <option value="Dalandanan">Dalandanan</option>
+                        <option value="Gen T. De Leon">Gen T. De Leon</option>
+                        <option value="Isla">Isla</option>
+                        <option value="Karuhatan">Karuhatan</option>
+                        <option value="Lawang Bato">Lawang Bato</option>
+                        <option value="Lingunan">Lingunan</option>
+                        <option value="Mabolo">Mabolo</option>
+                        <option value="Malanday">Malanday</option>
+                        <option value="Malinta">Malinta</option>
+                        <option value="Mapulang Lupa">Mapulang Lupa</option>
+                        <option value="Marulas">Marulas</option>
+                        <option value="Maysan">Maysan</option>
+                        <option value="Palasan">Palasan</option>
+                        <option value="Parada">Parada</option>
+                        <option value="Pariancillo Villa">
+                          Pariancillo Villa
+                        </option>
+                        <option value="Paso De Blas">Paso De Blas</option>
+                        <option value="Pasolo">Pasolo</option>
+                        <option value="Poblacion">Poblacion</option>
+                        <option value="Pulo">Pulo</option>
+                        <option value="Punturin">Punturin</option>
+                        <option value="Rincon">Rincon</option>
+                        <option value="Tagalag">Tagalag</option>
+                        <option value="Ugong">Ugong</option>
+                        <option value="Viente Reales">Viente Reales</option>
+                        <option value="Wawang Pulo">Wawang Pulo</option>
                       </select>
+                    </div>
 
-                      <div>
-                        <select
-                          data-te-select-init
-                          class="bg-neutral-50"
-                          v-model="pnt_brgy"
-                        >
-                          <option selected value="1">Select Barangay</option>
-                          <option value="Arkong Bato">Arkong Bato</option>
-                          <option value="Bagbaguin">Bagbaguin</option>
-                          <option value="Balangkas">Balangkas</option>
-                          <option value="Bignay">Bignay</option>
-                          <option value="Canumay East">Canumay East</option>
-                          <option value="Canumay West">Canumay West</option>
-                          <option value="Coloong">Coloong</option>
-                          <option value="Dalandanan">Dalandanan</option>
-                          <option value="Gen T. De Leon">Gen T. De Leon</option>
-                          <option value="Isla">Isla</option>
-                          <option value="Karuhatan">Karuhatan</option>
-                          <option value="Lawang Bato">Lawang Bato</option>
-                          <option value="Lingunan">Lingunan</option>
-                          <option value="Mabolo">Mabolo</option>
-                          <option value="Malanday">Malanday</option>
-                          <option value="Malinta">Malinta</option>
-                          <option value="Mapulang Lupa">Mapulang Lupa</option>
-                          <option value="Marulas">Marulas</option>
-                          <option value="Maysan">Maysan</option>
-                          <option value="Palasan">Palasan</option>
-                          <option value="Parada">Parada</option>
-                          <option value="Pariancillo Villa">
-                            Pariancillo Villa
-                          </option>
-                          <option value="Paso De Blas">Paso De Blas</option>
-                          <option value="Pasolo">Pasolo</option>
-                          <option value="Poblacion">Poblacion</option>
-                          <option value="Pulo">Pulo</option>
-                          <option value="Punturin">Punturin</option>
-                          <option value="Rincon">Rincon</option>
-                          <option value="Tagalag">Tagalag</option>
-                          <option value="Ugong">Ugong</option>
-                          <option value="Viente Reales">Viente Reales</option>
-                          <option value="Wawang Pulo">Wawang Pulo</option>
-                        </select>
-                      </div>
-
-                      <div
-                        class="relative mb-1 col-span-2"
-                        data-te-input-wrapper-init
+                    <div
+                      class="relative mb-1 col-span-2"
+                      data-te-input-wrapper-init
+                    >
+                      <input
+                        v-model="pnt_st"
+                        type="text"
+                        class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        id="streetAddress"
+                        aria-describedby="streetAddress"
+                        placeholder="Street Address"
+                      />
+                      <label
+                        for="streetAddress"
+                        class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                       >
-                        <input
-                          v-model="pnt_st"
-                          type="text"
-                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          id="streetAddress"
-                          aria-describedby="streetAddress"
-                          placeholder="Street Address"
-                        />
-                        <label
-                          for="streetAddress"
-                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                        >
-                          Street Address
-                        </label>
-                      </div>
+                        Street Address
+                      </label>
+                    </div>
 
+                    <div class="s/sx-chief complaint col-span-2">
                       <div class="relative mb-1" data-te-input-wrapper-init>
                         <input
-                          v-model="pnt_zip"
+                          v-model="complaint"
                           type="text"
                           class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          id="zip"
-                          aria-describedby="zip"
-                          placeholder="Zip code"
+                          id="s/sx-chief complaint"
+                          aria-describedby="s/sx-chief complaint"
+                          placeholder="s/sx-chief complaint"
                         />
                         <label
-                          for="zip"
+                          for="s/sx-chief complaint"
                           class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                         >
-                          Zip code
+                          S/SX-Chief Complaint
                         </label>
                       </div>
-
-                      <div class="s/sx-chief complaint">
-                        <div class="relative mb-1" data-te-input-wrapper-init>
-                          <input
-                            v-model="complaint"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            id="s/sx-chief complaint"
-                            aria-describedby="s/sx-chief complaint"
-                            placeholder="s/sx-chief complaint"
-                          />
-                          <label
-                            for="s/sx-chief complaint"
-                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                          >
-                            S/SX-Chief Complaint
-                          </label>
-                        </div>
-                      </div>
-
-                      <!-- ONSET-->
-                      <div class="col-span-2">
-                        <div class="relative mb-1" data-te-input-wrapper-init>
-                          <input
-                            v-model="onset"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            id="onset"
-                            aria-describedby="zis/sx-chief complaint"
-                            placeholder="onset"
-                          />
-                          <label
-                            for="onset"
-                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                          >
-                            Onset
-                          </label>
-                        </div>
-                      </div>
-
-                      <!-- ALLERGIES-->
-                      <div class="col-span-2">
-                        <div class="relative mb-1" data-te-input-wrapper-init>
-                          <input
-                            v-model="allergies"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            id="allergies"
-                            aria-describedby="allergies"
-                            placeholder="allergies"
-                          />
-                          <label
-                            for="allergies"
-                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                          >
-                            Allergies
-                          </label>
-                        </div>
-                      </div>
-
-                      <!-- PROVOCATION-->
-                      <div class="col-span-2">
-                        <div class="relative mb-1" data-te-input-wrapper-init>
-                          <input
-                            v-model="provocation"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            id="provocation"
-                            aria-describedby="provocation"
-                            placeholder="provocation"
-                          />
-                          <label
-                            for="provocation"
-                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                          >
-                            Provocation
-                          </label>
-                        </div>
-                      </div>
-
-                      <!-- MEDICATION-->
-                      <div class="col-span-2">
-                        <div class="relative mb-1" data-te-input-wrapper-init>
-                          <input
-                            v-model="medication"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            id="medication"
-                            aria-describedby="medication"
-                            placeholder="medication"
-                          />
-                          <label
-                            for="medication"
-                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                          >
-                            Medication
-                          </label>
-                        </div>
-                      </div>
-
-                      <!-- QUALITY-->
-                      <div class="col-span-2">
-                        <div class="relative mb-1" data-te-input-wrapper-init>
-                          <input
-                            v-model="quality"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            id="quality"
-                            aria-describedby="quality"
-                            placeholder="quality"
-                          />
-                          <label
-                            for="quality"
-                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                          >
-                            Quality
-                          </label>
-                        </div>
-                      </div>
-
-                      <!-- PAST MEDICAL HISTORY-->
-                      <div class="col-span-2">
-                        <div class="relative mb-1" data-te-input-wrapper-init>
-                          <input
-                            v-model="medical_history"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            id="pmh"
-                            aria-describedby="pmh"
-                            placeholder="pmh"
-                          />
-                          <label
-                            for="pmh"
-                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                          >
-                            Past Medical History
-                          </label>
-                        </div>
-                      </div>
-
-                      <!-- RADIATION-->
-                      <div class="col-span-2">
-                        <div class="relative mb-1" data-te-input-wrapper-init>
-                          <input
-                            v-model="radiation"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            id="radiation"
-                            aria-describedby="radiation"
-                            placeholder="radiation"
-                          />
-                          <label
-                            for="radiation"
-                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                          >
-                            Radiation
-                          </label>
-                        </div>
-                      </div>
-
-                      <!-- LAST ORAL INTAKE -->
-                      <div class="col-span-2">
-                        <div class="relative mb-1" data-te-input-wrapper-init>
-                          <input
-                            v-model="last_oral_intake"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            id="loi"
-                            aria-describedby="loi"
-                            placeholder="loi"
-                          />
-                          <label
-                            for="loi"
-                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                          >
-                            Last Oral Intake
-                          </label>
-                        </div>
-                      </div>
-
-                      <!--SEVERITY-->
-                      <div class="col-span-2">
-                        <select
-                          data-te-select-init
-                          class="w-full bg-neutral-50 text-gray"
-                          v-model="severity"
-                        >
-                          <option value="severity">Severity</option>
-                          <option value="mild">Mild (1)</option>
-                          <option value="moderate">Moderate (5)</option>
-                          <option value="severe">Severe (10)</option>
-                          <option value="Others">Others</option>
-                        </select>
-                      </div>
-
-                      <!-- EVENTS LEADING TO INJURY -->
-                      <div class="events col-span-2">
-                        <div class="relative mb-1" data-te-input-wrapper-init>
-                          <input
-                            v-model="event_leading_to_injury"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            id="events"
-                            aria-describedby="events"
-                            placeholder="events"
-                          />
-                          <label
-                            for="events"
-                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                          >
-                            Events Leading to Injury
-                          </label>
-                        </div>
-                      </div>
-
-                      <!-- TIME -->
-                      <div class="time col-span-2">
-                        <div
-                          class="relative mb-1"
-                          data-te-input-wrapper-init
-                          data-te-timepicker-init
-                          @click.stop="setTimePatient"
-                        >
-                          <input
-                            v-model="time_taken"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            id="time"
-                            aria-describedby="time"
-                            placeholder="time"
-                          />
-                          <label
-                            for="time"
-                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                          >
-                            Time
-                          </label>
-                        </div>
-                      </div>
-                      <!-- EVENTS LEADING TO INJURY -->
                     </div>
-                  </form>
+
+                    <!-- ONSET-->
+                    <div class="col-span-2">
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="onset"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="onset"
+                          aria-describedby="zis/sx-chief complaint"
+                          placeholder="onset"
+                        />
+                        <label
+                          for="onset"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          Onset
+                        </label>
+                      </div>
+                    </div>
+
+                    <!-- ALLERGIES-->
+                    <div class="col-span-2">
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="allergies"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="allergies"
+                          aria-describedby="allergies"
+                          placeholder="allergies"
+                        />
+                        <label
+                          for="allergies"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          Allergies
+                        </label>
+                      </div>
+                    </div>
+
+                    <!-- PROVOCATION-->
+                    <div class="col-span-2">
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="provocation"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="provocation"
+                          aria-describedby="provocation"
+                          placeholder="provocation"
+                        />
+                        <label
+                          for="provocation"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          Provocation
+                        </label>
+                      </div>
+                    </div>
+
+                    <!-- MEDICATION-->
+                    <div class="col-span-2">
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="medication"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="medication"
+                          aria-describedby="medication"
+                          placeholder="medication"
+                        />
+                        <label
+                          for="medication"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          Medication
+                        </label>
+                      </div>
+                    </div>
+
+                    <!-- QUALITY-->
+                    <div class="col-span-2">
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="quality"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="quality"
+                          aria-describedby="quality"
+                          placeholder="quality"
+                        />
+                        <label
+                          for="quality"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          Quality
+                        </label>
+                      </div>
+                    </div>
+
+                    <!-- PAST MEDICAL HISTORY-->
+                    <div class="col-span-2">
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="medical_history"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="pmh"
+                          aria-describedby="pmh"
+                          placeholder="pmh"
+                        />
+                        <label
+                          for="pmh"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          Past Medical History
+                        </label>
+                      </div>
+                    </div>
+
+                    <!-- RADIATION-->
+                    <div class="col-span-2">
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="radiation"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="radiation"
+                          aria-describedby="radiation"
+                          placeholder="radiation"
+                        />
+                        <label
+                          for="radiation"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          Radiation
+                        </label>
+                      </div>
+                    </div>
+
+                    <!-- LAST ORAL INTAKE -->
+                    <div class="col-span-2">
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="last_oral_intake"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="loi"
+                          aria-describedby="loi"
+                          placeholder="loi"
+                        />
+                        <label
+                          for="loi"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          Last Oral Intake
+                        </label>
+                      </div>
+                    </div>
+
+                    <!--SEVERITY-->
+                    <div class="col-span-2">
+                      <select
+                        data-te-select-init
+                        class="w-full bg-neutral-50 text-gray"
+                        v-model="severity"
+                      >
+                        <option value="severity">Severity</option>
+                        <option value="mild">Mild (1)</option>
+                        <option value="moderate">Moderate (5)</option>
+                        <option value="severe">Severe (10)</option>
+                        <option value="Others">Others</option>
+                      </select>
+                    </div>
+
+                    <!-- EVENTS LEADING TO INJURY -->
+                    <div class="events col-span-2">
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="event_leading_to_injury"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="events"
+                          aria-describedby="events"
+                          placeholder="events"
+                        />
+                        <label
+                          for="events"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          Events Leading to Injury
+                        </label>
+                      </div>
+                    </div>
+
+                    <!-- TIME -->
+                    <div class="time col-span-2">
+                      <div
+                        class="relative mb-1"
+                        data-te-input-wrapper-init
+                        data-te-timepicker-init
+                        @click.stop="setTimePatient"
+                      >
+                        <input
+                          v-model="time_taken"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="time"
+                          aria-describedby="time"
+                          placeholder="time"
+                        />
+                        <label
+                          for="time"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          Time
+                        </label>
+                      </div>
+                    </div>
+                    <!-- EVENTS LEADING TO INJURY -->
+                  </div>
+                </form>
               </div>
             </div>
           </div>
@@ -1436,449 +1414,445 @@
             >
               <div class="px-5 py-4">
                 <form>
-                    <div class="grid grid-cols-6 gap-4">
-                      <div class="">
-                        <h4 class="mb-3 font-bold">Time</h4>
-                        <div
-                          class="relative mb-2"
-                          data-te-input-wrapper-init
-                          data-te-timepicker-init
-                          @click.stop="setTimeA"
-                        >
-                          <input
-                            v-model="time_a"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            aria-describedby="vTime"
-                          />
-                        </div>
-                        <div
-                          class="relative mb-2"
-                          data-te-input-wrapper-init
-                          data-te-timepicker-init
-                          @click.stop="setTimeB"
-                        >
-                          <input
-                            v-model="time_b"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            aria-describedby="vTime"
-                          />
-                        </div>
-                        <div
-                          class="relative mb-2"
-                          data-te-input-wrapper-init
-                          data-te-timepicker-init
-                          @click.stop="setTimeC"
-                        >
-                          <input
-                            v-model="time_c"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            aria-describedby="vTime"
-                          />
-                        </div>
-                        <div
-                          class="relative mb-2"
-                          data-te-input-wrapper-init
-                          data-te-timepicker-init
-                          @click.stop="setTimeD"
-                        >
-                          <input
-                            v-model="time_d"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            aria-describedby="vTime"
-                          />
-                        </div>
-                        <div
-                          class="relative mb-2"
-                          data-te-input-wrapper-init
-                          data-te-timepicker-init
-                          @click.stop="setTimeE"
-                        >
-                          <input
-                            v-model="time_e"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                            aria-describedby="vTime"
-                          />
-                        </div>
-                      </div>
-                      <div class="">
-                        <h4 class="mb-3 font-bold">BP</h4>
-                        <div class="relative mb-2" data-te-input-wrapper-init>
-                          <input
-                            v-model="bp_a"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                        <div class="relative mb-2" data-te-input-wrapper-init>
-                          <input
-                            v-model="bp_b"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                        <div class="relative mb-2" data-te-input-wrapper-init>
-                          <input
-                            v-model="bp_c"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                        <div class="relative mb-2" data-te-input-wrapper-init>
-                          <input
-                            v-model="bp_d"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                        <div class="relative mb-2" data-te-input-wrapper-init>
-                          <input
-                            v-model="bp_e"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                      </div>
-                      <div class="">
-                        <h4 class="mb-3 font-bold">PR</h4>
-                        <div class="relative mb-2" data-te-input-wrapper-init>
-                          <input
-                            v-model="pr_a"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                        <div class="relative mb-2" data-te-input-wrapper-init>
-                          <input
-                            v-model="pr_b"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                        <div class="relative mb-2" data-te-input-wrapper-init>
-                          <input
-                            v-model="pr_c"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                        <div class="relative mb-2" data-te-input-wrapper-init>
-                          <input
-                            v-model="pr_d"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                        <div class="relative mb-2" data-te-input-wrapper-init>
-                          <input
-                            v-model="pr_e"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                      </div>
-                      <div class="">
-                        <h4 class="mb-3 font-bold">RR</h4>
-                        <div class="relative mb-2" data-te-input-wrapper-init>
-                          <input
-                            v-model="rr_a"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                        <div class="relative mb-2" data-te-input-wrapper-init>
-                          <input
-                            v-model="rr_b"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                        <div class="relative mb-2" data-te-input-wrapper-init>
-                          <input
-                            v-model="rr_c"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                        <div class="relative mb-2" data-te-input-wrapper-init>
-                          <input
-                            v-model="rr_d"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                        <div class="relative mb-2" data-te-input-wrapper-init>
-                          <input
-                            v-model="rr_e"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                      </div>
-                      <div class="">
-                        <h4 class="mb-3 font-bold">Temp.</h4>
-                        <div class="relative mb-2" data-te-input-wrapper-init>
-                          <input
-                            v-model="tempt_a"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                        <div class="relative mb-2" data-te-input-wrapper-init>
-                          <input
-                            v-model="tempt_b"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                        <div class="relative mb-2" data-te-input-wrapper-init>
-                          <input
-                            v-model="tempt_c"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                        <div class="relative mb-2" data-te-input-wrapper-init>
-                          <input
-                            v-model="tempt_d"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                        <div class="relative mb-2" data-te-input-wrapper-init>
-                          <input
-                            v-model="tempt_e"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                      </div>
-                      <div class="">
-                        <h4 class="mb-3 font-bold">SPO2</h4>
-                        <div class="relative mb-2" data-te-input-wrapper-init>
-                          <input
-                            v-model="spo2_a"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                        <div class="relative mb-2" data-te-input-wrapper-init>
-                          <input
-                            v-model="spo2_b"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                        <div class="relative mb-2" data-te-input-wrapper-init>
-                          <input
-                            v-model="spo2_c"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                        <div class="relative mb-2" data-te-input-wrapper-init>
-                          <input
-                            v-model="spo2_d"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                        <div class="relative mb-2" data-te-input-wrapper-init>
-                          <input
-                            v-model="spo2_e"
-                            type="text"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="grid grid-cols-10">
-                      <div>
-                        <h4 class="mb-3 font-bold">Pupil</h4>
-                        <h5
-                          class="relative mb-1 font-small col-span-1 text-gray-700"
-                        >
-                          Pearl
-                        </h5>
-                        <h5
-                          class="relative mb-1 font-small col-span-1 text-gray-700"
-                        >
-                          Dilated
-                        </h5>
-                        <h5
-                          class="relative mb-1 font-small col-span-1 text-gray-700"
-                        >
-                          Constricted
-                        </h5>
-                        <h5
-                          class="relative mb-1 font-small col-span-1 text-gray-700"
-                        >
-                          Non-reactive
-                        </h5>
-                        <h5
-                          class="relative mb-1 font-small col-span-1 text-gray-700"
-                        >
-                          Cataract
-                        </h5>
-                      </div>
-                      <div>
-                        <h4 class="mb-4 font-bold text-center">Left</h4>
-                        <div class="relative mb-3 col-span-1">
-                          <input
-                            v-model="left_pearl"
-                            type="checkbox"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-150"
-                          />
-                        </div>
-                        <div class="relative mb-4 col-span-1">
-                          <input
-                            v-model="left_dilated"
-                            type="checkbox"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-150"
-                          />
-                        </div>
-                        <div class="relative mb-4 col-span-1">
-                          <input
-                            v-model="left_constrict"
-                            type="checkbox"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-150"
-                          />
-                        </div>
-                        <div class="relative mb-4 col-span-1">
-                          <input
-                            v-model="left_non_reactive"
-                            type="checkbox"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-150"
-                          />
-                        </div>
-                        <div class="relative mb-4 col-span-1">
-                          <input
-                            v-model="left_cataract"
-                            type="checkbox"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-150"
-                          />
-                        </div>
-                      </div>
-                      <div>
-                        <h4 class="mb-3 font-bold text-center">Right</h4>
-                        <div class="relative mb-4 col-span-1">
-                          <input
-                            v-model="right_pearl"
-                            type="checkbox"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-150"
-                          />
-                        </div>
-                        <div class="relative mb-4 col-span-1">
-                          <input
-                            v-model="right_dilated"
-                            type="checkbox"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-150"
-                          />
-                        </div>
-                        <div class="relative mb-4 col-span-1">
-                          <input
-                            v-model="right_constrict"
-                            type="checkbox"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-150"
-                          />
-                        </div>
-                        <div class="relative mb-4 col-span-1">
-                          <input
-                            v-model="right_non_reactive"
-                            type="checkbox"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-150"
-                          />
-                        </div>
-                        <div class="relative mb-4 col-span-1">
-                          <input
-                            v-model="right_cataract"
-                            type="checkbox"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-150"
-                          />
-                        </div>
-                      </div>
-
-                      <div class="relative mr-1 left-2 top-4 col-span-2">
-                        <select
-                          data-te-select-init
-                          v-model="skin_color"
-                          class="bg-neutral-50"
-                        >
-                          <option selected value="2">Skin Color</option>
-                          <option value="normal">Normal</option>
-                          <option value="cyanotic">Cyanotic</option>
-                          <option value="pale">Pale</option>
-                          <option value="flushed">Flushed</option>
-                          <option value="jaundice">Jaundice</option>
-                        </select>
-                      </div>
-
-                      <div class="relative mr-2 left-3 top-4 col-span-1">
-                        <select
-                          data-te-select-init
-                          v-model="eyes"
-                          class="bg-neutral-50"
-                        >
-                          <option selected value="2">Eyes</option>
-                          <option value="spontaneous">4 - Spontaneous</option>
-                          <option value="verbal">3 - Verbal</option>
-                          <option value="pain">2 - Pain</option>
-                          <option value="none">1 - None</option>
-                        </select>
-                      </div>
-
-                      <div class="relative mr-2 left-3 top-4 col-span-2">
-                        <select
-                          data-te-select-init
-                          v-model="verbal"
-                          class="bg-neutral-50"
-                        >
-                          <option selected value="2">Verbal</option>
-                          <option value="oriented">5 - Oriented</option>
-                          <option value="confused">4 - Confused</option>
-                          <option value="inappropriate word">
-                            3 - Inappropriate words
-                          </option>
-                          <option value="incomprehensible sounds">
-                            2 - Incomprehensible sounds
-                          </option>
-                          <option value="none">1 - None</option>
-                        </select>
-                      </div>
-
+                  <div class="grid grid-cols-6 gap-4">
+                    <div class="">
+                      <h4 class="mb-3 font-bold">Time</h4>
                       <div
-                        class="relative mr-2 left-3 top-4 col-span-2 place-content-start"
+                        class="relative mb-2"
+                        data-te-input-wrapper-init
+                        data-te-timepicker-init
+                        @click.stop="setTimeA"
                       >
-                        <select
-                          data-te-select-init
-                          v-model="motor"
-                          class="bg-neutral-50"
-                        >
-                          <option selected value="2">Motor</option>
-                          <option value="obeys command">
-                            6 - Obeys Command
-                          </option>
-                          <option value="localize pain">
-                            5 - Localize Pain
-                          </option>
-                          <option value="withdraws to pain">
-                            4 - Withdraws to Pain
-                          </option>
-                          <option value="abnormal flexion">
-                            3 - Abnormal Flexion
-                          </option>
-                          <option value="abnormal extension">
-                            2 - Abnormal Extension
-                          </option>
-                          <option value="none">1 - None</option>
-                        </select>
+                        <input
+                          v-model="time_a"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          aria-describedby="vTime"
+                        />
+                      </div>
+                      <div
+                        class="relative mb-2"
+                        data-te-input-wrapper-init
+                        data-te-timepicker-init
+                        @click.stop="setTimeB"
+                      >
+                        <input
+                          v-model="time_b"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          aria-describedby="vTime"
+                        />
+                      </div>
+                      <div
+                        class="relative mb-2"
+                        data-te-input-wrapper-init
+                        data-te-timepicker-init
+                        @click.stop="setTimeC"
+                      >
+                        <input
+                          v-model="time_c"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          aria-describedby="vTime"
+                        />
+                      </div>
+                      <div
+                        class="relative mb-2"
+                        data-te-input-wrapper-init
+                        data-te-timepicker-init
+                        @click.stop="setTimeD"
+                      >
+                        <input
+                          v-model="time_d"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          aria-describedby="vTime"
+                        />
+                      </div>
+                      <div
+                        class="relative mb-2"
+                        data-te-input-wrapper-init
+                        data-te-timepicker-init
+                        @click.stop="setTimeE"
+                      >
+                        <input
+                          v-model="time_e"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          aria-describedby="vTime"
+                        />
                       </div>
                     </div>
-                  </form>
+                    <div class="">
+                      <h4 class="mb-3 font-bold">BP</h4>
+                      <div class="relative mb-2" data-te-input-wrapper-init>
+                        <input
+                          v-model="bp_a"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        />
+                      </div>
+                      <div class="relative mb-2" data-te-input-wrapper-init>
+                        <input
+                          v-model="bp_b"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        />
+                      </div>
+                      <div class="relative mb-2" data-te-input-wrapper-init>
+                        <input
+                          v-model="bp_c"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        />
+                      </div>
+                      <div class="relative mb-2" data-te-input-wrapper-init>
+                        <input
+                          v-model="bp_d"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        />
+                      </div>
+                      <div class="relative mb-2" data-te-input-wrapper-init>
+                        <input
+                          v-model="bp_e"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        />
+                      </div>
+                    </div>
+                    <div class="">
+                      <h4 class="mb-3 font-bold">PR</h4>
+                      <div class="relative mb-2" data-te-input-wrapper-init>
+                        <input
+                          v-model="pr_a"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        />
+                      </div>
+                      <div class="relative mb-2" data-te-input-wrapper-init>
+                        <input
+                          v-model="pr_b"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        />
+                      </div>
+                      <div class="relative mb-2" data-te-input-wrapper-init>
+                        <input
+                          v-model="pr_c"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        />
+                      </div>
+                      <div class="relative mb-2" data-te-input-wrapper-init>
+                        <input
+                          v-model="pr_d"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        />
+                      </div>
+                      <div class="relative mb-2" data-te-input-wrapper-init>
+                        <input
+                          v-model="pr_e"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        />
+                      </div>
+                    </div>
+                    <div class="">
+                      <h4 class="mb-3 font-bold">RR</h4>
+                      <div class="relative mb-2" data-te-input-wrapper-init>
+                        <input
+                          v-model="rr_a"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        />
+                      </div>
+                      <div class="relative mb-2" data-te-input-wrapper-init>
+                        <input
+                          v-model="rr_b"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        />
+                      </div>
+                      <div class="relative mb-2" data-te-input-wrapper-init>
+                        <input
+                          v-model="rr_c"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        />
+                      </div>
+                      <div class="relative mb-2" data-te-input-wrapper-init>
+                        <input
+                          v-model="rr_d"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        />
+                      </div>
+                      <div class="relative mb-2" data-te-input-wrapper-init>
+                        <input
+                          v-model="rr_e"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        />
+                      </div>
+                    </div>
+                    <div class="">
+                      <h4 class="mb-3 font-bold">Temp.</h4>
+                      <div class="relative mb-2" data-te-input-wrapper-init>
+                        <input
+                          v-model="tempt_a"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        />
+                      </div>
+                      <div class="relative mb-2" data-te-input-wrapper-init>
+                        <input
+                          v-model="tempt_b"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        />
+                      </div>
+                      <div class="relative mb-2" data-te-input-wrapper-init>
+                        <input
+                          v-model="tempt_c"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        />
+                      </div>
+                      <div class="relative mb-2" data-te-input-wrapper-init>
+                        <input
+                          v-model="tempt_d"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        />
+                      </div>
+                      <div class="relative mb-2" data-te-input-wrapper-init>
+                        <input
+                          v-model="tempt_e"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        />
+                      </div>
+                    </div>
+                    <div class="">
+                      <h4 class="mb-3 font-bold">SPO2</h4>
+                      <div class="relative mb-2" data-te-input-wrapper-init>
+                        <input
+                          v-model="spo2_a"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        />
+                      </div>
+                      <div class="relative mb-2" data-te-input-wrapper-init>
+                        <input
+                          v-model="spo2_b"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        />
+                      </div>
+                      <div class="relative mb-2" data-te-input-wrapper-init>
+                        <input
+                          v-model="spo2_c"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        />
+                      </div>
+                      <div class="relative mb-2" data-te-input-wrapper-init>
+                        <input
+                          v-model="spo2_d"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        />
+                      </div>
+                      <div class="relative mb-2" data-te-input-wrapper-init>
+                        <input
+                          v-model="spo2_e"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid grid-cols-10">
+                    <div>
+                      <h4 class="mb-3 font-bold">Pupil</h4>
+                      <h5
+                        class="relative mb-1 font-small col-span-1 text-gray-700"
+                      >
+                        Pearl
+                      </h5>
+                      <h5
+                        class="relative mb-1 font-small col-span-1 text-gray-700"
+                      >
+                        Dilated
+                      </h5>
+                      <h5
+                        class="relative mb-1 font-small col-span-1 text-gray-700"
+                      >
+                        Constricted
+                      </h5>
+                      <h5
+                        class="relative mb-1 font-small col-span-1 text-gray-700"
+                      >
+                        Non-reactive
+                      </h5>
+                      <h5
+                        class="relative mb-1 font-small col-span-1 text-gray-700"
+                      >
+                        Cataract
+                      </h5>
+                    </div>
+                    <div>
+                      <h4 class="mb-4 font-bold text-center">Left</h4>
+                      <div class="relative mb-3 col-span-1">
+                        <input
+                          v-model="left_pearl"
+                          type="checkbox"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-150"
+                        />
+                      </div>
+                      <div class="relative mb-4 col-span-1">
+                        <input
+                          v-model="left_dilated"
+                          type="checkbox"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-150"
+                        />
+                      </div>
+                      <div class="relative mb-4 col-span-1">
+                        <input
+                          v-model="left_constrict"
+                          type="checkbox"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-150"
+                        />
+                      </div>
+                      <div class="relative mb-4 col-span-1">
+                        <input
+                          v-model="left_non_reactive"
+                          type="checkbox"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-150"
+                        />
+                      </div>
+                      <div class="relative mb-4 col-span-1">
+                        <input
+                          v-model="left_cataract"
+                          type="checkbox"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-150"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <h4 class="mb-3 font-bold text-center">Right</h4>
+                      <div class="relative mb-4 col-span-1">
+                        <input
+                          v-model="right_pearl"
+                          type="checkbox"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-150"
+                        />
+                      </div>
+                      <div class="relative mb-4 col-span-1">
+                        <input
+                          v-model="right_dilated"
+                          type="checkbox"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-150"
+                        />
+                      </div>
+                      <div class="relative mb-4 col-span-1">
+                        <input
+                          v-model="right_constrict"
+                          type="checkbox"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-150"
+                        />
+                      </div>
+                      <div class="relative mb-4 col-span-1">
+                        <input
+                          v-model="right_non_reactive"
+                          type="checkbox"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-150"
+                        />
+                      </div>
+                      <div class="relative mb-4 col-span-1">
+                        <input
+                          v-model="right_cataract"
+                          type="checkbox"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-150"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="relative mr-1 left-2 top-4 col-span-2">
+                      <select
+                        data-te-select-init
+                        v-model="skin_color"
+                        class="bg-neutral-50"
+                      >
+                        <option selected value="2">Skin Color</option>
+                        <option value="normal">Normal</option>
+                        <option value="cyanotic">Cyanotic</option>
+                        <option value="pale">Pale</option>
+                        <option value="flushed">Flushed</option>
+                        <option value="jaundice">Jaundice</option>
+                      </select>
+                    </div>
+
+                    <div class="relative mr-2 left-3 top-4 col-span-1">
+                      <select
+                        data-te-select-init
+                        v-model="eyes"
+                        class="bg-neutral-50"
+                      >
+                        <option selected value="2">Eyes</option>
+                        <option value="spontaneous">4 - Spontaneous</option>
+                        <option value="verbal">3 - Verbal</option>
+                        <option value="pain">2 - Pain</option>
+                        <option value="none">1 - None</option>
+                      </select>
+                    </div>
+
+                    <div class="relative mr-2 left-3 top-4 col-span-2">
+                      <select
+                        data-te-select-init
+                        v-model="verbal"
+                        class="bg-neutral-50"
+                      >
+                        <option selected value="2">Verbal</option>
+                        <option value="oriented">5 - Oriented</option>
+                        <option value="confused">4 - Confused</option>
+                        <option value="inappropriate word">
+                          3 - Inappropriate words
+                        </option>
+                        <option value="incomprehensible sounds">
+                          2 - Incomprehensible sounds
+                        </option>
+                        <option value="none">1 - None</option>
+                      </select>
+                    </div>
+
+                    <div
+                      class="relative mr-2 left-3 top-4 col-span-2 place-content-start"
+                    >
+                      <select
+                        data-te-select-init
+                        v-model="motor"
+                        class="bg-neutral-50"
+                      >
+                        <option selected value="2">Motor</option>
+                        <option value="obeys command">6 - Obeys Command</option>
+                        <option value="localize pain">5 - Localize Pain</option>
+                        <option value="withdraws to pain">
+                          4 - Withdraws to Pain
+                        </option>
+                        <option value="abnormal flexion">
+                          3 - Abnormal Flexion
+                        </option>
+                        <option value="abnormal extension">
+                          2 - Abnormal Extension
+                        </option>
+                        <option value="none">1 - None</option>
+                      </select>
+                    </div>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
@@ -1925,503 +1899,503 @@
             >
               <div class="px-5 py-4">
                 <form>
-                    <h4 class="mb-4 font-bold">Anterior</h4>
-                    <div class="flex items-center">
-                      <div class="text-center mb-3 w-1/5">
-                        <label class="mb-0">Head</label>
-                      </div>
-                      <div class="relative mb-3 w-4/5">
-                        <select
-                          v-model="anterior_head_injury"
-                          data-te-select-init
-                          multiple
-                          class="w-full"
-                        >
-                          <option value="Deformity">Deformity</option>
-                          <option value="Contusion">Contusion</option>
-                          <option value="Abrasion">Abrasion</option>
-                          <option value="Puncture">Puncture</option>
-                          <option value="Burn">Burn</option>
-                          <option value="Tenderness">Tenderness</option>
-                          <option value="Laceration">Laceration</option>
-                          <option value="Swelling">Swelling</option>
-                          <option value="Edema">Edema</option>
-                          <option value="Battle Sign">Battle Sign</option>
-                          <option value="Racoon Eye">Racoon Eye</option>
-                          <option value="Gunshot">Gunshot</option>
-                          <option value="JVD">JVD</option>
-                          <option value="Bleeding">Bleeding</option>
-                          <option value="Pain">Pain</option>
-                        </select>
-                        <label data-te-select-label-ref
-                          >Select as many items as apply</label
-                        >
-                      </div>
+                  <h4 class="mb-4 font-bold">Anterior</h4>
+                  <div class="flex items-center">
+                    <div class="text-center mb-3 w-1/5">
+                      <label class="mb-0">Head</label>
                     </div>
+                    <div class="relative mb-3 w-4/5">
+                      <select
+                        v-model="anterior_head_injury"
+                        data-te-select-init
+                        multiple
+                        class="w-full"
+                      >
+                        <option value="Deformity">Deformity</option>
+                        <option value="Contusion">Contusion</option>
+                        <option value="Abrasion">Abrasion</option>
+                        <option value="Puncture">Puncture</option>
+                        <option value="Burn">Burn</option>
+                        <option value="Tenderness">Tenderness</option>
+                        <option value="Laceration">Laceration</option>
+                        <option value="Swelling">Swelling</option>
+                        <option value="Edema">Edema</option>
+                        <option value="Battle Sign">Battle Sign</option>
+                        <option value="Racoon Eye">Racoon Eye</option>
+                        <option value="Gunshot">Gunshot</option>
+                        <option value="JVD">JVD</option>
+                        <option value="Bleeding">Bleeding</option>
+                        <option value="Pain">Pain</option>
+                      </select>
+                      <label data-te-select-label-ref
+                        >Select as many items as apply</label
+                      >
+                    </div>
+                  </div>
 
-                    <div class="flex items-center">
-                      <div class="text-center mb-3 w-1/5">
-                        <label class="mb-0">Chest/Lungs</label>
-                      </div>
-                      <div class="relative mb-3 w-4/5">
-                        <select
-                          v-model="anterior_chest_injury"
-                          data-te-select-init
-                          multiple
-                          class="w-full"
-                        >
-                          <option value="Deformity">Deformity</option>
-                          <option value="Contusion">Contusion</option>
-                          <option value="Abrasion">Abrasion</option>
-                          <option value="Puncture">Puncture</option>
-                          <option value="Burn">Burn</option>
-                          <option value="Tenderness">Tenderness</option>
-                          <option value="Laceration">Laceration</option>
-                          <option value="Swelling">Swelling</option>
-                          <option value="Edema">Edema</option>
-                          <option value="Battle Sign">Battle Sign</option>
-                          <option value="Racoon Eye">Racoon Eye</option>
-                          <option value="Gunshot">Gunshot</option>
-                          <option value="JVD">JVD</option>
-                          <option value="Bleeding">Bleeding</option>
-                          <option value="Pain">Pain</option>
-                        </select>
-                        <label data-te-select-label-ref
-                          >Select as many items as apply</label
-                        >
-                      </div>
+                  <div class="flex items-center">
+                    <div class="text-center mb-3 w-1/5">
+                      <label class="mb-0">Chest/Lungs</label>
                     </div>
+                    <div class="relative mb-3 w-4/5">
+                      <select
+                        v-model="anterior_chest_injury"
+                        data-te-select-init
+                        multiple
+                        class="w-full"
+                      >
+                        <option value="Deformity">Deformity</option>
+                        <option value="Contusion">Contusion</option>
+                        <option value="Abrasion">Abrasion</option>
+                        <option value="Puncture">Puncture</option>
+                        <option value="Burn">Burn</option>
+                        <option value="Tenderness">Tenderness</option>
+                        <option value="Laceration">Laceration</option>
+                        <option value="Swelling">Swelling</option>
+                        <option value="Edema">Edema</option>
+                        <option value="Battle Sign">Battle Sign</option>
+                        <option value="Racoon Eye">Racoon Eye</option>
+                        <option value="Gunshot">Gunshot</option>
+                        <option value="JVD">JVD</option>
+                        <option value="Bleeding">Bleeding</option>
+                        <option value="Pain">Pain</option>
+                      </select>
+                      <label data-te-select-label-ref
+                        >Select as many items as apply</label
+                      >
+                    </div>
+                  </div>
 
-                    <div class="flex items-center">
-                      <div class="text-center mb-3 w-1/5">
-                        <label class="mb-0">Pelvis/GU</label>
-                      </div>
-                      <div class="relative mb-3 w-4/5">
-                        <select
-                          v-model="anterior_pelvis_injury"
-                          data-te-select-init
-                          multiple
-                          class="w-full"
-                        >
-                          <option value="Deformity">Deformity</option>
-                          <option value="Contusion">Contusion</option>
-                          <option value="Abrasion">Abrasion</option>
-                          <option value="Puncture">Puncture</option>
-                          <option value="Burn">Burn</option>
-                          <option value="Tenderness">Tenderness</option>
-                          <option value="Laceration">Laceration</option>
-                          <option value="Swelling">Swelling</option>
-                          <option value="Edema">Edema</option>
-                          <option value="Battle Sign">Battle Sign</option>
-                          <option value="Racoon Eye">Racoon Eye</option>
-                          <option value="Gunshot">Gunshot</option>
-                          <option value="JVD">JVD</option>
-                          <option value="Bleeding">Bleeding</option>
-                          <option value="Pain">Pain</option>
-                        </select>
-                        <label data-te-select-label-ref
-                          >Select as many items as apply</label
-                        >
-                      </div>
+                  <div class="flex items-center">
+                    <div class="text-center mb-3 w-1/5">
+                      <label class="mb-0">Pelvis/GU</label>
                     </div>
+                    <div class="relative mb-3 w-4/5">
+                      <select
+                        v-model="anterior_pelvis_injury"
+                        data-te-select-init
+                        multiple
+                        class="w-full"
+                      >
+                        <option value="Deformity">Deformity</option>
+                        <option value="Contusion">Contusion</option>
+                        <option value="Abrasion">Abrasion</option>
+                        <option value="Puncture">Puncture</option>
+                        <option value="Burn">Burn</option>
+                        <option value="Tenderness">Tenderness</option>
+                        <option value="Laceration">Laceration</option>
+                        <option value="Swelling">Swelling</option>
+                        <option value="Edema">Edema</option>
+                        <option value="Battle Sign">Battle Sign</option>
+                        <option value="Racoon Eye">Racoon Eye</option>
+                        <option value="Gunshot">Gunshot</option>
+                        <option value="JVD">JVD</option>
+                        <option value="Bleeding">Bleeding</option>
+                        <option value="Pain">Pain</option>
+                      </select>
+                      <label data-te-select-label-ref
+                        >Select as many items as apply</label
+                      >
+                    </div>
+                  </div>
 
-                    <div class="flex items-center">
-                      <div class="text-center mb-3 w-1/5">
-                        <label class="mb-0">Left Arm</label>
-                      </div>
-                      <div class="relative mb-3 w-4/5">
-                        <select
-                          v-model="anterior_left_arm_injury"
-                          data-te-select-init
-                          multiple
-                          class="w-full"
-                        >
-                          <option value="Deformity">Deformity</option>
-                          <option value="Contusion">Contusion</option>
-                          <option value="Abrasion">Abrasion</option>
-                          <option value="Puncture">Puncture</option>
-                          <option value="Burn">Burn</option>
-                          <option value="Tenderness">Tenderness</option>
-                          <option value="Laceration">Laceration</option>
-                          <option value="Swelling">Swelling</option>
-                          <option value="Edema">Edema</option>
-                          <option value="Battle Sign">Battle Sign</option>
-                          <option value="Racoon Eye">Racoon Eye</option>
-                          <option value="Gunshot">Gunshot</option>
-                          <option value="JVD">JVD</option>
-                          <option value="Bleeding">Bleeding</option>
-                          <option value="Pain">Pain</option>
-                        </select>
-                        <label data-te-select-label-ref
-                          >Select as many items as apply</label
-                        >
-                      </div>
+                  <div class="flex items-center">
+                    <div class="text-center mb-3 w-1/5">
+                      <label class="mb-0">Left Arm</label>
                     </div>
+                    <div class="relative mb-3 w-4/5">
+                      <select
+                        v-model="anterior_left_arm_injury"
+                        data-te-select-init
+                        multiple
+                        class="w-full"
+                      >
+                        <option value="Deformity">Deformity</option>
+                        <option value="Contusion">Contusion</option>
+                        <option value="Abrasion">Abrasion</option>
+                        <option value="Puncture">Puncture</option>
+                        <option value="Burn">Burn</option>
+                        <option value="Tenderness">Tenderness</option>
+                        <option value="Laceration">Laceration</option>
+                        <option value="Swelling">Swelling</option>
+                        <option value="Edema">Edema</option>
+                        <option value="Battle Sign">Battle Sign</option>
+                        <option value="Racoon Eye">Racoon Eye</option>
+                        <option value="Gunshot">Gunshot</option>
+                        <option value="JVD">JVD</option>
+                        <option value="Bleeding">Bleeding</option>
+                        <option value="Pain">Pain</option>
+                      </select>
+                      <label data-te-select-label-ref
+                        >Select as many items as apply</label
+                      >
+                    </div>
+                  </div>
 
-                    <div class="flex items-center">
-                      <div class="text-center mb-3 w-1/5">
-                        <label class="mb-0">Right Arm</label>
-                      </div>
-                      <div class="relative mb-3 w-4/5">
-                        <select
-                          v-model="anterior_right_arm_injury"
-                          data-te-select-init
-                          multiple
-                          class="w-full"
-                        >
-                          <option value="Deformity">Deformity</option>
-                          <option value="Contusion">Contusion</option>
-                          <option value="Abrasion">Abrasion</option>
-                          <option value="Puncture">Puncture</option>
-                          <option value="Burn">Burn</option>
-                          <option value="Tenderness">Tenderness</option>
-                          <option value="Laceration">Laceration</option>
-                          <option value="Swelling">Swelling</option>
-                          <option value="Edema">Edema</option>
-                          <option value="Battle Sign">Battle Sign</option>
-                          <option value="Racoon Eye">Racoon Eye</option>
-                          <option value="Gunshot">Gunshot</option>
-                          <option value="JVD">JVD</option>
-                          <option value="Bleeding">Bleeding</option>
-                          <option value="Pain">Pain</option>
-                        </select>
-                        <label data-te-select-label-ref
-                          >Select as many items as apply</label
-                        >
-                      </div>
+                  <div class="flex items-center">
+                    <div class="text-center mb-3 w-1/5">
+                      <label class="mb-0">Right Arm</label>
                     </div>
+                    <div class="relative mb-3 w-4/5">
+                      <select
+                        v-model="anterior_right_arm_injury"
+                        data-te-select-init
+                        multiple
+                        class="w-full"
+                      >
+                        <option value="Deformity">Deformity</option>
+                        <option value="Contusion">Contusion</option>
+                        <option value="Abrasion">Abrasion</option>
+                        <option value="Puncture">Puncture</option>
+                        <option value="Burn">Burn</option>
+                        <option value="Tenderness">Tenderness</option>
+                        <option value="Laceration">Laceration</option>
+                        <option value="Swelling">Swelling</option>
+                        <option value="Edema">Edema</option>
+                        <option value="Battle Sign">Battle Sign</option>
+                        <option value="Racoon Eye">Racoon Eye</option>
+                        <option value="Gunshot">Gunshot</option>
+                        <option value="JVD">JVD</option>
+                        <option value="Bleeding">Bleeding</option>
+                        <option value="Pain">Pain</option>
+                      </select>
+                      <label data-te-select-label-ref
+                        >Select as many items as apply</label
+                      >
+                    </div>
+                  </div>
 
-                    <div class="flex items-center">
-                      <div class="text-center mb-3 w-1/5">
-                        <label class="mb-0">Left Leg</label>
-                      </div>
-                      <div class="relative mb-3 w-4/5">
-                        <select
-                          v-model="anterior_left_leg_injury"
-                          data-te-select-init
-                          multiple
-                          class="w-full"
-                        >
-                          <option value="Deformity">Deformity</option>
-                          <option value="Contusion">Contusion</option>
-                          <option value="Abrasion">Abrasion</option>
-                          <option value="Puncture">Puncture</option>
-                          <option value="Burn">Burn</option>
-                          <option value="Tenderness">Tenderness</option>
-                          <option value="Laceration">Laceration</option>
-                          <option value="Swelling">Swelling</option>
-                          <option value="Edema">Edema</option>
-                          <option value="Battle Sign">Battle Sign</option>
-                          <option value="Racoon Eye">Racoon Eye</option>
-                          <option value="Gunshot">Gunshot</option>
-                          <option value="JVD">JVD</option>
-                          <option value="Bleeding">Bleeding</option>
-                          <option value="Pain">Pain</option>
-                        </select>
-                        <label data-te-select-label-ref
-                          >Select as many items as apply</label
-                        >
-                      </div>
+                  <div class="flex items-center">
+                    <div class="text-center mb-3 w-1/5">
+                      <label class="mb-0">Left Leg</label>
                     </div>
+                    <div class="relative mb-3 w-4/5">
+                      <select
+                        v-model="anterior_left_leg_injury"
+                        data-te-select-init
+                        multiple
+                        class="w-full"
+                      >
+                        <option value="Deformity">Deformity</option>
+                        <option value="Contusion">Contusion</option>
+                        <option value="Abrasion">Abrasion</option>
+                        <option value="Puncture">Puncture</option>
+                        <option value="Burn">Burn</option>
+                        <option value="Tenderness">Tenderness</option>
+                        <option value="Laceration">Laceration</option>
+                        <option value="Swelling">Swelling</option>
+                        <option value="Edema">Edema</option>
+                        <option value="Battle Sign">Battle Sign</option>
+                        <option value="Racoon Eye">Racoon Eye</option>
+                        <option value="Gunshot">Gunshot</option>
+                        <option value="JVD">JVD</option>
+                        <option value="Bleeding">Bleeding</option>
+                        <option value="Pain">Pain</option>
+                      </select>
+                      <label data-te-select-label-ref
+                        >Select as many items as apply</label
+                      >
+                    </div>
+                  </div>
 
-                    <div class="flex items-center">
-                      <div class="text-center mb-3 w-1/5">
-                        <label class="mb-0">Right Leg</label>
-                      </div>
-                      <div class="relative mb-3 w-4/5">
-                        <select
-                          v-model="anterior_right_leg_injury"
-                          data-te-select-init
-                          multiple
-                          class="w-full"
-                        >
-                          <option value="Deformity">Deformity</option>
-                          <option value="Contusion">Contusion</option>
-                          <option value="Abrasion">Abrasion</option>
-                          <option value="Puncture">Puncture</option>
-                          <option value="Burn">Burn</option>
-                          <option value="Tenderness">Tenderness</option>
-                          <option value="Laceration">Laceration</option>
-                          <option value="Swelling">Swelling</option>
-                          <option value="Edema">Edema</option>
-                          <option value="Battle Sign">Battle Sign</option>
-                          <option value="Racoon Eye">Racoon Eye</option>
-                          <option value="Gunshot">Gunshot</option>
-                          <option value="JVD">JVD</option>
-                          <option value="Bleeding">Bleeding</option>
-                          <option value="Pain">Pain</option>
-                        </select>
-                        <label data-te-select-label-ref
-                          >Select as many items as apply</label
-                        >
-                      </div>
+                  <div class="flex items-center">
+                    <div class="text-center mb-3 w-1/5">
+                      <label class="mb-0">Right Leg</label>
                     </div>
+                    <div class="relative mb-3 w-4/5">
+                      <select
+                        v-model="anterior_right_leg_injury"
+                        data-te-select-init
+                        multiple
+                        class="w-full"
+                      >
+                        <option value="Deformity">Deformity</option>
+                        <option value="Contusion">Contusion</option>
+                        <option value="Abrasion">Abrasion</option>
+                        <option value="Puncture">Puncture</option>
+                        <option value="Burn">Burn</option>
+                        <option value="Tenderness">Tenderness</option>
+                        <option value="Laceration">Laceration</option>
+                        <option value="Swelling">Swelling</option>
+                        <option value="Edema">Edema</option>
+                        <option value="Battle Sign">Battle Sign</option>
+                        <option value="Racoon Eye">Racoon Eye</option>
+                        <option value="Gunshot">Gunshot</option>
+                        <option value="JVD">JVD</option>
+                        <option value="Bleeding">Bleeding</option>
+                        <option value="Pain">Pain</option>
+                      </select>
+                      <label data-te-select-label-ref
+                        >Select as many items as apply</label
+                      >
+                    </div>
+                  </div>
 
-                    <div class="flex items-center">
-                      <div class="text-center mb-3 w-1/5">
-                        <label class="mb-0">Genitalia</label>
-                      </div>
-                      <div class="relative mb-3 w-4/5">
-                        <select
-                          v-model="anterior_genitalia_injury"
-                          data-te-select-init
-                          multiple
-                          class="w-full"
-                        >
-                          <option value="Deformity">Deformity</option>
-                          <option value="Contusion">Contusion</option>
-                          <option value="Abrasion">Abrasion</option>
-                          <option value="Puncture">Puncture</option>
-                          <option value="Burn">Burn</option>
-                          <option value="Tenderness">Tenderness</option>
-                          <option value="Laceration">Laceration</option>
-                          <option value="Swelling">Swelling</option>
-                          <option value="Edema">Edema</option>
-                          <option value="Battle Sign">Battle Sign</option>
-                          <option value="Racoon Eye">Racoon Eye</option>
-                          <option value="Gunshot">Gunshot</option>
-                          <option value="JVD">JVD</option>
-                          <option value="Bleeding">Bleeding</option>
-                          <option value="Pain">Pain</option>
-                        </select>
-                        <label data-te-select-label-ref
-                          >Select as many items as apply</label
-                        >
-                      </div>
+                  <div class="flex items-center">
+                    <div class="text-center mb-3 w-1/5">
+                      <label class="mb-0">Genitalia</label>
                     </div>
+                    <div class="relative mb-3 w-4/5">
+                      <select
+                        v-model="anterior_genitalia_injury"
+                        data-te-select-init
+                        multiple
+                        class="w-full"
+                      >
+                        <option value="Deformity">Deformity</option>
+                        <option value="Contusion">Contusion</option>
+                        <option value="Abrasion">Abrasion</option>
+                        <option value="Puncture">Puncture</option>
+                        <option value="Burn">Burn</option>
+                        <option value="Tenderness">Tenderness</option>
+                        <option value="Laceration">Laceration</option>
+                        <option value="Swelling">Swelling</option>
+                        <option value="Edema">Edema</option>
+                        <option value="Battle Sign">Battle Sign</option>
+                        <option value="Racoon Eye">Racoon Eye</option>
+                        <option value="Gunshot">Gunshot</option>
+                        <option value="JVD">JVD</option>
+                        <option value="Bleeding">Bleeding</option>
+                        <option value="Pain">Pain</option>
+                      </select>
+                      <label data-te-select-label-ref
+                        >Select as many items as apply</label
+                      >
+                    </div>
+                  </div>
 
-                    <h4 class="mb-4 font-bold">Posterior</h4>
-                    <div class="flex items-center">
-                      <div class="text-center mb-3 w-1/5">
-                        <label class="mb-0">Head</label>
-                      </div>
-                      <div class="relative mb-3 w-4/5">
-                        <select
-                          v-model="posterior_head_injury"
-                          data-te-select-init
-                          multiple
-                          class="w-full"
-                        >
-                          <option value="Deformity">Deformity</option>
-                          <option value="Contusion">Contusion</option>
-                          <option value="Abrasion">Abrasion</option>
-                          <option value="Puncture">Puncture</option>
-                          <option value="Burn">Burn</option>
-                          <option value="Tenderness">Tenderness</option>
-                          <option value="Laceration">Laceration</option>
-                          <option value="Swelling">Swelling</option>
-                          <option value="Edema">Edema</option>
-                          <option value="Battle Sign">Battle Sign</option>
-                          <option value="Racoon Eye">Racoon Eye</option>
-                          <option value="Gunshot">Gunshot</option>
-                          <option value="JVD">JVD</option>
-                          <option value="Bleeding">Bleeding</option>
-                          <option value="Pain">Pain</option>
-                        </select>
-                        <label data-te-select-label-ref
-                          >Select as many items as apply</label
-                        >
-                      </div>
+                  <h4 class="mb-4 font-bold">Posterior</h4>
+                  <div class="flex items-center">
+                    <div class="text-center mb-3 w-1/5">
+                      <label class="mb-0">Head</label>
                     </div>
+                    <div class="relative mb-3 w-4/5">
+                      <select
+                        v-model="posterior_head_injury"
+                        data-te-select-init
+                        multiple
+                        class="w-full"
+                      >
+                        <option value="Deformity">Deformity</option>
+                        <option value="Contusion">Contusion</option>
+                        <option value="Abrasion">Abrasion</option>
+                        <option value="Puncture">Puncture</option>
+                        <option value="Burn">Burn</option>
+                        <option value="Tenderness">Tenderness</option>
+                        <option value="Laceration">Laceration</option>
+                        <option value="Swelling">Swelling</option>
+                        <option value="Edema">Edema</option>
+                        <option value="Battle Sign">Battle Sign</option>
+                        <option value="Racoon Eye">Racoon Eye</option>
+                        <option value="Gunshot">Gunshot</option>
+                        <option value="JVD">JVD</option>
+                        <option value="Bleeding">Bleeding</option>
+                        <option value="Pain">Pain</option>
+                      </select>
+                      <label data-te-select-label-ref
+                        >Select as many items as apply</label
+                      >
+                    </div>
+                  </div>
 
-                    <div class="flex items-center">
-                      <div class="text-center mb-3 w-1/5">
-                        <label class="mb-0">Chest/Lungs</label>
-                      </div>
-                      <div class="relative mb-3 w-4/5">
-                        <select
-                          v-model="posterior_chest_injury"
-                          data-te-select-init
-                          multiple
-                          class="w-full"
-                        >
-                          <option value="Deformity">Deformity</option>
-                          <option value="Contusion">Contusion</option>
-                          <option value="Abrasion">Abrasion</option>
-                          <option value="Puncture">Puncture</option>
-                          <option value="Burn">Burn</option>
-                          <option value="Tenderness">Tenderness</option>
-                          <option value="Laceration">Laceration</option>
-                          <option value="Swelling">Swelling</option>
-                          <option value="Edema">Edema</option>
-                          <option value="Battle Sign">Battle Sign</option>
-                          <option value="Racoon Eye">Racoon Eye</option>
-                          <option value="Gunshot">Gunshot</option>
-                          <option value="JVD">JVD</option>
-                          <option value="Bleeding">Bleeding</option>
-                          <option value="Pain">Pain</option>
-                        </select>
-                        <label data-te-select-label-ref
-                          >Select as many items as apply</label
-                        >
-                      </div>
+                  <div class="flex items-center">
+                    <div class="text-center mb-3 w-1/5">
+                      <label class="mb-0">Chest/Lungs</label>
                     </div>
+                    <div class="relative mb-3 w-4/5">
+                      <select
+                        v-model="posterior_chest_injury"
+                        data-te-select-init
+                        multiple
+                        class="w-full"
+                      >
+                        <option value="Deformity">Deformity</option>
+                        <option value="Contusion">Contusion</option>
+                        <option value="Abrasion">Abrasion</option>
+                        <option value="Puncture">Puncture</option>
+                        <option value="Burn">Burn</option>
+                        <option value="Tenderness">Tenderness</option>
+                        <option value="Laceration">Laceration</option>
+                        <option value="Swelling">Swelling</option>
+                        <option value="Edema">Edema</option>
+                        <option value="Battle Sign">Battle Sign</option>
+                        <option value="Racoon Eye">Racoon Eye</option>
+                        <option value="Gunshot">Gunshot</option>
+                        <option value="JVD">JVD</option>
+                        <option value="Bleeding">Bleeding</option>
+                        <option value="Pain">Pain</option>
+                      </select>
+                      <label data-te-select-label-ref
+                        >Select as many items as apply</label
+                      >
+                    </div>
+                  </div>
 
-                    <div class="flex items-center">
-                      <div class="text-center mb-3 w-1/5">
-                        <label class="mb-0">Pelvis/GU</label>
-                      </div>
-                      <div class="relative mb-3 w-4/5">
-                        <select
-                          v-model="posterior_pelvis_injury"
-                          data-te-select-init
-                          multiple
-                          class="w-full"
-                        >
-                          <option value="Deformity">Deformity</option>
-                          <option value="Contusion">Contusion</option>
-                          <option value="Abrasion">Abrasion</option>
-                          <option value="Puncture">Puncture</option>
-                          <option value="Burn">Burn</option>
-                          <option value="Tenderness">Tenderness</option>
-                          <option value="Laceration">Laceration</option>
-                          <option value="Swelling">Swelling</option>
-                          <option value="Edema">Edema</option>
-                          <option value="Battle Sign">Battle Sign</option>
-                          <option value="Racoon Eye">Racoon Eye</option>
-                          <option value="Gunshot">Gunshot</option>
-                          <option value="JVD">JVD</option>
-                          <option value="Bleeding">Bleeding</option>
-                          <option value="Pain">Pain</option>
-                        </select>
-                        <label data-te-select-label-ref
-                          >Select as many items as apply</label
-                        >
-                      </div>
+                  <div class="flex items-center">
+                    <div class="text-center mb-3 w-1/5">
+                      <label class="mb-0">Pelvis/GU</label>
                     </div>
+                    <div class="relative mb-3 w-4/5">
+                      <select
+                        v-model="posterior_pelvis_injury"
+                        data-te-select-init
+                        multiple
+                        class="w-full"
+                      >
+                        <option value="Deformity">Deformity</option>
+                        <option value="Contusion">Contusion</option>
+                        <option value="Abrasion">Abrasion</option>
+                        <option value="Puncture">Puncture</option>
+                        <option value="Burn">Burn</option>
+                        <option value="Tenderness">Tenderness</option>
+                        <option value="Laceration">Laceration</option>
+                        <option value="Swelling">Swelling</option>
+                        <option value="Edema">Edema</option>
+                        <option value="Battle Sign">Battle Sign</option>
+                        <option value="Racoon Eye">Racoon Eye</option>
+                        <option value="Gunshot">Gunshot</option>
+                        <option value="JVD">JVD</option>
+                        <option value="Bleeding">Bleeding</option>
+                        <option value="Pain">Pain</option>
+                      </select>
+                      <label data-te-select-label-ref
+                        >Select as many items as apply</label
+                      >
+                    </div>
+                  </div>
 
-                    <div class="flex items-center">
-                      <div class="text-center mb-3 w-1/5">
-                        <label class="mb-0">Left Arm</label>
-                      </div>
-                      <div class="relative mb-3 w-4/5">
-                        <select
-                          v-model="posterior_left_arm_injury"
-                          data-te-select-init
-                          multiple
-                          class="w-full"
-                        >
-                          <option value="Deformity">Deformity</option>
-                          <option value="Contusion">Contusion</option>
-                          <option value="Abrasion">Abrasion</option>
-                          <option value="Puncture">Puncture</option>
-                          <option value="Burn">Burn</option>
-                          <option value="Tenderness">Tenderness</option>
-                          <option value="Laceration">Laceration</option>
-                          <option value="Swelling">Swelling</option>
-                          <option value="Edema">Edema</option>
-                          <option value="Battle Sign">Battle Sign</option>
-                          <option value="Racoon Eye">Racoon Eye</option>
-                          <option value="Gunshot">Gunshot</option>
-                          <option value="JVD">JVD</option>
-                          <option value="Bleeding">Bleeding</option>
-                          <option value="Pain">Pain</option>
-                        </select>
-                        <label data-te-select-label-ref
-                          >Select as many items as apply</label
-                        >
-                      </div>
+                  <div class="flex items-center">
+                    <div class="text-center mb-3 w-1/5">
+                      <label class="mb-0">Left Arm</label>
                     </div>
+                    <div class="relative mb-3 w-4/5">
+                      <select
+                        v-model="posterior_left_arm_injury"
+                        data-te-select-init
+                        multiple
+                        class="w-full"
+                      >
+                        <option value="Deformity">Deformity</option>
+                        <option value="Contusion">Contusion</option>
+                        <option value="Abrasion">Abrasion</option>
+                        <option value="Puncture">Puncture</option>
+                        <option value="Burn">Burn</option>
+                        <option value="Tenderness">Tenderness</option>
+                        <option value="Laceration">Laceration</option>
+                        <option value="Swelling">Swelling</option>
+                        <option value="Edema">Edema</option>
+                        <option value="Battle Sign">Battle Sign</option>
+                        <option value="Racoon Eye">Racoon Eye</option>
+                        <option value="Gunshot">Gunshot</option>
+                        <option value="JVD">JVD</option>
+                        <option value="Bleeding">Bleeding</option>
+                        <option value="Pain">Pain</option>
+                      </select>
+                      <label data-te-select-label-ref
+                        >Select as many items as apply</label
+                      >
+                    </div>
+                  </div>
 
-                    <div class="flex items-center">
-                      <div class="text-center mb-3 w-1/5">
-                        <label class="mb-0">Right Arm</label>
-                      </div>
-                      <div class="relative mb-3 w-4/5">
-                        <select
-                          v-model="posterior_right_arm_injury"
-                          data-te-select-init
-                          multiple
-                          class="w-full"
-                        >
-                          <option value="Deformity">Deformity</option>
-                          <option value="Contusion">Contusion</option>
-                          <option value="Abrasion">Abrasion</option>
-                          <option value="Puncture">Puncture</option>
-                          <option value="Burn">Burn</option>
-                          <option value="Tenderness">Tenderness</option>
-                          <option value="Laceration">Laceration</option>
-                          <option value="Swelling">Swelling</option>
-                          <option value="Edema">Edema</option>
-                          <option value="Battle Sign">Battle Sign</option>
-                          <option value="Racoon Eye">Racoon Eye</option>
-                          <option value="Gunshot">Gunshot</option>
-                          <option value="JVD">JVD</option>
-                          <option value="Bleeding">Bleeding</option>
-                          <option value="Pain">Pain</option>
-                        </select>
-                        <label data-te-select-label-ref
-                          >Select as many items as apply</label
-                        >
-                      </div>
+                  <div class="flex items-center">
+                    <div class="text-center mb-3 w-1/5">
+                      <label class="mb-0">Right Arm</label>
                     </div>
+                    <div class="relative mb-3 w-4/5">
+                      <select
+                        v-model="posterior_right_arm_injury"
+                        data-te-select-init
+                        multiple
+                        class="w-full"
+                      >
+                        <option value="Deformity">Deformity</option>
+                        <option value="Contusion">Contusion</option>
+                        <option value="Abrasion">Abrasion</option>
+                        <option value="Puncture">Puncture</option>
+                        <option value="Burn">Burn</option>
+                        <option value="Tenderness">Tenderness</option>
+                        <option value="Laceration">Laceration</option>
+                        <option value="Swelling">Swelling</option>
+                        <option value="Edema">Edema</option>
+                        <option value="Battle Sign">Battle Sign</option>
+                        <option value="Racoon Eye">Racoon Eye</option>
+                        <option value="Gunshot">Gunshot</option>
+                        <option value="JVD">JVD</option>
+                        <option value="Bleeding">Bleeding</option>
+                        <option value="Pain">Pain</option>
+                      </select>
+                      <label data-te-select-label-ref
+                        >Select as many items as apply</label
+                      >
+                    </div>
+                  </div>
 
-                    <div class="flex items-center">
-                      <div class="text-center mb-3 w-1/5">
-                        <label class="mb-0">Left Leg</label>
-                      </div>
-                      <div class="relative mb-3 w-4/5">
-                        <select
-                          v-model="posterior_left_leg_injury"
-                          data-te-select-init
-                          multiple
-                          class="w-full"
-                        >
-                          <option value="Deformity">Deformity</option>
-                          <option value="Contusion">Contusion</option>
-                          <option value="Abrasion">Abrasion</option>
-                          <option value="Puncture">Puncture</option>
-                          <option value="Burn">Burn</option>
-                          <option value="Tenderness">Tenderness</option>
-                          <option value="Laceration">Laceration</option>
-                          <option value="Swelling">Swelling</option>
-                          <option value="Edema">Edema</option>
-                          <option value="Battle Sign">Battle Sign</option>
-                          <option value="Racoon Eye">Racoon Eye</option>
-                          <option value="Gunshot">Gunshot</option>
-                          <option value="JVD">JVD</option>
-                          <option value="Bleeding">Bleeding</option>
-                          <option value="Pain">Pain</option>
-                        </select>
-                        <label data-te-select-label-ref
-                          >Select as many items as apply</label
-                        >
-                      </div>
+                  <div class="flex items-center">
+                    <div class="text-center mb-3 w-1/5">
+                      <label class="mb-0">Left Leg</label>
                     </div>
+                    <div class="relative mb-3 w-4/5">
+                      <select
+                        v-model="posterior_left_leg_injury"
+                        data-te-select-init
+                        multiple
+                        class="w-full"
+                      >
+                        <option value="Deformity">Deformity</option>
+                        <option value="Contusion">Contusion</option>
+                        <option value="Abrasion">Abrasion</option>
+                        <option value="Puncture">Puncture</option>
+                        <option value="Burn">Burn</option>
+                        <option value="Tenderness">Tenderness</option>
+                        <option value="Laceration">Laceration</option>
+                        <option value="Swelling">Swelling</option>
+                        <option value="Edema">Edema</option>
+                        <option value="Battle Sign">Battle Sign</option>
+                        <option value="Racoon Eye">Racoon Eye</option>
+                        <option value="Gunshot">Gunshot</option>
+                        <option value="JVD">JVD</option>
+                        <option value="Bleeding">Bleeding</option>
+                        <option value="Pain">Pain</option>
+                      </select>
+                      <label data-te-select-label-ref
+                        >Select as many items as apply</label
+                      >
+                    </div>
+                  </div>
 
-                    <div class="flex items-center">
-                      <div class="text-center mb-3 w-1/5">
-                        <label class="mb-0">Right Leg</label>
-                      </div>
-                      <div class="relative mb-3 w-4/5">
-                        <select
-                          v-model="posterior_right_leg_injury"
-                          data-te-select-init
-                          multiple
-                          class="w-full"
-                        >
-                          <option value="Deformity">Deformity</option>
-                          <option value="Contusion">Contusion</option>
-                          <option value="Abrasion">Abrasion</option>
-                          <option value="Puncture">Puncture</option>
-                          <option value="Burn">Burn</option>
-                          <option value="Tenderness">Tenderness</option>
-                          <option value="Laceration">Laceration</option>
-                          <option value="Swelling">Swelling</option>
-                          <option value="Edema">Edema</option>
-                          <option value="Battle Sign">Battle Sign</option>
-                          <option value="Racoon Eye">Racoon Eye</option>
-                          <option value="Gunshot">Gunshot</option>
-                          <option value="JVD">JVD</option>
-                          <option value="Bleeding">Bleeding</option>
-                          <option value="Pain">Pain</option>
-                        </select>
-                        <label data-te-select-label-ref
-                          >Select as many items as apply</label
-                        >
-                      </div>
+                  <div class="flex items-center">
+                    <div class="text-center mb-3 w-1/5">
+                      <label class="mb-0">Right Leg</label>
                     </div>
-                  </form>
+                    <div class="relative mb-3 w-4/5">
+                      <select
+                        v-model="posterior_right_leg_injury"
+                        data-te-select-init
+                        multiple
+                        class="w-full"
+                      >
+                        <option value="Deformity">Deformity</option>
+                        <option value="Contusion">Contusion</option>
+                        <option value="Abrasion">Abrasion</option>
+                        <option value="Puncture">Puncture</option>
+                        <option value="Burn">Burn</option>
+                        <option value="Tenderness">Tenderness</option>
+                        <option value="Laceration">Laceration</option>
+                        <option value="Swelling">Swelling</option>
+                        <option value="Edema">Edema</option>
+                        <option value="Battle Sign">Battle Sign</option>
+                        <option value="Racoon Eye">Racoon Eye</option>
+                        <option value="Gunshot">Gunshot</option>
+                        <option value="JVD">JVD</option>
+                        <option value="Bleeding">Bleeding</option>
+                        <option value="Pain">Pain</option>
+                      </select>
+                      <label data-te-select-label-ref
+                        >Select as many items as apply</label
+                      >
+                    </div>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
@@ -2468,983 +2442,983 @@
             >
               <div class="px-5 py-4">
                 <form>
-                    <h4 class="mb-4 font-bold">Anterior</h4>
-                    <!-- Anterior Head Degree -->
-                    <div class="flex items-center">
-                      <div class="text-center mb-3 w-1/5">
-                        <label class="mb-0">Head</label>
-                      </div>
-                      <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
-                        <button
-                          type="button"
-                          @click="
-                            anterior_head_degree =
-                              anterior_head_degree === '1st Degree'
-                                ? ''
-                                : '1st Degree'
-                          "
-                          :class="[
-                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                  <h4 class="mb-4 font-bold">Anterior</h4>
+                  <!-- Anterior Head Degree -->
+                  <div class="flex items-center">
+                    <div class="text-center mb-3 w-1/5">
+                      <label class="mb-0">Head</label>
+                    </div>
+                    <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
+                      <button
+                        type="button"
+                        @click="
+                          anterior_head_degree =
                             anterior_head_degree === '1st Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
-                          ]"
-                        >
-                          1st Degree
-                        </button>
-                        <button
-                          type="button"
-                          @click="
-                            anterior_head_degree =
-                              anterior_head_degree === '2nd Degree'
-                                ? ''
-                                : '2nd Degree'
-                          "
-                          :class="[
-                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                              ? ''
+                              : '1st Degree'
+                        "
+                        :class="[
+                          'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                          anterior_head_degree === '1st Degree'
+                            ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
+                            : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
+                        ]"
+                      >
+                        1st Degree
+                      </button>
+                      <button
+                        type="button"
+                        @click="
+                          anterior_head_degree =
                             anterior_head_degree === '2nd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
-                          ]"
-                        >
-                          2nd Degree
-                        </button>
-                        <button
-                          type="button"
-                          @click="
-                            anterior_head_degree =
-                              anterior_head_degree === '3rd Degree'
-                                ? ''
-                                : '3rd Degree'
-                          "
-                          :class="[
-                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                              ? ''
+                              : '2nd Degree'
+                        "
+                        :class="[
+                          'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                          anterior_head_degree === '2nd Degree'
+                            ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
+                            : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
+                        ]"
+                      >
+                        2nd Degree
+                      </button>
+                      <button
+                        type="button"
+                        @click="
+                          anterior_head_degree =
                             anterior_head_degree === '3rd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
-                          ]"
-                        >
-                          3rd Degree
-                        </button>
-                        <input
-                          type="hidden"
-                          v-model="anterior_head_degree"
-                          name="anterior_head_degree"
-                        />
-                      </div>
+                              ? ''
+                              : '3rd Degree'
+                        "
+                        :class="[
+                          'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                          anterior_head_degree === '3rd Degree'
+                            ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
+                            : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
+                        ]"
+                      >
+                        3rd Degree
+                      </button>
+                      <input
+                        type="hidden"
+                        v-model="anterior_head_degree"
+                        name="anterior_head_degree"
+                      />
                     </div>
+                  </div>
 
-                    <!-- Anterior Chest/Lungs Degree -->
-                    <div class="flex items-center">
-                      <div class="text-center mb-3 w-1/5">
-                        <label class="mb-0">Chest/Lungs</label>
-                      </div>
-                      <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
-                        <button
-                          type="button"
-                          @click="
-                            anterior_chest_degree =
-                              anterior_chest_degree === '1st Degree'
-                                ? ''
-                                : '1st Degree'
-                          "
-                          :class="[
-                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                  <!-- Anterior Chest/Lungs Degree -->
+                  <div class="flex items-center">
+                    <div class="text-center mb-3 w-1/5">
+                      <label class="mb-0">Chest/Lungs</label>
+                    </div>
+                    <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
+                      <button
+                        type="button"
+                        @click="
+                          anterior_chest_degree =
                             anterior_chest_degree === '1st Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
-                          ]"
-                        >
-                          1st Degree
-                        </button>
-                        <button
-                          type="button"
-                          @click="
-                            anterior_chest_degree =
-                              anterior_chest_degree === '2nd Degree'
-                                ? ''
-                                : '2nd Degree'
-                          "
-                          :class="[
-                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                              ? ''
+                              : '1st Degree'
+                        "
+                        :class="[
+                          'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                          anterior_chest_degree === '1st Degree'
+                            ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
+                            : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
+                        ]"
+                      >
+                        1st Degree
+                      </button>
+                      <button
+                        type="button"
+                        @click="
+                          anterior_chest_degree =
                             anterior_chest_degree === '2nd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
-                          ]"
-                        >
-                          2nd Degree
-                        </button>
-                        <button
-                          type="button"
-                          @click="
-                            anterior_chest_degree =
-                              anterior_chest_degree === '3rd Degree'
-                                ? ''
-                                : '3rd Degree'
-                          "
-                          :class="[
-                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                              ? ''
+                              : '2nd Degree'
+                        "
+                        :class="[
+                          'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                          anterior_chest_degree === '2nd Degree'
+                            ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
+                            : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
+                        ]"
+                      >
+                        2nd Degree
+                      </button>
+                      <button
+                        type="button"
+                        @click="
+                          anterior_chest_degree =
                             anterior_chest_degree === '3rd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
-                          ]"
-                        >
-                          3rd Degree
-                        </button>
-                        <input
-                          type="hidden"
-                          v-model="anterior_chest_degree"
-                          name="anterior_chest_degree"
-                        />
-                      </div>
+                              ? ''
+                              : '3rd Degree'
+                        "
+                        :class="[
+                          'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                          anterior_chest_degree === '3rd Degree'
+                            ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
+                            : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
+                        ]"
+                      >
+                        3rd Degree
+                      </button>
+                      <input
+                        type="hidden"
+                        v-model="anterior_chest_degree"
+                        name="anterior_chest_degree"
+                      />
                     </div>
+                  </div>
 
-                    <!-- Anterior Pelvis/GU Degree -->
-                    <div class="flex items-center">
-                      <div class="text-center mb-3 w-1/5">
-                        <label class="mb-0">Pelvis/GU</label>
-                      </div>
-                      <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
-                        <button
-                          type="button"
-                          @click="
-                            anterior_pelvis_degree =
-                              anterior_pelvis_degree === '1st Degree'
-                                ? ''
-                                : '1st Degree'
-                          "
-                          :class="[
-                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                  <!-- Anterior Pelvis/GU Degree -->
+                  <div class="flex items-center">
+                    <div class="text-center mb-3 w-1/5">
+                      <label class="mb-0">Pelvis/GU</label>
+                    </div>
+                    <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
+                      <button
+                        type="button"
+                        @click="
+                          anterior_pelvis_degree =
                             anterior_pelvis_degree === '1st Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
-                          ]"
-                        >
-                          1st Degree
-                        </button>
-                        <button
-                          type="button"
-                          @click="
-                            anterior_pelvis_degree =
-                              anterior_pelvis_degree === '2nd Degree'
-                                ? ''
-                                : '2nd Degree'
-                          "
-                          :class="[
-                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                              ? ''
+                              : '1st Degree'
+                        "
+                        :class="[
+                          'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                          anterior_pelvis_degree === '1st Degree'
+                            ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
+                            : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
+                        ]"
+                      >
+                        1st Degree
+                      </button>
+                      <button
+                        type="button"
+                        @click="
+                          anterior_pelvis_degree =
                             anterior_pelvis_degree === '2nd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
-                          ]"
-                        >
-                          2nd Degree
-                        </button>
-                        <button
-                          type="button"
-                          @click="
-                            anterior_pelvis_degree =
-                              anterior_pelvis_degree === '3rd Degree'
-                                ? ''
-                                : '3rd Degree'
-                          "
-                          :class="[
-                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                              ? ''
+                              : '2nd Degree'
+                        "
+                        :class="[
+                          'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                          anterior_pelvis_degree === '2nd Degree'
+                            ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
+                            : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
+                        ]"
+                      >
+                        2nd Degree
+                      </button>
+                      <button
+                        type="button"
+                        @click="
+                          anterior_pelvis_degree =
                             anterior_pelvis_degree === '3rd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
-                          ]"
-                        >
-                          3rd Degree
-                        </button>
-                        <input
-                          type="hidden"
-                          v-model="anterior_pelvis_degree"
-                          name="anterior_pelvis_degree"
-                        />
-                      </div>
+                              ? ''
+                              : '3rd Degree'
+                        "
+                        :class="[
+                          'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                          anterior_pelvis_degree === '3rd Degree'
+                            ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
+                            : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
+                        ]"
+                      >
+                        3rd Degree
+                      </button>
+                      <input
+                        type="hidden"
+                        v-model="anterior_pelvis_degree"
+                        name="anterior_pelvis_degree"
+                      />
                     </div>
+                  </div>
 
-                    <!-- Anterior Left Arm Degree -->
-                    <div class="flex items-center">
-                      <div class="text-center mb-3 w-1/5">
-                        <label class="mb-0">Left Arm</label>
-                      </div>
-                      <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
-                        <button
-                          type="button"
-                          @click="
-                            anterior_left_arm_degree =
-                              anterior_left_arm_degree === '1st Degree'
-                                ? ''
-                                : '1st Degree'
-                          "
-                          :class="[
-                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                  <!-- Anterior Left Arm Degree -->
+                  <div class="flex items-center">
+                    <div class="text-center mb-3 w-1/5">
+                      <label class="mb-0">Left Arm</label>
+                    </div>
+                    <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
+                      <button
+                        type="button"
+                        @click="
+                          anterior_left_arm_degree =
                             anterior_left_arm_degree === '1st Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
-                          ]"
-                        >
-                          1st Degree
-                        </button>
-                        <button
-                          type="button"
-                          @click="
-                            anterior_left_arm_degree =
-                              anterior_left_arm_degree === '2nd Degree'
-                                ? ''
-                                : '2nd Degree'
-                          "
-                          :class="[
-                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                              ? ''
+                              : '1st Degree'
+                        "
+                        :class="[
+                          'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                          anterior_left_arm_degree === '1st Degree'
+                            ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
+                            : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
+                        ]"
+                      >
+                        1st Degree
+                      </button>
+                      <button
+                        type="button"
+                        @click="
+                          anterior_left_arm_degree =
                             anterior_left_arm_degree === '2nd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
-                          ]"
-                        >
-                          2nd Degree
-                        </button>
-                        <button
-                          type="button"
-                          @click="
-                            anterior_left_arm_degree =
-                              anterior_left_arm_degree === '3rd Degree'
-                                ? ''
-                                : '3rd Degree'
-                          "
-                          :class="[
-                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                              ? ''
+                              : '2nd Degree'
+                        "
+                        :class="[
+                          'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                          anterior_left_arm_degree === '2nd Degree'
+                            ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
+                            : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
+                        ]"
+                      >
+                        2nd Degree
+                      </button>
+                      <button
+                        type="button"
+                        @click="
+                          anterior_left_arm_degree =
                             anterior_left_arm_degree === '3rd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
-                          ]"
-                        >
-                          3rd Degree
-                        </button>
-                        <input
-                          type="hidden"
-                          v-model="anterior_left_arm_degree"
-                          name="anterior_left_arm_degree"
-                        />
-                      </div>
+                              ? ''
+                              : '3rd Degree'
+                        "
+                        :class="[
+                          'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                          anterior_left_arm_degree === '3rd Degree'
+                            ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
+                            : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
+                        ]"
+                      >
+                        3rd Degree
+                      </button>
+                      <input
+                        type="hidden"
+                        v-model="anterior_left_arm_degree"
+                        name="anterior_left_arm_degree"
+                      />
                     </div>
+                  </div>
 
-                    <!-- Anterior Right Arm Degree -->
-                    <div class="flex items-center">
-                      <div class="text-center mb-3 w-1/5">
-                        <label class="mb-0">Right Arm</label>
-                      </div>
-                      <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
-                        <button
-                          type="button"
-                          @click="
-                            anterior_right_arm_degree =
-                              anterior_right_arm_degree === '1st Degree'
-                                ? ''
-                                : '1st Degree'
-                          "
-                          :class="[
-                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                  <!-- Anterior Right Arm Degree -->
+                  <div class="flex items-center">
+                    <div class="text-center mb-3 w-1/5">
+                      <label class="mb-0">Right Arm</label>
+                    </div>
+                    <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
+                      <button
+                        type="button"
+                        @click="
+                          anterior_right_arm_degree =
                             anterior_right_arm_degree === '1st Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
-                          ]"
-                        >
-                          1st Degree
-                        </button>
-                        <button
-                          type="button"
-                          @click="
-                            anterior_right_arm_degree =
-                              anterior_right_arm_degree === '2nd Degree'
-                                ? ''
-                                : '2nd Degree'
-                          "
-                          :class="[
-                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                              ? ''
+                              : '1st Degree'
+                        "
+                        :class="[
+                          'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                          anterior_right_arm_degree === '1st Degree'
+                            ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
+                            : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
+                        ]"
+                      >
+                        1st Degree
+                      </button>
+                      <button
+                        type="button"
+                        @click="
+                          anterior_right_arm_degree =
                             anterior_right_arm_degree === '2nd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
-                          ]"
-                        >
-                          2nd Degree
-                        </button>
-                        <button
-                          type="button"
-                          @click="
-                            anterior_right_arm_degree =
-                              anterior_right_arm_degree === '3rd Degree'
-                                ? ''
-                                : '3rd Degree'
-                          "
-                          :class="[
-                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                              ? ''
+                              : '2nd Degree'
+                        "
+                        :class="[
+                          'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                          anterior_right_arm_degree === '2nd Degree'
+                            ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
+                            : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
+                        ]"
+                      >
+                        2nd Degree
+                      </button>
+                      <button
+                        type="button"
+                        @click="
+                          anterior_right_arm_degree =
                             anterior_right_arm_degree === '3rd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
-                          ]"
-                        >
-                          3rd Degree
-                        </button>
-                        <input
-                          type="hidden"
-                          v-model="anterior_right_arm_degree"
-                          name="anterior_right_arm_degree"
-                        />
-                      </div>
+                              ? ''
+                              : '3rd Degree'
+                        "
+                        :class="[
+                          'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                          anterior_right_arm_degree === '3rd Degree'
+                            ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
+                            : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
+                        ]"
+                      >
+                        3rd Degree
+                      </button>
+                      <input
+                        type="hidden"
+                        v-model="anterior_right_arm_degree"
+                        name="anterior_right_arm_degree"
+                      />
                     </div>
+                  </div>
 
-                    <!-- Anterior Left Leg Degree -->
-                    <div class="flex items-center">
-                      <div class="text-center mb-3 w-1/5">
-                        <label class="mb-0">Left Leg</label>
-                      </div>
-                      <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
-                        <button
-                          type="button"
-                          @click="
-                            anterior_left_leg_degree =
-                              anterior_left_leg_degree === '1st Degree'
-                                ? ''
-                                : '1st Degree'
-                          "
-                          :class="[
-                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                  <!-- Anterior Left Leg Degree -->
+                  <div class="flex items-center">
+                    <div class="text-center mb-3 w-1/5">
+                      <label class="mb-0">Left Leg</label>
+                    </div>
+                    <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
+                      <button
+                        type="button"
+                        @click="
+                          anterior_left_leg_degree =
                             anterior_left_leg_degree === '1st Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
-                          ]"
-                        >
-                          1st Degree
-                        </button>
-                        <button
-                          type="button"
-                          @click="
-                            anterior_left_leg_degree =
-                              anterior_left_leg_degree === '2nd Degree'
-                                ? ''
-                                : '2nd Degree'
-                          "
-                          :class="[
-                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                              ? ''
+                              : '1st Degree'
+                        "
+                        :class="[
+                          'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                          anterior_left_leg_degree === '1st Degree'
+                            ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
+                            : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
+                        ]"
+                      >
+                        1st Degree
+                      </button>
+                      <button
+                        type="button"
+                        @click="
+                          anterior_left_leg_degree =
                             anterior_left_leg_degree === '2nd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
-                          ]"
-                        >
-                          2nd Degree
-                        </button>
-                        <button
-                          type="button"
-                          @click="
-                            anterior_left_leg_degree =
-                              anterior_left_leg_degree === '3rd Degree'
-                                ? ''
-                                : '3rd Degree'
-                          "
-                          :class="[
-                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                              ? ''
+                              : '2nd Degree'
+                        "
+                        :class="[
+                          'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                          anterior_left_leg_degree === '2nd Degree'
+                            ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
+                            : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
+                        ]"
+                      >
+                        2nd Degree
+                      </button>
+                      <button
+                        type="button"
+                        @click="
+                          anterior_left_leg_degree =
                             anterior_left_leg_degree === '3rd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
-                          ]"
-                        >
-                          3rd Degree
-                        </button>
-                        <input
-                          type="hidden"
-                          v-model="anterior_left_leg_degree"
-                          name="anterior_left_leg_degree"
-                        />
-                      </div>
+                              ? ''
+                              : '3rd Degree'
+                        "
+                        :class="[
+                          'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                          anterior_left_leg_degree === '3rd Degree'
+                            ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
+                            : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
+                        ]"
+                      >
+                        3rd Degree
+                      </button>
+                      <input
+                        type="hidden"
+                        v-model="anterior_left_leg_degree"
+                        name="anterior_left_leg_degree"
+                      />
                     </div>
+                  </div>
 
-                    <!-- Anterior Right Leg Degree -->
-                    <div class="flex items-center">
-                      <div class="text-center mb-3 w-1/5">
-                        <label class="mb-0">Right Leg</label>
-                      </div>
-                      <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
-                        <button
-                          type="button"
-                          @click="
-                            anterior_right_leg_degree =
-                              anterior_right_leg_degree === '1st Degree'
-                                ? ''
-                                : '1st Degree'
-                          "
-                          :class="[
-                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                  <!-- Anterior Right Leg Degree -->
+                  <div class="flex items-center">
+                    <div class="text-center mb-3 w-1/5">
+                      <label class="mb-0">Right Leg</label>
+                    </div>
+                    <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
+                      <button
+                        type="button"
+                        @click="
+                          anterior_right_leg_degree =
                             anterior_right_leg_degree === '1st Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
-                          ]"
-                        >
-                          1st Degree
-                        </button>
-                        <button
-                          type="button"
-                          @click="
-                            anterior_right_leg_degree =
-                              anterior_right_leg_degree === '2nd Degree'
-                                ? ''
-                                : '2nd Degree'
-                          "
-                          :class="[
-                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                              ? ''
+                              : '1st Degree'
+                        "
+                        :class="[
+                          'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                          anterior_right_leg_degree === '1st Degree'
+                            ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
+                            : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
+                        ]"
+                      >
+                        1st Degree
+                      </button>
+                      <button
+                        type="button"
+                        @click="
+                          anterior_right_leg_degree =
                             anterior_right_leg_degree === '2nd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
-                          ]"
-                        >
-                          2nd Degree
-                        </button>
-                        <button
-                          type="button"
-                          @click="
-                            anterior_right_leg_degree =
-                              anterior_right_leg_degree === '3rd Degree'
-                                ? ''
-                                : '3rd Degree'
-                          "
-                          :class="[
-                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                              ? ''
+                              : '2nd Degree'
+                        "
+                        :class="[
+                          'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                          anterior_right_leg_degree === '2nd Degree'
+                            ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
+                            : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
+                        ]"
+                      >
+                        2nd Degree
+                      </button>
+                      <button
+                        type="button"
+                        @click="
+                          anterior_right_leg_degree =
                             anterior_right_leg_degree === '3rd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
-                          ]"
-                        >
-                          3rd Degree
-                        </button>
-                        <input
-                          type="hidden"
-                          v-model="anterior_right_leg_degree"
-                          name="anterior_right_leg_degree"
-                        />
-                      </div>
+                              ? ''
+                              : '3rd Degree'
+                        "
+                        :class="[
+                          'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                          anterior_right_leg_degree === '3rd Degree'
+                            ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
+                            : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
+                        ]"
+                      >
+                        3rd Degree
+                      </button>
+                      <input
+                        type="hidden"
+                        v-model="anterior_right_leg_degree"
+                        name="anterior_right_leg_degree"
+                      />
                     </div>
+                  </div>
 
-                    <!-- Anterior Genitalia Degree -->
-                    <div class="flex items-center">
-                      <div class="text-center mb-3 w-1/5">
-                        <label class="mb-0">Genitalia</label>
-                      </div>
-                      <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
-                        <button
-                          type="button"
-                          @click="
-                            anterior_genitalia_degree =
-                              anterior_genitalia_degree === '1st Degree'
-                                ? ''
-                                : '1st Degree'
-                          "
-                          :class="[
-                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                  <!-- Anterior Genitalia Degree -->
+                  <div class="flex items-center">
+                    <div class="text-center mb-3 w-1/5">
+                      <label class="mb-0">Genitalia</label>
+                    </div>
+                    <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
+                      <button
+                        type="button"
+                        @click="
+                          anterior_genitalia_degree =
                             anterior_genitalia_degree === '1st Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
-                          ]"
-                        >
-                          1st Degree
-                        </button>
-                        <button
-                          type="button"
-                          @click="
-                            anterior_genitalia_degree =
-                              anterior_genitalia_degree === '2nd Degree'
-                                ? ''
-                                : '2nd Degree'
-                          "
-                          :class="[
-                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                              ? ''
+                              : '1st Degree'
+                        "
+                        :class="[
+                          'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                          anterior_genitalia_degree === '1st Degree'
+                            ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
+                            : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
+                        ]"
+                      >
+                        1st Degree
+                      </button>
+                      <button
+                        type="button"
+                        @click="
+                          anterior_genitalia_degree =
                             anterior_genitalia_degree === '2nd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
-                          ]"
-                        >
-                          2nd Degree
-                        </button>
-                        <button
-                          type="button"
-                          @click="
-                            anterior_genitalia_degree =
-                              anterior_genitalia_degree === '3rd Degree'
-                                ? ''
-                                : '3rd Degree'
-                          "
-                          :class="[
-                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                              ? ''
+                              : '2nd Degree'
+                        "
+                        :class="[
+                          'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                          anterior_genitalia_degree === '2nd Degree'
+                            ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
+                            : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
+                        ]"
+                      >
+                        2nd Degree
+                      </button>
+                      <button
+                        type="button"
+                        @click="
+                          anterior_genitalia_degree =
                             anterior_genitalia_degree === '3rd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
-                          ]"
-                        >
-                          3rd Degree
-                        </button>
-                        <input
-                          type="hidden"
-                          v-model="anterior_genitalia_degree"
-                          name="anterior_genitalia_degree"
-                        />
-                      </div>
+                              ? ''
+                              : '3rd Degree'
+                        "
+                        :class="[
+                          'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                          anterior_genitalia_degree === '3rd Degree'
+                            ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
+                            : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
+                        ]"
+                      >
+                        3rd Degree
+                      </button>
+                      <input
+                        type="hidden"
+                        v-model="anterior_genitalia_degree"
+                        name="anterior_genitalia_degree"
+                      />
                     </div>
+                  </div>
 
-                    <!-- Posterior Head Degree -->
-                    <h4 class="mb-4 font-bold">Posterior</h4>
-                    <div class="flex items-center">
-                      <div class="text-center mb-3 w-1/5">
-                        <label class="mb-0">Head</label>
-                      </div>
-                      <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
-                        <button
-                          type="button"
-                          @click="
-                            posterior_head_degree =
-                              posterior_head_degree === '1st Degree'
-                                ? ''
-                                : '1st Degree'
-                          "
-                          :class="[
-                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                  <!-- Posterior Head Degree -->
+                  <h4 class="mb-4 font-bold">Posterior</h4>
+                  <div class="flex items-center">
+                    <div class="text-center mb-3 w-1/5">
+                      <label class="mb-0">Head</label>
+                    </div>
+                    <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
+                      <button
+                        type="button"
+                        @click="
+                          posterior_head_degree =
                             posterior_head_degree === '1st Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
-                          ]"
-                        >
-                          1st Degree
-                        </button>
-                        <button
-                          type="button"
-                          @click="
-                            posterior_head_degree =
-                              posterior_head_degree === '2nd Degree'
-                                ? ''
-                                : '2nd Degree'
-                          "
-                          :class="[
-                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                              ? ''
+                              : '1st Degree'
+                        "
+                        :class="[
+                          'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                          posterior_head_degree === '1st Degree'
+                            ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
+                            : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
+                        ]"
+                      >
+                        1st Degree
+                      </button>
+                      <button
+                        type="button"
+                        @click="
+                          posterior_head_degree =
                             posterior_head_degree === '2nd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
-                          ]"
-                        >
-                          2nd Degree
-                        </button>
-                        <button
-                          type="button"
-                          @click="
-                            posterior_head_degree =
-                              posterior_head_degree === '3rd Degree'
-                                ? ''
-                                : '3rd Degree'
-                          "
-                          :class="[
-                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                              ? ''
+                              : '2nd Degree'
+                        "
+                        :class="[
+                          'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                          posterior_head_degree === '2nd Degree'
+                            ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
+                            : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
+                        ]"
+                      >
+                        2nd Degree
+                      </button>
+                      <button
+                        type="button"
+                        @click="
+                          posterior_head_degree =
                             posterior_head_degree === '3rd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
-                          ]"
-                        >
-                          3rd Degree
-                        </button>
-                        <input
-                          type="hidden"
-                          v-model="posterior_head_degree"
-                          name="posterior_head_degree"
-                        />
-                      </div>
+                              ? ''
+                              : '3rd Degree'
+                        "
+                        :class="[
+                          'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                          posterior_head_degree === '3rd Degree'
+                            ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
+                            : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
+                        ]"
+                      >
+                        3rd Degree
+                      </button>
+                      <input
+                        type="hidden"
+                        v-model="posterior_head_degree"
+                        name="posterior_head_degree"
+                      />
                     </div>
+                  </div>
 
-                    <!-- Posterior Chest/Lungs Degree -->
-                    <div class="flex items-center">
-                      <div class="text-center mb-3 w-1/5">
-                        <label class="mb-0">Chest/Lungs</label>
-                      </div>
-                      <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
-                        <button
-                          type="button"
-                          @click="
-                            posterior_chest_degree =
-                              posterior_chest_degree === '1st Degree'
-                                ? ''
-                                : '1st Degree'
-                          "
-                          :class="[
-                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                  <!-- Posterior Chest/Lungs Degree -->
+                  <div class="flex items-center">
+                    <div class="text-center mb-3 w-1/5">
+                      <label class="mb-0">Chest/Lungs</label>
+                    </div>
+                    <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
+                      <button
+                        type="button"
+                        @click="
+                          posterior_chest_degree =
                             posterior_chest_degree === '1st Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
-                          ]"
-                        >
-                          1st Degree
-                        </button>
-                        <button
-                          type="button"
-                          @click="
-                            posterior_chest_degree =
-                              posterior_chest_degree === '2nd Degree'
-                                ? ''
-                                : '2nd Degree'
-                          "
-                          :class="[
-                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                              ? ''
+                              : '1st Degree'
+                        "
+                        :class="[
+                          'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                          posterior_chest_degree === '1st Degree'
+                            ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
+                            : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
+                        ]"
+                      >
+                        1st Degree
+                      </button>
+                      <button
+                        type="button"
+                        @click="
+                          posterior_chest_degree =
                             posterior_chest_degree === '2nd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
-                          ]"
-                        >
-                          2nd Degree
-                        </button>
-                        <button
-                          type="button"
-                          @click="
-                            posterior_chest_degree =
-                              posterior_chest_degree === '3rd Degree'
-                                ? ''
-                                : '3rd Degree'
-                          "
-                          :class="[
-                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                              ? ''
+                              : '2nd Degree'
+                        "
+                        :class="[
+                          'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                          posterior_chest_degree === '2nd Degree'
+                            ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
+                            : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
+                        ]"
+                      >
+                        2nd Degree
+                      </button>
+                      <button
+                        type="button"
+                        @click="
+                          posterior_chest_degree =
                             posterior_chest_degree === '3rd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
-                          ]"
-                        >
-                          3rd Degree
-                        </button>
-                        <input
-                          type="hidden"
-                          v-model="posterior_chest_degree"
-                          name="posterior_chest_degree"
-                        />
-                      </div>
+                              ? ''
+                              : '3rd Degree'
+                        "
+                        :class="[
+                          'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                          posterior_chest_degree === '3rd Degree'
+                            ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
+                            : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
+                        ]"
+                      >
+                        3rd Degree
+                      </button>
+                      <input
+                        type="hidden"
+                        v-model="posterior_chest_degree"
+                        name="posterior_chest_degree"
+                      />
                     </div>
+                  </div>
 
-                    <!-- Posterior Pelvis/GU Degree -->
-                    <div class="flex items-center">
-                      <div class="text-center mb-3 w-1/5">
-                        <label class="mb-0">Pelvis/GU</label>
-                      </div>
-                      <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
-                        <button
-                          type="button"
-                          @click="
-                            posterior_pelvis_degree =
-                              posterior_pelvis_degree === '1st Degree'
-                                ? ''
-                                : '1st Degree'
-                          "
-                          :class="[
-                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                  <!-- Posterior Pelvis/GU Degree -->
+                  <div class="flex items-center">
+                    <div class="text-center mb-3 w-1/5">
+                      <label class="mb-0">Pelvis/GU</label>
+                    </div>
+                    <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
+                      <button
+                        type="button"
+                        @click="
+                          posterior_pelvis_degree =
                             posterior_pelvis_degree === '1st Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
-                          ]"
-                        >
-                          1st Degree
-                        </button>
-                        <button
-                          type="button"
-                          @click="
-                            posterior_pelvis_degree =
-                              posterior_pelvis_degree === '2nd Degree'
-                                ? ''
-                                : '2nd Degree'
-                          "
-                          :class="[
-                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                              ? ''
+                              : '1st Degree'
+                        "
+                        :class="[
+                          'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                          posterior_pelvis_degree === '1st Degree'
+                            ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
+                            : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
+                        ]"
+                      >
+                        1st Degree
+                      </button>
+                      <button
+                        type="button"
+                        @click="
+                          posterior_pelvis_degree =
                             posterior_pelvis_degree === '2nd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
-                          ]"
-                        >
-                          2nd Degree
-                        </button>
-                        <button
-                          type="button"
-                          @click="
-                            posterior_pelvis_degree =
-                              posterior_pelvis_degree === '3rd Degree'
-                                ? ''
-                                : '3rd Degree'
-                          "
-                          :class="[
-                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                              ? ''
+                              : '2nd Degree'
+                        "
+                        :class="[
+                          'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                          posterior_pelvis_degree === '2nd Degree'
+                            ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
+                            : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
+                        ]"
+                      >
+                        2nd Degree
+                      </button>
+                      <button
+                        type="button"
+                        @click="
+                          posterior_pelvis_degree =
                             posterior_pelvis_degree === '3rd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
-                          ]"
-                        >
-                          3rd Degree
-                        </button>
-                        <input
-                          type="hidden"
-                          v-model="posterior_pelvis_degree"
-                          name="posterior_pelvis_degree"
-                        />
-                      </div>
+                              ? ''
+                              : '3rd Degree'
+                        "
+                        :class="[
+                          'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                          posterior_pelvis_degree === '3rd Degree'
+                            ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
+                            : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
+                        ]"
+                      >
+                        3rd Degree
+                      </button>
+                      <input
+                        type="hidden"
+                        v-model="posterior_pelvis_degree"
+                        name="posterior_pelvis_degree"
+                      />
                     </div>
+                  </div>
 
-                    <!-- Posterior Left Arm Degree -->
-                    <div class="flex items-center">
-                      <div class="text-center mb-3 w-1/5">
-                        <label class="mb-0">Left Arm</label>
-                      </div>
-                      <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
-                        <button
-                          type="button"
-                          @click="
-                            posterior_left_arm_degree =
-                              posterior_left_arm_degree === '1st Degree'
-                                ? ''
-                                : '1st Degree'
-                          "
-                          :class="[
-                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                  <!-- Posterior Left Arm Degree -->
+                  <div class="flex items-center">
+                    <div class="text-center mb-3 w-1/5">
+                      <label class="mb-0">Left Arm</label>
+                    </div>
+                    <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
+                      <button
+                        type="button"
+                        @click="
+                          posterior_left_arm_degree =
                             posterior_left_arm_degree === '1st Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
-                          ]"
-                        >
-                          1st Degree
-                        </button>
-                        <button
-                          type="button"
-                          @click="
-                            posterior_left_arm_degree =
-                              posterior_left_arm_degree === '2nd Degree'
-                                ? ''
-                                : '2nd Degree'
-                          "
-                          :class="[
-                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                              ? ''
+                              : '1st Degree'
+                        "
+                        :class="[
+                          'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                          posterior_left_arm_degree === '1st Degree'
+                            ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
+                            : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
+                        ]"
+                      >
+                        1st Degree
+                      </button>
+                      <button
+                        type="button"
+                        @click="
+                          posterior_left_arm_degree =
                             posterior_left_arm_degree === '2nd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
-                          ]"
-                        >
-                          2nd Degree
-                        </button>
-                        <button
-                          type="button"
-                          @click="
-                            posterior_left_arm_degree =
-                              posterior_left_arm_degree === '3rd Degree'
-                                ? ''
-                                : '3rd Degree'
-                          "
-                          :class="[
-                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                              ? ''
+                              : '2nd Degree'
+                        "
+                        :class="[
+                          'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                          posterior_left_arm_degree === '2nd Degree'
+                            ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
+                            : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
+                        ]"
+                      >
+                        2nd Degree
+                      </button>
+                      <button
+                        type="button"
+                        @click="
+                          posterior_left_arm_degree =
                             posterior_left_arm_degree === '3rd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
-                          ]"
-                        >
-                          3rd Degree
-                        </button>
-                        <input
-                          type="hidden"
-                          v-model="posterior_left_arm_degree"
-                          name="posterior_left_arm_degree"
-                        />
-                      </div>
+                              ? ''
+                              : '3rd Degree'
+                        "
+                        :class="[
+                          'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                          posterior_left_arm_degree === '3rd Degree'
+                            ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
+                            : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
+                        ]"
+                      >
+                        3rd Degree
+                      </button>
+                      <input
+                        type="hidden"
+                        v-model="posterior_left_arm_degree"
+                        name="posterior_left_arm_degree"
+                      />
                     </div>
+                  </div>
 
-                    <!-- Posterior Right Arm Degree -->
-                    <div class="flex items-center">
-                      <div class="text-center mb-3 w-1/5">
-                        <label class="mb-0">Right Arm</label>
-                      </div>
-                      <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
-                        <button
-                          type="button"
-                          @click="
-                            posterior_right_arm_degree =
-                              posterior_right_arm_degree === '1st Degree'
-                                ? ''
-                                : '1st Degree'
-                          "
-                          :class="[
-                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                  <!-- Posterior Right Arm Degree -->
+                  <div class="flex items-center">
+                    <div class="text-center mb-3 w-1/5">
+                      <label class="mb-0">Right Arm</label>
+                    </div>
+                    <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
+                      <button
+                        type="button"
+                        @click="
+                          posterior_right_arm_degree =
                             posterior_right_arm_degree === '1st Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
-                          ]"
-                        >
-                          1st Degree
-                        </button>
-                        <button
-                          type="button"
-                          @click="
-                            posterior_right_arm_degree =
-                              posterior_right_arm_degree === '2nd Degree'
-                                ? ''
-                                : '2nd Degree'
-                          "
-                          :class="[
-                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                              ? ''
+                              : '1st Degree'
+                        "
+                        :class="[
+                          'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                          posterior_right_arm_degree === '1st Degree'
+                            ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
+                            : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
+                        ]"
+                      >
+                        1st Degree
+                      </button>
+                      <button
+                        type="button"
+                        @click="
+                          posterior_right_arm_degree =
                             posterior_right_arm_degree === '2nd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
-                          ]"
-                        >
-                          2nd Degree
-                        </button>
-                        <button
-                          type="button"
-                          @click="
-                            posterior_right_arm_degree =
-                              posterior_right_arm_degree === '3rd Degree'
-                                ? ''
-                                : '3rd Degree'
-                          "
-                          :class="[
-                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                              ? ''
+                              : '2nd Degree'
+                        "
+                        :class="[
+                          'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                          posterior_right_arm_degree === '2nd Degree'
+                            ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
+                            : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
+                        ]"
+                      >
+                        2nd Degree
+                      </button>
+                      <button
+                        type="button"
+                        @click="
+                          posterior_right_arm_degree =
                             posterior_right_arm_degree === '3rd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
-                          ]"
-                        >
-                          3rd Degree
-                        </button>
-                        <input
-                          type="hidden"
-                          v-model="posterior_right_arm_degree"
-                          name="posterior_right_arm_degree"
-                        />
-                      </div>
+                              ? ''
+                              : '3rd Degree'
+                        "
+                        :class="[
+                          'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                          posterior_right_arm_degree === '3rd Degree'
+                            ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
+                            : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
+                        ]"
+                      >
+                        3rd Degree
+                      </button>
+                      <input
+                        type="hidden"
+                        v-model="posterior_right_arm_degree"
+                        name="posterior_right_arm_degree"
+                      />
                     </div>
+                  </div>
 
-                    <!-- Posterior Left Leg Degree -->
-                    <div class="flex items-center">
-                      <div class="text-center mb-3 w-1/5">
-                        <label class="mb-0">Left Leg</label>
-                      </div>
-                      <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
-                        <button
-                          type="button"
-                          @click="
-                            posterior_left_leg_degree =
-                              posterior_left_leg_degree === '1st Degree'
-                                ? ''
-                                : '1st Degree'
-                          "
-                          :class="[
-                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                  <!-- Posterior Left Leg Degree -->
+                  <div class="flex items-center">
+                    <div class="text-center mb-3 w-1/5">
+                      <label class="mb-0">Left Leg</label>
+                    </div>
+                    <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
+                      <button
+                        type="button"
+                        @click="
+                          posterior_left_leg_degree =
                             posterior_left_leg_degree === '1st Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
-                          ]"
-                        >
-                          1st Degree
-                        </button>
-                        <button
-                          type="button"
-                          @click="
-                            posterior_left_leg_degree =
-                              posterior_left_leg_degree === '2nd Degree'
-                                ? ''
-                                : '2nd Degree'
-                          "
-                          :class="[
-                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                              ? ''
+                              : '1st Degree'
+                        "
+                        :class="[
+                          'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                          posterior_left_leg_degree === '1st Degree'
+                            ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
+                            : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
+                        ]"
+                      >
+                        1st Degree
+                      </button>
+                      <button
+                        type="button"
+                        @click="
+                          posterior_left_leg_degree =
                             posterior_left_leg_degree === '2nd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
-                          ]"
-                        >
-                          2nd Degree
-                        </button>
-                        <button
-                          type="button"
-                          @click="
-                            posterior_left_leg_degree =
-                              posterior_left_leg_degree === '3rd Degree'
-                                ? ''
-                                : '3rd Degree'
-                          "
-                          :class="[
-                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                              ? ''
+                              : '2nd Degree'
+                        "
+                        :class="[
+                          'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                          posterior_left_leg_degree === '2nd Degree'
+                            ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
+                            : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
+                        ]"
+                      >
+                        2nd Degree
+                      </button>
+                      <button
+                        type="button"
+                        @click="
+                          posterior_left_leg_degree =
                             posterior_left_leg_degree === '3rd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
-                          ]"
-                        >
-                          3rd Degree
-                        </button>
-                        <input
-                          type="hidden"
-                          v-model="posterior_left_leg_degree"
-                          name="posterior_left_leg_degree"
-                        />
-                      </div>
+                              ? ''
+                              : '3rd Degree'
+                        "
+                        :class="[
+                          'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                          posterior_left_leg_degree === '3rd Degree'
+                            ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
+                            : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
+                        ]"
+                      >
+                        3rd Degree
+                      </button>
+                      <input
+                        type="hidden"
+                        v-model="posterior_left_leg_degree"
+                        name="posterior_left_leg_degree"
+                      />
                     </div>
+                  </div>
 
-                    <!-- Posterior Right Leg Degree -->
-                    <div class="flex items-center">
-                      <div class="text-center mb-3 w-1/5">
-                        <label class="mb-0">Right Leg</label>
-                      </div>
-                      <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
-                        <button
-                          type="button"
-                          @click="
-                            posterior_right_leg_degree =
-                              posterior_right_leg_degree === '1st Degree'
-                                ? ''
-                                : '1st Degree'
-                          "
-                          :class="[
-                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
-                            posterior_right_leg_degree === '1st Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
-                          ]"
-                        >
-                          1st Degree
-                        </button>
-                        <button
-                          type="button"
-                          @click="
-                            posterior_right_leg_degree =
-                              posterior_right_leg_degree === '2nd Degree'
-                                ? ''
-                                : '2nd Degree'
-                          "
-                          :class="[
-                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
-                            posterior_right_leg_degree === '2nd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
-                          ]"
-                        >
-                          2nd Degree
-                        </button>
-                        <button
-                          type="button"
-                          @click="
-                            posterior_right_leg_degree =
-                              posterior_right_leg_degree === '3rd Degree'
-                                ? ''
-                                : '3rd Degree'
-                          "
-                          :class="[
-                            'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
-                            posterior_right_leg_degree === '3rd Degree'
-                              ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
-                              : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
-                          ]"
-                        >
-                          3rd Degree
-                        </button>
-                        <input
-                          type="hidden"
-                          v-model="posterior_right_leg_degree"
-                          name="posterior_right_leg_degree"
-                        />
-                      </div>
+                  <!-- Posterior Right Leg Degree -->
+                  <div class="flex items-center">
+                    <div class="text-center mb-3 w-1/5">
+                      <label class="mb-0">Right Leg</label>
                     </div>
-                  </form>
+                    <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
+                      <button
+                        type="button"
+                        @click="
+                          posterior_right_leg_degree =
+                            posterior_right_leg_degree === '1st Degree'
+                              ? ''
+                              : '1st Degree'
+                        "
+                        :class="[
+                          'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                          posterior_right_leg_degree === '1st Degree'
+                            ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
+                            : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
+                        ]"
+                      >
+                        1st Degree
+                      </button>
+                      <button
+                        type="button"
+                        @click="
+                          posterior_right_leg_degree =
+                            posterior_right_leg_degree === '2nd Degree'
+                              ? ''
+                              : '2nd Degree'
+                        "
+                        :class="[
+                          'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                          posterior_right_leg_degree === '2nd Degree'
+                            ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
+                            : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
+                        ]"
+                      >
+                        2nd Degree
+                      </button>
+                      <button
+                        type="button"
+                        @click="
+                          posterior_right_leg_degree =
+                            posterior_right_leg_degree === '3rd Degree'
+                              ? ''
+                              : '3rd Degree'
+                        "
+                        :class="[
+                          'font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 focus:outline-none',
+                          posterior_right_leg_degree === '3rd Degree'
+                            ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
+                            : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
+                        ]"
+                      >
+                        3rd Degree
+                      </button>
+                      <input
+                        type="hidden"
+                        v-model="posterior_right_leg_degree"
+                        name="posterior_right_leg_degree"
+                      />
+                    </div>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
@@ -3491,207 +3465,199 @@
             >
               <div class="px-5 py-4">
                 <form>
-                    <div
-                      class="grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-4"
-                    >
-                      <div
-                        class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
+                  <div
+                    class="grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-4"
+                  >
+                    <div class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]">
+                      <input
+                        v-model="prenatal_checkup"
+                        class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                        type="checkbox"
+                        value=""
+                        id="prenCheckup"
+                      />
+                      <label
+                        class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                        for="prenCheckup"
                       >
-                        <input
-                          v-model="prenatal_checkup"
-                          class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
-                          type="checkbox"
-                          value=""
-                          id="prenCheckup"
-                        />
-                        <label
-                          class="inline-block pl-[0.15rem] hover:cursor-pointer"
-                          for="prenCheckup"
-                        >
-                          Prenatal Checkup
-                        </label>
-                      </div>
-
-                      <div
-                        class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
-                      >
-                        <input
-                          v-model="labor_pains"
-                          class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
-                          type="checkbox"
-                          value=""
-                          id="labPains"
-                        />
-                        <label
-                          class="inline-block pl-[0.15rem] hover:cursor-pointer"
-                          for="labPains"
-                        >
-                          Labor Pains
-                        </label>
-                      </div>
-
-                      <div class="relative mb-1" data-te-input-wrapper-init>
-                        <input
-                          v-model="last_menstrual_period"
-                          type="date"
-                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          id="lastMens"
-                          aria-describedby="lastMens"
-                          placeholder="Last Menstrual Period"
-                        />
-                        <label
-                          for="lastMens"
-                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                        >
-                          Last Menstrual Period
-                        </label>
-                      </div>
-
-                      <div class="relative mb-1" data-te-input-wrapper-init>
-                        <input
-                          v-model="estimated_date_of_delivery"
-                          type="date"
-                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          id="estDateDelivery"
-                          aria-describedby="estDateDelivery"
-                          placeholder="Estimated Date of Delivery"
-                        />
-                        <label
-                          for="estDateDelivery"
-                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                        >
-                          Estimated Date of Delivery
-                        </label>
-                      </div>
-
-                      <!-- MISSING AGE OF GESTATION FIELD -->
-
-                      <div
-                        class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
-                      >
-                        <input
-                          v-model="gravidity"
-                          class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
-                          type="checkbox"
-                          value=""
-                          id="gravidity"
-                        />
-                        <label
-                          class="inline-block pl-[0.15rem] hover:cursor-pointer"
-                          for="gravidity"
-                        >
-                          Gravidity
-                        </label>
-                      </div>
-
-                      <div
-                        class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
-                      >
-                        <input
-                          v-model="parity"
-                          class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
-                          type="checkbox"
-                          value=""
-                          id="parity"
-                        />
-                        <label
-                          class="inline-block pl-[0.15rem] hover:cursor-pointer"
-                          for="parity"
-                        >
-                          Parity
-                          <div
-                            class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
-                          >
-                            <input
-                              v-model="term_of_birth"
-                              class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
-                              type="checkbox"
-                              value=""
-                              id="termBirth"
-                            />
-                            <label
-                              class="inline-block pl-[0.15rem] hover:cursor-pointer"
-                              for="termBirth"
-                            >
-                              term birth
-                            </label>
-                          </div>
-
-                          <div
-                            class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
-                          >
-                            <input
-                              v-model="pre_term"
-                              class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
-                              type="checkbox"
-                              value=""
-                              id="preTerm"
-                            />
-                            <label
-                              class="inline-block pl-[0.15rem] hover:cursor-pointer"
-                              for="termBirth"
-                            >
-                              pre term
-                            </label>
-                          </div>
-
-                          <div
-                            class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
-                          >
-                            <input
-                              v-model="abortion"
-                              class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
-                              type="checkbox"
-                              value=""
-                              id="abortion"
-                            />
-                            <label
-                              class="inline-block pl-[0.15rem] hover:cursor-pointer"
-                              for="abortion"
-                            >
-                              abortion
-                            </label>
-                          </div>
-
-                          <div
-                            class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
-                          >
-                            <input
-                              v-model="living"
-                              class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
-                              type="checkbox"
-                              value=""
-                              id="living"
-                            />
-                            <label
-                              class="inline-block pl-[0.15rem] hover:cursor-pointer"
-                              for="living"
-                            >
-                              living
-                            </label>
-                          </div>
-                        </label>
-                      </div>
-
-                      <div
-                        class="relative mb-1 col-span-2 row-span-2"
-                        data-te-input-wrapper-init
-                      >
-                        <textarea
-                          v-model="obs_remarks"
-                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          id="remarks"
-                          aria-describedby="remarks"
-                        >
-                        </textarea>
-                        <label
-                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                        >
-                          Remarks
-                        </label>
-                      </div>
+                        Prenatal Checkup
+                      </label>
                     </div>
-                  </form>
+
+                    <div class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]">
+                      <input
+                        v-model="labor_pains"
+                        class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                        type="checkbox"
+                        value=""
+                        id="labPains"
+                      />
+                      <label
+                        class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                        for="labPains"
+                      >
+                        Labor Pains
+                      </label>
+                    </div>
+
+                    <div class="relative mb-1" data-te-input-wrapper-init>
+                      <input
+                        v-model="last_menstrual_period"
+                        type="date"
+                        class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        id="lastMens"
+                        aria-describedby="lastMens"
+                        placeholder="Last Menstrual Period"
+                      />
+                      <label
+                        for="lastMens"
+                        class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                      >
+                        Last Menstrual Period
+                      </label>
+                    </div>
+
+                    <div class="relative mb-1" data-te-input-wrapper-init>
+                      <input
+                        v-model="estimated_date_of_delivery"
+                        type="date"
+                        class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        id="estDateDelivery"
+                        aria-describedby="estDateDelivery"
+                        placeholder="Estimated Date of Delivery"
+                      />
+                      <label
+                        for="estDateDelivery"
+                        class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                      >
+                        Estimated Date of Delivery
+                      </label>
+                    </div>
+
+                    <!-- MISSING AGE OF GESTATION FIELD -->
+
+                    <div class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]">
+                      <input
+                        v-model="gravidity"
+                        class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                        type="checkbox"
+                        value=""
+                        id="gravidity"
+                      />
+                      <label
+                        class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                        for="gravidity"
+                      >
+                        Gravidity
+                      </label>
+                    </div>
+
+                    <div class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]">
+                      <input
+                        v-model="parity"
+                        class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                        type="checkbox"
+                        value=""
+                        id="parity"
+                      />
+                      <label
+                        class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                        for="parity"
+                      >
+                        Parity
+                        <div
+                          class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
+                        >
+                          <input
+                            v-model="term_of_birth"
+                            class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                            type="checkbox"
+                            value=""
+                            id="termBirth"
+                          />
+                          <label
+                            class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                            for="termBirth"
+                          >
+                            term birth
+                          </label>
+                        </div>
+
+                        <div
+                          class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
+                        >
+                          <input
+                            v-model="pre_term"
+                            class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                            type="checkbox"
+                            value=""
+                            id="preTerm"
+                          />
+                          <label
+                            class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                            for="termBirth"
+                          >
+                            pre term
+                          </label>
+                        </div>
+
+                        <div
+                          class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
+                        >
+                          <input
+                            v-model="abortion"
+                            class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                            type="checkbox"
+                            value=""
+                            id="abortion"
+                          />
+                          <label
+                            class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                            for="abortion"
+                          >
+                            abortion
+                          </label>
+                        </div>
+
+                        <div
+                          class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
+                        >
+                          <input
+                            v-model="living"
+                            class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                            type="checkbox"
+                            value=""
+                            id="living"
+                          />
+                          <label
+                            class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                            for="living"
+                          >
+                            living
+                          </label>
+                        </div>
+                      </label>
+                    </div>
+
+                    <div
+                      class="relative mb-1 col-span-2 row-span-2"
+                      data-te-input-wrapper-init
+                    >
+                      <textarea
+                        v-model="obs_remarks"
+                        class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        id="remarks"
+                        aria-describedby="remarks"
+                      >
+                      </textarea>
+                      <label
+                        class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                      >
+                        Remarks
+                      </label>
+                    </div>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
@@ -3738,25 +3704,90 @@
             >
               <div class="px-5 py-4">
                 <form>
-                    <h4 class="mb-3 font-bold">O2 Given Via:</h4>
-                    <div
-                      class="grid grid-col-5 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-4"
-                    >
+                  <h4 class="mb-3 font-bold">O2 Given Via:</h4>
+                  <div
+                    class="grid grid-col-5 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-4"
+                  >
+                    <div class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]">
+                      <input
+                        v-model="nasal"
+                        class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                        type="checkbox"
+                        value=""
+                        id="nasal"
+                      />
+                      <label
+                        class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                        for="nasal"
+                      >
+                        Nasal
+                      </label>
+                    </div>
+
+                    <div class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]">
+                      <input
+                        v-model="o2_mask"
+                        class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                        type="checkbox"
+                        value="o2_mask"
+                        id="o2mask"
+                      />
+                      <label
+                        class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                        for="o2mask"
+                      >
+                        O2 Mask
+                      </label>
+                    </div>
+
+                    <div class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]">
+                      <input
+                        v-model="bvm"
+                        class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                        type="checkbox"
+                        value="bvm"
+                        id="bvm"
+                      />
+                      <label
+                        class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                        for="bvm"
+                      >
+                        BVM at
+                      </label>
+                    </div>
+
+                    <div class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]">
+                      <input
+                        v-model="lpm"
+                        class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                        type="checkbox"
+                        value="lpm"
+                        id="lpm"
+                      />
+                      <label
+                        class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                        for="lpm"
+                      >
+                        LPM
+                      </label>
+                    </div>
+
+                    <div class="grid grid-rows-6">
                       <div
                         class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
                       >
                         <input
-                          v-model="nasal"
+                          v-model="wound_care"
                           class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
                           type="checkbox"
-                          value=""
-                          id="nasal"
+                          value="wound_care"
+                          id="woundCare"
                         />
                         <label
                           class="inline-block pl-[0.15rem] hover:cursor-pointer"
-                          for="nasal"
+                          for="woundCare"
                         >
-                          Nasal
+                          Wound Care
                         </label>
                       </div>
 
@@ -3764,17 +3795,17 @@
                         class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
                       >
                         <input
-                          v-model="o2_mask"
+                          v-model="splinting_applied"
                           class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
                           type="checkbox"
-                          value="o2_mask"
-                          id="o2mask"
+                          value="splinting_applied"
+                          id="splintingApplied"
                         />
                         <label
                           class="inline-block pl-[0.15rem] hover:cursor-pointer"
-                          for="o2mask"
+                          for="splintingApplied"
                         >
-                          O2 Mask
+                          Splinting Applied
                         </label>
                       </div>
 
@@ -3782,17 +3813,17 @@
                         class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
                       >
                         <input
-                          v-model="bvm"
+                          v-model="control_bleeding"
                           class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
                           type="checkbox"
-                          value="bvm"
-                          id="bvm"
+                          value="control_bleeding"
+                          id="contBleeding"
                         />
                         <label
                           class="inline-block pl-[0.15rem] hover:cursor-pointer"
-                          for="bvm"
+                          for="contBleeding"
                         >
-                          BVM at
+                          Control Bleeding
                         </label>
                       </div>
 
@@ -3800,150 +3831,77 @@
                         class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
                       >
                         <input
-                          v-model="lpm"
+                          v-model="vital_sign_taken"
                           class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
                           type="checkbox"
-                          value="lpm"
-                          id="lpm"
+                          value="vital_sign_taken"
+                          id="vitRecorded"
                         />
                         <label
                           class="inline-block pl-[0.15rem] hover:cursor-pointer"
-                          for="lpm"
+                          for="vitRecorded"
                         >
-                          LPM
+                          Vital Sign Taken and Recorded
                         </label>
                       </div>
 
-                      <div class="grid grid-rows-6">
-                        <div
-                          class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
+                      <div
+                        class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
+                      >
+                        <input
+                          v-model="applied_cpr"
+                          class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                          type="checkbox"
+                          value="applied_cpr"
+                          id="appCpr"
+                        />
+                        <label
+                          class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                          for="appCpr"
                         >
-                          <input
-                            v-model="wound_care"
-                            class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
-                            type="checkbox"
-                            value="wound_care"
-                            id="woundCare"
-                          />
-                          <label
-                            class="inline-block pl-[0.15rem] hover:cursor-pointer"
-                            for="woundCare"
-                          >
-                            Wound Care
-                          </label>
-                        </div>
-
-                        <div
-                          class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
-                        >
-                          <input
-                            v-model="splinting_applied"
-                            class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
-                            type="checkbox"
-                            value="splinting_applied"
-                            id="splintingApplied"
-                          />
-                          <label
-                            class="inline-block pl-[0.15rem] hover:cursor-pointer"
-                            for="splintingApplied"
-                          >
-                            Splinting Applied
-                          </label>
-                        </div>
-
-                        <div
-                          class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
-                        >
-                          <input
-                            v-model="control_bleeding"
-                            class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
-                            type="checkbox"
-                            value="control_bleeding"
-                            id="contBleeding"
-                          />
-                          <label
-                            class="inline-block pl-[0.15rem] hover:cursor-pointer"
-                            for="contBleeding"
-                          >
-                            Control Bleeding
-                          </label>
-                        </div>
-
-                        <div
-                          class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
-                        >
-                          <input
-                            v-model="vital_sign_taken"
-                            class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
-                            type="checkbox"
-                            value="vital_sign_taken"
-                            id="vitRecorded"
-                          />
-                          <label
-                            class="inline-block pl-[0.15rem] hover:cursor-pointer"
-                            for="vitRecorded"
-                          >
-                            Vital Sign Taken and Recorded
-                          </label>
-                        </div>
-
-                        <div
-                          class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
-                        >
-                          <input
-                            v-model="applied_cpr"
-                            class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
-                            type="checkbox"
-                            value="applied_cpr"
-                            id="appCpr"
-                          />
-                          <label
-                            class="inline-block pl-[0.15rem] hover:cursor-pointer"
-                            for="appCpr"
-                          >
-                            Applied CPR
-                          </label>
-                        </div>
-
-                        <div
-                          class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
-                        >
-                          <input
-                            v-model="applied_aed"
-                            class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
-                            type="checkbox"
-                            value="applied_aed"
-                            id="appAed"
-                          />
-                          <label
-                            class="inline-block pl-[0.15rem] hover:cursor-pointer"
-                            for="appAed"
-                          >
-                            Applied AED
-                          </label>
-                        </div>
+                          Applied CPR
+                        </label>
                       </div>
-                      <div />
 
                       <div
-                        class="relative mb-1 col-span-2 row-span-2"
-                        data-te-input-wrapper-init
+                        class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
                       >
-                        <textarea
-                          v-model="problems"
-                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          id="problems"
-                          aria-describedby="problems"
-                        >
-                        </textarea>
+                        <input
+                          v-model="applied_aed"
+                          class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                          type="checkbox"
+                          value="applied_aed"
+                          id="appAed"
+                        />
                         <label
-                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                          class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                          for="appAed"
                         >
-                          Problems
+                          Applied AED
                         </label>
                       </div>
                     </div>
-                  </form>
+                    <div />
+
+                    <div
+                      class="relative mb-1 col-span-2 row-span-2"
+                      data-te-input-wrapper-init
+                    >
+                      <textarea
+                        v-model="problems"
+                        class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        id="problems"
+                        aria-describedby="problems"
+                      >
+                      </textarea>
+                      <label
+                        class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                      >
+                        Problems
+                      </label>
+                    </div>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
@@ -4029,11 +3987,11 @@
                   </div>
 
                   <div>
-                  <h4 class="mb-3 mt-7 font-bold">
-                    R.A. 8344 REFUSAL TO ADMIT
-                  </h4>
+                    <h4 class="mb-3 mt-7 font-bold">
+                      R.A. 8344 REFUSAL TO ADMIT
+                    </h4>
 
-                  <div class="grid grid-col-2 sm:grid-cols-2 gap-4">
+                    <div class="grid grid-col-2 sm:grid-cols-2 gap-4">
                       <div class="relative mb-5" data-te-input-wrapper-init>
                         <input
                           v-model="medical_facility"
@@ -4187,7 +4145,6 @@
                     </div>
                   </div>
                 </form>
-
               </div>
             </div>
           </div>
@@ -4254,7 +4211,6 @@ export default {
       category: "dispatch data",
       call_source: "",
       call_receive: "",
-      barangay: "",
       incident_location: "",
       responded: "",
       t_o: "",
@@ -4298,7 +4254,6 @@ export default {
       pnt_city: "City",
       pnt_brgy: "",
       pnt_st: "",
-      pnt_zip: "",
       complaint: "",
       onset: "",
       allergies: "",
@@ -4488,7 +4443,6 @@ export default {
       this.category = "";
       this.call_source = "";
       this.call_receive = "";
-      this.barangay = "";
       this.incident_location = "";
       this.responded = "";
       this.t_o = "";
@@ -4532,7 +4486,6 @@ export default {
       this.pnt_city = "City";
       this.pnt_brgy = "";
       this.pnt_st = "";
-      this.pnt_zip = "";
       this.complaint = "";
       this.onset = "";
       this.allergies = "";
@@ -4659,7 +4612,6 @@ export default {
         category: "dispatch data",
         call_source: this.call_source,
         call_receive: this.call_receive,
-        barangay: this.barangay,
         incident_location: this.incident_location,
         responded: this.responded,
         t_o: this.t_o,
@@ -4702,7 +4654,6 @@ export default {
         pnt_city: this.pnt_city,
         pnt_brgy: this.pnt_brgy,
         pnt_st: this.pnt_st,
-        pnt_zip: this.pnt_zip,
         complaint: this.complaint,
         onset: this.onset,
         allergies: this.allergies,
@@ -4829,7 +4780,6 @@ export default {
         this.category = "";
         this.call_source = "";
         this.call_receive = "";
-        this.barangay = "";
         this.incident_location = "";
         this.responded = "";
         this.t_o = "";
@@ -4873,7 +4823,6 @@ export default {
         this.pnt_city = "City";
         this.pnt_brgy = "";
         this.pnt_st = "";
-        this.pnt_zip = "";
         this.complaint = "";
         this.onset = "";
         this.allergies = "";
