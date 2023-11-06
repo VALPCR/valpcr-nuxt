@@ -96,7 +96,11 @@
                           <input
                             v-model="dispatch_date"
                             type="date"
-                            :class="`peer block min-h-[auto] w-full rounded border-0 ${!editable ? 'bg-gray-100 cursor-not-allowed' : 'bg-transparent' } px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0`"
+                            :class="`peer block min-h-[auto] w-full rounded border-0 ${
+                              !editable
+                                ? 'bg-gray-100 cursor-not-allowed'
+                                : 'bg-transparent'
+                            } px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0`"
                             id="date"
                             aria-describedby="emailHelp123"
                             placeholder="First name"
@@ -980,7 +984,10 @@
                         </select>
                       </div>
 
-                      <div class="relative mb-1 col-span-2" data-te-input-wrapper-init>
+                      <div
+                        class="relative mb-1 col-span-2"
+                        data-te-input-wrapper-init
+                      >
                         <input
                           v-model="companion"
                           type="text"
@@ -1463,7 +1470,8 @@
                         </div>
                       </div>
                       <div class="">
-                        <h4 class="mb-3 font-bold">PR
+                        <h4 class="mb-3 font-bold">
+                          PR
                           <small>(beats/min)</small>
                         </h4>
                         <div class="relative mb-2" data-te-input-wrapper-init>
@@ -4148,7 +4156,7 @@ import {
 
 export default {
   props: {
-    viewableByAllEmrs: Boolean
+    viewableByAllEmrs: Boolean,
   },
   data() {
     return {
@@ -4335,7 +4343,10 @@ export default {
     });
   },
   mounted() {
-    initTE({ Ripple, Input, Datepicker, Select, Timepicker }, { allowReinits: true });
+    initTE(
+      { Ripple, Input, Datepicker, Select, Timepicker },
+      { allowReinits: true }
+    );
   },
   watch: {
     "$store.state.editPatientStepperForm"() {
@@ -4556,7 +4567,10 @@ export default {
         this.SetSelectValue("anterior_head_injury", this.anterior_head_injury);
       }
       if (this.anterior_chest_injury.length > 0) {
-        this.SetSelectValue("anterior_chest_injury", this.anterior_chest_injury);
+        this.SetSelectValue(
+          "anterior_chest_injury",
+          this.anterior_chest_injury
+        );
       }
       if (this.anterior_pelvis_injury.length > 0) {
         this.SetSelectValue(
@@ -4609,7 +4623,10 @@ export default {
       this.posterior_right_leg_injury =
         this.patientStepperFormFields.pcr_body_injuries.posterior_right_leg_injury;
       if (this.posterior_head_injury.length > 0) {
-        this.SetSelectValue("posterior_head_injury", this.posterior_head_injury);
+        this.SetSelectValue(
+          "posterior_head_injury",
+          this.posterior_head_injury
+        );
       }
       if (this.posterior_chest_injury.length > 0) {
         this.SetSelectValue(
@@ -4740,7 +4757,11 @@ export default {
         let age = today.getFullYear() - birthdate.getFullYear();
 
         // Check if the birthdate for this year has not occurred yet
-        if (today.getMonth() < birthdate.getMonth() || (today.getMonth() === birthdate.getMonth() && today.getDate() < birthdate.getDate())) {
+        if (
+          today.getMonth() < birthdate.getMonth() ||
+          (today.getMonth() === birthdate.getMonth() &&
+            today.getDate() < birthdate.getDate())
+        ) {
           age--;
         }
 
@@ -4752,7 +4773,7 @@ export default {
         this.age = null;
 
         // Clear the age input field
-        document.getElementById("age").value = '';
+        document.getElementById("age").value = "";
       }
     },
     clear() {

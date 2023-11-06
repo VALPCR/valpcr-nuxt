@@ -941,7 +941,7 @@
                         Birthdate
                       </label>
                     </div>
-                  
+
                     <!-- AGE -->
                     <div class="relative mb-1" data-te-input-wrapper-init>
                       <input
@@ -1013,7 +1013,10 @@
                       </select>
                     </div>
 
-                    <div class="relative mb-1 col-span-2" data-te-input-wrapper-init>
+                    <div
+                      class="relative mb-1 col-span-2"
+                      data-te-input-wrapper-init
+                    >
                       <input
                         v-model="companion"
                         type="text"
@@ -1522,7 +1525,8 @@
                       </div>
                     </div>
                     <div class="">
-                      <h4 class="mb-3 font-bold md:text-sm sm:text-sm">PR
+                      <h4 class="mb-3 font-bold md:text-sm sm:text-sm">
+                        PR
                         <small>(beats/min)</small>
                       </h4>
                       <div class="relative mb-2" data-te-input-wrapper-init>
@@ -1601,13 +1605,15 @@
                     </div>
                     <div class="">
                       <h4 class="mb-3 font-bold">Temp.(°C)</h4>
-                      <div class="relative mb-2 flex flex-wrap items-stretch" data-te-input-wrapper-init>
+                      <div
+                        class="relative mb-2 flex flex-wrap items-stretch"
+                        data-te-input-wrapper-init
+                      >
                         <input
                           v-model="tempt_a"
                           type="text"
                           class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                         />
-                       
                       </div>
                       <div class="relative mb-2" data-te-input-wrapper-init>
                         <input
@@ -4442,17 +4448,21 @@ export default {
     capitalize(word) {
       return word.replace(/^\w/, (c) => c.toUpperCase());
     },
-    calculateAge: function() {
+    calculateAge: function () {
       if (this.birthdate) {
         const today = new Date();
         const birthdate = new Date(this.birthdate);
         let age = today.getFullYear() - birthdate.getFullYear();
-        
+
         // Check if the birthdate for this year has not occurred yet
-        if (today.getMonth() < birthdate.getMonth() || (today.getMonth() === birthdate.getMonth() && today.getDate() < birthdate.getDate())) {
+        if (
+          today.getMonth() < birthdate.getMonth() ||
+          (today.getMonth() === birthdate.getMonth() &&
+            today.getDate() < birthdate.getDate())
+        ) {
           age--;
         }
-        
+
         this.age = age;
 
         // Update the age input field
@@ -4461,7 +4471,7 @@ export default {
         this.age = null;
 
         // Clear the age input field
-        document.getElementById("age").value = '';
+        document.getElementById("age").value = "";
       }
     },
     clear() {
