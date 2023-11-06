@@ -1,4 +1,5 @@
 export const state = () => ({
+  isSidebarOpen: true,
   addPatientStepperForm: false,
   editPatientStepperForm: false,
   editPatientStepperFormFields: [],
@@ -12,6 +13,9 @@ export const state = () => ({
 });
 
 export const getters = {
+  getSideBarState(state) {
+    return state.isSidebarOpen;
+  },
   getAddPatientStepperForm(state) {
     return state.addPatientStepperForm;
   },
@@ -39,6 +43,9 @@ export const getters = {
 };
 
 export const mutations = {
+  setSideBarState(state, value) {
+    state.isSidebarOpen = value;
+  },
   setAddPatientStepperForm(state, value) {
     state.addPatientStepperForm = value;
   },

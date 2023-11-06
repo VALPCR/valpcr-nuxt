@@ -24,9 +24,24 @@ module.exports = {
         "light-2": "#F3F6F9",
         "light-3": "#F6FAFE",
       },
+      screens: {
+        tablet: "768px",
+      },
+      fontSize: {
+        tablet: "15px",
+      },
     },
     fontFamily: "Roboto",
   },
   darkMode: "class",
-  plugins: [require("tw-elements/dist/plugin.cjs", require("flowbite/plugin"))],
+  plugins: [
+    require("tw-elements/dist/plugin.cjs", require("flowbite/plugin")),
+    function ({ addBase, config }) {
+      addBase({
+        body: {
+          fontSize: config("theme.fontSize.tablet"),
+        },
+      });
+    },
+  ],
 };

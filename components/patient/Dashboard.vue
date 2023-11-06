@@ -16,13 +16,13 @@
             </button>
             <button
               type="button"
-              class="inline-block rounded bg-[#1890FF] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+              class="inline-block rounded bg-[#1890FF] px-5 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
             >
               FILTER
             </button>
             <button
               type="button"
-              class="inline-block rounded bg-amber-500 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-amber-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-amber-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-amber-600 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+              class="inline-block rounded bg-amber-500 px-5 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-amber-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-amber-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-amber-600 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
             >
               EXPORT
             </button>
@@ -48,24 +48,25 @@
           <button
             v-if="role === 'emr'"
             type="button"
-            class="inline-block rounded bg-green-600 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-green-700 focus:bg-green-700 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+            class="inline-block rounded bg-green-600 px-4 pb-1.5 pt-1.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-green-700 focus:bg-green-700 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
             @click="addPcr"
           >
-            ADD NEW
+            ADD {{ !$device.isTablet ? "NEW" : "" }}
           </button>
           <button
             v-if="role === 'dispatcher'"
             type="button"
             data-te-toggle="modal"
             data-te-target="#patientForm"
-            class="inline-block rounded bg-green-600 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-green-700 focus:bg-green-700 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+            class="inline-block rounded bg-green-600 px-4 pb-1.5 pt-1.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-green-700 focus:bg-green-700 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
           >
-            ADD NEW
+            ADD {{ !$device.isTablet ? "NEW" : "" }}
           </button>
         </div>
       </vue-good-table>
       <PatientForm v-if="role === 'dispatcher'" />
       <PatientStepperForm v-if="role === 'emr'" />
+      <PatientFormMobile v-if="role === 'emr'" />
       <EditPatientStepperForm />
       <QrCode />
     </div>
@@ -75,22 +76,24 @@
 <script>
 import PatientForm from "./PatientForm";
 import PatientStepperForm from "./PatientStepperForm";
+import PatientFormMobile from "./PatientFormMobile";
 import EditPatientStepperForm from "./EditPatientStepperForm";
 import QrCode from "./QrCode";
 import { Modal, Dropdown, Ripple, initTE, Tooltip } from "tw-elements";
-
 export default {
   components: {
     Ripple,
     Modal,
     Dropdown,
     PatientForm,
+    PatientFormMobile,
     PatientStepperForm,
     EditPatientStepperForm,
     QrCode,
   },
   data() {
     return {
+      isSidebarOpen: true,
       role: "",
       fetchedRows: [],
       filteredRows: [],
@@ -302,6 +305,11 @@ export default {
       );
     });
   },
+  watch: {
+    "$store.state.isSidebarOpen"() {
+      this.isSidebarOpen = this.$store.getters["getSideBarState"];
+    },
+  },
   created() {
     this.filteredRows = this.fetchedRows;
   },
@@ -310,17 +318,25 @@ export default {
   },
   methods: {
     addPcr() {
-      const addModal = new Modal(document.getElementById("patientFormStepper"));
-      this.$store.commit("setAddPatientStepperForm", true);
-      addModal.show();
+      if (this.$device.isDesktop) {
+        const addModal = new Modal(
+          document.getElementById("patientFormStepper")
+        );
+        this.$store.commit("setAddPatientStepperForm", true);
+        addModal.show();
+      } else if (this.$device.isTablet) {
+        const addModal = new Modal(
+          document.getElementById("patientFormMobile")
+        );
+        addModal.show();
+      }
     },
+
     onRowClick(params) {
       this.$store.commit("setEditPatientStepperForm", true);
       this.$store.commit("setEditPatientStepperFormArg", params.row.id);
-      if (params.event.target.id.includes('qr')) {
-        const qrModal = new Modal(
-          document.getElementById("qrCode")
-        );
+      if (params.event.target.id.includes("qr")) {
+        const qrModal = new Modal(document.getElementById("qrCode"));
         qrModal.show();
       } else {
         const editModal = new Modal(

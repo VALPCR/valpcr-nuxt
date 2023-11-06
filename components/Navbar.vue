@@ -6,6 +6,7 @@
       <div class="flex items-center justify-between">
         <div class="flex items-center justify-start">
           <button
+            @click="toggleSidebar"
             data-drawer-target="logo-sidebar"
             data-drawer-toggle="logo-sidebar"
             aria-controls="logo-sidebar"
@@ -34,7 +35,9 @@
               alt="ValPCR Logo"
             />
             <span
-              class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white italic"
+              :class="`self-center ${
+                $device.isTablet ? '' : 'text-2xl'
+              } font-semibold whitespace-nowrap dark:text-white italic`"
               >Valenzuela Patient Care Reporting</span
             >
           </a>
@@ -42,7 +45,7 @@
         <div class="flex items-center">
           <div class="flex items-center ml-3">
             <div class="inline">
-              <p>
+              <p v-if="!$device.isTablet">
                 {{
                   `${this.$store.$auth.user.first_name} ${this.$store.$auth.user.last_name}`
                 }}
@@ -121,5 +124,14 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    toggleSidebar() {
+      this.$store.commit(
+        "setSideBarState",
+        !this.$store.getters["getSideBarState"]
+      );
+    },
+  },
+};
 </script>
