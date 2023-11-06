@@ -4859,8 +4859,10 @@ export default {
     SetSelectValue(elementId, value) {
       if (value.length > 0) {
         const element = document.querySelector(`#${elementId}`);
-        const selectInstance = Select.getInstance(element);
-        selectInstance.setValue(value);
+        if (element) {
+          const selectInstance = Select.getInstance(element);
+          selectInstance.setValue(value);
+        }
       }
     },
     update() {
