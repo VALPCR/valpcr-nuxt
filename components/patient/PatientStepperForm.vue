@@ -1446,7 +1446,7 @@
                         </div>
                       </div>
                       <div class="">
-                        <h4 class="mb-3 font-bold">BP</h4>
+                        <h4 class="mb-3 font-bold">BP (mmHg)</h4>
                         <div class="relative mb-2" data-te-input-wrapper-init>
                           <input
                             v-model="bp_a"
@@ -1484,7 +1484,9 @@
                         </div>
                       </div>
                       <div class="">
-                        <h4 class="mb-3 font-bold">PR</h4>
+                        <h4 class="mb-3 font-bold">PR
+                          <small>(beats/min)</small>
+                        </h4>
                         <div class="relative mb-2" data-te-input-wrapper-init>
                           <input
                             v-model="pr_a"
@@ -1522,7 +1524,7 @@
                         </div>
                       </div>
                       <div class="">
-                        <h4 class="mb-3 font-bold">RR</h4>
+                        <h4 class="mb-3 font-bold">RR (BPM)</h4>
                         <div class="relative mb-2" data-te-input-wrapper-init>
                           <input
                             v-model="rr_a"
@@ -1560,7 +1562,7 @@
                         </div>
                       </div>
                       <div class="">
-                        <h4 class="mb-3 font-bold">Temp.</h4>
+                        <h4 class="mb-3 font-bold">Temp.(°C)</h4>
                         <div class="relative mb-2" data-te-input-wrapper-init>
                           <input
                             v-model="tempt_a"
@@ -1598,7 +1600,7 @@
                         </div>
                       </div>
                       <div class="">
-                        <h4 class="mb-3 font-bold">SPO2</h4>
+                        <h4 class="mb-3 font-bold">SpO2 (%)</h4>
                         <div class="relative mb-2" data-te-input-wrapper-init>
                           <input
                             v-model="spo2_a"
