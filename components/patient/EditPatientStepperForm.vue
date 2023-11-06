@@ -4099,7 +4099,27 @@
             CLEAR
           </button>
           <button
-            v-if="role !== 'head' && $auth.user.id === user_id"
+            v-if="role !== 'head' && $auth.user.id === user_id && !editable"
+            type="button"
+            class="inline-block ml-4 rounded bg-[#1890FF] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+            data-te-ripple-init
+            data-te-ripple-color="light"
+            @click="enableEdit"
+          >
+            Edit
+          </button>
+          <button
+            v-if="role !== 'head' && $auth.user.id === user_id && editable"
+            type="button"
+            class="ml-4 inline-block rounded border border-slate-400 bg-slate-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out hover:bg-slate-300 hover:border-slate-400 hover:bg-slate-300 focus:bg-slate-300 focus:shadow-[0_4px_9px_-4px_#3b71ca] focus:ring-0 active:bg-slate-300"
+            data-te-ripple-init
+            data-te-ripple-color="light"
+            @click="cancelEdit"
+          >
+            Cancel
+          </button>
+          <button
+            v-if="role !== 'head' && $auth.user.id === user_id && editable"
             @click="update"
             type="button"
             class="inline-block ml-4 rounded bg-[#30AD62] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-green-700 focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
@@ -4131,6 +4151,7 @@ export default {
   },
   data() {
     return {
+      editable: false,
       role: "",
       patientStepperFormFields: [],
       teams: [],
@@ -4658,6 +4679,12 @@ export default {
     },
   },
   methods: {
+    enableEdit() {
+      this.editable = true;
+    },
+    cancelEdit() {
+      this.editable = false;
+    },
     hideModal() {
       this.$store.commit("setEditPatientStepperForm", false);
       this.$store.commit("setEditPatientStepperFormArg", undefined);
