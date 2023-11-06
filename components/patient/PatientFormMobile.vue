@@ -1562,8 +1562,7 @@
                       </div>
                     </div>
                     <div class="">
-                      <h4 class="mb-3 font-bold">RR (BPM)
-                      </h4>
+                      <h4 class="mb-3 font-bold">RR (BPM)</h4>
                       <div class="relative mb-2" data-te-input-wrapper-init>
                         <input
                           v-model="rr_a"
