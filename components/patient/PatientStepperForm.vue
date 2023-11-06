@@ -4336,17 +4336,17 @@ export default {
     capitalize(word) {
       return word.replace(/^\w/, (c) => c.toUpperCase());
     },
-    calculateAge: function() {
+    calculateAge() {
       if (this.birthdate) {
         const today = new Date();
         const birthdate = new Date(this.birthdate);
         let age = today.getFullYear() - birthdate.getFullYear();
-        
+
         // Check if the birthdate for this year has not occurred yet
         if (today.getMonth() < birthdate.getMonth() || (today.getMonth() === birthdate.getMonth() && today.getDate() < birthdate.getDate())) {
           age--;
         }
-        
+
         this.age = age;
 
         // Update the age input field

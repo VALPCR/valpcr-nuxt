@@ -214,7 +214,7 @@ export default {
           team: this.capitalize(result.team.name),
           address: `${this.capitalize(result.address.street)} ${this.capitalize(
             result.address.barangay
-          )} ${this.capitalize(result.address.city)} ${result.address.zip}`,
+          )} ${this.capitalize(result.address.city)}`,
           age: result.age,
           contact: result.email,
         });
