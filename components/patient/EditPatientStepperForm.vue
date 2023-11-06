@@ -899,7 +899,7 @@
                         <option value="female">Female</option>
                         <option value="male">Male</option>
                       </select>
-                    
+
                       <!-- BIRTHDATE -->
                       <div class="relative mb-1" data-te-input-wrapper-init>
                         <input
@@ -4134,7 +4134,6 @@ export default {
       category: "completed",
       call_source: "",
       call_receive: "",
-      barangay: "",
       incident_location: "",
       responded: "",
       t_o: "",
@@ -4524,70 +4523,70 @@ export default {
       this.anterior_genitalia_injury =
         this.patientStepperFormFields.pcr_body_injuries.anterior_genitalia_injury;
       this.SetSelectValue("anterior_head_injury", this.anterior_head_injury);
-      // this.SetSelectValue("anterior_chest_injury", this.anterior_chest_injury);
-      // this.SetSelectValue(
-      //   "anterior_pelvis_injury",
-      //   this.anterior_pelvis_injury
-      // );
-      // this.SetSelectValue(
-      //   "anterior_left_arm_injury",
-      //   this.anterior_left_arm_injury
-      // );
-      // this.SetSelectValue(
-      //   "anterior_right_arm_injury",
-      //   this.anterior_right_arm_injury
-      // );
-      // this.SetSelectValue(
-      //   "anterior_left_leg_injury",
-      //   this.anterior_left_leg_injury
-      // );
-      // this.SetSelectValue(
-      //   "anterior_right_leg_injury",
-      //   this.anterior_right_leg_injury
-      // );
-      // this.SetSelectValue(
-      //   "anterior_genitalia_injury",
-      //   this.anterior_genitalia_injury
-      // );
-      // this.posterior_head_injury =
-      //   this.patientStepperFormFields.pcr_body_injuries.posterior_head_injury;
-      // this.posterior_chest_injury =
-      //   this.patientStepperFormFields.pcr_body_injuries.posterior_chest_injury;
-      // this.posterior_pelvis_injury =
-      //   this.patientStepperFormFields.pcr_body_injuries.posterior_pelvis_injury;
-      // this.posterior_left_arm_injury =
-      //   this.patientStepperFormFields.pcr_body_injuries.posterior_left_arm_injury;
-      // this.posterior_right_arm_injury =
-      //   this.patientStepperFormFields.pcr_body_injuries.posterior_right_arm_injury;
-      // this.posterior_left_leg_injury =
-      //   this.patientStepperFormFields.pcr_body_injuries.posterior_left_leg_injury;
-      // this.posterior_right_leg_injury =
-      //   this.patientStepperFormFields.pcr_body_injuries.posterior_right_leg_injury;
-      // this.SetSelectValue("posterior_head_injury", this.posterior_head_injury);
-      // this.SetSelectValue(
-      //   "posterior_chest_injury",
-      //   this.posterior_chest_injury
-      // );
-      // this.SetSelectValue(
-      //   "posterior_pelvis_injury",
-      //   this.posterior_pelvis_injury
-      // );
-      // this.SetSelectValue(
-      //   "posterior_left_arm_injury",
-      //   this.posterior_left_arm_injury
-      // );
-      // this.SetSelectValue(
-      //   "posterior_right_arm_injury",
-      //   this.posterior_right_arm_injury
-      // );
-      // this.SetSelectValue(
-      //   "posterior_left_leg_injury",
-      //   this.posterior_left_leg_injury
-      // );
-      // this.SetSelectValue(
-      //   "posterior_right_leg_injury",
-      //   this.posterior_right_leg_injury
-      // );
+      this.SetSelectValue("anterior_chest_injury", this.anterior_chest_injury);
+      this.SetSelectValue(
+        "anterior_pelvis_injury",
+        this.anterior_pelvis_injury
+      );
+      this.SetSelectValue(
+        "anterior_left_arm_injury",
+        this.anterior_left_arm_injury
+      );
+      this.SetSelectValue(
+        "anterior_right_arm_injury",
+        this.anterior_right_arm_injury
+      );
+      this.SetSelectValue(
+        "anterior_left_leg_injury",
+        this.anterior_left_leg_injury
+      );
+      this.SetSelectValue(
+        "anterior_right_leg_injury",
+        this.anterior_right_leg_injury
+      );
+      this.SetSelectValue(
+        "anterior_genitalia_injury",
+        this.anterior_genitalia_injury
+      );
+      this.posterior_head_injury =
+        this.patientStepperFormFields.pcr_body_injuries.posterior_head_injury;
+      this.posterior_chest_injury =
+        this.patientStepperFormFields.pcr_body_injuries.posterior_chest_injury;
+      this.posterior_pelvis_injury =
+        this.patientStepperFormFields.pcr_body_injuries.posterior_pelvis_injury;
+      this.posterior_left_arm_injury =
+        this.patientStepperFormFields.pcr_body_injuries.posterior_left_arm_injury;
+      this.posterior_right_arm_injury =
+        this.patientStepperFormFields.pcr_body_injuries.posterior_right_arm_injury;
+      this.posterior_left_leg_injury =
+        this.patientStepperFormFields.pcr_body_injuries.posterior_left_leg_injury;
+      this.posterior_right_leg_injury =
+        this.patientStepperFormFields.pcr_body_injuries.posterior_right_leg_injury;
+      this.SetSelectValue("posterior_head_injury", this.posterior_head_injury);
+      this.SetSelectValue(
+        "posterior_chest_injury",
+        this.posterior_chest_injury
+      );
+      this.SetSelectValue(
+        "posterior_pelvis_injury",
+        this.posterior_pelvis_injury
+      );
+      this.SetSelectValue(
+        "posterior_left_arm_injury",
+        this.posterior_left_arm_injury
+      );
+      this.SetSelectValue(
+        "posterior_right_arm_injury",
+        this.posterior_right_arm_injury
+      );
+      this.SetSelectValue(
+        "posterior_left_leg_injury",
+        this.posterior_left_leg_injury
+      );
+      this.SetSelectValue(
+        "posterior_right_leg_injury",
+        this.posterior_right_leg_injury
+      );
       this.anterior_head_degree =
         this.patientStepperFormFields.pcr_burn_percentage.anterior_head_degree;
       this.anterior_chest_degree =
@@ -4668,17 +4667,17 @@ export default {
     capitalize(word) {
       return word.replace(/^\w/, (c) => c.toUpperCase());
     },
-    calculateAge: function() {
+    calculateAge() {
       if (this.birthdate) {
         const today = new Date();
         const birthdate = new Date(this.birthdate);
         let age = today.getFullYear() - birthdate.getFullYear();
-        
+
         // Check if the birthdate for this year has not occurred yet
         if (today.getMonth() < birthdate.getMonth() || (today.getMonth() === birthdate.getMonth() && today.getDate() < birthdate.getDate())) {
           age--;
         }
-        
+
         this.age = age;
 
         // Update the age input field
@@ -4871,7 +4870,6 @@ export default {
         category: "dispatch data",
         call_source: this.call_source,
         call_receive: this.call_receive,
-        barangay: this.barangay,
         incident_location: this.incident_location,
         responded: this.responded,
         t_o: this.t_o,
