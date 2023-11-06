@@ -899,7 +899,7 @@
                         class="w-full bg-neutral-50"
                         v-model="gender"
                       >
-                        <option value="patientGender">Sex</option>
+                        <option value="patientGender">Gender</option>
                         <option value="female">Female</option>
                         <option value="male">Male</option>
                       </select>
@@ -911,6 +911,7 @@
                           type="date"
                           class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                           placeholder="Select a date"
+                          @input="calculateAge"
                         />
                         <label
                           class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
@@ -932,7 +933,7 @@
                         />
                         <label
                           for="age"
-                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-neutral peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
                         >
                           Age
                         </label>
@@ -955,7 +956,7 @@
                         </select>
                       </div>
 
-                      <div class="col-span-2">
+                      <div>
                         <select
                           data-te-select-init
                           v-model="religion"
@@ -990,7 +991,7 @@
                         </select>
                       </div>
 
-                      <div class="relative mb-1" data-te-input-wrapper-init>
+                      <div class="relative mb-1 col-span-2" data-te-input-wrapper-init>
                         <input
                           v-model="companion"
                           type="text"
@@ -1003,16 +1004,15 @@
                           for="pntCompanion"
                           class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                         >
-                          Relative/Companion
+                          Relative/Companion Name
                         </label>
                       </div>
 
                       <div
-                        class="relative mb-1 bg-neutral-50"
-                        data-te-input-wrapper-init
+                        class="relative mb-1 bg-neutral-50 flex flex-wrap items-stretch"
                       >
                         <span
-                          class="absolute left-3 top-1/2 transform -translate-y-1/2 text-neutral-500"
+                          class="flex items-center whitespace-nowrap rounded-l border border-r-0 border-solid border-neutral-300 px-2 py-[0.15rem] text-center text-sm font-normal leading-[1.3] text-neutral-700 dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 md:text-sm"
                         >
                           +63
                         </span>
@@ -1021,7 +1021,7 @@
                           type="tel"
                           id="pntContactNumber"
                           name="pntContactNumber"
-                          class="peer block min-h-[auto] w-full pl-10 rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          class="relative m-0 block w-[1px] min-w-0 flex-auto rounded-r border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-sm font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary md:text-sm"
                           pattern="[0-9]*"
                           inputmode="numeric"
                           maxlength="10"
@@ -4333,6 +4333,28 @@ export default {
     },
     capitalize(word) {
       return word.replace(/^\w/, (c) => c.toUpperCase());
+    },
+    calculateAge: function() {
+      if (this.birthdate) {
+        const today = new Date();
+        const birthdate = new Date(this.birthdate);
+        let age = today.getFullYear() - birthdate.getFullYear();
+        
+        // Check if the birthdate for this year has not occurred yet
+        if (today.getMonth() < birthdate.getMonth() || (today.getMonth() === birthdate.getMonth() && today.getDate() < birthdate.getDate())) {
+          age--;
+        }
+        
+        this.age = age;
+
+        // Update the age input field
+        document.getElementById("age").value = age;
+      } else {
+        this.age = null;
+
+        // Clear the age input field
+        document.getElementById("age").value = '';
+      }
     },
     clear() {
       this.category = "";
