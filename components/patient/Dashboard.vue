@@ -67,7 +67,7 @@
       <PatientForm v-if="role === 'dispatcher'" />
       <PatientStepperForm v-if="role === 'emr'" />
       <PatientFormMobile v-if="role === 'emr'" />
-      <EditPatientStepperForm />
+      <EditPatientStepperForm :viewableByAllEmrs="true" />
       <QrCode />
     </div>
   </div>

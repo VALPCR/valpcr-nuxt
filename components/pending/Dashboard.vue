@@ -36,7 +36,7 @@
         class="bg-white rounded shadow"
       />
     </div>
-    <EditPatientStepperForm />
+    <EditPatientStepperForm :viewableByAllEmrs="false" />
   </div>
 </template>
 

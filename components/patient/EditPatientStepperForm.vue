@@ -4126,6 +4126,9 @@ import {
 } from "tw-elements";
 
 export default {
+  props: {
+    viewableByAllEmrs: Boolean
+  },
   data() {
     return {
       role: "",
@@ -4322,6 +4325,7 @@ export default {
         const params = {
           id: this.$store.getters["getEditPatientStepperFormArg"],
           emrId: this.$auth.user.role === "emr" ? this.$auth.user.id : 0,
+          viewableByAllEmrs: this.viewableByAllEmrs,
         };
         this.$store.dispatch("getSinglePcr", params);
       }
