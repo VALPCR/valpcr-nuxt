@@ -252,7 +252,7 @@ export default {
     this.filteredRows = this.fetchedRows;
   },
   mounted() {
-    initTE({ Ripple, Modal, Dropdown });
+    initTE({ Ripple, Modal, Dropdown }, { allowReinits: true });
     this.role = this.$auth.user.role;
   },
   methods: {

@@ -4309,12 +4309,12 @@ export default {
     });
   },
   mounted() {
-    initTE({ Ripple, Input, Datepicker, Select, Timepicker });
+    initTE({ Ripple, Input, Datepicker, Select, Timepicker }, { allowReinits: true });
   },
   watch: {
     "$store.state.editPatientStepperForm"() {
       if (this.$store.getters["getEditPatientStepperForm"]) {
-        initTE({ Stepper });
+        initTE({ Stepper }, { allowReinits: true });
       }
     },
     "$store.state.editPatientStepperFormArg"() {
@@ -4524,32 +4524,48 @@ export default {
         this.patientStepperFormFields.pcr_body_injuries.anterior_right_leg_injury;
       this.anterior_genitalia_injury =
         this.patientStepperFormFields.pcr_body_injuries.anterior_genitalia_injury;
-      this.SetSelectValue("anterior_head_injury", this.anterior_head_injury);
-      this.SetSelectValue("anterior_chest_injury", this.anterior_chest_injury);
-      this.SetSelectValue(
-        "anterior_pelvis_injury",
-        this.anterior_pelvis_injury
-      );
-      this.SetSelectValue(
-        "anterior_left_arm_injury",
-        this.anterior_left_arm_injury
-      );
-      this.SetSelectValue(
-        "anterior_right_arm_injury",
-        this.anterior_right_arm_injury
-      );
-      this.SetSelectValue(
-        "anterior_left_leg_injury",
-        this.anterior_left_leg_injury
-      );
-      this.SetSelectValue(
-        "anterior_right_leg_injury",
-        this.anterior_right_leg_injury
-      );
-      this.SetSelectValue(
-        "anterior_genitalia_injury",
-        this.anterior_genitalia_injury
-      );
+      if (this.anterior_head_injury.length > 0) {
+        this.SetSelectValue("anterior_head_injury", this.anterior_head_injury);
+      }
+      if (this.anterior_chest_injury.length > 0) {
+        this.SetSelectValue("anterior_chest_injury", this.anterior_chest_injury);
+      }
+      if (this.anterior_pelvis_injury.length > 0) {
+        this.SetSelectValue(
+          "anterior_pelvis_injury",
+          this.anterior_pelvis_injury
+        );
+      }
+      if (this.anterior_left_arm_injury.length > 0) {
+        this.SetSelectValue(
+          "anterior_left_arm_injury",
+          this.anterior_left_arm_injury
+        );
+      }
+      if (this.anterior_right_arm_injury.length > 0) {
+        this.SetSelectValue(
+          "anterior_right_arm_injury",
+          this.anterior_right_arm_injury
+        );
+      }
+      if (this.anterior_left_leg_injury.length > 0) {
+        this.SetSelectValue(
+          "anterior_left_leg_injury",
+          this.anterior_left_leg_injury
+        );
+      }
+      if (this.anterior_right_leg_injury.length > 0) {
+        this.SetSelectValue(
+          "anterior_right_leg_injury",
+          this.anterior_right_leg_injury
+        );
+      }
+      if (this.anterior_genitalia_injury.length > 0) {
+        this.SetSelectValue(
+          "anterior_genitalia_injury",
+          this.anterior_genitalia_injury
+        );
+      }
       this.posterior_head_injury =
         this.patientStepperFormFields.pcr_body_injuries.posterior_head_injury;
       this.posterior_chest_injury =
@@ -4564,31 +4580,45 @@ export default {
         this.patientStepperFormFields.pcr_body_injuries.posterior_left_leg_injury;
       this.posterior_right_leg_injury =
         this.patientStepperFormFields.pcr_body_injuries.posterior_right_leg_injury;
-      this.SetSelectValue("posterior_head_injury", this.posterior_head_injury);
-      this.SetSelectValue(
-        "posterior_chest_injury",
-        this.posterior_chest_injury
-      );
-      this.SetSelectValue(
-        "posterior_pelvis_injury",
-        this.posterior_pelvis_injury
-      );
-      this.SetSelectValue(
-        "posterior_left_arm_injury",
-        this.posterior_left_arm_injury
-      );
-      this.SetSelectValue(
-        "posterior_right_arm_injury",
-        this.posterior_right_arm_injury
-      );
-      this.SetSelectValue(
-        "posterior_left_leg_injury",
-        this.posterior_left_leg_injury
-      );
-      this.SetSelectValue(
-        "posterior_right_leg_injury",
-        this.posterior_right_leg_injury
-      );
+      if (this.posterior_head_injury.length > 0) {
+        this.SetSelectValue("posterior_head_injury", this.posterior_head_injury);
+      }
+      if (this.posterior_chest_injury.length > 0) {
+        this.SetSelectValue(
+          "posterior_chest_injury",
+          this.posterior_chest_injury
+        );
+      }
+      if (this.posterior_pelvis_injury.length > 0) {
+        this.SetSelectValue(
+          "posterior_pelvis_injury",
+          this.posterior_pelvis_injury
+        );
+      }
+      if (this.posterior_left_arm_injury.length > 0) {
+        this.SetSelectValue(
+          "posterior_left_arm_injury",
+          this.posterior_left_arm_injury
+        );
+      }
+      if (this.posterior_right_arm_injury.length > 0) {
+        this.SetSelectValue(
+          "posterior_right_arm_injury",
+          this.posterior_right_arm_injury
+        );
+      }
+      if (this.posterior_left_leg_injury.length > 0) {
+        this.SetSelectValue(
+          "posterior_left_leg_injury",
+          this.posterior_left_leg_injury
+        );
+      }
+      if (this.posterior_right_leg_injury.length > 0) {
+        this.SetSelectValue(
+          "posterior_right_leg_injury",
+          this.posterior_right_leg_injury
+        );
+      }
       this.anterior_head_degree =
         this.patientStepperFormFields.pcr_burn_percentage.anterior_head_degree;
       this.anterior_chest_degree =
@@ -4863,7 +4893,9 @@ export default {
         const element = document.querySelector(`#${elementId}`);
         if (element) {
           const selectInstance = Select.getInstance(element);
-          selectInstance.setValue(value);
+          if (selectInstance !== null) {
+            selectInstance.setValue(value);
+          }
         }
       }
     },
