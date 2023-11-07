@@ -81,7 +81,14 @@ export const mutations = {
 export const actions = {
   getSinglePcr(context, params) {
     return this.$axios
-      .get("pcr/single?id=" + params.id + "&emrId=" + params.emrId)
+      .get(
+        "pcr/single?id=" +
+          params.id +
+          "&emrId=" +
+          params.emrId +
+          "&viewableByAllEmrs=" +
+          params.viewableByAllEmrs
+      )
       .then((response) => {
         const pcr = response.data.return;
         context.commit("setEditPatientStepperFormFields", pcr);

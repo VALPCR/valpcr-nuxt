@@ -96,10 +96,15 @@
                           <input
                             v-model="dispatch_date"
                             type="date"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            :class="`peer block min-h-[auto] w-full rounded border-0 ${
+                              !editable
+                                ? 'bg-gray-100 cursor-not-allowed'
+                                : 'bg-transparent'
+                            } px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0`"
                             id="date"
                             aria-describedby="emailHelp123"
                             placeholder="First name"
+                            :disabled="!editable"
                           />
                           <label
                             for="date"
@@ -979,7 +984,10 @@
                         </select>
                       </div>
 
-                      <div class="relative mb-1 col-span-2" data-te-input-wrapper-init>
+                      <div
+                        class="relative mb-1 col-span-2"
+                        data-te-input-wrapper-init
+                      >
                         <input
                           v-model="companion"
                           type="text"
@@ -1462,7 +1470,8 @@
                         </div>
                       </div>
                       <div class="">
-                        <h4 class="mb-3 font-bold">PR
+                        <h4 class="mb-3 font-bold">
+                          PR
                           <small>(beats/min)</small>
                         </h4>
                         <div class="relative mb-2" data-te-input-wrapper-init>
@@ -4089,7 +4098,7 @@
           class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md border-t-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50 min-[0px]:rounded-none"
         >
           <button
-            v-if="role !== 'head'"
+            v-if="role !== 'head' && $auth.user.id === user_id && editable"
             @click="clear"
             type="button"
             class="ml-1 inline-block rounded border border-slate-400 bg-slate-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out hover:bg-slate-300 hover:border-slate-400 hover:bg-slate-300 focus:bg-slate-300 focus:shadow-[0_4px_9px_-4px_#3b71ca] focus:ring-0 active:bg-slate-300"
@@ -4099,7 +4108,27 @@
             CLEAR
           </button>
           <button
-            v-if="role !== 'head'"
+            v-if="role !== 'head' && $auth.user.id === user_id && !editable"
+            type="button"
+            class="inline-block ml-4 rounded bg-[#1890FF] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+            data-te-ripple-init
+            data-te-ripple-color="light"
+            @click="enableEdit"
+          >
+            Edit
+          </button>
+          <button
+            v-if="role !== 'head' && $auth.user.id === user_id && editable"
+            type="button"
+            class="ml-4 inline-block rounded border border-slate-400 bg-slate-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out hover:bg-slate-300 hover:border-slate-400 hover:bg-slate-300 focus:bg-slate-300 focus:shadow-[0_4px_9px_-4px_#3b71ca] focus:ring-0 active:bg-slate-300"
+            data-te-ripple-init
+            data-te-ripple-color="light"
+            @click="cancelEdit"
+          >
+            Cancel
+          </button>
+          <button
+            v-if="role !== 'head' && $auth.user.id === user_id && editable"
             @click="update"
             type="button"
             class="inline-block ml-4 rounded bg-[#30AD62] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-green-700 focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
@@ -4126,12 +4155,17 @@ import {
 } from "tw-elements";
 
 export default {
+  props: {
+    viewableByAllEmrs: Boolean,
+  },
   data() {
     return {
+      editable: false,
       role: "",
       patientStepperFormFields: [],
       teams: [],
       id: "",
+      user_id: "",
       dispatch_date: "",
       category: "completed",
       call_source: "",
@@ -4309,12 +4343,15 @@ export default {
     });
   },
   mounted() {
-    initTE({ Ripple, Input, Datepicker, Select, Timepicker });
+    initTE(
+      { Ripple, Input, Datepicker, Select, Timepicker },
+      { allowReinits: true }
+    );
   },
   watch: {
     "$store.state.editPatientStepperForm"() {
       if (this.$store.getters["getEditPatientStepperForm"]) {
-        initTE({ Stepper });
+        initTE({ Stepper }, { allowReinits: true });
       }
     },
     "$store.state.editPatientStepperFormArg"() {
@@ -4322,6 +4359,7 @@ export default {
         const params = {
           id: this.$store.getters["getEditPatientStepperFormArg"],
           emrId: this.$auth.user.role === "emr" ? this.$auth.user.id : 0,
+          viewableByAllEmrs: this.viewableByAllEmrs,
         };
         this.$store.dispatch("getSinglePcr", params);
       }
@@ -4330,6 +4368,7 @@ export default {
       this.patientStepperFormFields =
         this.$store.getters["getEditPatientStepperFormFields"];
       this.id = this.patientStepperFormFields.id;
+      this.user_id = this.patientStepperFormFields.user_pcr.user_id;
       this.ambulance = this.patientStepperFormFields.ambulance;
       this.arrive_at_scene = this.patientStepperFormFields.arrive_at_scene;
       this.arrived_at = this.patientStepperFormFields.arrived_at;
@@ -4524,32 +4563,51 @@ export default {
         this.patientStepperFormFields.pcr_body_injuries.anterior_right_leg_injury;
       this.anterior_genitalia_injury =
         this.patientStepperFormFields.pcr_body_injuries.anterior_genitalia_injury;
-      this.SetSelectValue("anterior_head_injury", this.anterior_head_injury);
-      this.SetSelectValue("anterior_chest_injury", this.anterior_chest_injury);
-      this.SetSelectValue(
-        "anterior_pelvis_injury",
-        this.anterior_pelvis_injury
-      );
-      this.SetSelectValue(
-        "anterior_left_arm_injury",
-        this.anterior_left_arm_injury
-      );
-      this.SetSelectValue(
-        "anterior_right_arm_injury",
-        this.anterior_right_arm_injury
-      );
-      this.SetSelectValue(
-        "anterior_left_leg_injury",
-        this.anterior_left_leg_injury
-      );
-      this.SetSelectValue(
-        "anterior_right_leg_injury",
-        this.anterior_right_leg_injury
-      );
-      this.SetSelectValue(
-        "anterior_genitalia_injury",
-        this.anterior_genitalia_injury
-      );
+      if (this.anterior_head_injury.length > 0) {
+        this.SetSelectValue("anterior_head_injury", this.anterior_head_injury);
+      }
+      if (this.anterior_chest_injury.length > 0) {
+        this.SetSelectValue(
+          "anterior_chest_injury",
+          this.anterior_chest_injury
+        );
+      }
+      if (this.anterior_pelvis_injury.length > 0) {
+        this.SetSelectValue(
+          "anterior_pelvis_injury",
+          this.anterior_pelvis_injury
+        );
+      }
+      if (this.anterior_left_arm_injury.length > 0) {
+        this.SetSelectValue(
+          "anterior_left_arm_injury",
+          this.anterior_left_arm_injury
+        );
+      }
+      if (this.anterior_right_arm_injury.length > 0) {
+        this.SetSelectValue(
+          "anterior_right_arm_injury",
+          this.anterior_right_arm_injury
+        );
+      }
+      if (this.anterior_left_leg_injury.length > 0) {
+        this.SetSelectValue(
+          "anterior_left_leg_injury",
+          this.anterior_left_leg_injury
+        );
+      }
+      if (this.anterior_right_leg_injury.length > 0) {
+        this.SetSelectValue(
+          "anterior_right_leg_injury",
+          this.anterior_right_leg_injury
+        );
+      }
+      if (this.anterior_genitalia_injury.length > 0) {
+        this.SetSelectValue(
+          "anterior_genitalia_injury",
+          this.anterior_genitalia_injury
+        );
+      }
       this.posterior_head_injury =
         this.patientStepperFormFields.pcr_body_injuries.posterior_head_injury;
       this.posterior_chest_injury =
@@ -4564,31 +4622,48 @@ export default {
         this.patientStepperFormFields.pcr_body_injuries.posterior_left_leg_injury;
       this.posterior_right_leg_injury =
         this.patientStepperFormFields.pcr_body_injuries.posterior_right_leg_injury;
-      this.SetSelectValue("posterior_head_injury", this.posterior_head_injury);
-      this.SetSelectValue(
-        "posterior_chest_injury",
-        this.posterior_chest_injury
-      );
-      this.SetSelectValue(
-        "posterior_pelvis_injury",
-        this.posterior_pelvis_injury
-      );
-      this.SetSelectValue(
-        "posterior_left_arm_injury",
-        this.posterior_left_arm_injury
-      );
-      this.SetSelectValue(
-        "posterior_right_arm_injury",
-        this.posterior_right_arm_injury
-      );
-      this.SetSelectValue(
-        "posterior_left_leg_injury",
-        this.posterior_left_leg_injury
-      );
-      this.SetSelectValue(
-        "posterior_right_leg_injury",
-        this.posterior_right_leg_injury
-      );
+      if (this.posterior_head_injury.length > 0) {
+        this.SetSelectValue(
+          "posterior_head_injury",
+          this.posterior_head_injury
+        );
+      }
+      if (this.posterior_chest_injury.length > 0) {
+        this.SetSelectValue(
+          "posterior_chest_injury",
+          this.posterior_chest_injury
+        );
+      }
+      if (this.posterior_pelvis_injury.length > 0) {
+        this.SetSelectValue(
+          "posterior_pelvis_injury",
+          this.posterior_pelvis_injury
+        );
+      }
+      if (this.posterior_left_arm_injury.length > 0) {
+        this.SetSelectValue(
+          "posterior_left_arm_injury",
+          this.posterior_left_arm_injury
+        );
+      }
+      if (this.posterior_right_arm_injury.length > 0) {
+        this.SetSelectValue(
+          "posterior_right_arm_injury",
+          this.posterior_right_arm_injury
+        );
+      }
+      if (this.posterior_left_leg_injury.length > 0) {
+        this.SetSelectValue(
+          "posterior_left_leg_injury",
+          this.posterior_left_leg_injury
+        );
+      }
+      if (this.posterior_right_leg_injury.length > 0) {
+        this.SetSelectValue(
+          "posterior_right_leg_injury",
+          this.posterior_right_leg_injury
+        );
+      }
       this.anterior_head_degree =
         this.patientStepperFormFields.pcr_burn_percentage.anterior_head_degree;
       this.anterior_chest_degree =
@@ -4622,6 +4697,12 @@ export default {
     },
   },
   methods: {
+    enableEdit() {
+      this.editable = true;
+    },
+    cancelEdit() {
+      this.editable = false;
+    },
     hideModal() {
       this.$store.commit("setEditPatientStepperForm", false);
       this.$store.commit("setEditPatientStepperFormArg", undefined);
@@ -4676,7 +4757,11 @@ export default {
         let age = today.getFullYear() - birthdate.getFullYear();
 
         // Check if the birthdate for this year has not occurred yet
-        if (today.getMonth() < birthdate.getMonth() || (today.getMonth() === birthdate.getMonth() && today.getDate() < birthdate.getDate())) {
+        if (
+          today.getMonth() < birthdate.getMonth() ||
+          (today.getMonth() === birthdate.getMonth() &&
+            today.getDate() < birthdate.getDate())
+        ) {
           age--;
         }
 
@@ -4688,7 +4773,7 @@ export default {
         this.age = null;
 
         // Clear the age input field
-        document.getElementById("age").value = '';
+        document.getElementById("age").value = "";
       }
     },
     clear() {
@@ -4863,7 +4948,9 @@ export default {
         const element = document.querySelector(`#${elementId}`);
         if (element) {
           const selectInstance = Select.getInstance(element);
-          selectInstance.setValue(value);
+          if (selectInstance !== null) {
+            selectInstance.setValue(value);
+          }
         }
       }
     },
