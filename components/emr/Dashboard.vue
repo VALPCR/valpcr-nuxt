@@ -211,7 +211,7 @@ export default {
               result.address.street
             )} ${this.capitalize(result.address.barangay)} ${this.capitalize(
               result.address.city
-            )} ${result.address.zip}`,
+            )}`,
             age: result.age,
             contact: result.email,
           });

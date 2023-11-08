@@ -921,7 +921,7 @@
                       class="w-full bg-neutral-50"
                       v-model="gender"
                     >
-                      <option value="patientGender">Sex</option>
+                      <option value="patientGender">Gender</option>
                       <option value="female">Female</option>
                       <option value="male">Male</option>
                     </select>
@@ -933,6 +933,7 @@
                         type="date"
                         class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                         placeholder="Select a date"
+                        @input="calculateAge"
                       />
                       <label
                         class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
@@ -940,8 +941,8 @@
                         Birthdate
                       </label>
                     </div>
-                    <!-- END BIRTHDATE -->
 
+                    <!-- AGE -->
                     <div class="relative mb-1" data-te-input-wrapper-init>
                       <input
                         v-model="age"
@@ -954,7 +955,7 @@
                       />
                       <label
                         for="age"
-                        class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-neutral peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
                       >
                         Age
                       </label>
@@ -977,7 +978,7 @@
                       </select>
                     </div>
 
-                    <div class="col-span-2">
+                    <div>
                       <select
                         data-te-select-init
                         v-model="religion"
@@ -1012,7 +1013,10 @@
                       </select>
                     </div>
 
-                    <div class="relative mb-1" data-te-input-wrapper-init>
+                    <div
+                      class="relative mb-1 col-span-2"
+                      data-te-input-wrapper-init
+                    >
                       <input
                         v-model="companion"
                         type="text"
@@ -1025,16 +1029,15 @@
                         for="pntCompanion"
                         class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                       >
-                        Relative/Companion
+                        Relative/Companion Name
                       </label>
                     </div>
 
                     <div
-                      class="relative mb-1 bg-neutral-50"
-                      data-te-input-wrapper-init
+                      class="relative mb-1 bg-neutral-50 flex flex-wrap items-stretch"
                     >
                       <span
-                        class="absolute left-3 top-1/2 transform -translate-y-1/2 text-neutral-500"
+                        class="flex items-center whitespace-nowrap rounded-l border border-r-0 border-solid border-neutral-300 px-2 py-[0.15rem] text-center text-sm font-normal leading-[1.3] text-neutral-700 dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 md:text-sm"
                       >
                         +63
                       </span>
@@ -1043,7 +1046,7 @@
                         type="tel"
                         id="pntContactNumber"
                         name="pntContactNumber"
-                        class="peer block min-h-[auto] w-full pl-10 rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        class="relative m-0 block w-[1px] min-w-0 flex-auto rounded-r border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-sm font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary md:text-sm"
                         pattern="[0-9]*"
                         inputmode="numeric"
                         maxlength="10"
@@ -1412,8 +1415,12 @@
               aria-labelledby="flush-headingThree"
               data-te-parent="#accordionFlushExample"
             >
-              <div class="px-5 py-4">
+              <div class="px-5 py-4 mt-5 mb-5">
                 <form>
+                  <!-- FOR TIME, BP, PR, RR, TEMP, SPO2 -->
+                  <p class="text-center mb-5">
+                    <mark class="bg-primary-200 font-bold">Clinical Vital Signs</mark>
+                  </p>
                   <div class="grid grid-cols-6 gap-4">
                     <div class="">
                       <h4 class="mb-3 font-bold">Time</h4>
@@ -1484,7 +1491,7 @@
                       </div>
                     </div>
                     <div class="">
-                      <h4 class="mb-3 font-bold">BP</h4>
+                      <h4 class="mb-3 font-bold">BP (mmHg)</h4>
                       <div class="relative mb-2" data-te-input-wrapper-init>
                         <input
                           v-model="bp_a"
@@ -1522,7 +1529,10 @@
                       </div>
                     </div>
                     <div class="">
-                      <h4 class="mb-3 font-bold">PR</h4>
+                      <h4 class="mb-3 font-bold md:text-sm sm:text-sm">
+                        PR
+                        <small>(beats/min)</small>
+                      </h4>
                       <div class="relative mb-2" data-te-input-wrapper-init>
                         <input
                           v-model="pr_a"
@@ -1560,7 +1570,7 @@
                       </div>
                     </div>
                     <div class="">
-                      <h4 class="mb-3 font-bold">RR</h4>
+                      <h4 class="mb-3 font-bold">RR (BPM)</h4>
                       <div class="relative mb-2" data-te-input-wrapper-init>
                         <input
                           v-model="rr_a"
@@ -1598,8 +1608,11 @@
                       </div>
                     </div>
                     <div class="">
-                      <h4 class="mb-3 font-bold">Temp.</h4>
-                      <div class="relative mb-2" data-te-input-wrapper-init>
+                      <h4 class="mb-3 font-bold">Temp.(°C)</h4>
+                      <div
+                        class="relative mb-2 flex flex-wrap items-stretch"
+                        data-te-input-wrapper-init
+                      >
                         <input
                           v-model="tempt_a"
                           type="text"
@@ -1636,7 +1649,7 @@
                       </div>
                     </div>
                     <div class="">
-                      <h4 class="mb-3 font-bold">SPO2</h4>
+                      <h4 class="mb-3 font-bold">SpO2 (%)</h4>
                       <div class="relative mb-2" data-te-input-wrapper-init>
                         <input
                           v-model="spo2_a"
@@ -1674,31 +1687,31 @@
                       </div>
                     </div>
                   </div>
-                  <div class="grid grid-cols-10">
+                  <div class="grid grid-cols-6 mt-5">
                     <div>
                       <h4 class="mb-3 font-bold">Pupil</h4>
                       <h5
-                        class="relative mb-1 font-small col-span-1 text-gray-700"
+                        class="relative mb-1 font-small col-span-2 text-gray-700"
                       >
                         Pearl
                       </h5>
                       <h5
-                        class="relative mb-1 font-small col-span-1 text-gray-700"
+                        class="relative mb-1 font-small col-span-2 text-gray-700"
                       >
                         Dilated
                       </h5>
                       <h5
-                        class="relative mb-1 font-small col-span-1 text-gray-700"
+                        class="relative mb-1 font-small col-span-2 text-gray-700"
                       >
                         Constricted
                       </h5>
                       <h5
-                        class="relative mb-1 font-small col-span-1 text-gray-700"
+                        class="relative mb-1 font-small col-span-2 text-gray-700"
                       >
                         Non-reactive
                       </h5>
                       <h5
-                        class="relative mb-1 font-small col-span-1 text-gray-700"
+                        class="relative mb-1 font-small col-span-2 text-gray-700"
                       >
                         Cataract
                       </h5>
@@ -1709,78 +1722,78 @@
                         <input
                           v-model="left_pearl"
                           type="checkbox"
-                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-150"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-100"
                         />
                       </div>
-                      <div class="relative mb-4 col-span-1">
+                      <div class="relative mb-3 col-span-1">
                         <input
                           v-model="left_dilated"
                           type="checkbox"
-                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-150"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-100"
                         />
                       </div>
-                      <div class="relative mb-4 col-span-1">
+                      <div class="relative mb-3 col-span-1">
                         <input
                           v-model="left_constrict"
                           type="checkbox"
-                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-150"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-100"
                         />
                       </div>
-                      <div class="relative mb-4 col-span-1">
+                      <div class="relative mb-3 col-span-1">
                         <input
                           v-model="left_non_reactive"
                           type="checkbox"
-                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-150"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-100"
                         />
                       </div>
-                      <div class="relative mb-4 col-span-1">
+                      <div class="relative mb-3 col-span-1">
                         <input
                           v-model="left_cataract"
                           type="checkbox"
-                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-150"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-100"
                         />
                       </div>
                     </div>
                     <div>
-                      <h4 class="mb-3 font-bold text-center">Right</h4>
-                      <div class="relative mb-4 col-span-1">
+                      <h4 class="mb-4 font-bold text-center">Right</h4>
+                      <div class="relative mb-3 col-span-1">
                         <input
                           v-model="right_pearl"
                           type="checkbox"
-                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-150"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-100"
                         />
                       </div>
-                      <div class="relative mb-4 col-span-1">
+                      <div class="relative mb-3 col-span-1">
                         <input
                           v-model="right_dilated"
                           type="checkbox"
-                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-150"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-100"
                         />
                       </div>
-                      <div class="relative mb-4 col-span-1">
+                      <div class="relative mb-3 col-span-1">
                         <input
                           v-model="right_constrict"
                           type="checkbox"
-                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-150"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-100"
                         />
                       </div>
-                      <div class="relative mb-4 col-span-1">
+                      <div class="relative mb-3 col-span-1">
                         <input
                           v-model="right_non_reactive"
                           type="checkbox"
-                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-150"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-100"
                         />
                       </div>
-                      <div class="relative mb-4 col-span-1">
+                      <div class="relative mb-3 col-span-1">
                         <input
                           v-model="right_cataract"
                           type="checkbox"
-                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-150"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-100"
                         />
                       </div>
                     </div>
 
-                    <div class="relative mr-1 left-2 top-4 col-span-2">
+                    <div class="relative mr-1 left-2 top-4 col-span-3">
                       <select
                         data-te-select-init
                         v-model="skin_color"
@@ -1794,8 +1807,49 @@
                         <option value="jaundice">Jaundice</option>
                       </select>
                     </div>
+                  </div>
+                  <hr
+                    class=" mt-2 h-0.5 border-t-0 bg-neutral-100 opacity-100 dark:opacity-50" 
+                  />
+                  <p class="text-center mt-5">
+                    <mark class="bg-primary-200 font-bold">Glasgow Coma Scale (GCS)</mark>
+                  </p>
+                  <!-- For Glasgow Coma Scale (GCS)-->
+                  <div class="grid grid-cols-6 gap-4 mt-6">
+                    <div class="col-span-3">
+                      <!-- TIME -->
+                      <h4 class="mb-3 font-bold">Time</h4>
+                      <div
+                        class="relative mb-2"
+                        data-te-input-wrapper-init
+                        data-te-timepicker-init
+                        @click.stop="setTimeF"
+                      >
+                        <input
+                          v-model="time_f"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          aria-describedby="vTime"
+                        />
+                      </div>
+                    </div>
 
-                    <div class="relative mr-2 left-3 top-4 col-span-1">
+                    <!-- SCORE -->
+                    <div class="col-span-3">
+                      <h4 class="mb-3 font-bold">Score</h4>
+                      <div class="relative mb-2" data-te-input-wrapper-init>
+                        <input
+                          v-model="score"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        />
+                      </div>
+                    </div>                    
+                  </div>
+
+                  <div class="grid grid-cols-6 gap-4 mt-3 mb-5">
+                    <!-- EYES -->
+                    <div class="relative col-span-2">
                       <select
                         data-te-select-init
                         v-model="eyes"
@@ -1808,8 +1862,9 @@
                         <option value="none">1 - None</option>
                       </select>
                     </div>
-
-                    <div class="relative mr-2 left-3 top-4 col-span-2">
+                   
+                    <!-- VERBAL -->
+                    <div class="relative col-span-2">
                       <select
                         data-te-select-init
                         v-model="verbal"
@@ -1827,9 +1882,10 @@
                         <option value="none">1 - None</option>
                       </select>
                     </div>
-
+                    
+                    <!-- MOTOR -->
                     <div
-                      class="relative mr-2 left-3 top-4 col-span-2 place-content-start"
+                      class="relative col-span-2 place-content-start"
                     >
                       <select
                         data-te-select-init
@@ -1852,6 +1908,10 @@
                       </select>
                     </div>
                   </div>
+                  <hr
+                    class=" mt-2 h-0.5 border-t-0 bg-neutral-100 opacity-100 dark:opacity-50" 
+                  />
+                
                 </form>
               </div>
             </div>
@@ -4271,6 +4331,7 @@ export default {
       time_c: "",
       time_d: "",
       time_e: "",
+      time_f: "",
       bp_a: "",
       bp_b: "",
       bp_c: "",
@@ -4433,11 +4494,40 @@ export default {
     setTimeE() {
       this.time_e = this.formattedDateTime();
     },
+    setTimeF() {
+      this.time_f = this.formattedDateTime();
+    },
     setTimePatient() {
       this.time_taken = this.formattedDateTime();
     },
     capitalize(word) {
       return word.replace(/^\w/, (c) => c.toUpperCase());
+    },
+    calculateAge: function () {
+      if (this.birthdate) {
+        const today = new Date();
+        const birthdate = new Date(this.birthdate);
+        let age = today.getFullYear() - birthdate.getFullYear();
+
+        // Check if the birthdate for this year has not occurred yet
+        if (
+          today.getMonth() < birthdate.getMonth() ||
+          (today.getMonth() === birthdate.getMonth() &&
+            today.getDate() < birthdate.getDate())
+        ) {
+          age--;
+        }
+
+        this.age = age;
+
+        // Update the age input field
+        document.getElementById("age").value = age;
+      } else {
+        this.age = null;
+
+        // Clear the age input field
+        document.getElementById("age").value = "";
+      }
     },
     clear() {
       this.category = "";

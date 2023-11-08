@@ -96,10 +96,15 @@
                           <input
                             v-model="dispatch_date"
                             type="date"
-                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            :class="`peer block min-h-[auto] w-full rounded border-0 ${
+                              !editable
+                                ? 'bg-gray-100 cursor-not-allowed'
+                                : 'bg-transparent'
+                            } px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0`"
                             id="date"
                             aria-describedby="emailHelp123"
                             placeholder="First name"
+                            :disabled="!editable"
                           />
                           <label
                             for="date"
@@ -892,15 +897,14 @@
                           Last Name
                         </label>
                       </div>
-                      <!-- END NAME -->
+
                       <!-- GENDER -->
                       <select class="w-full bg-neutral-50" v-model="gender">
-                        <option value="patientGender">Sex</option>
+                        <option value="patientGender">Gender</option>
                         <option value="female">Female</option>
                         <option value="male">Male</option>
                       </select>
-                      <!-- <label data-te-select-label-ref>Gender</label> -->
-                      <!-- END GENDER -->
+
                       <!-- BIRTHDATE -->
                       <div class="relative mb-1" data-te-input-wrapper-init>
                         <input
@@ -908,6 +912,7 @@
                           type="date"
                           class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                           placeholder="Select a date"
+                          @input="calculateAge"
                         />
                         <label
                           class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
@@ -915,8 +920,8 @@
                           Birthdate
                         </label>
                       </div>
-                      <!-- END BIRTHDATE -->
 
+                      <!-- AGE -->
                       <div class="relative mb-1" data-te-input-wrapper-init>
                         <input
                           v-model="age"
@@ -929,7 +934,7 @@
                         />
                         <label
                           for="age"
-                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.9rem] scale-[0.8] text-neutral peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
                         >
                           Age
                         </label>
@@ -948,7 +953,7 @@
                         </select>
                       </div>
 
-                      <div class="col-span-2">
+                      <div>
                         <select v-model="religion" class="bg-neutral-50">
                           <option selected value="3">Religion</option>
                           <option value="roman catholic">Roman Catholic</option>
@@ -979,7 +984,10 @@
                         </select>
                       </div>
 
-                      <div class="relative mb-1" data-te-input-wrapper-init>
+                      <div
+                        class="relative mb-1 col-span-2"
+                        data-te-input-wrapper-init
+                      >
                         <input
                           v-model="companion"
                           type="text"
@@ -992,16 +1000,15 @@
                           for="pntCompanion"
                           class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                         >
-                          Relative/Companion
+                          Relative/Companion Name
                         </label>
                       </div>
 
                       <div
-                        class="relative mb-1 bg-neutral-50"
-                        data-te-input-wrapper-init
+                        class="relative mb-1 bg-neutral-50 flex flex-wrap items-stretch"
                       >
                         <span
-                          class="absolute left-3 top-1/2 transform -translate-y-1/2 text-neutral-500"
+                          class="flex items-center whitespace-nowrap rounded-l border border-r-0 border-solid border-neutral-300 px-2 py-[0.15rem] text-center text-sm font-normal leading-[1.3] text-neutral-700 dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 md:text-sm"
                         >
                           +63
                         </span>
@@ -1010,7 +1017,7 @@
                           type="tel"
                           id="pntContactNumber"
                           name="pntContactNumber"
-                          class="peer block min-h-[auto] w-full pl-10 rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          class="relative m-0 block w-[1px] min-w-0 flex-auto rounded-r border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-sm font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary md:text-sm"
                           pattern="[0-9]*"
                           inputmode="numeric"
                           maxlength="10"
@@ -1425,7 +1432,7 @@
                         </div>
                       </div>
                       <div class="">
-                        <h4 class="mb-3 font-bold">BP</h4>
+                        <h4 class="mb-3 font-bold">BP (mmHg)</h4>
                         <div class="relative mb-2" data-te-input-wrapper-init>
                           <input
                             v-model="bp_a"
@@ -1463,7 +1470,10 @@
                         </div>
                       </div>
                       <div class="">
-                        <h4 class="mb-3 font-bold">PR</h4>
+                        <h4 class="mb-3 font-bold">
+                          PR
+                          <small>(beats/min)</small>
+                        </h4>
                         <div class="relative mb-2" data-te-input-wrapper-init>
                           <input
                             v-model="pr_a"
@@ -1501,7 +1511,7 @@
                         </div>
                       </div>
                       <div class="">
-                        <h4 class="mb-3 font-bold">RR</h4>
+                        <h4 class="mb-3 font-bold">RR (BPM)</h4>
                         <div class="relative mb-2" data-te-input-wrapper-init>
                           <input
                             v-model="rr_a"
@@ -1539,7 +1549,7 @@
                         </div>
                       </div>
                       <div class="">
-                        <h4 class="mb-3 font-bold">Temp.</h4>
+                        <h4 class="mb-3 font-bold">Temp.(°C)</h4>
                         <div class="relative mb-2" data-te-input-wrapper-init>
                           <input
                             v-model="tempt_a"
@@ -1577,7 +1587,7 @@
                         </div>
                       </div>
                       <div class="">
-                        <h4 class="mb-3 font-bold">SPO2</h4>
+                        <h4 class="mb-3 font-bold">SpO2 (%)</h4>
                         <div class="relative mb-2" data-te-input-wrapper-init>
                           <input
                             v-model="spo2_a"
@@ -4088,7 +4098,7 @@
           class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md border-t-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50 min-[0px]:rounded-none"
         >
           <button
-            v-if="role !== 'head'"
+            v-if="role !== 'head' && $auth.user.id === user_id && editable"
             @click="clear"
             type="button"
             class="ml-1 inline-block rounded border border-slate-400 bg-slate-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out hover:bg-slate-300 hover:border-slate-400 hover:bg-slate-300 focus:bg-slate-300 focus:shadow-[0_4px_9px_-4px_#3b71ca] focus:ring-0 active:bg-slate-300"
@@ -4098,7 +4108,27 @@
             CLEAR
           </button>
           <button
-            v-if="role !== 'head'"
+            v-if="role !== 'head' && $auth.user.id === user_id && !editable"
+            type="button"
+            class="inline-block ml-4 rounded bg-[#1890FF] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+            data-te-ripple-init
+            data-te-ripple-color="light"
+            @click="enableEdit"
+          >
+            Edit
+          </button>
+          <button
+            v-if="role !== 'head' && $auth.user.id === user_id && editable"
+            type="button"
+            class="ml-4 inline-block rounded border border-slate-400 bg-slate-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out hover:bg-slate-300 hover:border-slate-400 hover:bg-slate-300 focus:bg-slate-300 focus:shadow-[0_4px_9px_-4px_#3b71ca] focus:ring-0 active:bg-slate-300"
+            data-te-ripple-init
+            data-te-ripple-color="light"
+            @click="cancelEdit"
+          >
+            Cancel
+          </button>
+          <button
+            v-if="role !== 'head' && $auth.user.id === user_id && editable"
             @click="update"
             type="button"
             class="inline-block ml-4 rounded bg-[#30AD62] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-green-700 focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
@@ -4125,17 +4155,21 @@ import {
 } from "tw-elements";
 
 export default {
+  props: {
+    viewableByAllEmrs: Boolean,
+  },
   data() {
     return {
+      editable: false,
       role: "",
       patientStepperFormFields: [],
       teams: [],
       id: "",
+      user_id: "",
       dispatch_date: "",
       category: "completed",
       call_source: "",
       call_receive: "",
-      barangay: "",
       incident_location: "",
       responded: "",
       t_o: "",
@@ -4309,12 +4343,15 @@ export default {
     });
   },
   mounted() {
-    initTE({ Ripple, Input, Datepicker, Select, Timepicker });
+    initTE(
+      { Ripple, Input, Datepicker, Select, Timepicker },
+      { allowReinits: true }
+    );
   },
   watch: {
     "$store.state.editPatientStepperForm"() {
       if (this.$store.getters["getEditPatientStepperForm"]) {
-        initTE({ Stepper });
+        initTE({ Stepper }, { allowReinits: true });
       }
     },
     "$store.state.editPatientStepperFormArg"() {
@@ -4322,6 +4359,7 @@ export default {
         const params = {
           id: this.$store.getters["getEditPatientStepperFormArg"],
           emrId: this.$auth.user.role === "emr" ? this.$auth.user.id : 0,
+          viewableByAllEmrs: this.viewableByAllEmrs,
         };
         this.$store.dispatch("getSinglePcr", params);
       }
@@ -4330,6 +4368,7 @@ export default {
       this.patientStepperFormFields =
         this.$store.getters["getEditPatientStepperFormFields"];
       this.id = this.patientStepperFormFields.id;
+      this.user_id = this.patientStepperFormFields.user_pcr.user_id;
       this.ambulance = this.patientStepperFormFields.ambulance;
       this.arrive_at_scene = this.patientStepperFormFields.arrive_at_scene;
       this.arrived_at = this.patientStepperFormFields.arrived_at;
@@ -4524,71 +4563,107 @@ export default {
         this.patientStepperFormFields.pcr_body_injuries.anterior_right_leg_injury;
       this.anterior_genitalia_injury =
         this.patientStepperFormFields.pcr_body_injuries.anterior_genitalia_injury;
-      this.SetSelectValue("anterior_head_injury", this.anterior_head_injury);
-      // this.SetSelectValue("anterior_chest_injury", this.anterior_chest_injury);
-      // this.SetSelectValue(
-      //   "anterior_pelvis_injury",
-      //   this.anterior_pelvis_injury
-      // );
-      // this.SetSelectValue(
-      //   "anterior_left_arm_injury",
-      //   this.anterior_left_arm_injury
-      // );
-      // this.SetSelectValue(
-      //   "anterior_right_arm_injury",
-      //   this.anterior_right_arm_injury
-      // );
-      // this.SetSelectValue(
-      //   "anterior_left_leg_injury",
-      //   this.anterior_left_leg_injury
-      // );
-      // this.SetSelectValue(
-      //   "anterior_right_leg_injury",
-      //   this.anterior_right_leg_injury
-      // );
-      // this.SetSelectValue(
-      //   "anterior_genitalia_injury",
-      //   this.anterior_genitalia_injury
-      // );
-      // this.posterior_head_injury =
-      //   this.patientStepperFormFields.pcr_body_injuries.posterior_head_injury;
-      // this.posterior_chest_injury =
-      //   this.patientStepperFormFields.pcr_body_injuries.posterior_chest_injury;
-      // this.posterior_pelvis_injury =
-      //   this.patientStepperFormFields.pcr_body_injuries.posterior_pelvis_injury;
-      // this.posterior_left_arm_injury =
-      //   this.patientStepperFormFields.pcr_body_injuries.posterior_left_arm_injury;
-      // this.posterior_right_arm_injury =
-      //   this.patientStepperFormFields.pcr_body_injuries.posterior_right_arm_injury;
-      // this.posterior_left_leg_injury =
-      //   this.patientStepperFormFields.pcr_body_injuries.posterior_left_leg_injury;
-      // this.posterior_right_leg_injury =
-      //   this.patientStepperFormFields.pcr_body_injuries.posterior_right_leg_injury;
-      // this.SetSelectValue("posterior_head_injury", this.posterior_head_injury);
-      // this.SetSelectValue(
-      //   "posterior_chest_injury",
-      //   this.posterior_chest_injury
-      // );
-      // this.SetSelectValue(
-      //   "posterior_pelvis_injury",
-      //   this.posterior_pelvis_injury
-      // );
-      // this.SetSelectValue(
-      //   "posterior_left_arm_injury",
-      //   this.posterior_left_arm_injury
-      // );
-      // this.SetSelectValue(
-      //   "posterior_right_arm_injury",
-      //   this.posterior_right_arm_injury
-      // );
-      // this.SetSelectValue(
-      //   "posterior_left_leg_injury",
-      //   this.posterior_left_leg_injury
-      // );
-      // this.SetSelectValue(
-      //   "posterior_right_leg_injury",
-      //   this.posterior_right_leg_injury
-      // );
+      if (this.anterior_head_injury.length > 0) {
+        this.SetSelectValue("anterior_head_injury", this.anterior_head_injury);
+      }
+      if (this.anterior_chest_injury.length > 0) {
+        this.SetSelectValue(
+          "anterior_chest_injury",
+          this.anterior_chest_injury
+        );
+      }
+      if (this.anterior_pelvis_injury.length > 0) {
+        this.SetSelectValue(
+          "anterior_pelvis_injury",
+          this.anterior_pelvis_injury
+        );
+      }
+      if (this.anterior_left_arm_injury.length > 0) {
+        this.SetSelectValue(
+          "anterior_left_arm_injury",
+          this.anterior_left_arm_injury
+        );
+      }
+      if (this.anterior_right_arm_injury.length > 0) {
+        this.SetSelectValue(
+          "anterior_right_arm_injury",
+          this.anterior_right_arm_injury
+        );
+      }
+      if (this.anterior_left_leg_injury.length > 0) {
+        this.SetSelectValue(
+          "anterior_left_leg_injury",
+          this.anterior_left_leg_injury
+        );
+      }
+      if (this.anterior_right_leg_injury.length > 0) {
+        this.SetSelectValue(
+          "anterior_right_leg_injury",
+          this.anterior_right_leg_injury
+        );
+      }
+      if (this.anterior_genitalia_injury.length > 0) {
+        this.SetSelectValue(
+          "anterior_genitalia_injury",
+          this.anterior_genitalia_injury
+        );
+      }
+      this.posterior_head_injury =
+        this.patientStepperFormFields.pcr_body_injuries.posterior_head_injury;
+      this.posterior_chest_injury =
+        this.patientStepperFormFields.pcr_body_injuries.posterior_chest_injury;
+      this.posterior_pelvis_injury =
+        this.patientStepperFormFields.pcr_body_injuries.posterior_pelvis_injury;
+      this.posterior_left_arm_injury =
+        this.patientStepperFormFields.pcr_body_injuries.posterior_left_arm_injury;
+      this.posterior_right_arm_injury =
+        this.patientStepperFormFields.pcr_body_injuries.posterior_right_arm_injury;
+      this.posterior_left_leg_injury =
+        this.patientStepperFormFields.pcr_body_injuries.posterior_left_leg_injury;
+      this.posterior_right_leg_injury =
+        this.patientStepperFormFields.pcr_body_injuries.posterior_right_leg_injury;
+      if (this.posterior_head_injury.length > 0) {
+        this.SetSelectValue(
+          "posterior_head_injury",
+          this.posterior_head_injury
+        );
+      }
+      if (this.posterior_chest_injury.length > 0) {
+        this.SetSelectValue(
+          "posterior_chest_injury",
+          this.posterior_chest_injury
+        );
+      }
+      if (this.posterior_pelvis_injury.length > 0) {
+        this.SetSelectValue(
+          "posterior_pelvis_injury",
+          this.posterior_pelvis_injury
+        );
+      }
+      if (this.posterior_left_arm_injury.length > 0) {
+        this.SetSelectValue(
+          "posterior_left_arm_injury",
+          this.posterior_left_arm_injury
+        );
+      }
+      if (this.posterior_right_arm_injury.length > 0) {
+        this.SetSelectValue(
+          "posterior_right_arm_injury",
+          this.posterior_right_arm_injury
+        );
+      }
+      if (this.posterior_left_leg_injury.length > 0) {
+        this.SetSelectValue(
+          "posterior_left_leg_injury",
+          this.posterior_left_leg_injury
+        );
+      }
+      if (this.posterior_right_leg_injury.length > 0) {
+        this.SetSelectValue(
+          "posterior_right_leg_injury",
+          this.posterior_right_leg_injury
+        );
+      }
       this.anterior_head_degree =
         this.patientStepperFormFields.pcr_burn_percentage.anterior_head_degree;
       this.anterior_chest_degree =
@@ -4622,6 +4697,12 @@ export default {
     },
   },
   methods: {
+    enableEdit() {
+      this.editable = true;
+    },
+    cancelEdit() {
+      this.editable = false;
+    },
     hideModal() {
       this.$store.commit("setEditPatientStepperForm", false);
       this.$store.commit("setEditPatientStepperFormArg", undefined);
@@ -4668,6 +4749,32 @@ export default {
     },
     capitalize(word) {
       return word.replace(/^\w/, (c) => c.toUpperCase());
+    },
+    calculateAge() {
+      if (this.birthdate) {
+        const today = new Date();
+        const birthdate = new Date(this.birthdate);
+        let age = today.getFullYear() - birthdate.getFullYear();
+
+        // Check if the birthdate for this year has not occurred yet
+        if (
+          today.getMonth() < birthdate.getMonth() ||
+          (today.getMonth() === birthdate.getMonth() &&
+            today.getDate() < birthdate.getDate())
+        ) {
+          age--;
+        }
+
+        this.age = age;
+
+        // Update the age input field
+        document.getElementById("age").value = age;
+      } else {
+        this.age = null;
+
+        // Clear the age input field
+        document.getElementById("age").value = "";
+      }
     },
     clear() {
       this.dispatch_date = "";
@@ -4839,8 +4946,12 @@ export default {
     SetSelectValue(elementId, value) {
       if (value.length > 0) {
         const element = document.querySelector(`#${elementId}`);
-        const selectInstance = Select.getInstance(element);
-        selectInstance.setValue(value);
+        if (element) {
+          const selectInstance = Select.getInstance(element);
+          if (selectInstance !== null) {
+            selectInstance.setValue(value);
+          }
+        }
       }
     },
     update() {
@@ -4850,7 +4961,6 @@ export default {
         category: "dispatch data",
         call_source: this.call_source,
         call_receive: this.call_receive,
-        barangay: this.barangay,
         incident_location: this.incident_location,
         responded: this.responded,
         t_o: this.t_o,
