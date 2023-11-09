@@ -68,7 +68,6 @@ export default {
       fetchedRows: [],
       filteredRows: [],
       emptyRows: [],
-      selectedDate: "",
       columns: [
         {
           label: "NAME",
