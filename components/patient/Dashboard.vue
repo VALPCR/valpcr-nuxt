@@ -73,12 +73,15 @@ export default {
         {
           label: "NAME",
           field: "name",
+          thClass: 'moveColumn',
+          tdClass: 'moveColumn',
         },
         {
           label: "LOCATION",
           field: "address",
+          thClass: 'moveColumn',
+          tdClass: 'moveColumn',
           filterOptions: {
-            styleClass: "class1",
             enabled: true,
             filterValue: "",
             filterFn: this.columnFilterFn,
@@ -87,9 +90,10 @@ export default {
         {
           label: "CASE",
           field: "case",
+          thClass: 'moveColumn',
+          tdClass: 'moveColumn',
           filterOptions: {
-            styleClass: "class1", // class to be added to the parent th element
-            enabled: true, // enable filter for this column
+            enabled: true,
             filterValue: "",
             filterDropdownItems: [
               "VA",
@@ -99,14 +103,15 @@ export default {
               "MT",
             ],
             filterFn: this.columnFilterFn,
-            trigger: "change", //only trigger on enter not on keyup
+            trigger: "change",
           },
         },
         {
           label: "DATE",
           field: "date",
+          thClass: 'moveColumn',
+          tdClass: 'moveColumn',
           filterOptions: {
-            styleClass: "class1",
             enabled: true,
             filterValue: "",
             filterFn: this.columnFilterFn,
@@ -241,3 +246,14 @@ export default {
   },
 };
 </script>
+
+<style>
+.moveColumn {
+  position: -webkit-sticky !important; /* for Safari */
+  position: sticky !important;
+  left: 0;
+  background: #fff !important;
+  border-right: 1px solid #ccc !important;
+  z-index: 999;
+}
+</style>
