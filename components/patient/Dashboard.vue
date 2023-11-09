@@ -78,8 +78,6 @@ export default {
         {
           label: "LOCATION",
           field: "address",
-          thClass: 'moveColumn',
-          tdClass: 'moveColumn',
           filterOptions: {
             enabled: true,
             filterValue: "",
@@ -89,8 +87,6 @@ export default {
         {
           label: "CASE",
           field: "case",
-          thClass: 'moveColumn',
-          tdClass: 'moveColumn',
           filterOptions: {
             enabled: true,
             filterValue: "",
@@ -108,8 +104,6 @@ export default {
         {
           label: "DATE",
           field: "date",
-          thClass: 'moveColumn',
-          tdClass: 'moveColumn',
           filterOptions: {
             enabled: true,
             filterValue: "",
