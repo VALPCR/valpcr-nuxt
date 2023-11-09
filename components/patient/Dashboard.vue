@@ -96,6 +96,7 @@ export default {
               "EMS",
               "SAR",
               "FIRE",
+              "MT",
             ],
             filterFn: this.columnFilterFn,
             trigger: "change", //only trigger on enter not on keyup
@@ -126,6 +127,13 @@ export default {
             styleClass: "class1",
             enabled: true,
             filterValue: "",
+            filterDropdownItems: [
+              "EMS 01",
+              "EMS 02",
+              "EMS 03",
+              "EMS 04",
+              "EMS 05",
+            ],
             filterFn: this.columnFilterFn,
           },
         },
