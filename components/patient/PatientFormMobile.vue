@@ -1847,64 +1847,67 @@
                     </div>                    
                   </div>
 
-                  <div class="grid grid-cols-6 gap-4 mt-3 mb-5">
+                  <div class="grid grid-cols-8 gap-4 mt-3 mb-5">
                     <!-- EYES -->
                     <div class="relative col-span-2">
                       <select
                         data-te-select-init
                         v-model="eyes"
                         class="bg-neutral-50"
+                        @change="updateScore()"
                       >
-                        <option selected value="2">Eyes</option>
-                        <option value="spontaneous">4 - Spontaneous</option>
-                        <option value="verbal">3 - Verbal</option>
-                        <option value="pain">2 - Pain</option>
-                        <option value="none">1 - None</option>
+                        <option selected value="0">Eyes</option>
+                        <option value="4">4 - Spontaneous</option>
+                        <option value="3">3 - Verbal</option>
+                        <option value="2">2 - Pain</option>
+                        <option value="1">1 - None</option>
                       </select>
                     </div>
                    
                     <!-- VERBAL -->
-                    <div class="relative col-span-2">
+                    <div class="relative col-span-3">
                       <select
                         data-te-select-init
                         v-model="verbal"
                         class="bg-neutral-50"
+                        @change="updateScore()"
                       >
-                        <option selected value="2">Verbal</option>
-                        <option value="oriented">5 - Oriented</option>
-                        <option value="confused">4 - Confused</option>
-                        <option value="inappropriate word">
+                        <option selected value="0">Verbal</option>
+                        <option value="5">5 - Oriented</option>
+                        <option value="4">4 - Confused</option>
+                        <option value="3">
                           3 - Inappropriate words
                         </option>
-                        <option value="incomprehensible sounds">
+                        <option value="2">
                           2 - Incomprehensible sounds
                         </option>
-                        <option value="none">1 - None</option>
+                        <option value="1">1 - None</option>
                       </select>
                     </div>
                     
                     <!-- MOTOR -->
                     <div
-                      class="relative col-span-2 place-content-start"
+                      class="relative col-span-3 place-content-start"
                     >
                       <select
                         data-te-select-init
                         v-model="motor"
                         class="bg-neutral-50"
+                        @change="updateScore()"
                       >
-                        <option selected value="2">Motor</option>
-                        <option value="obeys command">6 - Obeys Command</option>
-                        <option value="localize pain">5 - Localize Pain</option>
-                        <option value="withdraws to pain">
+                        <option selected value="0">Motor</option>
+                        <option value="6">6 - Obeys Command</option>
+                        <option value="5">5 - Localize Pain</option>
+                        <option value="4">
                           4 - Withdraws to Pain
                         </option>
-                        <option value="abnormal flexion">
+                        <option value="3">
                           3 - Abnormal Flexion
                         </option>
-                        <option value="abnormal extension">
+                        <option value="2">
                           2 - Abnormal Extension
                         </option>
-                        <option value="none">1 - None</option>
+                        <option value="1">1 - None</option>
                       </select>
                     </div>
                   </div>
@@ -2508,7 +2511,7 @@
                     <div class="text-center mb-3 w-1/5">
                       <label class="mb-0">Head</label>
                     </div>
-                    <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
+                    <div class="relative mb-3 grid grid-cols-3 gap-6 w-full">
                       <button
                         type="button"
                         @click="
@@ -2573,7 +2576,7 @@
                     <div class="text-center mb-3 w-1/5">
                       <label class="mb-0">Chest/Lungs</label>
                     </div>
-                    <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
+                    <div class="relative mb-3 grid grid-cols-3 gap-6 w-full">
                       <button
                         type="button"
                         @click="
@@ -2638,7 +2641,7 @@
                     <div class="text-center mb-3 w-1/5">
                       <label class="mb-0">Pelvis/GU</label>
                     </div>
-                    <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
+                    <div class="relative mb-3 grid grid-cols-3 gap-6 w-full">
                       <button
                         type="button"
                         @click="
@@ -2703,7 +2706,7 @@
                     <div class="text-center mb-3 w-1/5">
                       <label class="mb-0">Left Arm</label>
                     </div>
-                    <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
+                    <div class="relative mb-3 grid grid-cols-3 gap-6 w-full">
                       <button
                         type="button"
                         @click="
@@ -2768,7 +2771,7 @@
                     <div class="text-center mb-3 w-1/5">
                       <label class="mb-0">Right Arm</label>
                     </div>
-                    <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
+                    <div class="relative mb-3 grid grid-cols-3 gap-6 w-full">
                       <button
                         type="button"
                         @click="
@@ -2833,7 +2836,7 @@
                     <div class="text-center mb-3 w-1/5">
                       <label class="mb-0">Left Leg</label>
                     </div>
-                    <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
+                    <div class="relative mb-3 grid grid-cols-3 gap-6 w-full">
                       <button
                         type="button"
                         @click="
@@ -2898,7 +2901,7 @@
                     <div class="text-center mb-3 w-1/5">
                       <label class="mb-0">Right Leg</label>
                     </div>
-                    <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
+                    <div class="relative mb-3 grid grid-cols-3 gap-6 w-full">
                       <button
                         type="button"
                         @click="
@@ -2963,7 +2966,7 @@
                     <div class="text-center mb-3 w-1/5">
                       <label class="mb-0">Genitalia</label>
                     </div>
-                    <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
+                    <div class="relative mb-3 grid grid-cols-3 gap-6 w-full">
                       <button
                         type="button"
                         @click="
@@ -3029,7 +3032,7 @@
                     <div class="text-center mb-3 w-1/5">
                       <label class="mb-0">Head</label>
                     </div>
-                    <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
+                    <div class="relative mb-3 grid grid-cols-3 gap-6 w-full">
                       <button
                         type="button"
                         @click="
@@ -3094,7 +3097,7 @@
                     <div class="text-center mb-3 w-1/5">
                       <label class="mb-0">Chest/Lungs</label>
                     </div>
-                    <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
+                    <div class="relative mb-3 grid grid-cols-3 gap-6 w-full">
                       <button
                         type="button"
                         @click="
@@ -3159,7 +3162,7 @@
                     <div class="text-center mb-3 w-1/5">
                       <label class="mb-0">Pelvis/GU</label>
                     </div>
-                    <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
+                    <div class="relative mb-3 grid grid-cols-3 gap-6 w-full">
                       <button
                         type="button"
                         @click="
@@ -3224,7 +3227,7 @@
                     <div class="text-center mb-3 w-1/5">
                       <label class="mb-0">Left Arm</label>
                     </div>
-                    <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
+                    <div class="relative mb-3 grid grid-cols-3 gap-6 w-full">
                       <button
                         type="button"
                         @click="
@@ -3289,7 +3292,7 @@
                     <div class="text-center mb-3 w-1/5">
                       <label class="mb-0">Right Arm</label>
                     </div>
-                    <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
+                    <div class="relative mb-3 grid grid-cols-3 gap-6 w-full">
                       <button
                         type="button"
                         @click="
@@ -3354,7 +3357,7 @@
                     <div class="text-center mb-3 w-1/5">
                       <label class="mb-0">Left Leg</label>
                     </div>
-                    <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
+                    <div class="relative mb-3 grid grid-cols-3 gap-6 w-full">
                       <button
                         type="button"
                         @click="
@@ -3419,7 +3422,7 @@
                     <div class="text-center mb-3 w-1/5">
                       <label class="mb-0">Right Leg</label>
                     </div>
-                    <div class="relative mb-3 grid grid-cols-3 gap-4 w-full">
+                    <div class="relative mb-3 grid grid-cols-3 gap-6 w-full">
                       <button
                         type="button"
                         @click="
@@ -4390,9 +4393,10 @@ export default {
       applied_aed: "",
       problems: "",
       skin_color: "",
-      eyes: "",
-      verbal: "",
-      motor: "",
+      eyes: 0,
+      verbal: 0,
+      motor: 0,
+      score: 0,
       received_by: "",
       received_by_signature: "",
       medical_facility: "",
@@ -4528,6 +4532,13 @@ export default {
         // Clear the age input field
         document.getElementById("age").value = "";
       }
+    },
+    updateScore() {
+      // Calculate the total score
+      const totalScore = parseInt(this.eyes) + parseInt(this.verbal) + parseInt(this.motor);
+
+      // Update the "score" property with the total score
+      this.score = totalScore;
     },
     clear() {
       this.category = "";
