@@ -1419,7 +1419,9 @@
                 <form>
                   <!-- FOR TIME, BP, PR, RR, TEMP, SPO2 -->
                   <p class="text-center mb-5">
-                    <mark class="bg-primary-200 font-bold">Clinical Vital Signs</mark>
+                    <mark class="bg-primary-200 font-bold p-2"
+                      >Clinical Vital Signs</mark
+                    >
                   </p>
                   <div class="grid grid-cols-6 gap-4">
                     <div class="">
@@ -1809,10 +1811,12 @@
                     </div>
                   </div>
                   <hr
-                    class=" mt-2 h-0.5 border-t-0 bg-neutral-100 opacity-100 dark:opacity-50" 
+                    class="mt-2 h-0.5 border-t-0 bg-neutral-100 opacity-100 dark:opacity-50"
                   />
                   <p class="text-center mt-5">
-                    <mark class="bg-primary-200 font-bold">Glasgow Coma Scale (GCS)</mark>
+                    <mark class="bg-primary-200 font-bold p-2"
+                      >Glasgow Coma Scale (GCS)</mark
+                    >
                   </p>
                   <!-- For Glasgow Coma Scale (GCS)-->
                   <div class="grid grid-cols-6 gap-4 mt-6">
@@ -1845,7 +1849,7 @@
                           readonly
                         />
                       </div>
-                    </div>                    
+                    </div>
                   </div>
 
                   <div class="grid grid-cols-8 gap-4 mt-3 mb-5">
@@ -1864,7 +1868,7 @@
                         <option value="1">1 - None</option>
                       </select>
                     </div>
-                   
+
                     <!-- VERBAL -->
                     <div class="relative col-span-3">
                       <select
@@ -1876,20 +1880,14 @@
                         <option selected value="0">Verbal</option>
                         <option value="5">5 - Oriented</option>
                         <option value="4">4 - Confused</option>
-                        <option value="3">
-                          3 - Inappropriate words
-                        </option>
-                        <option value="2">
-                          2 - Incomprehensible sounds
-                        </option>
+                        <option value="3">3 - Inappropriate words</option>
+                        <option value="2">2 - Incomprehensible sounds</option>
                         <option value="1">1 - None</option>
                       </select>
                     </div>
-                    
+
                     <!-- MOTOR -->
-                    <div
-                      class="relative col-span-3 place-content-start"
-                    >
+                    <div class="relative col-span-3 place-content-start">
                       <select
                         data-te-select-init
                         v-model="motor"
@@ -1899,23 +1897,16 @@
                         <option selected value="0">Motor</option>
                         <option value="6">6 - Obeys Command</option>
                         <option value="5">5 - Localize Pain</option>
-                        <option value="4">
-                          4 - Withdraws to Pain
-                        </option>
-                        <option value="3">
-                          3 - Abnormal Flexion
-                        </option>
-                        <option value="2">
-                          2 - Abnormal Extension
-                        </option>
+                        <option value="4">4 - Withdraws to Pain</option>
+                        <option value="3">3 - Abnormal Flexion</option>
+                        <option value="2">2 - Abnormal Extension</option>
                         <option value="1">1 - None</option>
                       </select>
                     </div>
                   </div>
                   <hr
-                    class=" mt-2 h-0.5 border-t-0 bg-neutral-100 opacity-100 dark:opacity-50" 
+                    class="mt-2 h-0.5 border-t-0 bg-neutral-100 opacity-100 dark:opacity-50"
                   />
-                
                 </form>
               </div>
             </div>
@@ -3738,7 +3729,7 @@
                 aria-expanded="false"
                 aria-controls="flush-collapseSeven"
               >
-                Treatment Intervention
+                Treatment / Intervention
                 <span
                   class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white"
                 >
@@ -4010,43 +4001,82 @@
               aria-labelledby="flush-headingEight"
               data-te-parent="#accordionFlushExample"
             >
-              <div class="px-5 py-4">
+              <div class="px-5 py-4 mt-5 mb-5">
                 <form>
                   <div class="grid grid-col-2 sm:grid-cols-2 gap-4">
-                    <div class="relative mb-1" data-te-input-wrapper-init>
-                      <input
-                        v-model="received_by"
-                        type="text"
-                        class="peer block min-h-[auto] rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                        id="receivedBy"
-                        aria-describedby="receivedBy"
-                        placeholder="Received By"
-                      />
-                      <label
-                        for="receivedBy"
-                        class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                      >
-                        Received By
-                      </label>
+                    <div class="grid grid-col-1 sm:grid-cols-1">
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="received_by"
+                          type="text"
+                          class="peer block min-h-[auto] rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="receivedBy"
+                          aria-describedby="receivedBy"
+                          placeholder="Received By"
+                        />
+                        <label
+                          for="receivedBy"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          Received By
+                        </label>
+                      </div>
+
+                      <div class="relative mb-3">
+                        <vue-signature
+                          ref="received_by_signature"
+                          :w="'600px'"
+                          :h="'200px'"
+                        />
+                        <label
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          Signature Here
+                        </label>
+                        <button
+                          class="ml-1 inline-block rounded border border-slate-400 bg-slate-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out hover:bg-slate-300 hover:border-slate-400 hover:bg-slate-300 focus:bg-slate-300 focus:shadow-[0_4px_9px_-4px_#3b71ca] focus:ring-0 active:bg-slate-300"
+                          @click="$refs.received_by_signature.clear()"
+                        >
+                          Clear
+                        </button>
+                      </div>
                     </div>
 
-                    <div class="relative mb-3">
-                      <vue-signature
-                        ref="received_by_signature"
-                        :w="'600px'"
-                        :h="'200px'"
-                      />
-                      <label
-                        class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                      >
-                        Signature Here
-                      </label>
-                      <button
-                        class="ml-1 inline-block rounded border border-slate-400 bg-slate-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out hover:bg-slate-300 hover:border-slate-400 hover:bg-slate-300 focus:bg-slate-300 focus:shadow-[0_4px_9px_-4px_#3b71ca] focus:ring-0 active:bg-slate-300"
-                        @click="$refs.received_by_signature.clear()"
-                      >
-                        Clear
-                      </button>
+                    <div class="grid grid-col-1 sm:grid-cols-1">
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="team_leader"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="teamLead"
+                          aria-describedby="teamLead"
+                          placeholder="Team Leader"
+                        />
+                        <label
+                          for="teamLead"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          Team Leader
+                        </label>
+                      </div>
+
+                      <div class="relative mb-3">
+                        <vue-signature
+                          ref="team_leader_signature"
+                          :w="'600px'"
+                          :h="'200px'"
+                        />
+                        <label
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                          >Signature Here
+                        </label>
+                        <button
+                          class="ml-1 inline-block rounded border border-slate-400 bg-slate-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out hover:bg-slate-300 hover:border-slate-400 hover:bg-slate-300 focus:bg-slate-300 focus:shadow-[0_4px_9px_-4px_#3b71ca] focus:ring-0 active:bg-slate-300"
+                          @click="$refs.team_leader_signature.clear()"
+                        >
+                          Clear
+                        </button>
+                      </div>
                     </div>
                   </div>
 
@@ -4055,7 +4085,7 @@
                       R.A. 8344 REFUSAL TO ADMIT
                     </h4>
 
-                    <div class="grid grid-col-2 sm:grid-cols-2 gap-4">
+                    <div class="grid grid-col-1 sm:grid-cols-1 gap-4">
                       <div class="relative mb-5" data-te-input-wrapper-init>
                         <input
                           v-model="medical_facility"
@@ -4090,43 +4120,6 @@
                           Clear
                         </button>
                       </div>
-                    </div>
-                  </div>
-
-                  <div class="grid grid-col-2 sm:grid-cols-2 gap-4">
-                    <div class="relative mb-1" data-te-input-wrapper-init>
-                      <input
-                        v-model="team_leader"
-                        type="text"
-                        class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                        id="teamLead"
-                        aria-describedby="teamLead"
-                        placeholder="Team Leader"
-                      />
-                      <label
-                        for="teamLead"
-                        class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                      >
-                        Team Leader
-                      </label>
-                    </div>
-
-                    <div class="relative mb-3">
-                      <vue-signature
-                        ref="team_leader_signature"
-                        :w="'600px'"
-                        :h="'200px'"
-                      />
-                      <label
-                        class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                        >Signature Here
-                      </label>
-                      <button
-                        class="ml-1 inline-block rounded border border-slate-400 bg-slate-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out hover:bg-slate-300 hover:border-slate-400 hover:bg-slate-300 focus:bg-slate-300 focus:shadow-[0_4px_9px_-4px_#3b71ca] focus:ring-0 active:bg-slate-300"
-                        @click="$refs.team_leader_signature.clear()"
-                      >
-                        Clear
-                      </button>
                     </div>
                   </div>
 
@@ -4209,6 +4202,421 @@
                     </div>
                   </div>
                 </form>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="rounded-none border border-b-0 border-l-0 border-r-0 border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-neutral-800"
+          >
+            <h2 class="mb-0" id="flush-headingNine">
+              <button
+                class="group relative flex w-full items-center rounded-none border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]"
+                type="button"
+                data-te-collapse-init
+                data-te-collapse-collapsed
+                data-te-target="#flush-collapseNine"
+                aria-expanded="false"
+                aria-controls="flush-collapseNine"
+              >
+                Waiver
+                <span
+                  class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-6 w-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </h2>
+            <div
+              id="flush-collapseNine"
+              class="!visible hidden"
+              data-te-collapse-item
+              aria-labelledby="flush-headingNine"
+              data-te-parent="#accordionFlushExample"
+            >
+              <div class="px-5 py-5 mt-5 mb-5">
+                <!-- WAIVER - STATEMENTS  -->
+                <div
+                  class="scrollable-container p-10 border border-gray-300 rounded-md max-h-64 overflow-y-auto gap-4 py-5"
+                >
+                  <div
+                    class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem] text-justify mt-3"
+                  >
+                    <input
+                      v-model="statement_one"
+                      class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                      type="checkbox"
+                      value=""
+                      id="statementOne"
+                    />
+                    <label
+                      class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                      for="statementOne"
+                    >
+                      <strong
+                        >I refused to be treated neither accept medical
+                        assistance from VCDRRMO given the fact that I was
+                        informed of my present situation and its possible
+                        consequences if not treated.</strong
+                      >
+                      <em>
+                        (Tumatanggi akong mabigyan ng pangunang lunas o anumang
+                        medikal na tulong mula sa VCDRRMO kahit na lubusang
+                        naipaliwanag nila ang aking kasalukuyang sitwasyon at
+                        ang mga posibleng kahihinatnan kung hindi
+                        magagamot.)</em
+                      >
+                    </label>
+                  </div>
+
+                  <div
+                    class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem] text-justify mt-5"
+                  >
+                    <input
+                      v-model="statement_two"
+                      class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                      type="checkbox"
+                      value=""
+                      id="statementTwo"
+                    />
+                    <label
+                      class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                      for="statementTwo"
+                    >
+                      <strong
+                        >I refused to be transported to a
+                        hospital/clinic/medical facilities.</strong
+                      >
+                      <em>
+                        (Tumatanggi akong magpadala sa ospital/klinika/o kahit
+                        anumang medikal na kapasidad.)</em
+                      >
+                    </label>
+                  </div>
+
+                  <div
+                    class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem] text-justify mt-5"
+                  >
+                    <input
+                      v-model="statement_three"
+                      class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                      type="checkbox"
+                      value=""
+                      id="statementThree"
+                    />
+                    <label
+                      class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                      for="statementThree"
+                    >
+                      <strong
+                        >I insisted to be brought to the hospital of my choice
+                        (Name of Hospital:</strong
+                      >
+                      <input
+                        type="text"
+                        v-model="hospital_name"
+                        class="ml-2 p-1 border border-gray-300 rounded-md"
+                        placeholder="Name of Hospital"
+                      />
+                      <strong
+                        >) inspite the advice or warning of VCDRRMO that it is
+                        best to be transported to the nearest
+                        hospital/appropriate hospital.
+                      </strong>
+                      <em>
+                        (Iginiit ko na madala sa ospital na aking pinili
+                        (Pangalan ng Ospital: __________) sa kabila ng payo o
+                        babala ng VCDRRMO na mas nararapat sa pinakamalapit na
+                        ospital/angkop na ospital.)</em
+                      >
+                    </label>
+                  </div>
+
+                  <div
+                    class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem] text-justify mt-5"
+                  >
+                    <input
+                      v-model="statement_four"
+                      class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                      type="checkbox"
+                      value=""
+                      id="statementFour"
+                    />
+                    <label
+                      class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                      for="statementFour"
+                    >
+                      <strong
+                        >Relatives/Guardian insisted that the patient be
+                        transported or transferred from</strong
+                      >
+                      <input
+                        type="text"
+                        v-model="from_hospital"
+                        class="ml-2 p-1 border border-gray-300 rounded-md"
+                        placeholder="From"
+                      />
+                      <strong> to </strong>
+                      <input
+                        type="text"
+                        v-model="to_hospital"
+                        class="ml-2 p-1 border border-gray-300 rounded-md"
+                        placeholder="To"
+                      />
+                      <strong
+                        >inspite the patient's known serious/risky medical
+                        condition.</strong
+                      >
+                      <em>
+                        (Kamaganak/Tagapag-alaga ay iginiit na madala o mahatid
+                        ang pasyente mula ________ patungo _______ sa kabila ng
+                        malubha/mapanganib na medikal na kondisyon ng
+                        pasyente.)</em
+                      >
+                    </label>
+                  </div>
+                  <div class="mb-[0.125rem] block min-h-[1.5rem]">
+                    <label class="block mb-3 mt-6">
+                      <p class="text-left mb-5">
+                        <mark class="bg-green-300 font-bold p-2"
+                          >Others statement:</mark
+                        >
+                      </p>
+                      <textarea
+                        v-model="other_statement"
+                        class="mt-2 p-1 border border-gray-300 rounded-md w-full"
+                        placeholder="Enter other statement here"
+                        rows="6"
+                      >
+                      </textarea>
+                    </label>
+                  </div>
+                </div>
+                <!-- WAIVER - OTHER SECTIONS -->
+                <div
+                  class="grid grid-col-5 sm:grid-cols-5 md:grid-cols-5 mt-5 gap-6"
+                >
+                  <div class="grid grid-col-1 sm:grid-cols-1 col-span-3">
+                    <div class="relative mb-1 top-4" data-te-input-wrapper-init>
+                      <input
+                        v-model="responder_full_name"
+                        type="text"
+                        class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        id="responderFullName"
+                        aria-describedby="responderSign"
+                        placeholder="Responder"
+                      />
+                      <label
+                        for="responderFullName"
+                        class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                      >
+                        Responder's Full Name
+                      </label>
+                    </div>
+
+                    <div class="relative mb-3 top-3">
+                      <vue-signature
+                        ref="responder_signature"
+                        :w="'400px'"
+                        :h="'200px'"
+                      />
+                      <label
+                        class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >Signature Here
+                      </label>
+                      <button
+                        class="ml-1 inline-block rounded border border-slate-400 bg-slate-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out hover:bg-slate-300 hover:border-slate-400 hover:bg-slate-300 focus:bg-slate-300 focus:shadow-[0_4px_9px_-4px_#3b71ca] focus:ring-0 active:bg-slate-300"
+                        @click="$refs.responder_signature.clear()"
+                      >
+                        Clear
+                      </button>
+                    </div>
+                  </div>
+                  <div class="col-span-2">
+                    <div class="relative top-4" data-te-input-wrapper-init>
+                      <input
+                        v-model="responder_waiver_date"
+                        type="date"
+                        class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                      />
+                      <label
+                        class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                      >
+                        Date
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <label
+                    class="inline-block pl-[0.15rem] text-justify mt-7 px-4"
+                  >
+                    <strong
+                      >I hereby declare that the VCDRRMO is not liable on
+                      whatever will happen to the patient given the above
+                      mentioned decision.</strong
+                    ><em
+                      >(Sa pamamagitan nito ipinapahayag ko na ang VCDRRMO ay
+                      walang pananagutan sa anumang mangyayari sa pasyente na
+                      naaayon sa mga nabanggit na desisyon sa itaas.)</em
+                    >
+                  </label>
+                </div>
+                <div class="mt-7 mb-0">
+                  <label class="underline decoration-red-500 decoration-4"
+                    ><strong>CONFORME/</strong><em>SUMASANG-AYON:</em></label
+                  >
+                </div>
+
+                <div
+                  class="grid grid-col-5 sm:grid-cols-5 md:grid-cols-5 mt-2 gap-6"
+                >
+                  <div class="grid grid-col-1 sm:grid-cols-1 col-span-3">
+                    <div class="relative mb-1 top-4" data-te-input-wrapper-init>
+                      <input
+                        v-model="patient_or_relative_name"
+                        type="text"
+                        class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        id="patientOrRelativeName"
+                        aria-describedby="patientOrRelativeName"
+                        placeholder="Patient/Relative's Name"
+                      />
+                      <label
+                        for="patientOrRelativeName"
+                        class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                      >
+                        Patient's Name/Relative/Guardian's Name
+                      </label>
+                    </div>
+
+                    <div class="relative mb-3 top-3">
+                      <vue-signature
+                        ref="patient_or_relative_signature"
+                        :w="'400px'"
+                        :h="'200px'"
+                      />
+                      <label
+                        class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >Signature Here
+                      </label>
+                      <button
+                        class="ml-1 inline-block rounded border border-slate-400 bg-slate-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out hover:bg-slate-300 hover:border-slate-400 hover:bg-slate-300 focus:bg-slate-300 focus:shadow-[0_4px_9px_-4px_#3b71ca] focus:ring-0 active:bg-slate-300"
+                        @click="$refs.patient_or_relative_signature.clear()"
+                      >
+                        Clear
+                      </button>
+                    </div>
+                  </div>
+                  <div class="col-span-2">
+                    <div class="relative top-4" data-te-input-wrapper-init>
+                      <input
+                        v-model="patient_relative_waiver_date"
+                        type="date"
+                        class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                      />
+                      <label
+                        class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                      >
+                        Date
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="relative mb-6 top-10">
+                  <label class="underline decoration-sky-500 decoration-4"
+                    ><strong>WITNESS:</strong></label
+                  >
+                  <div class="grid grid-col-2 sm:grid-cols-2 gap-4 mt-5">
+                    <div class="grid grid-col-1 sm:grid-cols-1">
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="witness_one"
+                          type="text"
+                          class="peer block min-h-[auto] rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="witnessOne"
+                          aria-describedby="witnessOne"
+                          placeholder="1.   Witness Name"
+                        />
+                        <label
+                          for="witnessOne"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          1. Witness Name
+                        </label>
+                      </div>
+
+                      <div class="relative mb-3">
+                        <vue-signature
+                          ref="witness_one_signature"
+                          :w="'600px'"
+                          :h="'200px'"
+                        />
+                        <label
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          Signature Here
+                        </label>
+                        <button
+                          class="ml-1 inline-block rounded border border-slate-400 bg-slate-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out hover:bg-slate-300 hover:border-slate-400 hover:bg-slate-300 focus:bg-slate-300 focus:shadow-[0_4px_9px_-4px_#3b71ca] focus:ring-0 active:bg-slate-300"
+                          @click="$refs.witness_one_signature.clear()"
+                        >
+                          Clear
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="grid grid-col-1 sm:grid-cols-1">
+                      <div class="relative mb-1" data-te-input-wrapper-init>
+                        <input
+                          v-model="witness_two"
+                          type="text"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="witnessTwo"
+                          aria-describedby="witnessTwo"
+                          placeholder="2.   Witness Name"
+                        />
+                        <label
+                          for="witnessTwo"
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                        >
+                          2. Witness Name
+                        </label>
+                      </div>
+
+                      <div class="relative mb-3">
+                        <vue-signature
+                          ref="witness_two_signature"
+                          :w="'600px'"
+                          :h="'200px'"
+                        />
+                        <label
+                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                          >Signature Here
+                        </label>
+                        <button
+                          class="ml-1 inline-block rounded border border-slate-400 bg-slate-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out hover:bg-slate-300 hover:border-slate-400 hover:bg-slate-300 focus:bg-slate-300 focus:shadow-[0_4px_9px_-4px_#3b71ca] focus:ring-0 active:bg-slate-300"
+                          @click="$refs.witness_two_signature.clear()"
+                        >
+                          Clear
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -4438,6 +4846,25 @@ export default {
       posterior_right_arm_degree: "",
       posterior_left_leg_degree: "",
       posterior_right_leg_degree: "",
+      statement_one: "",
+      statement_two: "",
+      statement_three: "",
+      hospital_name: "",
+      statement_four: "",
+      from_hospital: "",
+      to_hospital: "",
+      other_statement: "",
+      responder_full_name: "",
+      responder_signature: "",
+      responder_waiver_date: "",
+      patient_or_relative_name: "",
+      patient_or_relative_signature: "",
+      patient_relative_waiver_date: "",
+      witness_one: "",
+      witness_one_signature: "",
+      witness_two: "",
+      witness_two_signature: "",
+    
     };
   },
   fetch() {
@@ -4465,6 +4892,9 @@ export default {
         hour: "numeric",
         minute: "numeric",
       });
+    },
+    formatStatement(text) {
+      return text;
     },
     setCallReceived() {
       this.call_receive = this.formattedDateTime();
@@ -4536,7 +4966,8 @@ export default {
     },
     updateScore() {
       // Calculate the total score
-      const totalScore = parseInt(this.eyes) + parseInt(this.verbal) + parseInt(this.motor);
+      const totalScore =
+        parseInt(this.eyes) + parseInt(this.verbal) + parseInt(this.motor);
 
       // Update the "score" property with the total score
       this.score = totalScore;
@@ -4605,6 +5036,7 @@ export default {
       this.time_c = "";
       this.time_d = "";
       this.time_e = "";
+      this.time_f = "";
       this.bp_a = "";
       this.bp_b = "";
       this.bp_c = "";
@@ -4644,6 +5076,7 @@ export default {
       this.eyes = "";
       this.verbal = "";
       this.motor = "";
+      this.score = "";
       this.prenatal_checkup = "";
       this.labor_pains = "";
       this.last_menstrual_period = "";
@@ -4706,6 +5139,24 @@ export default {
       this.posterior_right_arm_degree = "";
       this.posterior_left_leg_degree = "";
       this.posterior_right_leg_degree = "";
+      this.statement_one = "";
+      this.statement_two = "";
+      this.statement_three = "";
+      this.hospital_name = "";
+      this.statement_four = "";
+      this.from_hospital = "";
+      this.to_hospital = "";
+      this.other_statement = "";
+      this.responder_full_name = "";
+      this.responder_signature = "";
+      this.responder_waiver_date = "";
+      this.patient_or_relative_name = "";
+      this.patient_or_relative_signature = "";
+      this.patient_relative_waiver_date = "";
+      this.witness_one = "";
+      this.witness_one_signature = "";
+      this.witness_two = "";
+      this.witness_two_signature = "";
     },
     register() {
       const params = {
@@ -4793,6 +5244,7 @@ export default {
         tempt_c: this.tempt_c,
         tempt_d: this.tempt_d,
         tempt_e: this.tempt_e,
+        tempt_f: this.tempt_f,
         spo2_a: this.spo2_a,
         spo2_b: this.spo2_b,
         spo2_c: this.spo2_c,
@@ -4812,6 +5264,7 @@ export default {
         eyes: this.eyes,
         verbal: this.verbal,
         motor: this.motor,
+        score: this.score,
         prenatal_checkup: this.prenatal_checkup,
         labor_pains: this.labor_pains,
         last_menstrual_period: this.last_menstrual_period,
@@ -4875,6 +5328,24 @@ export default {
         posterior_right_arm_degree: this.posterior_right_arm_degree,
         posterior_left_leg_degree: this.posterior_left_leg_degree,
         posterior_right_leg_degree: this.posterior_right_leg_degree,
+        statement_one: this.statement_one,
+        statement_two: this.statement_two,
+        statement_three: this.statement_three,
+        hospital_name: this.hospital_name,
+        statement_four: this.statement_four,
+        from_hospital: this.from_hospital,
+        to_hospital: this.to_hospital,
+        other_statement: this.other_statement,
+        responder_full_name: this.responder_full_name,
+        responder_signature: this.responder_signature.save(),
+        responder_waiver_date: this.responder_waiver_date,
+        patient_or_relative_name: this.patient_or_relative_name,
+        patient_or_relative_signature: this.patient_or_relative_signature.save(),
+        patient_relative_waiver_date: this.patient_relative_waiver_date,
+        witness_one: this.witness_one,
+        witness_one_signature: this.witness_one_signature.save(),
+        witness_two: this.witness_two,
+        witness_two_signature: this.witness_two_signature.save(),
       };
 
       this.$axios.post("pcr/emr/register", params).then(() => {
@@ -4941,6 +5412,7 @@ export default {
         this.time_c = "";
         this.time_d = "";
         this.time_e = "";
+        this.time_f = "";
         this.bp_a = "";
         this.bp_b = "";
         this.bp_c = "";
@@ -4980,6 +5452,7 @@ export default {
         this.eyes = "";
         this.verbal = "";
         this.motor = "";
+        this.score = "";
         this.prenatal_checkup = "";
         this.labor_pains = "";
         this.last_menstrual_period = "";
