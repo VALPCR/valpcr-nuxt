@@ -5515,6 +5515,24 @@ export default {
         this.posterior_right_arm_degree = "";
         this.posterior_left_leg_degree = "";
         this.posterior_right_leg_degree = "";
+        this.statement_one = "";
+        this.statement_two = "";
+        this.statement_three = "";
+        this.hospital_name = "";
+        this.statement_four = "";
+        this.from_hospital = "";
+        this.to_hospital = "";
+        this.other_statement = "";
+        this.responder_full_name = "";
+        this.responder_signature = "";
+        this.responder_waiver_date = "";
+        this.patient_or_relative_name = "";
+        this.patient_or_relative_signature = "";
+        this.patient_relative_waiver_date = "";
+        this.witness_one = "";
+        this.witness_one_signature = "";
+        this.witness_two = "";
+        this.witness_two_signature = "";
         location.reload();
       });
     },
