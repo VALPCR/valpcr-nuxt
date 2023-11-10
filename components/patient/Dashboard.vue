@@ -72,8 +72,8 @@ export default {
         {
           label: "NAME",
           field: "name",
-          thClass: 'moveColumn',
-          tdClass: 'moveColumn',
+          thClass: "moveColumn",
+          tdClass: "moveColumn",
         },
         {
           label: "LOCATION",
@@ -90,13 +90,7 @@ export default {
           filterOptions: {
             enabled: true,
             filterValue: "",
-            filterDropdownItems: [
-              "VA",
-              "EMS",
-              "SAR",
-              "FIRE",
-              "MT",
-            ],
+            filterDropdownItems: ["VA", "EMS", "SAR", "FIRE", "MT"],
             filterFn: this.columnFilterFn,
             trigger: "change",
           },
@@ -226,12 +220,19 @@ export default {
       if (params.event.target.id.includes("qr")) {
         const qrModal = new Modal(document.getElementById("qrCode"));
         qrModal.show();
-      } else if (typeof params.event.target.classList[0] !== 'undefined') {
-        if (typeof params.event.target.classList[0].includes("restore") !== 'undefined') {
-          this.$axios.get("pcr/single/archive?id=" + params.event.target.classList[0].split('_')[1])
+      } else if (typeof params.event.target.classList[0] !== "undefined") {
+        if (
+          typeof params.event.target.classList[0].includes("restore") !==
+          "undefined"
+        ) {
+          this.$axios
+            .get(
+              "pcr/single/archive?id=" +
+                params.event.target.classList[0].split("_")[1]
+            )
             .then(() => {
               location.reload();
-            })
+            });
         }
       } else {
         const editModal = new Modal(

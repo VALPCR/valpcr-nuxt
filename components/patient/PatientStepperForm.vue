@@ -991,7 +991,10 @@
                         </select>
                       </div>
 
-                      <div class="relative mb-1 col-span-2" data-te-input-wrapper-init>
+                      <div
+                        class="relative mb-1 col-span-2"
+                        data-te-input-wrapper-init
+                      >
                         <input
                           v-model="companion"
                           type="text"
@@ -1485,7 +1488,8 @@
                         </div>
                       </div>
                       <div class="">
-                        <h4 class="mb-3 font-bold">PR
+                        <h4 class="mb-3 font-bold">
+                          PR
                           <small>(beats/min)</small>
                         </h4>
                         <div class="relative mb-2" data-te-input-wrapper-init>
@@ -4344,7 +4348,11 @@ export default {
         let age = today.getFullYear() - birthdate.getFullYear();
 
         // Check if the birthdate for this year has not occurred yet
-        if (today.getMonth() < birthdate.getMonth() || (today.getMonth() === birthdate.getMonth() && today.getDate() < birthdate.getDate())) {
+        if (
+          today.getMonth() < birthdate.getMonth() ||
+          (today.getMonth() === birthdate.getMonth() &&
+            today.getDate() < birthdate.getDate())
+        ) {
           age--;
         }
 
@@ -4356,7 +4364,7 @@ export default {
         this.age = null;
 
         // Clear the age input field
-        document.getElementById("age").value = '';
+        document.getElementById("age").value = "";
       }
     },
     clear() {
