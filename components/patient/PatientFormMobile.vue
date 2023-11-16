@@ -5337,15 +5337,15 @@ export default {
         to_hospital: this.to_hospital,
         other_statement: this.other_statement,
         responder_full_name: this.responder_full_name,
-        responder_signature: this.responder_signature.save(),
+        responder_signature: this.$refs.responder_signature.save(),
         responder_waiver_date: this.responder_waiver_date,
         patient_or_relative_name: this.patient_or_relative_name,
-        patient_or_relative_signature: this.patient_or_relative_signature.save(),
+        patient_or_relative_signature: this.$refs.patient_or_relative_signature.save(),
         patient_relative_waiver_date: this.patient_relative_waiver_date,
         witness_one: this.witness_one,
-        witness_one_signature: this.witness_one_signature.save(),
+        witness_one_signature: this.$refs.witness_one_signature.save(),
         witness_two: this.witness_two,
-        witness_two_signature: this.witness_two_signature.save(),
+        witness_two_signature: this.$refs.witness_two_signature.save(),
       };
 
       this.$axios.post("pcr/emr/register", params).then(() => {
