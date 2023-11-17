@@ -1801,7 +1801,7 @@
                         v-model="skin_color"
                         class="bg-neutral-50"
                       >
-                        <option selected value="2">Skin Color</option>
+                        <option selected value="default">Skin Color</option>
                         <option value="normal">Normal</option>
                         <option value="cyanotic">Cyanotic</option>
                         <option value="pale">Pale</option>
@@ -4205,7 +4205,6 @@
               </div>
             </div>
           </div>
-
           <div
             class="rounded-none border border-b-0 border-l-0 border-r-0 border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-neutral-800"
           >
@@ -4864,7 +4863,7 @@ export default {
       witness_one_signature: "",
       witness_two: "",
       witness_two_signature: "",
-    
+
     };
   },
   fetch() {
@@ -5224,6 +5223,7 @@ export default {
         time_c: this.time_c,
         time_d: this.time_d,
         time_e: this.time_e,
+        time_f: this.time_f,
         bp_a: this.bp_a,
         bp_b: this.bp_b,
         bp_c: this.bp_c,
@@ -5244,7 +5244,6 @@ export default {
         tempt_c: this.tempt_c,
         tempt_d: this.tempt_d,
         tempt_e: this.tempt_e,
-        tempt_f: this.tempt_f,
         spo2_a: this.spo2_a,
         spo2_b: this.spo2_b,
         spo2_c: this.spo2_c,
