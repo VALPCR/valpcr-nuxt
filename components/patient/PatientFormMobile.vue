@@ -4648,17 +4648,7 @@
 </template>
 
 <script>
-import {
-  Modal,
-  initTE,
-  Ripple,
-  Stepper,
-  Input,
-  Datepicker,
-  Select,
-  Timepicker,
-  Collapse,
-} from "tw-elements";
+import {Collapse, Datepicker, initTE, Input, Modal, Ripple, Select, Stepper, Timepicker,} from "tw-elements";
 
 export default {
   mounted() {
@@ -4964,12 +4954,8 @@ export default {
       }
     },
     updateScore() {
-      // Calculate the total score
-      const totalScore =
-        parseInt(this.eyes) + parseInt(this.verbal) + parseInt(this.motor);
-
       // Update the "score" property with the total score
-      this.score = totalScore;
+      this.score = parseInt(this.eyes) + parseInt(this.verbal) + parseInt(this.motor);
     },
     clear() {
       this.category = "";
