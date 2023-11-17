@@ -213,40 +213,44 @@ export default {
   },
   fetch() {
     this.role = this.$auth.user.role;
-    this.$axios.get("pcr/list?category=dispatch data&emrId=" + this.$auth.user.id).then((response) => {
-      response.data.return.map((pcr) =>
-        this.fetchedRows.push({
-          id: pcr.id,
-          name:
-            (pcr.pcr_patient.patient.first_name !== null
-              ? pcr.pcr_patient.patient.first_name
-              : "") +
-            " " +
-            (pcr.pcr_patient.patient.middle_name !== null
-              ? pcr.pcr_patient.patient.middle_name
-              : "") +
-            " " +
-            (pcr.pcr_patient.patient.surname !== null
-              ? pcr.pcr_patient.patient.surname
-              : ""),
-          address: pcr.incident_location,
-          case:
-            pcr.ems_location_a !== null ? pcr.ems_location_a.toUpperCase() : "",
-          date: pcr.dispatch_date,
-          call: pcr.call_receive !== null ? pcr.call_receive : "",
-          arrival: pcr.arrived_at,
-          ambulance: pcr.ambulance !== null ? pcr.ambulance : "",
-          created:
-            pcr.user_pcr.user.first_name +
-            " " +
-            pcr.user_pcr.user.last_name +
-            " (" +
-            (pcr.user_pcr.user.role === "emr" ? "Responder" : "Dispatcher") +
-            ")",
-          category: this.capitalize(pcr.category),
-        })
-      );
-    });
+    this.$axios
+      .get("pcr/list?category=dispatch data&emrId=" + this.$auth.user.id)
+      .then((response) => {
+        response.data.return.map((pcr) =>
+          this.fetchedRows.push({
+            id: pcr.id,
+            name:
+              (pcr.pcr_patient.patient.first_name !== null
+                ? pcr.pcr_patient.patient.first_name
+                : "") +
+              " " +
+              (pcr.pcr_patient.patient.middle_name !== null
+                ? pcr.pcr_patient.patient.middle_name
+                : "") +
+              " " +
+              (pcr.pcr_patient.patient.surname !== null
+                ? pcr.pcr_patient.patient.surname
+                : ""),
+            address: pcr.incident_location,
+            case:
+              pcr.ems_location_a !== null
+                ? pcr.ems_location_a.toUpperCase()
+                : "",
+            date: pcr.dispatch_date,
+            call: pcr.call_receive !== null ? pcr.call_receive : "",
+            arrival: pcr.arrived_at,
+            ambulance: pcr.ambulance !== null ? pcr.ambulance : "",
+            created:
+              pcr.user_pcr.user.first_name +
+              " " +
+              pcr.user_pcr.user.last_name +
+              " (" +
+              (pcr.user_pcr.user.role === "emr" ? "Responder" : "Dispatcher") +
+              ")",
+            category: this.capitalize(pcr.category),
+          })
+        );
+      });
   },
   created() {
     this.filteredRows = this.fetchedRows;
