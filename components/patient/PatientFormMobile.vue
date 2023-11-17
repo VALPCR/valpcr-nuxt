@@ -799,6 +799,18 @@
                   </div>
                 </form>
               </div>
+              <div class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md border-t-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50 min-[0px]:rounded-none">
+                <button
+                  @click="clear('section1')"
+                  type="button"
+                  class="inline-block ml-1 rounded bg-danger mb-7 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#dc4c64] transition duration-150 ease-in-out hover:bg-danger-600 hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:bg-danger-600 focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:outline-none focus:ring-0 active:bg-danger-700 active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(220,76,100,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)]"
+                  data-te-ripple-init
+                  data-te-ripple-color="light"
+                >
+                  CLEAR
+                </button>
+              </div>
+             
             </div>
           </div>
           <div
@@ -1371,6 +1383,17 @@
                     <!-- EVENTS LEADING TO INJURY -->
                   </div>
                 </form>
+              </div>
+              <div class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md border-t-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50 min-[0px]:rounded-none">
+                <button
+                  @click="clear('section2')"
+                  type="button"
+                  class="inline-block ml-1 rounded bg-danger mb-7 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#dc4c64] transition duration-150 ease-in-out hover:bg-danger-600 hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:bg-danger-600 focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:outline-none focus:ring-0 active:bg-danger-700 active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(220,76,100,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)]"
+                  data-te-ripple-init
+                  data-te-ripple-color="light"
+                >
+                  CLEAR
+                </button>
               </div>
             </div>
           </div>
@@ -4630,7 +4653,7 @@
             data-te-ripple-init
             data-te-ripple-color="light"
           >
-            CLEAR
+            CLEAR ALL
           </button>
           <button
             @click="register"
@@ -4958,6 +4981,9 @@ export default {
       // Update the "score" property with the total score
       this.score = parseInt(this.eyes) + parseInt(this.verbal) + parseInt(this.motor);
     },
+
+    // FOR CLEAR ALL BUTTON:
+    
     clear() {
       this.category = "";
       this.call_source = "";
@@ -5022,7 +5048,6 @@ export default {
       this.time_c = "";
       this.time_d = "";
       this.time_e = "";
-      this.time_f = "";
       this.bp_a = "";
       this.bp_b = "";
       this.bp_c = "";
@@ -5062,7 +5087,6 @@ export default {
       this.eyes = "";
       this.verbal = "";
       this.motor = "";
-      this.score = "";
       this.prenatal_checkup = "";
       this.labor_pains = "";
       this.last_menstrual_period = "";
@@ -5125,24 +5149,203 @@ export default {
       this.posterior_right_arm_degree = "";
       this.posterior_left_leg_degree = "";
       this.posterior_right_leg_degree = "";
-      this.statement_one = "";
-      this.statement_two = "";
-      this.statement_three = "";
-      this.hospital_name = "";
-      this.statement_four = "";
-      this.from_hospital = "";
-      this.to_hospital = "";
-      this.other_statement = "";
-      this.responder_full_name = "";
-      this.responder_signature = "";
-      this.responder_waiver_date = "";
-      this.patient_or_relative_name = "";
-      this.patient_or_relative_signature = "";
-      this.patient_relative_waiver_date = "";
-      this.witness_one = "";
-      this.witness_one_signature = "";
-      this.witness_two = "";
-      this.witness_two_signature = "";
+    },
+
+    clear(section) {
+      switch (section) {
+        case 'section1':
+          this.category = "";
+          this.call_source = "";
+          this.call_receive = "";
+          this.incident_location = "";
+          this.responded = "";
+          this.t_o = "";
+          this.va_location = "";
+          this.va_location_barangay = "";
+          this.arrive_at_scene = "";
+          this.t_l = "";
+          this.involved_vehicles_a = "";
+          this.involved_vehicles_b = "";
+          this.en_route_to = "";
+          this.tx_o = "";
+          this.plate_number = "";
+          this.arrived_at = "";
+          this.l_o = "";
+          this.driver = "";
+          this.pedestrian = "";
+          this.passenger = "";
+          this.departed = "";
+          this.station = "";
+          this.ems_location_a = "tor";
+          this.ambulance = "";
+          this.team_id = "";
+          this.mt_from = "";
+          this.mt_barangay = "";
+          this.ems_location_b = "";
+          this.barangay_b = "";
+          this.priority = "";
+          this.cp_age = "";
+          this.remarks = "";
+
+          break;
+
+        case 'section2':
+        this.suffix = "";
+        this.first_name = "";
+        this.middle_name = "";
+        this.surname = "";
+        this.gender = "";
+        this.birthdate = "";
+        this.age = "";
+        this.status = "";
+        this.religion = "";
+        this.companion = "";
+        this.phone = "";
+        this.pnt_city = "City";
+        this.pnt_brgy = "";
+        this.pnt_st = "";
+        this.complaint = "";
+        this.onset = "";
+        this.allergies = "";
+        this.provocation = "";
+        this.medication = "";
+        this.quality = "";
+        this.medical_history = "";
+        this.radiation = "";
+        this.last_oral_intake = "";
+        this.event_leading_to_injury = "";
+        this.severity = "";
+        this.time_taken = "";
+        this.time_a = "";
+        this.time_b = "";
+        this.time_c = "";
+        this.time_d = "";
+        this.time_e = "";
+        this.time_f = "";
+        this.bp_a = "";
+        this.bp_b = "";
+        this.bp_c = "";
+        this.bp_d = "";
+        this.bp_e = "";
+        this.pr_a = "";
+        this.pr_b = "";
+        this.pr_c = "";
+        this.pr_d = "";
+        this.pr_e = "";
+        this.rr_a = "";
+        this.rr_b = "";
+        this.rr_c = "";
+        this.rr_d = "";
+        this.rr_e = "";
+        this.tempt_a = "";
+        this.tempt_b = "";
+        this.tempt_c = "";
+        this.tempt_d = "";
+        this.tempt_e = "";
+        this.spo2_a = "";
+        this.spo2_b = "";
+        this.spo2_c = "";
+        this.spo2_d = "";
+        this.spo2_e = "";
+        this.left_pearl = "";
+        this.left_dilated = "";
+        this.left_constrict = "";
+        this.left_non_reactive = "";
+        this.left_cataract = "";
+        this.right_pearl = "";
+        this.right_dilated = "";
+        this.right_constrict = "";
+        this.right_non_reactive = "";
+        this.right_cataract = "";
+        this.skin_color = "";
+        this.eyes = "";
+        this.verbal = "";
+        this.motor = "";
+        this.score = "";
+        this.prenatal_checkup = "";
+        this.labor_pains = "";
+        this.last_menstrual_period = "";
+        this.estimated_date_of_delivery = "";
+        this.gravidity = "";
+        this.parity = "";
+        this.term_of_birth = "";
+        this.pre_term = "";
+        this.abortion = "";
+        this.living = "";
+        this.obs_remarks = "";
+        this.nasal = "";
+        this.o2_mask = "";
+        this.bvm = "";
+        this.lpm = "";
+        this.wound_care = "";
+        this.splinting_applied = "";
+        this.control_bleeding = "";
+        this.vital_sign_taken = "";
+        this.applied_cpr = "";
+        this.applied_aed = "";
+        this.problems = "";
+        this.received_by = "";
+        this.received_by_signature = "";
+        this.medical_facility = "";
+        this.medical_facility_signature = "";
+        this.team_leader = "";
+        this.team_leader_signature = "";
+        this.gloves = "";
+        this.mask = "";
+        this.gauze = "";
+        this.others = "";
+        this.anterior_head_injury = [];
+        this.anterior_chest_injury = [];
+        this.anterior_pelvis_injury = [];
+        this.anterior_left_arm_injury = [];
+        this.anterior_right_arm_injury = [];
+        this.anterior_left_leg_injury = [];
+        this.anterior_right_leg_injury = [];
+        this.anterior_genitalia_injury = [];
+        this.posterior_head_injury = [];
+        this.posterior_chest_injury = [];
+        this.posterior_pelvis_injury = [];
+        this.posterior_left_arm_injury = [];
+        this.posterior_right_arm_injury = [];
+        this.posterior_left_leg_injury = [];
+        this.posterior_right_leg_injury = [];
+        this.anterior_head_degree = "";
+        this.anterior_chest_degree = "";
+        this.anterior_pelvis_degree = "";
+        this.anterior_left_arm_degree = "";
+        this.anterior_right_arm_degree = "";
+        this.anterior_left_leg_degree = "";
+        this.anterior_right_leg_degree = "";
+        this.anterior_genitalia_degree = "";
+        this.posterior_head_degree = "";
+        this.posterior_chest_degree = "";
+        this.posterior_pelvis_degree = "";
+        this.posterior_left_arm_degree = "";
+        this.posterior_right_arm_degree = "";
+        this.posterior_left_leg_degree = "";
+        this.posterior_right_leg_degree = "";
+        this.statement_one = "";
+        this.statement_two = "";
+        this.statement_three = "";
+        this.hospital_name = "";
+        this.statement_four = "";
+        this.from_hospital = "";
+        this.to_hospital = "";
+        this.other_statement = "";
+        this.responder_full_name = "";
+        this.responder_signature = "";
+        this.responder_waiver_date = "";
+        this.patient_or_relative_name = "";
+        this.patient_or_relative_signature = "";
+        this.patient_relative_waiver_date = "";
+        this.witness_one = "";
+        this.witness_one_signature = "";
+        this.witness_two = "";
+        this.witness_two_signature = "";
+
+      }
+      
+      
     },
     register() {
       const params = {
