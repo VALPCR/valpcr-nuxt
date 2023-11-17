@@ -3,7 +3,7 @@
     data-te-modal-init
     data-te-backdrop="static"
     data-te-keyboard="false"
-    class="fixed left-0 top-20 z-[1055] hidden h-[85%] w-full overflow-y-auto overflow-x-hidden outline-none"
+    class="fixed left-0 top-20 z-[1055] hidden h-[95%] w-full overflow-y-auto overflow-x-hidden outline-none"
     id="editPatientFormStepper"
     tabindex="-1"
     aria-labelledby="exampleModalXlLabel"
