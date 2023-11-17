@@ -4651,20 +4651,6 @@
 import {Collapse, Datepicker, initTE, Input, Modal, Ripple, Select, Stepper, Timepicker,} from "tw-elements";
 
 export default {
-  mounted() {
-    initTE({ Ripple, Modal, Input, Datepicker, Select, Timepicker, Collapse });
-
-    // Function to update the date field
-    function updateDateField() {
-      this.dispatch_date = new Date().toISOString().split("T")[0];
-    }
-
-    // Initial call to set the date on component mount
-    updateDateField.call(this);
-
-    // Schedule the update to occur once per day (24 hours)
-    setInterval(updateDateField.bind(this), 24 * 60 * 60 * 1000); // 24 hours in milliseconds
-  },
   data() {
     return {
       teams: [],
@@ -4790,7 +4776,7 @@ export default {
       applied_cpr: "",
       applied_aed: "",
       problems: "",
-      skin_color: "",
+      skin_color: "default",
       eyes: 0,
       verbal: 0,
       motor: 0,
@@ -4863,6 +4849,21 @@ export default {
         this.teams.push({ id: team.id, name: this.capitalize(team.name) })
       );
     });
+  },
+  mounted() {
+    initTE({ Ripple, Modal, Input, Datepicker, Select, Timepicker, Collapse });
+
+    // Function to update the date field
+    function updateDateField() {
+      this.dispatch_date = new Date().toISOString().split("T")[0];
+    }
+
+    // Initial call to set the date on component mount
+    updateDateField.call(this);
+
+    // Schedule the update to occur once per day (24 hours)
+    setInterval(updateDateField.bind(this), 24 * 60 * 60 * 1000); // 24 hours in milliseconds
+    this.score = parseInt(this.eyes) + parseInt(this.verbal) + parseInt(this.motor);
   },
   watch: {
     "$store.state.addPatientStepperForm"() {
