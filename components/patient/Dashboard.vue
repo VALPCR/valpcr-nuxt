@@ -72,8 +72,6 @@ export default {
         {
           label: "NAME",
           field: "name",
-          thClass: "moveColumn",
-          tdClass: "moveColumn",
         },
         {
           label: "LOCATION",
