@@ -140,7 +140,6 @@
     </div>
 
   </section>
->>>>>>> 06f790a1f4b9ab753bfa9b4ee80bf7b403c8e419
 </template>
 
 <script>
@@ -203,12 +202,9 @@ export default {
   },
 };
 </script>
-<<<<<<< HEAD
-=======
 
 <style scoped>
 .bg-split {
   background: linear-gradient(to bottom, #f9f9f9 50%, #131a2d 50%);
 }
 </style>
->>>>>>> 06f790a1f4b9ab753bfa9b4ee80bf7b403c8e419
