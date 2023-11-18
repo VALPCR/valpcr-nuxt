@@ -951,6 +951,7 @@
                         data-te-select-init
                         class="w-full bg-neutral-50"
                         v-model="gender"
+                        id="gender"
                       >
                         <option value="patientGender">Gender</option>
                         <option value="female">Female</option>
@@ -1014,6 +1015,7 @@
                           data-te-select-init
                           v-model="religion"
                           class="bg-neutral-50"
+                          id="religion"
                         >
                           <option selected value="3">Religion</option>
                           <option value="roman catholic">Roman Catholic</option>
@@ -1090,6 +1092,7 @@
                         data-te-select-init
                         class="bg-neutral-50"
                         v-model="pnt_city"
+                        id="pnt_city"
                       >
                         <option selected value="City">Select City</option>
                         <option value="Valenzuela">Valenzuela City</option>
@@ -5126,6 +5129,9 @@
         this.first_name =
           this.patientFormMobileFields.pcr_patient.patient.first_name;
         this.gender = this.patientFormMobileFields.pcr_patient.patient.gender;
+        if (this.gender !== '') {
+          this.SetSelectValue("gender", this.gender);
+        }
         this.medical_history =
           this.patientFormMobileFields.pcr_patient.patient.medical_history;
         this.medication =
@@ -5135,17 +5141,23 @@
         this.phone = this.patientFormMobileFields.pcr_patient.patient.phone;
         this.religion =
           this.patientFormMobileFields.pcr_patient.patient.religion;
+        if (this.religion !== '') {
+          this.SetSelectValue("religion", this.religion);
+        }
         this.status = this.patientFormMobileFields.pcr_patient.patient.status;
         this.suffix = this.patientFormMobileFields.pcr_patient.patient.suffix;
         this.surname = this.patientFormMobileFields.pcr_patient.patient.surname;
         this.pnt_city =
           this.patientFormMobileFields.pcr_patient.patient.address.city;
+        if (this.pnt_city !== '') {
+          this.SetSelectValue("pnt_city", this.pnt_city);
+        }
         this.pnt_brgy =
           this.patientFormMobileFields.pcr_patient.patient.address.barangay;
         this.pnt_st =
           this.patientFormMobileFields.pcr_patient.patient.address.street;
         this.pnt_other_city =
-          this.patientFormMobileFields.pcr_patient.patient.address.pnt_other_city;
+          this.patientFormMobileFields.pcr_patient.patient.address.other_city;
         this.complaint = this.patientFormMobileFields.patient_data.complaint;
         this.onset = this.patientFormMobileFields.patient_data.onset;
         this.quality = this.patientFormMobileFields.patient_data.quality;
