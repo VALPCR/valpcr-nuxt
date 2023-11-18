@@ -778,7 +778,7 @@
                           <option value="EMS 23">EMS 23</option>
                           <option value="EMS 24">EMS 24</option>
                           <option value="EMS 25">EMS 25</option>
-                        </select>								
+                        </select>
                       </div>
 
                       <select
@@ -829,7 +829,7 @@
                   CLEAR
                 </button>
               </div>
-             
+
             </div>
           </div>
           <div
@@ -1084,7 +1084,7 @@
                         required
                       />
                     </div>
-                    
+
                     <!-- ADDRESS -->
                     <select
                       data-te-select-init
@@ -1098,7 +1098,7 @@
                     </select>
 
 
-                   
+
                     <div v-if="pnt_city !== 'Other City'">
                       <select
                         data-te-select-init
@@ -1164,10 +1164,10 @@
                         Street Address
                       </label>
                     </div>
-                    
 
-                    <div 
-                      v-else 
+
+                    <div
+                      v-else
                       class="relative mb-1 col-span-3"
                       data-te-input-wrapper-init
                     >
@@ -1187,7 +1187,7 @@
                         Street Address, Barangay, City
                       </label>
                     </div>
-                
+
                     <div class="s/sx-chief complaint col-span-2">
                       <div class="relative mb-1" data-te-input-wrapper-init>
                         <input
@@ -1206,7 +1206,7 @@
                         </label>
                       </div>
                     </div>
-                    
+
                     <!-- ONSET-->
                     <div class="col-span-2">
                       <div class="relative mb-1" data-te-input-wrapper-init>
@@ -1978,6 +1978,17 @@
                   />
                 </form>
               </div>
+              <div class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md border-t-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50 min-[0px]:rounded-none">
+                <button
+                  @click="clear('section3')"
+                  type="button"
+                  class="inline-block ml-1 rounded bg-danger mb-7 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#dc4c64] transition duration-150 ease-in-out hover:bg-danger-600 hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:bg-danger-600 focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:outline-none focus:ring-0 active:bg-danger-700 active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(220,76,100,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)]"
+                  data-te-ripple-init
+                  data-te-ripple-color="light"
+                >
+                  CLEAR
+                </button>
+              </div>
             </div>
           </div>
           <div
@@ -2520,6 +2531,17 @@
                     </div>
                   </div>
                 </form>
+                <div class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md border-t-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50 min-[0px]:rounded-none">
+                <button
+                  @click="clear('section4')"
+                  type="button"
+                  class="inline-block ml-1 rounded bg-danger mb-7 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#dc4c64] transition duration-150 ease-in-out hover:bg-danger-600 hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:bg-danger-600 focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:outline-none focus:ring-0 active:bg-danger-700 active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(220,76,100,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)]"
+                  data-te-ripple-init
+                  data-te-ripple-color="light"
+                >
+                  CLEAR
+                </button>
+              </div>
               </div>
             </div>
           </div>
@@ -3543,6 +3565,17 @@
                     </div>
                   </div>
                 </form>
+                <div class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md border-t-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50 min-[0px]:rounded-none">
+                <button
+                  @click="clear('section5')"
+                  type="button"
+                  class="inline-block ml-1 rounded bg-danger mb-7 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#dc4c64] transition duration-150 ease-in-out hover:bg-danger-600 hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:bg-danger-600 focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:outline-none focus:ring-0 active:bg-danger-700 active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(220,76,100,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)]"
+                  data-te-ripple-init
+                  data-te-ripple-color="light"
+                >
+                  CLEAR
+                </button>
+                  </div>
               </div>
             </div>
           </div>
@@ -3798,6 +3831,17 @@
                     
                   </div>
                 </form>
+                <div class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md border-t-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50 min-[0px]:rounded-none">
+                  <button
+                  @click="clear('section6')"
+                  type="button"
+                  class="inline-block ml-1 rounded bg-danger mb-7 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#dc4c64] transition duration-150 ease-in-out hover:bg-danger-600 hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:bg-danger-600 focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:outline-none focus:ring-0 active:bg-danger-700 active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(220,76,100,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)]"
+                  data-te-ripple-init
+                  data-te-ripple-color="light"
+                >
+                  CLEAR
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -4060,6 +4104,17 @@
                     </div>
                   </div>
                 </form>
+                <div class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md border-t-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50 min-[0px]:rounded-none">
+                <button
+                  @click="clear('section7')"
+                  type="button"
+                  class="inline-block ml-1 rounded bg-danger mb-7 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#dc4c64] transition duration-150 ease-in-out hover:bg-danger-600 hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:bg-danger-600 focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:outline-none focus:ring-0 active:bg-danger-700 active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(220,76,100,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)]"
+                  data-te-ripple-init
+                  data-te-ripple-color="light"
+                >
+                  CLEAR
+                </button>
+                  </div>
               </div>
             </div>
           </div>
@@ -4305,6 +4360,17 @@
                     </div>
                   </div>
                 </form>
+                <div class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md border-t-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50 min-[0px]:rounded-none">
+                <button
+                  @click="clear('section8')"
+                  type="button"
+                  class="inline-block ml-1 rounded bg-danger mb-7 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#dc4c64] transition duration-150 ease-in-out hover:bg-danger-600 hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:bg-danger-600 focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:outline-none focus:ring-0 active:bg-danger-700 active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(220,76,100,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)]"
+                  data-te-ripple-init
+                  data-te-ripple-color="light"
+                >
+                  CLEAR
+                </button>
+                  </div>
               </div>
             </div>
           </div>
@@ -4720,6 +4786,17 @@
                   </div>
                 </div>
               </div>
+              <div class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md border-t-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50 min-[0px]:rounded-none">
+                <button
+                  @click="clear('section9')"
+                  type="button"
+                  class="inline-block ml-1 rounded bg-danger mb-7 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#dc4c64] transition duration-150 ease-in-out hover:bg-danger-600 hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:bg-danger-600 focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:outline-none focus:ring-0 active:bg-danger-700 active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(220,76,100,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)]"
+                  data-te-ripple-init
+                  data-te-ripple-color="light"
+                >
+                  CLEAR
+                </button>
+                  </div>
             </div>
           </div>
         </div>
@@ -4756,6 +4833,7 @@ import {Collapse, Datepicker, initTE, Input, Modal, Ripple, Select, Stepper, Tim
 export default {
   data() {
     return {
+
       teams: [],
       dispatch_date: "",
       category: "dispatch data",
@@ -4946,6 +5024,8 @@ export default {
       witness_two_signature: "",
 
     };
+
+
   },
   fetch() {
     this.team_id = this.$auth.user.team_id;
@@ -5065,7 +5145,7 @@ export default {
     },
 
     // FOR CLEAR ALL BUTTON:
-    
+
     clear() {
       this.category = "";
       this.call_source = "";
@@ -5233,6 +5313,24 @@ export default {
       this.posterior_right_arm_degree = "";
       this.posterior_left_leg_degree = "";
       this.posterior_right_leg_degree = "";
+      this.statement_one = "";
+      this.statement_two = "";
+      this.statement_three = "";
+      this.hospital_name = "";
+      this.statement_four = "";
+      this.from_hospital = "";
+      this.to_hospital = "";
+      this.other_statement = "";
+      this.responder_full_name = "";
+      this.responder_signature = "";
+      this.responder_waiver_date = "";
+      this.patient_or_relative_name = "";
+      this.patient_or_relative_signature = "";
+      this.patient_relative_waiver_date = "";
+      this.witness_one = "";
+      this.witness_one_signature = "";
+      this.witness_two = "";
+      this.witness_two_signature = "";
     },
 
     clear(section) {
@@ -5270,7 +5368,6 @@ export default {
           this.priority = "";
           this.cp_age = "";
           this.remarks = "";
-
           break;
 
         case 'section2':
@@ -5291,7 +5388,7 @@ export default {
         this.pnt_other_city = "";
         this.complaint = "";
         this.onset = "";
-        this.allergies = "";
+        this.allergies = ""
         this.provocation = "";
         this.medication = "";
         this.quality = "";
@@ -5301,6 +5398,9 @@ export default {
         this.event_leading_to_injury = "";
         this.severity = "";
         this.time_taken = "";
+        break;
+
+        case 'section3':
         this.time_a = "";
         this.time_b = "";
         this.time_c = "";
@@ -5347,39 +5447,9 @@ export default {
         this.verbal = "";
         this.motor = "";
         this.score = "";
-        this.prenatal_checkup = "";
-        this.labor_pains = "";
-        this.last_menstrual_period = "";
-        this.estimated_date_of_delivery = "";
-        this.age_of_gestation = "";
-        this.gravidity = "";
-        this.parity = "";
-        this.term_of_birth = "";
-        this.pre_term = "";
-        this.abortion = "";
-        this.living = "";
-        this.obs_remarks = "";
-        this.nasal = "";
-        this.o2_mask = "";
-        this.bvm = "";
-        this.lpm = "";
-        this.wound_care = "";
-        this.splinting_applied = "";
-        this.control_bleeding = "";
-        this.vital_sign_taken = "";
-        this.applied_cpr = "";
-        this.applied_aed = "";
-        this.problems = "";
-        this.received_by = "";
-        this.received_by_signature = "";
-        this.medical_facility = "";
-        this.medical_facility_signature = "";
-        this.team_leader = "";
-        this.team_leader_signature = "";
-        this.gloves = "";
-        this.mask = "";
-        this.gauze = "";
-        this.others = "";
+        break;
+
+        case 'section4':
         this.anterior_head_injury = [];
         this.anterior_chest_injury = [];
         this.anterior_pelvis_injury = [];
@@ -5395,6 +5465,10 @@ export default {
         this.posterior_right_arm_injury = [];
         this.posterior_left_leg_injury = [];
         this.posterior_right_leg_injury = [];
+        break;
+
+
+        case 'section5':
         this.anterior_head_degree = "";
         this.anterior_chest_degree = "";
         this.anterior_pelvis_degree = "";
@@ -5410,6 +5484,47 @@ export default {
         this.posterior_right_arm_degree = "";
         this.posterior_left_leg_degree = "";
         this.posterior_right_leg_degree = "";
+        break;
+
+        case 'section6':
+        this.prenatal_checkup = "";
+        this.labor_pains = "";
+        this.last_menstrual_period = "";
+        this.estimated_date_of_delivery = "";
+        this.gravidity = "";
+        this.parity = "";
+        this.term_of_birth = "";
+        this.pre_term = "";
+        this.abortion = "";
+        this.living = "";
+        this.obs_remarks = "";
+        break;
+
+        case 'section7':
+        this.nasal = "";
+        this.o2_mask = "";
+        this.bvm = "";
+        this.lpm = "";
+        this.wound_care = "";
+        this.splinting_applied = "";
+        this.control_bleeding = "";
+        this.vital_sign_taken = "";
+        this.applied_cpr = "";
+        this.applied_aed = "";
+        this.problems = "";
+        break;
+
+        case 'section8':
+        this.received_by = "";
+        this.medical_facility = "";
+        this.team_leader = "";
+        this.gloves = "";
+        this.mask = "";
+        this.gauze = "";
+        this.others = "";
+        break;
+
+        case 'section9':
         this.statement_one = "";
         this.statement_two = "";
         this.statement_three = "";
@@ -5419,19 +5534,14 @@ export default {
         this.to_hospital = "";
         this.other_statement = "";
         this.responder_full_name = "";
-        this.responder_signature = "";
         this.responder_waiver_date = "";
         this.patient_or_relative_name = "";
-        this.patient_or_relative_signature = "";
         this.patient_relative_waiver_date = "";
         this.witness_one = "";
-        this.witness_one_signature = "";
         this.witness_two = "";
-        this.witness_two_signature = "";
-
       }
-      
-      
+
+
     },
     register() {
       const params = {
