@@ -85,7 +85,6 @@
               />
               <font-awesome-icon v-else :icon="['fas', 'eye']" />
             </label>
-
           </div>
 
           <div class="mb-6 flex items-center justify-between">
@@ -130,15 +129,9 @@
           >
             Login
           </button>
-
-
         </form>
-
-
       </div>
-
     </div>
-
   </section>
 </template>
 
