@@ -5343,6 +5343,7 @@ export default {
         this.gender = "";
         this.birthdate = "";
         this.age = "";
+        this.status = "";
         this.religion = "";
         this.companion = "";
         this.phone = "";
@@ -5362,9 +5363,6 @@ export default {
         this.event_leading_to_injury = "";
         this.severity = "";
         this.time_taken = "";
-
-        const statusOptions = ["status", "single", "married", "divorced", "separated"];
-        this.status = statusOptions[0];
         break;
 
         case 'section3':
