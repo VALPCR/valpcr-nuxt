@@ -159,7 +159,7 @@
                             v-model="ems_location_a"
                             data-te-select-init
                             class="bg-neutral-50"
-                            id="emsLocationA"
+                            id="ems_location_a"
                             required
                           >
                             <option value="tor">Type of Response</option>
@@ -5129,7 +5129,9 @@
         this.first_name =
           this.patientFormMobileFields.pcr_patient.patient.first_name;
         this.gender = this.patientFormMobileFields.pcr_patient.patient.gender;
-        if (this.gender !== '') {
+        console.log('this.gender');
+        console.log(this.gender);
+        if (this.gender !== null && this.gender !== '') {
           this.SetSelectValue("gender", this.gender);
         }
         this.medical_history =
@@ -5141,15 +5143,18 @@
         this.phone = this.patientFormMobileFields.pcr_patient.patient.phone;
         this.religion =
           this.patientFormMobileFields.pcr_patient.patient.religion;
-        if (this.religion !== '') {
+        if (this.religion !== '' && this.religion !== null) {
           this.SetSelectValue("religion", this.religion);
+        }
+        if (this.ems_location_a !== '' && this.ems_location_a !== null) {
+          this.SetSelectValue("ems_location_a", this.ems_location_a);
         }
         this.status = this.patientFormMobileFields.pcr_patient.patient.status;
         this.suffix = this.patientFormMobileFields.pcr_patient.patient.suffix;
         this.surname = this.patientFormMobileFields.pcr_patient.patient.surname;
         this.pnt_city =
           this.patientFormMobileFields.pcr_patient.patient.address.city;
-        if (this.pnt_city !== '') {
+        if (this.pnt_city !== '' && this.pnt_city !== null) {
           this.SetSelectValue("pnt_city", this.pnt_city);
         }
         this.pnt_brgy =
