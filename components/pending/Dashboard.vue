@@ -37,15 +37,17 @@
       />
     </div>
     <EditPatientStepperForm :viewableByAllEmrs="false" />
+    <EditPatientFormMobile :viewableByAllEmrs="false" />
   </div>
 </template>
 
 <script>
 import EditPatientStepperForm from "../patient/EditPatientStepperForm";
+import EditPatientFormMobile from "../patient/EditPatientFormMobile";
 import { Modal, Dropdown, Ripple, initTE } from "tw-elements";
 
 export default {
-  components: { Ripple, Modal, Dropdown, EditPatientStepperForm },
+  components: { Ripple, Modal, Dropdown, EditPatientStepperForm, EditPatientFormMobile },
   data() {
     return {
       role: "",
@@ -261,12 +263,21 @@ export default {
   },
   methods: {
     onRowClick(params) {
-      const editModal = new Modal(
-        document.getElementById("editPatientFormStepper")
-      );
-      this.$store.commit("setEditPatientStepperForm", true);
-      this.$store.commit("setEditPatientStepperFormArg", params.row.id);
-      editModal.show();
+      if (this.$device.isDesktop) {
+        const editModal = new Modal(
+          document.getElementById("editPatientFormStepper")
+        );
+        this.$store.commit("setEditPatientStepperForm", true);
+        this.$store.commit("setEditPatientStepperFormArg", params.row.id);
+        editModal.show();
+      } else if (this.$device.isTablet) {
+        const editModal = new Modal(
+          document.getElementById("editPatientFormMobile")
+        );
+        this.$store.commit("setEditPatientStepperForm", true);
+        this.$store.commit("setEditPatientStepperFormArg", params.row.id);
+        editModal.show();
+      }
     },
     capitalize(word) {
       return word.replace(/^\w/, (c) => c.toUpperCase());
