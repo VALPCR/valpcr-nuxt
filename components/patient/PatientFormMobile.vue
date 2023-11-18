@@ -745,21 +745,40 @@
                         </label>
                       </div>
 
-                      <div class="relative mb-1" data-te-input-wrapper-init>
-                        <input
+                      <div class="relative mb-1">
+                        <select
+                          data-te-select-init
+                          class="bg-neutral-50"
                           v-model="ambulance"
-                          type="text"
-                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                           id="ambulance"
-                          aria-describedby="ambulance"
-                          placeholder="Ambulance"
-                        />
-                        <label
-                          for="ambulance"
-                          class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                         >
-                          Ambulance
-                        </label>
+                          <option selected value="0">Ambulance</option>
+                          <option value="EMS 01">EMS 01</option>
+                          <option value="EMS 02">EMS 02</option>
+                          <option value="EMS 03">EMS 03</option>
+                          <option value="EMS 04">EMS 04</option>
+                          <option value="EMS 05">EMS 05</option>
+                          <option value="EMS 06">EMS 06</option>
+                          <option value="EMS 07">EMS 07</option>
+                          <option value="EMS 08">EMS 08</option>
+                          <option value="EMS 09">EMS 09</option>
+                          <option value="EMS 10">EMS 10</option>
+                          <option value="EMS 11">EMS 11</option>
+                          <option value="EMS 12">EMS 12</option>
+                          <option value="EMS 13">EMS 13</option>
+                          <option value="EMS 14">EMS 14</option>
+                          <option value="EMS 15">EMS 15</option>
+                          <option value="EMS 16">EMS 16</option>
+                          <option value="EMS 17">EMS 17</option>
+                          <option value="EMS 18">EMS 18</option>
+                          <option value="EMS 19">EMS 19</option>
+                          <option value="EMS 20">EMS 20</option>
+                          <option value="EMS 21">EMS 21</option>
+                          <option value="EMS 22">EMS 22</option>
+                          <option value="EMS 23">EMS 23</option>
+                          <option value="EMS 24">EMS 24</option>
+                          <option value="EMS 25">EMS 25</option>
+                        </select>								
                       </div>
 
                       <select
@@ -1065,7 +1084,7 @@
                         required
                       />
                     </div>
-
+                    
                     <!-- ADDRESS -->
                     <select
                       data-te-select-init
@@ -1074,11 +1093,13 @@
                     >
                       <option selected value="City">Select City</option>
                       <option value="Valenzuela">Valenzuela City</option>
-                      <option value="Others">Others, please specify</option>
+                      <option value="Other City">Other City</option>
                       <!-- Expected input box here -->
                     </select>
 
-                    <div>
+
+                   
+                    <div v-if="pnt_city !== 'Other City'">
                       <select
                         data-te-select-init
                         class="bg-neutral-50"
@@ -1089,6 +1110,7 @@
                         <option value="Bagbaguin">Bagbaguin</option>
                         <option value="Balangkas">Balangkas</option>
                         <option value="Bignay">Bignay</option>
+                        <option value="Bisig">Bisig</option>
                         <option value="Canumay East">Canumay East</option>
                         <option value="Canumay West">Canumay West</option>
                         <option value="Coloong">Coloong</option>
@@ -1123,6 +1145,7 @@
                     </div>
 
                     <div
+                      v-if="pnt_city !== 'Other City'"
                       class="relative mb-1 col-span-2"
                       data-te-input-wrapper-init
                     >
@@ -1141,7 +1164,30 @@
                         Street Address
                       </label>
                     </div>
+                    
 
+                    <div 
+                      v-else 
+                      class="relative mb-1 col-span-3"
+                      data-te-input-wrapper-init
+                    >
+                      <!-- Render a different input field for "Others City" -->
+                      <input
+                        v-model="pnt_other_city"
+                        type="text"
+                        class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="otherCity"
+                          aria-describedby="otherCity"
+                          placeholder="Street Address, Barangay, City"
+                        />
+                      <label
+                        for="otherCity"
+                        class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                      >
+                        Street Address, Barangay, City
+                      </label>
+                    </div>
+                
                     <div class="s/sx-chief complaint col-span-2">
                       <div class="relative mb-1" data-te-input-wrapper-init>
                         <input
@@ -1160,7 +1206,7 @@
                         </label>
                       </div>
                     </div>
-
+                    
                     <!-- ONSET-->
                     <div class="col-span-2">
                       <div class="relative mb-1" data-te-input-wrapper-init>
@@ -4724,6 +4770,7 @@ export default {
       pnt_city: "City",
       pnt_brgy: "",
       pnt_st: "",
+      pnt_other_city: "",
       complaint: "",
       onset: "",
       allergies: "",
@@ -5031,6 +5078,7 @@ export default {
       this.pnt_city = "City";
       this.pnt_brgy = "";
       this.pnt_st = "";
+      pnt_other_city = "";
       this.complaint = "";
       this.onset = "";
       this.allergies = "";
@@ -5204,6 +5252,7 @@ export default {
         this.pnt_city = "City";
         this.pnt_brgy = "";
         this.pnt_st = "";
+        this.pnt_other_city = "";
         this.complaint = "";
         this.onset = "";
         this.allergies = "";
@@ -5396,6 +5445,7 @@ export default {
         pnt_city: this.pnt_city,
         pnt_brgy: this.pnt_brgy,
         pnt_st: this.pnt_st,
+        pnt_other_city: this.pnt_other_city,
         complaint: this.complaint,
         onset: this.onset,
         allergies: this.allergies,
@@ -5585,6 +5635,7 @@ export default {
         this.pnt_city = "City";
         this.pnt_brgy = "";
         this.pnt_st = "";
+        this.pnt_other_city = "";
         this.complaint = "";
         this.onset = "";
         this.allergies = "";
