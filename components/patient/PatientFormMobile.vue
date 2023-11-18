@@ -5196,7 +5196,7 @@ export default {
       this.pnt_city = "City";
       this.pnt_brgy = "";
       this.pnt_st = "";
-      pnt_other_city = "";
+      this.pnt_other_city = "";
       this.complaint = "";
       this.onset = "";
       this.allergies = "";
