@@ -10,6 +10,7 @@ export const state = () => ({
   editDispatcherModalXl: false,
   editDispatcherModalXlFields: [],
   editDispatcherModalXlArg: undefined,
+  newlyCreatedPcr: [],
 });
 
 export const getters = {
@@ -39,6 +40,9 @@ export const getters = {
   },
   getEditDispatcherModalXlFields(state) {
     return state.editDispatcherModalXlFields;
+  },
+  getNewlyCreatedPcr(state) {
+    return state.newlyCreatedPcr;
   },
 };
 
@@ -75,6 +79,9 @@ export const mutations = {
   },
   setEditDispatcherModalXlArg(state, value) {
     state.editDispatcherModalXlArg = value;
+  },
+  setNewlyCreatedPcr(state, value) {
+    state.newlyCreatedPcr = value;
   },
 };
 
