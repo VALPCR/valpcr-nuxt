@@ -866,6 +866,7 @@ export default {
             } ${emr.last_name !== null ? emr.last_name : ""}`,
           })
         );
+        this.assignedEmr = this.emrs[0].id
       });
   },
   mounted() {
@@ -1011,7 +1012,6 @@ export default {
         call_source: this.call_source,
         call_receive: this.call_receive,
         incident_location: this.incident_location,
-        location: this.location,
         responded: this.responded,
         t_o: this.t_o,
         va_location: this.va_location,
@@ -1031,13 +1031,13 @@ export default {
         departed: this.departed,
         station: this.station,
         ems_location_a: this.ems_location_a,
+        ems_location_b: this.ems_location_b,
         barangay_b: this.barangay_b,
         ambulance: this.ambulance,
         team_id: this.team_id,
         mt_from: this.mt_from,
         mt_barangay: this.mt_barangay,
         remarks: this.remarks,
-        priority: this.priority,
         assignedEmr: this.assignedEmr,
       };
 
