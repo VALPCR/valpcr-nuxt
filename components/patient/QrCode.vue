@@ -49,17 +49,21 @@
 
         <!--Modal body-->
         <div class="relative p-4">
+          <p class="text-cyan-950 text-lg font-bold text-center">You have successfully submitted the PCR Form!</p>
           <h6
             class="text-center mb-3 mt-2 ml-1 text-base font-medium leading-tight text-secondary"
           >
             Here's the QR code for:
-            <strong>{{
+            <div class="text-sky-600">
+              <strong>{{
               (first_name ?? "") +
               " " +
               (middle_name ?? "") +
               " " +
               (surname ?? "")
             }}</strong>
+            </div>
+            
           </h6>
           <section class="text-center w-full">
             <img
