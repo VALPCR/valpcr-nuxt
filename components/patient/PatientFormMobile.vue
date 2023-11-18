@@ -778,7 +778,7 @@
                           <option value="EMS 23">EMS 23</option>
                           <option value="EMS 24">EMS 24</option>
                           <option value="EMS 25">EMS 25</option>
-                        </select>								
+                        </select>
                       </div>
 
                       <select
@@ -1084,7 +1084,7 @@
                         required
                       />
                     </div>
-                    
+
                     <!-- ADDRESS -->
                     <select
                       data-te-select-init
@@ -1098,7 +1098,7 @@
                     </select>
 
 
-                   
+
                     <div v-if="pnt_city !== 'Other City'">
                       <select
                         data-te-select-init
@@ -1164,10 +1164,10 @@
                         Street Address
                       </label>
                     </div>
-                    
 
-                    <div 
-                      v-else 
+
+                    <div
+                      v-else
                       class="relative mb-1 col-span-3"
                       data-te-input-wrapper-init
                     >
@@ -1187,7 +1187,7 @@
                         Street Address, Barangay, City
                       </label>
                     </div>
-                
+
                     <div class="s/sx-chief complaint col-span-2">
                       <div class="relative mb-1" data-te-input-wrapper-init>
                         <input
@@ -1206,7 +1206,7 @@
                         </label>
                       </div>
                     </div>
-                    
+
                     <!-- ONSET-->
                     <div class="col-span-2">
                       <div class="relative mb-1" data-te-input-wrapper-init>
@@ -4328,7 +4328,7 @@
                 </form>
                 <div class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md border-t-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50 min-[0px]:rounded-none">
                 <button
-                  @click="clear('sectio8')"
+                  @click="clear('section8')"
                   type="button"
                   class="inline-block ml-1 rounded bg-danger mb-7 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#dc4c64] transition duration-150 ease-in-out hover:bg-danger-600 hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:bg-danger-600 focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:outline-none focus:ring-0 active:bg-danger-700 active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(220,76,100,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)]"
                   data-te-ripple-init
@@ -4752,6 +4752,17 @@
                   </div>
                 </div>
               </div>
+              <div class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md border-t-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50 min-[0px]:rounded-none">
+                <button
+                  @click="clear('section9')"
+                  type="button"
+                  class="inline-block ml-1 rounded bg-danger mb-7 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#dc4c64] transition duration-150 ease-in-out hover:bg-danger-600 hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:bg-danger-600 focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:outline-none focus:ring-0 active:bg-danger-700 active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(220,76,100,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)]"
+                  data-te-ripple-init
+                  data-te-ripple-color="light"
+                >
+                  CLEAR
+                </button>
+                  </div>
             </div>
           </div>
         </div>
@@ -5097,6 +5108,7 @@ export default {
       // Update the "score" property with the total score
       this.score = parseInt(this.eyes) + parseInt(this.verbal) + parseInt(this.motor);
     },
+
     // FOR CLEAR ALL BUTTON:
 
     clear() {
@@ -5328,10 +5340,9 @@ export default {
         this.first_name = "";
         this.middle_name = "";
         this.surname = "";
-        this.gender = "male", "female";
+        this.gender = "";
         this.birthdate = "";
         this.age = "";
-        this.status = "";
         this.religion = "";
         this.companion = "";
         this.phone = "";
@@ -5352,6 +5363,8 @@ export default {
         this.severity = "";
         this.time_taken = "";
 
+        const statusOptions = ["status", "single", "married", "divorced", "separated"];
+        this.status = statusOptions[0];
         break;
 
         case 'section3':
@@ -5478,6 +5491,7 @@ export default {
         this.others = "";
         break;
 
+        case 'section9':
         this.statement_one = "";
         this.statement_two = "";
         this.statement_three = "";
@@ -5487,16 +5501,11 @@ export default {
         this.to_hospital = "";
         this.other_statement = "";
         this.responder_full_name = "";
-        this.responder_signature = "";
         this.responder_waiver_date = "";
         this.patient_or_relative_name = "";
-        this.patient_or_relative_signature = "";
         this.patient_relative_waiver_date = "";
         this.witness_one = "";
-        this.witness_one_signature = "";
         this.witness_two = "";
-        this.witness_two_signature = "";
-
       }
 
 
