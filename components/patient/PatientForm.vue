@@ -1004,7 +1004,6 @@ export default {
       this.remarks = "";
       this.assignedEmr = "";
     },
-
     register() {
       const params = {
         dispatch_date: this.dispatch_date,
