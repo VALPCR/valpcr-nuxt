@@ -5332,7 +5332,6 @@ export default {
           this.priority = "";
           this.cp_age = "";
           this.remarks = "";
-
           break;
 
         case 'section2':
