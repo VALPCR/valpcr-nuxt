@@ -752,7 +752,7 @@
                             v-model="ambulance"
                             id="ambulance"
                           >
-                            <option selected value="0">Ambulance</option>
+                            <option value="0">Ambulance</option>
                             <option value="EMS 01">EMS 01</option>
                             <option value="EMS 02">EMS 02</option>
                             <option value="EMS 03">EMS 03</option>
@@ -997,6 +997,7 @@
                         <select
                           data-te-select-init
                           v-model="status"
+                          id="status"
                           class="bg-neutral-50"
                         >
                           <option selected value="2">Status</option>
@@ -1107,6 +1108,7 @@
                           data-te-select-init
                           class="bg-neutral-50"
                           v-model="pnt_brgy"
+                          id="pnt_brgy"
                         >
                           <option selected value="1">Barangay</option>
                           <option value="Arkong Bato">Arkong Bato</option>
@@ -1376,6 +1378,7 @@
                           data-te-select-init
                           class="w-full bg-neutral-50 text-gray"
                           v-model="severity"
+                          id="severity"
                         >
                           <option value="severity">Severity</option>
                           <option value="mild">Mild (1)</option>
@@ -1871,6 +1874,7 @@
                         <select
                           data-te-select-init
                           v-model="skin_color"
+                          id="skin_color"
                           class="bg-neutral-50"
                         >
                           <option selected value="default">Skin Color</option>
@@ -1930,6 +1934,7 @@
                         <select
                           data-te-select-init
                           v-model="eyes"
+                          id="eyes"
                           class="bg-neutral-50"
                           @change="updateScore()"
                         >
@@ -1946,6 +1951,7 @@
                         <select
                           data-te-select-init
                           v-model="verbal"
+                          id="verbal"
                           class="bg-neutral-50"
                           @change="updateScore()"
                         >
@@ -1963,6 +1969,7 @@
                         <select
                           data-te-select-init
                           v-model="motor"
+                          id="motor"
                           class="bg-neutral-50"
                           @change="updateScore()"
                         >
@@ -5095,6 +5102,9 @@
         this.dispatch_date = this.patientFormMobileFields.dispatch_date;
         this.driver = this.patientFormMobileFields.driver;
         this.ems_location_a = this.patientFormMobileFields.ems_location_a;
+        if (this.ems_location_a !== '' && this.ems_location_a !== null) {
+          this.SetSelectValue("ems_location_a", this.ems_location_a);
+        }
         this.ems_location_b = this.patientFormMobileFields.ems_location_b;
         this.en_route_to = this.patientFormMobileFields.en_route_to;
         this.incident_location = this.patientFormMobileFields.incident_location;
@@ -5129,8 +5139,8 @@
         this.first_name =
           this.patientFormMobileFields.pcr_patient.patient.first_name;
         this.gender = this.patientFormMobileFields.pcr_patient.patient.gender;
-        console.log('this.gender');
-        console.log(this.gender);
+        // console.log('this.gender');
+        // console.log(this.gender);
         if (this.gender !== null && this.gender !== '') {
           this.SetSelectValue("gender", this.gender);
         }
@@ -5146,10 +5156,10 @@
         if (this.religion !== '' && this.religion !== null) {
           this.SetSelectValue("religion", this.religion);
         }
-        if (this.ems_location_a !== '' && this.ems_location_a !== null) {
-          this.SetSelectValue("ems_location_a", this.ems_location_a);
-        }
         this.status = this.patientFormMobileFields.pcr_patient.patient.status;
+        if (this.status !== null && this.status !== '') {
+          this.SetSelectValue("status", this.status);
+        }
         this.suffix = this.patientFormMobileFields.pcr_patient.patient.suffix;
         this.surname = this.patientFormMobileFields.pcr_patient.patient.surname;
         this.pnt_city =
@@ -5159,6 +5169,9 @@
         }
         this.pnt_brgy =
           this.patientFormMobileFields.pcr_patient.patient.address.barangay;
+        if (this.pnt_brgy !== '' && this.pnt_brgy !== null) {
+          this.SetSelectValue("pnt_brgy", this.pnt_brgy);
+        }
         this.pnt_st =
           this.patientFormMobileFields.pcr_patient.patient.address.street;
         this.pnt_other_city =
@@ -5173,6 +5186,9 @@
         this.event_leading_to_injury =
           this.patientFormMobileFields.patient_data.event_leading_to_injury;
         this.severity = this.patientFormMobileFields.patient_data.severity;
+        if (this.severity !== null && this.severity !== '') {
+          this.SetSelectValue("severity", this.severity);
+        }
         this.time_taken = this.patientFormMobileFields.patient_data.time_taken;
         this.time_a = this.patientFormMobileFields.pcr_vital.time_a;
         this.time_b = this.patientFormMobileFields.pcr_vital.time_b;
@@ -5206,9 +5222,21 @@
         this.spo2_d = this.patientFormMobileFields.pcr_vital.spo2_d;
         this.spo2_e = this.patientFormMobileFields.pcr_vital.spo2_e;
         this.skin_color = this.patientFormMobileFields.pcr_vital.skin_color;
+        if (this.skin_color !== null && this.skin_color !== '') {
+          this.SetSelectValue("skin_color", this.skin_color);
+        }
         this.eyes = this.patientFormMobileFields.pcr_vital.eyes;
+        if (this.eyes !== null && this.eyes !== '') {
+          this.SetSelectValue("eyes", this.eyes);
+        }
         this.verbal = this.patientFormMobileFields.pcr_vital.verbal;
+        if (this.verbal !== null && this.verbal !== '') {
+          this.SetSelectValue("verbal", this.verbal);
+        }
         this.motor = this.patientFormMobileFields.pcr_vital.motor;
+        if (this.motor !== null && this.motor !== '') {
+          this.SetSelectValue("motor", this.motor);
+        }
         this.score = this.patientFormMobileFields.pcr_vital.score;
         this.left_pearl =
           this.patientFormMobileFields.pcr_vital_pupils.left_pearl;
@@ -5783,7 +5811,7 @@
             this.departed = "";
             this.station = "";
             this.ems_location_a = "tor";
-            this.ambulance = "";
+            this.ambulance = "0";
             this.team_id = "";
             this.mt_from = "";
             this.mt_barangay = "";
