@@ -277,22 +277,20 @@
               </div>
 
               <div
-                class="relative mb-1 bg-neutral-50"
-                data-te-input-wrapper-init
+                class="relative mb-1 bg-neutral-50 flex flex-wrap items-stretch"
                 required
               >
                 <span
-                  class="absolute left-3 top-1/2 transform -translate-y-1/2 text-neutral-500"
+                  class="flex items-center whitespace-nowrap rounded-l border border-r-0 border-solid border-neutral-300 px-2 py-[0.15rem] text-center text-sm font-normal leading-[1.3] text-neutral-700 dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 md:text-sm"
                 >
                   +63
-                  <span class="text-red-600 font-bold"> * </span>
                 </span>
                 <input
                   v-model="phone"
                   type="tel"
                   id="contactNumber"
                   name="contactNumber"
-                  class="peer block min-h-[auto] w-full pl-10 rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                  class="relative m-0 block w-[1px] min-w-0 flex-auto rounded-r border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-sm font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary md:text-sm"
                   pattern="[0-9]*"
                   inputmode="numeric"
                   maxlength="11"
@@ -345,21 +343,20 @@
               </div>
 
               <div
-                class="relative mb-1 bg-neutral-50"
-                data-te-input-wrapper-init
+                class="relative mb-1 bg-neutral-50 flex flex-wrap items-stretch"
                 required
               >
                 <span
-                  class="absolute left-3 top-1/2 transform -translate-y-1/2 text-neutral-500"
+                  class="flex items-center whitespace-nowrap rounded-l border border-r-0 border-solid border-neutral-300 px-2 py-[0.15rem] text-center text-sm font-normal leading-[1.3] text-neutral-700 dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 md:text-sm"
                 >
-                  +63 *
+                  +63
                 </span>
                 <input
                   v-model="ecp_phone"
                   type="tel"
                   id="ecpContactNumber"
                   name="ecpContactNumber"
-                  class="peer block min-h-[auto] w-full pl-10 rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                  class="relative m-0 block w-[1px] min-w-0 flex-auto rounded-r border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-sm font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary md:text-sm"
                   pattern="[0-9]*"
                   inputmode="numeric"
                   maxlength="11"
