@@ -1,29 +1,10 @@
 <template>
-  <section class="dual-bg">
-    <div class="bg2"></div>
-    <div class="bg1 min-h-screen flex flex-col lg:flex-row">
-      <div
-        class="lg:w-1/2 bg-cover bg-center flex items-center justify-center text-white"
-        style="background-image: url('/images/valpcr_login_bg.jpg')"
-      >
-        <div class="text-center px-6">
-          <img
-            src="/images/valpcr_logo.svg"
-            height="auto"
-            width="50%"
-            class="mx-auto mb-4"
-            alt="valpcr logo"
-          />
-          <h2 class="text-4xl font-bold mb-4">Welcome to ValPCR</h2>
-          <p>The first electronic patient care reporting (EPCR)</p>
-          <p>system in Valenzuela City.</p>
-        </div>
-      </div>
-      <div
-        class="lg:w-1/2 bg-[#D7E4F3] text-white flex items-center justify-center"
-      >
-        <div class="p-8 max-w-md w-full bg-white rounded-lg shadow-lg">
-          <h1 class="text-3xl mb-8 text-center text-black">RESET PASSWORD</h1>
+    <section class="bg-split">
+    <div
+      class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0 mx-auto mb-4 w-7/100 md: w-20/100 lg:w-50/100"
+    >
+      <div class="p-8 max-w-md w-full bg-white rounded-lg shadow-lg">
+        <h1 class="text-2xl mb-3 text-left text-slate-800 font-bold">Reset Password</h1>
           <form @submit.prevent="forgot">
             <div class="relative flex flex-nowrap items-stretch mb-3">
               <span
@@ -57,7 +38,7 @@
                 v-model="passwordConfirmation"
                 type="password"
                 :type="showPassword ? 'text' : 'password'"
-                class="relative m-0 block w-[1px] min-w-0 flex-auto rounded-r border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
+                class="relative m-0 block w-[1px] min-w-0 flex-auto rounded-r border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none"
                 placeholder="Confirm Password"
                 aria-label="confirmPassword"
                 aria-describedby="addon-wrapping"
@@ -69,7 +50,7 @@
               >
             </div>
             <button
-              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full"
+            class="bg-red-500 hover:bg-red-700 text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full mt-2"
               type="submit"
             >
               Reset Password
@@ -77,7 +58,6 @@
           </form>
         </div>
       </div>
-    </div>
   </section>
 </template>
 
@@ -110,23 +90,7 @@ export default {
 </script>
 
 <style scoped>
-.dual-bg {
-  position: relative;
-  overflow: hidden;
-}
-
-.bg1 {
-  position: relative;
-  z-index: 1;
-}
-
-.bg2 {
-  background-color: #131a2d;
-  position: absolute;
-  top: 60%;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 0;
+.bg-split {
+  background: linear-gradient(to bottom, #f9f9f9 50%, #131a2d 50%);
 }
 </style>
