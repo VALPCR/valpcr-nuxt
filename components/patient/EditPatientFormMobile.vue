@@ -113,7 +113,7 @@
                             Date
                           </label>
                         </div>
-  
+
                         <div class="relative mb-1" data-te-input-wrapper-init>
                           <input
                             v-model="call_source"
@@ -130,7 +130,7 @@
                             Call Source
                           </label>
                         </div>
-  
+
                         <div
                           class="relative col-span-2"
                           data-te-input-wrapper-init
@@ -150,7 +150,7 @@
                             Incident Location
                           </label>
                         </div>
-  
+
                         <!-- <label class="left-5 top-5 mb-0 font-bold">
                             Type of Response:
                           </label> -->
@@ -159,7 +159,7 @@
                             v-model="ems_location_a"
                             data-te-select-init
                             class="bg-neutral-50"
-                            id="emsLocationA"
+                            id="ems_location_a"
                             required
                           >
                             <option value="tor">Type of Response</option>
@@ -170,7 +170,7 @@
                             <option value="mt">Medical Transport</option>
                           </select>
                         </div>
-  
+
                         <div class="relative mb-1" data-te-input-wrapper-init>
                           <input
                             v-model="ems_location_b"
@@ -198,7 +198,7 @@
                             Location
                           </label>
                         </div>
-  
+
                         <div class="relative mb-1" data-te-input-wrapper-init>
                           <input
                             v-model="barangay_b"
@@ -226,7 +226,7 @@
                             Barangay
                           </label>
                         </div>
-  
+
                         <div
                           class="relative mb-1 flex flex-wrap items-stretch col-span-2"
                         >
@@ -260,7 +260,7 @@
                             :disabled="ems_location_a !== 'mt'"
                           />
                         </div>
-  
+
                         <div class="relative mb-1" data-te-input-wrapper-init>
                           <input
                             v-model="va_location"
@@ -282,7 +282,7 @@
                             V.A Location
                           </label>
                         </div>
-  
+
                         <div class="relative mb-1" data-te-input-wrapper-init>
                           <input
                             v-model="va_location_barangay"
@@ -304,7 +304,7 @@
                             Barangay
                           </label>
                         </div>
-  
+
                         <div
                           class="relative mb-1 flex flex-wrap items-stretch col-span-2"
                         >
@@ -338,7 +338,7 @@
                             :disabled="ems_location_a !== 'va'"
                           />
                         </div>
-  
+
                         <div class="relative mb-1" data-te-input-wrapper-init>
                           <input
                             v-model="plate_number"
@@ -360,7 +360,7 @@
                             Plate Number
                           </label>
                         </div>
-  
+
                         <div
                           class="relative mb-1 col-span-2 flex md:inline-block"
                         >
@@ -393,7 +393,7 @@
                                 Driver
                               </label>
                             </div>
-  
+
                             <div
                               class="mb-[0.125rem] mr-4 inline-block min-h-[1.5rem] pl-[1.5rem]"
                             >
@@ -417,7 +417,7 @@
                                 Pedestrian
                               </label>
                             </div>
-  
+
                             <div
                               class="mb-[0.125rem] mr-4 inline-block min-h-[1.5rem] pl-[1.5rem]"
                             >
@@ -443,7 +443,7 @@
                             </div>
                           </div>
                         </div>
-  
+
                         <div class="relative mb-1 col-span-2">
                           <label class="left-5 top-5 mb-0 font-bold">
                             MCI/ Transport Priority
@@ -465,7 +465,7 @@
                                 Priority#1(Red)
                               </label>
                             </div>
-  
+
                             <div class="grid-cols-2 ml-7 mt-4">
                               <input
                                 v-model="priority"
@@ -482,7 +482,7 @@
                                 Priority#2(Yellow)
                               </label>
                             </div>
-  
+
                             <div class="grid-cols-2 ml-7 mt-4">
                               <input
                                 v-model="priority"
@@ -499,7 +499,7 @@
                                 Priority#3(Green)
                               </label>
                             </div>
-  
+
                             <div class="grid-cols-2 ml-7 mt-4">
                               <input
                                 v-model="priority"
@@ -519,7 +519,7 @@
                           </div>
                         </div>
                       </div>
-  
+
                       <!-- SECOND DISPATCH DATA COLUMN -->
                       <div
                         class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4"
@@ -545,11 +545,11 @@
                             Call Received
                           </label>
                         </div>
-  
+
                         <div class="relative text-center mt-2 mb-1">
                           <label class="mb-0 font-bold"> Responders: </label>
                         </div>
-  
+
                         <div
                           class="relative mb-1"
                           data-te-timepicker-init
@@ -571,7 +571,7 @@
                             Responded
                           </label>
                         </div>
-  
+
                         <div class="relative mb-1" data-te-input-wrapper-init>
                           <input
                             v-model="t_o"
@@ -588,7 +588,7 @@
                             T/O
                           </label>
                         </div>
-  
+
                         <div
                           class="relative mb-1"
                           data-te-timepicker-init
@@ -610,7 +610,7 @@
                             Arrived at scene
                           </label>
                         </div>
-  
+
                         <div class="relative mb-1" data-te-input-wrapper-init>
                           <input
                             v-model="t_l"
@@ -627,7 +627,7 @@
                             T/L
                           </label>
                         </div>
-  
+
                         <div
                           class="relative mb-1"
                           data-te-timepicker-init
@@ -649,7 +649,7 @@
                             En route to
                           </label>
                         </div>
-  
+
                         <div class="relative mb-1" data-te-input-wrapper-init>
                           <input
                             v-model="tx_o"
@@ -666,7 +666,7 @@
                             TX/O
                           </label>
                         </div>
-  
+
                         <div
                           class="relative mb-1"
                           data-te-timepicker-init
@@ -688,7 +688,7 @@
                             Arrived at
                           </label>
                         </div>
-  
+
                         <div class="relative mb-1" data-te-input-wrapper-init>
                           <input
                             v-model="l_o"
@@ -705,7 +705,7 @@
                             L/O
                           </label>
                         </div>
-  
+
                         <div
                           class="relative mb-1"
                           data-te-timepicker-init
@@ -727,7 +727,7 @@
                             Departed
                           </label>
                         </div>
-  
+
                         <div class="relative mb-1" data-te-input-wrapper-init>
                           <input
                             v-model="station"
@@ -744,7 +744,7 @@
                             Station
                           </label>
                         </div>
-  
+
                         <div class="relative mb-1">
                           <select
                             data-te-select-init
@@ -780,7 +780,7 @@
                             <option value="EMS 25">EMS 25</option>
                           </select>
                         </div>
-  
+
                         <select
                           v-model="team_id"
                           data-te-select-init
@@ -796,7 +796,7 @@
                             {{ item.name }}
                           </option>
                         </select>
-  
+
                         <div
                           class="relative mb-1 mt-3 col-span-2"
                           data-te-input-wrapper-init
@@ -829,7 +829,7 @@
                     CLEAR
                   </button>
                 </div>
-  
+
               </div>
             </div>
             <div
@@ -894,7 +894,7 @@
                           Suffix(e.g. Sr., Jr., III)
                         </label>
                       </div>
-  
+
                       <div class="relative mb-1" data-te-input-wrapper-init>
                         <input
                           v-model="first_name"
@@ -911,7 +911,7 @@
                           First Name
                         </label>
                       </div>
-  
+
                       <div class="relative mb-1" data-te-input-wrapper-init>
                         <input
                           v-model="middle_name"
@@ -928,7 +928,7 @@
                           Middle Name
                         </label>
                       </div>
-  
+
                       <div class="relative mb-1" data-te-input-wrapper-init>
                         <input
                           v-model="surname"
@@ -945,18 +945,19 @@
                           Last Name
                         </label>
                       </div>
-  
+
                       <!-- GENDER -->
                       <select
                         data-te-select-init
                         class="w-full bg-neutral-50"
                         v-model="gender"
+                        id="gender"
                       >
                         <option value="patientGender">Gender</option>
                         <option value="female">Female</option>
                         <option value="male">Male</option>
                       </select>
-  
+
                       <!-- BIRTHDATE -->
                       <div class="relative mb-1" data-te-input-wrapper-init>
                         <input
@@ -972,7 +973,7 @@
                           Birthdate
                         </label>
                       </div>
-  
+
                       <!-- AGE -->
                       <div class="relative mb-1" data-te-input-wrapper-init>
                         <input
@@ -991,7 +992,7 @@
                           Age
                         </label>
                       </div>
-  
+
                       <div>
                         <select
                           data-te-select-init
@@ -1008,12 +1009,13 @@
                           <option value="notSpecified">Not Specified</option>
                         </select>
                       </div>
-  
+
                       <div>
                         <select
                           data-te-select-init
                           v-model="religion"
                           class="bg-neutral-50"
+                          id="religion"
                         >
                           <option selected value="3">Religion</option>
                           <option value="roman catholic">Roman Catholic</option>
@@ -1043,7 +1045,7 @@
                           <option value="none">None</option>
                         </select>
                       </div>
-  
+
                       <div
                         class="relative mb-1 col-span-2"
                         data-te-input-wrapper-init
@@ -1063,7 +1065,7 @@
                           Relative/Companion Name
                         </label>
                       </div>
-  
+
                       <div
                         class="relative mb-1 bg-neutral-50 flex flex-wrap items-stretch"
                       >
@@ -1084,21 +1086,22 @@
                           required
                         />
                       </div>
-  
+
                       <!-- ADDRESS -->
                       <select
                         data-te-select-init
                         class="bg-neutral-50"
                         v-model="pnt_city"
+                        id="pnt_city"
                       >
                         <option selected value="City">Select City</option>
                         <option value="Valenzuela">Valenzuela City</option>
                         <option value="Other City">Other City</option>
                         <!-- Expected input box here -->
                       </select>
-  
-  
-  
+
+
+
                       <div v-if="pnt_city !== 'Other City'">
                         <select
                           data-te-select-init
@@ -1143,7 +1146,7 @@
                           <option value="Wawang Pulo">Wawang Pulo</option>
                         </select>
                       </div>
-  
+
                       <div
                         v-if="pnt_city !== 'Other City'"
                         class="relative mb-1 col-span-2"
@@ -1164,8 +1167,8 @@
                           Street Address
                         </label>
                       </div>
-  
-  
+
+
                       <div
                         v-else
                         class="relative mb-1 col-span-3"
@@ -1187,7 +1190,7 @@
                           Street Address, Barangay, City
                         </label>
                       </div>
-  
+
                       <div class="s/sx-chief complaint col-span-2">
                         <div class="relative mb-1" data-te-input-wrapper-init>
                           <input
@@ -1206,7 +1209,7 @@
                           </label>
                         </div>
                       </div>
-  
+
                       <!-- ONSET-->
                       <div class="col-span-2">
                         <div class="relative mb-1" data-te-input-wrapper-init>
@@ -1226,7 +1229,7 @@
                           </label>
                         </div>
                       </div>
-  
+
                       <!-- ALLERGIES-->
                       <div class="col-span-2">
                         <div class="relative mb-1" data-te-input-wrapper-init>
@@ -1246,7 +1249,7 @@
                           </label>
                         </div>
                       </div>
-  
+
                       <!-- PROVOCATION-->
                       <div class="col-span-2">
                         <div class="relative mb-1" data-te-input-wrapper-init>
@@ -1266,7 +1269,7 @@
                           </label>
                         </div>
                       </div>
-  
+
                       <!-- MEDICATION-->
                       <div class="col-span-2">
                         <div class="relative mb-1" data-te-input-wrapper-init>
@@ -1286,7 +1289,7 @@
                           </label>
                         </div>
                       </div>
-  
+
                       <!-- QUALITY-->
                       <div class="col-span-2">
                         <div class="relative mb-1" data-te-input-wrapper-init>
@@ -1306,7 +1309,7 @@
                           </label>
                         </div>
                       </div>
-  
+
                       <!-- PAST MEDICAL HISTORY-->
                       <div class="col-span-2">
                         <div class="relative mb-1" data-te-input-wrapper-init>
@@ -1326,7 +1329,7 @@
                           </label>
                         </div>
                       </div>
-  
+
                       <!-- RADIATION-->
                       <div class="col-span-2">
                         <div class="relative mb-1" data-te-input-wrapper-init>
@@ -1346,7 +1349,7 @@
                           </label>
                         </div>
                       </div>
-  
+
                       <!-- LAST ORAL INTAKE -->
                       <div class="col-span-2">
                         <div class="relative mb-1" data-te-input-wrapper-init>
@@ -1366,7 +1369,7 @@
                           </label>
                         </div>
                       </div>
-  
+
                       <!--SEVERITY-->
                       <div class="col-span-2">
                         <select
@@ -1381,7 +1384,7 @@
                           <option value="Others">Others</option>
                         </select>
                       </div>
-  
+
                       <!-- EVENTS LEADING TO INJURY -->
                       <div class="events col-span-2">
                         <div class="relative mb-1" data-te-input-wrapper-init>
@@ -1401,7 +1404,7 @@
                           </label>
                         </div>
                       </div>
-  
+
                       <!-- TIME -->
                       <div class="time col-span-2">
                         <div
@@ -1863,7 +1866,7 @@
                           />
                         </div>
                       </div>
-  
+
                       <div class="relative mr-1 left-2 top-4 col-span-3">
                         <select
                           data-te-select-init
@@ -1906,7 +1909,7 @@
                           />
                         </div>
                       </div>
-  
+
                       <!-- SCORE -->
                       <div class="col-span-3">
                         <h4 class="mb-3 font-bold">Score</h4>
@@ -1920,7 +1923,7 @@
                         </div>
                       </div>
                     </div>
-  
+
                     <div class="grid grid-cols-8 gap-4 mt-3 mb-5">
                       <!-- EYES -->
                       <div class="relative col-span-2">
@@ -1937,7 +1940,7 @@
                           <option value="1">1 - None</option>
                         </select>
                       </div>
-  
+
                       <!-- VERBAL -->
                       <div class="relative col-span-3">
                         <select
@@ -1954,7 +1957,7 @@
                           <option value="1">1 - None</option>
                         </select>
                       </div>
-  
+
                       <!-- MOTOR -->
                       <div class="relative col-span-3 place-content-start">
                         <select
@@ -2067,7 +2070,7 @@
                         >
                       </div>
                     </div>
-  
+
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
                         <label class="mb-0">Chest/Lungs</label>
@@ -2100,7 +2103,7 @@
                         >
                       </div>
                     </div>
-  
+
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
                         <label class="mb-0">Pelvis/GU</label>
@@ -2133,7 +2136,7 @@
                         >
                       </div>
                     </div>
-  
+
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
                         <label class="mb-0">Left Arm</label>
@@ -2166,7 +2169,7 @@
                         >
                       </div>
                     </div>
-  
+
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
                         <label class="mb-0">Right Arm</label>
@@ -2199,7 +2202,7 @@
                         >
                       </div>
                     </div>
-  
+
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
                         <label class="mb-0">Left Leg</label>
@@ -2232,7 +2235,7 @@
                         >
                       </div>
                     </div>
-  
+
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
                         <label class="mb-0">Right Leg</label>
@@ -2265,7 +2268,7 @@
                         >
                       </div>
                     </div>
-  
+
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
                         <label class="mb-0">Genitalia</label>
@@ -2298,7 +2301,7 @@
                         >
                       </div>
                     </div>
-  
+
                     <h4 class="mb-4 font-bold">Posterior</h4>
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
@@ -2332,7 +2335,7 @@
                         >
                       </div>
                     </div>
-  
+
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
                         <label class="mb-0">Chest/Lungs</label>
@@ -2365,7 +2368,7 @@
                         >
                       </div>
                     </div>
-  
+
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
                         <label class="mb-0">Pelvis/GU</label>
@@ -2398,7 +2401,7 @@
                         >
                       </div>
                     </div>
-  
+
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
                         <label class="mb-0">Left Arm</label>
@@ -2431,7 +2434,7 @@
                         >
                       </div>
                     </div>
-  
+
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
                         <label class="mb-0">Right Arm</label>
@@ -2464,7 +2467,7 @@
                         >
                       </div>
                     </div>
-  
+
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
                         <label class="mb-0">Left Leg</label>
@@ -2497,7 +2500,7 @@
                         >
                       </div>
                     </div>
-  
+
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
                         <label class="mb-0">Right Leg</label>
@@ -2653,7 +2656,7 @@
                         />
                       </div>
                     </div>
-  
+
                     <!-- Anterior Chest/Lungs Degree -->
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
@@ -2718,7 +2721,7 @@
                         />
                       </div>
                     </div>
-  
+
                     <!-- Anterior Pelvis/GU Degree -->
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
@@ -2783,7 +2786,7 @@
                         />
                       </div>
                     </div>
-  
+
                     <!-- Anterior Left Arm Degree -->
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
@@ -2848,7 +2851,7 @@
                         />
                       </div>
                     </div>
-  
+
                     <!-- Anterior Right Arm Degree -->
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
@@ -2913,7 +2916,7 @@
                         />
                       </div>
                     </div>
-  
+
                     <!-- Anterior Left Leg Degree -->
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
@@ -2978,7 +2981,7 @@
                         />
                       </div>
                     </div>
-  
+
                     <!-- Anterior Right Leg Degree -->
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
@@ -3043,7 +3046,7 @@
                         />
                       </div>
                     </div>
-  
+
                     <!-- Anterior Genitalia Degree -->
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
@@ -3108,7 +3111,7 @@
                         />
                       </div>
                     </div>
-  
+
                     <!-- Posterior Head Degree -->
                     <h4 class="mb-4 font-bold">Posterior</h4>
                     <div class="flex items-center">
@@ -3174,7 +3177,7 @@
                         />
                       </div>
                     </div>
-  
+
                     <!-- Posterior Chest/Lungs Degree -->
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
@@ -3239,7 +3242,7 @@
                         />
                       </div>
                     </div>
-  
+
                     <!-- Posterior Pelvis/GU Degree -->
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
@@ -3304,7 +3307,7 @@
                         />
                       </div>
                     </div>
-  
+
                     <!-- Posterior Left Arm Degree -->
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
@@ -3369,7 +3372,7 @@
                         />
                       </div>
                     </div>
-  
+
                     <!-- Posterior Right Arm Degree -->
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
@@ -3434,7 +3437,7 @@
                         />
                       </div>
                     </div>
-  
+
                     <!-- Posterior Left Leg Degree -->
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
@@ -3499,7 +3502,7 @@
                         />
                       </div>
                     </div>
-  
+
                     <!-- Posterior Right Leg Degree -->
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
@@ -3625,7 +3628,7 @@
                     <div
                       class="grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-4"
                     >
-  
+
                       <div class="relative mb-1 col-span-2" data-te-input-wrapper-init>
                         <input
                           v-model="prenatal_checkup"
@@ -3642,7 +3645,7 @@
                           Prenatal Check-up
                         </label>
                       </div>
-  
+
                       <div class="relative mb-1 col-span-2" data-te-input-wrapper-init>
                         <input
                           v-model="last_menstrual_period"
@@ -3659,7 +3662,7 @@
                           Last Menstrual Period
                         </label>
                       </div>
-  
+
                       <div class="relative mb-1 col-span-4" data-te-input-wrapper-init>
                         <input
                           v-model="labor_pains"
@@ -3676,7 +3679,7 @@
                           Labor Pains
                         </label>
                       </div>
-  
+
                       <div class="relative mb-1 col-span-2" data-te-input-wrapper-init>
                         <input
                           v-model="estimated_date_of_delivery"
@@ -3693,7 +3696,7 @@
                           Estimated Date of Delivery
                         </label>
                       </div>
-  
+
                       <div class="col-span-2">
                         <div class="relative mb-1" data-te-input-wrapper-init>
                           <input
@@ -3712,7 +3715,7 @@
                           </label>
                         </div>
                       </div>
-  
+
                       <div class="col-span-4">
                         <div class="relative mb-1" data-te-input-wrapper-init>
                           <input
@@ -3731,7 +3734,7 @@
                           </label>
                         </div>
                       </div>
-  
+
                       <div class="col-span-4">
                         <div class="relative mb-1" data-te-input-wrapper-init>
                           <input
@@ -3768,7 +3771,7 @@
                           term birth
                         </label>
                       </div>
-  
+
                       <div
                         class="relative mb-3"
                         data-te-input-wrapper-init
@@ -3787,7 +3790,7 @@
                           pre term
                         </label>
                       </div>
-  
+
                       <div
                         class="relative mb-3"
                         data-te-input-wrapper-init
@@ -3806,7 +3809,7 @@
                           abortion
                         </label>
                       </div>
-  
+
                       <div
                         class="relative mb-3"
                         data-te-input-wrapper-init
@@ -3825,10 +3828,10 @@
                           living
                         </label>
                       </div>
-  
-                      
-  
-                      
+
+
+
+
                     </div>
                   </form>
                   <div class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md p-4 dark:border-opacity-50 min-[0px]:rounded-none">
@@ -3905,7 +3908,7 @@
                           Nasal
                         </label>
                       </div>
-  
+
                       <div class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem] gap-3">
                         <input
                           v-model="o2_mask"
@@ -3921,7 +3924,7 @@
                           O2 Mask
                         </label>
                       </div>
-  
+
                       <div class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem] gap-3">
                         <input
                           v-model="bvm"
@@ -3955,7 +3958,7 @@
                         </label>
                       </div>
                     </div>
-  
+
                     <div class="grid grid-col-2 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-3 mb-4">
                       <div
                         class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
@@ -3974,7 +3977,7 @@
                           Wound Care
                         </label>
                       </div>
-  
+
                       <div
                         class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
                       >
@@ -3992,7 +3995,7 @@
                           Splinting Applied
                         </label>
                       </div>
-  
+
                       <div
                         class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
                       >
@@ -4010,7 +4013,7 @@
                           Control Bleeding
                         </label>
                       </div>
-  
+
                       <div
                         class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
                       >
@@ -4028,7 +4031,7 @@
                           Vital Sign Taken and Recorded
                         </label>
                       </div>
-  
+
                       <div
                         class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
                       >
@@ -4046,7 +4049,7 @@
                           Applied CPR
                         </label>
                       </div>
-  
+
                       <div
                         class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
                       >
@@ -4085,7 +4088,7 @@
                           Remarks
                         </label>
                       </div>
-  
+
                       <div
                         class="relative mb-1"
                         data-te-input-wrapper-init
@@ -4105,7 +4108,7 @@
                         </label>
                       </div>
                     </div>
-                    
+
                   </form>
                   <div class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md p-4 dark:border-opacity-50 min-[0px]:rounded-none">
                     <button
@@ -4182,7 +4185,7 @@
                             Received By
                           </label>
                         </div>
-  
+
                         <div class="relative mb-3">
                           <vue-signature
                             ref="received_by_signature"
@@ -4202,7 +4205,7 @@
                           </button>
                         </div>
                       </div>
-  
+
                       <div class="grid grid-col-1 sm:grid-cols-1">
                         <div class="relative mb-1" data-te-input-wrapper-init>
                           <input
@@ -4220,7 +4223,7 @@
                             Team Leader
                           </label>
                         </div>
-  
+
                         <div class="relative mb-3">
                           <vue-signature
                             ref="team_leader_signature"
@@ -4240,12 +4243,12 @@
                         </div>
                       </div>
                     </div>
-  
+
                     <div>
                       <h4 class="mb-3 mt-7 font-bold">
                         R.A. 8344 REFUSAL TO ADMIT
                       </h4>
-  
+
                       <div class="grid grid-col-1 sm:grid-cols-1 gap-4">
                         <div class="relative mb-5" data-te-input-wrapper-init>
                           <input
@@ -4263,7 +4266,7 @@
                             Medical Facility
                           </label>
                         </div>
-  
+
                         <div class="relative mb-3">
                           <vue-signature
                             ref="medical_facility_signature"
@@ -4283,7 +4286,7 @@
                         </div>
                       </div>
                     </div>
-  
+
                     <div class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]">
                       <h4 class="mb-3 mt-7 font-bold">SUPPLIES USED</h4>
                       <div class="grid grid-cols-4 space-x-2">
@@ -4304,7 +4307,7 @@
                             >Gloves
                           </label>
                         </div>
-  
+
                         <div
                           class="relative mb-3 col-span-1"
                           data-te-input-wrapper-init
@@ -4322,7 +4325,7 @@
                             >Gauze
                           </label>
                         </div>
-  
+
                         <div
                           class="relative mb-3 col-span-1"
                           data-te-input-wrapper-init
@@ -4340,7 +4343,7 @@
                             >Mask
                           </label>
                         </div>
-  
+
                         <div
                           class="relative mb-3 col-span-1"
                           data-te-input-wrapper-init
@@ -4452,7 +4455,7 @@
                         >
                       </label>
                     </div>
-  
+
                     <div
                       class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem] text-justify mt-5"
                     >
@@ -4477,7 +4480,7 @@
                         >
                       </label>
                     </div>
-  
+
                     <div
                       class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem] text-justify mt-5"
                     >
@@ -4515,7 +4518,7 @@
                         >
                       </label>
                     </div>
-  
+
                     <div
                       class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem] text-justify mt-5"
                     >
@@ -4597,7 +4600,7 @@
                           Responder's Full Name
                         </label>
                       </div>
-  
+
                       <div class="relative mb-3 top-3">
                         <vue-signature
                           ref="responder_signature"
@@ -4651,7 +4654,7 @@
                       ><strong>CONFORME/</strong><em>SUMASANG-AYON:</em></label
                     >
                   </div>
-  
+
                   <div
                     class="grid grid-col-5 sm:grid-cols-5 md:grid-cols-5 mt-2 gap-6"
                   >
@@ -4672,7 +4675,7 @@
                           Patient's Name/Relative/Guardian's Name
                         </label>
                       </div>
-  
+
                       <div class="relative mb-3 top-3">
                         <vue-signature
                           ref="patient_or_relative_signature"
@@ -4706,7 +4709,7 @@
                       </div>
                     </div>
                   </div>
-  
+
                   <div class="relative mb-6 top-10">
                     <label class="underline decoration-sky-500 decoration-4"
                       ><strong>WITNESS:</strong></label
@@ -4729,7 +4732,7 @@
                             1. Witness Name
                           </label>
                         </div>
-  
+
                         <div class="relative mb-3">
                           <vue-signature
                             ref="witness_one_signature"
@@ -4749,7 +4752,7 @@
                           </button>
                         </div>
                       </div>
-  
+
                       <div class="grid grid-col-1 sm:grid-cols-1">
                         <div class="relative mb-1" data-te-input-wrapper-init>
                           <input
@@ -4767,7 +4770,7 @@
                             2. Witness Name
                           </label>
                         </div>
-  
+
                         <div class="relative mb-3">
                           <vue-signature
                             ref="witness_two_signature"
@@ -4807,7 +4810,7 @@
             class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md border-t-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50 min-[0px]:rounded-none"
           >
             <button
-              @click="clear"
+              @click="clearAll"
               type="button"
               class="ml-1 inline-block rounded border border-slate-400 bg-slate-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out hover:bg-slate-300 hover:border-slate-400 hover:bg-slate-300 focus:bg-slate-300 focus:shadow-[0_4px_9px_-4px_#3b71ca] focus:ring-0 active:bg-slate-300"
               data-te-ripple-init
@@ -4816,7 +4819,7 @@
               CLEAR ALL
             </button>
             <button
-              @click="register"
+              @click="update"
               type="button"
               class="inline-block ml-4 rounded bg-[#30AD62] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-green-700 focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
               data-te-ripple-init
@@ -4829,10 +4832,10 @@
       </div>
     </div>
   </template>
-  
+
   <script>
   import {Collapse, Datepicker, initTE, Input, Modal, Ripple, Select, Stepper, Timepicker,} from "tw-elements";
-  
+
   export default {
     props: {
         viewableByAllEmrs: Boolean,
@@ -5030,437 +5033,448 @@
         witness_one_signature: "",
         witness_two: "",
         witness_two_signature: "",
-  
       };
-  
-  
     },
     fetch() {
-        this.role = this.$auth.user.role;
-        this.$axios.get("team/list").then((response) => {
+      this.role = this.$auth.user.role;
+      this.$axios.get("team/list").then((response) => {
         response.data.return.map((team) =>
             this.teams.push({ id: team.id, name: this.capitalize(team.name) })
         );
-        });
+      });
     },
     mounted() {
       initTE(
         { Ripple, Modal, Input, Datepicker, Select, Timepicker, Collapse },
         { allowReinits: true }
-    );
-  
+      );
+
       // Function to update the date field
       function updateDateField() {
         this.dispatch_date = new Date().toISOString().split("T")[0];
       }
-  
+
       // Initial call to set the date on component mount
       updateDateField.call(this);
-  
+
       // Schedule the update to occur once per day (24 hours)
       setInterval(updateDateField.bind(this), 24 * 60 * 60 * 1000); // 24 hours in milliseconds
       this.score = parseInt(this.eyes) + parseInt(this.verbal) + parseInt(this.motor);
     },
     watch: {
-      "$store.state.editPatientFormMobile"() {
-        if (this.$store.getters["getEditPatientFormMobile"]) {
-            initTE({ Stepper }, { allowReinits: true });
+      "$store.state.editPatientStepperForm"() {
+        if (this.$store.getters["getEditPatientStepperForm"]) {
+          initTE({ Stepper }, { allowReinits: true });
         }
       },
-      "$store.state.editPatientFormMobileArg"() {
-      if (this.$store.getters["getEditPatientFormMobileArg"] !== undefined) {
-        const params = {
-          id: this.$store.getters["getEditPatientFormMobileArg"],
-          emrId: this.$auth.user.role === "emr" ? this.$auth.user.id : 0,
-          viewableByAllEmrs: this.viewableByAllEmrs,
-        };
-        this.$store.dispatch("getSinglePcr", params);
-      }
+      "$store.state.editPatientStepperFormArg"() {
+        if (this.$store.getters["getEditPatientStepperFormArg"] !== undefined) {
+          const params = {
+            id: this.$store.getters["getEditPatientStepperFormArg"],
+            emrId: this.$auth.user.role === "emr" ? this.$auth.user.id : 0,
+            viewableByAllEmrs: this.viewableByAllEmrs,
+          };
+          this.$store.dispatch("getSinglePcr", params);
+        }
+      },
+      "$store.state.editPatientStepperFormFields"() {
+        this.patientFormMobileFields =
+          this.$store.getters["getEditPatientStepperFormFields"];
+        this.id = this.patientFormMobileFields.id;
+        this.user_id = this.patientFormMobileFields.user_pcr.user_id;
+        this.ambulance = this.patientFormMobileFields.ambulance;
+        this.arrive_at_scene = this.patientFormMobileFields.arrive_at_scene;
+        this.arrived_at = this.patientFormMobileFields.arrived_at;
+        this.barangay_b = this.patientFormMobileFields.barangay_b;
+        this.priority = this.patientFormMobileFields.priority;
+        this.call_receive = this.patientFormMobileFields.call_receive;
+        this.call_source = this.patientFormMobileFields.call_source;
+        this.category = "dispatch data";
+        this.created_at = this.patientFormMobileFields.created_at;
+        this.departed = this.patientFormMobileFields.departed;
+        this.dispatch_date = this.patientFormMobileFields.dispatch_date;
+        this.driver = this.patientFormMobileFields.driver;
+        this.ems_location_a = this.patientFormMobileFields.ems_location_a;
+        this.ems_location_b = this.patientFormMobileFields.ems_location_b;
+        this.en_route_to = this.patientFormMobileFields.en_route_to;
+        this.incident_location = this.patientFormMobileFields.incident_location;
+        this.involved_vehicles_a =
+          this.patientFormMobileFields.involved_vehicles_a;
+        this.involved_vehicles_b =
+          this.patientFormMobileFields.involved_vehicles_b;
+        this.l_o = this.patientFormMobileFields.l_o;
+        this.mt_barangay = this.patientFormMobileFields.mt_barangay;
+        this.mt_from = this.patientFormMobileFields.mt_from;
+        this.passenger = this.patientFormMobileFields.passenger;
+        this.pedestrian = this.patientFormMobileFields.pedestrian;
+        this.plate_number = this.patientFormMobileFields.plate_number;
+        this.remarks = this.patientFormMobileFields.remarks;
+        this.responded = this.patientFormMobileFields.responded;
+        this.station = this.patientFormMobileFields.station;
+        this.t_l = this.patientFormMobileFields.t_l;
+        this.t_o = this.patientFormMobileFields.t_o;
+        this.team_id = this.patientFormMobileFields.team_id;
+        this.tx_o = this.patientFormMobileFields.tx_o;
+        this.qr_code = this.patientFormMobileFields.qr_code;
+        this.va_location = this.patientFormMobileFields.va_location;
+        this.va_location_barangay =
+          this.patientFormMobileFields.va_location_barangay;
+        this.age = this.patientFormMobileFields.pcr_patient.patient.age;
+        this.allergies =
+          this.patientFormMobileFields.pcr_patient.patient.allergies;
+        this.birthdate =
+          this.patientFormMobileFields.pcr_patient.patient.birthdate;
+        this.companion =
+          this.patientFormMobileFields.pcr_patient.patient.companion;
+        this.first_name =
+          this.patientFormMobileFields.pcr_patient.patient.first_name;
+        this.gender = this.patientFormMobileFields.pcr_patient.patient.gender;
+        console.log('this.gender');
+        console.log(this.gender);
+        if (this.gender !== null && this.gender !== '') {
+          this.SetSelectValue("gender", this.gender);
+        }
+        this.medical_history =
+          this.patientFormMobileFields.pcr_patient.patient.medical_history;
+        this.medication =
+          this.patientFormMobileFields.pcr_patient.patient.medication;
+        this.middle_name =
+          this.patientFormMobileFields.pcr_patient.patient.middle_name;
+        this.phone = this.patientFormMobileFields.pcr_patient.patient.phone;
+        this.religion =
+          this.patientFormMobileFields.pcr_patient.patient.religion;
+        if (this.religion !== '' && this.religion !== null) {
+          this.SetSelectValue("religion", this.religion);
+        }
+        if (this.ems_location_a !== '' && this.ems_location_a !== null) {
+          this.SetSelectValue("ems_location_a", this.ems_location_a);
+        }
+        this.status = this.patientFormMobileFields.pcr_patient.patient.status;
+        this.suffix = this.patientFormMobileFields.pcr_patient.patient.suffix;
+        this.surname = this.patientFormMobileFields.pcr_patient.patient.surname;
+        this.pnt_city =
+          this.patientFormMobileFields.pcr_patient.patient.address.city;
+        if (this.pnt_city !== '' && this.pnt_city !== null) {
+          this.SetSelectValue("pnt_city", this.pnt_city);
+        }
+        this.pnt_brgy =
+          this.patientFormMobileFields.pcr_patient.patient.address.barangay;
+        this.pnt_st =
+          this.patientFormMobileFields.pcr_patient.patient.address.street;
+        this.pnt_other_city =
+          this.patientFormMobileFields.pcr_patient.patient.address.other_city;
+        this.complaint = this.patientFormMobileFields.patient_data.complaint;
+        this.onset = this.patientFormMobileFields.patient_data.onset;
+        this.quality = this.patientFormMobileFields.patient_data.quality;
+        this.provocation = this.patientFormMobileFields.patient_data.provocation;
+        this.radiation = this.patientFormMobileFields.patient_data.radiation;
+        this.last_oral_intake =
+          this.patientFormMobileFields.patient_data.last_oral_intake;
+        this.event_leading_to_injury =
+          this.patientFormMobileFields.patient_data.event_leading_to_injury;
+        this.severity = this.patientFormMobileFields.patient_data.severity;
+        this.time_taken = this.patientFormMobileFields.patient_data.time_taken;
+        this.time_a = this.patientFormMobileFields.pcr_vital.time_a;
+        this.time_b = this.patientFormMobileFields.pcr_vital.time_b;
+        this.time_c = this.patientFormMobileFields.pcr_vital.time_c;
+        this.time_d = this.patientFormMobileFields.pcr_vital.time_d;
+        this.time_e = this.patientFormMobileFields.pcr_vital.time_e;
+        this.time_f = this.patientFormMobileFields.pcr_vital.time_f;
+        this.bp_a = this.patientFormMobileFields.pcr_vital.bp_a;
+        this.bp_b = this.patientFormMobileFields.pcr_vital.bp_b;
+        this.bp_c = this.patientFormMobileFields.pcr_vital.bp_c;
+        this.bp_d = this.patientFormMobileFields.pcr_vital.bp_d;
+        this.bp_e = this.patientFormMobileFields.pcr_vital.bp_e;
+        this.pr_a = this.patientFormMobileFields.pcr_vital.pr_a;
+        this.pr_b = this.patientFormMobileFields.pcr_vital.pr_b;
+        this.pr_c = this.patientFormMobileFields.pcr_vital.pr_c;
+        this.pr_d = this.patientFormMobileFields.pcr_vital.pr_d;
+        this.pr_e = this.patientFormMobileFields.pcr_vital.pr_e;
+        this.rr_a = this.patientFormMobileFields.pcr_vital.rr_a;
+        this.rr_b = this.patientFormMobileFields.pcr_vital.rr_b;
+        this.rr_c = this.patientFormMobileFields.pcr_vital.rr_c;
+        this.rr_d = this.patientFormMobileFields.pcr_vital.rr_d;
+        this.rr_e = this.patientFormMobileFields.pcr_vital.rr_e;
+        this.tempt_a = this.patientFormMobileFields.pcr_vital.tempt_a;
+        this.tempt_b = this.patientFormMobileFields.pcr_vital.tempt_b;
+        this.tempt_c = this.patientFormMobileFields.pcr_vital.tempt_c;
+        this.tempt_d = this.patientFormMobileFields.pcr_vital.tempt_d;
+        this.tempt_e = this.patientFormMobileFields.pcr_vital.tempt_e;
+        this.spo2_a = this.patientFormMobileFields.pcr_vital.spo2_a;
+        this.spo2_b = this.patientFormMobileFields.pcr_vital.spo2_b;
+        this.spo2_c = this.patientFormMobileFields.pcr_vital.spo2_c;
+        this.spo2_d = this.patientFormMobileFields.pcr_vital.spo2_d;
+        this.spo2_e = this.patientFormMobileFields.pcr_vital.spo2_e;
+        this.skin_color = this.patientFormMobileFields.pcr_vital.skin_color;
+        this.eyes = this.patientFormMobileFields.pcr_vital.eyes;
+        this.verbal = this.patientFormMobileFields.pcr_vital.verbal;
+        this.motor = this.patientFormMobileFields.pcr_vital.motor;
+        this.score = this.patientFormMobileFields.pcr_vital.score;
+        this.left_pearl =
+          this.patientFormMobileFields.pcr_vital_pupils.left_pearl;
+        this.left_dilated =
+          this.patientFormMobileFields.pcr_vital_pupils.left_dilated;
+        this.left_constrict =
+          this.patientFormMobileFields.pcr_vital_pupils.left_constrict;
+        this.left_non_reactive =
+          this.patientFormMobileFields.pcr_vital_pupils.left_non_reactive;
+        this.left_cataract =
+          this.patientFormMobileFields.pcr_vital_pupils.left_cataract;
+        this.right_pearl =
+          this.patientFormMobileFields.pcr_vital_pupils.right_pearl;
+        this.right_dilated =
+          this.patientFormMobileFields.pcr_vital_pupils.right_dilated;
+        this.right_constrict =
+          this.patientFormMobileFields.pcr_vital_pupils.right_constrict;
+        this.right_non_reactive =
+          this.patientFormMobileFields.pcr_vital_pupils.right_non_reactive;
+        this.right_cataract =
+          this.patientFormMobileFields.pcr_vital_pupils.right_cataract;
+        this.prenatal_checkup =
+          this.patientFormMobileFields.pcr_obstetrics.prenatal_checkup;
+        this.labor_pains =
+          this.patientFormMobileFields.pcr_obstetrics.labor_pains;
+        this.age_of_gestation =
+          this.patientFormMobileFields.pcr_obstetrics.age_of_gestation;
+        this.last_menstrual_period =
+          this.patientFormMobileFields.pcr_obstetrics.last_menstrual_period;
+        this.estimated_date_of_delivery =
+          this.patientFormMobileFields.pcr_obstetrics.estimated_date_of_delivery;
+        this.gravidity = this.patientFormMobileFields.pcr_obstetrics.gravidity;
+        this.parity = this.patientFormMobileFields.pcr_obstetrics.parity;
+        this.term_of_birth =
+          this.patientFormMobileFields.pcr_obstetrics.term_of_birth;
+        this.pre_term = this.patientFormMobileFields.pcr_obstetrics.pre_term;
+        this.abortion = this.patientFormMobileFields.pcr_obstetrics.abortion;
+        this.living = this.patientFormMobileFields.pcr_obstetrics.living;
+        this.obs_remarks = this.patientFormMobileFields.pcr_obstetrics.remarks;
+        this.nasal = this.patientFormMobileFields.pcr_treatments.nasal;
+        this.o2_mask = this.patientFormMobileFields.pcr_treatments.o2_mask;
+        this.bvm = this.patientFormMobileFields.pcr_treatments.bvm;
+        this.lpm = this.patientFormMobileFields.pcr_treatments.lpm;
+        this.wound_care = this.patientFormMobileFields.pcr_treatments.wound_care;
+        this.splinting_applied =
+          this.patientFormMobileFields.pcr_treatments.splinting_applied;
+        this.control_bleeding =
+          this.patientFormMobileFields.pcr_treatments.control_bleeding;
+        this.vital_sign_taken =
+          this.patientFormMobileFields.pcr_treatments.vital_sign_taken;
+        this.applied_cpr =
+          this.patientFormMobileFields.pcr_treatments.applied_cpr;
+        this.applied_aed =
+          this.patientFormMobileFields.pcr_treatments.applied_aed;
+        this.problems = this.patientFormMobileFields.pcr_treatments.problems;
+        this.received_by =
+          this.patientFormMobileFields.pcr_signature.received_by;
+        this.received_by_signature =
+          this.patientFormMobileFields.pcr_signature.received_by_signature;
+        this.medical_facility =
+          this.patientFormMobileFields.pcr_signature.medical_facility;
+        this.medical_facility_signature =
+          this.patientFormMobileFields.pcr_signature.medical_facility_signature;
+        this.team_leader =
+          this.patientFormMobileFields.pcr_signature.team_leader;
+        this.team_leader_signature =
+          this.patientFormMobileFields.pcr_signature.team_leader_signature;
+        this.gloves = this.patientFormMobileFields.pcr_signature.gloves;
+        this.mask = this.patientFormMobileFields.pcr_signature.mask;
+        this.gauze = this.patientFormMobileFields.pcr_signature.gauze;
+        this.others = this.patientFormMobileFields.pcr_signature.others;
+        this.anterior_head_injury =
+          this.patientFormMobileFields.pcr_body_injuries.anterior_head_injury;
+        this.anterior_chest_injury =
+          this.patientFormMobileFields.pcr_body_injuries.anterior_chest_injury;
+        this.anterior_pelvis_injury =
+          this.patientFormMobileFields.pcr_body_injuries.anterior_pelvis_injury;
+        this.anterior_left_arm_injury =
+          this.patientFormMobileFields.pcr_body_injuries.anterior_left_arm_injury;
+        this.anterior_right_arm_injury =
+          this.patientFormMobileFields.pcr_body_injuries.anterior_right_arm_injury;
+        this.anterior_left_leg_injury =
+          this.patientFormMobileFields.pcr_body_injuries.anterior_left_leg_injury;
+        this.anterior_right_leg_injury =
+          this.patientFormMobileFields.pcr_body_injuries.anterior_right_leg_injury;
+        this.anterior_genitalia_injury =
+          this.patientFormMobileFields.pcr_body_injuries.anterior_genitalia_injury;
+        if (this.anterior_head_injury.length > 0) {
+          this.SetSelectValue("anterior_head_injury", this.anterior_head_injury);
+        }
+        if (this.anterior_chest_injury.length > 0) {
+          this.SetSelectValue(
+            "anterior_chest_injury",
+            this.anterior_chest_injury
+          );
+        }
+        if (this.anterior_pelvis_injury.length > 0) {
+          this.SetSelectValue(
+            "anterior_pelvis_injury",
+            this.anterior_pelvis_injury
+          );
+        }
+        if (this.anterior_left_arm_injury.length > 0) {
+          this.SetSelectValue(
+            "anterior_left_arm_injury",
+            this.anterior_left_arm_injury
+          );
+        }
+        if (this.anterior_right_arm_injury.length > 0) {
+          this.SetSelectValue(
+            "anterior_right_arm_injury",
+            this.anterior_right_arm_injury
+          );
+        }
+        if (this.anterior_left_leg_injury.length > 0) {
+          this.SetSelectValue(
+            "anterior_left_leg_injury",
+            this.anterior_left_leg_injury
+          );
+        }
+        if (this.anterior_right_leg_injury.length > 0) {
+          this.SetSelectValue(
+            "anterior_right_leg_injury",
+            this.anterior_right_leg_injury
+          );
+        }
+        if (this.anterior_genitalia_injury.length > 0) {
+          this.SetSelectValue(
+            "anterior_genitalia_injury",
+            this.anterior_genitalia_injury
+          );
+        }
+        this.posterior_head_injury =
+          this.patientFormMobileFields.pcr_body_injuries.posterior_head_injury;
+        this.posterior_chest_injury =
+          this.patientFormMobileFields.pcr_body_injuries.posterior_chest_injury;
+        this.posterior_pelvis_injury =
+          this.patientFormMobileFields.pcr_body_injuries.posterior_pelvis_injury;
+        this.posterior_left_arm_injury =
+          this.patientFormMobileFields.pcr_body_injuries.posterior_left_arm_injury;
+        this.posterior_right_arm_injury =
+          this.patientFormMobileFields.pcr_body_injuries.posterior_right_arm_injury;
+        this.posterior_left_leg_injury =
+          this.patientFormMobileFields.pcr_body_injuries.posterior_left_leg_injury;
+        this.posterior_right_leg_injury =
+          this.patientFormMobileFields.pcr_body_injuries.posterior_right_leg_injury;
+        if (this.posterior_head_injury.length > 0) {
+          this.SetSelectValue(
+            "posterior_head_injury",
+            this.posterior_head_injury
+          );
+        }
+        if (this.posterior_chest_injury.length > 0) {
+          this.SetSelectValue(
+            "posterior_chest_injury",
+            this.posterior_chest_injury
+          );
+        }
+        if (this.posterior_pelvis_injury.length > 0) {
+          this.SetSelectValue(
+            "posterior_pelvis_injury",
+            this.posterior_pelvis_injury
+          );
+        }
+        if (this.posterior_left_arm_injury.length > 0) {
+          this.SetSelectValue(
+            "posterior_left_arm_injury",
+            this.posterior_left_arm_injury
+          );
+        }
+        if (this.posterior_right_arm_injury.length > 0) {
+          this.SetSelectValue(
+            "posterior_right_arm_injury",
+            this.posterior_right_arm_injury
+          );
+        }
+        if (this.posterior_left_leg_injury.length > 0) {
+          this.SetSelectValue(
+            "posterior_left_leg_injury",
+            this.posterior_left_leg_injury
+          );
+        }
+        if (this.posterior_right_leg_injury.length > 0) {
+          this.SetSelectValue(
+            "posterior_right_leg_injury",
+            this.posterior_right_leg_injury
+          );
+        }
+        this.anterior_head_degree =
+          this.patientFormMobileFields.pcr_burn_percentage.anterior_head_degree;
+        this.anterior_chest_degree =
+          this.patientFormMobileFields.pcr_burn_percentage.anterior_chest_degree;
+        this.anterior_pelvis_degree =
+          this.patientFormMobileFields.pcr_burn_percentage.anterior_pelvis_degree;
+        this.anterior_left_arm_degree =
+          this.patientFormMobileFields.pcr_burn_percentage.anterior_left_arm_degree;
+        this.anterior_right_arm_degree =
+          this.patientFormMobileFields.pcr_burn_percentage.anterior_right_arm_degree;
+        this.anterior_left_leg_degree =
+          this.patientFormMobileFields.pcr_burn_percentage.anterior_left_leg_degree;
+        this.anterior_right_leg_degree =
+          this.patientFormMobileFields.pcr_burn_percentage.anterior_right_leg_degree;
+        this.anterior_genitalia_degree =
+          this.patientFormMobileFields.pcr_burn_percentage.anterior_genitalia_degree;
+        this.posterior_head_degree =
+          this.patientFormMobileFields.pcr_burn_percentage.posterior_head_degree;
+        this.posterior_chest_degree =
+          this.patientFormMobileFields.pcr_burn_percentage.posterior_chest_degree;
+        this.posterior_pelvis_degree =
+          this.patientFormMobileFields.pcr_burn_percentage.posterior_pelvis_degree;
+        this.posterior_left_arm_degree =
+          this.patientFormMobileFields.pcr_burn_percentage.posterior_left_arm_degree;
+        this.posterior_right_arm_degree =
+          this.patientFormMobileFields.pcr_burn_percentage.posterior_right_arm_degree;
+        this.posterior_left_leg_degree =
+          this.patientFormMobileFields.pcr_burn_percentage.posterior_left_leg_degree;
+        this.posterior_right_leg_degree =
+          this.patientFormMobileFields.pcr_burn_percentage.posterior_right_leg_degree;
+        this.statement_one =
+          this.patientFormMobileFields.pcr_waiver.statement_one;
+        this.statement_two =
+          this.patientFormMobileFields.pcr_waiver.statement_two;
+        this.statement_three =
+          this.patientFormMobileFields.pcr_waiver.statement_three;
+        this.statement_four =
+          this.patientFormMobileFields.pcr_waiver.statement_four;
+        this.hospital_name =
+          this.patientFormMobileFields.pcr_waiver.hospital_name;
+        this.from_hospital =
+          this.patientFormMobileFields.pcr_waiver.from_hospital;
+        this.to_hospital =
+          this.patientFormMobileFields.pcr_waiver.to_hospital;
+        this.other_statement =
+          this.patientFormMobileFields.pcr_waiver.other_statement;
+        this.responder_full_name =
+          this.patientFormMobileFields.pcr_waiver.responder_full_name;
+        this.responder_signature =
+          this.patientFormMobileFields.pcr_waiver.responder_signature;
+        this.responder_waiver_date =
+          this.patientFormMobileFields.pcr_waiver.responder_waiver_date;
+        this.patient_or_relative_name =
+          this.patientFormMobileFields.pcr_waiver.patient_or_relative_name;
+        this.patient_or_relative_signature =
+          this.patientFormMobileFields.pcr_waiver.patient_or_relative_signature;
+        this.patient_relative_waiver_date =
+          this.patientFormMobileFields.pcr_waiver.patient_relative_waiver_date;
+        this.witness_one =
+          this.patientFormMobileFields.pcr_waiver.witness_one;
+        this.witness_one_signature =
+          this.patientFormMobileFields.pcr_waiver.witness_one_signature;
+        this.witness_two =
+          this.patientFormMobileFields.pcr_waiver.witness_two;
+        this.witness_two_signature =
+          this.patientFormMobileFields.pcr_waiver.witness_two_signature;
+      },
     },
-    "$store.state.editPatientFormMobileFields"() {
-      this.patientFormMobileFields =
-        this.$store.getters["editPatientFormMobileFields"];
-      this.id = this.patientFormMobileFields.id;
-      this.user_id = this.patientFormMobileFields.user_pcr.user_id;
-      this.ambulance = this.patientFormMobileFields.ambulance;
-      this.arrive_at_scene = this.patientFormMobileFields.arrive_at_scene;
-      this.arrived_at = this.patientFormMobileFields.arrived_at;
-      this.barangay_b = this.patientFormMobileFields.barangay_b;
-      this.priority = this.patientFormMobileFields.priority;
-      this.call_receive = this.patientFormMobileFields.call_receive;
-      this.call_source = this.patientFormMobileFields.call_source;
-      this.category = "dispatch data";
-      this.created_at = this.patientFormMobileFields.created_at;
-      this.departed = this.patientFormMobileFields.departed;
-      this.dispatch_date = this.patientFormMobileFields.dispatch_date;
-      this.driver = this.patientFormMobileFields.driver;
-      this.ems_location_a = this.patientFormMobileFields.ems_location_a;
-      this.ems_location_b = this.patientFormMobileFields.ems_location_b;
-      this.en_route_to = this.patientFormMobileFields.en_route_to;
-      this.incident_location = this.patientFormMobileFields.incident_location;
-      this.involved_vehicles_a =
-        this.patientFormMobileFields.involved_vehicles_a;
-      this.involved_vehicles_b =
-        this.patientFormMobileFields.involved_vehicles_b;
-      this.l_o = this.patientFormMobileFields.l_o;
-      this.mt_barangay = this.patientFormMobileFields.mt_barangay;
-      this.mt_from = this.patientFormMobileFields.mt_from;
-      this.passenger = this.patientFormMobileFields.passenger;
-      this.pedestrian = this.patientFormMobileFields.pedestrian;
-      this.plate_number = this.patientFormMobileFields.plate_number;
-      this.remarks = this.patientFormMobileFields.remarks;
-      this.responded = this.patientFormMobileFields.responded;
-      this.station = this.patientFormMobileFields.station;
-      this.t_l = this.patientFormMobileFields.t_l;
-      this.t_o = this.patientFormMobileFields.t_o;
-      this.team_id = this.patientFormMobileFields.team_id;
-      this.tx_o = this.patientFormMobileFields.tx_o;
-      this.qr_code = this.patientFormMobileFields.qr_code;
-      this.va_location = this.patientFormMobileFields.va_location;
-      this.va_location_barangay =
-        this.patientFormMobileFields.va_location_barangay;
-      this.age = this.patientFormMobileFields.pcr_patient.patient.age;
-      this.allergies =
-        this.patientFormMobileFields.pcr_patient.patient.allergies;
-      this.birthdate =
-        this.patientFormMobileFields.pcr_patient.patient.birthdate;
-      this.companion =
-        this.patientFormMobileFields.pcr_patient.patient.companion;
-      this.first_name =
-        this.patientFormMobileFields.pcr_patient.patient.first_name;
-      this.gender = this.patientFormMobileFields.pcr_patient.patient.gender;
-      this.medical_history =
-        this.patientFormMobileFields.pcr_patient.patient.medical_history;
-      this.medication =
-        this.patientFormMobileFields.pcr_patient.patient.medication;
-      this.middle_name =
-        this.patientFormMobileFields.pcr_patient.patient.middle_name;
-      this.phone = this.patientFormMobileFields.pcr_patient.patient.phone;
-      this.religion =
-        this.patientFormMobileFields.pcr_patient.patient.religion;
-      this.status = this.patientFormMobileFields.pcr_patient.patient.status;
-      this.suffix = this.patientFormMobileFields.pcr_patient.patient.suffix;
-      this.surname = this.patientFormMobileFields.pcr_patient.patient.surname;
-      this.pnt_city =
-        this.patientFormMobileFields.pcr_patient.patient.address.city;
-      this.pnt_brgy =
-        this.patientFormMobileFields.pcr_patient.patient.address.barangay;
-      this.pnt_st =
-        this.patientFormMobileFields.pcr_patient.patient.address.street;
-      this.pnt_other_city =
-        this.patientFormMobileFields.pcr_patient.patient.address.pnt_other_city;
-      this.complaint = this.patientFormMobileFields.patient_data.complaint;
-      this.onset = this.patientFormMobileFields.patient_data.onset;
-      this.quality = this.patientFormMobileFields.patient_data.quality;
-      this.provocation = this.patientFormMobileFields.patient_data.provocation;
-      this.radiation = this.patientFormMobileFields.patient_data.radiation;
-      this.last_oral_intake =
-        this.patientFormMobileFields.patient_data.last_oral_intake;
-      this.event_leading_to_injury =
-        this.patientFormMobileFields.patient_data.event_leading_to_injury;
-      this.severity = this.patientFormMobileFields.patient_data.severity;
-      this.time_taken = this.patientFormMobileFields.patient_data.time_taken;
-      this.time_a = this.patientFormMobileFields.pcr_vital.time_a;
-      this.time_b = this.patientFormMobileFields.pcr_vital.time_b;
-      this.time_c = this.patientFormMobileFields.pcr_vital.time_c;
-      this.time_d = this.patientFormMobileFields.pcr_vital.time_d;
-      this.time_e = this.patientFormMobileFields.pcr_vital.time_e;
-      this.time_f = this.patientFormMobileFields.pcr_vital.time_f;
-      this.bp_a = this.patientFormMobileFields.pcr_vital.bp_a;
-      this.bp_b = this.patientFormMobileFields.pcr_vital.bp_b;
-      this.bp_c = this.patientFormMobileFields.pcr_vital.bp_c;
-      this.bp_d = this.patientFormMobileFields.pcr_vital.bp_d;
-      this.bp_e = this.patientFormMobileFields.pcr_vital.bp_e;
-      this.pr_a = this.patientFormMobileFields.pcr_vital.pr_a;
-      this.pr_b = this.patientFormMobileFields.pcr_vital.pr_b;
-      this.pr_c = this.patientFormMobileFields.pcr_vital.pr_c;
-      this.pr_d = this.patientFormMobileFields.pcr_vital.pr_d;
-      this.pr_e = this.patientFormMobileFields.pcr_vital.pr_e;
-      this.rr_a = this.patientFormMobileFields.pcr_vital.rr_a;
-      this.rr_b = this.patientFormMobileFields.pcr_vital.rr_b;
-      this.rr_c = this.patientFormMobileFields.pcr_vital.rr_c;
-      this.rr_d = this.patientFormMobileFields.pcr_vital.rr_d;
-      this.rr_e = this.patientFormMobileFields.pcr_vital.rr_e;
-      this.tempt_a = this.patientFormMobileFields.pcr_vital.tempt_a;
-      this.tempt_b = this.patientFormMobileFields.pcr_vital.tempt_b;
-      this.tempt_c = this.patientFormMobileFields.pcr_vital.tempt_c;
-      this.tempt_d = this.patientFormMobileFields.pcr_vital.tempt_d;
-      this.tempt_e = this.patientFormMobileFields.pcr_vital.tempt_e;
-      this.spo2_a = this.patientFormMobileFields.pcr_vital.spo2_a;
-      this.spo2_b = this.patientFormMobileFields.pcr_vital.spo2_b;
-      this.spo2_c = this.patientFormMobileFields.pcr_vital.spo2_c;
-      this.spo2_d = this.patientFormMobileFields.pcr_vital.spo2_d;
-      this.spo2_e = this.patientFormMobileFields.pcr_vital.spo2_e;
-      this.skin_color = this.patientFormMobileFields.pcr_vital.skin_color;
-      this.eyes = this.patientFormMobileFields.pcr_vital.eyes;
-      this.verbal = this.patientFormMobileFields.pcr_vital.verbal;
-      this.motor = this.patientFormMobileFields.pcr_vital.motor;
-      this.score = this.patientFormMobileFields.pcr_vital.score;
-      this.left_pearl =
-        this.patientFormMobileFields.pcr_vital_pupils.left_pearl;
-      this.left_dilated =
-        this.patientFormMobileFields.pcr_vital_pupils.left_dilated;
-      this.left_constrict =
-        this.patientFormMobileFields.pcr_vital_pupils.left_constrict;
-      this.left_non_reactive =
-        this.patientFormMobileFields.pcr_vital_pupils.left_non_reactive;
-      this.left_cataract =
-        this.patientFormMobileFields.pcr_vital_pupils.left_cataract;
-      this.right_pearl =
-        this.patientFormMobileFields.pcr_vital_pupils.right_pearl;
-      this.right_dilated =
-        this.patientFormMobileFields.pcr_vital_pupils.right_dilated;
-      this.right_constrict =
-        this.patientFormMobileFields.pcr_vital_pupils.right_constrict;
-      this.right_non_reactive =
-        this.patientFormMobileFields.pcr_vital_pupils.right_non_reactive;
-      this.right_cataract =
-        this.patientFormMobileFields.pcr_vital_pupils.right_cataract;
-      this.prenatal_checkup =
-        this.patientFormMobileFields.pcr_obstetrics.prenatal_checkup;
-      this.labor_pains =
-        this.patientFormMobileFields.pcr_obstetrics.labor_pains;
-      this.age_of_gestation =
-        this.patientFormMobileFields.pcr_obstetrics.age_of_gestation;
-      this.last_menstrual_period =
-        this.patientFormMobileFields.pcr_obstetrics.last_menstrual_period;
-      this.estimated_date_of_delivery =
-        this.patientFormMobileFields.pcr_obstetrics.estimated_date_of_delivery;
-      this.gravidity = this.patientFormMobileFields.pcr_obstetrics.gravidity;
-      this.parity = this.patientFormMobileFields.pcr_obstetrics.parity;
-      this.term_of_birth =
-        this.patientFormMobileFields.pcr_obstetrics.term_of_birth;
-      this.pre_term = this.patientFormMobileFields.pcr_obstetrics.pre_term;
-      this.abortion = this.patientFormMobileFields.pcr_obstetrics.abortion;
-      this.living = this.patientFormMobileFields.pcr_obstetrics.living;
-      this.obs_remarks = this.patientFormMobileFields.pcr_obstetrics.remarks;
-      this.nasal = this.patientFormMobileFields.pcr_treatments.nasal;
-      this.o2_mask = this.patientFormMobileFields.pcr_treatments.o2_mask;
-      this.bvm = this.patientFormMobileFields.pcr_treatments.bvm;
-      this.lpm = this.patientFormMobileFields.pcr_treatments.lpm;
-      this.wound_care = this.patientFormMobileFields.pcr_treatments.wound_care;
-      this.splinting_applied =
-        this.patientFormMobileFields.pcr_treatments.splinting_applied;
-      this.control_bleeding =
-        this.patientFormMobileFields.pcr_treatments.control_bleeding;
-      this.vital_sign_taken =
-        this.patientFormMobileFields.pcr_treatments.vital_sign_taken;
-      this.applied_cpr =
-        this.patientFormMobileFields.pcr_treatments.applied_cpr;
-      this.applied_aed =
-        this.patientFormMobileFields.pcr_treatments.applied_aed;
-      this.problems = this.patientFormMobileFields.pcr_treatments.problems;
-      this.received_by =
-        this.patientFormMobileFields.pcr_signature.received_by;
-      this.received_by_signature =
-        this.patientFormMobileFields.pcr_signature.received_by_signature;
-      this.medical_facility =
-        this.patientFormMobileFields.pcr_signature.medical_facility;
-      this.medical_facility_signature =
-        this.patientFormMobileFields.pcr_signature.medical_facility_signature;
-      this.team_leader =
-        this.patientFormMobileFields.pcr_signature.team_leader;
-      this.team_leader_signature =
-        this.patientFormMobileFields.pcr_signature.team_leader_signature;
-      this.gloves = this.patientFormMobileFields.pcr_signature.gloves;
-      this.mask = this.patientFormMobileFields.pcr_signature.mask;
-      this.gauze = this.patientFormMobileFields.pcr_signature.gauze;
-      this.others = this.patientFormMobileFields.pcr_signature.others;
-      this.anterior_head_injury =
-        this.patientFormMobileFields.pcr_body_injuries.anterior_head_injury;
-      this.anterior_chest_injury =
-        this.patientFormMobileFields.pcr_body_injuries.anterior_chest_injury;
-      this.anterior_pelvis_injury =
-        this.patientFormMobileFields.pcr_body_injuries.anterior_pelvis_injury;
-      this.anterior_left_arm_injury =
-        this.patientFormMobileFields.pcr_body_injuries.anterior_left_arm_injury;
-      this.anterior_right_arm_injury =
-        this.patientFormMobileFields.pcr_body_injuries.anterior_right_arm_injury;
-      this.anterior_left_leg_injury =
-        this.patientFormMobileFields.pcr_body_injuries.anterior_left_leg_injury;
-      this.anterior_right_leg_injury =
-        this.patientFormMobileFields.pcr_body_injuries.anterior_right_leg_injury;
-      this.anterior_genitalia_injury =
-        this.patientFormMobileFields.pcr_body_injuries.anterior_genitalia_injury;
-      if (this.anterior_head_injury.length > 0) {
-        this.SetSelectValue("anterior_head_injury", this.anterior_head_injury);
-      }
-      if (this.anterior_chest_injury.length > 0) {
-        this.SetSelectValue(
-          "anterior_chest_injury",
-          this.anterior_chest_injury
-        );
-      }
-      if (this.anterior_pelvis_injury.length > 0) {
-        this.SetSelectValue(
-          "anterior_pelvis_injury",
-          this.anterior_pelvis_injury
-        );
-      }
-      if (this.anterior_left_arm_injury.length > 0) {
-        this.SetSelectValue(
-          "anterior_left_arm_injury",
-          this.anterior_left_arm_injury
-        );
-      }
-      if (this.anterior_right_arm_injury.length > 0) {
-        this.SetSelectValue(
-          "anterior_right_arm_injury",
-          this.anterior_right_arm_injury
-        );
-      }
-      if (this.anterior_left_leg_injury.length > 0) {
-        this.SetSelectValue(
-          "anterior_left_leg_injury",
-          this.anterior_left_leg_injury
-        );
-      }
-      if (this.anterior_right_leg_injury.length > 0) {
-        this.SetSelectValue(
-          "anterior_right_leg_injury",
-          this.anterior_right_leg_injury
-        );
-      }
-      if (this.anterior_genitalia_injury.length > 0) {
-        this.SetSelectValue(
-          "anterior_genitalia_injury",
-          this.anterior_genitalia_injury
-        );
-      }
-      this.posterior_head_injury =
-        this.patientFormMobileFields.pcr_body_injuries.posterior_head_injury;
-      this.posterior_chest_injury =
-        this.patientFormMobileFields.pcr_body_injuries.posterior_chest_injury;
-      this.posterior_pelvis_injury =
-        this.patientFormMobileFields.pcr_body_injuries.posterior_pelvis_injury;
-      this.posterior_left_arm_injury =
-        this.patientFormMobileFields.pcr_body_injuries.posterior_left_arm_injury;
-      this.posterior_right_arm_injury =
-        this.patientFormMobileFields.pcr_body_injuries.posterior_right_arm_injury;
-      this.posterior_left_leg_injury =
-        this.patientFormMobileFields.pcr_body_injuries.posterior_left_leg_injury;
-      this.posterior_right_leg_injury =
-        this.patientFormMobileFields.pcr_body_injuries.posterior_right_leg_injury;
-      if (this.posterior_head_injury.length > 0) {
-        this.SetSelectValue(
-          "posterior_head_injury",
-          this.posterior_head_injury
-        );
-      }
-      if (this.posterior_chest_injury.length > 0) {
-        this.SetSelectValue(
-          "posterior_chest_injury",
-          this.posterior_chest_injury
-        );
-      }
-      if (this.posterior_pelvis_injury.length > 0) {
-        this.SetSelectValue(
-          "posterior_pelvis_injury",
-          this.posterior_pelvis_injury
-        );
-      }
-      if (this.posterior_left_arm_injury.length > 0) {
-        this.SetSelectValue(
-          "posterior_left_arm_injury",
-          this.posterior_left_arm_injury
-        );
-      }
-      if (this.posterior_right_arm_injury.length > 0) {
-        this.SetSelectValue(
-          "posterior_right_arm_injury",
-          this.posterior_right_arm_injury
-        );
-      }
-      if (this.posterior_left_leg_injury.length > 0) {
-        this.SetSelectValue(
-          "posterior_left_leg_injury",
-          this.posterior_left_leg_injury
-        );
-      }
-      if (this.posterior_right_leg_injury.length > 0) {
-        this.SetSelectValue(
-          "posterior_right_leg_injury",
-          this.posterior_right_leg_injury
-        );
-      }
-      this.anterior_head_degree =
-        this.patientFormMobileFields.pcr_burn_percentage.anterior_head_degree;
-      this.anterior_chest_degree =
-        this.patientFormMobileFields.pcr_burn_percentage.anterior_chest_degree;
-      this.anterior_pelvis_degree =
-        this.patientFormMobileFields.pcr_burn_percentage.anterior_pelvis_degree;
-      this.anterior_left_arm_degree =
-        this.patientFormMobileFields.pcr_burn_percentage.anterior_left_arm_degree;
-      this.anterior_right_arm_degree =
-        this.patientFormMobileFields.pcr_burn_percentage.anterior_right_arm_degree;
-      this.anterior_left_leg_degree =
-        this.patientFormMobileFields.pcr_burn_percentage.anterior_left_leg_degree;
-      this.anterior_right_leg_degree =
-        this.patientFormMobileFields.pcr_burn_percentage.anterior_right_leg_degree;
-      this.anterior_genitalia_degree =
-        this.patientFormMobileFields.pcr_burn_percentage.anterior_genitalia_degree;
-      this.posterior_head_degree =
-        this.patientFormMobileFields.pcr_burn_percentage.posterior_head_degree;
-      this.posterior_chest_degree =
-        this.patientFormMobileFields.pcr_burn_percentage.posterior_chest_degree;
-      this.posterior_pelvis_degree =
-        this.patientFormMobileFields.pcr_burn_percentage.posterior_pelvis_degree;
-      this.posterior_left_arm_degree =
-        this.patientFormMobileFields.pcr_burn_percentage.posterior_left_arm_degree;
-      this.posterior_right_arm_degree =
-        this.patientFormMobileFields.pcr_burn_percentage.posterior_right_arm_degree;
-      this.posterior_left_leg_degree =
-        this.patientFormMobileFields.pcr_burn_percentage.posterior_left_leg_degree;
-      this.posterior_right_leg_degree =
-        this.patientFormMobileFields.pcr_burn_percentage.posterior_right_leg_degree;
-      this.statement_one =
-        this.patientFormMobileFields.pcr_waiver.statement_one;
-      this.statement_two =
-        this.patientFormMobileFields.pcr_waiver.statement_two;
-      this.statement_three =
-        this.patientFormMobileFields.pcr_waiver.statement_three;
-      this.statement_four =
-        this.patientFormMobileFields.pcr_waiver.statement_four;
-      this.hospital_name =
-        this.patientFormMobileFields.pcr_waiver.hospital_name;
-      this.from_hospital =
-        this.patientFormMobileFields.pcr_waiver.from_hospital;
-      this.to_hospital =
-        this.patientFormMobileFields.pcr_waiver.to_hospital;
-      this.other_statement =
-        this.patientFormMobileFields.pcr_waiver.other_statement;
-      this.responder_full_name =
-        this.patientFormMobileFields.pcr_waiver.responder_full_name;
-      this.responder_signature =
-        this.patientFormMobileFields.pcr_waiver.responder_signature;
-      this.responder_waiver_date =
-        this.patientFormMobileFields.pcr_waiver.responder_waiver_date;
-      this.patient_or_relative_name =
-        this.patientFormMobileFields.pcr_waiver.patient_or_relative_name;
-      this.patient_or_relative_signature =
-        this.patientFormMobileFields.pcr_waiver.patient_or_relative_signature;
-      this.patient_relative_waiver_date =
-        this.patientFormMobileFields.pcr_waiver.patient_relative_waiver_date;
-      this.witness_one =
-        this.patientFormMobileFields.pcr_waiver.witness_one;
-      this.witness_one_signature =
-        this.patientFormMobileFields.pcr_waiver.witness_one_signature;
-      this.witness_two =
-        this.patientFormMobileFields.pcr_waiver.witness_two;
-      this.witness_two_signature =
-        this.patientFormMobileFields.pcr_waiver.witness_two_signature;
-    },
- },
     methods: {
-        enableEdit() {
+      enableEdit() {
         this.editable = true;
-        },
-        cancelEdit() {
+      },
+      cancelEdit() {
         this.editable = false;
-        },
+      },
       hideModal() {
-        this.$store.commit("setEditPatientFormMobile", false);
-        this.$store.commit("setEditPatientFormMobileArg", undefined);
+        this.$store.commit("setEditPatientStepperForm", false);
+        this.$store.commit("setEditPatientStepperFormArg", undefined);
       },
       formattedDateTime() {
         const currentDate = new Date();
@@ -5519,7 +5533,7 @@
           const today = new Date();
           const birthdate = new Date(this.birthdate);
           let age = today.getFullYear() - birthdate.getFullYear();
-  
+
           // Check if the birthdate for this year has not occurred yet
           if (
             today.getMonth() < birthdate.getMonth() ||
@@ -5528,14 +5542,14 @@
           ) {
             age--;
           }
-  
+
           this.age = age;
-  
+
           // Update the age input field
           document.getElementById("age").value = age;
         } else {
           this.age = null;
-  
+
           // Clear the age input field
           document.getElementById("age").value = "";
         }
@@ -5544,10 +5558,7 @@
         // Update the "score" property with the total score
         this.score = parseInt(this.eyes) + parseInt(this.verbal) + parseInt(this.motor);
       },
-  
-      // FOR CLEAR ALL BUTTON:
-  
-      clear() {
+      clearAll() {
         this.category = "";
         this.call_source = "";
         this.call_receive = "";
@@ -5736,18 +5747,16 @@
         this.witness_two_signature = "";
       },
       SetSelectValue(elementId, value) {
-      if (value.length > 0) {
-        const element = document.querySelector(`#${elementId}`);
-        if (element) {
-          const selectInstance = Select.getInstance(element);
-          if (selectInstance !== null) {
-            selectInstance.setValue(value);
+        if (value.length > 0) {
+            const element = document.querySelector(`#${elementId}`);
+            if (element) {
+              const selectInstance = Select.getInstance(element);
+              if (selectInstance !== null) {
+                selectInstance.setValue(value);
+              }
+            }
           }
-        }
-      }
-    },
-    
-    
+        },
       clear(section) {
         switch (section) {
           case 'section1':
@@ -5784,7 +5793,7 @@
             this.cp_age = "";
             this.remarks = "";
             break;
-  
+
           case 'section2':
           this.suffix = "";
           this.first_name = "";
@@ -5814,7 +5823,7 @@
           this.severity = "";
           this.time_taken = "";
           break;
-  
+
           case 'section3':
           this.time_a = "";
           this.time_b = "";
@@ -5863,7 +5872,7 @@
           this.motor = "";
           this.score = "";
           break;
-  
+
           case 'section4':
           this.anterior_head_injury = [];
           this.anterior_chest_injury = [];
@@ -5881,8 +5890,8 @@
           this.posterior_left_leg_injury = [];
           this.posterior_right_leg_injury = [];
           break;
-  
-  
+
+
           case 'section5':
           this.anterior_head_degree = "";
           this.anterior_chest_degree = "";
@@ -5900,7 +5909,7 @@
           this.posterior_left_leg_degree = "";
           this.posterior_right_leg_degree = "";
           break;
-  
+
           case 'section6':
           this.prenatal_checkup = "";
           this.labor_pains = "";
@@ -5913,7 +5922,7 @@
           this.abortion = "";
           this.living = "";
           break;
-  
+
           case 'section7':
           this.nasal = "";
           this.o2_mask = "";
@@ -5928,7 +5937,7 @@
           this.obs_remarks = "";
           this.problems = "";
           break;
-  
+
           case 'section8':
           this.received_by = "";
           this.medical_facility = "";
@@ -5938,7 +5947,7 @@
           this.gauze = "";
           this.others = "";
           break;
-  
+
           case 'section9':
           this.statement_one = "";
           this.statement_two = "";
@@ -5955,8 +5964,8 @@
           this.witness_one = "";
           this.witness_two = "";
         }
-  
-  
+
+
       },
       update() {
         const params = {
@@ -6149,198 +6158,12 @@
           witness_two: this.witness_two,
           witness_two_signature: this.$refs.witness_two_signature.save(),
         };
-  
+
         this.$axios.post("pcr/emr/update", params).then(() => {
-          this.dispatch_date = "";
-          this.category = "";
-          this.call_source = "";
-          this.call_receive = "";
-          this.incident_location = "";
-          this.responded = "";
-          this.t_o = "";
-          this.va_location = "";
-          this.va_location_barangay = "";
-          this.arrive_at_scene = "";
-          this.t_l = "";
-          this.involved_vehicles_a = "";
-          this.involved_vehicles_b = "";
-          this.en_route_to = "";
-          this.tx_o = "";
-          this.plate_number = "";
-          this.arrived_at = "";
-          this.l_o = "";
-          this.driver = "";
-          this.pedestrian = "";
-          this.passenger = "";
-          this.departed = "";
-          this.station = "";
-          this.ems_location_a = "tor";
-          this.ambulance = "";
-          this.team_id = "";
-          this.mt_from = "";
-          this.mt_barangay = "";
-          this.ems_location_b = "";
-          this.barangay_b = "";
-          this.priority = "";
-          this.cp_age = "";
-          this.remarks = "";
-          this.suffix = "";
-          this.first_name = "";
-          this.middle_name = "";
-          this.surname = "";
-          this.gender = "";
-          this.birthdate = "";
-          this.age = "";
-          this.status = "";
-          this.religion = "";
-          this.companion = "";
-          this.phone = "";
-          this.pnt_city = "City";
-          this.pnt_brgy = "";
-          this.pnt_st = "";
-          this.pnt_other_city = "";
-          this.complaint = "";
-          this.onset = "";
-          this.allergies = "";
-          this.provocation = "";
-          this.medication = "";
-          this.quality = "";
-          this.medical_history = "";
-          this.radiation = "";
-          this.last_oral_intake = "";
-          this.event_leading_to_injury = "";
-          this.severity = "";
-          this.time_a = "";
-          this.time_b = "";
-          this.time_c = "";
-          this.time_d = "";
-          this.time_e = "";
-          this.time_f = "";
-          this.bp_a = "";
-          this.bp_b = "";
-          this.bp_c = "";
-          this.bp_d = "";
-          this.bp_e = "";
-          this.pr_a = "";
-          this.pr_b = "";
-          this.pr_c = "";
-          this.pr_d = "";
-          this.pr_e = "";
-          this.rr_a = "";
-          this.rr_b = "";
-          this.rr_c = "";
-          this.rr_d = "";
-          this.rr_e = "";
-          this.tempt_a = "";
-          this.tempt_b = "";
-          this.tempt_c = "";
-          this.tempt_d = "";
-          this.tempt_e = "";
-          this.spo2_a = "";
-          this.spo2_b = "";
-          this.spo2_c = "";
-          this.spo2_d = "";
-          this.spo2_e = "";
-          this.left_pearl = "";
-          this.left_dilated = "";
-          this.left_constrict = "";
-          this.left_non_reactive = "";
-          this.left_cataract = "";
-          this.right_pearl = "";
-          this.right_dilated = "";
-          this.right_constrict = "";
-          this.right_non_reactive = "";
-          this.right_cataract = "";
-          this.skin_color = "";
-          this.eyes = "";
-          this.verbal = "";
-          this.motor = "";
-          this.score = "";
-          this.prenatal_checkup = "";
-          this.labor_pains = "";
-          this.last_menstrual_period = "";
-          this.estimated_date_of_delivery = "";
-          this.age_of_gestation = "";
-          this.gravidity = "";
-          this.parity = "";
-          this.term_of_birth = "";
-          this.pre_term = "";
-          this.abortion = "";
-          this.living = "";
-          this.obs_remarks = "";
-          this.nasal = "";
-          this.o2_mask = "";
-          this.bvm = "";
-          this.lpm = "";
-          this.wound_care = "";
-          this.splinting_applied = "";
-          this.control_bleeding = "";
-          this.vital_sign_taken = "";
-          this.applied_cpr = "";
-          this.applied_aed = "";
-          this.problems = "";
-          this.received_by = "";
-          this.received_by_signature = "";
-          this.medical_facility = "";
-          this.medical_facility_signature = "";
-          this.team_leader = "";
-          this.team_leader_signature = "";
-          this.gloves = "";
-          this.mask = "";
-          this.gauze = "";
-          this.others = "";
-          this.anterior_head_injury = [];
-          this.anterior_chest_injury = [];
-          this.anterior_pelvis_injury = [];
-          this.anterior_left_arm_injury = [];
-          this.anterior_right_arm_injury = [];
-          this.anterior_left_leg_injury = [];
-          this.anterior_right_leg_injury = [];
-          this.anterior_genitalia_injury = [];
-          this.posterior_head_injury = [];
-          this.posterior_chest_injury = [];
-          this.posterior_pelvis_injury = [];
-          this.posterior_left_arm_injury = [];
-          this.posterior_right_arm_injury = [];
-          this.posterior_left_leg_injury = [];
-          this.posterior_right_leg_injury = [];
-          this.anterior_head_degree = "";
-          this.anterior_chest_degree = "";
-          this.anterior_pelvis_degree = "";
-          this.anterior_left_arm_degree = "";
-          this.anterior_right_arm_degree = "";
-          this.anterior_left_leg_degree = "";
-          this.anterior_right_leg_degree = "";
-          this.anterior_genitalia_degree = "";
-          this.posterior_head_degree = "";
-          this.posterior_chest_degree = "";
-          this.posterior_pelvis_degree = "";
-          this.posterior_left_arm_degree = "";
-          this.posterior_right_arm_degree = "";
-          this.posterior_left_leg_degree = "";
-          this.posterior_right_leg_degree = "";
-          this.statement_one = "";
-          this.statement_two = "";
-          this.statement_three = "";
-          this.hospital_name = "";
-          this.statement_four = "";
-          this.from_hospital = "";
-          this.to_hospital = "";
-          this.other_statement = "";
-          this.responder_full_name = "";
-          this.responder_signature = "";
-          this.responder_waiver_date = "";
-          this.patient_or_relative_name = "";
-          this.patient_or_relative_signature = "";
-          this.patient_relative_waiver_date = "";
-          this.witness_one = "";
-          this.witness_one_signature = "";
-          this.witness_two = "";
-          this.witness_two_signature = "";
+          this.clearAll();
           location.reload();
         });
       },
     },
   };
   </script>
-  

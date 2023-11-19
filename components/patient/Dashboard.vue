@@ -38,6 +38,7 @@
       <PatientStepperForm v-if="role === 'emr'" />
       <PatientFormMobile v-if="role === 'emr'" />
       <EditPatientStepperForm :viewableByAllEmrs="true" />
+      <EditPatientFormMobile :viewableByAllEmrs="true" />
       <QrCode />
     </div>
   </div>
@@ -48,6 +49,7 @@ import PatientForm from "./PatientForm";
 import PatientStepperForm from "./PatientStepperForm";
 import PatientFormMobile from "./PatientFormMobile";
 import EditPatientStepperForm from "./EditPatientStepperForm";
+import EditPatientFormMobile from "../patient/EditPatientFormMobile";
 import QrCode from "./QrCode";
 import { Modal, Dropdown, Ripple, initTE, Tooltip } from "tw-elements";
 export default {
@@ -59,6 +61,7 @@ export default {
     PatientFormMobile,
     PatientStepperForm,
     EditPatientStepperForm,
+    EditPatientFormMobile,
     QrCode,
   },
   data() {
@@ -253,10 +256,18 @@ export default {
             });
         }
       } else {
-        const editModal = new Modal(
-          document.getElementById("editPatientFormStepper")
-        );
-        editModal.show();
+        if (this.$device.isDesktop) {
+          const editModal = new Modal(
+            document.getElementById("editPatientFormStepper")
+          );
+          editModal.show();
+        } else if (this.$device.isTablet) {
+          const editModal = new Modal(
+            document.getElementById("editPatientFormMobile")
+          );
+          editModal.show();
+        }
+
       }
     },
     columnFilterFn(value, filter) {
