@@ -1,6 +1,20 @@
 <template>
   <div class="min-h-screen bg-[#EFEFEF]">
     <div class="m-5">
+      <div v-if="role === 'head'" class="flex flex-col items-end">
+        <button v-if="selectedRows.length > 0"
+          type="button"
+          class="inline-block rounded bg-green-600 m-5 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-green-700 focus:bg-green-700 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+          @click="exportToPdf"
+        >Export
+        </button>
+        <button v-else
+                type="button"
+                class="inline-block rounded bg-gray-700 cursor-not-allowed m-5 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+        >Export
+        </button>
+      </div>
+
       <vue-good-table
         @on-selected-rows-change="selectionChanged"
         :columns="columns"
@@ -17,19 +31,7 @@
         compactMode
         class="bg-white rounded shadow"
       >
-        <div slot="table-actions-bottom">
-          <button v-if="selectedRows.length > 0"
-            type="button"
-            class="inline-block rounded bg-green-600 m-5 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-green-700 focus:bg-green-700 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
-            @click="exportToPdf"
-          >Export
-          </button>
-          <button v-else
-                  type="button"
-                  class="inline-block rounded bg-gray-700 cursor-not-allowed m-5 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
-          >Export
-          </button>
-        </div>
+        
         <div
           v-if="role === 'dispatcher' || role === 'emr'"
           slot="table-actions"
