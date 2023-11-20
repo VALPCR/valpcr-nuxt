@@ -170,21 +170,12 @@ export default {
   },
   methods: {
     onRowClick(params) {
-      if (this.$device.isDesktop) {
-        const editModal = new Modal(
-          document.getElementById("editPatientFormStepper")
-        );
-        this.$store.commit("setEditPatientStepperForm", true);
-        this.$store.commit("setEditPatientStepperFormArg", params.row.id);
-        editModal.show();
-      } else if (this.$device.isTablet) {
-        const editModal = new Modal(
-          document.getElementById("editPatientFormMobile")
-        );
-        this.$store.commit("setEditPatientStepperForm", true);
-        this.$store.commit("setEditPatientStepperFormArg", params.row.id);
-        editModal.show();
-      }
+      const editModal = new Modal(
+        document.getElementById("editPatientFormMobile")
+      );
+      this.$store.commit("setEditPatientStepperForm", true);
+      this.$store.commit("setEditPatientStepperFormArg", params.row.id);
+      editModal.show();
     },
     capitalize(word) {
       return word.replace(/^\w/, (c) => c.toUpperCase());
