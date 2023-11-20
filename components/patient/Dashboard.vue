@@ -23,7 +23,7 @@
           enabled: true,
         }"
         max-height="750px"
-        :fixed-header="true"
+        :fixed-header="false"
         :search-options="{ enabled: true }"
         :pagination-options="{ enabled: true }"
         @on-cell-click="onRowClick"
