@@ -35,9 +35,7 @@
         </div>
       </vue-good-table>
       <PatientForm v-if="role === 'dispatcher'" />
-      <PatientStepperForm v-if="role === 'emr'" />
       <PatientFormMobile v-if="role === 'emr'" />
-      <EditPatientStepperForm :viewableByAllEmrs="true" />
       <EditPatientFormMobile :viewableByAllEmrs="true" />
       <QrCode />
     </div>
@@ -46,9 +44,7 @@
 
 <script>
 import PatientForm from "./PatientForm";
-import PatientStepperForm from "./PatientStepperForm";
 import PatientFormMobile from "./PatientFormMobile";
-import EditPatientStepperForm from "./EditPatientStepperForm";
 import EditPatientFormMobile from "../patient/EditPatientFormMobile";
 import QrCode from "./QrCode";
 import { Modal, Dropdown, Ripple, initTE, Tooltip } from "tw-elements";
@@ -59,8 +55,6 @@ export default {
     Dropdown,
     PatientForm,
     PatientFormMobile,
-    PatientStepperForm,
-    EditPatientStepperForm,
     EditPatientFormMobile,
     QrCode,
   },

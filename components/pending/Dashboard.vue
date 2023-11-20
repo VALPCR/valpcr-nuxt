@@ -12,18 +12,16 @@
         class="bg-white rounded shadow"
       />
     </div>
-    <EditPatientStepperForm :viewableByAllEmrs="false" />
     <EditPatientFormMobile :viewableByAllEmrs="false" />
   </div>
 </template>
 
 <script>
-import EditPatientStepperForm from "../patient/EditPatientStepperForm";
 import EditPatientFormMobile from "../patient/EditPatientFormMobile";
 import { Modal, Dropdown, Ripple, initTE } from "tw-elements";
 
 export default {
-  components: { Ripple, Modal, Dropdown, EditPatientStepperForm, EditPatientFormMobile },
+  components: { Ripple, Modal, Dropdown, EditPatientFormMobile },
   data() {
     return {
       role: "",
