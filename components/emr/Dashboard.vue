@@ -1,35 +1,5 @@
 <template>
   <div class="min-h-screen bg-[#EFEFEF]">
-    <div class="m-1">
-      <div class="p-4">
-        <vue-good-table
-          :columns="filterColumns"
-          :rows="emptyRows"
-          :search-options="{ enabled: false }"
-          >f
-          <div slot="table-actions-bottom">
-            <button
-              type="button"
-              class="inline-block rounded bg-white text-black px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out focus:outline-none focus:ring-0"
-            >
-              CLEAR
-            </button>
-            <button
-              type="button"
-              class="inline-block rounded bg-[#1890FF] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
-            >
-              FILTER
-            </button>
-            <button
-              type="button"
-              class="inline-block rounded bg-amber-500 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-amber-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-amber-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-amber-600 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
-            >
-              EXPORT
-            </button>
-          </div>
-        </vue-good-table>
-      </div>
-    </div>
     <div class="m-5">
       <vue-good-table
         :columns="columns"
@@ -70,93 +40,6 @@ export default {
       fetchedRows: [],
       filteredRows: [],
       emptyRows: [],
-      filterColumns: [
-        {
-          label: "Team",
-          field: "team",
-          filterOptions: {
-            styleClass: "class1", // class to be added to the parent th element
-            enabled: true, // enable filter for this column
-            filterDropdownItems: ["Alpha", "Bravo", "Charlie", "Delta"],
-            trigger: "enter", //only trigger on enter not on keyup
-          },
-          sortable: false,
-        },
-        {
-          label: "Date",
-          field: "date",
-          filterOptions: {
-            styleClass: "class1", // class to be added to the parent th element
-            enabled: true, // enable filter for this column
-            filterDropdownItems: [
-              "Today",
-              "Yesterday",
-              "This Week",
-              "This Month",
-              "Past 3 Months",
-              "This Year",
-            ],
-            trigger: "enter", //only trigger on enter not on keyup
-          },
-          sortable: false,
-        },
-        {
-          label: "Location",
-          field: "location",
-          filterOptions: {
-            styleClass: "class1", // class to be added to the parent th element
-            enabled: true, // enable filter for this column
-            filterDropdownItems: [
-              "Arkong Bato",
-              "Bagbaguin",
-              "Balangkas",
-              "Bignay",
-              "Bisig",
-              "Canumay East",
-              "Canumay West",
-              "Coloong",
-              "Dalandanan",
-              "Gen T. De Leon",
-              "Isla",
-              "Karuhatan",
-              "Lawang Bato",
-              "Lingunan",
-              "Mabolo",
-              "Malanday",
-              "Malinta",
-              "Mapulang Lupa",
-              "Marulas",
-              "Maysan",
-              "Palasan",
-              "Parada",
-              "Pariancillo Villa",
-              "Paso De Blas",
-              "Pasolo",
-              "Poblacion",
-              "Pulo",
-              "Punturin",
-              "Rincon",
-              "Tagalag",
-              "Ugong",
-              "Viente Reales",
-              "Wawang Pulo",
-            ],
-            trigger: "enter", //only trigger on enter not on keyup
-          },
-          sortable: false,
-        },
-        {
-          label: "Status",
-          field: "status",
-          filterOptions: {
-            styleClass: "class1", // class to be added to the parent th element
-            enabled: true, // enable filter for this column
-            filterDropdownItems: ["Active", "Disabled"],
-            trigger: "enter", //only trigger on enter not on keyup
-          },
-          sortable: false,
-        },
-      ],
       columns: [
         {
           label: "NAME",
@@ -170,10 +53,22 @@ export default {
         {
           label: "TEAM",
           field: "team",
+          filterOptions: {
+            enabled: true,
+            filterValue: "",
+            filterDropdownItems: ["Alpha", "Bravo", "Charlie", "Delta"],
+            filterFn: this.columnFilterFn,
+            trigger: "change",
+          },
         },
         {
           label: "ADDRESS",
           field: "address",
+          filterOptions: {
+            enabled: true,
+            filterValue: "",
+            filterFn: this.columnFilterFn,
+          },
         },
         {
           label: "AGE",
@@ -252,6 +147,9 @@ export default {
       this.$store.commit("setEditEmrModalXl", true);
       this.$store.commit("setEditEmrModalXlArg", params.row.id);
       editModal.show();
+    },
+    columnFilterFn(value, filter) {
+      return value === filter;
     },
   },
 };
