@@ -110,4 +110,8 @@ export default {
     },
     compact: true,
   },
+
+  publicRuntimeConfig: {
+    baseURL: process.env.BASE_URL,
+  },
 };

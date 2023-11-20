@@ -279,9 +279,7 @@ export default {
       this.selectedRows.map((selected) => {
         return ids.push(selected.id);
       })
-      console.log('ids');
-      console.log(ids);
-      this.$axios.get('pcr/generate/multiple?ids=' + ids)
+      window.open(this.$config.baseURL + '/pcr/generate/multiple?ids=' + ids, '_blank');
     },
   },
 };
