@@ -252,14 +252,19 @@ export default {
           typeof params.event.target.classList[0].includes("restore") !==
           "undefined"
         ) {
-          this.$axios
-            .get(
-              "pcr/single/archive?id=" +
+          if (!params.event.target.classList[0].includes("restore")) {
+            window.open(this.$config.baseURL + '/pcr/generate/single?id=' + params.event.target.classList[0].split("_")[1], '_blank');
+          } else {
+            this.$axios
+              .get(
+                "pcr/single/archive?id=" +
                 params.event.target.classList[0].split("_")[1]
-            )
-            .then(() => {
-              location.reload();
-            });
+              )
+              .then(() => {
+                location.reload();
+              });
+          }
+
         }
       } else {
         const editModal = new Modal(
