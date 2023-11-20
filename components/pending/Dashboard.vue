@@ -1,29 +1,5 @@
 <template>
   <div class="min-h-screen bg-[#EFEFEF]">
-    <div class="m-1">
-      <div class="p-4">
-        <vue-good-table
-          :columns="filterColumns"
-          :rows="emptyRows"
-          :search-options="{ enabled: false }"
-        >
-          <div slot="table-actions-bottom">
-            <button
-              type="button"
-              class="inline-block rounded bg-white text-black px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out focus:outline-none focus:ring-0"
-            >
-              CLEAR
-            </button>
-            <button
-              type="button"
-              class="inline-block rounded bg-[#1890FF] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
-            >
-              FILTER
-            </button>
-          </div>
-        </vue-good-table>
-      </div>
-    </div>
     <div class="m-5">
       <vue-good-table
         :columns="columns"
@@ -54,93 +30,55 @@ export default {
       fetchedRows: [],
       filteredRows: [],
       emptyRows: [],
-      filterColumns: [
+      columns: [
         {
-          label: "Case",
+          label: "NAME",
+          field: "name",
+        },
+        {
+          label: "LOCATION",
+          field: "address",
+          filterOptions: {
+            enabled: true,
+            filterValue: "",
+            filterFn: this.columnFilterFn,
+          },
+        },
+        {
+          label: "CASE",
           field: "case",
           filterOptions: {
-            styleClass: "class1", // class to be added to the parent th element
-            enabled: true, // enable filter for this column
-            filterDropdownItems: [
-              "Vehicular Accident",
-              "EMS",
-              "Search and Rescue",
-              "Fire",
-              "Medical Transport",
-            ],
-            trigger: "enter", //only trigger on enter not on keyup
+            enabled: true,
+            filterValue: "",
+            filterDropdownItems: ["VA", "EMS", "SAR", "FIRE", "MT"],
+            filterFn: this.columnFilterFn,
+            trigger: "change",
           },
-          sortable: false,
         },
         {
-          label: "Date",
+          label: "DATE",
           field: "date",
           filterOptions: {
-            styleClass: "class1", // class to be added to the parent th element
-            enabled: true, // enable filter for this column
-            filterDropdownItems: [
-              "Today",
-              "Yesterday",
-              "This Week",
-              "This Month",
-              "Past 3 Months",
-              "This Year",
-            ],
-            trigger: "enter", //only trigger on enter not on keyup
+            enabled: true,
+            filterValue: "",
+            filterFn: this.columnFilterFn,
           },
-          sortable: false,
         },
         {
-          label: "Location",
-          field: "location",
-          filterOptions: {
-            styleClass: "class1", // class to be added to the parent th element
-            enabled: true, // enable filter for this column
-            filterDropdownItems: [
-              "Arkong Bato",
-              "Bagbaguin",
-              "Balangkas",
-              "Bignay",
-              "Bisig",
-              "Canumay East",
-              "Canumay West",
-              "Coloong",
-              "Dalandanan",
-              "Gen T. De Leon",
-              "Isla",
-              "Karuhatan",
-              "Lawang Bato",
-              "Lingunan",
-              "Mabolo",
-              "Malanday",
-              "Malinta",
-              "Mapulang Lupa",
-              "Marulas",
-              "Maysan",
-              "Palasan",
-              "Parada",
-              "Pariancillo Villa",
-              "Paso De Blas",
-              "Pasolo",
-              "Poblacion",
-              "Pulo",
-              "Punturin",
-              "Rincon",
-              "Tagalag",
-              "Ugong",
-              "Viente Reales",
-              "Wawang Pulo",
-            ],
-            trigger: "enter", //only trigger on enter not on keyup
-          },
-          sortable: false,
+          label: "CALL RECEIVED",
+          field: "call",
         },
         {
-          label: "Ambulance",
+          label: "ARRIVAL TIME",
+          field: "arrival",
+        },
+        {
+          label: "AMBULANCE",
           field: "ambulance",
           filterOptions: {
-            styleClass: "class1", // class to be added to the parent th element
-            enabled: true, // enable filter for this column
+            styleClass: "class1",
+            enabled: true,
+            filterValue: "",
             filterDropdownItems: [
               "EMS 01",
               "EMS 02",
@@ -166,41 +104,10 @@ export default {
               "EMS 22",
               "EMS 23",
               "EMS 24",
-              "EMS 25",
+              "EMS 25"
             ],
-            trigger: "enter", //only trigger on enter not on keyup
+            filterFn: this.columnFilterFn,
           },
-          sortable: false,
-        },
-      ],
-      columns: [
-        {
-          label: "NAME",
-          field: "name",
-        },
-        {
-          label: "LOCATION",
-          field: "address",
-        },
-        {
-          label: "CASE",
-          field: "case",
-        },
-        {
-          label: "DATE",
-          field: "date",
-        },
-        {
-          label: "CALL RECEIVED",
-          field: "call",
-        },
-        {
-          label: "ARRIVAL TIME",
-          field: "arrival",
-        },
-        {
-          label: "AMBULANCE",
-          field: "ambulance",
         },
         {
           label: "CREATED BY",
@@ -281,6 +188,9 @@ export default {
     },
     capitalize(word) {
       return word.replace(/^\w/, (c) => c.toUpperCase());
+    },
+    columnFilterFn(value, filter) {
+      return value === filter;
     },
   },
 };

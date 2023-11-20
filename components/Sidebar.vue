@@ -1,7 +1,7 @@
 <template>
   <div
     :class="{
-      'w-60': $store.getters['getSideBarState'],
+      'w-64': $store.getters['getSideBarState'],
       'w-12': !$store.getters['getSideBarState'],
     }"
     class="bg-[#131A2D]"
@@ -270,8 +270,8 @@
         <li
           :class="`${
             isSidebarOpen
-              ? 'space-x-2 mb-4 mt-2 hover:bg-white md:pl-10 lg:pl-10 xl:pl-10 text-center md:text-justify lg:text-justify'
-              : 'space-x-2 mb-4 mt-2 sm:right-1.5 md:right-0 lg:right-0 xl:right-0 relative hover:text-[#1B295A]'
+              ? 'space-x-2 mb-4 hover:bg-white md:pl-10 lg:pl-10 xl:pl-10 text-center md:text-left lg:text-left'
+              : 'space-x-2 mb-4 sm:right-1.5 md:right-0 lg:right-0 xl:right-0 relative hover:text-[#1B295A]'
           }`"
         >
           <font-awesome-icon :icon="['fas', 'file-medical']" size="lg" /><span
@@ -297,7 +297,7 @@
         <li
           :class="`${
             isSidebarOpen
-              ? 'space-x-2 mb-4 hover:bg-white md:pl-10 lg:pl-10 xl:pl-10 text-center md:text-justify lg:text-justify'
+              ? 'space-x-2 mb-4 hover:bg-white md:pl-10 lg:pl-10 xl:pl-10 text-center md:text-left lg:text-left'
               : 'space-x-2 mb-4 sm:right-1.5 md:right-0 lg:right-0 xl:right-0 relative hover:text-[#1B295A]'
           }`"
         >

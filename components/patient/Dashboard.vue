@@ -222,18 +222,10 @@ export default {
   },
   methods: {
     addPcr() {
-      if (this.$device.isDesktop) {
-        const addModal = new Modal(
-          document.getElementById("patientFormStepper")
-        );
-        this.$store.commit("setAddPatientStepperForm", true);
-        addModal.show();
-      } else if (this.$device.isTablet) {
-        const addModal = new Modal(
-          document.getElementById("patientFormMobile")
-        );
-        addModal.show();
-      }
+      const addModal = new Modal(
+        document.getElementById("patientFormMobile")
+      );
+      addModal.show();
     },
     onRowClick(params) {
       this.$store.commit("setEditPatientStepperForm", true);
@@ -256,18 +248,10 @@ export default {
             });
         }
       } else {
-        if (this.$device.isDesktop) {
-          const editModal = new Modal(
-            document.getElementById("editPatientFormStepper")
-          );
-          editModal.show();
-        } else if (this.$device.isTablet) {
-          const editModal = new Modal(
-            document.getElementById("editPatientFormMobile")
-          );
-          editModal.show();
-        }
-
+        const editModal = new Modal(
+          document.getElementById("editPatientFormMobile")
+        );
+        editModal.show();
       }
     },
     columnFilterFn(value, filter) {
