@@ -3139,6 +3139,24 @@
                       </div>
                     </div>
 
+                    <div
+                      class="relative mb-5"
+                      data-te-input-wrapper-init
+                    >
+                      <textarea
+                        v-model="anterior_burn_remarks"
+                        class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        id="anterior_burn_remarks"
+                        aria-describedby="anterior_burn_remarks"
+                        rows="7"
+                      />
+                      <label
+                        class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                      >
+                        Remarks
+                      </label>
+                    </div>
+
                     <!-- Posterior Head Degree -->
                     <h4 class="mb-4 font-bold">Posterior</h4>
                     <div class="flex items-center">
@@ -3593,6 +3611,24 @@
                           name="posterior_right_leg_degree"
                         />
                       </div>
+                    </div>
+
+                    <div
+                      class="relative mb-5"
+                      data-te-input-wrapper-init
+                    >
+                        <textarea
+                          v-model="posterior_burn_remarks"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="posterior_burn_remarks"
+                          aria-describedby="posterior_burn_remarks"
+                          rows="7"
+                        />
+                      <label
+                        class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                      >
+                        Remarks
+                      </label>
                     </div>
                   <div class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md border-t-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50 min-[0px]:rounded-none">
                   <button
@@ -5034,6 +5070,7 @@ export default {
       posterior_right_arm_injury: [],
       posterior_left_leg_injury: [],
       posterior_right_leg_injury: [],
+      anterior_burn_remarks: "",
       anterior_head_degree: "",
       anterior_chest_degree: "",
       anterior_pelvis_degree: "",
@@ -5042,6 +5079,7 @@ export default {
       anterior_left_leg_degree: "",
       anterior_right_leg_degree: "",
       anterior_genitalia_degree: "",
+      posterior_burn_remarks: "",
       posterior_head_degree: "",
       posterior_chest_degree: "",
       posterior_pelvis_degree: "",
@@ -5339,6 +5377,7 @@ export default {
       this.posterior_right_arm_injury = [];
       this.posterior_left_leg_injury = [];
       this.posterior_right_leg_injury = [];
+      this.anterior_burn_remarks = "";
       this.anterior_head_degree = "";
       this.anterior_chest_degree = "";
       this.anterior_pelvis_degree = "";
@@ -5347,6 +5386,7 @@ export default {
       this.anterior_left_leg_degree = "";
       this.anterior_right_leg_degree = "";
       this.anterior_genitalia_degree = "";
+      this.posterior_burn_remarks = "";
       this.posterior_head_degree = "";
       this.posterior_chest_degree = "";
       this.posterior_pelvis_degree = "";
@@ -5510,6 +5550,7 @@ export default {
         break;
 
         case 'section5':
+        this.anterior_burn_remarks = "";
         this.anterior_head_degree = "";
         this.anterior_chest_degree = "";
         this.anterior_pelvis_degree = "";
@@ -5518,6 +5559,7 @@ export default {
         this.anterior_left_leg_degree = "";
         this.anterior_right_leg_degree = "";
         this.anterior_genitalia_degree = "";
+        this.posterior_burn_remarks = "";
         this.posterior_head_degree = "";
         this.posterior_chest_degree = "";
         this.posterior_pelvis_degree = "";
@@ -5741,6 +5783,7 @@ export default {
         posterior_right_arm_injury: this.posterior_right_arm_injury,
         posterior_left_leg_injury: this.posterior_left_leg_injury,
         posterior_right_leg_injury: this.posterior_right_leg_injury,
+        anterior_burn_remarks: this.anterior_burn_remarks,
         anterior_head_degree: this.anterior_head_degree,
         anterior_chest_degree: this.anterior_chest_degree,
         anterior_pelvis_degree: this.anterior_pelvis_degree,
@@ -5749,6 +5792,7 @@ export default {
         anterior_left_leg_degree: this.anterior_left_leg_degree,
         anterior_right_leg_degree: this.anterior_right_leg_degree,
         anterior_genitalia_degree: this.anterior_genitalia_degree,
+        posterior_burn_remarks: this.posterior_burn_remarks,
         posterior_head_degree: this.posterior_head_degree,
         posterior_chest_degree: this.posterior_chest_degree,
         posterior_pelvis_degree: this.posterior_pelvis_degree,
