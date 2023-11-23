@@ -91,7 +91,6 @@
                 data-te-parent="#accordionFlushExample"
               >
                 <div class="px-5 py-4 mt-7 mb-7">
-                  <form>
                     <div
                       class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4"
                     >
@@ -816,7 +815,6 @@
                         </div>
                       </div>
                     </div>
-                  </form>
                 </div>
                 <div class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md p-4 dark:border-opacity-50 min-[0px]:rounded-none">
                   <button
@@ -874,7 +872,6 @@
                 data-te-parent="#accordionFlushExample"
               >
                 <div class="px-5 py-4 mt-7 mb-7">
-                  <form>
                     <div
                       class="grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-4"
                     >
@@ -1434,7 +1431,6 @@
                       </div>
                       <!-- EVENTS LEADING TO INJURY -->
                     </div>
-                  </form>
                 </div>
                 <div class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md p-4 dark:border-opacity-50 min-[0px]:rounded-none">
                   <button
@@ -1491,7 +1487,6 @@
                 data-te-parent="#accordionFlushExample"
               >
                 <div class="px-5 py-4 mt-5 mb-5">
-                  <form>
                     <!-- FOR TIME, BP, PR, RR, TEMP, SPO2 -->
                     <p class="text-center mb-5">
                       <mark class="bg-primary-200 font-bold p-2"
@@ -1986,7 +1981,6 @@
                     <hr
                       class="mt-2 h-0.5 border-t-0 bg-neutral-100 opacity-100 dark:opacity-50"
                     />
-                  </form>
                 </div>
                 <div class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md p-4 dark:border-opacity-50 min-[0px]:rounded-none">
                   <button
@@ -2043,7 +2037,6 @@
                 data-te-parent="#accordionFlushExample"
               >
                 <div class="px-5 py-4">
-                  <form>
                     <h4 class="mb-4 font-bold">Anterior</h4>
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
@@ -2309,6 +2302,24 @@
                       </div>
                     </div>
 
+                    <div
+                      class="relative mb-5"
+                      data-te-input-wrapper-init
+                    >
+                      <textarea
+                        v-model="anterior_injury_remarks"
+                        class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        id="anterior_injury_remarks"
+                        aria-describedby="anterior_injury_remarks"
+                        rows="7"
+                      />
+                      <label
+                        class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                      >
+                        Remarks
+                      </label>
+                    </div>
+
                     <h4 class="mb-4 font-bold">Posterior</h4>
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
@@ -2540,7 +2551,24 @@
                         >
                       </div>
                     </div>
-                  </form>
+
+                    <div
+                      class="relative mb-5"
+                      data-te-input-wrapper-init
+                    >
+                        <textarea
+                          v-model="posterior_injury_remarks"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="posterior_injury_remarks"
+                          aria-describedby="posterior_injury_remarks"
+                          rows="7"
+                        />
+                      <label
+                        class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                      >
+                        Remarks
+                      </label>
+                    </div>
                   <div class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md p-4 dark:border-opacity-50 min-[0px]:rounded-none">
                   <button
                     @click="clear('section4')"
@@ -2597,7 +2625,6 @@
                 data-te-parent="#accordionFlushExample"
               >
                 <div class="px-5 py-4">
-                  <form>
                     <h4 class="mb-4 font-bold">Anterior</h4>
                     <!-- Anterior Head Degree -->
                     <div class="flex items-center">
@@ -3574,7 +3601,6 @@
                         />
                       </div>
                     </div>
-                  </form>
                   <div class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md p-4 dark:border-opacity-50 min-[0px]:rounded-none">
                   <button
                     @click="clear('section5')"
@@ -3631,7 +3657,6 @@
                 data-te-parent="#accordionFlushExample"
               >
                 <div class="px-5 py-4 mt-5 mb-5">
-                  <form>
                     <div
                       class="grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-4"
                     >
@@ -3835,12 +3860,7 @@
                           living
                         </label>
                       </div>
-
-
-
-
                     </div>
-                  </form>
                   <div class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md p-4 dark:border-opacity-50 min-[0px]:rounded-none">
                     <button
                     @click="clear('section6')"
@@ -3897,7 +3917,6 @@
                 data-te-parent="#accordionFlushExample"
               >
                 <div class="px-5 py-4 mt-5 mb-5">
-                  <form>
                     <div class="grid grid-cols-7 mb-3">
                       <h4 class="mb-3 font-bold col-span-2">O2 Given Via:</h4>
                       <div class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem] gap-3">
@@ -4115,8 +4134,6 @@
                         </label>
                       </div>
                     </div>
-
-                  </form>
                   <div class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md p-4 dark:border-opacity-50 min-[0px]:rounded-none">
                     <button
                       @click="clear('section7')"
@@ -4173,7 +4190,6 @@
                 data-te-parent="#accordionFlushExample"
               >
                 <div class="px-5 py-4 mt-5 mb-5">
-                  <form>
                     <div class="grid grid-col-2 sm:grid-cols-2 gap-4">
                       <div class="grid grid-col-1 sm:grid-cols-1">
                         <div class="relative mb-1" data-te-input-wrapper-init>
@@ -4193,7 +4209,33 @@
                           </label>
                         </div>
 
-                        <div class="relative mb-3">
+                        <div
+                          v-if="received_by_signature !== ''"
+                          class="relative mb-3"
+                        >
+                          <img
+                            :src="received_by_signature"
+                            alt="Image"
+                            height="auto"
+                            width="600px"
+                          />
+                          <label
+                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                          >Signature Here
+                          </label>
+                          <button
+                            v-if="received_by_signature !== ''"
+                            class="ml-1 inline-block rounded border border-slate-400 bg-slate-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out hover:bg-slate-300 hover:border-slate-400 hover:bg-slate-300 focus:bg-slate-300 focus:shadow-[0_4px_9px_-4px_#3b71ca] focus:ring-0 active:bg-slate-300"
+                            @click="received_by_signature = ''"
+                          >
+                            Clear
+                          </button>
+                        </div>
+
+                        <div
+                          v-if="received_by_signature === ''"
+                          class="relative mb-3"
+                        >
                           <vue-signature
                             ref="received_by_signature"
                             :w="'600px'"
@@ -4204,12 +4246,6 @@
                           >
                             Signature Here
                           </label>
-                          <button
-                            class="ml-1 inline-block rounded border border-slate-400 bg-slate-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out hover:bg-slate-300 hover:border-slate-400 hover:bg-slate-300 focus:bg-slate-300 focus:shadow-[0_4px_9px_-4px_#3b71ca] focus:ring-0 active:bg-slate-300"
-                            @click="$refs.received_by_signature.clear()"
-                          >
-                            Clear
-                          </button>
                         </div>
                       </div>
 
@@ -4231,7 +4267,34 @@
                           </label>
                         </div>
 
-                        <div class="relative mb-3">
+                        <div
+                          v-if="team_leader_signature !== ''"
+                          class="relative mb-3"
+                        >
+                          <img
+                            :src="team_leader_signature"
+                            alt="Image"
+                            height="auto"
+                            width="600px"
+                          />
+                          <label
+                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                          >
+                            Signature Here
+                          </label>
+                          <button
+                            v-if="team_leader_signature !== ''"
+                            class="ml-1 inline-block rounded border border-slate-400 bg-slate-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out hover:bg-slate-300 hover:border-slate-400 hover:bg-slate-300 focus:bg-slate-300 focus:shadow-[0_4px_9px_-4px_#3b71ca] focus:ring-0 active:bg-slate-300"
+                            @click="team_leader_signature = ''"
+                          >
+                            Clear
+                          </button>
+                        </div>
+
+                        <div
+                          v-if="team_leader_signature === ''"
+                          class="relative mb-3"
+                        >
                           <vue-signature
                             ref="team_leader_signature"
                             :w="'600px'"
@@ -4239,14 +4302,9 @@
                           />
                           <label
                             class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                            >Signature Here
-                          </label>
-                          <button
-                            class="ml-1 inline-block rounded border border-slate-400 bg-slate-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out hover:bg-slate-300 hover:border-slate-400 hover:bg-slate-300 focus:bg-slate-300 focus:shadow-[0_4px_9px_-4px_#3b71ca] focus:ring-0 active:bg-slate-300"
-                            @click="$refs.team_leader_signature.clear()"
                           >
-                            Clear
-                          </button>
+                            Signature Here
+                          </label>
                         </div>
                       </div>
                     </div>
@@ -4274,7 +4332,34 @@
                           </label>
                         </div>
 
-                        <div class="relative mb-3">
+                        <div
+                          v-if="medical_facility_signature !== ''"
+                          class="relative mb-3"
+                        >
+                          <img
+                            :src="medical_facility_signature"
+                            alt="Image"
+                            height="auto"
+                            width="600px"
+                          />
+                          <label
+                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                          >
+                            Signature Here
+                          </label>
+                          <button
+                            v-if="medical_facility_signature !== ''"
+                            class="ml-1 inline-block rounded border border-slate-400 bg-slate-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out hover:bg-slate-300 hover:border-slate-400 hover:bg-slate-300 focus:bg-slate-300 focus:shadow-[0_4px_9px_-4px_#3b71ca] focus:ring-0 active:bg-slate-300"
+                            @click="medical_facility_signature = ''"
+                          >
+                            Clear
+                          </button>
+                        </div>
+
+                        <div
+                          v-if="medical_facility_signature === ''"
+                          class="relative mb-3"
+                        >
                           <vue-signature
                             ref="medical_facility_signature"
                             :w="'600px'"
@@ -4282,14 +4367,9 @@
                           />
                           <label
                             class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                            >Signature Here
-                          </label>
-                          <button
-                            class="ml-1 inline-block rounded border border-slate-400 bg-slate-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out hover:bg-slate-300 hover:border-slate-400 hover:bg-slate-300 focus:bg-slate-300 focus:shadow-[0_4px_9px_-4px_#3b71ca] focus:ring-0 active:bg-slate-300"
-                            @click="$refs.medical_facility_signature.clear()"
                           >
-                            Clear
-                          </button>
+                            Signature Here
+                          </label>
                         </div>
                       </div>
                     </div>
@@ -4372,7 +4452,6 @@
                         </div>
                       </div>
                     </div>
-                  </form>
                   <div class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md p-4 dark:border-opacity-50 min-[0px]:rounded-none">
                   <button
                     @click="clear('section8')"
@@ -4817,22 +4896,44 @@
             class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md border-t-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50 min-[0px]:rounded-none"
           >
             <button
+              v-if="role !== 'head' && $auth.user.id === user_id && editable"
               @click="clearAll"
               type="button"
               class="ml-1 inline-block rounded border border-slate-400 bg-slate-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out hover:bg-slate-300 hover:border-slate-400 hover:bg-slate-300 focus:bg-slate-300 focus:shadow-[0_4px_9px_-4px_#3b71ca] focus:ring-0 active:bg-slate-300"
               data-te-ripple-init
               data-te-ripple-color="light"
             >
-              CLEAR ALL
+              CLEAR
             </button>
             <button
+              v-if="role !== 'head' && $auth.user.id === user_id && !editable"
+              type="button"
+              class="inline-block ml-4 rounded bg-[#1890FF] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+              data-te-ripple-init
+              data-te-ripple-color="light"
+              @click="enableEdit"
+            >
+              Edit
+            </button>
+            <button
+              v-if="role !== 'head' && $auth.user.id === user_id && editable"
+              type="button"
+              class="ml-4 inline-block rounded border border-slate-400 bg-slate-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out hover:bg-slate-300 hover:border-slate-400 hover:bg-slate-300 focus:bg-slate-300 focus:shadow-[0_4px_9px_-4px_#3b71ca] focus:ring-0 active:bg-slate-300"
+              data-te-ripple-init
+              data-te-ripple-color="light"
+              @click="cancelEdit"
+            >
+              Cancel
+            </button>
+            <button
+              v-if="role !== 'head' && $auth.user.id === user_id && editable"
               @click="update"
               type="button"
               class="inline-block ml-4 rounded bg-[#30AD62] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-green-700 focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
               data-te-ripple-init
               data-te-ripple-color="light"
             >
-              SUBMIT
+              UPDATE
             </button>
           </div>
         </div>
@@ -4850,6 +4951,7 @@
     data() {
       return {
         editable: false,
+        user_id: "",
         role: "",
         patientFormMobileFields: [],
         teams: [],
@@ -4992,6 +5094,7 @@
         mask: "",
         gauze: "",
         others: "",
+        anterior_injury_remarks: '',
         anterior_head_injury: [],
         anterior_chest_injury: [],
         anterior_pelvis_injury: [],
@@ -5000,6 +5103,7 @@
         anterior_left_leg_injury: [],
         anterior_right_leg_injury: [],
         anterior_genitalia_injury: [],
+        posterior_injury_remarks: '',
         posterior_head_injury: [],
         posterior_chest_injury: [],
         posterior_pelvis_injury: [],
@@ -5142,8 +5246,6 @@
         this.first_name =
           this.patientFormMobileFields.pcr_patient.patient.first_name;
         this.gender = this.patientFormMobileFields.pcr_patient.patient.gender;
-        // console.log('this.gender');
-        // console.log(this.gender);
         if (this.gender !== null && this.gender !== '') {
           this.SetSelectValue("gender", this.gender);
         }
@@ -5311,6 +5413,8 @@
         this.mask = this.patientFormMobileFields.pcr_signature.mask;
         this.gauze = this.patientFormMobileFields.pcr_signature.gauze;
         this.others = this.patientFormMobileFields.pcr_signature.others;
+        this.anterior_injury_remarks =
+          this.patientFormMobileFields.pcr_body_injuries.anterior_injury_remarks;
         this.anterior_head_injury =
           this.patientFormMobileFields.pcr_body_injuries.anterior_head_injury;
         this.anterior_chest_injury =
@@ -5372,6 +5476,8 @@
             this.anterior_genitalia_injury
           );
         }
+        this.posterior_injury_remarks =
+          this.patientFormMobileFields.pcr_body_injuries.posterior_injury_remarks;
         this.posterior_head_injury =
           this.patientFormMobileFields.pcr_body_injuries.posterior_head_injury;
         this.posterior_chest_injury =
@@ -5728,6 +5834,7 @@
         this.mask = "";
         this.gauze = "";
         this.others = "";
+        this.anterior_injury_remarks = "";
         this.anterior_head_injury = [];
         this.anterior_chest_injury = [];
         this.anterior_pelvis_injury = [];
@@ -5736,6 +5843,7 @@
         this.anterior_left_leg_injury = [];
         this.anterior_right_leg_injury = [];
         this.anterior_genitalia_injury = [];
+        this.posterior_injury_remarks = "";
         this.posterior_head_injury = [];
         this.posterior_chest_injury = [];
         this.posterior_pelvis_injury = [];
@@ -5905,6 +6013,7 @@
           break;
 
           case 'section4':
+          this.anterior_injury_remarks = '';
           this.anterior_head_injury = [];
           this.anterior_chest_injury = [];
           this.anterior_pelvis_injury = [];
@@ -5913,6 +6022,7 @@
           this.anterior_left_leg_injury = [];
           this.anterior_right_leg_injury = [];
           this.anterior_genitalia_injury = [];
+          this.posterior_injury_remarks = '';
           this.posterior_head_injury = [];
           this.posterior_chest_injury = [];
           this.posterior_pelvis_injury = [];
@@ -5921,7 +6031,6 @@
           this.posterior_left_leg_injury = [];
           this.posterior_right_leg_injury = [];
           break;
-
 
           case 'section5':
           this.anterior_head_degree = "";
@@ -5995,8 +6104,6 @@
           this.witness_one = "";
           this.witness_two = "";
         }
-
-
       },
       update() {
         const params = {
@@ -6130,16 +6237,25 @@
           applied_aed: this.applied_aed,
           problems: this.problems,
           received_by: this.received_by,
-          received_by_signature: this.$refs.received_by_signature.save(),
+          received_by_signature:
+            typeof this.$refs.received_by_signature === "undefined"
+              ? this.received_by_signature
+              : this.$refs.received_by_signature.save(),
           medical_facility: this.medical_facility,
           medical_facility_signature:
-            this.$refs.medical_facility_signature.save(),
+            typeof this.$refs.medical_facility_signature === "undefined"
+              ? this.medical_facility_signature
+              : this.$refs.medical_facility_signature.save(),
           team_leader: this.team_leader,
-          team_leader_signature: this.$refs.team_leader_signature.save(),
+          team_leader_signature:
+            typeof this.$refs.team_leader_signature === "undefined"
+              ? this.team_leader_signature
+              : this.$refs.team_leader_signature.save(),
           gloves: this.gloves,
           mask: this.mask,
           gauze: this.gauze,
           others: this.others,
+          anterior_injury_remarks: this.anterior_injury_remarks,
           anterior_head_injury: this.anterior_head_injury,
           anterior_chest_injury: this.anterior_chest_injury,
           anterior_pelvis_injury: this.anterior_pelvis_injury,
@@ -6148,6 +6264,7 @@
           anterior_left_leg_injury: this.anterior_left_leg_injury,
           anterior_right_leg_injury: this.anterior_right_leg_injury,
           anterior_genitalia_injury: this.anterior_genitalia_injury,
+          posterior_injury_remarks: this.posterior_injury_remarks,
           posterior_head_injury: this.posterior_head_injury,
           posterior_chest_injury: this.posterior_chest_injury,
           posterior_pelvis_injury: this.posterior_pelvis_injury,
@@ -6179,15 +6296,27 @@
           to_hospital: this.to_hospital,
           other_statement: this.other_statement,
           responder_full_name: this.responder_full_name,
-          responder_signature: this.$refs.responder_signature.save(),
+          responder_signature:
+            typeof this.$refs.responder_signature === "undefined"
+              ? this.responder_signature
+              : this.$refs.responder_signature.save(),
           responder_waiver_date: this.responder_waiver_date,
           patient_or_relative_name: this.patient_or_relative_name,
-          patient_or_relative_signature: this.$refs.patient_or_relative_signature.save(),
+          patient_or_relative_signature:
+            typeof this.$refs.patient_or_relative_signature === "undefined"
+              ? this.patient_or_relative_signature
+              : this.$refs.patient_or_relative_signature.save(),
           patient_relative_waiver_date: this.patient_relative_waiver_date,
           witness_one: this.witness_one,
-          witness_one_signature: this.$refs.witness_one_signature.save(),
+          witness_one_signature:
+            typeof this.$refs.witness_one_signature === "undefined"
+              ? this.witness_one_signature
+              : this.$refs.witness_one_signature.save(),
           witness_two: this.witness_two,
-          witness_two_signature: this.$refs.witness_two_signature.save(),
+          witness_two_signature:
+            typeof this.$refs.witness_two_signature === "undefined"
+              ? this.witness_two_signature
+              : this.$refs.witness_two_signature.save(),
         };
 
         this.$axios.post("pcr/emr/update", params).then(() => {
