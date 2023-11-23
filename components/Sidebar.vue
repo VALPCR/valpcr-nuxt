@@ -1,7 +1,7 @@
 <template>
   <div
     :class="{
-      'w-64': $store.getters['getSideBarState'],
+      'w-1/5': $store.getters['getSideBarState'],
       'w-12': !$store.getters['getSideBarState'],
     }"
     class="bg-[#131A2D]"
