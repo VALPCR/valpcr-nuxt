@@ -92,7 +92,6 @@
                 data-te-parent="#accordionFlushExample"
               >
                 <div class="px-5 py-4 mt-7 mb-7">
-                  <form>
                     <div
                       class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4"
                     >
@@ -817,7 +816,6 @@
                         </div>
                       </div>
                     </div>
-                  </form>
                 </div>
                 <div class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md border-t-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50 min-[0px]:rounded-none">
                   <button
@@ -875,7 +873,6 @@
                 data-te-parent="#accordionFlushExample"
               >
                 <div class="px-5 py-4 mt-7 mb-7">
-                  <form>
                     <div
                       class="grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-4"
                     >
@@ -1429,7 +1426,6 @@
                       </div>
                       <!-- EVENTS LEADING TO INJURY -->
                     </div>
-                  </form>
                 </div>
                 <div class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md border-t-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50 min-[0px]:rounded-none">
                   <button
@@ -1486,7 +1482,6 @@
                 data-te-parent="#accordionFlushExample"
               >
                 <div class="px-5 py-4 mt-5 mb-5">
-                  <form>
                     <!-- FOR TIME, BP, PR, RR, TEMP, SPO2 -->
                     <p class="text-center mb-5">
                       <mark class="bg-primary-200 font-bold p-2"
@@ -1977,7 +1972,6 @@
                     <hr
                       class="mt-2 h-0.5 border-t-0 bg-neutral-100 opacity-100 dark:opacity-50"
                     />
-                  </form>
                 </div>
                 <div class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md border-t-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50 min-[0px]:rounded-none">
                   <button
@@ -2034,7 +2028,6 @@
                 data-te-parent="#accordionFlushExample"
               >
                 <div class="px-5 py-4">
-                  <form>
                     <h4 class="mb-4 font-bold">Anterior</h4>
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
@@ -2531,7 +2524,6 @@
                         >
                       </div>
                     </div>
-                  </form>
                   <div class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md border-t-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50 min-[0px]:rounded-none">
                   <button
                     @click="clear('section4')"
@@ -2588,7 +2580,6 @@
                 data-te-parent="#accordionFlushExample"
               >
                 <div class="px-5 py-4">
-                  <form>
                     <h4 class="mb-4 font-bold">Anterior</h4>
                     <!-- Anterior Head Degree -->
                     <div class="flex items-center">
@@ -3565,7 +3556,6 @@
                         />
                       </div>
                     </div>
-                  </form>
                   <div class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md border-t-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50 min-[0px]:rounded-none">
                   <button
                     @click="clear('section5')"
@@ -3622,7 +3612,6 @@
                 data-te-parent="#accordionFlushExample"
               >
                 <div class="px-5 py-4 mt-5 mb-5">
-                  <form>
                     <div
                       class="grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-4"
                     >
@@ -3826,12 +3815,7 @@
                           living
                         </label>
                       </div>
-
-
-
-
                     </div>
-                  </form>
                   <div class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md border-t-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50 min-[0px]:rounded-none">
                     <button
                     @click="clear('section6')"
@@ -3888,7 +3872,6 @@
                 data-te-parent="#accordionFlushExample"
               >
                 <div class="px-5 py-4 mt-5 mb-5">
-                  <form>
                     <div class="grid grid-cols-7 mb-3">
                       <h4 class="mb-3 font-bold col-span-2">O2 Given Via:</h4>
                       <div class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem] gap-3">
@@ -4106,8 +4089,6 @@
                         </label>
                       </div>
                     </div>
-
-                  </form>
                   <div class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md border-t-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50 min-[0px]:rounded-none">
                   <button
                     @click="clear('section7')"
@@ -4164,7 +4145,6 @@
                 data-te-parent="#accordionFlushExample"
               >
                 <div class="px-5 py-4 mt-5 mb-5">
-                  <form>
                     <div class="grid grid-col-2 sm:grid-cols-2 gap-4">
                       <div class="grid grid-col-1 sm:grid-cols-1">
                         <div class="relative mb-1" data-te-input-wrapper-init>
@@ -4189,6 +4169,7 @@
                             ref="received_by_signature"
                             :w="'600px'"
                             :h="'200px'"
+                            :disabled="received_by_signature_locked"
                           />
                           <label
                             class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
@@ -4201,6 +4182,20 @@
                           >
                             Clear
                           </button>
+                          <span
+                            v-if="!received_by_signature_locked"
+                            class="ml-1 cursor-pointer inline-block rounded border border-blue-400 bg-blue-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out"
+                            @click="received_by_signature_locked = true"
+                          >
+                            Lock
+                          </span>
+                          <span
+                            v-if="received_by_signature_locked"
+                            class="ml-1 cursor-pointer inline-block rounded border border-orange-400 bg-orange-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out"
+                            @click="received_by_signature_locked = false"
+                          >
+                            Unlock
+                          </span>
                         </div>
                       </div>
 
@@ -4363,7 +4358,6 @@
                         </div>
                       </div>
                     </div>
-                  </form>
                   <div class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md border-t-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50 min-[0px]:rounded-none">
                   <button
                     @click="clear('section8')"
@@ -4843,6 +4837,7 @@ export default {
   },
   data() {
     return {
+      received_by_signature_locked: false,
       teams: [],
       dispatch_date: "",
       category: "dispatch data",
