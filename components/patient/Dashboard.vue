@@ -53,6 +53,22 @@
           >
             ADD {{ !$device.isTablet ? "NEW" : "" }}
           </button>
+          <button
+            v-if="role === 'emr' && columns[7].filterOptions.filterValue !== ''"
+            type="button"
+            class="inline-block rounded bg-green-600 px-4 pb-1.5 pt-1.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-green-700 focus:bg-green-700 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+            @click="columns[7].filterOptions.filterValue = ''"
+          >
+            View All
+          </button>
+          <button
+            v-if="role === 'emr' && columns[7].filterOptions.filterValue === ''"
+            type="button"
+            class="inline-block rounded bg-green-600 px-4 pb-1.5 pt-1.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-green-700 focus:bg-green-700 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+            @click="columns[7].filterOptions.filterValue = `${$auth.user.first_name} ${$auth.user.last_name} (Responder)`"
+          >
+            My PCR
+          </button>
         </div>
       </vue-good-table>
       <PatientForm v-if="role === 'dispatcher'" />
@@ -168,6 +184,11 @@ export default {
         {
           label: "ASSIGNEE",
           field: "assignee",
+          filterOptions: {
+            enabled: true,
+            filterValue: "",
+            filterFn: this.columnFilterFn,
+          },
         },
         {
           label: "ACTIONS",
@@ -181,6 +202,7 @@ export default {
   },
   fetch() {
     this.role = this.$auth.user.role;
+    this.columns[7].filterOptions.filterValue = `${this.$auth.user.first_name} ${this.$auth.user.last_name} (Responder)`;
     this.$axios.get("pcr/list?category=completed").then((response) => {
       response.data.return.map((pcr) =>
         this.fetchedRows.push({
@@ -286,6 +308,9 @@ export default {
         return ids.push(selected.id);
       })
       window.open(this.$config.baseURL + '/pcr/generate/multiple?ids=' + ids, '_blank');
+    },
+    capitalize(word) {
+      return word.replace(/^\w/, (c) => c.toUpperCase());
     },
   },
 };
