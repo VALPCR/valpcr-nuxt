@@ -5142,7 +5142,16 @@ export default {
       this.$store.commit("setAddPatientStepperForm", false);
     },
     formattedDateTime() {
-      const currentDate = new Date();
+      const timeZone = 'Asia/Manila';
+      const timeZoneOffsetInMinutes = new Date().toLocaleString('en-US', { timeZone, timeZoneName: 'short' }).match(/([+\-])\d+$/)[0];
+
+      // Convert the offset to minutes and parse it as an integer
+      const offsetMinutes = parseInt(timeZoneOffsetInMinutes, 10);
+
+      // Create a new Date object with the adjusted timezone
+      const currentDate = new Date(new Date().getTime() + offsetMinutes * 60 * 1000);
+
+      // Format the date
       return currentDate.toLocaleTimeString([], {
         hour: "numeric",
         minute: "numeric",
