@@ -752,7 +752,7 @@
                             v-model="ambulance"
                             id="ambulance"
                           >
-                            <option value="0">Ambulance</option>
+                            <option value="ambu">Ambulance</option>
                             <option value="EMS 01">EMS 01</option>
                             <option value="EMS 02">EMS 02</option>
                             <option value="EMS 03">EMS 03</option>
@@ -1000,7 +1000,7 @@
                           id="status"
                           class="bg-neutral-50"
                         >
-                          <option selected value="2">Status</option>
+                          <option selected value="stat">Status</option>
                           <option value="single">Single</option>
                           <option value="married">Married</option>
                           <option value="divorced">Divorced</option>
@@ -4877,7 +4877,7 @@
         departed: "",
         station: "",
         ems_location_a: "tor",
-        ambulance: "",
+        ambulance: "ambu",
         team_id: "1",
         mt_from: "",
         mt_barangay: "",
@@ -4893,12 +4893,12 @@
         gender: "",
         birthdate: "",
         age: "",
-        status: "",
-        religion: "",
+        status: "stat",
+        religion: "relig",
         companion: "",
         phone: "",
         pnt_city: "City",
-        pnt_brgy: "",
+        pnt_brgy: "bgy",
         pnt_st: "",
         pnt_other_city: "",
         complaint: "",
@@ -5090,6 +5090,9 @@
         this.id = this.patientFormMobileFields.id;
         this.user_id = this.patientFormMobileFields.user_pcr.user_id;
         this.ambulance = this.patientFormMobileFields.ambulance;
+        if (this.ambulance !== '' && this.ambulance !== null) {
+          this.SetSelectValue("ambulance", this.ambulance);
+        }
         this.arrive_at_scene = this.patientFormMobileFields.arrive_at_scene;
         this.arrived_at = this.patientFormMobileFields.arrived_at;
         this.barangay_b = this.patientFormMobileFields.barangay_b;
@@ -5610,7 +5613,7 @@
         this.departed = "";
         this.station = "";
         this.ems_location_a = "tor";
-        this.ambulance = "";
+        this.ambulance = "ambu";
         this.team_id = "";
         this.mt_from = "";
         this.mt_barangay = "";
@@ -5626,7 +5629,7 @@
         this.gender = "";
         this.birthdate = "";
         this.age = "";
-        this.status = "";
+        this.status = "stat";
         this.religion = "";
         this.companion = "";
         this.phone = "";
@@ -5811,7 +5814,7 @@
             this.departed = "";
             this.station = "";
             this.ems_location_a = "tor";
-            this.ambulance = "0";
+            this.ambulance = "ambu";
             this.team_id = "";
             this.mt_from = "";
             this.mt_barangay = "";
@@ -5830,7 +5833,7 @@
           this.gender = "";
           this.birthdate = "";
           this.age = "";
-          this.status = "";
+          this.status = "stat";
           this.religion = "";
           this.companion = "";
           this.phone = "";

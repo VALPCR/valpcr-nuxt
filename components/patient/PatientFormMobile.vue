@@ -753,7 +753,7 @@
                             v-model="ambulance"
                             id="ambulance"
                           >
-                            <option selected value="0">Ambulance</option>
+                            <option selected value="ambu">Ambulance</option>
                             <option value="EMS 01">EMS 01</option>
                             <option value="EMS 02">EMS 02</option>
                             <option value="EMS 03">EMS 03</option>
@@ -846,7 +846,7 @@
                   aria-expanded="false"
                   aria-controls="flush-collapseTwo"
                 >
-                  Patient Information
+                  Patient Information  <font-awesome-icon v-if="checkIfPatientNotEmpty()" class="ml-5 text-green-700" icon="fas fa-circle-check" /><font-awesome-icon v-else class="ml-5 text-gray-400" icon="fas fa-circle-check" />
                   <span
                     class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white"
                   >
@@ -999,7 +999,7 @@
                           v-model="status"
                           class="bg-neutral-50"
                         >
-                          <option selected value="2">Status</option>
+                          <option selected value="stat">Status</option>
                           <option value="single">Single</option>
                           <option value="married">Married</option>
                           <option value="divorced">Divorced</option>
@@ -1016,7 +1016,7 @@
                           v-model="religion"
                           class="bg-neutral-50"
                         >
-                          <option selected value="3">Religion</option>
+                          <option selected value="relig">Religion</option>
                           <option value="roman catholic">Roman Catholic</option>
                           <option value="islam">Islam</option>
                           <option value="iglesia ni cristo">
@@ -1092,7 +1092,7 @@
                         class="bg-neutral-50"
                         v-model="pnt_city"
                       >
-                        <option selected value="City">Select City</option>
+                        <option value="City">Select City</option>
                         <option value="Valenzuela">Valenzuela City</option>
                         <option value="Other City">Other City</option>
                         <!-- Expected input box here -->
@@ -1106,7 +1106,7 @@
                           class="bg-neutral-50"
                           v-model="pnt_brgy"
                         >
-                          <option selected value="1">Barangay</option>
+                          <option selected value="bgy">Barangay</option>
                           <option value="Arkong Bato">Arkong Bato</option>
                           <option value="Bagbaguin">Bagbaguin</option>
                           <option value="Balangkas">Balangkas</option>
@@ -4868,7 +4868,7 @@ export default {
       departed: "",
       station: "",
       ems_location_a: "tor",
-      ambulance: "",
+      ambulance: "ambu",
       team_id: "1",
       mt_from: "",
       mt_barangay: "",
@@ -4881,15 +4881,15 @@ export default {
       first_name: "",
       middle_name: "",
       surname: "",
-      gender: "",
+      gender: "patientGender",
       birthdate: "",
       age: "",
-      status: "",
-      religion: "",
+      status: "stat",
+      religion: "relig",
       companion: "",
       phone: "",
       pnt_city: "City",
-      pnt_brgy: "",
+      pnt_brgy: "bgy",
       pnt_st: "",
       pnt_other_city: "",
       complaint: "",
@@ -4902,7 +4902,7 @@ export default {
       radiation: "",
       last_oral_intake: "",
       event_leading_to_injury: "",
-      severity: "",
+      severity: "severity",
       time_taken: "",
       time_a: "",
       time_b: "",
@@ -5173,7 +5173,7 @@ export default {
       this.departed = "";
       this.station = "";
       this.ems_location_a = "tor";
-      this.ambulance = "";
+      this.ambulance = "ambu";
       this.team_id = "";
       this.mt_from = "";
       this.mt_barangay = "";
@@ -5186,15 +5186,15 @@ export default {
       this.first_name = "";
       this.middle_name = "";
       this.surname = "";
-      this.gender = "";
+      this.gender = "patientGender";
       this.birthdate = "";
       this.age = "";
-      this.status = "";
-      this.religion = "";
+      this.status = "stat";
+      this.religion = "relig";
       this.companion = "";
       this.phone = "";
       this.pnt_city = "City";
-      this.pnt_brgy = "";
+      this.pnt_brgy = "bgy";
       this.pnt_st = "";
       this.pnt_other_city = "";
       this.complaint = "";
@@ -5207,7 +5207,7 @@ export default {
       this.radiation = "";
       this.last_oral_intake = "";
       this.event_leading_to_injury = "";
-      this.severity = "";
+      this.severity = "severity";
       this.time_taken = "";
       this.time_a = "";
       this.time_b = "";
@@ -5361,7 +5361,7 @@ export default {
           this.departed = "";
           this.station = "";
           this.ems_location_a = "tor";
-          this.ambulance = "";
+          this.ambulance = "ambu";
           this.team_id = "";
           this.mt_from = "";
           this.mt_barangay = "";
@@ -5377,15 +5377,15 @@ export default {
         this.first_name = "";
         this.middle_name = "";
         this.surname = "";
-        this.gender = "";
+        this.gender = "patientGender";
         this.birthdate = "";
         this.age = "";
-        this.status = "";
-        this.religion = "";
+        this.status = "stat";
+        this.religion = "relig";
         this.companion = "";
         this.phone = "";
         this.pnt_city = "City";
-        this.pnt_brgy = "";
+        this.pnt_brgy = "bgy";
         this.pnt_st = "";
         this.pnt_other_city = "";
         this.complaint = "";
@@ -5398,7 +5398,7 @@ export default {
         this.radiation = "";
         this.last_oral_intake = "";
         this.event_leading_to_injury = "";
-        this.severity = "";
+        this.severity = "severity";
         this.time_taken = "";
         break;
 
@@ -5767,13 +5767,45 @@ export default {
         this.departed !== '' ||
         this.station !== '' ||
         this.ems_location_a !== 'tor' ||
-        this.ambulance !== '' ||
+        this.ambulance !== 'ambu' ||
         this.mt_from !== '' ||
         this.mt_barangay !== '' ||
         this.ems_location_b !== '' ||
         this.barangay_b !== '' ||
         this.priority !== '' ||
         this.remarks !== ''
+      );
+    },
+    checkIfPatientNotEmpty() {
+      return !!(
+        this.call_source !== '' ||
+        this.suffix !== '' ||
+        this.first_name !== '' ||
+        this.middle_name !== '' ||
+        this.surname !== '' ||
+        this.gender !== 'patientGender' ||
+        this.birthdate !== '' ||
+        this.age !== '' ||
+        this.status !== 'stat' ||
+        this.religion !== 'relig' ||
+        this.companion !== '' ||
+        this.phone !== '' ||
+        this.pnt_city !== 'City' ||
+        this.pnt_brgy !== 'bgy' ||
+        this.pnt_st !== '' ||
+        this.pnt_other_city !== '' ||
+        this.complaint !== '' ||
+        this.onset !== '' ||
+        this.allergies !== '' ||
+        this.provocation !== '' ||
+        this.medication !== '' ||
+        this.quality !== '' ||
+        this.medical_history !== '' ||
+        this.radiation !== '' ||
+        this.last_oral_intake !== '' ||
+        this.event_leading_to_injury !== '' ||
+        this.severity !== 'severity' ||
+        this.time_taken !== ''
       );
     },
   },
