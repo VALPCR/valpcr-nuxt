@@ -62,7 +62,7 @@
                   aria-expanded="false"
                   aria-controls="flush-collapseOne"
                 >
-                  Dispatch Data <font-awesome-icon v-if="checkIfDispatchNotEmpty()" class="ml-5 text-green-700" icon="fas fa-circle-check" /><font-awesome-icon v-else class="ml-5 text-gray-400" icon="fas fa-circle-check" />
+                <font-awesome-icon v-if="checkIfDispatchNotEmpty()" class="mr-5 text-green-700" icon="fas fa-circle-check" /><font-awesome-icon v-else class="mr-5 text-gray-400" icon="fas fa-circle-check" /> Dispatch Data 
                   <span
                     class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white"
                   >
@@ -844,7 +844,7 @@
                   aria-expanded="false"
                   aria-controls="flush-collapseTwo"
                 >
-                  Patient Information  <font-awesome-icon v-if="checkIfPatientNotEmpty()" class="ml-5 text-green-700" icon="fas fa-circle-check" /><font-awesome-icon v-else class="ml-5 text-gray-400" icon="fas fa-circle-check" />
+                <font-awesome-icon v-if="checkIfPatientNotEmpty()" class="mr-5 text-green-700" icon="fas fa-circle-check" /><font-awesome-icon v-else class="mr-5 text-gray-400" icon="fas fa-circle-check" /> Patient Information  
                   <span
                     class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white"
                   >
@@ -1453,7 +1453,7 @@
                   aria-expanded="false"
                   aria-controls="flush-collapseThree"
                 >
-                  Vital Signs
+                <font-awesome-icon v-if="checkIfVitalsNotEmpty()" class="mr-5 text-green-700" icon="fas fa-circle-check" /><font-awesome-icon v-else class="mr-5 text-gray-400" icon="fas fa-circle-check" /> Vital Signs   
                   <span
                     class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white"
                   >
@@ -1999,7 +1999,7 @@
                   aria-expanded="false"
                   aria-controls="flush-collapseFour"
                 >
-                  Body Injuries
+                <font-awesome-icon v-if="checkIfInjuriesNotEmpty()" class="mr-5 text-green-700" icon="fas fa-circle-check" /><font-awesome-icon v-else class="mr-5 text-gray-400" icon="fas fa-circle-check" />Body Injuries   
                   <span
                     class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white"
                   >
@@ -2589,7 +2589,7 @@
                   aria-expanded="false"
                   aria-controls="flush-collapseFive"
                 >
-                  Burn Percentage
+                <font-awesome-icon v-if="checkIfBurnNotEmpty()" class="mr-5 text-green-700" icon="fas fa-circle-check" /><font-awesome-icon v-else class="mr-5 text-gray-400" icon="fas fa-circle-check" />Burn Percentage Body Injuries 
                   <span
                     class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white"
                   >
@@ -3657,7 +3657,7 @@
                   aria-expanded="false"
                   aria-controls="flush-collapseSix"
                 >
-                  Obstetric History
+                <font-awesome-icon v-if="checkIfObstetricsNotEmpty()" class="mr-5 text-green-700" icon="fas fa-circle-check" /><font-awesome-icon v-else class="mr-5 text-gray-400" icon="fas fa-circle-check" />Obstetric History
                   <span
                     class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white"
                   >
@@ -3917,7 +3917,7 @@
                   aria-expanded="false"
                   aria-controls="flush-collapseSeven"
                 >
-                  Treatment / Intervention
+                <font-awesome-icon v-if="checkIfTreatmentNotEmpty()" class="mr-5 text-green-700" icon="fas fa-circle-check" /><font-awesome-icon v-else class="mr-5 text-gray-400" icon="fas fa-circle-check" />Treatment / Intervention
                   <span
                     class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white"
                   >
@@ -4190,7 +4190,7 @@
                   aria-expanded="false"
                   aria-controls="flush-collapseEight"
                 >
-                  Signature
+                <font-awesome-icon v-if="checkIfSignatureNotEmpty()" class="mr-5 text-green-700" icon="fas fa-circle-check" /><font-awesome-icon v-else class="mr-5 text-gray-400" icon="fas fa-circle-check" />Signature 
                   <span
                     class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white"
                   >
@@ -5027,16 +5027,16 @@ export default {
       abortion: "",
       living: "",
       obs_remarks: "",
-      nasal: "",
-      o2_mask: "",
-      bvm: "",
+      nasal: false,
+      o2_mask: false,
+      bvm: false,
       lpm: "",
-      wound_care: "",
-      splinting_applied: "",
-      control_bleeding: "",
-      vital_sign_taken: "",
-      applied_cpr: "",
-      applied_aed: "",
+      wound_care: false,
+      splinting_applied: false,
+      control_bleeding: false,
+      vital_sign_taken: false,
+      applied_cpr: false,
+      applied_aed: false,
       problems: "",
       skin_color: "default",
       eyes: 0,
@@ -5583,13 +5583,13 @@ export default {
         this.labor_pains = "";
         this.last_menstrual_period = "";
         this.estimated_date_of_delivery = "";
+        this.age_of_gestation = "";
         this.gravidity = "";
         this.parity = "";
         this.term_of_birth = "";
         this.pre_term = "";
         this.abortion = "";
         this.living = "";
-        this.obs_remarks = "";
         break;
 
         case 'section7':
@@ -5604,6 +5604,7 @@ export default {
         this.applied_cpr = "";
         this.applied_aed = "";
         this.problems = "";
+        this.obs_remarks = "";
         break;
 
         case 'section8':
@@ -5901,6 +5902,141 @@ export default {
         this.event_leading_to_injury !== '' ||
         this.severity !== 'severity' ||
         this.time_taken !== ''
+      );
+    },
+    checkIfVitalsNotEmpty() {
+      return !!(
+        this.time_a  !== '' ||
+        this.time_b  !== '' ||
+        this.time_c  !== '' ||
+        this.time_d  !== '' ||
+        this.time_e  !== '' ||
+        this.time_f  !== '' ||
+        this.bp_a  !== '' ||
+        this.bp_b  !== '' ||
+        this.bp_c  !== '' ||
+        this.bp_d  !== '' ||
+        this.bp_e  !== '' ||
+        this.pr_a  !== '' ||
+        this.pr_b  !== '' ||
+        this.pr_c  !== '' ||
+        this.pr_d  !== '' ||
+        this.pr_e  !== '' ||
+        this.rr_a  !== '' ||
+        this.rr_b  !== '' ||
+        this.rr_c  !== '' ||
+        this.rr_d  !== '' ||
+        this.rr_e  !== '' ||
+        this.tempt_a  !== '' ||
+        this.tempt_b  !== '' ||
+        this.tempt_c  !== '' ||
+        this.tempt_d  !== '' ||
+        this.tempt_e  !== '' ||
+        this.spo2_a  !== '' ||
+        this.spo2_b  !== '' ||
+        this.spo2_c  !== '' ||
+        this.spo2_d  !== '' ||
+        this.spo2_e  !== '' ||
+        this.left_pearl  !== '' ||
+        this.left_dilated  !== '' ||
+        this.left_constrict  !== '' ||
+        this.left_non_reactive  !== '' ||
+        this.left_cataract  !== '' ||
+        this.right_pearl  !== '' ||
+        this.right_dilated  !== '' ||
+        this.right_constrict  !== '' ||
+        this.right_non_reactive  !== '' ||
+        this.right_cataract  !== '' ||
+        this.skin_color !== 'default'
+        // did not include eyes, motor, verbal, and score fields
+      );
+    },
+    checkIfInjuriesNotEmpty() {
+      return !!(
+        this.anterior_injury_remarks !== '' ||
+        this.anterior_head_injury.length > 0 ||
+        this.anterior_chest_injury.length > 0 ||
+        this.anterior_pelvis_injury.length > 0 ||
+        this.anterior_left_arm_injury.length > 0 ||
+        this.anterior_right_arm_injury.length > 0 ||
+        this.anterior_left_leg_injury.length > 0 ||
+        this.anterior_right_leg_injury.length > 0 ||
+        this.anterior_genitalia_injury.length > 0 ||
+        this.posterior_injury_remarks !== '' ||
+        this.posterior_head_injury.length > 0 ||
+        this.posterior_chest_injury.length > 0 ||
+        this.posterior_pelvis_injury.length > 0 ||
+        this.posterior_left_arm_injury.length > 0 ||
+        this.posterior_right_arm_injury.length > 0 ||
+        this.posterior_left_leg_injury.length > 0 ||
+        this.posterior_right_leg_injury.length > 0
+      );
+    },
+    checkIfBurnNotEmpty() {
+      return !!(
+        this.anterior_burn_remarks !== '' ||
+        this.anterior_head_degree !== '' ||
+        this.anterior_chest_degree !== '' ||
+        this.anterior_pelvis_degree !== '' ||
+        this.anterior_left_arm_degree !== '' ||
+        this.anterior_right_arm_degree !== '' ||
+        this.anterior_left_leg_degree !== '' ||
+        this.anterior_right_leg_degree !== '' ||
+        this.anterior_genitalia_degree !== '' ||
+        this.posterior_burn_remarks !== '' ||
+        this.posterior_head_degree !== '' ||
+        this.posterior_chest_degree !== '' ||
+        this.posterior_pelvis_degree !== '' ||
+        this.posterior_left_arm_degree !== '' ||
+        this.posterior_right_arm_degree !== '' ||
+        this.posterior_left_leg_degree !== '' ||
+        this.posterior_right_leg_degree !== ''
+      );
+    },
+    checkIfObstetricsNotEmpty() {
+      return !!(
+        this.prenatal_checkup !== '' ||
+        this.labor_pains !== '' ||
+        this.last_menstrual_period !== '' ||
+        this.estimated_date_of_delivery !== '' ||
+        this.age_of_gestation !== '' ||
+        this.gravidity !== '' ||
+        this.parity !== '' ||
+        this.term_of_birth !== '' ||
+        this.pre_term !== '' ||
+        this.abortion !== '' ||
+        this.living !== ''
+      );
+    },
+    checkIfTreatmentNotEmpty() {
+      return !!(
+        this.nasal ||
+        this.o2_mask ||
+        this.bvm ||
+        this.lpm !== '' ||
+        this.wound_care ||
+        this.splinting_applied ||
+        this.control_bleeding ||
+        this.vital_sign_taken ||
+        this.applied_cpr ||
+        this.applied_aed ||
+        this.obs_remarks !== '' ||
+        this.problems !== '' 
+      );
+    },
+    checkIfSignatureNotEmpty() {
+      return !!(
+        this.received_by !== '' ||
+        // (typeof this.$refs.received_by_signature !== 'undefined' && this.$refs.received_by_signature.isEmpty() == false)   ||
+        this.medical_facility !== '' ||
+        // (this.medical_facility_signature !== '' && this.medical_facility_signature !== null) ||
+        this.team_leader !== '' ||
+        // (this.team_leader_signature!== '' && this.team_leader_signature.save() !== null) ||
+        this.gloves !== '' ||
+        this.mask !== '' ||
+        this.gauze !== '' ||
+        this.others !== ''
+        //signatures not yet included; a blocker
       );
     },
   },
