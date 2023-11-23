@@ -6234,12 +6234,20 @@
           applied_aed: this.applied_aed,
           problems: this.problems,
           received_by: this.received_by,
-          received_by_signature: this.$refs.received_by_signature.save(),
+          received_by_signature:
+            typeof this.$refs.received_by_signature === "undefined"
+              ? this.received_by_signature
+              : this.$refs.received_by_signature.save(),
           medical_facility: this.medical_facility,
           medical_facility_signature:
-            this.$refs.medical_facility_signature.save(),
+            typeof this.$refs.medical_facility_signature === "undefined"
+              ? this.medical_facility_signature
+              : this.$refs.medical_facility_signature.save(),
           team_leader: this.team_leader,
-          team_leader_signature: this.$refs.team_leader_signature.save(),
+          team_leader_signature:
+            typeof this.$refs.team_leader_signature === "undefined"
+              ? this.team_leader_signature
+              : this.$refs.team_leader_signature.save(),
           gloves: this.gloves,
           mask: this.mask,
           gauze: this.gauze,
@@ -6285,15 +6293,27 @@
           to_hospital: this.to_hospital,
           other_statement: this.other_statement,
           responder_full_name: this.responder_full_name,
-          responder_signature: this.$refs.responder_signature.save(),
+          responder_signature:
+            typeof this.$refs.responder_signature === "undefined"
+              ? this.responder_signature
+              : this.$refs.responder_signature.save(),
           responder_waiver_date: this.responder_waiver_date,
           patient_or_relative_name: this.patient_or_relative_name,
-          patient_or_relative_signature: this.$refs.patient_or_relative_signature.save(),
+          patient_or_relative_signature:
+            typeof this.$refs.patient_or_relative_signature === "undefined"
+              ? this.patient_or_relative_signature
+              : this.$refs.patient_or_relative_signature.save(),
           patient_relative_waiver_date: this.patient_relative_waiver_date,
           witness_one: this.witness_one,
-          witness_one_signature: this.$refs.witness_one_signature.save(),
+          witness_one_signature:
+            typeof this.$refs.witness_one_signature === "undefined"
+              ? this.witness_one_signature
+              : this.$refs.witness_one_signature.save(),
           witness_two: this.witness_two,
-          witness_two_signature: this.$refs.witness_two_signature.save(),
+          witness_two_signature:
+            typeof this.$refs.witness_two_signature === "undefined"
+              ? this.witness_two_signature
+              : this.$refs.witness_two_signature.save(),
         };
 
         this.$axios.post("pcr/emr/update", params).then(() => {
