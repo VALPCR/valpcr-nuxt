@@ -91,7 +91,6 @@
                 data-te-parent="#accordionFlushExample"
               >
                 <div class="px-5 py-4 mt-7 mb-7">
-                  <form>
                     <div
                       class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4"
                     >
@@ -816,7 +815,6 @@
                         </div>
                       </div>
                     </div>
-                  </form>
                 </div>
                 <div class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md p-4 dark:border-opacity-50 min-[0px]:rounded-none">
                   <button
@@ -874,7 +872,6 @@
                 data-te-parent="#accordionFlushExample"
               >
                 <div class="px-5 py-4 mt-7 mb-7">
-                  <form>
                     <div
                       class="grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-4"
                     >
@@ -1434,7 +1431,6 @@
                       </div>
                       <!-- EVENTS LEADING TO INJURY -->
                     </div>
-                  </form>
                 </div>
                 <div class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md p-4 dark:border-opacity-50 min-[0px]:rounded-none">
                   <button
@@ -1491,7 +1487,6 @@
                 data-te-parent="#accordionFlushExample"
               >
                 <div class="px-5 py-4 mt-5 mb-5">
-                  <form>
                     <!-- FOR TIME, BP, PR, RR, TEMP, SPO2 -->
                     <p class="text-center mb-5">
                       <mark class="bg-primary-200 font-bold p-2"
@@ -1986,7 +1981,6 @@
                     <hr
                       class="mt-2 h-0.5 border-t-0 bg-neutral-100 opacity-100 dark:opacity-50"
                     />
-                  </form>
                 </div>
                 <div class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md p-4 dark:border-opacity-50 min-[0px]:rounded-none">
                   <button
@@ -2043,7 +2037,6 @@
                 data-te-parent="#accordionFlushExample"
               >
                 <div class="px-5 py-4">
-                  <form>
                     <h4 class="mb-4 font-bold">Anterior</h4>
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
@@ -2309,6 +2302,24 @@
                       </div>
                     </div>
 
+                    <div
+                      class="relative mb-5"
+                      data-te-input-wrapper-init
+                    >
+                      <textarea
+                        v-model="anterior_injury_remarks"
+                        class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                        id="anterior_injury_remarks"
+                        aria-describedby="anterior_injury_remarks"
+                        rows="7"
+                      />
+                      <label
+                        class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                      >
+                        Remarks
+                      </label>
+                    </div>
+
                     <h4 class="mb-4 font-bold">Posterior</h4>
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
@@ -2540,7 +2551,24 @@
                         >
                       </div>
                     </div>
-                  </form>
+
+                    <div
+                      class="relative mb-5"
+                      data-te-input-wrapper-init
+                    >
+                        <textarea
+                          v-model="posterior_injury_remarks"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="posterior_injury_remarks"
+                          aria-describedby="posterior_injury_remarks"
+                          rows="7"
+                        />
+                      <label
+                        class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                      >
+                        Remarks
+                      </label>
+                    </div>
                   <div class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md p-4 dark:border-opacity-50 min-[0px]:rounded-none">
                   <button
                     @click="clear('section4')"
@@ -2597,7 +2625,6 @@
                 data-te-parent="#accordionFlushExample"
               >
                 <div class="px-5 py-4">
-                  <form>
                     <h4 class="mb-4 font-bold">Anterior</h4>
                     <!-- Anterior Head Degree -->
                     <div class="flex items-center">
@@ -3574,7 +3601,6 @@
                         />
                       </div>
                     </div>
-                  </form>
                   <div class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md p-4 dark:border-opacity-50 min-[0px]:rounded-none">
                   <button
                     @click="clear('section5')"
@@ -3631,7 +3657,6 @@
                 data-te-parent="#accordionFlushExample"
               >
                 <div class="px-5 py-4 mt-5 mb-5">
-                  <form>
                     <div
                       class="grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-4"
                     >
@@ -3835,12 +3860,7 @@
                           living
                         </label>
                       </div>
-
-
-
-
                     </div>
-                  </form>
                   <div class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md p-4 dark:border-opacity-50 min-[0px]:rounded-none">
                     <button
                     @click="clear('section6')"
@@ -3897,7 +3917,6 @@
                 data-te-parent="#accordionFlushExample"
               >
                 <div class="px-5 py-4 mt-5 mb-5">
-                  <form>
                     <div class="grid grid-cols-7 mb-3">
                       <h4 class="mb-3 font-bold col-span-2">O2 Given Via:</h4>
                       <div class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem] gap-3">
@@ -4115,8 +4134,6 @@
                         </label>
                       </div>
                     </div>
-
-                  </form>
                   <div class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md p-4 dark:border-opacity-50 min-[0px]:rounded-none">
                     <button
                       @click="clear('section7')"
@@ -4173,7 +4190,6 @@
                 data-te-parent="#accordionFlushExample"
               >
                 <div class="px-5 py-4 mt-5 mb-5">
-                  <form>
                     <div class="grid grid-col-2 sm:grid-cols-2 gap-4">
                       <div class="grid grid-col-1 sm:grid-cols-1">
                         <div class="relative mb-1" data-te-input-wrapper-init>
@@ -4436,7 +4452,6 @@
                         </div>
                       </div>
                     </div>
-                  </form>
                   <div class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md p-4 dark:border-opacity-50 min-[0px]:rounded-none">
                   <button
                     @click="clear('section8')"
@@ -5079,6 +5094,7 @@
         mask: "",
         gauze: "",
         others: "",
+        anterior_injury_remarks: '',
         anterior_head_injury: [],
         anterior_chest_injury: [],
         anterior_pelvis_injury: [],
@@ -5087,6 +5103,7 @@
         anterior_left_leg_injury: [],
         anterior_right_leg_injury: [],
         anterior_genitalia_injury: [],
+        posterior_injury_remarks: '',
         posterior_head_injury: [],
         posterior_chest_injury: [],
         posterior_pelvis_injury: [],
@@ -5226,8 +5243,6 @@
         this.first_name =
           this.patientFormMobileFields.pcr_patient.patient.first_name;
         this.gender = this.patientFormMobileFields.pcr_patient.patient.gender;
-        // console.log('this.gender');
-        // console.log(this.gender);
         if (this.gender !== null && this.gender !== '') {
           this.SetSelectValue("gender", this.gender);
         }
@@ -5395,6 +5410,8 @@
         this.mask = this.patientFormMobileFields.pcr_signature.mask;
         this.gauze = this.patientFormMobileFields.pcr_signature.gauze;
         this.others = this.patientFormMobileFields.pcr_signature.others;
+        this.anterior_injury_remarks =
+          this.patientFormMobileFields.pcr_body_injuries.anterior_injury_remarks;
         this.anterior_head_injury =
           this.patientFormMobileFields.pcr_body_injuries.anterior_head_injury;
         this.anterior_chest_injury =
@@ -5456,6 +5473,8 @@
             this.anterior_genitalia_injury
           );
         }
+        this.posterior_injury_remarks =
+          this.patientFormMobileFields.pcr_body_injuries.posterior_injury_remarks;
         this.posterior_head_injury =
           this.patientFormMobileFields.pcr_body_injuries.posterior_head_injury;
         this.posterior_chest_injury =
@@ -5812,6 +5831,7 @@
         this.mask = "";
         this.gauze = "";
         this.others = "";
+        this.anterior_injury_remarks = "";
         this.anterior_head_injury = [];
         this.anterior_chest_injury = [];
         this.anterior_pelvis_injury = [];
@@ -5820,6 +5840,7 @@
         this.anterior_left_leg_injury = [];
         this.anterior_right_leg_injury = [];
         this.anterior_genitalia_injury = [];
+        this.posterior_injury_remarks = "";
         this.posterior_head_injury = [];
         this.posterior_chest_injury = [];
         this.posterior_pelvis_injury = [];
@@ -5989,6 +6010,7 @@
           break;
 
           case 'section4':
+          this.anterior_injury_remarks = '';
           this.anterior_head_injury = [];
           this.anterior_chest_injury = [];
           this.anterior_pelvis_injury = [];
@@ -5997,6 +6019,7 @@
           this.anterior_left_leg_injury = [];
           this.anterior_right_leg_injury = [];
           this.anterior_genitalia_injury = [];
+          this.posterior_injury_remarks = '';
           this.posterior_head_injury = [];
           this.posterior_chest_injury = [];
           this.posterior_pelvis_injury = [];
@@ -6005,7 +6028,6 @@
           this.posterior_left_leg_injury = [];
           this.posterior_right_leg_injury = [];
           break;
-
 
           case 'section5':
           this.anterior_head_degree = "";
@@ -6079,8 +6101,6 @@
           this.witness_one = "";
           this.witness_two = "";
         }
-
-
       },
       update() {
         const params = {
@@ -6224,6 +6244,7 @@
           mask: this.mask,
           gauze: this.gauze,
           others: this.others,
+          anterior_injury_remarks: this.anterior_injury_remarks,
           anterior_head_injury: this.anterior_head_injury,
           anterior_chest_injury: this.anterior_chest_injury,
           anterior_pelvis_injury: this.anterior_pelvis_injury,
@@ -6232,6 +6253,7 @@
           anterior_left_leg_injury: this.anterior_left_leg_injury,
           anterior_right_leg_injury: this.anterior_right_leg_injury,
           anterior_genitalia_injury: this.anterior_genitalia_injury,
+          posterior_injury_remarks: this.posterior_injury_remarks,
           posterior_head_injury: this.posterior_head_injury,
           posterior_chest_injury: this.posterior_chest_injury,
           posterior_pelvis_injury: this.posterior_pelvis_injury,

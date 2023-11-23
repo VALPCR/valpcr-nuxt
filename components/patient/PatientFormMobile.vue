@@ -2293,6 +2293,25 @@
                       </div>
                     </div>
 
+                    <div
+                      class="relative mb-5"
+                      data-te-input-wrapper-init
+                    >
+                        <textarea
+                          v-model="anterior_injury_remarks"
+                          class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          id="anterior_injury_remarks"
+                          aria-describedby="anterior_injury_remarks"
+                          rows="7"
+                        >
+                        </textarea>
+                      <label
+                        class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                      >
+                        Remarks
+                      </label>
+                    </div>
+
                     <h4 class="mb-4 font-bold">Posterior</h4>
                     <div class="flex items-center">
                       <div class="text-center mb-3 w-1/5">
@@ -2523,6 +2542,25 @@
                           >Select as many items as apply</label
                         >
                       </div>
+                    </div>
+
+                    <div
+                      class="relative mb-5"
+                      data-te-input-wrapper-init
+                    >
+                          <textarea
+                            v-model="posterior_injury_remarks"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            id="posterior_injury_remarks"
+                            aria-describedby="posterior_injury_remarks"
+                            rows="7"
+                          >
+                          </textarea>
+                      <label
+                        class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                      >
+                        Remarks
+                      </label>
                     </div>
                   <div class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md border-t-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50 min-[0px]:rounded-none">
                   <button
@@ -4979,6 +5017,7 @@ export default {
       mask: "",
       gauze: "",
       others: "",
+      anterior_injury_remarks: '',
       anterior_head_injury: [],
       anterior_chest_injury: [],
       anterior_pelvis_injury: [],
@@ -4987,6 +5026,7 @@ export default {
       anterior_left_leg_injury: [],
       anterior_right_leg_injury: [],
       anterior_genitalia_injury: [],
+      posterior_injury_remarks: '',
       posterior_head_injury: [],
       posterior_chest_injury: [],
       posterior_pelvis_injury: [],
@@ -5282,6 +5322,7 @@ export default {
       this.mask = "";
       this.gauze = "";
       this.others = "";
+      this.anterior_injury_remarks = '';
       this.anterior_head_injury = [];
       this.anterior_chest_injury = [];
       this.anterior_pelvis_injury = [];
@@ -5290,6 +5331,7 @@ export default {
       this.anterior_left_leg_injury = [];
       this.anterior_right_leg_injury = [];
       this.anterior_genitalia_injury = [];
+      this.posterior_injury_remarks = '';
       this.posterior_head_injury = [];
       this.posterior_chest_injury = [];
       this.posterior_pelvis_injury = [];
@@ -5448,6 +5490,7 @@ export default {
         break;
 
         case 'section4':
+        this.anterior_injury_remarks = '';
         this.anterior_head_injury = [];
         this.anterior_chest_injury = [];
         this.anterior_pelvis_injury = [];
@@ -5456,6 +5499,7 @@ export default {
         this.anterior_left_leg_injury = [];
         this.anterior_right_leg_injury = [];
         this.anterior_genitalia_injury = [];
+        this.posterior_injury_remarks = '';
         this.posterior_head_injury = [];
         this.posterior_chest_injury = [];
         this.posterior_pelvis_injury = [];
@@ -5680,6 +5724,7 @@ export default {
         mask: this.mask,
         gauze: this.gauze,
         others: this.others,
+        anterior_injury_remarks: this.anterior_injury_remarks,
         anterior_head_injury: this.anterior_head_injury,
         anterior_chest_injury: this.anterior_chest_injury,
         anterior_pelvis_injury: this.anterior_pelvis_injury,
@@ -5688,6 +5733,7 @@ export default {
         anterior_left_leg_injury: this.anterior_left_leg_injury,
         anterior_right_leg_injury: this.anterior_right_leg_injury,
         anterior_genitalia_injury: this.anterior_genitalia_injury,
+        posterior_injury_remarks: this.posterior_injury_remarks,
         posterior_head_injury: this.posterior_head_injury,
         posterior_chest_injury: this.posterior_chest_injury,
         posterior_pelvis_injury: this.posterior_pelvis_injury,
