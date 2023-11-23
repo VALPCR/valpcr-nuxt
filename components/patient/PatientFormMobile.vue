@@ -4177,6 +4177,7 @@
                             Signature Here
                           </label>
                           <button
+                            v-if="!received_by_signature_locked"
                             class="ml-1 inline-block rounded border border-slate-400 bg-slate-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out hover:bg-slate-300 hover:border-slate-400 hover:bg-slate-300 focus:bg-slate-300 focus:shadow-[0_4px_9px_-4px_#3b71ca] focus:ring-0 active:bg-slate-300"
                             @click="$refs.received_by_signature.clear()"
                           >
