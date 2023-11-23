@@ -62,7 +62,7 @@
                   aria-expanded="false"
                   aria-controls="flush-collapseOne"
                 >
-                  Dispatch Data
+                  Dispatch Data <font-awesome-icon v-if="checkIfDispatchNotEmpty()" class="ml-5 text-green-700" icon="fas fa-circle-check" />
                   <span
                     class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white"
                   >
@@ -5741,6 +5741,40 @@ export default {
         );
         successModal.show();
       });
+    },
+    checkIfDispatchNotEmpty() {
+      return !!(
+        this.call_source !== '' ||
+        this.call_source !== '' ||
+        this.call_receive !== '' ||
+        this.incident_location !== '' ||
+        this.responded !== '' ||
+        this.t_o !== '' ||
+        this.va_location !== '' ||
+        this.va_location_barangay !== '' ||
+        this.arrive_at_scene !== '' ||
+        this.t_l !== '' ||
+        this.involved_vehicles_a !== '' ||
+        this.involved_vehicles_b !== '' ||
+        this.en_route_to !== '' ||
+        this.tx_o !== '' ||
+        this.plate_number !== '' ||
+        this.arrived_at !== '' ||
+        this.l_o !== '' ||
+        this.driver !== '' ||
+        this.pedestrian !== '' ||
+        this.passenger !== '' ||
+        this.departed !== '' ||
+        this.station !== '' ||
+        this.ems_location_a !== 'tor' ||
+        this.ambulance !== '' ||
+        this.mt_from !== '' ||
+        this.mt_barangay !== '' ||
+        this.ems_location_b !== '' ||
+        this.barangay_b !== '' ||
+        this.priority !== '' ||
+        this.remarks !== ''
+      );
     },
   },
 };
