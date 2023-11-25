@@ -163,7 +163,7 @@ export default {
   },
   methods: {
     onRowClick(params) {
-      if (params.event.target.classList[0].includes("restore")) {
+      if (typeof params.event.target.classList[0] !== 'undefined' && params.event.target.classList[0].includes("restore")) {
         this.$axios
           .get(
             "pcr/single/restore?id=" +

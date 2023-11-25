@@ -2,8 +2,12 @@
   <div class="min-h-screen bg-[#EFEFEF]">
     <div class="m-5">
       <vue-good-table
+        @on-selected-rows-change="selectionChanged"
         :columns="columns"
         :rows="fetchedRows"
+        :select-options="{
+          enabled: true,
+        }"
         :search-options="{ enabled: true }"
         :pagination-options="{ enabled: true }"
         @on-row-click="onRowClick"
@@ -21,14 +25,34 @@
             ADD NEW
           </button>
         </div>
+        <div v-if="selectedRows.length > 0" slot="table-actions">
+          <button
+            type="button"
+            class="block rounded bg-orange-600 mt-1 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-orange-700 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-orange-700 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-orange-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+            @click="archiveUser"
+          >
+            Archive
+          </button>
+          <button
+            type="button"
+            class="block rounded bg-green-600 mt-1 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-green-700 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-green-700 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+            @click="restoreUser"
+          >
+            Restore
+          </button>
+        </div>
       </vue-good-table>
       <DispatcherForm @reset="refresh" />
       <EditDispatcherForm />
+      <ArchiveDispatcher :ids="ids" />
+      <RestoreDispatcher :ids="ids" />
     </div>
   </div>
 </template>
 
 <script>
+import ArchiveDispatcher from "./ArchiveDispatcher";
+import RestoreDispatcher from "./RestoreDispatcher";
 import DispatcherForm from "./DispatcherForm";
 import EditDispatcherForm from "./EditDispatcherForm";
 import { Modal, Dropdown, Ripple, initTE } from "tw-elements";
@@ -40,9 +64,12 @@ export default {
     initTE,
     DispatcherForm,
     EditDispatcherForm,
+    ArchiveDispatcher,
+    RestoreDispatcher
   },
   data() {
     return {
+      ids: [],
       role: "",
       fetchedRows: [],
       filteredRows: [],
@@ -55,7 +82,6 @@ export default {
         {
           label: "STATUS",
           field: "radio",
-          html: true,
         },
         {
           label: "TEAM",
@@ -88,6 +114,7 @@ export default {
           sortable: false,
         },
       ],
+      selectedRows: [],
     };
   },
   fetch() {
@@ -99,28 +126,23 @@ export default {
           name: `${this.capitalize(result.first_name)} ${
             result.middle_name ?? ""
           } ${this.capitalize(result.last_name)}`,
-          radio:
-            "<input\n" +
-            "  class=\"mr-2 mt-[0.3rem] h-3.5 w-8 appearance-none rounded-[0.4375rem] bg-neutral-300 before:pointer-events-none before:absolute before:h-3.5 before:w-3.5 before:rounded-full before:bg-transparent before:content-[''] after:absolute after:z-[2] after:-mt-[0.1875rem] after:h-5 after:w-5 after:rounded-full after:border-none after:bg-neutral-100 after:shadow-[0_0px_3px_0_rgb(0_0_0_/_7%),_0_2px_2px_0_rgb(0_0_0_/_4%)] after:transition-[background-color_0.2s,transform_0.2s] after:content-[''] checked:bg-primary checked:after:absolute checked:after:z-[2] checked:after:-mt-[3px] checked:after:ml-[1.0625rem] checked:after:h-5 checked:after:w-5 checked:after:rounded-full checked:after:border-none checked:after:bg-primary checked:after:shadow-[0_3px_1px_-2px_rgba(0,0,0,0.2),_0_2px_2px_0_rgba(0,0,0,0.14),_0_1px_5px_0_rgba(0,0,0,0.12)] checked:after:transition-[background-color_0.2s,transform_0.2s] checked:after:content-[''] hover:cursor-pointer focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[3px_-1px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-5 focus:after:w-5 focus:after:rounded-full focus:after:content-[''] checked:focus:border-primary checked:focus:bg-primary checked:focus:before:ml-[1.0625rem] checked:focus:before:scale-100 checked:focus:before:shadow-[3px_-1px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:bg-neutral-600 dark:after:bg-neutral-400 dark:checked:bg-primary dark:checked:after:bg-primary dark:focus:before:shadow-[3px_-1px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[3px_-1px_0px_13px_#3b71ca]\"\n" +
-            '  type="checkbox"\n' +
-            '  role="switch"\n' +
-            '  id="flexSwitchChecked"\n' +
-            "  checked />",
+          radio: `${result.deleted_at === null ? 'Active' : 'Inactive'}`,
           team: this.capitalize(result.team.name),
           address: `${this.capitalize(result.address.street)} ${this.capitalize(
             result.address.barangay
           )} ${this.capitalize(result.address.city)}`,
           age: result.age,
           contact: result.email,
+          deleted_at: result.deleted_at,
         });
       });
     });
   },
+  mounted() {
+    initTE({ Modal, Ripple, Dropdown });
+  },
   created() {
     this.filteredRows = this.fetchedRows;
-  },
-  mounted() {
-    initTE({ Ripple, Dropdown });
   },
   methods: {
     onFilter({ field, value }) {
@@ -148,16 +170,40 @@ export default {
     refresh() {
       this.$forceUpdate();
     },
-    onRowClick(params) {
-      const editModal = new Modal(
-        document.getElementById("editDispatcherModalXl")
-      );
-      this.$store.commit("setEditDispatcherModalXl", true);
-      this.$store.commit("setEditDispatcherModalXlArg", params.row.id);
-      editModal.show();
+    onRowClick(params)  {
+      if (params.event.target.nodeName !== 'INPUT') {
+        const editModal = new Modal(
+          document.getElementById("editDispatcherModalXl")
+        );
+        this.$store.commit("setEditDispatcherModalXl", true);
+        this.$store.commit("setEditDispatcherModalXlArg", params.row.id);
+        editModal.show();
+      }
     },
     columnFilterFn(value, filter) {
       return value === filter;
+    },
+    selectionChanged(data) {
+      this.selectedRows = data.selectedRows;
+      this.selectedRows.map((selected) => {
+        return this.ids.push(selected.id);
+      })
+      this.ids = [...new Set(this.ids)];
+    },
+    restoreUsers() {
+      if (this.ids.length > 0) {
+        this.$axios.get('user/restore?ids=' + this.ids).then(() => {
+          location.reload();
+        });
+      }
+    },
+    archiveUser() {
+      const archiveModal = new Modal(document.getElementById("archiveDispatcher"));
+      archiveModal.show();
+    },
+    restoreUser() {
+      const restoreModal = new Modal(document.getElementById("restoreDispatcher"));
+      restoreModal.show();
     },
   },
 };
