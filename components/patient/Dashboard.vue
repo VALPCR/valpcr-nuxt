@@ -202,7 +202,7 @@ export default {
   },
   fetch() {
     this.role = this.$auth.user.role;
-    if (this.role !== 'head') {
+    if (this.role !== 'head' && this.role !== 'dispatcher') {
       this.columns[7].filterOptions.filterValue = `${this.$auth.user.first_name} ${this.$auth.user.last_name} (Responder)`;
     }
     this.$axios.get("pcr/list?category=completed").then((response) => {
