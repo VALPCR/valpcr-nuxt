@@ -202,7 +202,9 @@ export default {
   },
   fetch() {
     this.role = this.$auth.user.role;
-    this.columns[7].filterOptions.filterValue = `${this.$auth.user.first_name} ${this.$auth.user.last_name} (Responder)`;
+    if (this.role !== 'head') {
+      this.columns[7].filterOptions.filterValue = `${this.$auth.user.first_name} ${this.$auth.user.last_name} (Responder)`;
+    }
     this.$axios.get("pcr/list?category=completed").then((response) => {
       response.data.return.map((pcr) =>
         this.fetchedRows.push({
