@@ -61,7 +61,7 @@
                   aria-expanded="false"
                   aria-controls="flush-collapseOne"
                 >
-                  Dispatch Data
+                <font-awesome-icon v-if="checkIfDispatchNotEmpty()" class="mr-5 text-green-700" icon="fas fa-circle-check" /><font-awesome-icon v-else class="mr-5 text-gray-400" icon="fas fa-circle-check" /> Dispatch Data 
                   <span
                     class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white"
                   >
@@ -104,6 +104,7 @@
                             type="date"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                             id="date"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                           <label
                             for="date"
@@ -121,6 +122,7 @@
                             id="callSource"
                             aria-describedby="emailHelp124"
                             placeholder="Call Source"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                           <label
                             for="callSource"
@@ -141,6 +143,7 @@
                             id="incidentLocation"
                             aria-describedby="incidentLocation"
                             placeholder="Incident Location"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                           <label
                             for="incidentLocation"
@@ -160,6 +163,7 @@
                             class="bg-neutral-50"
                             id="ems_location_a"
                             required
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           >
                             <option value="tor">Type of Response</option>
                             <option value="ems">Emergency Medical Service</option>
@@ -189,6 +193,7 @@
                               ems_location_a === 'va' ||
                               ems_location_a === 'mt'
                             "
+                            
                           />
                           <label
                             for="emsLocationB"
@@ -456,6 +461,7 @@
                                 id="red"
                                 name="priorityRadio"
                                 value="red"
+                                :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                               />
                               <label
                                 class="inline-block pl-[0.15rem] hover:cursor-pointer"
@@ -473,6 +479,7 @@
                                 id="yellow"
                                 name="priorityRadio"
                                 value="yellow"
+                                :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                               />
                               <label
                                 class="inline-block pl-[0.15rem] hover:cursor-pointer"
@@ -490,6 +497,7 @@
                                 id="green"
                                 name="priorityRadio"
                                 value="green"
+                                :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                               />
                               <label
                                 class="inline-block pl-[0.15rem] hover:cursor-pointer"
@@ -507,6 +515,7 @@
                                 id="black"
                                 name="priorityRadio"
                                 value="black"
+                                :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                               />
                               <label
                                 class="inline-block pl-[0.15rem] hover:cursor-pointer"
@@ -536,6 +545,7 @@
                             id="callReceive"
                             aria-describedby="callReceive"
                             placeholder="Call Received"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                           <label
                             for="callReceive"
@@ -562,6 +572,7 @@
                             id="responded"
                             aria-describedby="responded"
                             placeholder="Responded"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                           <label
                             for="responded"
@@ -579,6 +590,7 @@
                             id="tO"
                             aria-describedby="tO"
                             placeholder="T/O"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                           <label
                             for="tO"
@@ -601,6 +613,7 @@
                             id="arriveAtScene"
                             aria-describedby="arriveAtScene"
                             placeholder="Arrived at scene"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                           <label
                             for="arriveAtScene"
@@ -618,6 +631,7 @@
                             id="tL"
                             aria-describedby="tL"
                             placeholder="T/L"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                           <label
                             for="tL"
@@ -640,6 +654,7 @@
                             id="enRouteTo"
                             aria-describedby="enRouteTo"
                             placeholder="En route to"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                           <label
                             for="enRouteTo"
@@ -657,6 +672,7 @@
                             id="tXO"
                             aria-describedby="tXO"
                             placeholder="TX/O"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                           <label
                             for="tXO"
@@ -679,6 +695,7 @@
                             id="arrivedAt"
                             aria-describedby="arrivedAt"
                             placeholder="Arrived at"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                           <label
                             for="arrivedAt"
@@ -696,6 +713,7 @@
                             id="lO"
                             aria-describedby="lO"
                             placeholder="L/O"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                           <label
                             for="lO"
@@ -718,6 +736,7 @@
                             id="departed"
                             aria-describedby="departed"
                             placeholder="Departed"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                           <label
                             for="departed"
@@ -735,6 +754,7 @@
                             id="station"
                             aria-describedby="station"
                             placeholder="Station"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                           <label
                             for="station"
@@ -750,6 +770,7 @@
                             class="bg-neutral-50"
                             v-model="ambulance"
                             id="ambulance"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           >
                             <option value="ambu">Ambulance</option>
                             <option value="EMS 01">EMS 01</option>
@@ -806,6 +827,7 @@
                             id="remarks"
                             rows="9"
                             aria-describedby="remarks"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                           <label
                             class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
@@ -823,6 +845,7 @@
                     class="inline-block ml-1 rounded bg-danger mb-7 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#dc4c64] transition duration-150 ease-in-out hover:bg-danger-600 hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:bg-danger-600 focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:outline-none focus:ring-0 active:bg-danger-700 active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(220,76,100,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)]"
                     data-te-ripple-init
                     data-te-ripple-color="light"
+                    :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                   >
                     CLEAR
                   </button>
@@ -843,7 +866,7 @@
                   aria-expanded="false"
                   aria-controls="flush-collapseTwo"
                 >
-                  Patient Information
+                <font-awesome-icon v-if="checkIfPatientNotEmpty()" class="mr-5 text-green-700" icon="fas fa-circle-check" /><font-awesome-icon v-else class="mr-5 text-gray-400" icon="fas fa-circle-check" /> Patient Information  
                   <span
                     class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white"
                   >
@@ -883,6 +906,7 @@
                           id="suffix"
                           aria-describedby="suffix"
                           placeholder="Suffix(e.g. Sr., Jr., III)"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         />
                         <label
                           for="suffix"
@@ -900,6 +924,7 @@
                           id="firstName"
                           aria-describedby="firstName"
                           placeholder="First Name"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         />
                         <label
                           for="firstName"
@@ -917,6 +942,7 @@
                           id="midName"
                           aria-describedby="midName"
                           placeholder="Middle Name"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         />
                         <label
                           for="midName"
@@ -934,6 +960,7 @@
                           id="lastName"
                           aria-describedby="lastName"
                           placeholder="Last Name"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         />
                         <label
                           for="lastName"
@@ -949,6 +976,7 @@
                         class="w-full bg-neutral-50"
                         v-model="gender"
                         id="gender"
+                        :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                       >
                         <option value="patientGender">Gender</option>
                         <option value="female">Female</option>
@@ -963,6 +991,7 @@
                           class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                           placeholder="Select a date"
                           @input="calculateAge"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         />
                         <label
                           class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
@@ -980,6 +1009,7 @@
                           id="age"
                           aria-describedby="age"
                           placeholder="Age"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           required
                         />
                         <label
@@ -996,6 +1026,7 @@
                           v-model="status"
                           id="status"
                           class="bg-neutral-50"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           <option selected value="stat">Status</option>
                           <option value="single">Single</option>
@@ -1014,6 +1045,7 @@
                           v-model="religion"
                           class="bg-neutral-50"
                           id="religion"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           <option selected value="3">Religion</option>
                           <option value="roman catholic">Roman Catholic</option>
@@ -1055,6 +1087,7 @@
                           id="pntCompanion"
                           aria-describedby="pntCompanion"
                           placeholder="Relative/Companion"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         />
                         <label
                           for="pntCompanion"
@@ -1081,6 +1114,7 @@
                           pattern="[0-9]*"
                           inputmode="numeric"
                           maxlength="10"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           required
                         />
                       </div>
@@ -1091,6 +1125,7 @@
                         class="bg-neutral-50"
                         v-model="pnt_city"
                         id="pnt_city"
+                        :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                       >
                         <option selected value="City">Select City</option>
                         <option value="Valenzuela">Valenzuela City</option>
@@ -1106,6 +1141,7 @@
                           class="bg-neutral-50"
                           v-model="pnt_brgy"
                           id="pnt_brgy"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           <option selected value="1">Barangay</option>
                           <option value="Arkong Bato">Arkong Bato</option>
@@ -1158,6 +1194,7 @@
                           id="streetAddress"
                           aria-describedby="streetAddress"
                           placeholder="Street Address"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         />
                         <label
                           for="streetAddress"
@@ -1181,6 +1218,7 @@
                             id="otherCity"
                             aria-describedby="otherCity"
                             placeholder="Street Address, Barangay, City"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                         <label
                           for="otherCity"
@@ -1199,6 +1237,7 @@
                             id="s/sx-chief complaint"
                             aria-describedby="s/sx-chief complaint"
                             placeholder="s/sx-chief complaint"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                           <label
                             for="s/sx-chief complaint"
@@ -1219,6 +1258,7 @@
                             id="onset"
                             aria-describedby="zis/sx-chief complaint"
                             placeholder="onset"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                           <label
                             for="onset"
@@ -1239,6 +1279,7 @@
                             id="allergies"
                             aria-describedby="allergies"
                             placeholder="allergies"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                           <label
                             for="allergies"
@@ -1259,6 +1300,7 @@
                             id="provocation"
                             aria-describedby="provocation"
                             placeholder="provocation"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                           <label
                             for="provocation"
@@ -1279,6 +1321,7 @@
                             id="medication"
                             aria-describedby="medication"
                             placeholder="medication"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                           <label
                             for="medication"
@@ -1299,6 +1342,7 @@
                             id="quality"
                             aria-describedby="quality"
                             placeholder="quality"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                           <label
                             for="quality"
@@ -1319,6 +1363,7 @@
                             id="pmh"
                             aria-describedby="pmh"
                             placeholder="pmh"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                           <label
                             for="pmh"
@@ -1339,6 +1384,7 @@
                             id="radiation"
                             aria-describedby="radiation"
                             placeholder="radiation"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                           <label
                             for="radiation"
@@ -1359,6 +1405,7 @@
                             id="loi"
                             aria-describedby="loi"
                             placeholder="loi"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                           <label
                             for="loi"
@@ -1376,6 +1423,7 @@
                           class="w-full bg-neutral-50 text-gray"
                           v-model="severity"
                           id="severity"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           <option value="severity">Severity</option>
                           <option value="mild">Mild (1)</option>
@@ -1395,6 +1443,7 @@
                             id="events"
                             aria-describedby="events"
                             placeholder="events"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                           <label
                             for="events"
@@ -1420,6 +1469,7 @@
                             id="time"
                             aria-describedby="time"
                             placeholder="time"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                           <label
                             for="time"
@@ -1429,7 +1479,6 @@
                           </label>
                         </div>
                       </div>
-                      <!-- EVENTS LEADING TO INJURY -->
                     </div>
                 </div>
                 <div class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md p-4 dark:border-opacity-50 min-[0px]:rounded-none">
@@ -1439,6 +1488,7 @@
                     class="inline-block ml-1 rounded bg-danger mb-7 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#dc4c64] transition duration-150 ease-in-out hover:bg-danger-600 hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:bg-danger-600 focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:outline-none focus:ring-0 active:bg-danger-700 active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(220,76,100,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)]"
                     data-te-ripple-init
                     data-te-ripple-color="light"
+                    :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                   >
                     CLEAR
                   </button>
@@ -1458,7 +1508,7 @@
                   aria-expanded="false"
                   aria-controls="flush-collapseThree"
                 >
-                  Vital Signs
+                <font-awesome-icon v-if="checkIfVitalsNotEmpty()" class="mr-5 text-green-700" icon="fas fa-circle-check" /><font-awesome-icon v-else class="mr-5 text-gray-400" icon="fas fa-circle-check" /> Vital Signs   
                   <span
                     class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white"
                   >
@@ -1507,6 +1557,7 @@
                             type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                             aria-describedby="vTime"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                         </div>
                         <div
@@ -1520,6 +1571,7 @@
                             type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                             aria-describedby="vTime"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                         </div>
                         <div
@@ -1533,6 +1585,7 @@
                             type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                             aria-describedby="vTime"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                         </div>
                         <div
@@ -1546,6 +1599,7 @@
                             type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                             aria-describedby="vTime"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                         </div>
                         <div
@@ -1559,6 +1613,7 @@
                             type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                             aria-describedby="vTime"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                         </div>
                       </div>
@@ -1569,6 +1624,7 @@
                             v-model="bp_a"
                             type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                         </div>
                         <div class="relative mb-2" data-te-input-wrapper-init>
@@ -1576,6 +1632,7 @@
                             v-model="bp_b"
                             type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                         </div>
                         <div class="relative mb-2" data-te-input-wrapper-init>
@@ -1583,6 +1640,7 @@
                             v-model="bp_c"
                             type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                         </div>
                         <div class="relative mb-2" data-te-input-wrapper-init>
@@ -1590,6 +1648,7 @@
                             v-model="bp_d"
                             type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                         </div>
                         <div class="relative mb-2" data-te-input-wrapper-init>
@@ -1597,6 +1656,7 @@
                             v-model="bp_e"
                             type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                         </div>
                       </div>
@@ -1610,6 +1670,7 @@
                             v-model="pr_a"
                             type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                         </div>
                         <div class="relative mb-2" data-te-input-wrapper-init>
@@ -1617,6 +1678,7 @@
                             v-model="pr_b"
                             type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                         </div>
                         <div class="relative mb-2" data-te-input-wrapper-init>
@@ -1624,6 +1686,7 @@
                             v-model="pr_c"
                             type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                         </div>
                         <div class="relative mb-2" data-te-input-wrapper-init>
@@ -1631,6 +1694,7 @@
                             v-model="pr_d"
                             type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                         </div>
                         <div class="relative mb-2" data-te-input-wrapper-init>
@@ -1638,6 +1702,7 @@
                             v-model="pr_e"
                             type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                         </div>
                       </div>
@@ -1648,6 +1713,7 @@
                             v-model="rr_a"
                             type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                         </div>
                         <div class="relative mb-2" data-te-input-wrapper-init>
@@ -1655,6 +1721,7 @@
                             v-model="rr_b"
                             type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                         </div>
                         <div class="relative mb-2" data-te-input-wrapper-init>
@@ -1662,6 +1729,7 @@
                             v-model="rr_c"
                             type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                         </div>
                         <div class="relative mb-2" data-te-input-wrapper-init>
@@ -1669,6 +1737,7 @@
                             v-model="rr_d"
                             type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                         </div>
                         <div class="relative mb-2" data-te-input-wrapper-init>
@@ -1676,6 +1745,7 @@
                             v-model="rr_e"
                             type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                         </div>
                       </div>
@@ -1689,6 +1759,7 @@
                             v-model="tempt_a"
                             type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                         </div>
                         <div class="relative mb-2" data-te-input-wrapper-init>
@@ -1696,6 +1767,7 @@
                             v-model="tempt_b"
                             type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                         </div>
                         <div class="relative mb-2" data-te-input-wrapper-init>
@@ -1703,6 +1775,7 @@
                             v-model="tempt_c"
                             type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                         </div>
                         <div class="relative mb-2" data-te-input-wrapper-init>
@@ -1710,6 +1783,7 @@
                             v-model="tempt_d"
                             type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                         </div>
                         <div class="relative mb-2" data-te-input-wrapper-init>
@@ -1717,6 +1791,7 @@
                             v-model="tempt_e"
                             type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                         </div>
                       </div>
@@ -1727,6 +1802,7 @@
                             v-model="spo2_a"
                             type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                         </div>
                         <div class="relative mb-2" data-te-input-wrapper-init>
@@ -1734,6 +1810,7 @@
                             v-model="spo2_b"
                             type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                         </div>
                         <div class="relative mb-2" data-te-input-wrapper-init>
@@ -1741,6 +1818,7 @@
                             v-model="spo2_c"
                             type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                         </div>
                         <div class="relative mb-2" data-te-input-wrapper-init>
@@ -1748,6 +1826,7 @@
                             v-model="spo2_d"
                             type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                         </div>
                         <div class="relative mb-2" data-te-input-wrapper-init>
@@ -1755,6 +1834,7 @@
                             v-model="spo2_e"
                             type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                         </div>
                       </div>
@@ -1795,6 +1875,7 @@
                             v-model="left_pearl"
                             type="checkbox"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-100"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                         </div>
                         <div class="relative mb-3 col-span-1">
@@ -1802,6 +1883,7 @@
                             v-model="left_dilated"
                             type="checkbox"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-100"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                         </div>
                         <div class="relative mb-3 col-span-1">
@@ -1809,6 +1891,7 @@
                             v-model="left_constrict"
                             type="checkbox"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-100"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                         </div>
                         <div class="relative mb-3 col-span-1">
@@ -1816,6 +1899,7 @@
                             v-model="left_non_reactive"
                             type="checkbox"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-100"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                         </div>
                         <div class="relative mb-3 col-span-1">
@@ -1823,6 +1907,7 @@
                             v-model="left_cataract"
                             type="checkbox"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-100"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                         </div>
                       </div>
@@ -1833,6 +1918,7 @@
                             v-model="right_pearl"
                             type="checkbox"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-100"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                         </div>
                         <div class="relative mb-3 col-span-1">
@@ -1840,6 +1926,7 @@
                             v-model="right_dilated"
                             type="checkbox"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-100"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                         </div>
                         <div class="relative mb-3 col-span-1">
@@ -1847,6 +1934,7 @@
                             v-model="right_constrict"
                             type="checkbox"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-100"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                         </div>
                         <div class="relative mb-3 col-span-1">
@@ -1854,6 +1942,7 @@
                             v-model="right_non_reactive"
                             type="checkbox"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-100"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                         </div>
                         <div class="relative mb-3 col-span-1">
@@ -1861,6 +1950,7 @@
                             v-model="right_cataract"
                             type="checkbox"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 transform scale-100"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                         </div>
                       </div>
@@ -1871,6 +1961,7 @@
                           v-model="skin_color"
                           id="skin_color"
                           class="bg-neutral-50"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           <option selected value="default">Skin Color</option>
                           <option value="normal">Normal</option>
@@ -1905,6 +1996,7 @@
                             type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                             aria-describedby="vTime"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                         </div>
                       </div>
@@ -1917,6 +2009,7 @@
                             v-model="score"
                             type="text"
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.33rem] text-xs leading-[1.5] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                             readonly
                           />
                         </div>
@@ -1932,6 +2025,7 @@
                           id="eyes"
                           class="bg-neutral-50"
                           @change="updateScore()"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           <option selected value="0">Eyes</option>
                           <option value="4">4 - Spontaneous</option>
@@ -1949,6 +2043,7 @@
                           id="verbal"
                           class="bg-neutral-50"
                           @change="updateScore()"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           <option selected value="0">Verbal</option>
                           <option value="5">5 - Oriented</option>
@@ -1967,6 +2062,7 @@
                           id="motor"
                           class="bg-neutral-50"
                           @change="updateScore()"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           <option selected value="0">Motor</option>
                           <option value="6">6 - Obeys Command</option>
@@ -1989,6 +2085,7 @@
                     class="inline-block ml-1 rounded bg-danger mb-7 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#dc4c64] transition duration-150 ease-in-out hover:bg-danger-600 hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:bg-danger-600 focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:outline-none focus:ring-0 active:bg-danger-700 active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(220,76,100,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)]"
                     data-te-ripple-init
                     data-te-ripple-color="light"
+                    :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                   >
                     CLEAR
                   </button>
@@ -2008,7 +2105,7 @@
                   aria-expanded="false"
                   aria-controls="flush-collapseFour"
                 >
-                  Body Injuries
+                <font-awesome-icon v-if="checkIfInjuriesNotEmpty()" class="mr-5 text-green-700" icon="fas fa-circle-check" /><font-awesome-icon v-else class="mr-5 text-gray-400" icon="fas fa-circle-check" />Body Injuries   
                   <span
                     class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white"
                   >
@@ -2048,6 +2145,7 @@
                           data-te-select-init
                           multiple
                           class="w-full"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           <option value="Deformity">Deformity</option>
                           <option value="Contusion">Contusion</option>
@@ -2081,6 +2179,7 @@
                           data-te-select-init
                           multiple
                           class="w-full"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           <option value="Deformity">Deformity</option>
                           <option value="Contusion">Contusion</option>
@@ -2114,6 +2213,7 @@
                           data-te-select-init
                           multiple
                           class="w-full"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           <option value="Deformity">Deformity</option>
                           <option value="Contusion">Contusion</option>
@@ -2147,6 +2247,7 @@
                           data-te-select-init
                           multiple
                           class="w-full"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           <option value="Deformity">Deformity</option>
                           <option value="Contusion">Contusion</option>
@@ -2180,6 +2281,7 @@
                           data-te-select-init
                           multiple
                           class="w-full"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           <option value="Deformity">Deformity</option>
                           <option value="Contusion">Contusion</option>
@@ -2213,6 +2315,7 @@
                           data-te-select-init
                           multiple
                           class="w-full"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           <option value="Deformity">Deformity</option>
                           <option value="Contusion">Contusion</option>
@@ -2246,6 +2349,7 @@
                           data-te-select-init
                           multiple
                           class="w-full"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           <option value="Deformity">Deformity</option>
                           <option value="Contusion">Contusion</option>
@@ -2279,6 +2383,7 @@
                           data-te-select-init
                           multiple
                           class="w-full"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           <option value="Deformity">Deformity</option>
                           <option value="Contusion">Contusion</option>
@@ -2312,6 +2417,7 @@
                         id="anterior_injury_remarks"
                         aria-describedby="anterior_injury_remarks"
                         rows="7"
+                        :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                       />
                       <label
                         class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
@@ -2331,6 +2437,7 @@
                           data-te-select-init
                           multiple
                           class="w-full"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           <option value="Deformity">Deformity</option>
                           <option value="Contusion">Contusion</option>
@@ -2364,6 +2471,7 @@
                           data-te-select-init
                           multiple
                           class="w-full"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           <option value="Deformity">Deformity</option>
                           <option value="Contusion">Contusion</option>
@@ -2397,6 +2505,7 @@
                           data-te-select-init
                           multiple
                           class="w-full"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           <option value="Deformity">Deformity</option>
                           <option value="Contusion">Contusion</option>
@@ -2430,6 +2539,7 @@
                           data-te-select-init
                           multiple
                           class="w-full"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           <option value="Deformity">Deformity</option>
                           <option value="Contusion">Contusion</option>
@@ -2463,6 +2573,7 @@
                           data-te-select-init
                           multiple
                           class="w-full"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           <option value="Deformity">Deformity</option>
                           <option value="Contusion">Contusion</option>
@@ -2496,6 +2607,7 @@
                           data-te-select-init
                           multiple
                           class="w-full"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           <option value="Deformity">Deformity</option>
                           <option value="Contusion">Contusion</option>
@@ -2529,6 +2641,7 @@
                           data-te-select-init
                           multiple
                           class="w-full"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           <option value="Deformity">Deformity</option>
                           <option value="Contusion">Contusion</option>
@@ -2562,6 +2675,7 @@
                           id="posterior_injury_remarks"
                           aria-describedby="posterior_injury_remarks"
                           rows="7"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         />
                       <label
                         class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
@@ -2576,6 +2690,7 @@
                     class="inline-block ml-1 rounded bg-danger mb-7 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#dc4c64] transition duration-150 ease-in-out hover:bg-danger-600 hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:bg-danger-600 focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:outline-none focus:ring-0 active:bg-danger-700 active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(220,76,100,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)]"
                     data-te-ripple-init
                     data-te-ripple-color="light"
+                    :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                   >
                     CLEAR
                   </button>
@@ -2596,7 +2711,7 @@
                   aria-expanded="false"
                   aria-controls="flush-collapseFive"
                 >
-                  Burn Percentage
+                <font-awesome-icon v-if="checkIfBurnNotEmpty()" class="mr-5 text-green-700" icon="fas fa-circle-check" /><font-awesome-icon v-else class="mr-5 text-gray-400" icon="fas fa-circle-check" />Burn Percentage
                   <span
                     class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white"
                   >
@@ -2646,6 +2761,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           1st Degree
                         </button>
@@ -2663,6 +2779,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           2nd Degree
                         </button>
@@ -2680,6 +2797,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           3rd Degree
                         </button>
@@ -2711,6 +2829,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           1st Degree
                         </button>
@@ -2728,6 +2847,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           2nd Degree
                         </button>
@@ -2745,6 +2865,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           3rd Degree
                         </button>
@@ -2776,6 +2897,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           1st Degree
                         </button>
@@ -2793,6 +2915,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           2nd Degree
                         </button>
@@ -2810,6 +2933,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           3rd Degree
                         </button>
@@ -2841,6 +2965,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           1st Degree
                         </button>
@@ -2858,6 +2983,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           2nd Degree
                         </button>
@@ -2875,6 +3001,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           3rd Degree
                         </button>
@@ -2906,6 +3033,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           1st Degree
                         </button>
@@ -2923,6 +3051,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           2nd Degree
                         </button>
@@ -2940,6 +3069,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           3rd Degree
                         </button>
@@ -2971,6 +3101,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           1st Degree
                         </button>
@@ -2988,6 +3119,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           2nd Degree
                         </button>
@@ -3005,6 +3137,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           3rd Degree
                         </button>
@@ -3036,6 +3169,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           1st Degree
                         </button>
@@ -3053,6 +3187,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           2nd Degree
                         </button>
@@ -3070,6 +3205,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           3rd Degree
                         </button>
@@ -3101,6 +3237,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           1st Degree
                         </button>
@@ -3118,6 +3255,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           2nd Degree
                         </button>
@@ -3135,6 +3273,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           3rd Degree
                         </button>
@@ -3156,6 +3295,7 @@
                           id="anterior_burn_remarks"
                           aria-describedby="anterior_burn_remarks"
                           rows="7"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         />
                       <label
                         class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
@@ -3185,6 +3325,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           1st Degree
                         </button>
@@ -3202,6 +3343,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           2nd Degree
                         </button>
@@ -3219,6 +3361,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           3rd Degree
                         </button>
@@ -3250,6 +3393,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           1st Degree
                         </button>
@@ -3267,6 +3411,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           2nd Degree
                         </button>
@@ -3284,6 +3429,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           3rd Degree
                         </button>
@@ -3315,6 +3461,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           1st Degree
                         </button>
@@ -3332,6 +3479,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           2nd Degree
                         </button>
@@ -3349,6 +3497,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           3rd Degree
                         </button>
@@ -3380,6 +3529,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           1st Degree
                         </button>
@@ -3397,6 +3547,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           2nd Degree
                         </button>
@@ -3414,6 +3565,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           3rd Degree
                         </button>
@@ -3445,6 +3597,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           1st Degree
                         </button>
@@ -3462,6 +3615,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           2nd Degree
                         </button>
@@ -3479,6 +3633,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           3rd Degree
                         </button>
@@ -3510,6 +3665,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           1st Degree
                         </button>
@@ -3527,6 +3683,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           2nd Degree
                         </button>
@@ -3544,6 +3701,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           3rd Degree
                         </button>
@@ -3575,6 +3733,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           1st Degree
                         </button>
@@ -3592,6 +3751,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           2nd Degree
                         </button>
@@ -3609,6 +3769,7 @@
                               ? 'text-white bg-blue-800 border border-blue-800 hover:bg-blue-700 hover:text-white'
                               : 'text-blue-700 bg-white border border-blue-700 hover:bg-blue-800 hover:text-white',
                           ]"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                           3rd Degree
                         </button>
@@ -3630,6 +3791,7 @@
                             id="posterior_burn_remarks"
                             aria-describedby="posterior_burn_remarks"
                             rows="7"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                       <label
                         class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
@@ -3644,6 +3806,7 @@
                     class="inline-block ml-1 rounded bg-danger mb-7 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#dc4c64] transition duration-150 ease-in-out hover:bg-danger-600 hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:bg-danger-600 focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:outline-none focus:ring-0 active:bg-danger-700 active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(220,76,100,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)]"
                     data-te-ripple-init
                     data-te-ripple-color="light"
+                    :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                   >
                     CLEAR
                   </button>
@@ -3664,7 +3827,7 @@
                   aria-expanded="false"
                   aria-controls="flush-collapseSix"
                 >
-                  Obstetric History
+                <font-awesome-icon v-if="checkIfObstetricsNotEmpty()" class="mr-5 text-green-700" icon="fas fa-circle-check" /><font-awesome-icon v-else class="mr-5 text-gray-400" icon="fas fa-circle-check" />Obstetric History
                   <span
                     class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white"
                   >
@@ -3705,6 +3868,7 @@
                           id="prenCheckup"
                           aria-describedby="prenCheckup"
                           placeholder="Prenatal Check-up"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         />
                         <label
                           for="prenCheckup"
@@ -3722,6 +3886,7 @@
                           id="lastMens"
                           aria-describedby="lastMens"
                           placeholder="Last Menstrual Period"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         />
                         <label
                           for="lastMens"
@@ -3739,6 +3904,7 @@
                           id="labPains"
                           aria-describedby="labPains"
                           placeholder="Labor Pains"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         />
                         <label
                           for="labPains"
@@ -3756,6 +3922,7 @@
                           id="estDateDelivery"
                           aria-describedby="estDateDelivery"
                           placeholder="Estimated Date of Delivery"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         />
                         <label
                           for="estDateDelivery"
@@ -3774,6 +3941,7 @@
                             id="gestationAge"
                             aria-describedby="gestationAge"
                             placeholder="Age of Gestation"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                           <label
                             for="gestationAge"
@@ -3793,6 +3961,7 @@
                             id="gravidity"
                             aria-describedby="gravidity"
                             placeholder="Gravidity"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                           <label
                             for="gravidity"
@@ -3812,6 +3981,7 @@
                             id="parity"
                             aria-describedby="parity"
                             placeholder="Parity"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                           <label
                             for="Parity"
@@ -3831,6 +4001,7 @@
                           class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                           id="termBirth"
                           placeholder="term birth"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         />
                         <label
                           for="termBirth"
@@ -3850,6 +4021,7 @@
                           class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                           id="preTerm"
                           placeholder="pre term"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         />
                         <label
                           for="preTerm"
@@ -3869,6 +4041,7 @@
                           class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                           id="abortion"
                           placeholder="abortion"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         />
                         <label
                           for="abortion"
@@ -3888,6 +4061,7 @@
                           class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                           id="living"
                           placeholder="living"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         />
                         <label
                           for="living"
@@ -3904,6 +4078,7 @@
                     class="inline-block ml-1 rounded bg-danger mb-7 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#dc4c64] transition duration-150 ease-in-out hover:bg-danger-600 hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:bg-danger-600 focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:outline-none focus:ring-0 active:bg-danger-700 active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(220,76,100,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)]"
                     data-te-ripple-init
                     data-te-ripple-color="light"
+                    :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                   >
                     CLEAR
                     </button>
@@ -3924,7 +4099,7 @@
                   aria-expanded="false"
                   aria-controls="flush-collapseSeven"
                 >
-                  Treatment / Intervention
+                <font-awesome-icon v-if="checkIfTreatmentNotEmpty()" class="mr-5 text-green-700" icon="fas fa-circle-check" /><font-awesome-icon v-else class="mr-5 text-gray-400" icon="fas fa-circle-check" />Treatment / Intervention
                   <span
                     class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white"
                   >
@@ -3962,6 +4137,7 @@
                           type="checkbox"
                           value=""
                           id="nasal"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         />
                         <label
                           class="inline-block pl-[0.15rem] hover:cursor-pointer"
@@ -3978,6 +4154,7 @@
                           type="checkbox"
                           value="o2_mask"
                           id="o2mask"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         />
                         <label
                           class="inline-block pl-[0.15rem] hover:cursor-pointer"
@@ -3994,6 +4171,7 @@
                           type="checkbox"
                           value="bvm"
                           id="bvm"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         />
                         <label
                           class="inline-block pl-[0.15rem] hover:cursor-pointer"
@@ -4011,6 +4189,7 @@
                           id="lpm"
                           aria-describedby="lpm"
                           placeholder="LPM"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         />
                         <label
                           for="lpm"
@@ -4031,6 +4210,7 @@
                           type="checkbox"
                           value="wound_care"
                           id="woundCare"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         />
                         <label
                           class="inline-block pl-[0.15rem] hover:cursor-pointer"
@@ -4049,6 +4229,7 @@
                           type="checkbox"
                           value="splinting_applied"
                           id="splintingApplied"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         />
                         <label
                           class="inline-block pl-[0.15rem] hover:cursor-pointer"
@@ -4067,6 +4248,7 @@
                           type="checkbox"
                           value="control_bleeding"
                           id="contBleeding"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         />
                         <label
                           class="inline-block pl-[0.15rem] hover:cursor-pointer"
@@ -4085,6 +4267,7 @@
                           type="checkbox"
                           value="vital_sign_taken"
                           id="vitRecorded"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         />
                         <label
                           class="inline-block pl-[0.15rem] hover:cursor-pointer"
@@ -4103,6 +4286,7 @@
                           type="checkbox"
                           value="applied_cpr"
                           id="appCpr"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         />
                         <label
                           class="inline-block pl-[0.15rem] hover:cursor-pointer"
@@ -4121,6 +4305,7 @@
                           type="checkbox"
                           value="applied_aed"
                           id="appAed"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         />
                         <label
                           class="inline-block pl-[0.15rem] hover:cursor-pointer"
@@ -4142,6 +4327,7 @@
                           id="remarks"
                           aria-describedby="remarks"
                           rows="7"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                         </textarea>
                         <label
@@ -4161,6 +4347,7 @@
                           id="problems"
                           aria-describedby="problems"
                           rows="7"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                         </textarea>
                         <label
@@ -4177,6 +4364,7 @@
                       class="inline-block ml-1 rounded bg-danger mb-7 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#dc4c64] transition duration-150 ease-in-out hover:bg-danger-600 hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:bg-danger-600 focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:outline-none focus:ring-0 active:bg-danger-700 active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(220,76,100,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)]"
                       data-te-ripple-init
                       data-te-ripple-color="light"
+                      
                     >
                       CLEAR
                     </button>
@@ -4197,7 +4385,7 @@
                   aria-expanded="false"
                   aria-controls="flush-collapseEight"
                 >
-                  Signature
+                <font-awesome-icon v-if="checkIfSignatureNotEmpty()" class="mr-5 text-green-700" icon="fas fa-circle-check" /><font-awesome-icon v-else class="mr-5 text-gray-400" icon="fas fa-circle-check" />Signature 
                   <span
                     class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white"
                   >
@@ -4236,6 +4424,7 @@
                             id="receivedBy"
                             aria-describedby="receivedBy"
                             placeholder="Received By"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                           <label
                             for="receivedBy"
@@ -4263,6 +4452,7 @@
                             v-if="received_by_signature !== ''"
                             class="ml-1 inline-block rounded border border-slate-400 bg-slate-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out hover:bg-slate-300 hover:border-slate-400 hover:bg-slate-300 focus:bg-slate-300 focus:shadow-[0_4px_9px_-4px_#3b71ca] focus:ring-0 active:bg-slate-300"
                             @click="received_by_signature = ''"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           >
                             Clear
                           </button>
@@ -4294,6 +4484,7 @@
                             id="teamLead"
                             aria-describedby="teamLead"
                             placeholder="Team Leader"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                           <label
                             for="teamLead"
@@ -4322,6 +4513,7 @@
                             v-if="team_leader_signature !== ''"
                             class="ml-1 inline-block rounded border border-slate-400 bg-slate-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out hover:bg-slate-300 hover:border-slate-400 hover:bg-slate-300 focus:bg-slate-300 focus:shadow-[0_4px_9px_-4px_#3b71ca] focus:ring-0 active:bg-slate-300"
                             @click="team_leader_signature = ''"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           >
                             Clear
                           </button>
@@ -4359,6 +4551,7 @@
                             id="medFac"
                             aria-describedby="receivedBy"
                             placeholder="Medical Facility"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                           <label
                             for="medFac"
@@ -4387,6 +4580,7 @@
                             v-if="medical_facility_signature !== ''"
                             class="ml-1 inline-block rounded border border-slate-400 bg-slate-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out hover:bg-slate-300 hover:border-slate-400 hover:bg-slate-300 focus:bg-slate-300 focus:shadow-[0_4px_9px_-4px_#3b71ca] focus:ring-0 active:bg-slate-300"
                             @click="medical_facility_signature = ''"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           >
                             Clear
                           </button>
@@ -4423,6 +4617,7 @@
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                             id="gloves"
                             placeholder="Gloves"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                           <label
                             for="gloves"
@@ -4441,6 +4636,7 @@
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                             id="gauze"
                             placeholder="gauze"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                           <label
                             for="gauze"
@@ -4459,6 +4655,7 @@
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                             id="mask"
                             placeholder="mask"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                           <label
                             for="mask"
@@ -4478,6 +4675,7 @@
                             id="others"
                             aria-describedby="others"
                             placeholder="others"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                           <label
                             for="others"
@@ -4495,6 +4693,7 @@
                     class="inline-block ml-1 rounded bg-danger mb-7 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#dc4c64] transition duration-150 ease-in-out hover:bg-danger-600 hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:bg-danger-600 focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:outline-none focus:ring-0 active:bg-danger-700 active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(220,76,100,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)]"
                     data-te-ripple-init
                     data-te-ripple-color="light"
+                    :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                   >
                     CLEAR
                   </button>
@@ -4515,7 +4714,7 @@
                   aria-expanded="false"
                   aria-controls="flush-collapseNine"
                 >
-                  Waiver
+                <font-awesome-icon v-if="checkIfWaiverNotEmpty()" class="mr-5 text-green-700" icon="fas fa-circle-check" /><font-awesome-icon v-else class="mr-5 text-gray-400" icon="fas fa-circle-check" /> Waiver
                   <span
                     class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white"
                   >
@@ -4557,6 +4756,7 @@
                         type="checkbox"
                         value=""
                         id="statementOne"
+                        :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                       />
                       <label
                         class="inline-block pl-[0.15rem] hover:cursor-pointer"
@@ -4587,6 +4787,7 @@
                         type="checkbox"
                         value=""
                         id="statementTwo"
+                        :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                       />
                       <label
                         class="inline-block pl-[0.15rem] hover:cursor-pointer"
@@ -4612,6 +4813,7 @@
                         type="checkbox"
                         value=""
                         id="statementThree"
+                        :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                       />
                       <label
                         class="inline-block pl-[0.15rem] hover:cursor-pointer"
@@ -4626,6 +4828,7 @@
                           v-model="hospital_name"
                           class="ml-2 p-1 border border-gray-300 rounded-md"
                           placeholder="Name of Hospital"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         />
                         <strong
                           >) inspite the advice or warning of VCDRRMO that it is
@@ -4650,6 +4853,7 @@
                         type="checkbox"
                         value=""
                         id="statementFour"
+                        :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                       />
                       <label
                         class="inline-block pl-[0.15rem] hover:cursor-pointer"
@@ -4664,6 +4868,7 @@
                           v-model="from_hospital"
                           class="ml-2 p-1 border border-gray-300 rounded-md"
                           placeholder="From"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         />
                         <strong> to </strong>
                         <input
@@ -4671,6 +4876,7 @@
                           v-model="to_hospital"
                           class="ml-2 p-1 border border-gray-300 rounded-md"
                           placeholder="To"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         />
                         <strong
                           >inspite the patient's known serious/risky medical
@@ -4696,6 +4902,7 @@
                           class="mt-2 p-1 border border-gray-300 rounded-md w-full"
                           placeholder="Enter other statement here"
                           rows="6"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         >
                         </textarea>
                       </label>
@@ -4714,6 +4921,7 @@
                           id="responderFullName"
                           aria-describedby="responderSign"
                           placeholder="Responder"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         />
                         <label
                           for="responderFullName"
@@ -4747,6 +4955,7 @@
                           v-model="responder_waiver_date"
                           type="date"
                           class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         />
                         <label
                           class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
@@ -4789,6 +4998,7 @@
                           id="patientOrRelativeName"
                           aria-describedby="patientOrRelativeName"
                           placeholder="Patient/Relative's Name"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                         />
                         <label
                           for="patientOrRelativeName"
@@ -4822,6 +5032,8 @@
                           v-model="patient_relative_waiver_date"
                           type="date"
                           class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                          :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
+
                         />
                         <label
                           class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
@@ -4846,6 +5058,7 @@
                             id="witnessOne"
                             aria-describedby="witnessOne"
                             placeholder="1.   Witness Name"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                           <label
                             for="witnessOne"
@@ -4884,6 +5097,7 @@
                             id="witnessTwo"
                             aria-describedby="witnessTwo"
                             placeholder="2.   Witness Name"
+                            :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                           />
                           <label
                             for="witnessTwo"
@@ -4921,6 +5135,7 @@
                     class="inline-block ml-1 rounded bg-danger mb-7 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#dc4c64] transition duration-150 ease-in-out hover:bg-danger-600 hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:bg-danger-600 focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:outline-none focus:ring-0 active:bg-danger-700 active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(220,76,100,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)]"
                     data-te-ripple-init
                     data-te-ripple-color="light"
+                    :disabled="$auth.user.id !== user_id || editable == false && $auth.user.id === user_id"
                   >
                     CLEAR
                   </button>
@@ -5028,7 +5243,7 @@
         first_name: "",
         middle_name: "",
         surname: "",
-        gender: "",
+        gender: "patientGender",
         birthdate: "",
         age: "",
         status: "stat",
@@ -5104,16 +5319,16 @@
         abortion: "",
         living: "",
         obs_remarks: "",
-        nasal: "",
-        o2_mask: "",
-        bvm: "",
+        nasal: false,
+        o2_mask: false,
+        bvm: false,
         lpm: "",
-        wound_care: "",
-        splinting_applied: "",
-        control_bleeding: "",
-        vital_sign_taken: "",
-        applied_cpr: "",
-        applied_aed: "",
+        wound_care: false,
+        splinting_applied: false,
+        control_bleeding: false,
+        vital_sign_taken: false,
+        applied_cpr: false,
+        applied_aed: false,
         problems: "",
         skin_color: "default",
         eyes: 0,
@@ -5184,6 +5399,9 @@
         witness_two_signature: "",
       };
     },
+    
+
+
     fetch() {
       this.role = this.$auth.user.role;
       this.$axios.get("team/list").then((response) => {
@@ -5707,6 +5925,226 @@
       capitalize(word) {
         return word.replace(/^\w/, (c) => c.toUpperCase());
       },
+      checkIfDispatchNotEmpty() {
+        return !!(
+          this.call_source !== '' ||
+          this.call_source !== '' ||
+          this.call_receive !== '' ||
+          this.incident_location !== '' ||
+          this.responded !== '' ||
+          this.t_o !== '' ||
+          this.va_location !== '' ||
+          this.va_location_barangay !== '' ||
+          this.arrive_at_scene !== '' ||
+          this.t_l !== '' ||
+          this.involved_vehicles_a !== '' ||
+          this.involved_vehicles_b !== '' ||
+          this.en_route_to !== '' ||
+          this.tx_o !== '' ||
+          this.plate_number !== '' ||
+          this.arrived_at !== '' ||
+          this.l_o !== '' ||
+          this.driver !== '' ||
+          this.pedestrian !== '' ||
+          this.passenger !== '' ||
+          this.departed !== '' ||
+          this.station !== '' ||
+          this.ems_location_a !== 'tor' ||
+          this.ambulance !== 'ambu' ||
+          this.mt_from !== '' ||
+          this.mt_barangay !== '' ||
+          this.ems_location_b !== '' ||
+          this.barangay_b !== '' ||
+          this.priority !== '' ||
+          this.remarks !== ''
+        );
+      },
+      checkIfPatientNotEmpty() {
+        return !!(
+          this.call_source !== '' ||
+          this.suffix !== '' ||
+          this.first_name !== '' ||
+          this.middle_name !== '' ||
+          this.surname !== '' ||
+          this.gender !== 'patientGender' ||
+          this.birthdate !== '' ||
+          this.age !== '' ||
+          this.status !== 'stat' ||
+          this.religion !== 'relig' ||
+          this.companion !== '' ||
+          this.phone !== '' ||
+          this.pnt_city !== 'City' ||
+          this.pnt_brgy !== 'bgy' ||
+          this.pnt_st !== '' ||
+          this.pnt_other_city !== '' ||
+          this.complaint !== '' ||
+          this.onset !== '' ||
+          this.allergies !== '' ||
+          this.provocation !== '' ||
+          this.medication !== '' ||
+          this.quality !== '' ||
+          this.medical_history !== '' ||
+          this.radiation !== '' ||
+          this.last_oral_intake !== '' ||
+          this.event_leading_to_injury !== '' ||
+          this.severity !== 'severity' ||
+          this.time_taken !== ''
+        );
+      },
+      checkIfVitalsNotEmpty() {
+        return !!(
+          this.time_a  !== '' ||
+          this.time_b  !== '' ||
+          this.time_c  !== '' ||
+          this.time_d  !== '' ||
+          this.time_e  !== '' ||
+          this.time_f  !== '' ||
+          this.bp_a  !== '' ||
+          this.bp_b  !== '' ||
+          this.bp_c  !== '' ||
+          this.bp_d  !== '' ||
+          this.bp_e  !== '' ||
+          this.pr_a  !== '' ||
+          this.pr_b  !== '' ||
+          this.pr_c  !== '' ||
+          this.pr_d  !== '' ||
+          this.pr_e  !== '' ||
+          this.rr_a  !== '' ||
+          this.rr_b  !== '' ||
+          this.rr_c  !== '' ||
+          this.rr_d  !== '' ||
+          this.rr_e  !== '' ||
+          this.tempt_a  !== '' ||
+          this.tempt_b  !== '' ||
+          this.tempt_c  !== '' ||
+          this.tempt_d  !== '' ||
+          this.tempt_e  !== '' ||
+          this.spo2_a  !== '' ||
+          this.spo2_b  !== '' ||
+          this.spo2_c  !== '' ||
+          this.spo2_d  !== '' ||
+          this.spo2_e  !== '' ||
+          this.left_pearl  !== '' ||
+          this.left_dilated  !== '' ||
+          this.left_constrict  !== '' ||
+          this.left_non_reactive  !== '' ||
+          this.left_cataract  !== '' ||
+          this.right_pearl  !== '' ||
+          this.right_dilated  !== '' ||
+          this.right_constrict  !== '' ||
+          this.right_non_reactive  !== '' ||
+          this.right_cataract  !== '' ||
+          this.skin_color !== 'default'
+          // did not include eyes, motor, verbal, and score fields
+        );
+      },
+      checkIfInjuriesNotEmpty() {
+        return !!(
+          this.anterior_injury_remarks !== '' ||
+          this.anterior_head_injury.length > 0 ||
+          this.anterior_chest_injury.length > 0 ||
+          this.anterior_pelvis_injury.length > 0 ||
+          this.anterior_left_arm_injury.length > 0 ||
+          this.anterior_right_arm_injury.length > 0 ||
+          this.anterior_left_leg_injury.length > 0 ||
+          this.anterior_right_leg_injury.length > 0 ||
+          this.anterior_genitalia_injury.length > 0 ||
+          this.posterior_injury_remarks !== '' ||
+          this.posterior_head_injury.length > 0 ||
+          this.posterior_chest_injury.length > 0 ||
+          this.posterior_pelvis_injury.length > 0 ||
+          this.posterior_left_arm_injury.length > 0 ||
+          this.posterior_right_arm_injury.length > 0 ||
+          this.posterior_left_leg_injury.length > 0 ||
+          this.posterior_right_leg_injury.length > 0
+        );
+      },
+      checkIfBurnNotEmpty() {
+        return !!(
+          this.anterior_burn_remarks !== '' ||
+          this.anterior_head_degree !== '' ||
+          this.anterior_chest_degree !== '' ||
+          this.anterior_pelvis_degree !== '' ||
+          this.anterior_left_arm_degree !== '' ||
+          this.anterior_right_arm_degree !== '' ||
+          this.anterior_left_leg_degree !== '' ||
+          this.anterior_right_leg_degree !== '' ||
+          this.anterior_genitalia_degree !== '' ||
+          this.posterior_burn_remarks !== '' ||
+          this.posterior_head_degree !== '' ||
+          this.posterior_chest_degree !== '' ||
+          this.posterior_pelvis_degree !== '' ||
+          this.posterior_left_arm_degree !== '' ||
+          this.posterior_right_arm_degree !== '' ||
+          this.posterior_left_leg_degree !== '' ||
+          this.posterior_right_leg_degree !== ''
+        );
+      },
+      checkIfObstetricsNotEmpty() {
+        return !!(
+          this.prenatal_checkup !== '' ||
+          this.labor_pains !== '' ||
+          this.last_menstrual_period !== '' ||
+          this.estimated_date_of_delivery !== '' ||
+          this.age_of_gestation !== '' ||
+          this.gravidity !== '' ||
+          this.parity !== '' ||
+          this.term_of_birth !== '' ||
+          this.pre_term !== '' ||
+          this.abortion !== '' ||
+          this.living !== ''
+        );
+      },
+      checkIfTreatmentNotEmpty() {
+        return !!(
+          this.nasal ||
+          this.o2_mask ||
+          this.bvm ||
+          this.lpm !== '' ||
+          this.wound_care ||
+          this.splinting_applied ||
+          this.control_bleeding ||
+          this.vital_sign_taken ||
+          this.applied_cpr ||
+          this.applied_aed ||
+          this.obs_remarks !== '' ||
+          this.problems !== '' 
+        );
+      },
+      checkIfSignatureNotEmpty() {
+        return !!(
+          this.received_by !== '' ||
+          // (typeof this.$refs.received_by_signature !== 'undefined' && this.$refs.received_by_signature.isEmpty() == false)   ||
+          this.medical_facility !== '' ||
+          // (this.medical_facility_signature !== '' && this.medical_facility_signature !== null) ||
+          this.team_leader !== '' ||
+          // (this.team_leader_signature!== '' && this.team_leader_signature.save() !== null) ||
+          this.gloves !== '' ||
+          this.mask !== '' ||
+          this.gauze !== '' ||
+          this.others !== ''
+          //signatures not yet included; a blocker
+        );
+      },
+      checkIfWaiverNotEmpty() {
+      return !!(
+        this.statement_one ||
+        this.statement_two ||
+        this.statement_three ||
+        this.statement_four ||
+        this.hospital_name !== '' ||
+        this.from_hospital !== '' ||
+        this.to_hospital !== '' ||
+        this.other_statement !== '' ||
+        this.responder_full_name !== '' ||
+        this.responder_waiver_date !== '' ||
+        this.patient_or_relative_name !== '' ||
+        this.patient_relative_waiver_date !== '' ||
+        this.witness_one !== '' ||
+        this.witness_two !== '' 
+        //Signature fields not yet included
+      );
+    },
       calculateAge: function () {
         if (this.birthdate) {
           const today = new Date();
