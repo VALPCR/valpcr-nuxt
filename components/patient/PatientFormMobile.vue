@@ -2589,7 +2589,7 @@
                   aria-expanded="false"
                   aria-controls="flush-collapseFive"
                 >
-                <font-awesome-icon v-if="checkIfBurnNotEmpty()" class="mr-5 text-green-700" icon="fas fa-circle-check" /><font-awesome-icon v-else class="mr-5 text-gray-400" icon="fas fa-circle-check" />Burn Percentage Body Injuries 
+                <font-awesome-icon v-if="checkIfBurnNotEmpty()" class="mr-5 text-green-700" icon="fas fa-circle-check" /><font-awesome-icon v-else class="mr-5 text-gray-400" icon="fas fa-circle-check" />Burn Percentage
                   <span
                     class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white"
                   >
@@ -4460,7 +4460,7 @@
                   aria-expanded="false"
                   aria-controls="flush-collapseNine"
                 >
-                  Waiver
+                <font-awesome-icon v-if="checkIfWaiverNotEmpty()" class="mr-5 text-green-700" icon="fas fa-circle-check" /><font-awesome-icon v-else class="mr-5 text-gray-400" icon="fas fa-circle-check" /> Waiver
                   <span
                     class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white"
                   >
@@ -6037,6 +6037,25 @@ export default {
         this.gauze !== '' ||
         this.others !== ''
         //signatures not yet included; a blocker
+      );
+    },
+    checkIfWaiverNotEmpty() {
+      return !!(
+        this.statement_one ||
+        this.statement_two ||
+        this.statement_three ||
+        this.statement_four ||
+        this.hospital_name !== '' ||
+        this.from_hospital !== '' ||
+        this.to_hospital !== '' ||
+        this.other_statement !== '' ||
+        this.responder_full_name !== '' ||
+        this.responder_waiver_date !== '' ||
+        this.patient_or_relative_name !== '' ||
+        this.patient_relative_waiver_date !== '' ||
+        this.witness_one !== '' ||
+        this.witness_two !== '' 
+        //Signature fields not yet included
       );
     },
   },
