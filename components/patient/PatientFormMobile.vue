@@ -819,7 +819,7 @@
                 </div>
                 <div class="mt-auto flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md border-t-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50 min-[0px]:rounded-none">
                   <button
-                    @click="clear('section1')"
+                    @click="showClearModal = true"
                     type="button"
                     class="inline-block ml-1 rounded bg-danger mb-7 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#dc4c64] transition duration-150 ease-in-out hover:bg-danger-600 hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:bg-danger-600 focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:outline-none focus:ring-0 active:bg-danger-700 active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(220,76,100,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)]"
                     data-te-ripple-init
@@ -827,6 +827,19 @@
                   >
                     CLEAR
                   </button>
+                </div>
+
+                <div v-if="showClearModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+                  <div class="bg-white p-8 rounded-md shadow-md">
+                    <div class="flex justify-center mb-6">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="5em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#a51d2d}</style><path d="M256 32c14.2 0 27.3 7.5 34.5 19.8l216 368c7.3 12.4 7.3 27.7 .2 40.1S486.3 480 472 480H40c-14.3 0-27.6-7.7-34.7-20.1s-7-27.8 .2-40.1l216-368C228.7 39.5 241.8 32 256 32zm0 128c-13.3 0-24 10.7-24 24V296c0 13.3 10.7 24 24 24s24-10.7 24-24V184c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"/></svg>
+                    </div>
+                    <p class="text-center mb-6">This will clear all fields in this section. Do you want to continue?</p>
+                    <div class="flex justify-center">
+                      <button @click="clearModalConfirmAction" class="bg-teal-600 text-white px-4 py-2 rounded mr-4">Yes</button>
+                      <button @click="clearModalCancelAction" class="bg-rose-800 text-white px-4 py-2 rounded">Cancel</button>
+                    </div>
+                  </div>
                 </div>
 
               </div>
@@ -4912,6 +4925,7 @@ export default {
   },
   data() {
     return {
+      showClearModal: false,
       received_by_signature_locked: false,
       teams: [],
       dispatch_date: "",
@@ -5633,7 +5647,20 @@ export default {
         this.witness_one = "";
         this.witness_two = "";
       }
+      this.showClearModal = false;
     },
+    
+    clearModalConfirmAction() {
+    // ... any logic to be executed when the user confirms clearing
+    // Call your clear function here if needed
+    this.clear('section1');
+    },
+    clearModalCancelAction() {
+    // ... any logic to be executed when the user cancels clearing
+    // Set showClearModal to false to hide the modal
+    this.showClearModal = false;
+    },
+
     register() {
       const params = {
         emrId: this.$auth.user.id,
