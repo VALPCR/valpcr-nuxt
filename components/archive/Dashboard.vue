@@ -11,15 +11,17 @@
         compactMode
         class="bg-white rounded shadow"
       />
+      <RestorePcr />
     </div>
   </div>
 </template>
 
 <script>
+import RestorePcr from "../patient/RestorePcr";
 import { Dropdown, Ripple, initTE, Modal } from "tw-elements";
 
 export default {
-  components: { Ripple, Dropdown },
+  components: { Ripple, Dropdown, RestorePcr },
   data() {
     return {
       fetchedRows: [],
@@ -164,14 +166,11 @@ export default {
   methods: {
     onRowClick(params) {
       if (typeof params.event.target.classList[0] !== 'undefined' && params.event.target.classList[0].includes("restore")) {
-        this.$axios
-          .get(
-            "pcr/single/restore?id=" +
-              params.event.target.classList[0].split("_")[1]
-          )
-          .then(() => {
-            location.reload();
-          });
+        const restorePcrModal = new Modal(
+          document.getElementById("restorePcr")
+        );
+        restorePcrModal.show();
+        this.$store.commit('setPcrId', params.event.target.classList[0].split("_")[1])
       }
     },
   },

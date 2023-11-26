@@ -81,15 +81,28 @@ export default {
   props: {
     ids: Array,
   },
+  data() {
+    return {
+      ip_address: '',
+    }
+  },
   mounted() {
     initTE({ Ripple, Modal });
   },
   methods: {
     restoreUsers() {
       if (this.ids.length > 0) {
-        this.$axios.get('user/restore?ids=' + this.ids).then(() => {
-          location.reload();
-        });
+
+        fetch('https://ipinfo.io/json?token=5d9e0b426ac4f6')
+          .then(response => response.json())
+          .then((response) => {
+            this.ip_address = response.ip;
+
+            this.$axios.get('user/restore?ids=' + this.ids + '&user_name=' + this.$auth.user.email + '&user_role=' + this.$auth.user.role + '&ip_address=' + this.ip_address).then(() => {
+              location.reload();
+            });
+          })
+          .catch(error => console.error('Error fetching IP address:', error));
       }
     },
   },

@@ -75,6 +75,7 @@
       <PatientFormMobile v-if="role === 'emr'" />
       <EditPatientFormMobile :viewableByAllEmrs="true" />
       <QrCode />
+      <ArchivePcr />
     </div>
   </div>
 </template>
@@ -84,6 +85,7 @@ import PatientForm from "./PatientForm";
 import PatientFormMobile from "./PatientFormMobile";
 import EditPatientFormMobile from "../patient/EditPatientFormMobile";
 import QrCode from "./QrCode";
+import ArchivePcr from "./ArchivePcr";
 import { Modal, Dropdown, Ripple, initTE, Tooltip } from "tw-elements";
 export default {
   components: {
@@ -94,6 +96,7 @@ export default {
     PatientFormMobile,
     EditPatientFormMobile,
     QrCode,
+    ArchivePcr,
   },
   data() {
     return {
@@ -280,14 +283,11 @@ export default {
           if (!params.event.target.classList[0].includes("restore") && typeof params.event.target.classList[0].split("_")[1] !== 'undefined') {
             window.open(this.$config.baseURL + '/pcr/generate/single?id=' + params.event.target.classList[0].split("_")[1], '_blank');
           } else {
-            this.$axios
-              .get(
-                "pcr/single/archive?id=" +
-                params.event.target.classList[0].split("_")[1]
-              )
-              .then(() => {
-                location.reload();
-              });
+            const archivePcrModal = new Modal(
+              document.getElementById("archivePcr")
+            );
+            archivePcrModal.show();
+            this.$store.commit('setPcrId', params.event.target.classList[0].split("_")[1])
           }
 
         }

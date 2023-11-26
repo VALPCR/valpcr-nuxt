@@ -2,9 +2,9 @@
   <div
     data-te-modal-init
     class="fixed left-0 top-20 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
-    id="restoreUser"
+    id="restorePcr"
     tabindex="-1"
-    aria-labelledby="restoreUserLabel"
+    aria-labelledby="restorePcrLabel"
     aria-hidden="true"
     role="dialog"
   >
@@ -18,7 +18,7 @@
           <!--Modal title-->
           <h5
             class="text-xl font-medium leading-normal text-neutral-800 dark:text-neutral-200"
-            id="restoreUserLabel">
+            id="restorePcrLabel">
             Warning
           </h5>
           <!--Close button-->
@@ -44,7 +44,7 @@
 
         <!--Modal body-->
         <div class="relative flex-auto p-4" data-te-modal-body-ref>
-          Are you sure you want to restore selected users?
+          Are you sure you want to restore this PCR?
         </div>
 
         <!--Modal footer-->
@@ -63,7 +63,7 @@
             class="ml-1 inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
             data-te-ripple-init
             data-te-ripple-color="light"
-            @click="restoreUsers"
+            @click="archiveUsers"
           >
             Yes
           </button>
@@ -78,27 +78,31 @@
 import {Modal, initTE, Ripple} from "tw-elements";
 
 export default {
-  props: {
-    ids: Array,
-  },
   data() {
     return {
       id_address: '',
+      id: '',
     }
   },
   mounted() {
     initTE({ Ripple, Modal });
   },
+  watch: {
+    "$store.state.pcrId"() {
+      this.id = this.$store.getters["getPcrId"];
+    },
+  },
   methods: {
-    restoreUsers() {
-      if (this.ids.length > 0) {
+    archiveUsers() {
+      if (this.id !== '') {
 
         fetch('https://ipinfo.io/json?token=5d9e0b426ac4f6')
           .then(response => response.json())
           .then((response) => {
             this.id_address = response.ip;
 
-            this.$axios.get('user/restore?ids=' + this.ids + '&user_name=' + this.$auth.user.email + '&user_role=' + this.$auth.user.role + '&ip_address=' + this.id_address).then(() => {
+            this.$axios.get('pcr/single/restore?id=' + this.id + '&user_name=' + this.$auth.user.email + '&user_role=' + this.$auth.user.role + '&ip_address=' + this.id_address).then(() => {
+              this.$store.commit('setPcrId', '')
               location.reload();
             });
           })

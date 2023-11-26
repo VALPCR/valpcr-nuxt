@@ -92,7 +92,7 @@ export default {
           date_modified: result.updated_at,
           event: result.event,
           user_name: result.user_name,
-          user_role: result.user_role === 'emr' ? 'Responder' : (result.user_role === 'head' ? 'Head' : ''),
+          user_role: result.user_role === 'emr' ? 'Responder' : (result.user_role === 'head' ? 'Head' : 'Dispatcher'),
           ip_address: result.ip_address,
         })
       })

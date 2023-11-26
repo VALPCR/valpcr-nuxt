@@ -11,6 +11,7 @@ export const state = () => ({
   editDispatcherModalXlFields: [],
   editDispatcherModalXlArg: undefined,
   newlyCreatedPcr: [],
+  pcrId: '',
 });
 
 export const getters = {
@@ -43,6 +44,9 @@ export const getters = {
   },
   getNewlyCreatedPcr(state) {
     return state.newlyCreatedPcr;
+  },
+  getPcrId(state) {
+    return state.pcrId;
   },
 };
 
@@ -82,6 +86,9 @@ export const mutations = {
   },
   setNewlyCreatedPcr(state, value) {
     state.newlyCreatedPcr = value;
+  },
+  setPcrId(state, value) {
+    state.pcrId = value;
   },
 };
 

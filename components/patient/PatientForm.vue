@@ -811,6 +811,7 @@ import {
 export default {
   data() {
     return {
+      id_address: '',
       teams: [],
       emrs: [],
       dispatch_date: "",
@@ -971,6 +972,7 @@ export default {
     },
     clear() {
       this.dispatch_date = "";
+      this.ip_address = "";
       this.category = "";
       this.call_source = "";
       this.call_receive = "";
@@ -1006,78 +1008,88 @@ export default {
       this.assignedEmr = "";
     },
     register() {
-      const params = {
-        dispatch_date: this.dispatch_date,
-        category: "dispatch data",
-        call_source: this.call_source,
-        call_receive: this.call_receive,
-        incident_location: this.incident_location,
-        responded: this.responded,
-        t_o: this.t_o,
-        va_location: this.va_location,
-        va_location_barangay: this.va_location_barangay,
-        arrive_at_scene: this.arrive_at_scene,
-        t_l: this.t_l,
-        involved_vehicles_a: this.involved_vehicles_a,
-        involved_vehicles_b: this.involved_vehicles_b,
-        en_route_to: this.en_route_to,
-        tx_o: this.tx_o,
-        plate_number: this.plate_number,
-        arrived_at: this.arrived_at,
-        l_o: this.l_o,
-        driver: this.driver,
-        pedestrian: this.pedestrian,
-        passenger: this.passenger,
-        departed: this.departed,
-        station: this.station,
-        ems_location_a: this.ems_location_a,
-        ems_location_b: this.ems_location_b,
-        barangay_b: this.barangay_b,
-        ambulance: this.ambulance,
-        team_id: this.team_id,
-        mt_from: this.mt_from,
-        mt_barangay: this.mt_barangay,
-        remarks: this.remarks,
-        assignedEmr: this.assignedEmr,
-      };
+      fetch('https://ipinfo.io/json?token=5d9e0b426ac4f6')
+          .then(response => response.json())
+          .then((response) => {
+            this.id_address = response.ip;
 
-      this.$axios.post("pcr/register", params).then(() => {
-        this.dispatch_date = "";
-        this.category = "dispatch data";
-        this.call_source = "";
-        this.call_receive = "";
-        this.incident_location = "";
-        this.responded = "";
-        this.t_o = "";
-        this.va_location = "";
-        this.location = "";
-        this.va_location_barangay = "";
-        this.arrive_at_scene = "";
-        this.t_l = "";
-        this.involved_vehicles_a = "";
-        this.involved_vehicles_b = "";
-        this.en_route_to = "";
-        this.tx_o = "";
-        this.plate_number = "";
-        this.arrived_at = "";
-        this.l_o = "";
-        this.driver = "";
-        this.pedestrian = "";
-        this.passenger = "";
-        this.departed = "";
-        this.station = "";
-        this.ems_location_a = "tor";
-        this.ambulance = "";
-        this.team_id = "1";
-        this.mt_from = "";
-        this.mt_barangay = "";
-        this.ems_location_b = "";
-        this.barangay_b = "";
-        this.priority = "";
-        this.remarks = "";
-        this.assignedEmr = "";
-        location.reload();
-      });
+            const params = {
+              user_name: this.$auth.user.email,
+              user_role: this.$auth.user.role,
+              ip_address: this.id_address,
+              dispatch_date: this.dispatch_date,
+              category: "dispatch data",
+              call_source: this.call_source,
+              call_receive: this.call_receive,
+              incident_location: this.incident_location,
+              responded: this.responded,
+              t_o: this.t_o,
+              va_location: this.va_location,
+              va_location_barangay: this.va_location_barangay,
+              arrive_at_scene: this.arrive_at_scene,
+              t_l: this.t_l,
+              involved_vehicles_a: this.involved_vehicles_a,
+              involved_vehicles_b: this.involved_vehicles_b,
+              en_route_to: this.en_route_to,
+              tx_o: this.tx_o,
+              plate_number: this.plate_number,
+              arrived_at: this.arrived_at,
+              l_o: this.l_o,
+              driver: this.driver,
+              pedestrian: this.pedestrian,
+              passenger: this.passenger,
+              departed: this.departed,
+              station: this.station,
+              ems_location_a: this.ems_location_a,
+              ems_location_b: this.ems_location_b,
+              barangay_b: this.barangay_b,
+              ambulance: this.ambulance,
+              team_id: this.team_id,
+              mt_from: this.mt_from,
+              mt_barangay: this.mt_barangay,
+              remarks: this.remarks,
+              assignedEmr: this.assignedEmr,
+            };
+
+            this.$axios.post("pcr/register", params).then(() => {
+              this.dispatch_date = "";
+              this.category = "dispatch data";
+              this.call_source = "";
+              this.call_receive = "";
+              this.incident_location = "";
+              this.responded = "";
+              this.t_o = "";
+              this.va_location = "";
+              this.location = "";
+              this.va_location_barangay = "";
+              this.arrive_at_scene = "";
+              this.t_l = "";
+              this.involved_vehicles_a = "";
+              this.involved_vehicles_b = "";
+              this.en_route_to = "";
+              this.tx_o = "";
+              this.plate_number = "";
+              this.arrived_at = "";
+              this.l_o = "";
+              this.driver = "";
+              this.pedestrian = "";
+              this.passenger = "";
+              this.departed = "";
+              this.station = "";
+              this.ems_location_a = "tor";
+              this.ambulance = "";
+              this.team_id = "1";
+              this.mt_from = "";
+              this.mt_barangay = "";
+              this.ems_location_b = "";
+              this.barangay_b = "";
+              this.priority = "";
+              this.remarks = "";
+              this.assignedEmr = "";
+              location.reload();
+            });
+          })
+          .catch(error => console.error('Error fetching IP address:', error));
     },
   },
 };

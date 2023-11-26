@@ -61,7 +61,7 @@
                   aria-expanded="false"
                   aria-controls="flush-collapseOne"
                 >
-                <font-awesome-icon v-if="checkIfDispatchNotEmpty()" class="mr-5 text-green-700" icon="fas fa-circle-check" /><font-awesome-icon v-else class="mr-5 text-gray-400" icon="fas fa-circle-check" /> Dispatch Data 
+                <font-awesome-icon v-if="checkIfDispatchNotEmpty()" class="mr-5 text-green-700" icon="fas fa-circle-check" /><font-awesome-icon v-else class="mr-5 text-gray-400" icon="fas fa-circle-check" /> Dispatch Data
                   <span
                     class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white"
                   >
@@ -193,7 +193,7 @@
                               ems_location_a === 'va' ||
                               ems_location_a === 'mt'
                             "
-                            
+
                           />
                           <label
                             for="emsLocationB"
@@ -866,7 +866,7 @@
                   aria-expanded="false"
                   aria-controls="flush-collapseTwo"
                 >
-                <font-awesome-icon v-if="checkIfPatientNotEmpty()" class="mr-5 text-green-700" icon="fas fa-circle-check" /><font-awesome-icon v-else class="mr-5 text-gray-400" icon="fas fa-circle-check" /> Patient Information  
+                <font-awesome-icon v-if="checkIfPatientNotEmpty()" class="mr-5 text-green-700" icon="fas fa-circle-check" /><font-awesome-icon v-else class="mr-5 text-gray-400" icon="fas fa-circle-check" /> Patient Information
                   <span
                     class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white"
                   >
@@ -1508,7 +1508,7 @@
                   aria-expanded="false"
                   aria-controls="flush-collapseThree"
                 >
-                <font-awesome-icon v-if="checkIfVitalsNotEmpty()" class="mr-5 text-green-700" icon="fas fa-circle-check" /><font-awesome-icon v-else class="mr-5 text-gray-400" icon="fas fa-circle-check" /> Vital Signs   
+                <font-awesome-icon v-if="checkIfVitalsNotEmpty()" class="mr-5 text-green-700" icon="fas fa-circle-check" /><font-awesome-icon v-else class="mr-5 text-gray-400" icon="fas fa-circle-check" /> Vital Signs
                   <span
                     class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white"
                   >
@@ -2105,7 +2105,7 @@
                   aria-expanded="false"
                   aria-controls="flush-collapseFour"
                 >
-                <font-awesome-icon v-if="checkIfInjuriesNotEmpty()" class="mr-5 text-green-700" icon="fas fa-circle-check" /><font-awesome-icon v-else class="mr-5 text-gray-400" icon="fas fa-circle-check" />Body Injuries   
+                <font-awesome-icon v-if="checkIfInjuriesNotEmpty()" class="mr-5 text-green-700" icon="fas fa-circle-check" /><font-awesome-icon v-else class="mr-5 text-gray-400" icon="fas fa-circle-check" />Body Injuries
                   <span
                     class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white"
                   >
@@ -4364,7 +4364,7 @@
                       class="inline-block ml-1 rounded bg-danger mb-7 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#dc4c64] transition duration-150 ease-in-out hover:bg-danger-600 hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:bg-danger-600 focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:outline-none focus:ring-0 active:bg-danger-700 active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(220,76,100,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)]"
                       data-te-ripple-init
                       data-te-ripple-color="light"
-                      
+
                     >
                       CLEAR
                     </button>
@@ -4385,7 +4385,7 @@
                   aria-expanded="false"
                   aria-controls="flush-collapseEight"
                 >
-                <font-awesome-icon v-if="checkIfSignatureNotEmpty()" class="mr-5 text-green-700" icon="fas fa-circle-check" /><font-awesome-icon v-else class="mr-5 text-gray-400" icon="fas fa-circle-check" />Signature 
+                <font-awesome-icon v-if="checkIfSignatureNotEmpty()" class="mr-5 text-green-700" icon="fas fa-circle-check" /><font-awesome-icon v-else class="mr-5 text-gray-400" icon="fas fa-circle-check" />Signature
                   <span
                     class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white"
                   >
@@ -5201,6 +5201,7 @@
     },
     data() {
       return {
+        id_address: '',
         editable: false,
         user_id: "",
         role: "",
@@ -5399,9 +5400,6 @@
         witness_two_signature: "",
       };
     },
-    
-
-
     fetch() {
       this.role = this.$auth.user.role;
       this.$axios.get("team/list").then((response) => {
@@ -6108,7 +6106,7 @@
           this.applied_cpr ||
           this.applied_aed ||
           this.obs_remarks !== '' ||
-          this.problems !== '' 
+          this.problems !== ''
         );
       },
       checkIfSignatureNotEmpty() {
@@ -6141,7 +6139,7 @@
         this.patient_or_relative_name !== '' ||
         this.patient_relative_waiver_date !== '' ||
         this.witness_one !== '' ||
-        this.witness_two !== '' 
+        this.witness_two !== ''
         //Signature fields not yet included
       );
     },
@@ -6176,6 +6174,7 @@
         this.score = parseInt(this.eyes) + parseInt(this.verbal) + parseInt(this.motor);
       },
       clearAll() {
+        this.ip_address = "";
         this.category = "";
         this.call_source = "";
         this.call_receive = "";
@@ -6590,225 +6589,235 @@
         }
       },
       update() {
-        const params = {
-          id: this.id,
-          dispatch_date: this.dispatch_date,
-          category: "dispatch data",
-          call_source: this.call_source,
-          call_receive: this.call_receive,
-          incident_location: this.incident_location,
-          responded: this.responded,
-          t_o: this.t_o,
-          va_location: this.va_location,
-          va_location_barangay: this.va_location_barangay,
-          arrive_at_scene: this.arrive_at_scene,
-          t_l: this.t_l,
-          involved_vehicles_a: this.involved_vehicles_a,
-          involved_vehicles_b: this.involved_vehicles_b,
-          en_route_to: this.en_route_to,
-          tx_o: this.tx_o,
-          plate_number: this.plate_number,
-          arrived_at: this.arrived_at,
-          l_o: this.l_o,
-          driver: this.driver,
-          pedestrian: this.pedestrian,
-          passenger: this.passenger,
-          departed: this.departed,
-          station: this.station,
-          ems_location_a: this.ems_location_a,
-          ems_location_b: this.ems_location_b,
-          barangay_b: this.barangay_b,
-          ambulance: this.ambulance,
-          team_id: this.team_id,
-          mt_from: this.mt_from,
-          mt_barangay: this.mt_barangay,
-          remarks: this.remarks,
-          priority: this.priority,
-          suffix: this.suffix,
-          first_name: this.first_name,
-          middle_name: this.middle_name,
-          surname: this.surname,
-          gender: this.gender,
-          birthdate: this.birthdate,
-          age: this.age,
-          status: this.status,
-          religion: this.religion,
-          companion: this.companion,
-          phone: this.phone,
-          pnt_city: this.pnt_city,
-          pnt_brgy: this.pnt_brgy,
-          pnt_st: this.pnt_st,
-          pnt_other_city: this.pnt_other_city,
-          complaint: this.complaint,
-          onset: this.onset,
-          allergies: this.allergies,
-          provocation: this.provocation,
-          medication: this.medication,
-          quality: this.quality,
-          medical_history: this.medical_history,
-          radiation: this.radiation,
-          last_oral_intake: this.last_oral_intake,
-          event_leading_to_injury: this.event_leading_to_injury,
-          severity: this.severity,
-          time_taken: this.time_taken,
-          time_a: this.time_a,
-          time_b: this.time_b,
-          time_c: this.time_c,
-          time_d: this.time_d,
-          time_e: this.time_e,
-          time_f: this.time_f,
-          bp_a: this.bp_a,
-          bp_b: this.bp_b,
-          bp_c: this.bp_c,
-          bp_d: this.bp_d,
-          bp_e: this.bp_e,
-          pr_a: this.pr_a,
-          pr_b: this.pr_b,
-          pr_c: this.pr_c,
-          pr_d: this.pr_d,
-          pr_e: this.pr_e,
-          rr_a: this.rr_a,
-          rr_b: this.rr_b,
-          rr_c: this.rr_c,
-          rr_d: this.rr_d,
-          rr_e: this.rr_e,
-          tempt_a: this.tempt_a,
-          tempt_b: this.tempt_b,
-          tempt_c: this.tempt_c,
-          tempt_d: this.tempt_d,
-          tempt_e: this.tempt_e,
-          spo2_a: this.spo2_a,
-          spo2_b: this.spo2_b,
-          spo2_c: this.spo2_c,
-          spo2_d: this.spo2_d,
-          spo2_e: this.spo2_e,
-          left_pearl: this.left_pearl,
-          left_dilated: this.left_dilated,
-          left_constrict: this.left_constrict,
-          left_non_reactive: this.left_non_reactive,
-          left_cataract: this.left_cataract,
-          right_pearl: this.right_pearl,
-          right_dilated: this.right_dilated,
-          right_constrict: this.right_constrict,
-          right_non_reactive: this.right_non_reactive,
-          right_cataract: this.right_cataract,
-          skin_color: this.skin_color,
-          eyes: this.eyes,
-          verbal: this.verbal,
-          motor: this.motor,
-          score: this.score,
-          prenatal_checkup: this.prenatal_checkup,
-          labor_pains: this.labor_pains,
-          last_menstrual_period: this.last_menstrual_period,
-          estimated_date_of_delivery: this.estimated_date_of_delivery,
-          age_of_gestation:this.age_of_gestation,
-          gravidity: this.gravidity,
-          parity: this.parity,
-          term_of_birth: this.term_of_birth,
-          pre_term: this.pre_term,
-          abortion: this.abortion,
-          living: this.living,
-          obs_remarks: this.obs_remarks,
-          nasal: this.nasal,
-          o2_mask: this.o2_mask,
-          bvm: this.bvm,
-          lpm: this.lpm,
-          wound_care: this.wound_care,
-          splinting_applied: this.splinting_applied,
-          control_bleeding: this.control_bleeding,
-          vital_sign_taken: this.vital_sign_taken,
-          applied_cpr: this.applied_cpr,
-          applied_aed: this.applied_aed,
-          problems: this.problems,
-          received_by: this.received_by,
-          received_by_signature:
-            typeof this.$refs.received_by_signature === "undefined"
-              ? this.received_by_signature
-              : this.$refs.received_by_signature.save(),
-          medical_facility: this.medical_facility,
-          medical_facility_signature:
-            typeof this.$refs.medical_facility_signature === "undefined"
-              ? this.medical_facility_signature
-              : this.$refs.medical_facility_signature.save(),
-          team_leader: this.team_leader,
-          team_leader_signature:
-            typeof this.$refs.team_leader_signature === "undefined"
-              ? this.team_leader_signature
-              : this.$refs.team_leader_signature.save(),
-          gloves: this.gloves,
-          mask: this.mask,
-          gauze: this.gauze,
-          others: this.others,
-          anterior_injury_remarks: this.anterior_injury_remarks,
-          anterior_head_injury: this.anterior_head_injury,
-          anterior_chest_injury: this.anterior_chest_injury,
-          anterior_pelvis_injury: this.anterior_pelvis_injury,
-          anterior_left_arm_injury: this.anterior_left_arm_injury,
-          anterior_right_arm_injury: this.anterior_right_arm_injury,
-          anterior_left_leg_injury: this.anterior_left_leg_injury,
-          anterior_right_leg_injury: this.anterior_right_leg_injury,
-          anterior_genitalia_injury: this.anterior_genitalia_injury,
-          posterior_injury_remarks: this.posterior_injury_remarks,
-          posterior_head_injury: this.posterior_head_injury,
-          posterior_chest_injury: this.posterior_chest_injury,
-          posterior_pelvis_injury: this.posterior_pelvis_injury,
-          posterior_left_arm_injury: this.posterior_left_arm_injury,
-          posterior_right_arm_injury: this.posterior_right_arm_injury,
-          posterior_left_leg_injury: this.posterior_left_leg_injury,
-          posterior_right_leg_injury: this.posterior_right_leg_injury,
-          anterior_burn_remarks: this.anterior_burn_remarks,
-          anterior_head_degree: this.anterior_head_degree,
-          anterior_chest_degree: this.anterior_chest_degree,
-          anterior_pelvis_degree: this.anterior_pelvis_degree,
-          anterior_left_arm_degree: this.anterior_left_arm_degree,
-          anterior_right_arm_degree: this.anterior_right_arm_degree,
-          anterior_left_leg_degree: this.anterior_left_leg_degree,
-          anterior_right_leg_degree: this.anterior_right_leg_degree,
-          anterior_genitalia_degree: this.anterior_genitalia_degree,
-          posterior_burn_remarks: this.posterior_burn_remarks,
-          posterior_head_degree: this.posterior_head_degree,
-          posterior_chest_degree: this.posterior_chest_degree,
-          posterior_pelvis_degree: this.posterior_pelvis_degree,
-          posterior_left_arm_degree: this.posterior_left_arm_degree,
-          posterior_right_arm_degree: this.posterior_right_arm_degree,
-          posterior_left_leg_degree: this.posterior_left_leg_degree,
-          posterior_right_leg_degree: this.posterior_right_leg_degree,
-          statement_one: this.statement_one,
-          statement_two: this.statement_two,
-          statement_three: this.statement_three,
-          hospital_name: this.hospital_name,
-          statement_four: this.statement_four,
-          from_hospital: this.from_hospital,
-          to_hospital: this.to_hospital,
-          other_statement: this.other_statement,
-          responder_full_name: this.responder_full_name,
-          responder_signature:
-            typeof this.$refs.responder_signature === "undefined"
-              ? this.responder_signature
-              : this.$refs.responder_signature.save(),
-          responder_waiver_date: this.responder_waiver_date,
-          patient_or_relative_name: this.patient_or_relative_name,
-          patient_or_relative_signature:
-            typeof this.$refs.patient_or_relative_signature === "undefined"
-              ? this.patient_or_relative_signature
-              : this.$refs.patient_or_relative_signature.save(),
-          patient_relative_waiver_date: this.patient_relative_waiver_date,
-          witness_one: this.witness_one,
-          witness_one_signature:
-            typeof this.$refs.witness_one_signature === "undefined"
-              ? this.witness_one_signature
-              : this.$refs.witness_one_signature.save(),
-          witness_two: this.witness_two,
-          witness_two_signature:
-            typeof this.$refs.witness_two_signature === "undefined"
-              ? this.witness_two_signature
-              : this.$refs.witness_two_signature.save(),
-        };
+        fetch('https://ipinfo.io/json?token=5d9e0b426ac4f6')
+          .then(response => response.json())
+          .then((response) => {
+            this.id_address = response.ip;
 
-        this.$axios.post("pcr/emr/update", params).then(() => {
-          this.clearAll();
-          location.reload();
-        });
+            const params = {
+              user_name: this.$auth.user.email,
+              user_role: this.$auth.user.role,
+              ip_address: this.id_address,
+              id: this.id,
+              dispatch_date: this.dispatch_date,
+              category: "dispatch data",
+              call_source: this.call_source,
+              call_receive: this.call_receive,
+              incident_location: this.incident_location,
+              responded: this.responded,
+              t_o: this.t_o,
+              va_location: this.va_location,
+              va_location_barangay: this.va_location_barangay,
+              arrive_at_scene: this.arrive_at_scene,
+              t_l: this.t_l,
+              involved_vehicles_a: this.involved_vehicles_a,
+              involved_vehicles_b: this.involved_vehicles_b,
+              en_route_to: this.en_route_to,
+              tx_o: this.tx_o,
+              plate_number: this.plate_number,
+              arrived_at: this.arrived_at,
+              l_o: this.l_o,
+              driver: this.driver,
+              pedestrian: this.pedestrian,
+              passenger: this.passenger,
+              departed: this.departed,
+              station: this.station,
+              ems_location_a: this.ems_location_a,
+              ems_location_b: this.ems_location_b,
+              barangay_b: this.barangay_b,
+              ambulance: this.ambulance,
+              team_id: this.team_id,
+              mt_from: this.mt_from,
+              mt_barangay: this.mt_barangay,
+              remarks: this.remarks,
+              priority: this.priority,
+              suffix: this.suffix,
+              first_name: this.first_name,
+              middle_name: this.middle_name,
+              surname: this.surname,
+              gender: this.gender,
+              birthdate: this.birthdate,
+              age: this.age,
+              status: this.status,
+              religion: this.religion,
+              companion: this.companion,
+              phone: this.phone,
+              pnt_city: this.pnt_city,
+              pnt_brgy: this.pnt_brgy,
+              pnt_st: this.pnt_st,
+              pnt_other_city: this.pnt_other_city,
+              complaint: this.complaint,
+              onset: this.onset,
+              allergies: this.allergies,
+              provocation: this.provocation,
+              medication: this.medication,
+              quality: this.quality,
+              medical_history: this.medical_history,
+              radiation: this.radiation,
+              last_oral_intake: this.last_oral_intake,
+              event_leading_to_injury: this.event_leading_to_injury,
+              severity: this.severity,
+              time_taken: this.time_taken,
+              time_a: this.time_a,
+              time_b: this.time_b,
+              time_c: this.time_c,
+              time_d: this.time_d,
+              time_e: this.time_e,
+              time_f: this.time_f,
+              bp_a: this.bp_a,
+              bp_b: this.bp_b,
+              bp_c: this.bp_c,
+              bp_d: this.bp_d,
+              bp_e: this.bp_e,
+              pr_a: this.pr_a,
+              pr_b: this.pr_b,
+              pr_c: this.pr_c,
+              pr_d: this.pr_d,
+              pr_e: this.pr_e,
+              rr_a: this.rr_a,
+              rr_b: this.rr_b,
+              rr_c: this.rr_c,
+              rr_d: this.rr_d,
+              rr_e: this.rr_e,
+              tempt_a: this.tempt_a,
+              tempt_b: this.tempt_b,
+              tempt_c: this.tempt_c,
+              tempt_d: this.tempt_d,
+              tempt_e: this.tempt_e,
+              spo2_a: this.spo2_a,
+              spo2_b: this.spo2_b,
+              spo2_c: this.spo2_c,
+              spo2_d: this.spo2_d,
+              spo2_e: this.spo2_e,
+              left_pearl: this.left_pearl,
+              left_dilated: this.left_dilated,
+              left_constrict: this.left_constrict,
+              left_non_reactive: this.left_non_reactive,
+              left_cataract: this.left_cataract,
+              right_pearl: this.right_pearl,
+              right_dilated: this.right_dilated,
+              right_constrict: this.right_constrict,
+              right_non_reactive: this.right_non_reactive,
+              right_cataract: this.right_cataract,
+              skin_color: this.skin_color,
+              eyes: this.eyes,
+              verbal: this.verbal,
+              motor: this.motor,
+              score: this.score,
+              prenatal_checkup: this.prenatal_checkup,
+              labor_pains: this.labor_pains,
+              last_menstrual_period: this.last_menstrual_period,
+              estimated_date_of_delivery: this.estimated_date_of_delivery,
+              age_of_gestation:this.age_of_gestation,
+              gravidity: this.gravidity,
+              parity: this.parity,
+              term_of_birth: this.term_of_birth,
+              pre_term: this.pre_term,
+              abortion: this.abortion,
+              living: this.living,
+              obs_remarks: this.obs_remarks,
+              nasal: this.nasal,
+              o2_mask: this.o2_mask,
+              bvm: this.bvm,
+              lpm: this.lpm,
+              wound_care: this.wound_care,
+              splinting_applied: this.splinting_applied,
+              control_bleeding: this.control_bleeding,
+              vital_sign_taken: this.vital_sign_taken,
+              applied_cpr: this.applied_cpr,
+              applied_aed: this.applied_aed,
+              problems: this.problems,
+              received_by: this.received_by,
+              received_by_signature:
+                typeof this.$refs.received_by_signature === "undefined"
+                  ? this.received_by_signature
+                  : this.$refs.received_by_signature.save(),
+              medical_facility: this.medical_facility,
+              medical_facility_signature:
+                typeof this.$refs.medical_facility_signature === "undefined"
+                  ? this.medical_facility_signature
+                  : this.$refs.medical_facility_signature.save(),
+              team_leader: this.team_leader,
+              team_leader_signature:
+                typeof this.$refs.team_leader_signature === "undefined"
+                  ? this.team_leader_signature
+                  : this.$refs.team_leader_signature.save(),
+              gloves: this.gloves,
+              mask: this.mask,
+              gauze: this.gauze,
+              others: this.others,
+              anterior_injury_remarks: this.anterior_injury_remarks,
+              anterior_head_injury: this.anterior_head_injury,
+              anterior_chest_injury: this.anterior_chest_injury,
+              anterior_pelvis_injury: this.anterior_pelvis_injury,
+              anterior_left_arm_injury: this.anterior_left_arm_injury,
+              anterior_right_arm_injury: this.anterior_right_arm_injury,
+              anterior_left_leg_injury: this.anterior_left_leg_injury,
+              anterior_right_leg_injury: this.anterior_right_leg_injury,
+              anterior_genitalia_injury: this.anterior_genitalia_injury,
+              posterior_injury_remarks: this.posterior_injury_remarks,
+              posterior_head_injury: this.posterior_head_injury,
+              posterior_chest_injury: this.posterior_chest_injury,
+              posterior_pelvis_injury: this.posterior_pelvis_injury,
+              posterior_left_arm_injury: this.posterior_left_arm_injury,
+              posterior_right_arm_injury: this.posterior_right_arm_injury,
+              posterior_left_leg_injury: this.posterior_left_leg_injury,
+              posterior_right_leg_injury: this.posterior_right_leg_injury,
+              anterior_burn_remarks: this.anterior_burn_remarks,
+              anterior_head_degree: this.anterior_head_degree,
+              anterior_chest_degree: this.anterior_chest_degree,
+              anterior_pelvis_degree: this.anterior_pelvis_degree,
+              anterior_left_arm_degree: this.anterior_left_arm_degree,
+              anterior_right_arm_degree: this.anterior_right_arm_degree,
+              anterior_left_leg_degree: this.anterior_left_leg_degree,
+              anterior_right_leg_degree: this.anterior_right_leg_degree,
+              anterior_genitalia_degree: this.anterior_genitalia_degree,
+              posterior_burn_remarks: this.posterior_burn_remarks,
+              posterior_head_degree: this.posterior_head_degree,
+              posterior_chest_degree: this.posterior_chest_degree,
+              posterior_pelvis_degree: this.posterior_pelvis_degree,
+              posterior_left_arm_degree: this.posterior_left_arm_degree,
+              posterior_right_arm_degree: this.posterior_right_arm_degree,
+              posterior_left_leg_degree: this.posterior_left_leg_degree,
+              posterior_right_leg_degree: this.posterior_right_leg_degree,
+              statement_one: this.statement_one,
+              statement_two: this.statement_two,
+              statement_three: this.statement_three,
+              hospital_name: this.hospital_name,
+              statement_four: this.statement_four,
+              from_hospital: this.from_hospital,
+              to_hospital: this.to_hospital,
+              other_statement: this.other_statement,
+              responder_full_name: this.responder_full_name,
+              responder_signature:
+                typeof this.$refs.responder_signature === "undefined"
+                  ? this.responder_signature
+                  : this.$refs.responder_signature.save(),
+              responder_waiver_date: this.responder_waiver_date,
+              patient_or_relative_name: this.patient_or_relative_name,
+              patient_or_relative_signature:
+                typeof this.$refs.patient_or_relative_signature === "undefined"
+                  ? this.patient_or_relative_signature
+                  : this.$refs.patient_or_relative_signature.save(),
+              patient_relative_waiver_date: this.patient_relative_waiver_date,
+              witness_one: this.witness_one,
+              witness_one_signature:
+                typeof this.$refs.witness_one_signature === "undefined"
+                  ? this.witness_one_signature
+                  : this.$refs.witness_one_signature.save(),
+              witness_two: this.witness_two,
+              witness_two_signature:
+                typeof this.$refs.witness_two_signature === "undefined"
+                  ? this.witness_two_signature
+                  : this.$refs.witness_two_signature.save(),
+            };
+
+            this.$axios.post("pcr/emr/update", params).then(() => {
+              this.clearAll();
+              location.reload();
+            });
+          })
+          .catch(error => console.error('Error fetching IP address:', error));
       },
     },
   };

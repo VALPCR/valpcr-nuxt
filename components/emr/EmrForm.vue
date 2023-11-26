@@ -398,6 +398,7 @@ import { Modal, initTE, Ripple, Input, Datepicker, Select } from "tw-elements";
 export default {
   data() {
     return {
+      id_address: '',
       role: "emr",
       suffix: "",
       first_name: "",
@@ -430,53 +431,64 @@ export default {
   },
   methods: {
     register() {
-      const params = {
-        team_id: parseInt(this.$auth.user.team_id),
-        suffix: this.suffix,
-        first_name: this.first_name,
-        middle_name: this.middle_name,
-        last_name: this.last_name,
-        gender: this.gender,
-        phone: this.phone,
-        birthdate:
-          this.birthdate !== ""
-            ? new Date(this.birthdate).toLocaleDateString("en-US")
-            : (this.birthdate = ""),
-        age: this.age,
-        role: this.role,
-        email: this.email,
-        city: this.city,
-        barangay: this.barangay,
-        street: this.street,
-        emergency_contact: this.emergency_contact,
-        ecp_phone: this.ecp_phone,
-      };
+      fetch('https://ipinfo.io/json?token=5d9e0b426ac4f6')
+        .then(response => response.json())
+        .then((response) => {
+            this.id_address = response.ip;
 
-      this.$nuxt.$loading.start();
-      this.$axios
-        .post("user/register", params)
-        .then(() => {
-          this.suffix = "";
-          this.first_name = "";
-          this.middle_name = "";
-          this.last_name = "";
-          this.gender = "";
-          this.phone = "";
-          this.birthdate = "";
-          this.email = "";
-          this.role = "emr";
-          this.team_id = "1";
-          this.city = "Valenzuela";
-          this.barangay = "";
-          this.street = "";
-          this.age = "";
-          this.emergency_contact = "";
-          this.ecp_phone = "";
-          location.reload();
+          const params = {
+            user_name: this.$auth.user.email,
+            user_role: this.$auth.user.role,
+            ip_address: this.id_address,
+            team_id: parseInt(this.$auth.user.team_id),
+            suffix: this.suffix,
+            first_name: this.first_name,
+            middle_name: this.middle_name,
+            last_name: this.last_name,
+            gender: this.gender,
+            phone: this.phone,
+            birthdate:
+              this.birthdate !== ""
+                ? new Date(this.birthdate).toLocaleDateString("en-US")
+                : (this.birthdate = ""),
+            age: this.age,
+            role: this.role,
+            email: this.email,
+            city: this.city,
+            barangay: this.barangay,
+            street: this.street,
+            emergency_contact: this.emergency_contact,
+            ecp_phone: this.ecp_phone,
+          };
+
+          this.$nuxt.$loading.start();
+          this.$axios
+            .post("user/register", params)
+            .then(() => {
+              this.ip_address = "";
+              this.suffix = "";
+              this.first_name = "";
+              this.middle_name = "";
+              this.last_name = "";
+              this.gender = "";
+              this.phone = "";
+              this.birthdate = "";
+              this.email = "";
+              this.role = "emr";
+              this.team_id = "1";
+              this.city = "Valenzuela";
+              this.barangay = "";
+              this.street = "";
+              this.age = "";
+              this.emergency_contact = "";
+              this.ecp_phone = "";
+              location.reload();
+            })
+            .finally(() => {
+              this.$nuxt.$loading.finish();
+            });
         })
-        .finally(() => {
-          this.$nuxt.$loading.finish();
-        });
+        .catch(error => console.error('Error fetching IP address:', error));
     },
     capitalize(word) {
       return word.replace(/^\w/, (c) => c.toUpperCase());

@@ -190,13 +190,6 @@ export default {
       })
       this.ids = [...new Set(this.ids)];
     },
-    restoreUsers() {
-      if (this.ids.length > 0) {
-        this.$axios.get('user/restore?ids=' + this.ids).then(() => {
-          location.reload();
-        });
-      }
-    },
     archiveUser() {
       const archiveModal = new Modal(document.getElementById("archiveDispatcher"));
       archiveModal.show();
