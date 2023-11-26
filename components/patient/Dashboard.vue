@@ -100,6 +100,7 @@ export default {
   },
   data() {
     return {
+      ip_address: '',
       isSidebarOpen: true,
       role: "",
       fetchedRows: [],
@@ -281,7 +282,17 @@ export default {
           "undefined"
         ) {
           if (!params.event.target.classList[0].includes("restore") && typeof params.event.target.classList[0].split("_")[1] !== 'undefined') {
-            window.open(this.$config.baseURL + '/pcr/generate/single?id=' + params.event.target.classList[0].split("_")[1], '_blank');
+
+            fetch('https://ipinfo.io/json?token=5d9e0b426ac4f6')
+              .then(response => response.json())
+              .then((response) => {
+                this.ip_address = response.ip;
+
+                window.open(this.$config.baseURL + '/pcr/generate/single?id=' + params.event.target.classList[0].split("_")[1] + '&user_name=' + this.$auth.user.email + '&user_role=' + this.$auth.user.role + '&ip_address=' + this.ip_address, '_blank');
+              })
+              .catch(error => console.error('Error fetching IP address:', error));
+
+
           } else {
             const archivePcrModal = new Modal(
               document.getElementById("archivePcr")
@@ -309,7 +320,16 @@ export default {
       this.selectedRows.map((selected) => {
         return ids.push(selected.id);
       })
-      window.open(this.$config.baseURL + '/pcr/generate/multiple?ids=' + ids, '_blank');
+
+      fetch('https://ipinfo.io/json?token=5d9e0b426ac4f6')
+        .then(response => response.json())
+        .then((response) => {
+          this.ip_address = response.ip;
+
+          window.open(this.$config.baseURL + '/pcr/generate/multiple?ids=' + ids + '&user_name=' + this.$auth.user.email + '&user_role=' + this.$auth.user.role + '&ip_address=' + this.ip_address, '_blank');
+        })
+        .catch(error => console.error('Error fetching IP address:', error));
+
     },
     capitalize(word) {
       return word.replace(/^\w/, (c) => c.toUpperCase());
