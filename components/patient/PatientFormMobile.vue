@@ -4310,17 +4310,33 @@
                             ref="team_leader_signature"
                             :w="'600px'"
                             :h="'200px'"
+                            :disabled="team_leader_signature_locked"
                           />
                           <label
                             class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                             >Signature Here
                           </label>
                           <button
+                            v-if="!team_leader_signature_locked"
                             class="ml-1 inline-block rounded border border-slate-400 bg-slate-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out hover:bg-slate-300 hover:border-slate-400 hover:bg-slate-300 focus:bg-slate-300 focus:shadow-[0_4px_9px_-4px_#3b71ca] focus:ring-0 active:bg-slate-300"
                             @click="$refs.team_leader_signature.clear()"
                           >
                             Clear
                           </button>
+                          <span
+                            v-if="!team_leader_signature_locked"
+                            class="ml-1 cursor-pointer inline-block rounded border border-blue-400 bg-blue-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out"
+                            @click="team_leader_signature_locked = true"
+                          >
+                            Lock
+                          </span>
+                          <span
+                            v-if="team_leader_signature_locked"
+                            class="ml-1 cursor-pointer inline-block rounded border border-orange-400 bg-orange-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out"
+                            @click="team_leader_signature_locked = false"
+                          >
+                            Unlock
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -4353,17 +4369,33 @@
                             ref="medical_facility_signature"
                             :w="'600px'"
                             :h="'200px'"
+                            :disabled="medical_facility_signature_locked"
                           />
                           <label
                             class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                             >Signature Here
                           </label>
                           <button
+                            v-if="!medical_facility_signature_locked"
                             class="ml-1 inline-block rounded border border-slate-400 bg-slate-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out hover:bg-slate-300 hover:border-slate-400 hover:bg-slate-300 focus:bg-slate-300 focus:shadow-[0_4px_9px_-4px_#3b71ca] focus:ring-0 active:bg-slate-300"
                             @click="$refs.medical_facility_signature.clear()"
                           >
                             Clear
                           </button>
+                          <span
+                            v-if="!medical_facility_signature_locked"
+                            class="ml-1 cursor-pointer inline-block rounded border border-blue-400 bg-blue-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out"
+                            @click="medical_facility_signature_locked = true"
+                          >
+                            Lock
+                          </span>
+                          <span
+                            v-if="medical_facility_signature_locked"
+                            class="ml-1 cursor-pointer inline-block rounded border border-orange-400 bg-orange-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out"
+                            @click="medical_facility_signature_locked = false"
+                          >
+                            Unlock
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -4686,17 +4718,33 @@
                           ref="responder_signature"
                           :w="'400px'"
                           :h="'200px'"
+                          :disabled="responder_signature_locked"
                         />
                         <label
                           class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                           >Signature Here
                         </label>
                         <button
+                          v-if="!responder_signature_locked"
                           class="ml-1 inline-block rounded border border-slate-400 bg-slate-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out hover:bg-slate-300 hover:border-slate-400 hover:bg-slate-300 focus:bg-slate-300 focus:shadow-[0_4px_9px_-4px_#3b71ca] focus:ring-0 active:bg-slate-300"
                           @click="$refs.responder_signature.clear()"
                         >
                           Clear
                         </button>
+                        <span
+                          v-if="!responder_signature_locked"
+                          class="ml-1 cursor-pointer inline-block rounded border border-blue-400 bg-blue-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out"
+                          @click="responder_signature_locked = true"
+                        >
+                          Lock
+                        </span>
+                        <span
+                          v-if="responder_signature_locked"
+                          class="ml-1 cursor-pointer inline-block rounded border border-orange-400 bg-orange-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out"
+                          @click="responder_signature_locked = false"
+                        >
+                          Unlock
+                        </span>
                       </div>
                     </div>
                     <div class="col-span-2">
@@ -4761,17 +4809,33 @@
                           ref="patient_or_relative_signature"
                           :w="'400px'"
                           :h="'200px'"
+                          :disabled="patient_or_relative_signature_locked"
                         />
                         <label
                           class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                           >Signature Here
                         </label>
                         <button
+                          v-if="!patient_or_relative_signature_locked"
                           class="ml-1 inline-block rounded border border-slate-400 bg-slate-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out hover:bg-slate-300 hover:border-slate-400 hover:bg-slate-300 focus:bg-slate-300 focus:shadow-[0_4px_9px_-4px_#3b71ca] focus:ring-0 active:bg-slate-300"
                           @click="$refs.patient_or_relative_signature.clear()"
                         >
                           Clear
                         </button>
+                        <span
+                          v-if="!patient_or_relative_signature_locked"
+                          class="ml-1 cursor-pointer inline-block rounded border border-blue-400 bg-blue-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out"
+                          @click="patient_or_relative_signature_locked = true"
+                        >
+                          Lock
+                        </span>
+                        <span
+                          v-if="patient_or_relative_signature_locked"
+                          class="ml-1 cursor-pointer inline-block rounded border border-orange-400 bg-orange-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out"
+                          @click="patient_or_relative_signature_locked = false"
+                        >
+                          Unlock
+                        </span>
                       </div>
                     </div>
                     <div class="col-span-2">
@@ -4818,6 +4882,7 @@
                             ref="witness_one_signature"
                             :w="'600px'"
                             :h="'200px'"
+                            :disabled="witness_one_signature_locked"
                           />
                           <label
                             class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
@@ -4825,11 +4890,26 @@
                             Signature Here
                           </label>
                           <button
+                            v-if="!witness_one_signature_locked"
                             class="ml-1 inline-block rounded border border-slate-400 bg-slate-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out hover:bg-slate-300 hover:border-slate-400 hover:bg-slate-300 focus:bg-slate-300 focus:shadow-[0_4px_9px_-4px_#3b71ca] focus:ring-0 active:bg-slate-300"
                             @click="$refs.witness_one_signature.clear()"
                           >
                             Clear
                           </button>
+                          <span
+                            v-if="!witness_one_signature_locked"
+                            class="ml-1 cursor-pointer inline-block rounded border border-blue-400 bg-blue-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out"
+                            @click="witness_one_signature_locked = true"
+                          >
+                            Lock
+                          </span>
+                          <span
+                            v-if="witness_one_signature_locked"
+                            class="ml-1 cursor-pointer inline-block rounded border border-orange-400 bg-orange-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out"
+                            @click="witness_one_signature_locked = false"
+                          >
+                            Unlock
+                          </span>
                         </div>
                       </div>
 
@@ -4856,17 +4936,33 @@
                             ref="witness_two_signature"
                             :w="'600px'"
                             :h="'200px'"
+                            :disabled="witness_two_signature_locked"
                           />
                           <label
                             class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                             >Signature Here
                           </label>
                           <button
+                            v-if="!witness_two_signature_locked"
                             class="ml-1 inline-block rounded border border-slate-400 bg-slate-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out hover:bg-slate-300 hover:border-slate-400 hover:bg-slate-300 focus:bg-slate-300 focus:shadow-[0_4px_9px_-4px_#3b71ca] focus:ring-0 active:bg-slate-300"
                             @click="$refs.witness_two_signature.clear()"
                           >
                             Clear
                           </button>
+                          <span
+                            v-if="!witness_two_signature_locked"
+                            class="ml-1 cursor-pointer inline-block rounded border border-blue-400 bg-blue-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out"
+                            @click="witness_two_signature_locked = true"
+                          >
+                            Lock
+                          </span>
+                          <span
+                            v-if="witness_two_signature_locked"
+                            class="ml-1 cursor-pointer inline-block rounded border border-orange-400 bg-orange-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out"
+                            @click="witness_two_signature_locked = false"
+                          >
+                            Unlock
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -4928,6 +5024,12 @@ export default {
       id_address: '',
       showClearModal: false,
       received_by_signature_locked: false,
+      team_leader_signature_locked: false,
+      medical_facility_signature_locked: false,
+      responder_signature_locked: false,
+      patient_or_relative_signature_locked: false,
+      witness_one_signature_locked: false,
+      witness_two_signature_locked: false,
       teams: [],
       dispatch_date: "",
       category: "dispatch data",
