@@ -104,6 +104,14 @@
         >
           Filter
         </button>
+
+        <button
+          type="button"
+          class="mt-4 inline-block rounded bg-gray-400 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-gray-400 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-gray-400 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-gray-400 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+          @click="reset"
+        >
+          Reset
+        </button>
       </div>
 
       <div class="container mx-auto p-4">
@@ -177,6 +185,24 @@ export default {
           })
         });
       })
+    },
+    reset() {
+      this.dateRange = {
+        startDate: null,
+          endDate: null
+      };
+      this.location = [
+        'Other City', 'Arkong Bato', 'Bagbaguin', 'Balangkas', 'Bignay', 'Bisig', 'Canumay East',
+        'Canumay West', 'Coloong', 'Dalandanan', 'Gen T DeLeon', 'Isla', 'Karuhatan', 'Lawang Bato',
+        'Lingunan', 'Mabolo', 'Malanday', 'Malinta', 'Mapulang Lupa', 'Marulas', 'Maysan', 'Palasan',
+        'Parada', 'Pariancillo Villa', 'Paso De Blas', 'Pasolo', 'Poblacion', 'Pulo', 'Punturin',
+        'RinCon', 'Tagalag', 'Ugong', 'Viente Reales', 'Wawang Pulo'
+      ];
+      this.emergencyCase = ['ems', 'fire', 'va', 'mt', 'sar'];
+      this.gender = ['male', 'female'];
+      this.team = [1, 2, 3, 4];
+
+      this.filter();
     },
   }
 };
