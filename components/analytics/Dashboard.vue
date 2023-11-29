@@ -115,24 +115,15 @@
           </tr>
           </thead>
           <tbody>
-          <!-- Example Row 1 -->
-          <tr>
-            <td class="py-2 px-4 border-b border-gray-200">City A</td>
-            <td class="py-2 px-4 border-b border-gray-200">100</td>
-          </tr>
 
-          <!-- Example Row 2 -->
-          <tr>
-            <td class="py-2 px-4 border-b border-gray-200">City B</td>
-            <td class="py-2 px-4 border-b border-gray-200">75</td>
+          <tr v-for="(item, index) in fetchedRows">
+            <td class="py-2 px-4 border-b border-gray-200 text-center">{{ item.incident_location }}</td>
+            <td class="py-2 px-4 border-b border-gray-200 text-center">{{ item.count }}</td>
           </tr>
-
-          <!-- Add more rows as needed -->
 
           </tbody>
         </table>
       </div>
-
     </div>
   </div>
 </template>
@@ -156,15 +147,36 @@ export default {
       ],
       emergencyCase: ['ems', 'fire', 'va', 'mt', 'sar'],
       gender: ['male', 'female'],
-      team: [1, 2, 3, 4, 5],
+      team: [1, 2, 3, 4],
+      fetchedRows: [],
     }
+  },
+  fetch() {
+    this.filter()
   },
   mounted() {
     initTE({ Ripple, Select, Dropdown });
   },
   methods: {
     filter() {
-      //  build up the URL here
+
+      const params = {
+        location: this.location,
+        emergencyCase: this.emergencyCase,
+        gender: this.gender,
+        team: this.team,
+        dateRange: this.dateRange
+      };
+
+      this.$axios.post(`pcr/report/filter`, params).then((response) => {
+        this.fetchedRows = [];
+        response.data.return.map((result) => {
+          this.fetchedRows.push({
+            incident_location: result.incident_location,
+            count: result.count,
+          })
+        });
+      })
     },
   }
 };
