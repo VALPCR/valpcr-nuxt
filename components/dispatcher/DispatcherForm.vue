@@ -348,6 +348,7 @@ import { Modal, initTE, Ripple, Input, Datepicker, Select } from "tw-elements";
 export default {
   data() {
     return {
+      id_address: '',
       role: "dispatcher",
       suffix: "",
       first_name: "",
@@ -378,6 +379,9 @@ export default {
   methods: {
     register() {
       const params = {
+        user_name: this.$auth.user.email,
+        user_role: this.$auth.user.role,
+        ip_address: this.id_address,
         team_id: parseInt(this.team_id),
         suffix: this.suffix,
         first_name: this.first_name,
@@ -401,6 +405,7 @@ export default {
       this.$axios
         .post("user/register", params)
         .then(() => {
+          this.ip_address = "";
           this.suffix = "";
           this.first_name = "";
           this.middle_name = "";
