@@ -1049,6 +1049,7 @@ export default {
               mt_barangay: this.mt_barangay,
               remarks: this.remarks,
               assignedEmr: this.assignedEmr,
+              dispatchId: this.$auth.user.id,
             };
 
             this.$axios.post("pcr/register", params).then(() => {
