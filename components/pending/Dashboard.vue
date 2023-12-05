@@ -147,13 +147,15 @@ export default {
             call: pcr.call_receive !== null ? pcr.call_receive : "",
             arrival: pcr.arrived_at,
             ambulance: pcr.ambulance !== null ? pcr.ambulance : "",
-            created:
+            created: this.capitalize(pcr.category) === 'Dispatch data' && pcr.dispatch_pcr !== null ?
+              pcr.dispatch_pcr.user.first_name +
+              " " +
+              pcr.dispatch_pcr.user.last_name + " (Dispatcher)"
+              :
               pcr.user_pcr.user.first_name +
               " " +
               pcr.user_pcr.user.last_name +
-              " (" +
-              (pcr.user_pcr.user.role === "emr" ? "Responder" : "Dispatcher") +
-              ")",
+              " (Responder)",
             category: this.capitalize(pcr.category),
           })
         );
