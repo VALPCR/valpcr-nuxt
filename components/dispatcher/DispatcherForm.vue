@@ -8,9 +8,10 @@
     aria-modal="true"
     role="dialog"
   >
+    <ToastMessage v-if="showToast" />
     <div
       data-te-modal-dialog-ref
-      class="pointer-events-none relative w-auto translate-y-[-50px] opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:max-w-[500px] min-[992px]:max-w-[800px] z-1"
+      class="pointer-events-none relative w-auto translate-y-[-50px] opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-14 min-[576px]:max-w-[500px] min-[992px]:max-w-[950px] z-1"
     >
       <div
         class="pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600"
@@ -20,7 +21,7 @@
         >
           <!--Modal title-->
           <h5
-            class="text-xl font-medium leading-normal text-white dark:text-neutral-200"
+            class="text-xl font-bold leading-normal text-white dark:text-neutral-200"
             id="dispatcherModalXllLabel"
           >
             Dispatcher Registration
@@ -50,153 +51,71 @@
         </div>
 
         <!--Modal body-->
-        <div class="relative p-4">
-          <form>
-            <h6
-              class="mb-3 mt-2 ml-1 text-base font-medium leading-tight text-secondary"
-            >
-              Basic Information
-            </h6>
-            <div
-              class="grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-4"
-            >
-              <div class="relative mb-1" data-te-input-wrapper-init>
-                <input
-                  v-model="suffix"
-                  type="text"
-                  class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                  id="suffix"
-                  aria-describedby="suffix"
-                  placeholder="Suffix(e.g. Sr., Jr., III)"
-                />
-                <label
-                  for="suffix"
-                  class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                >
-                  Suffix(e.g. Sr., Jr., III)
-                </label>
-              </div>
+        <div class="relative p-8 min-h-[400px] gap-4">
+          <h6
+            class="mb-3 mt-2 ml-1 text-lg font-medium leading-tight text-dark-1 col-span-3"
+          >
+            Basic Information
+          </h6>
+          
+          
+          <div
+            class="grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-4 mt-6"
+          >
 
-              <div class="relative mb-1" data-te-input-wrapper-init>
-                <input
-                  v-model="first_name"
-                  type="text"
-                  class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                  id="firstName"
-                  aria-describedby="firstName"
-                  placeholder="First Name"
-                  required
-                />
-                <label
-                  for="firstName"
-                  class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                >
-                  First Name
-                  <span class="text-red-600 font-bold"> * </span>
-                </label>
-              </div>
+          <div class="relative mb-1">
+              <label for="firstName" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">First Name</label>
+              <input v-model="first_name" type="text" pattern="[A-Za-z]+" oninput="this.value = this.value.replace(/[^A-Za-z]+/g, '');" id="firstName" placeholder="Juan" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+          </div>
 
-              <div class="relative mb-1" data-te-input-wrapper-init>
-                <input
-                  v-model="middle_name"
-                  type="text"
-                  class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                  id="midName"
-                  aria-describedby="midName"
-                  placeholder="Middle Name"
-                  required
-                />
-                <label
-                  for="midName"
-                  class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                >
-                  Middle Name
-                </label>
-              </div>
+          <div class="relative mb-1">
+              <label for="midName" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Middle Name</label>
+              <input v-model="middle_name" type="text" pattern="[A-Za-z]+" oninput="this.value = this.value.replace(/[^A-Za-z]+/g, '');" id="midName" placeholder="Santos" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+          </div>
 
-              <div class="relative mb-1" data-te-input-wrapper-init>
-                <input
-                  v-model="last_name"
-                  type="text"
-                  class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                  id="lastName"
-                  aria-describedby="lastName"
-                  placeholder="Last Name"
-                  required
-                />
-                <label
-                  for="lastName"
-                  class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                >
-                  Last Name
-                  <span class="text-red-600 font-bold"> * </span>
-                </label>
-              </div>
+          <div class="relative mb-1">
+              <label for="lastName" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Surname</label>
+              <input v-model="last_name" type="text" pattern="[A-Za-z]+" oninput="this.value = this.value.replace(/[^A-Za-z]+/g, '');" id="lastName" placeholder="Dela Cruz" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+          </div>
 
-              <select
-                v-model="gender"
-                data-te-select-init
-                class="w-full bg-neutral-50"
-                required
-              >
-                <option selected>
-                  Gender
-                  <span class="text-red-600 font-bold"> * </span>
-                </option>
+          <div class="relative mb-1">
+              <label for="suffix" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Suffix</label>
+              <input v-model="suffix" type="text" pattern="[A-Za-z0-9\s]+" oninput="this.value = this.value.replace(/[^A-Za-z]+/g, '');" id="suffix" placeholder="Sr. / Jr. / III" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+          </div>
+
+
+            <div class="flex-col relative mb-1"> 
+              <label for="gender" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Gender</label>
+              <select v-model="gender" id="gender" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+                <option value="userGender" selected>Gender</option>
                 <option value="female">Female</option>
                 <option value="male">Male</option>
               </select>
-
-              <div
-                class="relative mb-3"
-                data-te-datepicker-init
-                data-te-format="dd, mmm, yyyy"
-                data-te-input-wrapper-init
-              >
-                <input
-                  v-model="birthdate"
-                  type="text"
-                  class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                  placeholder="Select a date"
-                  required
-                />
-                <label
-                  class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                >
-                  Birthdate
-                  <span class="text-red-600 font-bold"> * </span>
-                </label>
-              </div>
-
-              <div class="relative mb-3" data-te-input-wrapper-init>
-                <input
-                  v-model="age"
-                  type="text"
-                  class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                  id="age"
-                  aria-describedby="age"
-                  placeholder="Age"
-                  required
-                />
-                <label
-                  for="age"
-                  class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                >
-                  Age
-                  <span class="text-red-600 font-bold"> * </span>
-                </label>
-              </div>
-
-              <select
-                v-model="team_id"
-                data-te-select-init
-                class="w-full bg-neutral-50"
+            </div>
+            
+            <div
+              class="relative mb-1"
+            >
+              <label for="birthdate" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Date of Birth</label>
+              <input
+                v-model="birthdate"
+                type="date"
+                id="birthdate"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 required
-              >
-                <option selected value="1">
-                  Team
-                  <span class="text-red-600 font-bold"> * </span>
-                </option>
+                @input="calculateAge"
+              />
+            </div>
+
+            <div class="relative mb-1">
+                <label for="age" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Age</label>
+                <input v-model="age" type="text" id="age" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+            </div>
+
+            <div class="flex-col relative mb-1"> 
+              <label for="teamId" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Team</label>
+              <select v-model="team_id" id="teamId" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+                <option value="selTeam" selected>Select Team</option>
                 <option
                   v-for="(item, index) in teams"
                   :key="index"
@@ -205,20 +124,20 @@
                   {{ item.name }}
                 </option>
               </select>
+            </div>
 
-              <select v-model="city" data-te-select-init class="bg-neutral-50">
+            <div class="flex-col relative mb-1"> 
+              <label for="userCity" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">City</label>
+              <select v-model="city" id="userCity" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
                 <option value="Valenzuela">City of Valenzuela</option>
               </select>
+            </div>
 
-              <select
-                v-model="barangay"
-                data-te-select-init
-                class="bg-neutral-50"
-                required
-              >
+            <div class="flex-col relative mb-1"> 
+              <label for="userBrgy" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Barangay</label>
+              <select v-model="barangay" id="userBrgy" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
                 <option selected value="1">
-                  Select Barangay
-                  <span class="text-red-600 font-bold"> * </span>
+                  Barangay
                 </option>
                 <option value="Arkong Bato">Arkong Bato</option>
                 <option value="Bagbaguin">Bagbaguin</option>
@@ -253,68 +172,42 @@
                 <option value="Viente Reales">Viente Reales</option>
                 <option value="Wawang Pulo">Wawang Pulo</option>
               </select>
+            </div>
+          
+            <div class="relative mb-1 col-span-2">
+                <label for="streetAddress" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Street Address</label>
+                <input v-model="street" type="text" id="streetAddress" placeholder="# Street/Subdivision" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+            </div>
 
-              <div class="relative mb-1 col-span-2" data-te-input-wrapper-init>
-                <input
-                  v-model="street"
-                  type="text"
-                  class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                  id="streetAddress"
-                  aria-describedby="streetAddress"
-                  placeholder="Street Address"
-                  required
-                />
-                <label
-                  for="streetAddress"
-                  class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                >
-                  Street Address
-                  <span class="text-red-600 font-bold"> * </span>
-                </label>
-              </div>
 
-              <div
-                class="relative mb-1 bg-neutral-50 flex flex-wrap items-stretch"
-                required
-              >
-                <span
-                  class="flex items-center whitespace-nowrap rounded-l border border-r-0 border-solid border-neutral-300 px-2 py-[0.15rem] text-center text-sm font-normal leading-[1.3] text-neutral-700 dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 md:text-sm"
-                >
-                  +63
-                </span>
-                <input
-                  v-model="phone"
-                  type="tel"
-                  id="contactNumber"
-                  name="contactNumber"
-                  class="relative m-0 block w-[1px] min-w-0 flex-auto rounded-r border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-sm font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary md:text-sm"
-                  pattern="[0-9]*"
-                  inputmode="numeric"
-                  maxlength="11"
-                  required
-                />
-              </div>
-
-              <div class="relative mb-1 col-span-2" data-te-input-wrapper-init>
-                <input
-                  v-model="email"
-                  type="email"
-                  class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                  id="email"
-                  aria-describedby="email"
-                  placeholder="Email"
-                  required
-                />
-                <label
-                  for="email"
-                  class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                >
-                  Email
-                  <span class="text-red-600 font-bold"> * </span>
-                </label>
+           
+            <div class="relative mb-1 col-span-2">
+              <label for="phone-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Contact Number</label>
+              <div class="flex items-center">
+                <button class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-s-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600" type="button">
+                +63 
+                </button>
+                <div class="relative w-full">
+                    <input v-model="phone" type="tel" inputmode="numeric" pattern="[0-9]*" oninput="this.value = this.value.replace(/[^0-9]/g, '');" id="phone-input" maxlength="11" class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-e-lg border-s-0 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-s-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500" placeholder="09123456789" required>
+                </div>
               </div>
             </div>
-          </form>
+            
+                                            
+            <div class="relative mb-1 col-span-2"> 
+              <label for="input-group-1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
+              <div class="relative mb-6">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                  <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
+                      <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"/>
+                      <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"/>
+                  </svg>
+                </div>
+                <input v-model="email" type="email" id="input-group-1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@example.com">
+              </div>
+            </div>
+            
+          </div>
         </div>
 
         <div
@@ -323,7 +216,7 @@
           <button
             @click="clear"
             type="button"
-            class="ml-1 inline-block rounded border border-slate-400 bg-slate-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out hover:bg-slate-300 hover:border-slate-400 hover:bg-slate-300 focus:bg-slate-300 focus:shadow-[0_4px_9px_-4px_#3b71ca] focus:ring-0 active:bg-slate-300"
+            class="ml-1 inline-block rounded border border-slate-200 bg-slate-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-dark-1 transition duration-150 ease-in-out hover:bg-slate-300 hover:border-slate-400 hover:bg-slate-300 focus:bg-slate-300 focus:shadow-[0_4px_9px_-4px_#3b71ca] focus:ring-0 active:bg-slate-300"
             data-te-ripple-init
             data-te-ripple-color="light"
           >
@@ -339,28 +232,36 @@
         </div>
       </div>
     </div>
+    
+    
   </div>
 </template>
 
 <script>
-import { Modal, initTE, Ripple, Input, Datepicker, Select } from "tw-elements";
+import ToastMessage from "../ToastMessage"
+import { Toast, Modal, initTE, Ripple, Input, Datepicker, Select } from "tw-elements";
+
 
 export default {
+  components: {
+    ToastMessage
+  },
   data() {
     return {
+      showToast: false,
       id_address: '',
       role: "dispatcher",
       suffix: "",
       first_name: "",
       middle_name: "",
       last_name: "",
-      gender: "",
+      gender: "userGender",
       phone: "",
       birthdate: "",
       email: "",
-      team_id: "1",
+      team_id: "selTeam",
       city: "Valenzuela",
-      barangay: "",
+      barangay: "1",
       street: "",
       age: "",
       teams: [],
@@ -374,7 +275,7 @@ export default {
     });
   },
   mounted() {
-    initTE({ Ripple, Modal, Input, Datepicker, Select });
+    initTE({ Toast, Ripple, Modal, Input, Datepicker, Select });
   },
   methods: {
     register() {
@@ -401,6 +302,9 @@ export default {
         street: this.street,
       };
 
+      // this.showToast = true;
+      // this.$store.commit('setToastMessage', "Account successfully created!");
+
       this.$nuxt.$loading.start();
       this.$axios
         .post("user/register", params)
@@ -416,12 +320,18 @@ export default {
           this.age = "";
           this.email = "";
           this.role = "dispatcher";
-          this.team_id = "1";
+          this.team_id = "selTeam";
           this.city = "Valenzuela";
           this.barangay = "";
           this.street = "";
-          this.$emit("refresh");
-          location.reload();
+          
+          this.showToast = true;
+          this.$store.commit('setToastMessage', "Account successfully created");
+          
+          setTimeout(() => {
+              this.$emit("refresh");
+              location.reload();
+          }, 3000);
         })
         .finally(() => {
           this.$nuxt.$loading.finish();
@@ -429,6 +339,9 @@ export default {
     },
     capitalize(word) {
       return word.replace(/^\w/, (c) => c.toUpperCase());
+    },
+    toast() {
+      return 
     },
     clear() {
       this.suffix = "";
@@ -441,11 +354,40 @@ export default {
       this.age = "";
       this.email = "";
       this.role = "dispatcher";
-      this.team_id = "1";
+      this.team_id = "selTeam";
       this.city = "Valenzuela";
       this.barangay = "";
       this.street = "";
     },
+    calculateAge: function () {
+      if (this.birthdate) {
+        const today = new Date();
+        const birthdate = new Date(this.birthdate);
+        let age = today.getFullYear() - birthdate.getFullYear();
+
+        // Check if the birthdate for this year has not occurred yet
+        if (
+          today.getMonth() < birthdate.getMonth() ||
+          (today.getMonth() === birthdate.getMonth() &&
+            today.getDate() < birthdate.getDate())
+        ) {
+          age--;
+        }
+
+        // Convert age to string before assigning to this.age
+        this.age = age.toString();
+
+        // Update the age input field
+        document.getElementById("age").value = this.age;
+      } else {
+        this.age = null;
+
+        // Clear the age input field
+        document.getElementById("age").value = "";
+      }
+    },
+
   },
 };
+
 </script>
