@@ -12,9 +12,13 @@ export const state = () => ({
   editDispatcherModalXlArg: undefined,
   newlyCreatedPcr: [],
   pcrId: '',
+  toastMessage: '',
 });
 
 export const getters = {
+  getToastMessage(state) {
+    return state.toastMessage;
+  },
   getSideBarState(state) {
     return state.isSidebarOpen;
   },
@@ -51,6 +55,9 @@ export const getters = {
 };
 
 export const mutations = {
+  setToastMessage(state, value) {
+    state.toastMessage = value;
+  },
   setSideBarState(state, value) {
     state.isSidebarOpen = value;
   },
