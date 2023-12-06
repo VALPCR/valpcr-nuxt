@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-[#EFEFEF]">
+  <div class="min-h-screen">
     <div class="m-5">
       <div v-if="role === 'head'" class="flex flex-col items-end">
         <button
@@ -113,7 +113,7 @@ export default {
       emptyRows: [],
       columns: [
         {
-          label: "NAME",
+          label: "PATIENT",
           field: "name",
         },
         {

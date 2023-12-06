@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-[#EFEFEF]">
+  <div class="min-h-screen">
     <div class="m-1">
       <div class="p-4">
         <div class="grid grid-cols-5 gap-4">

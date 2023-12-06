@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-[#EFEFEF]">
+  <div class="min-h-screen">
     <div class="m-5">
       <vue-good-table
         :columns="columns"
