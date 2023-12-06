@@ -239,7 +239,7 @@ export default {
   },
   data() {
     return {
-      ip_address: this.id_address,
+      id_address: '',
       showToast: false,
       dispatcherFields: [],
       role: "dispatcher",
