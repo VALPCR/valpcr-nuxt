@@ -2,7 +2,7 @@
   <div
     :class="{
       'w-1/5': $store.getters['getSideBarState'],
-      'w-12': !$store.getters['getSideBarState'],
+      'w-15': !$store.getters['getSideBarState'],
     }"
     class="bg-[#131A2D]"
   >
