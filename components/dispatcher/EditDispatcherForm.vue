@@ -73,8 +73,8 @@
               <input
                 v-model="first_name"
                 type="text"
-                pattern="[A-Za-z]+"
-                oninput="this.value = this.value.replace(/[^A-Za-z]+/g, '');"
+                pattern="[A-Za-z\s]+"
+                oninput="this.value = this.value.replace(/[^A-Za-z\s]+/g, '');"
                 id="firstName"
                 placeholder="Juan"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -91,8 +91,8 @@
               <input
                 v-model="middle_name"
                 type="text"
-                pattern="[A-Za-z]+"
-                oninput="this.value = this.value.replace(/[^A-Za-z]+/g, '');"
+                pattern="[A-Za-z\s]+"
+                oninput="this.value = this.value.replace(/[^A-Za-z\s]+/g, '');"
                 id="midName"
                 placeholder="Santos"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -109,8 +109,8 @@
               <input
                 v-model="last_name"
                 type="text"
-                pattern="[A-Za-z]+"
-                oninput="this.value = this.value.replace(/[^A-Za-z]+/g, '');"
+                pattern="[A-Za-z\s]+"
+                oninput="this.value = this.value.replace(/[^A-Za-z\s]+/g, '');"
                 id="lastName"
                 placeholder="Dela Cruz"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
