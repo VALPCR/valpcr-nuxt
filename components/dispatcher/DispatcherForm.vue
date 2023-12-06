@@ -65,7 +65,7 @@
 
           <div class="relative mb-1">
               <label for="firstName" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">First Name</label>
-              <input v-model="first_name" type="text" pattern="[A-Za-z\s]+" oninput="this.value = this.value.replace(/[^A-Za-z\s]+/g, '');" id="firstName" placeholder="Juan" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+              <input v-model="first_name" ref="first_name" type="text" pattern="[A-Za-z\s]+" oninput="this.value = this.value.replace(/[^A-Za-z\s]+/g, '');" id="firstName" placeholder="Juan" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
           </div>
 
           <div class="relative mb-1">
@@ -75,7 +75,7 @@
 
           <div class="relative mb-1">
               <label for="lastName" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Surname</label>
-              <input v-model="last_name" type="text" pattern="[A-Za-z\s]+" oninput="this.value = this.value.replace(/[^A-Za-z\s]+/g, '');" id="lastName" placeholder="Dela Cruz" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+              <input v-model="last_name" ref="last_name" type="text" pattern="[A-Za-z\s]+" oninput="this.value = this.value.replace(/[^A-Za-z\s]+/g, '');" id="lastName" placeholder="Dela Cruz" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
           </div>
 
           <div class="relative mb-1">
@@ -86,7 +86,7 @@
 
             <div class="flex-col relative mb-1"> 
               <label for="gender" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Gender</label>
-              <select v-model="gender" id="gender" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+              <select v-model="gender" id="gender" ref="gender" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
                 <option value="userGender" selected>Gender</option>
                 <option value="female">Female</option>
                 <option value="male">Male</option>
@@ -99,6 +99,7 @@
               <label for="birthdate" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Date of Birth</label>
               <input
                 v-model="birthdate"
+                ref="birthdate"
                 type="date"
                 id="birthdate"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -109,12 +110,12 @@
 
             <div class="relative mb-1">
                 <label for="age" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Age</label>
-                <input v-model="age" type="text" id="age" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+                <input v-model="age" ref="age" type="text" id="age" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
             </div>
 
             <div class="flex-col relative mb-1"> 
               <label for="teamId" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Team</label>
-              <select v-model="team_id" id="teamId" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+              <select v-model="team_id" id="teamId" ref="team_id" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
                 <option value="selTeam" selected>Select Team</option>
                 <option
                   v-for="(item, index) in teams"
@@ -135,7 +136,7 @@
 
             <div class="flex-col relative mb-1"> 
               <label for="userBrgy" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Barangay</label>
-              <select v-model="barangay" id="userBrgy" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+              <select v-model="barangay" id="userBrgy" ref="barangay" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
                 <option selected value="1">
                   Barangay
                 </option>
@@ -176,7 +177,7 @@
           
             <div class="relative mb-1 col-span-2">
                 <label for="streetAddress" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Street Address</label>
-                <input v-model="street" type="text" id="streetAddress" placeholder="# Street/Subdivision" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+                <input v-model="street" type="text" ref="street" id="streetAddress" placeholder="# Street/Subdivision" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
             </div>
 
 
@@ -188,7 +189,7 @@
                 +63 
                 </button>
                 <div class="relative w-full">
-                    <input v-model="phone" type="tel" inputmode="numeric" pattern="[0-9]*" oninput="this.value = this.value.replace(/[^0-9]/g, '');" id="phone-input" maxlength="11" class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-e-lg border-s-0 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-s-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500" placeholder="09123456789" required>
+                    <input v-model="phone" ref="phone" type="tel" inputmode="numeric" pattern="[0-9]*" oninput="this.value = this.value.replace(/[^0-9]/g, '');" id="phone-input" maxlength="11" class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-e-lg border-s-0 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-s-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500" placeholder="09123456789" required>
                 </div>
               </div>
             </div>
@@ -203,7 +204,7 @@
                       <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"/>
                   </svg>
                 </div>
-                <input v-model="email" type="email" id="input-group-1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@example.com">
+                <input v-model="email" ref="email" type="email" id="input-group-1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@example.com">
               </div>
             </div>
             
@@ -265,6 +266,7 @@ export default {
       street: "",
       age: "",
       teams: [],
+      requiredFields: ['first_name', 'last_name', 'gender', 'birthdate', 'age', 'team_id', 'city', 'barangay', 'street', 'phone', 'email']
     };
   },
   fetch() {
@@ -279,6 +281,20 @@ export default {
   },
   methods: {
     register() {
+      // Check for missing required fields
+      const missingFields = this.requiredFields.filter(field => !this[field]);
+
+      // Highlight missing fields with red outlines
+      if (missingFields.length > 0) {
+        missingFields.forEach(field => {
+          this.$refs[field].classList.add('border-red-500');
+        });
+
+        // You may also want to show an error message to the user
+        console.error('Please fill in all required fields.');
+        return; // Do not proceed with registration if required fields are missing
+      }
+
       const params = {
         user_name: this.$auth.user.email,
         user_role: this.$auth.user.role,
@@ -391,3 +407,12 @@ export default {
 };
 
 </script>
+
+<style scoped>
+/* Add this style to highlight missing fields */
+.border-red-500 {
+  border-color: rgb(244 63 94) !important;
+  border-width: 1.5px;
+
+}
+</style>
