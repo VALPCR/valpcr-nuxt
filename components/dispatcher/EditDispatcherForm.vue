@@ -60,8 +60,8 @@
           >
             Basic Information
           </h6>
-        
-          
+
+
           <div
             class="grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-4 mt-6"
           >
@@ -87,7 +87,7 @@
           </div>
 
 
-            <div class="flex-col relative mb-1"> 
+            <div class="flex-col relative mb-1">
               <label for="gender" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Gender</label>
               <select v-model="gender" id="gender" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
                 <option value="userGender" selected>Gender</option>
@@ -95,7 +95,7 @@
                 <option value="male">Male</option>
               </select>
             </div>
-            
+
             <div
               class="relative mb-1"
             >
@@ -116,7 +116,7 @@
             </div>
 
             <div class="flex-col relative mb-1">
-              <label for="teamId" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Team</label> 
+              <label for="teamId" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Team</label>
               <select v-model="team_id" id="teamId" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required disabled>
                 <option value="selTeam" selected>Select Team</option>
                 <option
@@ -129,14 +129,14 @@
               </select>
             </div>
 
-            <div class="flex-col relative mb-1"> 
+            <div class="flex-col relative mb-1">
               <label for="userCity" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">City</label>
               <select v-model="city" id="userCity" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
                 <option value="Valenzuela">City of Valenzuela</option>
               </select>
             </div>
 
-            <div class="flex-col relative mb-1"> 
+            <div class="flex-col relative mb-1">
               <label for="userBrgy" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Barangay</label>
               <select v-model="barangay" id="userBrgy" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
                 <option selected value="1">
@@ -176,28 +176,28 @@
                 <option value="Wawang Pulo">Wawang Pulo</option>
               </select>
             </div>
-          
+
             <div class="relative mb-1 col-span-2">
                 <label for="streetAddress" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Street Address</label>
                 <input v-model="street" type="text" id="streetAddress" placeholder="# Street/Subdivision" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
             </div>
 
 
-           
+
             <div class="relative mb-1 col-span-2">
               <label for="phone-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Contact Number</label>
               <div class="flex items-center">
                 <button class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-s-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600" type="button">
-                +63 
+                +63
                 </button>
                 <div class="relative w-full">
                     <input v-model="phone" type="tel" inputmode="numeric" pattern="[0-9]*" oninput="this.value = this.value.replace(/[^0-9]/g, '');" id="phone-input" maxlength="11" class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-e-lg border-s-0 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-s-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500" placeholder="09123456789" required>
                 </div>
               </div>
             </div>
-            
-                                            
-            <div class="relative mb-1 col-span-2"> 
+
+
+            <div class="relative mb-1 col-span-2">
               <label for="input-group-1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
               <div class="relative mb-6">
                 <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
@@ -209,7 +209,7 @@
                 <input v-model="email" type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@example.com" disabled>
               </div>
             </div>
-            
+
           </div>
         </div>
 
@@ -239,6 +239,7 @@ export default {
   },
   data() {
     return {
+      id_address: '',
       showToast: false,
       dispatcherFields: [],
       role: "dispatcher",
@@ -306,61 +307,71 @@ export default {
       this.$store.commit("setEditDispatcherModalXlArg", undefined);
     },
     update() {
-      const params = {
-        id: this.id,
-        suffix: this.suffix,
-        first_name: this.first_name,
-        middle_name: this.middle_name,
-        last_name: this.last_name,
-        gender: this.gender,
-        phone: this.phone,
-        birthdate:
-          this.birthdate !== ""
-            ? new Date(this.birthdate).toLocaleDateString("en-US")
-            : (this.birthdate = ""),
-        age: this.age,
-        city: this.city,
-        barangay: this.barangay,
-        street: this.street,
-      };
+      fetch('https://ipinfo.io/json?token=5d9e0b426ac4f6')
+        .then(response => response.json())
+        .then((response) => {
+          this.ip_address = response.ip;
 
-      this.$nuxt.$loading.start();
-      this.$axios
-        .post("user/update", params)
-        .then(() => {
-          this.suffix = "";
-          this.id = "";
-          this.first_name = "";
-          this.middle_name = "";
-          this.last_name = "";
-          this.gender = "";
-          this.phone = "";
-          this.birthdate = "";
-          this.age = "";
-          this.email = "";
-          this.role = "dispatcher";
-          this.team_id = "0";
-          this.city = "Valenzuela";
-          this.barangay = "";
-          this.street = "";
+          const params = {
+            user_name: this.$auth.user.email,
+            user_role: this.$auth.user.role,
+            ip_address: this.id_address,
+            id: this.id,
+            suffix: this.suffix,
+            first_name: this.first_name,
+            middle_name: this.middle_name,
+            last_name: this.last_name,
+            gender: this.gender,
+            phone: this.phone,
+            birthdate:
+              this.birthdate !== ""
+                ? new Date(this.birthdate).toLocaleDateString("en-US")
+                : (this.birthdate = ""),
+            age: this.age,
+            city: this.city,
+            barangay: this.barangay,
+            street: this.street,
+          };
 
-          this.showToast = true;
-          this.$store.commit('setToastMessage', "Account successfully updated!");
-          
-          setTimeout(() => {
-              this.$emit("refresh");
-              location.reload();
-          }, 3000);
+          this.$nuxt.$loading.start();
+          this.$axios
+            .post("user/update", params)
+            .then(() => {
+              this.suffix = "";
+              this.id = "";
+              this.first_name = "";
+              this.middle_name = "";
+              this.last_name = "";
+              this.gender = "";
+              this.phone = "";
+              this.birthdate = "";
+              this.age = "";
+              this.email = "";
+              this.role = "dispatcher";
+              this.team_id = "0";
+              this.city = "Valenzuela";
+              this.barangay = "";
+              this.street = "";
+
+              this.showToast = true;
+              this.$store.commit('setToastMessage', "Account successfully updated!");
+
+              setTimeout(() => {
+                this.$emit("refresh");
+                location.reload();
+              }, 3000);
+            })
+            .finally(() => {
+              this.$nuxt.$loading.finish();
+            });
         })
-        .finally(() => {
-          this.$nuxt.$loading.finish();
-        });
+        .catch(error => console.error('Error fetching IP address:', error));
     },
     capitalize(word) {
       return word.replace(/^\w/, (c) => c.toUpperCase());
     },
     toast() {
-      return 
+      return
     },
     calculateAge: function () {
       if (this.birthdate) {
