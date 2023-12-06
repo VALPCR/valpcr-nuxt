@@ -513,7 +513,7 @@ export default {
               setTimeout(() => {
                 this.$emit("refresh");
                 location.reload();
-              }, 3000);
+              }, 1500);
             })
             .finally(() => {
               this.$nuxt.$loading.finish();
