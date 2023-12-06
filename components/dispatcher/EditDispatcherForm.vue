@@ -313,6 +313,9 @@ export default {
           this.ip_address = response.ip;
 
           const params = {
+            user_name: this.$auth.user.email,
+            user_role: this.$auth.user.role,
+            ip_address: this.id_address,
             id: this.id,
             suffix: this.suffix,
             first_name: this.first_name,
