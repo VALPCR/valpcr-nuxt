@@ -398,7 +398,7 @@ import { Modal, initTE, Ripple, Input, Datepicker, Select } from "tw-elements";
 export default {
   data() {
     return {
-      id_address: '',
+      id_address: "",
       role: "emr",
       suffix: "",
       first_name: "",
@@ -431,10 +431,10 @@ export default {
   },
   methods: {
     register() {
-      fetch('https://ipinfo.io/json?token=5d9e0b426ac4f6')
-        .then(response => response.json())
+      fetch("https://ipinfo.io/json?token=5d9e0b426ac4f6")
+        .then((response) => response.json())
         .then((response) => {
-            this.id_address = response.ip;
+          this.id_address = response.ip;
 
           const params = {
             user_name: this.$auth.user.email,
@@ -488,7 +488,7 @@ export default {
               this.$nuxt.$loading.finish();
             });
         })
-        .catch(error => console.error('Error fetching IP address:', error));
+        .catch((error) => console.error("Error fetching IP address:", error));
     },
     capitalize(word) {
       return word.replace(/^\w/, (c) => c.toUpperCase());

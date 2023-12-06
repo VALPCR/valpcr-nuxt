@@ -66,7 +66,7 @@
               :autoApply="true"
               v-model="dateRange"
             >
-              <template v-slot:input="picker" style="min-width: 350px;">
+              <template v-slot:input="picker" style="min-width: 350px">
                 {{ picker.startDate }} - {{ picker.endDate }}
               </template>
             </date-range>
@@ -85,11 +85,7 @@
 
           <!-- GENDER -->
           <div class="col-span-1">
-            <select
-              v-model="gender"
-              data-te-select-init
-              multiple
-            >
+            <select v-model="gender" data-te-select-init multiple>
               <option value="male">Male</option>
               <option value="female">Female</option>
             </select>
@@ -117,18 +113,22 @@
       <div class="container mx-auto p-4">
         <table class="min-w-full bg-white border border-gray-200">
           <thead>
-          <tr>
-            <th class="py-2 px-4 border-b border-gray-200">Location</th>
-            <th class="py-2 px-4 border-b border-gray-200">Number of Cases</th>
-          </tr>
+            <tr>
+              <th class="py-2 px-4 border-b border-gray-200">Location</th>
+              <th class="py-2 px-4 border-b border-gray-200">
+                Number of Cases
+              </th>
+            </tr>
           </thead>
           <tbody>
-
-          <tr v-for="(item, index) in fetchedRows">
-            <td class="py-2 px-4 border-b border-gray-200 text-center">{{ item.incident_location }}</td>
-            <td class="py-2 px-4 border-b border-gray-200 text-center">{{ item.count }}</td>
-          </tr>
-
+            <tr v-for="(item, index) in fetchedRows">
+              <td class="py-2 px-4 border-b border-gray-200 text-center">
+                {{ item.incident_location }}
+              </td>
+              <td class="py-2 px-4 border-b border-gray-200 text-center">
+                {{ item.count }}
+              </td>
+            </tr>
           </tbody>
         </table>
       </div>
@@ -144,36 +144,64 @@ export default {
     return {
       dateRange: {
         startDate: null,
-        endDate: null
+        endDate: null,
       },
       location: [
-        'Other City', 'Arkong Bato', 'Bagbaguin', 'Balangkas', 'Bignay', 'Bisig', 'Canumay East',
-        'Canumay West', 'Coloong', 'Dalandanan', 'Gen T DeLeon', 'Isla', 'Karuhatan', 'Lawang Bato',
-        'Lingunan', 'Mabolo', 'Malanday', 'Malinta', 'Mapulang Lupa', 'Marulas', 'Maysan', 'Palasan',
-        'Parada', 'Pariancillo Villa', 'Paso De Blas', 'Pasolo', 'Poblacion', 'Pulo', 'Punturin',
-        'RinCon', 'Tagalag', 'Ugong', 'Viente Reales', 'Wawang Pulo'
+        "Other City",
+        "Arkong Bato",
+        "Bagbaguin",
+        "Balangkas",
+        "Bignay",
+        "Bisig",
+        "Canumay East",
+        "Canumay West",
+        "Coloong",
+        "Dalandanan",
+        "Gen T DeLeon",
+        "Isla",
+        "Karuhatan",
+        "Lawang Bato",
+        "Lingunan",
+        "Mabolo",
+        "Malanday",
+        "Malinta",
+        "Mapulang Lupa",
+        "Marulas",
+        "Maysan",
+        "Palasan",
+        "Parada",
+        "Pariancillo Villa",
+        "Paso De Blas",
+        "Pasolo",
+        "Poblacion",
+        "Pulo",
+        "Punturin",
+        "RinCon",
+        "Tagalag",
+        "Ugong",
+        "Viente Reales",
+        "Wawang Pulo",
       ],
-      emergencyCase: ['ems', 'fire', 'va', 'mt', 'sar'],
-      gender: ['male', 'female'],
+      emergencyCase: ["ems", "fire", "va", "mt", "sar"],
+      gender: ["male", "female"],
       team: [1, 2, 3, 4],
       fetchedRows: [],
-    }
+    };
   },
   fetch() {
-    this.filter()
+    this.filter();
   },
   mounted() {
     initTE({ Ripple, Select, Dropdown });
   },
   methods: {
     filter() {
-
       const params = {
         location: this.location,
         emergencyCase: this.emergencyCase,
         gender: this.gender,
         team: this.team,
-        dateRange: this.dateRange
+        dateRange: this.dateRange,
       };
 
       this.$axios.post(`pcr/report/filter`, params).then((response) => {
@@ -182,28 +210,57 @@ export default {
           this.fetchedRows.push({
             incident_location: result.incident_location,
             count: result.count,
-          })
+          });
         });
-      })
+      });
     },
     reset() {
       this.dateRange = {
         startDate: null,
-          endDate: null
+        endDate: null,
       };
       this.location = [
-        'Other City', 'Arkong Bato', 'Bagbaguin', 'Balangkas', 'Bignay', 'Bisig', 'Canumay East',
-        'Canumay West', 'Coloong', 'Dalandanan', 'Gen T DeLeon', 'Isla', 'Karuhatan', 'Lawang Bato',
-        'Lingunan', 'Mabolo', 'Malanday', 'Malinta', 'Mapulang Lupa', 'Marulas', 'Maysan', 'Palasan',
-        'Parada', 'Pariancillo Villa', 'Paso De Blas', 'Pasolo', 'Poblacion', 'Pulo', 'Punturin',
-        'RinCon', 'Tagalag', 'Ugong', 'Viente Reales', 'Wawang Pulo'
+        "Other City",
+        "Arkong Bato",
+        "Bagbaguin",
+        "Balangkas",
+        "Bignay",
+        "Bisig",
+        "Canumay East",
+        "Canumay West",
+        "Coloong",
+        "Dalandanan",
+        "Gen T DeLeon",
+        "Isla",
+        "Karuhatan",
+        "Lawang Bato",
+        "Lingunan",
+        "Mabolo",
+        "Malanday",
+        "Malinta",
+        "Mapulang Lupa",
+        "Marulas",
+        "Maysan",
+        "Palasan",
+        "Parada",
+        "Pariancillo Villa",
+        "Paso De Blas",
+        "Pasolo",
+        "Poblacion",
+        "Pulo",
+        "Punturin",
+        "RinCon",
+        "Tagalag",
+        "Ugong",
+        "Viente Reales",
+        "Wawang Pulo",
       ];
-      this.emergencyCase = ['ems', 'fire', 'va', 'mt', 'sar'];
-      this.gender = ['male', 'female'];
+      this.emergencyCase = ["ems", "fire", "va", "mt", "sar"];
+      this.gender = ["male", "female"];
       this.team = [1, 2, 3, 4];
 
       this.filter();
     },
-  }
+  },
 };
 </script>

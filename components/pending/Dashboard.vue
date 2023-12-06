@@ -102,7 +102,7 @@ export default {
               "EMS 22",
               "EMS 23",
               "EMS 24",
-              "EMS 25"
+              "EMS 25",
             ],
             filterFn: this.columnFilterFn,
           },
@@ -147,15 +147,17 @@ export default {
             call: pcr.call_receive !== null ? pcr.call_receive : "",
             arrival: pcr.arrived_at,
             ambulance: pcr.ambulance !== null ? pcr.ambulance : "",
-            created: this.capitalize(pcr.category) === 'Dispatch data' && pcr.dispatch_pcr !== null ?
-              pcr.dispatch_pcr.user.first_name +
-              " " +
-              pcr.dispatch_pcr.user.last_name + " (Dispatcher)"
-              :
-              pcr.user_pcr.user.first_name +
-              " " +
-              pcr.user_pcr.user.last_name +
-              " (Responder)",
+            created:
+              this.capitalize(pcr.category) === "Dispatch data" &&
+              pcr.dispatch_pcr !== null
+                ? pcr.dispatch_pcr.user.first_name +
+                  " " +
+                  pcr.dispatch_pcr.user.last_name +
+                  " (Dispatcher)"
+                : pcr.user_pcr.user.first_name +
+                  " " +
+                  pcr.user_pcr.user.last_name +
+                  " (Responder)",
             category: this.capitalize(pcr.category),
           })
         );

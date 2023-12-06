@@ -101,7 +101,7 @@ export default {
               "EMS 22",
               "EMS 23",
               "EMS 24",
-              "EMS 25"
+              "EMS 25",
             ],
             filterFn: this.columnFilterFn,
           },
@@ -165,12 +165,18 @@ export default {
   },
   methods: {
     onRowClick(params) {
-      if (typeof params.event.target.classList[0] !== 'undefined' && params.event.target.classList[0].includes("restore")) {
+      if (
+        typeof params.event.target.classList[0] !== "undefined" &&
+        params.event.target.classList[0].includes("restore")
+      ) {
         const restorePcrModal = new Modal(
           document.getElementById("restorePcr")
         );
         restorePcrModal.show();
-        this.$store.commit('setPcrId', params.event.target.classList[0].split("_")[1])
+        this.$store.commit(
+          "setPcrId",
+          params.event.target.classList[0].split("_")[1]
+        );
       }
     },
   },

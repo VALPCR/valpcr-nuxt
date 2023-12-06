@@ -2,16 +2,20 @@
   <div class="min-h-screen bg-[#EFEFEF]">
     <div class="m-5">
       <div v-if="role === 'head'" class="flex flex-col items-end">
-        <button v-if="selectedRows.length > 0"
+        <button
+          v-if="selectedRows.length > 0"
           type="button"
           class="inline-block rounded bg-green-600 m-5 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-green-700 focus:bg-green-700 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
           @click="exportToPdf"
-        >Export
+        >
+          Export
         </button>
-        <button v-else
-                type="button"
-                class="inline-block rounded bg-gray-700 cursor-not-allowed m-5 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
-        >Export
+        <button
+          v-else
+          type="button"
+          class="inline-block rounded bg-gray-700 cursor-not-allowed m-5 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+        >
+          Export
         </button>
       </div>
 
@@ -31,7 +35,6 @@
         compactMode
         class="bg-white rounded shadow"
       >
-
         <div
           v-if="role === 'dispatcher' || role === 'emr'"
           slot="table-actions"
@@ -65,7 +68,9 @@
             v-if="role === 'emr' && columns[7].filterOptions.filterValue === ''"
             type="button"
             class="inline-block rounded bg-green-600 px-4 pb-1.5 pt-1.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-green-700 focus:bg-green-700 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
-            @click="columns[7].filterOptions.filterValue = `${$auth.user.first_name} ${$auth.user.last_name} (Responder)`"
+            @click="
+              columns[7].filterOptions.filterValue = `${$auth.user.first_name} ${$auth.user.last_name} (Responder)`
+            "
           >
             My PCR
           </button>
@@ -100,7 +105,7 @@ export default {
   },
   data() {
     return {
-      ip_address: '',
+      ip_address: "",
       isSidebarOpen: true,
       role: "",
       fetchedRows: [],
@@ -180,7 +185,7 @@ export default {
               "EMS 22",
               "EMS 23",
               "EMS 24",
-              "EMS 25"
+              "EMS 25",
             ],
             filterFn: this.columnFilterFn,
           },
@@ -206,7 +211,7 @@ export default {
   },
   fetch() {
     this.role = this.$auth.user.role;
-    if (this.role !== 'head' && this.role !== 'dispatcher') {
+    if (this.role !== "head" && this.role !== "dispatcher") {
       this.columns[7].filterOptions.filterValue = `${this.$auth.user.first_name} ${this.$auth.user.last_name} (Responder)`;
     }
     this.$axios.get("pcr/list?category=completed").then((response) => {
@@ -265,9 +270,7 @@ export default {
   },
   methods: {
     addPcr() {
-      const addModal = new Modal(
-        document.getElementById("patientFormMobile")
-      );
+      const addModal = new Modal(document.getElementById("patientFormMobile"));
       addModal.show();
     },
     onRowClick(params) {
@@ -281,26 +284,42 @@ export default {
           typeof params.event.target.classList[0].includes("restore") !==
           "undefined"
         ) {
-          if (!params.event.target.classList[0].includes("restore") && typeof params.event.target.classList[0].split("_")[1] !== 'undefined') {
-
-            fetch('https://ipinfo.io/json?token=5d9e0b426ac4f6')
-              .then(response => response.json())
+          if (
+            !params.event.target.classList[0].includes("restore") &&
+            typeof params.event.target.classList[0].split("_")[1] !==
+              "undefined"
+          ) {
+            fetch("https://ipinfo.io/json?token=5d9e0b426ac4f6")
+              .then((response) => response.json())
               .then((response) => {
                 this.ip_address = response.ip;
 
-                window.open(this.$config.baseURL + '/pcr/generate/single?id=' + params.event.target.classList[0].split("_")[1] + '&user_name=' + this.$auth.user.email + '&user_role=' + this.$auth.user.role + '&ip_address=' + this.ip_address, '_blank');
+                window.open(
+                  this.$config.baseURL +
+                    "/pcr/generate/single?id=" +
+                    params.event.target.classList[0].split("_")[1] +
+                    "&user_name=" +
+                    this.$auth.user.email +
+                    "&user_role=" +
+                    this.$auth.user.role +
+                    "&ip_address=" +
+                    this.ip_address,
+                  "_blank"
+                );
               })
-              .catch(error => console.error('Error fetching IP address:', error));
-
-
+              .catch((error) =>
+                console.error("Error fetching IP address:", error)
+              );
           } else {
             const archivePcrModal = new Modal(
               document.getElementById("archivePcr")
             );
             archivePcrModal.show();
-            this.$store.commit('setPcrId', params.event.target.classList[0].split("_")[1])
+            this.$store.commit(
+              "setPcrId",
+              params.event.target.classList[0].split("_")[1]
+            );
           }
-
         }
       } else {
         const editModal = new Modal(
@@ -319,17 +338,27 @@ export default {
       const ids = [];
       this.selectedRows.map((selected) => {
         return ids.push(selected.id);
-      })
+      });
 
-      fetch('https://ipinfo.io/json?token=5d9e0b426ac4f6')
-        .then(response => response.json())
+      fetch("https://ipinfo.io/json?token=5d9e0b426ac4f6")
+        .then((response) => response.json())
         .then((response) => {
           this.ip_address = response.ip;
 
-          window.open(this.$config.baseURL + '/pcr/generate/multiple?ids=' + ids + '&user_name=' + this.$auth.user.email + '&user_role=' + this.$auth.user.role + '&ip_address=' + this.ip_address, '_blank');
+          window.open(
+            this.$config.baseURL +
+              "/pcr/generate/multiple?ids=" +
+              ids +
+              "&user_name=" +
+              this.$auth.user.email +
+              "&user_role=" +
+              this.$auth.user.role +
+              "&ip_address=" +
+              this.ip_address,
+            "_blank"
+          );
         })
-        .catch(error => console.error('Error fetching IP address:', error));
-
+        .catch((error) => console.error("Error fetching IP address:", error));
     },
     capitalize(word) {
       return word.replace(/^\w/, (c) => c.toUpperCase());

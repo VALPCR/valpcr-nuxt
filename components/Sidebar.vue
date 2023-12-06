@@ -96,9 +96,7 @@
         >
           <!-- <font-awesome-icon icon="fa-solid fa-shield" /> -->
           <font-awesome-icon :icon="['fass', 'headset']" size="lg" />
-          <span
-            v-if="$store.getters['getSideBarState']"
-          >
+          <span v-if="$store.getters['getSideBarState']">
             Dispatchers
             <span
               @click="refresh"
@@ -192,10 +190,7 @@
           }"
           class="space-x-2 mb-4 p-2 rounded-lg"
         >
-          <font-awesome-icon
-            :icon="['fas', 'book']"
-            size="lg"
-          />
+          <font-awesome-icon :icon="['fas', 'book']" size="lg" />
           <span v-if="isSidebarOpen">Audit Trail</span>
         </li>
       </nuxt-link>

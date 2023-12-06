@@ -68,7 +68,6 @@ export default {
             filterFn: this.columnFilterFn,
             trigger: "change",
           },
-
         },
         {
           label: "IP ADDRESS",
@@ -80,13 +79,12 @@ export default {
           },
         },
       ],
-    }
+    };
   },
   fetch() {
     this.role = this.$auth.user.role;
     this.$axios.get("pcr/audit").then((response) => {
       response.data.return.map((result) => {
-
         const dateCreated = new Date(result.created_at);
         const dateModified = new Date(result.updated_at);
 
@@ -106,16 +104,21 @@ export default {
           date_modified: dateModified.toLocaleString("en-US", options),
           event: result.event,
           user_name: result.user_name,
-          user_role: result.user_role === 'emr' ? 'Responder' : (result.user_role === 'head' ? 'Head' : 'Dispatcher'),
+          user_role:
+            result.user_role === "emr"
+              ? "Responder"
+              : result.user_role === "head"
+              ? "Head"
+              : "Dispatcher",
           ip_address: result.ip_address,
-        })
-      })
-    })
+        });
+      });
+    });
   },
   methods: {
     columnFilterFn(value, filter) {
       return value === filter;
     },
   },
-}
+};
 </script>

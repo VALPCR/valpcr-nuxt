@@ -58,45 +58,107 @@
             Basic Information
           </h6>
 
-
           <div
             class="grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-4 mt-6"
           >
+            <div class="relative mb-1">
+              <label
+                for="firstName"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >First Name</label
+              >
+              <input
+                v-model="first_name"
+                ref="first_name"
+                type="text"
+                pattern="[A-Za-z\s]+"
+                oninput="this.value = this.value.replace(/[^A-Za-z\s]+/g, '');"
+                id="firstName"
+                placeholder="Juan"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                required
+              />
+            </div>
 
-          <div class="relative mb-1">
-              <label for="firstName" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">First Name</label>
-              <input v-model="first_name" ref="first_name" type="text" pattern="[A-Za-z\s]+" oninput="this.value = this.value.replace(/[^A-Za-z\s]+/g, '');" id="firstName" placeholder="Juan" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
-          </div>
+            <div class="relative mb-1">
+              <label
+                for="midName"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >Middle Name</label
+              >
+              <input
+                v-model="middle_name"
+                type="text"
+                pattern="[A-Za-z\s]+"
+                oninput="this.value = this.value.replace(/[^A-Za-z\s]+/g, '');"
+                id="midName"
+                placeholder="Santos"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                required
+              />
+            </div>
 
-          <div class="relative mb-1">
-              <label for="midName" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Middle Name</label>
-              <input v-model="middle_name" type="text" pattern="[A-Za-z\s]+" oninput="this.value = this.value.replace(/[^A-Za-z\s]+/g, '');" id="midName" placeholder="Santos" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
-          </div>
+            <div class="relative mb-1">
+              <label
+                for="lastName"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >Surname</label
+              >
+              <input
+                v-model="last_name"
+                ref="last_name"
+                type="text"
+                pattern="[A-Za-z\s]+"
+                oninput="this.value = this.value.replace(/[^A-Za-z\s]+/g, '');"
+                id="lastName"
+                placeholder="Dela Cruz"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                required
+              />
+            </div>
 
-          <div class="relative mb-1">
-              <label for="lastName" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Surname</label>
-              <input v-model="last_name" ref="last_name" type="text" pattern="[A-Za-z\s]+" oninput="this.value = this.value.replace(/[^A-Za-z\s]+/g, '');" id="lastName" placeholder="Dela Cruz" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
-          </div>
-
-          <div class="relative mb-1">
-              <label for="suffix" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Suffix</label>
-              <input v-model="suffix" type="text" pattern="[A-Za-z0-9\s]+" oninput="this.value = this.value.replace(/[^A-Za-z]+/g, '');" id="suffix" placeholder="Sr. / Jr. / III" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-          </div>
-
+            <div class="relative mb-1">
+              <label
+                for="suffix"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >Suffix</label
+              >
+              <input
+                v-model="suffix"
+                type="text"
+                pattern="[A-Za-z0-9\s]+"
+                oninput="this.value = this.value.replace(/[^A-Za-z]+/g, '');"
+                id="suffix"
+                placeholder="Sr. / Jr. / III"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              />
+            </div>
 
             <div class="flex-col relative mb-1">
-              <label for="gender" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Gender</label>
-              <select v-model="gender" id="gender" ref="gender" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+              <label
+                for="gender"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >Gender</label
+              >
+              <select
+                v-model="gender"
+                id="gender"
+                ref="gender"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                required
+              >
                 <option value="userGender" selected>Gender</option>
                 <option value="female">Female</option>
                 <option value="male">Male</option>
               </select>
             </div>
 
-            <div
-              class="relative mb-1"
-            >
-              <label for="birthdate" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Date of Birth</label>
+            <div class="relative mb-1">
+              <label
+                for="birthdate"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >Date of Birth</label
+              >
               <input
                 v-model="birthdate"
                 ref="birthdate"
@@ -109,13 +171,34 @@
             </div>
 
             <div class="relative mb-1">
-                <label for="age" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Age</label>
-                <input v-model="age" ref="age" type="text" id="age" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+              <label
+                for="age"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >Age</label
+              >
+              <input
+                v-model="age"
+                ref="age"
+                type="text"
+                id="age"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                required
+              />
             </div>
 
             <div class="flex-col relative mb-1">
-              <label for="teamId" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Team</label>
-              <select v-model="team_id" id="teamId" ref="team_id" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+              <label
+                for="teamId"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >Team</label
+              >
+              <select
+                v-model="team_id"
+                id="teamId"
+                ref="team_id"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                required
+              >
                 <option value="selTeam" selected>Select Team</option>
                 <option
                   v-for="(item, index) in teams"
@@ -128,18 +211,35 @@
             </div>
 
             <div class="flex-col relative mb-1">
-              <label for="userCity" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">City</label>
-              <select v-model="city" id="userCity" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+              <label
+                for="userCity"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >City</label
+              >
+              <select
+                v-model="city"
+                id="userCity"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                required
+              >
                 <option value="Valenzuela">City of Valenzuela</option>
               </select>
             </div>
 
             <div class="flex-col relative mb-1">
-              <label for="userBrgy" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Barangay</label>
-              <select v-model="barangay" id="userBrgy" ref="barangay" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
-                <option selected value="1">
-                  Barangay
-                </option>
+              <label
+                for="userBrgy"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >Barangay</label
+              >
+              <select
+                v-model="barangay"
+                id="userBrgy"
+                ref="barangay"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                required
+              >
+                <option selected value="1">Barangay</option>
                 <option value="Arkong Bato">Arkong Bato</option>
                 <option value="Bagbaguin">Bagbaguin</option>
                 <option value="Balangkas">Balangkas</option>
@@ -176,38 +276,88 @@
             </div>
 
             <div class="relative mb-1 col-span-2">
-                <label for="streetAddress" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Street Address</label>
-                <input v-model="street" type="text" ref="street" id="streetAddress" placeholder="# Street/Subdivision" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+              <label
+                for="streetAddress"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >Street Address</label
+              >
+              <input
+                v-model="street"
+                type="text"
+                ref="street"
+                id="streetAddress"
+                placeholder="# Street/Subdivision"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                required
+              />
             </div>
 
-
-
             <div class="relative mb-1 col-span-2">
-              <label for="phone-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Contact Number</label>
+              <label
+                for="phone-input"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >Contact Number</label
+              >
               <div class="flex items-center">
-                <button class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-s-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600" type="button">
-                +63
+                <button
+                  class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-s-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600"
+                  type="button"
+                >
+                  +63
                 </button>
                 <div class="relative w-full">
-                    <input v-model="phone" ref="phone" type="tel" inputmode="numeric" pattern="[0-9]*" oninput="this.value = this.value.replace(/[^0-9]/g, '');" id="phone-input" maxlength="11" class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-e-lg border-s-0 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-s-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500" placeholder="09123456789" required>
+                  <input
+                    v-model="phone"
+                    ref="phone"
+                    type="tel"
+                    inputmode="numeric"
+                    pattern="[0-9]*"
+                    oninput="this.value = this.value.replace(/[^0-9]/g, '');"
+                    id="phone-input"
+                    maxlength="11"
+                    class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-e-lg border-s-0 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-s-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500"
+                    placeholder="09123456789"
+                    required
+                  />
                 </div>
               </div>
             </div>
-
 
             <div class="relative mb-1 col-span-2">
-              <label for="input-group-1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
+              <label
+                for="input-group-1"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >Email</label
+              >
               <div class="relative mb-6">
-                <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
-                  <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
-                      <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"/>
-                      <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"/>
+                <div
+                  class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none"
+                >
+                  <svg
+                    class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 20 16"
+                  >
+                    <path
+                      d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"
+                    />
+                    <path
+                      d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"
+                    />
                   </svg>
                 </div>
-                <input v-model="email" ref="email" type="email" id="input-group-1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@example.com">
+                <input
+                  v-model="email"
+                  ref="email"
+                  type="email"
+                  id="input-group-1"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="name@example.com"
+                />
               </div>
             </div>
-
           </div>
         </div>
 
@@ -233,24 +383,29 @@
         </div>
       </div>
     </div>
-
-
   </div>
 </template>
 
 <script>
-import ToastMessage from "../ToastMessage"
-import { Toast, Modal, initTE, Ripple, Input, Datepicker, Select } from "tw-elements";
-
+import ToastMessage from "../ToastMessage";
+import {
+  Toast,
+  Modal,
+  initTE,
+  Ripple,
+  Input,
+  Datepicker,
+  Select,
+} from "tw-elements";
 
 export default {
   components: {
-    ToastMessage
+    ToastMessage,
   },
   data() {
     return {
       showToast: false,
-      id_address: '',
+      id_address: "",
       role: "dispatcher",
       suffix: "",
       first_name: "",
@@ -266,7 +421,19 @@ export default {
       street: "",
       age: "",
       teams: [],
-      requiredFields: ['first_name', 'last_name', 'gender', 'birthdate', 'age', 'team_id', 'city', 'barangay', 'street', 'phone', 'email']
+      requiredFields: [
+        "first_name",
+        "last_name",
+        "gender",
+        "birthdate",
+        "age",
+        "team_id",
+        "city",
+        "barangay",
+        "street",
+        "phone",
+        "email",
+      ],
     };
   },
   fetch() {
@@ -281,10 +448,10 @@ export default {
   },
   methods: {
     register() {
-      fetch('https://ipinfo.io/json?token=5d9e0b426ac4f6')
-        .then(response => response.json())
+      fetch("https://ipinfo.io/json?token=5d9e0b426ac4f6")
+        .then((response) => response.json())
         .then((response) => {
-            this.ip_address = response.ip;
+          this.ip_address = response.ip;
 
           const params = {
             user_name: this.$auth.user.email,
@@ -330,7 +497,10 @@ export default {
               this.street = "";
 
               this.showToast = true;
-              this.$store.commit('setToastMessage', "Account successfully created");
+              this.$store.commit(
+                "setToastMessage",
+                "Account successfully created"
+              );
 
               setTimeout(() => {
                 this.$emit("refresh");
@@ -341,13 +511,13 @@ export default {
               this.$nuxt.$loading.finish();
             });
         })
-        .catch(error => console.error('Error fetching IP address:', error));
+        .catch((error) => console.error("Error fetching IP address:", error));
     },
     capitalize(word) {
       return word.replace(/^\w/, (c) => c.toUpperCase());
     },
     toast() {
-      return
+      return;
     },
     clear() {
       this.suffix = "";
@@ -392,10 +562,8 @@ export default {
         document.getElementById("age").value = "";
       }
     },
-
   },
 };
-
 </script>
 
 <style scoped>
@@ -403,6 +571,5 @@ export default {
 .border-red-500 {
   border-color: rgb(244 63 94) !important;
   border-width: 1.5px;
-
 }
 </style>

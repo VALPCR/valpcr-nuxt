@@ -10,15 +10,19 @@
   >
     <div
       data-te-modal-dialog-ref
-      class="pointer-events-none relative w-auto translate-y-[-50px] opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:max-w-[500px]">
+      class="pointer-events-none relative w-auto translate-y-[-50px] opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:max-w-[500px]"
+    >
       <div
-        class="min-[576px]:shadow-[0_0.5rem_1rem_rgba(#000, 0.15)] pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600">
+        class="min-[576px]:shadow-[0_0.5rem_1rem_rgba(#000, 0.15)] pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600"
+      >
         <div
-          class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50">
+          class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50"
+        >
           <!--Modal title-->
           <h5
             class="text-xl font-medium leading-normal text-neutral-800 dark:text-neutral-200"
-            id="restoreUserLabel">
+            id="restoreUserLabel"
+          >
             Warning
           </h5>
           <!--Close button-->
@@ -26,18 +30,21 @@
             type="button"
             class="box-content rounded-none border-none hover:no-underline hover:opacity-75 focus:opacity-100 focus:shadow-none focus:outline-none"
             data-te-modal-dismiss
-            aria-label="Close">
+            aria-label="Close"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="h-6 w-6">
+              class="h-6 w-6"
+            >
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                d="M6 18L18 6M6 6l12 12" />
+                d="M6 18L18 6M6 6l12 12"
+              />
             </svg>
           </button>
         </div>
@@ -49,7 +56,8 @@
 
         <!--Modal footer-->
         <div
-          class="flex flex-shrink-0 flex-wrap items-center justify-end gap-3 rounded-b-md border-t-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50">
+          class="flex flex-shrink-0 flex-wrap items-center justify-end gap-3 rounded-b-md border-t-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50"
+        >
           <button
             type="button"
             class="ml-1 inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
@@ -64,7 +72,8 @@
             class="inline-block rounded bg-primary-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-primary-700 transition duration-150 ease-in-out hover:bg-primary-accent-100 focus:bg-primary-accent-100 focus:outline-none focus:ring-0 active:bg-primary-accent-200"
             data-te-modal-dismiss
             data-te-ripple-init
-            data-te-ripple-color="light">
+            data-te-ripple-color="light"
+          >
             Cancel
           </button>
         </div>
@@ -74,8 +83,7 @@
 </template>
 
 <script>
-
-import {Modal, initTE, Ripple} from "tw-elements";
+import { Modal, initTE, Ripple } from "tw-elements";
 
 export default {
   props: {
@@ -83,8 +91,8 @@ export default {
   },
   data() {
     return {
-      id_address: '',
-    }
+      id_address: "",
+    };
   },
   mounted() {
     initTE({ Ripple, Modal });
@@ -92,19 +100,29 @@ export default {
   methods: {
     restoreUsers() {
       if (this.ids.length > 0) {
-
-        fetch('https://ipinfo.io/json?token=5d9e0b426ac4f6')
-          .then(response => response.json())
+        fetch("https://ipinfo.io/json?token=5d9e0b426ac4f6")
+          .then((response) => response.json())
           .then((response) => {
             this.id_address = response.ip;
 
-            this.$axios.get('user/restore?ids=' + this.ids + '&user_name=' + this.$auth.user.email + '&user_role=' + this.$auth.user.role + '&ip_address=' + this.id_address).then(() => {
-              location.reload();
-            });
+            this.$axios
+              .get(
+                "user/restore?ids=" +
+                  this.ids +
+                  "&user_name=" +
+                  this.$auth.user.email +
+                  "&user_role=" +
+                  this.$auth.user.role +
+                  "&ip_address=" +
+                  this.id_address
+              )
+              .then(() => {
+                location.reload();
+              });
           })
-          .catch(error => console.error('Error fetching IP address:', error));
+          .catch((error) => console.error("Error fetching IP address:", error));
       }
     },
   },
-}
+};
 </script>
