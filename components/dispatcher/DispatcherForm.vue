@@ -387,6 +387,7 @@
 </template>
 
 <script>
+import Swal from 'sweetalert2'
 import ToastMessage from "../ToastMessage";
 import {
   Toast,
@@ -448,6 +449,32 @@ export default {
   },
   methods: {
     register() {
+
+       // Check for missing required fields
+          const missingFields = this.requiredFields.filter(field => !this[field]);
+
+      // Highlight missing fields with red outlines
+      if (missingFields.length > 0) {
+        missingFields.forEach(field => {
+          // Add red outline class
+          this.$refs[field].classList.add('border-red-500');
+
+          // Remove red outline class when the user starts typing
+          this.$refs[field].addEventListener('input', () => {
+            this.$refs[field].classList.remove('border-red-500');
+          });
+        });
+
+        // Show an error message to the user
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Please fill in all required fields.',
+        });
+        return; // Do not proceed with registration if required fields are missing
+      }
+
+
       fetch("https://ipinfo.io/json?token=5d9e0b426ac4f6")
         .then((response) => response.json())
         .then((response) => {
