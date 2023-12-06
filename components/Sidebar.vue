@@ -137,24 +137,7 @@
           </span>
         </li>
       </nuxt-link>
-      <nuxt-link
-        v-if="role === 'head'"
-        to="/dashboard/head/analytics"
-        :class="{ 'hover:text-[#1B295A]': isSidebarOpen }"
-        class="text-white"
-      >
-        <li
-          :class="{
-            'hover:bg-white sm:pl-0 md:pl-10 lg:pl-10 xl:pl-10': isSidebarOpen,
-            'sm:right-1.5 md:right-0 lg:right-0 xl:right-0 relative hover:text-[#1B295A]':
-              !isSidebarOpen,
-          }"
-          class="space-x-2 mb-4 p-2 rounded-lg"
-        >
-          <font-awesome-icon :icon="['fas', 'chart-simple']" size="lg" />
-          <span v-if="isSidebarOpen">Analytics</span>
-        </li>
-      </nuxt-link>
+     
       <nuxt-link
         v-if="role === 'head'"
         to="/dashboard/head/archive"
@@ -192,6 +175,24 @@
         >
           <font-awesome-icon :icon="['fas', 'book']" size="lg" />
           <span v-if="isSidebarOpen">Audit Trail</span>
+        </li>
+      </nuxt-link>
+      <nuxt-link
+        v-if="role === 'head'"
+        to="/dashboard/head/analytics"
+        :class="{ 'hover:text-[#1B295A]': isSidebarOpen }"
+        class="text-white"
+      >
+        <li
+          :class="{
+            'hover:bg-white sm:pl-0 md:pl-10 lg:pl-10 xl:pl-10': isSidebarOpen,
+            'sm:right-1.5 md:right-0 lg:right-0 xl:right-0 relative hover:text-[#1B295A]':
+              !isSidebarOpen,
+          }"
+          class="space-x-2 mb-4 p-2 rounded-lg"
+        >
+          <font-awesome-icon :icon="['fas', 'chart-simple']" size="lg" />
+          <span v-if="isSidebarOpen">Reports</span>
         </li>
       </nuxt-link>
       <!--  END HEAD    -->
