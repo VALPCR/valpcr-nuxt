@@ -526,13 +526,13 @@ export default {
               this.showToast = true;
               this.$store.commit(
                 "setToastMessage",
-                "Account successfully created"
+                "Account successfully created!"
               );
 
               setTimeout(() => {
                 this.$emit("refresh");
                 location.reload();
-              }, 1500);
+              }, 2000);
             })
             .finally(() => {
               this.$nuxt.$loading.finish();
