@@ -34,7 +34,6 @@
           <div
             class="relative flex flex-nowrap items-stretch mb-3"
             data-te-input-wrapper-init
-            data-te-validate="input"
             data-te-validation-ruleset="isRequired|isEmail"
             data-te-invalid-feedback="The email address is invalid"
           >
@@ -56,7 +55,6 @@
           <!-- Password input -->
           <div
             class="relative flex flex-nowrap items-stretch mb-3"
-            data-te-validate="input"
             data-te-validation-ruleset="isRequired|isLongerThan(6)"
             data-te-invalid-feedback="Please provide a password longer than 8 characters"
           >
