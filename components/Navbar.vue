@@ -45,11 +45,13 @@
         <div class="flex items-center">
           <div class="flex items-center ml-3">
             <div class="inline">
-              <p v-if="!$device.isTablet" class="font-medium">
-                {{
-                  `${this.$store.$auth.user.first_name} ${this.$store.$auth.user.last_name}`
-                }}
-              </p>
+              <div class="flex items-center space-x-2">
+                  <p v-if="!$device.isTablet" class="font-medium">
+                    {{
+                      `${this.$store.$auth.user.first_name} ${this.$store.$auth.user.last_name}`
+                    }}
+                  </p>
+                </div>
               <p v-if="this.$store.$auth.user.role" class="text-center text-xs text-orange-500">
                 {{ this.$store.$auth.user.role.toUpperCase() }}
               </p>
@@ -62,11 +64,10 @@
                 data-dropdown-toggle="dropdown-user"
               >
                 <span class="sr-only">Open user menu</span>
-                <img
-                  class="w-8 h-8 rounded-full"
-                  src="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
-                  alt="user photo"
-                />
+                <!-- Display the user initials -->
+                <span class="w-10 h-10 rounded-full bg-orange-700 flex items-center justify-center dark:bg-orange-700 cursor-pointer font-bold text-white dark:text-gray-300">
+                  {{ getUserInitials() }}
+                </span>
               </button>
             </div>
             <div
@@ -134,6 +135,12 @@ export default {
         "setSideBarState",
         !this.$store.getters["getSideBarState"]
       );
+    },
+    getUserInitials() {
+      // Your existing method to get user initials
+      // Assuming it returns the initials based on first_name and last_name
+      const { first_name, last_name } = this.$store.$auth.user;
+      return `${first_name.charAt(0)}${last_name.charAt(0)}`.toUpperCase();
     },
   },
 };
