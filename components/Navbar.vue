@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700"
+    class="fixed top-0 z-50 w-full bg-white dark:bg-gray-800 dark:border-gray-700"
   >
     <div class="px-3 py-3 lg:px-5 lg:pl-3">
       <div class="flex items-center justify-between">
@@ -45,10 +45,13 @@
         <div class="flex items-center">
           <div class="flex items-center ml-3">
             <div class="inline">
-              <p v-if="!$device.isTablet">
+              <p v-if="!$device.isTablet" class="font-medium">
                 {{
                   `${this.$store.$auth.user.first_name} ${this.$store.$auth.user.last_name}`
                 }}
+              </p>
+              <p v-if="this.$store.$auth.user.role" class="text-center text-xs text-orange-500">
+                {{ this.$store.$auth.user.role.toUpperCase() }}
               </p>
             </div>
             <div class="inline ml-3">
