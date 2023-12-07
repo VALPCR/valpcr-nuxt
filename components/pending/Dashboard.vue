@@ -4,13 +4,30 @@
       <vue-good-table
         :columns="columns"
         :rows="fetchedRows"
+        :fixed-header="false"
+        theme="nocturnal"
         :search-options="{ enabled: true }"
         :pagination-options="{ enabled: true }"
         @on-row-click="onRowClick"
         styleClass="vgt-table striped bordered"
         compactMode
         class="bg-white rounded shadow"
-      />
+      >
+      <template slot="table-column" slot-scope="props">
+        <div v-if="role === 'emr'">
+          <span v-if="props.column.label === 'PCR ID'" class="text-blue-950">
+            {{props.column.label}}
+          </span>
+          <span v-else-if="props.column.label === 'PATIENT'" class="text-blue-950">
+            {{props.column.label}}
+          </span>
+          <!-- Add more conditions and classes for other columns -->
+          <span v-else class="text-blue-950">
+            {{props.column.label}}
+          </span>
+        </div>
+      </template>
+      </vue-good-table>
     </div>
     <EditPatientFormMobile :viewableByAllEmrs="false" />
   </div>
@@ -29,6 +46,10 @@ export default {
       filteredRows: [],
       emptyRows: [],
       columns: [
+       {
+          label: "FORM ID",
+          field: "id",
+        },
         {
           label: "NAME",
           field: "name",
