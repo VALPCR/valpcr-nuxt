@@ -65,9 +65,14 @@
               >
                 <span class="sr-only">Open user menu</span>
                 <!-- Display the user initials -->
-                <span class="w-10 h-10 rounded-full bg-orange-700 flex items-center justify-center dark:bg-orange-700 cursor-pointer font-bold text-white dark:text-gray-300">
-                  {{ getUserInitials() }}
-                </span>
+                <div class="relative">
+                  <span class="w-10 h-10 rounded-full bg-orange-700 flex items-center justify-center dark:bg-orange-700 cursor-pointer font-bold text-white dark:text-gray-300">
+                    {{ getUserInitials() }}
+                  </span>
+                  <span class="top-0 left-7 absolute  w-3.5 h-3.5 bg-green-600 border-2 border-white dark:border-gray-800 rounded-full"></span>
+                </div>
+                
+                
               </button>
             </div>
             <div
