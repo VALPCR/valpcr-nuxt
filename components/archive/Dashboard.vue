@@ -4,6 +4,8 @@
       <vue-good-table
         :columns="columns"
         :rows="fetchedRows"
+        :fixed-header="true"
+        theme="nocturnal"
         :search-options="{ enabled: true }"
         :pagination-options="{ enabled: true }"
         @on-cell-click="onRowClick"
@@ -29,7 +31,11 @@ export default {
       emptyRows: [],
       columns: [
         {
-          label: "NAME",
+          label: "PCR ID",
+          field: "id",
+        },
+        {
+          label: "PATIENT",
           field: "name",
         },
         {

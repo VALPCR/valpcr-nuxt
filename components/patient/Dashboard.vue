@@ -1,23 +1,7 @@
 <template>
   <div class="min-h-screen">
     <div class="m-5">
-      <div v-if="role === 'head'" class="flex flex-col items-end">
-        <button
-          v-if="selectedRows.length > 0"
-          type="button"
-          class="inline-block rounded bg-green-600 m-5 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-green-700 focus:bg-green-700 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
-          @click="exportToPdf"
-        >
-          Export
-        </button>
-        <button
-          v-else
-          type="button"
-          class="inline-block rounded bg-gray-700 cursor-not-allowed m-5 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
-        >
-          Export
-        </button>
-      </div>
+      
 
       <vue-good-table
         @on-selected-rows-change="selectionChanged"
@@ -27,7 +11,8 @@
           enabled: true,
         }"
         max-height="750px"
-        :fixed-header="false"
+        :fixed-header="role === 'head' || role === 'dispatcher'"
+        theme="nocturnal"
         :search-options="{ enabled: true }"
         :pagination-options="{ enabled: true }"
         @on-cell-click="onRowClick"
@@ -35,9 +20,27 @@
         compactMode
         class="bg-white rounded shadow"
       >
+        <div v-if="role === 'head'" slot="table-actions"> 
+          <button
+            v-if="selectedRows.length > 0"
+            type="button"
+            class="inline-block rounded bg-green-600 mx-2 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-green-700 focus:bg-green-700 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+            @click="exportToPdf"
+          >
+            Export
+          </button>
+          <button
+            v-else
+            type="button"
+            class="inline-block rounded bg-gray-500 cursor-not-allowed mx-2 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+          >
+            Export
+          </button>
+        </div>
         <div
           v-if="role === 'dispatcher' || role === 'emr'"
           slot="table-actions"
+          class="mx-1"
         >
           <button
             v-if="role === 'emr'"
@@ -59,7 +62,7 @@
           <button
             v-if="role === 'emr' && columns[7].filterOptions.filterValue !== ''"
             type="button"
-            class="inline-block rounded bg-green-600 px-4 pb-1.5 pt-1.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-green-700 focus:bg-green-700 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+            class="inline-block rounded bg-rose-500 px-4 pb-1.5 pt-1.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-rose-800 focus:bg-rose-800 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
             @click="columns[7].filterOptions.filterValue = ''"
           >
             View All
@@ -67,14 +70,31 @@
           <button
             v-if="role === 'emr' && columns[7].filterOptions.filterValue === ''"
             type="button"
-            class="inline-block rounded bg-green-600 px-4 pb-1.5 pt-1.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-green-700 focus:bg-green-700 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+            class="inline-block rounded bg-sky-600 px-4 pb-1.5 pt-1.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-sky-800 focus:bg-sky-800 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
             @click="
               columns[7].filterOptions.filterValue = `${$auth.user.first_name} ${$auth.user.last_name} (Responder)`
             "
           >
-            My PCR
+            My Forms
           </button>
         </div>
+        
+
+        <template slot="table-column" slot-scope="props">
+          <div v-if="role === 'emr'">
+            <span v-if="props.column.label === 'PCR ID'" class="text-blue-950">
+              {{props.column.label}}
+            </span>
+            <span v-else-if="props.column.label === 'PATIENT'" class="text-blue-950">
+              {{props.column.label}}
+            </span>
+            <!-- Add more conditions and classes for other columns -->
+            <span v-else class="text-blue-950">
+              {{props.column.label}}
+            </span>
+          </div>
+        </template>
+
       </vue-good-table>
       <PatientForm v-if="role === 'dispatcher'" />
       <PatientFormMobile v-if="role === 'emr'" />
@@ -113,6 +133,10 @@ export default {
       emptyRows: [],
       columns: [
         {
+          label: "FORM ID",
+          field: "id",
+        },
+        {
           label: "PATIENT",
           field: "name",
         },
@@ -139,6 +163,7 @@ export default {
         {
           label: "DATE",
           field: "date",
+          dateOutputFormat: 'MMM do yyyy',
           filterOptions: {
             enabled: true,
             filterValue: "",
@@ -367,7 +392,7 @@ export default {
 };
 </script>
 
-<style>
+<!-- <style>
 .moveColumn {
   position: -webkit-sticky !important; /* for Safari */
   position: sticky !important;
@@ -376,4 +401,16 @@ export default {
   border-right: 1px solid #ccc !important;
   z-index: 999;
 }
+</style> -->
+
+<style>
+
+.vgt-table tbody tr:nth-child(odd) {
+  background-color: #b8b3b3; /* Set the background color for odd rows */
+}
+
+.vgt-table tbody tr:nth-child(even) {
+  background-color: #b7b4b452; /* Set the background color for even rows */
+}
+
 </style>
