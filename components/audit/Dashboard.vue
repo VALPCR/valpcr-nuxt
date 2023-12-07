@@ -1,10 +1,12 @@
 <template>
-  <div class="min-h-screen bg-[#EFEFEF]">
+  <div class="min-h-screen">
     <div class="m-5">
       <vue-good-table
         v-if="role === 'head'"
         :columns="columns"
         :rows="fetchedRows"
+        :fixed-header="true"
+        theme="nocturnal"
         :pagination-options="{ enabled: true }"
         styleClass="vgt-table striped bordered"
         compactMode

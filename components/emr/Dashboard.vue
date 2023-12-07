@@ -5,6 +5,8 @@
         @on-selected-rows-change="selectionChanged"
         :columns="columns"
         :rows="fetchedRows"
+        :fixed-header="true"
+        theme="nocturnal"
         :select-options="{
           enabled: true,
         }"
