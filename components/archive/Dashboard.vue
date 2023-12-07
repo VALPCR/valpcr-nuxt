@@ -31,7 +31,7 @@ export default {
       emptyRows: [],
       columns: [
         {
-          label: "PCR ID",
+          label: "FORM ID",
           field: "id",
         },
         {
