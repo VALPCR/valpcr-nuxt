@@ -25,6 +25,10 @@ export default {
       this.$nuxt.$loading.start();
       setTimeout(() => this.$nuxt.$loading.finish(), 500);
     });
+
+    if (this.$auth.user === null) {
+      this.$router.push(`/`);
+    }
   },
 };
 </script>
