@@ -186,8 +186,8 @@
                 id="age"
                 pattern="[0-9]*"
                 oninput="this.value = this.value.replace(/[^0-9]/g, '');"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                required
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md block w-full p-2.5 cursor-not-allowed"
+                readonly
               />
             </div>
 
@@ -201,7 +201,7 @@
                 v-model="team_id"
                 id="teamId"
                 ref="team_id"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 cursor-not-allowed appearance-none"
                 required
                 disabled
               >
@@ -394,7 +394,7 @@
                 pattern="[A-Za-z\s]+"
                 oninput="this.value = this.value.replace(/[^A-Za-z\s]+/g, '');"
                 id="emergency_contact"
-                placeholder="Juan"
+                placeholder="Juan Dela Cruz"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 required
               />
@@ -492,8 +492,6 @@ export default {
         "last_name",
         "gender",
         "birthdate",
-        "age",
-        "team_id",
         "city",
         "barangay",
         "street",
@@ -651,7 +649,6 @@ export default {
       this.birthdate = "";
       this.email = "";
       this.role = "emr";
-      this.team_id = "1";
       this.city = "Valenzuela";
       this.barangay = "";
       this.street = "";
