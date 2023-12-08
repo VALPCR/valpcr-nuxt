@@ -372,7 +372,7 @@
               </div>
             </form>
 
-           
+
 
           </div>
         </div>
@@ -452,7 +452,6 @@ export default {
         "phone",
         "email",
       ],
-
       submitError: null,
     };
   },
@@ -467,14 +466,9 @@ export default {
     initTE({ Validation, Toast, Ripple, Modal, Input, Datepicker, Select });
   },
   methods: {
-
-   
-
     register() {
-
-      
-       // Check for missing required fields
-          const missingFields = this.requiredFields.filter(field => !this[field]);
+      // Check for missing required fields
+      const missingFields = this.requiredFields.filter(field => !this[field]);
 
       // Highlight missing fields with red outlines
       if (missingFields.length > 0) {
@@ -496,42 +490,6 @@ export default {
         });
         return; // Do not proceed with registration if required fields are missing
       }
-
-
-      this.$axios
-        .post("user/register", { email: this.email })
-        .then((response) => {
-          if (response.data.status === "Error" && response.data.code === 422) {
-            if (
-              response.data.data &&
-              response.data.data.email &&
-              response.data.data.email.length > 0
-            ) {
-              // Email already exists
-              this.submitError = response.data.data.email[0];
-            } else {
-              // Other validation errors or logic
-              this.submitError = "Registration failed. Please check your input.";
-            }
-          } else {
-            // Registration successful or other logic
-            this.submitError = null;
-            // ... your logic for successful registration
-          }
-        })
-        .catch((e) => {
-            // Handle API request error
-            if (e.response && e.response.status === 422) {
-              this.submitError = "The email has already been taken.";
-            } else {
-              this.submitError = "Registration failed. Please try again later.";
-              console.error("Submit Error:", e.response ? e.response.data.message : e.message);
-            }
-        });
-
-        
-
-
 
       fetch("https://ipinfo.io/json?token=5d9e0b426ac4f6")
         .then((response) => response.json())
@@ -564,33 +522,60 @@ export default {
           this.$nuxt.$loading.start();
           this.$axios
             .post("user/register", params)
-            .then(() => {
-              this.ip_address = "";
-              this.suffix = "";
-              this.first_name = "";
-              this.middle_name = "";
-              this.last_name = "";
-              this.gender = "";
-              this.phone = "";
-              this.birthdate = "";
-              this.age = "";
-              this.email = "";
-              this.role = "dispatcher";
-              this.team_id = "selTeam";
-              this.city = "Valenzuela";
-              this.barangay = "";
-              this.street = "";
+            .then((response) => {
+              if (response.data.status === "Error" && response.data.code === 422) {
+                if (
+                  response.data.data &&
+                  response.data.data.email &&
+                  response.data.data.email.length > 0
+                ) {
+                  // Email already exists
+                  this.submitError = response.data.data.email[0];
+                } else {
+                  // Other validation errors or logic
+                  this.submitError = "Registration failed. Please check your input.";
+                }
+              } else {
+                // Registration successful or other logic
+                this.submitError = null;
 
-              this.showToast = true;
-              this.$store.commit(
-                "setToastMessage",
-                "Account successfully created!"
-              );
+                this.ip_address = "";
+                this.suffix = "";
+                this.first_name = "";
+                this.middle_name = "";
+                this.last_name = "";
+                this.gender = "";
+                this.phone = "";
+                this.birthdate = "";
+                this.age = "";
+                this.email = "";
+                this.role = "dispatcher";
+                this.team_id = "selTeam";
+                this.city = "Valenzuela";
+                this.barangay = "";
+                this.street = "";
 
-              setTimeout(() => {
-                this.$emit("refresh");
-                location.reload();
-              }, 2000);
+                this.showToast = true;
+                this.$store.commit(
+                  "setToastMessage",
+                  "Account successfully created!"
+                );
+
+                setTimeout(() => {
+                  this.$emit("refresh");
+                  location.reload();
+                }, 2000);
+                // ... your logic for successful registration
+              }
+            })
+            .catch((e) => {
+              // Handle API request error
+              if (e.response && e.response.status === 422) {
+                this.submitError = "The email has already been taken.";
+              } else {
+                this.submitError = "Registration failed. Please try again later.";
+                console.error("Submit Error:", e.response ? e.response.data.message : e.message);
+              }
             })
             .finally(() => {
               this.$nuxt.$loading.finish();
