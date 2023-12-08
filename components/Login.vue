@@ -137,6 +137,16 @@ import { Validation, Input, Ripple, initTE } from "tw-elements";
 export default {
   mounted() {
     initTE({ Validation, Input, Ripple });
+
+    if (this.$auth.user !== null) {
+      if (this.$auth.user.role === 'head') {
+        this.$router.push(`/dashboard/${this.$auth.user.role}/dispatcher`);
+      } else if (this.$auth.user.role === 'dispatcher') {
+        this.$router.push(`/dashboard/${this.$auth.user.role}/emr`);
+      } else if (this.$auth.user.role === 'emr') {
+        this.$router.push(`/dashboard/${this.$auth.user.role}/patient`);
+      }
+    }
   },
 
   data() {
@@ -149,7 +159,6 @@ export default {
       loginError: null,
     };
   },
-
   methods: {
     async login() {
       try {
