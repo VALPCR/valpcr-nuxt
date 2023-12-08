@@ -371,9 +371,6 @@
                 <p v-if="submitError" class="text-red-500 text-xs">{{ submitError }}</p>
               </div>
             </form>
-
-
-
           </div>
         </div>
 
