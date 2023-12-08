@@ -18,8 +18,11 @@ export default {
   mounted() {
     initTE(Modal);
 
-    const termsModal = new Modal(document.getElementById("termsModal"));
-    termsModal.show();
+    const storedTerms = localStorage.getItem('terms');
+    if (storedTerms === null) {
+      const termsModal = new Modal(document.getElementById("termsModal"));
+      termsModal.show();
+    }
   }
 };
 </script>

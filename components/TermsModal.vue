@@ -89,6 +89,7 @@
             data-te-ripple-init
             data-te-ripple-color="light"
             data-te-modal-dismiss
+            @click="acceptTerms"
           >
             Agree
           </button>
@@ -102,12 +103,12 @@
 export default {
   data() {
     return {
-      showButton: false
+      showButton: false,
     }
   },
   methods: {
     acceptTerms() {
-      //
+      localStorage.setItem('terms', 'true');
     },
     handleScroll() {
       if (this.$device.isDesktop) {
