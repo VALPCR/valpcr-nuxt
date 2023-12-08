@@ -180,13 +180,13 @@
               >
               <input
                 v-model="age"
-                ref="age"
                 type="text"
                 id="age"
                 pattern="[0-9]*"
                 oninput="this.value = this.value.replace(/[^0-9]/g, '');"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md w-full p-2.5 cursor-not-allowed"
                 required
+                readonly
               />
             </div>
 
@@ -441,7 +441,6 @@ export default {
         "last_name",
         "gender",
         "birthdate",
-        "age",
         "team_id",
         "city",
         "barangay",

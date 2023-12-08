@@ -60,6 +60,7 @@
           >
             Basic Information
           </h6>
+          <small class="text-red-600 italic">All fields are required.</small>
 
           <div
             class="grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-4 mt-6"
@@ -72,6 +73,7 @@
               >
               <input
                 v-model="first_name"
+                ref="first_name"
                 type="text"
                 pattern="[A-Za-z\s]+"
                 oninput="this.value = this.value.replace(/[^A-Za-z\s]+/g, '');"
@@ -108,6 +110,7 @@
               >
               <input
                 v-model="last_name"
+                ref="last_name"
                 type="text"
                 pattern="[A-Za-z\s]+"
                 oninput="this.value = this.value.replace(/[^A-Za-z\s]+/g, '');"
@@ -144,6 +147,7 @@
               <select
                 v-model="gender"
                 id="gender"
+                ref="gender"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 required
               >
@@ -161,6 +165,7 @@
               >
               <input
                 v-model="birthdate"
+                ref="birthdate"
                 type="text"
                 id="birthdate"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -181,8 +186,8 @@
                 id="age"
                 pattern="[0-9]*"
                 oninput="this.value = this.value.replace(/[^0-9]/g, '');"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                required
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md block w-full p-2.5 cursor-not-allowed"
+                readonly
               />
             </div>
 
@@ -195,7 +200,7 @@
               <select
                 v-model="team_id"
                 id="teamId"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 cursor-not-allowed appearance-none"
                 required
                 disabled
               >
@@ -234,6 +239,7 @@
               >
               <select
                 v-model="barangay"
+                ref="barangay"
                 id="userBrgy"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 required
@@ -283,6 +289,7 @@
               <input
                 v-model="street"
                 type="text"
+                ref="street"
                 id="streetAddress"
                 placeholder="# Street/Subdivision"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -306,6 +313,7 @@
                 <div class="relative w-full">
                   <input
                     v-model="phone"
+                    ref="phone"
                     type="tel"
                     inputmode="numeric"
                     pattern="[0-9]*"
@@ -349,7 +357,7 @@
                   v-model="email"
                   type="email"
                   id="email"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 cursor-not-allowed"
                   placeholder="name@example.com"
                   disabled
                 />
@@ -375,6 +383,7 @@
 </template>
 
 <script>
+import Swal from 'sweetalert2'
 import ToastMessage from "../ToastMessage";
 import {
   Toast,
@@ -411,8 +420,17 @@ export default {
       street: "",
       age: "",
       teams: [],
-      emergency_contact: "",
-      ecp_phone: "",
+      requiredFields: [
+        "first_name",
+        "last_name",
+        "gender",
+        "birthdate",
+        "city",
+        "barangay",
+        "street",
+        "phone",
+      ],
+
     };
   },
   fetch() {
@@ -460,6 +478,30 @@ export default {
       this.$store.commit("setEditDispatcherModalXlArg", undefined);
     },
     update() {
+      // Check for missing required fields
+      const missingFields = this.requiredFields.filter(field => !this[field]);
+
+      // Highlight missing fields with red outlines
+      if (missingFields.length > 0) {
+        missingFields.forEach(field => {
+          // Add red outline class
+          this.$refs[field].classList.add('border-red-500');
+
+          // Remove red outline class when the user starts typing
+          this.$refs[field].addEventListener('input', () => {
+            this.$refs[field].classList.remove('border-red-500');
+          });
+        });
+
+        // Show an error message to the user
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Please fill in all required fields.',
+        });
+        return; // Do not proceed with registration if required fields are missing
+      }
+
       fetch("https://ipinfo.io/json?token=5d9e0b426ac4f6")
         .then((response) => response.json())
         .then((response) => {
