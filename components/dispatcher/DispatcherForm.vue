@@ -57,6 +57,7 @@
           >
             Basic Information
           </h6>
+          <small class="text-red-600 italic">All fields are required.</small>
 
           <div
             class="grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-4 mt-6"
@@ -84,7 +85,8 @@
               <label
                 for="midName"
                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >Middle Name</label
+                >Middle Name
+                <span class="text-gray-400">(Optional)</span></label
               >
               <input
                 v-model="middle_name"
@@ -121,7 +123,7 @@
               <label
                 for="suffix"
                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >Suffix</label
+                >Suffix <span class="text-gray-400">(Optional)</span></label
               >
               <input
                 v-model="suffix"
@@ -129,7 +131,7 @@
                 pattern="[A-Za-z0-9\s]+"
                 oninput="this.value = this.value.replace(/[^A-Za-z]+/g, '');"
                 id="suffix"
-                placeholder="Sr. / Jr. / III"
+                placeholder="Sr / Jr / III"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               />
             </div>
@@ -181,6 +183,8 @@
                 ref="age"
                 type="text"
                 id="age"
+                pattern="[0-9]*"
+                oninput="this.value = this.value.replace(/[^0-9]/g, '');"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 required
               />
@@ -322,42 +326,54 @@
                 </div>
               </div>
             </div>
-
-            <div class="relative mb-1 col-span-2">
-              <label
-                for="input-group-1"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >Email</label
-              >
-              <div class="relative mb-6">
-                <div
-                  class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none"
+            <form
+              data-te-validation-init
+              data-te-active-validation="true"
+              @submit.prevent="submit"
+              class="col-span-2"
+            >
+              <div class="relative mb-1">
+                <label
+                  for="input-group-1"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >Email</label
                 >
-                  <svg
-                    class="w-4 h-4 text-gray-500 dark:text-gray-400"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="currentColor"
-                    viewBox="0 0 20 16"
+                <div class="relative mb-6">
+                  <div
+                    class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none"
                   >
-                    <path
-                      d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"
-                    />
-                    <path
-                      d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"
-                    />
-                  </svg>
+                    <svg
+                      class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 20 16"
+                    >
+                      <path
+                        d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"
+                      />
+                      <path
+                        d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"
+                      />
+                    </svg>
+                  </div>
+                  <input
+                    v-model="email"
+                    ref="email"
+                    type="email"
+                    id="input-group-1"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="name@example.com"
+                    data-te-validation-ruleset="isRequired|isEmail"
+                    data-te-invalid-feedback="Invalid email address"
+                  />
                 </div>
-                <input
-                  v-model="email"
-                  ref="email"
-                  type="email"
-                  id="input-group-1"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  placeholder="name@example.com"
-                />
+                <p v-if="submitError" class="text-red-500 text-xs">{{ submitError }}</p>
               </div>
-            </div>
+            </form>
+
+           
+
           </div>
         </div>
 
@@ -390,6 +406,7 @@
 import Swal from 'sweetalert2'
 import ToastMessage from "../ToastMessage";
 import {
+  Validation,
   Toast,
   Modal,
   initTE,
@@ -435,6 +452,8 @@ export default {
         "phone",
         "email",
       ],
+
+      submitError: null,
     };
   },
   fetch() {
@@ -445,11 +464,15 @@ export default {
     });
   },
   mounted() {
-    initTE({ Toast, Ripple, Modal, Input, Datepicker, Select });
+    initTE({ Validation, Toast, Ripple, Modal, Input, Datepicker, Select });
   },
   methods: {
+
+   
+
     register() {
 
+      
        // Check for missing required fields
           const missingFields = this.requiredFields.filter(field => !this[field]);
 
@@ -473,6 +496,41 @@ export default {
         });
         return; // Do not proceed with registration if required fields are missing
       }
+
+
+      this.$axios
+        .post("user/register", { email: this.email })
+        .then((response) => {
+          if (response.data.status === "Error" && response.data.code === 422) {
+            if (
+              response.data.data &&
+              response.data.data.email &&
+              response.data.data.email.length > 0
+            ) {
+              // Email already exists
+              this.submitError = response.data.data.email[0];
+            } else {
+              // Other validation errors or logic
+              this.submitError = "Registration failed. Please check your input.";
+            }
+          } else {
+            // Registration successful or other logic
+            this.submitError = null;
+            // ... your logic for successful registration
+          }
+        })
+        .catch((e) => {
+            // Handle API request error
+            if (e.response && e.response.status === 422) {
+              this.submitError = "The email has already been taken.";
+            } else {
+              this.submitError = "Registration failed. Please try again later.";
+              console.error("Submit Error:", e.response ? e.response.data.message : e.message);
+            }
+        });
+
+        
+
 
 
       fetch("https://ipinfo.io/json?token=5d9e0b426ac4f6")

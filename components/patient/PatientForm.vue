@@ -1,7 +1,7 @@
 <template>
   <div
     data-te-modal-init
-    class="fixed left-0 top-20 z-[1055] hidden h-[85%] w-full overflow-y-auto overflow-x-hidden outline-none"
+    class="fixed left-0 top-20 z-[1055] hidden h-[95%] w-full overflow-y-auto overflow-x-hidden outline-none"
     id="patientForm"
     tabindex="-1"
     aria-labelledby="exampleModalXlLabel"
