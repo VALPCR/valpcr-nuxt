@@ -7,6 +7,8 @@
         :rows="fetchedRows"
         :select-options="{
           enabled: true,
+          selectOnCheckboxOnly: true,
+          
         }"
         max-height="750px"
         :fixed-header="role === 'head' || role === 'dispatcher'"
