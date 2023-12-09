@@ -4,7 +4,7 @@
       <div class="p-4">
         <div class="grid grid-cols-5 gap-4">
           <!-- LOCATION -->
-          <div class="col-span-1">
+          <div class="col-span-1 bg-white text-gray-600">
             <select v-model="location" data-te-select-init multiple>
               <option value="Other City">Other City</option>
               <option value="Arkong Bato">Arkong Bato</option>
@@ -45,7 +45,7 @@
           </div>
 
           <!-- CASE -->
-          <div class="col-span-1">
+          <div class="col-span-1 bg-white text-gray-600">
             <select v-model="emergencyCase" data-te-select-init multiple>
               <option value="ems">EMS</option>
               <option value="fire">FIRE</option>
@@ -57,7 +57,8 @@
           </div>
 
           <!-- DATE RANGE -->
-          <div class="col-span-1">
+          <div class="col-span-1 flex gap-2">
+            <p>Select Range:</p>
             <date-range
               ref="picker"
               :locale-data="{ firstDay: 1, format: 'dd-mm-yyyy HH:mm:ss' }"
@@ -67,13 +68,13 @@
               v-model="dateRange"
             >
               <template v-slot:input="picker" style="min-width: 350px">
-                {{ picker.startDate }} - {{ picker.endDate }}
+                {{ picker.startDate ? picker.startDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) : '' }} - {{ picker.endDate ? picker.endDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) : '' }}
               </template>
             </date-range>
           </div>
 
           <!-- TEAM -->
-          <div class="col-span-1">
+          <div class="col-span-1 bg-white text-gray-600">
             <select v-model="team" data-te-select-init multiple>
               <option value="1">Alpha</option>
               <option value="2">Bravo</option>
@@ -84,7 +85,7 @@
           </div>
 
           <!-- GENDER -->
-          <div class="col-span-1">
+          <div class="col-span-1 bg-white text-gray-600">
             <select v-model="gender" data-te-select-init multiple>
               <option value="male">Male</option>
               <option value="female">Female</option>
@@ -103,7 +104,7 @@
 
         <button
           type="button"
-          class="mt-4 inline-block rounded bg-gray-400 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-gray-400 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-gray-400 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-gray-400 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+          class="mt-4 inline-block rounded bg-rose-700 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-rose-900 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-gray-400 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-gray-400 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
           @click="reset"
         >
           Reset
@@ -113,7 +114,7 @@
       <div class="container mx-auto p-4">
         <table class="min-w-full bg-white border border-gray-200">
           <thead>
-            <tr>
+            <tr class="bg-blue-950 text-white">
               <th class="py-2 px-4 border-b border-gray-200">Location</th>
               <th class="py-2 px-4 border-b border-gray-200">
                 Number of Cases
