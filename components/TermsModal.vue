@@ -2,28 +2,28 @@
   <!-- Modal -->
   <div
     data-te-modal-init
-    class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+    class="fixed left-0 top-20 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
     id="termsModal"
     tabindex="-1"
     aria-labelledby="termsModalLabel"
     aria-hidden="true">
     <div
       data-te-modal-dialog-ref
-      class="pointer-events-none relative h-[calc(100%-1rem)] w-auto translate-y-[-50px] opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:h-[calc(100%-3.5rem)] min-[576px]:max-w-[500px]">
+      class="pointer-events-none relative h-[calc(65%-1rem)] w-[calc(75%-1rem)] translate-y-[-50px] opacity-0 transition-all duration-300 ease-in-out mx-auto mt-7 h-[calc(65%-3.5rem)] max-w-[calc(75%-3.5rem)]">
       <div
         class="pointer-events-auto relative flex max-h-[100%] w-full flex-col overflow-hidden rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600"
       >
         <div
-          class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50">
+          class="flex flex-shrink-0 items-center bg-amber-500 justify-between rounded-t-md border-b-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50">
           <!--Modal title-->
           <h5
-            class="text-xl font-medium leading-normal text-neutral-800 dark:text-neutral-200">
+            class="text-xl font-medium leading-normal text-white dark:text-neutral-200">
             Terms and Condition
           </h5>
         </div>
 
         <!--Modal body-->
-        <div class="relative overflow-y-auto p-4" ref="scrollEvent" @scroll="handleScroll">
+        <div class="relative overflow-y-auto p-5 justify-text" ref="scrollEvent" @scroll="handleScroll">
           <strong>Privacy Policy</strong>
 
           <p>ValPCR ("we" or "us") operates valpcr.com ("the Site"). This page informs you of the policies regarding the collection, use, and disclosure of personal information we receive from users of the Site.</p>
@@ -49,7 +49,7 @@
           <p>ValPCR employs appropriate security measures to protect personal information in line with the requirements of the Data Privacy Act of 2012 (Philippines). However, users acknowledge and accept the inherent risks associated with data transmission and storage despite these measures.</p>
           <div style="height:50px;"></div>
 
-          <strong>Terms of Service</strong>
+          <h6 class="text-blue-900 mb-10 font-bold">Terms of Service</h6>
           <br>
           <strong>1. License and Use</strong>
 
@@ -81,7 +81,7 @@
 
         <!--Modal footer-->
         <div
-          class="flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md border-t-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50">
+          class="flex flex-shrink-0 flex-wrap items-center bg-gray-200 justify-end rounded-b-md border-t-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50">
           <button
             v-if="showButton"
             type="button"
@@ -112,10 +112,9 @@ export default {
     },
     handleScroll() {
       if (this.$device.isDesktop) {
-        this.showButton = this.$refs.scrollEvent.scrollTop >= 900
+        this.showButton = this.$refs.scrollEvent.scrollTop >= 500;
       } else if (this.$device.isTablet) {
-        console.log(this.$refs.scrollEvent.scrollTop);
-        this.showButton = this.$refs.scrollEvent.scrollTop >= 700
+        this.showButton = this.$refs.scrollEvent.scrollTop >= 400;
       }
     },
   },
