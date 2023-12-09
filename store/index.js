@@ -7,6 +7,9 @@ export const state = () => ({
   editEmrModalXl: false,
   editEmrModalXlFields: [],
   editEmrModalXlArg: undefined,
+  editHeadModal: false,
+  editHeadModalFields: [],
+  editHeadModalArg: undefined,
   editDispatcherModalXl: false,
   editDispatcherModalXlFields: [],
   editDispatcherModalXlArg: undefined,
@@ -33,6 +36,12 @@ export const getters = {
   },
   getEditPatientStepperFormArg(state) {
     return state.editPatientStepperFormArg;
+  },
+  getEditHeadModalArg(state) {
+    return state.editHeadModalArg;
+  },
+  getEditHeadModalFields(state) {
+    return state.editHeadModalFields;
   },
   getEditEmrModalXlArg(state) {
     return state.editEmrModalXlArg;
@@ -72,6 +81,15 @@ export const mutations = {
   },
   setEditPatientStepperFormArg(state, value) {
     state.editPatientStepperFormArg = value;
+  },
+  setEditHeadModal(state, value) {
+    state.editHeadModal = value;
+  },
+  setEditHeadModalArg(state, value) {
+    state.editHeadModalArg = value;
+  },
+  setEditHeadModalFields(state, value) {
+    state.editHeadModalFields = value;
   },
   setEditEmrModalXl(state, value) {
     state.editEmrModalXl = value;
@@ -125,6 +143,12 @@ export const actions = {
     return this.$axios.get("user/single?id=" + params.id).then((response) => {
       const user = response.data.return;
       context.commit("setEditDispatcherModalXlFields", user);
+    });
+  },
+  getSingleHead(context, params) {
+    return this.$axios.get("user/single?id=" + params.id).then((response) => {
+      const user = response.data.return;
+      context.commit("setEditHeadModalFields", user);
     });
   },
 };

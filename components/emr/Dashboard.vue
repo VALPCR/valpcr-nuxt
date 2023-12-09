@@ -135,7 +135,7 @@ export default {
   fetch() {
     this.role = this.$auth.user.role;
     this.$axios
-      .get("user/list" + "?role=emr" + "&team=" + this.$auth.user.team_id)
+      .get("user/list" + "?role=emr")
       .then((response) => {
         response.data.return.map((result) => {
           this.fetchedRows.push({

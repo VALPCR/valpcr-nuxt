@@ -66,13 +66,16 @@
                 <span class="sr-only">Open user menu</span>
                 <!-- Display the user initials -->
                 <div class="relative">
-                  <span class="w-10 h-10 rounded-full bg-orange-700 flex items-center justify-center dark:bg-orange-700 cursor-pointer font-bold text-white dark:text-gray-300">
+                  <span
+                    class="w-10 h-10 rounded-full bg-orange-700 flex items-center justify-center dark:bg-orange-700 cursor-pointer font-bold text-white dark:text-gray-300"
+                    @click="showEditModal"
+                  >
                     {{ getUserInitials() }}
                   </span>
                   <span class="top-0 left-7 absolute  w-3.5 h-3.5 bg-green-600 border-2 border-white dark:border-gray-800 rounded-full"></span>
                 </div>
-                
-                
+
+
               </button>
             </div>
             <div
@@ -129,11 +132,27 @@
         </div>
       </div>
     </div>
+    <EditDispatcherFull />
+    <EditEmrFormFull />
+    <EditHeadForm />
   </nav>
 </template>
 
 <script>
+import EditEmrFormFull from "./emr/EditEmrFormFull";
+import EditDispatcherFull from "./dispatcher/EditDispatcherFull";
+import EditHeadForm from "./head/EditHeadForm";
+import { Modal, initTE } from "tw-elements";
+
 export default {
+  components: {
+    EditDispatcherFull,
+    EditEmrFormFull,
+    EditHeadForm,
+  },
+  mounted() {
+    initTE(Modal);
+  },
   methods: {
     toggleSidebar() {
       this.$store.commit(
@@ -146,6 +165,30 @@ export default {
       // Assuming it returns the initials based on first_name and last_name
       const { first_name, last_name } = this.$store.$auth.user;
       return `${first_name.charAt(0)}${last_name.charAt(0)}`.toUpperCase();
+    },
+    showEditModal() {
+      if (this.$auth.user.role === 'dispatcher') {
+        const editModal = new Modal(document.getElementById("editDispatcherFull"));
+        if (editModal) {
+          editModal.show();
+          this.$store.commit("setEditDispatcherModalXl", true);
+          this.$store.commit("setEditDispatcherModalXlArg", this.$auth.user.id);
+        }
+      } else if (this.$auth.user.role === 'emr') {
+        const editModal = new Modal(document.getElementById("editEmrFull"));
+        if (editModal) {
+          editModal.show();
+          this.$store.commit("setEditEmrModalXl", true);
+          this.$store.commit("setEditEmrModalXlArg", this.$auth.user.id);
+        }
+      } else if (this.$auth.user.role === 'head') {
+        const editModal = new Modal(document.getElementById("editHeadModal"));
+        if (editModal) {
+          editModal.show();
+          this.$store.commit("setEditHeadModal", true);
+          this.$store.commit("setEditHeadModalArg", this.$auth.user.id);
+        }
+      }
     },
   },
 };

@@ -4,9 +4,9 @@
     data-te-backdrop="static"
     data-te-keyboard="false"
     class="fixed left-0 top-20 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
-    id="editDispatcherModalXl"
+    id="editHeadModal"
     tabindex="-1"
-    aria-labelledby="editDispatcherModalXl"
+    aria-labelledby="editHeadModalLabel"
     aria-modal="true"
     role="dialog"
   >
@@ -24,9 +24,9 @@
           <!--Modal title-->
           <h5
             class="text-xl font-bold leading-normal text-white dark:text-neutral-200"
-            id="dispatcherModalXllLabel"
+            id="editHeadModalLabel"
           >
-            Dispatcher Details
+            Head Details
           </h5>
           <!--Close button-->
           <button
@@ -68,7 +68,7 @@
               <label
                 for="firstName"
                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >First Name</label
+              >First Name</label
               >
               <input
                 v-model="first_name"
@@ -86,7 +86,7 @@
               <label
                 for="midName"
                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >Middle Name</label
+              >Middle Name</label
               >
               <input
                 v-model="middle_name"
@@ -104,7 +104,7 @@
               <label
                 for="lastName"
                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >Surname</label
+              >Surname</label
               >
               <input
                 v-model="last_name"
@@ -122,7 +122,7 @@
               <label
                 for="suffix"
                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >Suffix</label
+              >Suffix</label
               >
               <input
                 v-model="suffix"
@@ -138,7 +138,7 @@
             <div class="flex-col relative mb-1">
               <label
                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >Gender</label
+              >Gender</label
               >
               <select
                 v-model="gender"
@@ -156,7 +156,7 @@
               <label
                 for="birthdate"
                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >Date of Birth</label
+              >Date of Birth</label
               >
               <input
                 v-model="birthdate"
@@ -172,7 +172,7 @@
               <label
                 for="age"
                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >Age</label
+              >Age</label
               >
               <input
                 v-model="age"
@@ -188,29 +188,7 @@
             <div class="flex-col relative mb-1">
               <label
                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >Team</label
-              >
-              <select
-                v-model="team_id"
-                id="teamId"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                required
-              >
-                <option value="selTeam" selected>Select Team</option>
-                <option
-                  v-for="(item, index) in teams"
-                  :key="index"
-                  :value="item.id"
-                >
-                  {{ item.name }}
-                </option>
-              </select>
-            </div>
-
-            <div class="flex-col relative mb-1">
-              <label
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >City</label
+              >City</label
               >
               <select
                 v-model="city"
@@ -225,7 +203,7 @@
             <div class="flex-col relative mb-1">
               <label
                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >Barangay</label
+              >Barangay</label
               >
               <select
                 v-model="barangay"
@@ -273,7 +251,7 @@
               <label
                 for="streetAddress"
                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >Street Address</label
+              >Street Address</label
               >
               <input
                 v-model="street"
@@ -289,7 +267,7 @@
               <label
                 for="phone-input"
                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >Contact Number</label
+              >Contact Number</label
               >
               <div class="flex items-center">
                 <button
@@ -318,7 +296,7 @@
             <div class="relative mb-1 col-span-2">
               <label
                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >Email</label
+              >Email</label
               >
               <div class="relative mb-6">
                 <div
@@ -348,6 +326,38 @@
                   disabled
                 />
               </div>
+            </div>
+
+            <div class="relative mb-1 col-span-2">
+              <label
+                for="password"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Password</label
+              >
+              <input
+                v-model="password"
+                type="password"
+                id="password"
+                placeholder="********"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                required
+              />
+            </div>
+
+            <div class="relative mb-1 col-span-2">
+              <label
+                for="password_confirmation"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Confirm Password</label
+              >
+              <input
+                v-model="password_confirmation"
+                type="password"
+                id="password_confirmation"
+                placeholder="********"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                required
+              />
             </div>
           </div>
         </div>
@@ -386,10 +396,12 @@ export default {
   },
   data() {
     return {
+      password: '',
+      password_confirmation: '',
       id_address: "",
       showToast: false,
-      dispatcherFields: [],
-      role: "dispatcher",
+      headFields: [],
+      role: "head",
       id: "",
       suffix: "",
       first_name: "",
@@ -399,7 +411,6 @@ export default {
       phone: "",
       birthdate: "",
       email: "",
-      team_id: "selTeam",
       city: "Valenzuela",
       barangay: "",
       street: "",
@@ -409,43 +420,35 @@ export default {
       ecp_phone: "",
     };
   },
-  fetch() {
-    this.$axios.get("team/list").then((response) => {
-      response.data.return.map((team) =>
-        this.teams.push({ id: team.id, name: this.capitalize(team.name) })
-      );
-    });
-  },
   mounted() {
     initTE({ Toast, Ripple, Modal, Input, Datepicker, Select });
   },
   watch: {
-    "$store.state.editDispatcherModalXlArg"() {
-      if (this.$store.getters["getEditDispatcherModalXlArg"] !== undefined) {
+    "$store.state.editHeadModalArg"() {
+      if (this.$store.getters["getEditHeadModalArg"] !== undefined) {
         const params = {
-          id: this.$store.getters["getEditDispatcherModalXlArg"],
+          id: this.$store.getters["getEditHeadModalArg"],
         };
 
-        this.$store.dispatch("getSingleDispatcher", params);
+        this.$store.dispatch("getSingleHead", params);
       }
     },
-    "$store.state.editDispatcherModalXlFields"() {
-      this.dispatcherFields =
-        this.$store.getters["getEditDispatcherModalXlFields"];
-      this.id = this.dispatcherFields.id;
-      this.suffix = this.dispatcherFields.suffix;
-      this.first_name = this.dispatcherFields.first_name;
-      this.middle_name = this.dispatcherFields.middle_name;
-      this.last_name = this.dispatcherFields.last_name;
-      this.gender = this.dispatcherFields.gender;
-      this.birthdate = this.dispatcherFields.birthdate;
-      this.age = this.dispatcherFields.age;
-      this.team_id = this.dispatcherFields.team_id;
-      this.city = this.dispatcherFields.address.city;
-      this.street = this.dispatcherFields.address.street;
-      this.barangay = this.dispatcherFields.address.barangay;
-      this.phone = this.dispatcherFields.phone;
-      this.email = this.dispatcherFields.email;
+    "$store.state.editHeadModalFields"() {
+      this.headFields =
+        this.$store.getters["getEditHeadModalFields"];
+      this.id = this.headFields.id;
+      this.suffix = this.headFields.suffix;
+      this.first_name = this.headFields.first_name;
+      this.middle_name = this.headFields.middle_name;
+      this.last_name = this.headFields.last_name;
+      this.gender = this.headFields.gender;
+      this.birthdate = this.headFields.birthdate;
+      this.age = this.headFields.age;
+      this.city = this.headFields.address.city;
+      this.street = this.headFields.address.street;
+      this.barangay = this.headFields.address.barangay;
+      this.phone = this.headFields.phone;
+      this.email = this.headFields.email;
     },
   },
   methods: {
@@ -458,16 +461,16 @@ export default {
         .then((response) => response.json())
         .then((response) => {
           this.ip_address = response.ip;
-
-          const params = {
+          let url = "user/update";
+          let params = {
             user_name: this.$auth.user.email,
             user_role: this.$auth.user.role,
             ip_address: this.id_address,
             id: this.id,
+            team_id: 0,
             suffix: this.suffix,
             first_name: this.first_name,
             middle_name: this.middle_name,
-            team_id: this.team_id,
             last_name: this.last_name,
             gender: this.gender,
             phone: this.phone,
@@ -480,10 +483,36 @@ export default {
             barangay: this.barangay,
             street: this.street,
           };
+          if (this.password === this.password_confirmation && this.password !== '') {
+            params = {
+              user_name: this.$auth.user.email,
+              user_role: this.$auth.user.role,
+              ip_address: this.id_address,
+              id: this.id,
+              team_id: 0,
+              suffix: this.suffix,
+              first_name: this.first_name,
+              middle_name: this.middle_name,
+              last_name: this.last_name,
+              gender: this.gender,
+              phone: this.phone,
+              birthdate:
+                this.birthdate !== ""
+                  ? new Date(this.birthdate).toLocaleDateString("en-US")
+                  : (this.birthdate = ""),
+              age: this.age,
+              city: this.city,
+              barangay: this.barangay,
+              street: this.street,
+              password: this.password,
+              password_confirmation: this.password_confirmation,
+            };
+            url = "user/update/password";
+          }
 
           this.$nuxt.$loading.start();
           this.$axios
-            .post("user/update", params)
+            .post(url, params)
             .then(() => {
               this.suffix = "";
               this.id = "";
@@ -500,6 +529,8 @@ export default {
               this.city = "Valenzuela";
               this.barangay = "";
               this.street = "";
+              this.password = "";
+              this.password_confirmation = "";
 
               this.showToast = true;
               this.$store.commit(

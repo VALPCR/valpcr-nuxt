@@ -4,12 +4,13 @@
     data-te-backdrop="static"
     data-te-keyboard="false"
     class="fixed left-0 top-20 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
-    id="editEmrModalXl"
+    id="editEmrFull"
     tabindex="-1"
-    aria-labelledby="editEmrModalXl"
+    aria-labelledby="editEmrModalFull"
     aria-modal="true"
     role="dialog"
   >
+    <ToastMessage v-if="showToast" />
     <div
       data-te-modal-dialog-ref
       class="pointer-events-none relative w-auto translate-y-[-50px] opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:max-w-[500px] min-[992px]:max-w-[800px] z-1"
@@ -23,7 +24,7 @@
           <!--Modal title-->
           <h5
             class="text-xl font-medium leading-normal text-white dark:text-neutral-200"
-            id="emrModalXllLabel"
+            id="editEmrModalFull"
           >
             EMR Details
           </h5>
@@ -187,7 +188,8 @@
               <select
                 v-model="team_id"
                 data-te-select-init
-                class="w-full bg-gray-100"
+                class="w-full bg-gray-100 cursor-not-allowed"
+                disabled
                 required
               >
                 <option selected value="0">
@@ -356,6 +358,41 @@
                   required
                 />
               </div>
+
+              <div class="relative mb-3 col-span-2">
+                <div class="relative mb-1">
+                  <label
+                    for="password"
+                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >Password</label
+                  >
+                  <input
+                    v-model="password"
+                    type="password"
+                    id="password"
+                    placeholder="********"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="relative mb-3 col-span-2">
+                <div class="relative mb-1">
+                  <label
+                    for="password_confirmation"
+                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >Confirm Password</label
+                  >
+                  <input
+                    v-model="password_confirmation"
+                    type="password"
+                    id="password_confirmation"
+                    placeholder="********"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    required
+                  />
+                </div>
+              </div>
             </div>
           </form>
         </div>
@@ -377,12 +414,19 @@
 </template>
 
 <script>
+import ToastMessage from "../ToastMessage";
 import { Modal, initTE, Ripple, Input, Datepicker, Select } from "tw-elements";
 
 export default {
+  components: {
+    ToastMessage,
+  },
   data() {
     return {
+      password: '',
+      password_confirmation: '',
       id_address: "",
+      showToast: false,
       emrFields: [],
       role: "emr",
       id: "",
@@ -454,8 +498,8 @@ export default {
         .then((response) => response.json())
         .then((response) => {
           this.id_address = response.ip;
-
-          const params = {
+          let url = "user/update";
+          let params = {
             user_name: this.$auth.user.email,
             user_role: this.$auth.user.role,
             ip_address: this.id_address,
@@ -479,14 +523,42 @@ export default {
             ecp_phone: this.ecp_phone,
           };
 
+          if (this.password === this.password_confirmation && this.password !== '') {
+            params = {
+              user_name: this.$auth.user.email,
+              user_role: this.$auth.user.role,
+              ip_address: this.id_address,
+              id: this.id,
+              team_id: this.team_id,
+              suffix: this.suffix,
+              first_name: this.first_name,
+              middle_name: this.middle_name,
+              last_name: this.last_name,
+              gender: this.gender,
+              phone: this.phone,
+              birthdate:
+                this.birthdate !== ""
+                  ? new Date(this.birthdate).toLocaleDateString("en-US")
+                  : (this.birthdate = ""),
+              age: this.age,
+              city: this.city,
+              barangay: this.barangay,
+              street: this.street,
+              emergency_contact: this.emergency_contact,
+              ecp_phone: this.ecp_phone,
+              password: this.password,
+              password_confirmation: this.password_confirmation,
+            };
+            url = "user/update/password"
+          }
+
           this.$nuxt.$loading.start();
           this.$axios
-            .post("user/update", params)
+            .post(url, params)
             .then(() => {
               this.ip_address = "";
               this.suffix = "";
               this.id = "";
-              team_id: this.team_id,
               this.first_name = "";
               this.middle_name = "";
               this.last_name = "";
@@ -502,7 +574,19 @@ export default {
               this.age = "";
               this.emergency_contact = "";
               this.ecp_phone = "";
-              location.reload();
+              this.password = "";
+              this.password_confirmation = "";
+
+              this.showToast = true;
+              this.$store.commit(
+                "setToastMessage",
+                "Account successfully updated!"
+              );
+
+              setTimeout(() => {
+                this.$emit("refresh");
+                location.reload();
+              }, 2000);
             })
             .finally(() => {
               this.$nuxt.$loading.finish();

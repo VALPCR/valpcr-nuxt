@@ -1,8 +1,6 @@
 <template>
   <div class="min-h-screen">
     <div class="m-5">
-      
-
       <vue-good-table
         @on-selected-rows-change="selectionChanged"
         :columns="columns"
@@ -20,7 +18,7 @@
         compactMode
         class="bg-white rounded shadow"
       >
-        <div v-if="role === 'head'" slot="table-actions"> 
+        <div v-if="role === 'head'" slot="table-actions">
           <button
             v-if="selectedRows.length > 0"
             type="button"
@@ -60,25 +58,25 @@
             ADD {{ !$device.isTablet ? "NEW" : "" }}
           </button>
           <button
-            v-if="role === 'emr' && columns[7].filterOptions.filterValue !== ''"
+            v-if="role === 'emr' && columns[8].filterOptions.filterValue !== ''"
             type="button"
             class="inline-block rounded bg-amber-400 px-4 pb-1.5 pt-1.5 text-xs font-medium uppercase leading-normal text-gray-800 shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-amber-500 focus:bg-amber-500 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
-            @click="columns[7].filterOptions.filterValue = ''"
+            @click="columns[8].filterOptions.filterValue = ''"
           >
             View All
           </button>
           <button
-            v-if="role === 'emr' && columns[7].filterOptions.filterValue === ''"
+            v-if="role === 'emr' && columns[8].filterOptions.filterValue === ''"
             type="button"
             class="inline-block rounded bg-sky-600 px-4 pb-1.5 pt-1.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-sky-800 focus:bg-sky-800 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
             @click="
-              columns[7].filterOptions.filterValue = `${$auth.user.first_name} ${$auth.user.last_name} (Responder)`
+              columns[8].filterOptions.filterValue = `${$auth.user.first_name} ${$auth.user.last_name} (Responder)`
             "
           >
             My Forms
           </button>
         </div>
-        
+
 
         <template slot="table-column" slot-scope="props">
           <div v-if="role === 'emr'">
@@ -237,7 +235,7 @@ export default {
   fetch() {
     this.role = this.$auth.user.role;
     if (this.role !== "head" && this.role !== "dispatcher") {
-      this.columns[7].filterOptions.filterValue = `${this.$auth.user.first_name} ${this.$auth.user.last_name} (Responder)`;
+      this.columns[8].filterOptions.filterValue = `${this.$auth.user.first_name} ${this.$auth.user.last_name} (Responder)`;
     }
     this.$axios.get("pcr/list?category=completed").then((response) => {
       response.data.return.map((pcr) =>
